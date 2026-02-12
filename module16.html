@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Module 16 - Clock Tree - 2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0d1b2a">
+
+</head>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+<body>
+
+<nav class="top-nav">
+    
+  <div class="nav-left">
+  <a href="index.html">Home</a>
+  <a href="modules.html">Modules</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+  <div class="nav-right">
+    Created by: Shaik Mahammad Khaleel
+  </div>
+</nav>
+<div class="announcement-bar">
+  <marquee behavior="scroll" direction="left">
+    📢 Have suggestions, questions, or interview doubts?
+    Share your queries — answers will be updated module-wise.
+    Contact: vlsiphysicaldesignocean@gmail.com
+  </marquee>
+</div>
+
+<header>
+  <h1>Module 16</h1>
+  <p>Clock Tree Synthesis -2</p>
+</header>
+
+<div style="padding:40px;">
+  <h2>Topics Covered</h2>
+  <ul>
+    <ul class="topic-list">
+    <li>Post-CTS timing update: new clock latencies and new path slacks</li>
+    <li>Setup vs Hold behavior after CTS (why hold can change significantly)</li>
+    <li><strong>Useful Skew</strong>: concept, when it helps, when it hurts</li>
+    <li>Useful skew vs uncertainty margin understanding</li>
+    <li>Hold fixing after CTS: delay cell insertion, buffer/inverter, route detours (concept)</li>
+    <li>Setup fixing after CTS: sizing/buffering, restructuring, placement tweaks (concept)</li>
+    <li>Clock re-balance / CTS refinement strategies</li>
+    <li>Clock tree power optimization (buffer count, depth, sizing, gating impact)</li>
+    <li>Post-CTS congestion impact and mitigation (clock routes + signal routes)</li>
+  </ul>
+
+  <h3>📚 Part E: Post-CTS ECO & Closure</h3>
+  <ul class="topic-list">
+    <li>Post-CTS ECO flow overview (what changes are safe)</li>
+    <li>Skew/latency tuning using ECO buffers (concept)</li>
+    <li>Hold ECO methodology (safe vs risky fixes)</li>
+    <li>Clock gating timing checks after CTS (enable path, latency impact)</li>
+    <li>Final CTS signoff checks: skew, latency, slew, cap, noise</li>
+    <li>Best practices & common CTS mistakes (real project perspective)</li>
+  </ul>
+
+  <h3>🛠 Detailed Sample Scripts Included (CTS + Post-CTS)</h3>
+  <ul class="script-list">
+    <li>Complete CTS flow script (build → optimize → verify)</li>
+    <li>Clock constraint setup script (create_clock / generated clocks review hooks)</li>
+    <li>Skew group definition script</li>
+    <li>NDR rule creation & assignment script for clock nets</li>
+    <li>Clock shielding setup script (where applicable)</li>
+    <li>CTS run commands + reporting extraction script</li>
+    <li>Post-CTS timing report extraction (setup/hold) script</li>
+    <li>Post-CTS hold ECO automation script (conceptual flow)</li>
+    <li>Post-CTS setup ECO optimization script (conceptual flow)</li>
+    <li>Crosstalk/noise analysis run & report extraction script (clock-focused)</li>
+    <li>Final CTS verification checklist script (skew/latency/slew/cap)</li>
+  </ul>
+    
+    
+  </ul>
+</div>
+<section class="module-content locked-module">
+
+  <h2>🔒 Content Locked</h2>
+
+  <p class="lock-message">
+    This document is currently locked and not available for public access.
+  </p>
+
+  <p>
+    Access to this content is restricted.
+    Please purchase the course or contact the administrator for access.
+  </p>
+
+  <div class="lock-box">
+    <p>🚫 Read Access: Disabled</p>
+    <p>🚫 Download: Disabled</p>
+    <p>🚫 Copy/Print: Disabled</p>
+  </div>
+
+  <a href="contact.html" class="unlock-btn">
+    Request Access
+  </a>
+
+</section>
+<div class="module-navigation">
+  <a href="module15.html" class="nav-btn">⬅ Previous</a>
+  <a href="modules.html" class="nav-btn">📘 All Modules</a>
+  <a href="module17.html" class="nav-btn">Next ➡</a>
+</div>
+
+<footer class="site-footer">
+  <p>
+    Educational content for learning purposes |
+    <a href="privacy.html">Privacy Policy</a>
+  </p>
+</footer>
+
+</body>
+</html>

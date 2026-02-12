@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Module 15 - Clock Tree - 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0d1b2a">
+
+</head>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+<body>
+
+<nav class="top-nav">
+    
+  <div class="nav-left">
+  <a href="index.html">Home</a>
+  <a href="modules.html">Modules</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+  <div class="nav-right">
+    Created by: Shaik Mahammad Khaleel
+  </div>
+</nav>
+<div class="announcement-bar">
+  <marquee behavior="scroll" direction="left">
+    📢 Have suggestions, questions, or interview doubts?
+    Share your queries — answers will be updated module-wise.
+    Contact: vlsiphysicaldesignocean@gmail.com
+  </marquee>
+</div>
+
+<header>
+  <h1>Module 15</h1>
+  <p>Clock Tree Synthesis -1</p>
+</header>
+
+<div style="padding:40px;">
+  <h2>Topics Covered</h2>
+  <ul>
+    <ul class="topic-list">
+    <li>CTS role in Timing Closure (why CTS is needed)</li>
+    <li>Pre-CTS vs Post-CTS timing differences</li>
+    <li>Clock definitions review (create_clock, generated clocks)</li>
+    <li>Clock latency types: source latency vs network latency</li>
+    <li>Clock skew basics: global skew, local skew, target skew</li>
+    <li>Clock uncertainty: jitter, variation, margin concepts</li>
+    <li>Clock tree objectives: skew, latency, slew, power, noise</li>
+    <li>Clock topology options: H-tree / spine / mesh (conceptual)</li>
+    <li>Clock tree elements: buffers, inverters, integrated clock gates (ICG)</li>
+    <li>Clock gating awareness: ICG placement considerations, enable timing</li>
+    <li>Clock tree constraints: max transition (slew), max capacitance, max fanout</li>
+    <li>Clock concurrent optimization idea (clock + timing together)</li>
+  </ul>
+
+  <h3>📚 Part B: CTS Build (Implementation)</h3>
+  <ul class="topic-list">
+    <li>Clock net identification and grouping</li>
+    <li><strong>Skew Groups</strong>: definition, usage, multi-domain considerations</li>
+    <li>Clock balancing concepts (matching path delays)</li>
+    <li>Buffer/inverter insertion strategies (depth, branching)</li>
+    <li>Clock trunk vs leaf strategy (concept)</li>
+    <li>Handling multi-clock & async clocks at CTS stage (high-level)</li>
+    <li>CTS quality checks: skew, latency, transition, insertion delay</li>
+    <li>CTS reporting and interpretation (clock tree reports)</li>
+  </ul>
+
+  <h3>📚 Part C: Signal Integrity in CTS (Noise / Crosstalk / NDR)</h3>
+  <ul class="topic-list">
+    <li><strong>Xtalk fundamentals</strong>: coupling capacitance and aggressor/victim concept</li>
+    <li>Xtalk impact on clock: jitter-like behavior, pulse distortion, delay shift</li>
+    <li><strong>Xtalk analysis for clocks</strong>: when/why to analyze during CTS</li>
+    <li>Clock shielding concepts (shield nets, shielding strategy)</li>
+    <li><strong>NDR Rules for clock nets</strong>: wider wires, higher spacing, preferred layers</li>
+    <li>Spacing-based noise reduction vs shielding trade-offs</li>
+    <li>Clock net routing layer strategy (upper metal usage concept)</li>
+    <li>EM/IR awareness for clock network (why clocks are sensitive)</li>
+  </ul>
+
+    
+    
+  </ul>
+</div>
+<section class="module-content locked-module">
+
+  <h2>🔒 Content Locked</h2>
+
+  <p class="lock-message">
+    This document is currently locked and not available for public access.
+  </p>
+
+  <p>
+    Access to this content is restricted.
+    Please purchase the course or contact the administrator for access.
+  </p>
+
+  <div class="lock-box">
+    <p>🚫 Read Access: Disabled</p>
+    <p>🚫 Download: Disabled</p>
+    <p>🚫 Copy/Print: Disabled</p>
+  </div>
+
+  <a href="contact.html" class="unlock-btn">
+    Request Access
+  </a>
+
+</section>
+<div class="module-navigation">
+  <a href="module14.html" class="nav-btn">⬅ Previous</a>
+  <a href="modules.html" class="nav-btn">📘 All Modules</a>
+  <a href="module16.html" class="nav-btn">Next ➡</a>
+</div>
+
+<footer class="site-footer">
+  <p>
+    Educational content for learning purposes |
+    <a href="privacy.html">Privacy Policy</a>
+  </p>
+</footer>
+
+</body>
+</html>

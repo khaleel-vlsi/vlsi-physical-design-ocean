@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Account | ASIC & VLSI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1e6fd9, #0b4fa2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .register-card {
+      background: #fff;
+      width: 100%;
+      max-width: 420px;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+
+    .register-card h2 {
+      text-align: center;
+      margin-bottom: 8px;
+      color: #0b4fa2;
+    }
+
+    .register-card p {
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .register-card input[type="text"],
+    .register-card input[type="email"],
+    .register-card input[type="password"] {
+      width: 100%;
+      padding: 12px 14px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .location-box {
+      margin-bottom: 20px;
+    }
+
+    .location-box label.title {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .radio-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .radio-option input {
+      accent-color: #1e6fd9;
+      cursor: pointer;
+    }
+
+    .radio-option span {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .register-card button {
+      width: 100%;
+      padding: 12px;
+      background: #1e6fd9;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .register-card button:hover {
+      background: #1558b0;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .login-link a {
+      color: #1e6fd9;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .info-box {
+      margin-top: 20px;
+      padding: 12px;
+      background: #f1f6ff;
+      border-radius: 8px;
+      font-size: 13px;
+      text-align: center;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="register-card">
+    <h2>Create Account</h2>
+    <p>Register to access advanced ASIC & VLSI modules</p>
+
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email address" required>
+      <input type="password" placeholder="Password" required>
+      <input type="password" placeholder="Confirm Password" required>
+
+      <div class="location-box">
+        <label class="title">Select Your Location</label>
+
+        <label class="radio-option">
+          <input type="radio" name="country" value="India" required>
+          <span>India (₹149)</span>
+        </label>
+
+        <label class="radio-option">
+          <input type="radio" name="country" value="International">
+          <span>International ($12)</span>
+        </label>
+      </div>
+
+      <button type="submit">Create Account</button>
+    </form>
+
+    <div class="login-link">
+      Already have an account? <a href="login.html">Login</a>
+    </div>
+
+    <div class="info-box">
+      🎓 Paid users get access to Modules 9–24 for 6 months<br>
+      🇮🇳 India: ₹149 &nbsp; 🌍 International: $12
+    </div>
+  </div>
+
+</body>
+</html>

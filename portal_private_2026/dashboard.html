@@ -1,7 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head><title>Dashboard</title></head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard | VLSI PD Ocean</title>
+  <style>
+    body{font-family:Arial, sans-serif; max-width:900px; margin:40px auto; padding:0 16px;}
+    .card{border:1px solid #ddd; border-radius:12px; padding:16px; margin:12px 0;}
+    .row{display:flex; gap:12px; flex-wrap:wrap;}
+    .pill{display:inline-block; padding:6px 10px; border-radius:999px; border:1px solid #222; font-size:13px;}
+    button,a.btn{padding:10px 14px; border-radius:10px; border:1px solid #222; background:#fff; cursor:pointer; text-decoration:none; display:inline-block;}
+    .muted{color:#666}
+    .ok{color:green}
+    .err{color:#b00020}
+    code{background:#f7f7f7; padding:2px 6px; border-radius:6px;}
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./supabaseClient.js"></script>
+</head>
 <body>
-  <h1>Dashboard (Under Construction)</h1>
+  <h1>📘 Dashboard</h1>
+  <p class="muted">If you are not logged in, you will be redirected to Login.</p>
+
+  <div class="row">
+    <a class="btn" href="./index.html">Portal Home</a>
+    <a class="btn" href="./login.html">Login</a>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <div id="status" class="card">Loading...</div>
+
+  <div class="card">
+    <h3>Paid Modules 9–32</h3>
+    <div id="courseBox" class="muted">Checking course access...</div>
+  </div>
+
+  <div class="card">
+    <h3>Placement Support + Mock Interviews</h3>
+    <div id="placementBox" class="muted">Checking placement access...</div>
+  </div>
+
+  <script>
+    function fmtDate(ts) {
+      if (!ts) return "-";
+      try { return new Date(ts).toLocaleString(); } catch(e) { return String(ts); }
+    }
+    function isFuture(ts) {
+      if (!ts) return false;
+      return new Date(ts).getTime() > Date.now();
+    }
+
+    async function requireAuth() {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) {
+        location.href = "./login.html";
+        return null;
+      }
+      return user;
+    }
+
+    async function loadProfile(user) {
+      const { data, error } = await supabase
+        .from("profiles")
+        .select("email, full_name, course_active, course_expiry, placement_active, placement_expiry, mock_remaining")
+        .eq("id", user.id)
+        .single();
+
+      if (error) throw error;
+      return data;
+    }
+
+    async function logout() {
+      await supabase.auth.signOut();
+      location.href = "./login.html";
+    }
+
+    async function main() {
+      const user = await requireAuth();
+      if (!user) return;
+
+      let profile;
+      try {
+        profile = await loadProfile(user);
+      } catch (e) {
+        document.getElementById("status").innerHTML =
+          `<b class="err">Error loading profile:</b> ${e.message}`;
+        return;
+      }
+
+      document.getElementById("status").innerHTML = `
+        <b>Logged in as:</b> ${profile.full_name || "Student"} <br/>
+        <span class="muted">${profile.email}</span><br/><br/>
+        <span class="pill">Course: ${profile.course_active ? "Active" : "Inactive"}</span>
+        <span class="pill">Course Expiry: ${fmtDate(profile.course_expiry)}</span><br/><br/>
+        <span class="pill">Placement: ${profile.placement_active ? "Active" : "Inactive"}</span>
+        <span class="pill">Placement Expiry: ${fmtDate(profile.placement_expiry)}</span>
+        <span class="pill">Mock Remaining: ${profile.mock_remaining ?? 0}</span>
+      `;
+
+      // Course access
+      const courseValid = profile.course_active && isFuture(profile.course_expiry);
+      document.getElementById("courseBox").innerHTML = courseValid
+        ? `<div class="ok"><b>Unlocked ✅</b></div>
+           <p>Now you can access modules in <code>/portal_private_2026/paid/</code></p>
+           <a class="btn" href="./paid/">Open Paid Modules Folder</a>
+           <p class="muted">Later we will create Module9.html ... Module32.html pages.</p>`
+        : `<div class="err"><b>Locked 🔒</b></div>
+           <p class="muted">Buy/renew course to unlock Modules 9–32.</p>
+           <p><b>Payment link:</b> paste your ₹499 Razorpay link here on this dashboard.</p>`;
+
+      // Placement access
+      const placementValid = profile.placement_active && isFuture(profile.placement_expiry);
+      document.getElementById("placementBox").innerHTML = placementValid
+        ? `<div class="ok"><b>Unlocked ✅</b></div>
+           <p>Mock remaining: <b>${profile.mock_remaining ?? 0}</b></p>
+           <p class="muted">Next we will build booking page inside <code>/portal_private_2026/placement/</code>.</p>
+           <a class="btn" href="./placement/">Open Placement Folder</a>`
+        : `<div class="err"><b>Locked 🔒</b></div>
+           <p class="muted">Buy Placement Support to unlock booking + mocks.</p>
+           <p><b>Payment link:</b> paste your ₹1499 Razorpay link here on this dashboard.</p>`;
+    }
+
+    main();
+  </script>
 </body>
 </html>

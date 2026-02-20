@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login | VLSI PD Ocean</title>
+  <style>
+    body{font-family:Arial, sans-serif; max-width:900px; margin:40px auto; padding:0 16px;}
+    .grid{display:grid; grid-template-columns:1fr; gap:16px;}
+    @media(min-width:840px){.grid{grid-template-columns:1fr 1fr;}}
+    .card{border:1px solid #ddd; border-radius:12px; padding:16px;}
+    label{display:block; margin:10px 0 6px; font-size:14px;}
+    input{width:100%; padding:10px; border-radius:10px; border:1px solid #bbb;}
+    button{padding:10px 14px; border-radius:10px; border:1px solid #222; background:#fff; cursor:pointer; margin-top:12px;}
+    .msg{margin-top:10px; white-space:pre-wrap;}
+    .ok{color:green;}
+    .err{color:#b00020;}
+    a{color:#0b57d0}
+    .muted{color:#666}
+  </style>
+
+  <!-- Supabase JS v2 (browser) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./supabaseClient.js"></script>
+</head>
+<body>
+  <h1>🔐 Login / Register</h1>
+  <p class="muted">
+    Note: In Supabase you kept <b>Email confirmations ON</b>. So after Sign Up, you must verify from email first, then login will work.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Register</h3>
+      <label>Full Name</label>
+      <input id="su_name" placeholder="Sk Md Khaleel" />
+
+      <label>Email</label>
+      <input id="su_email" placeholder="name@gmail.com" />
+
+      <label>Password</label>
+      <input id="su_pass" type="password" placeholder="Create a strong password" />
+
+      <button onclick="signUp()">Create Account</button>
+      <div id="su_msg" class="msg"></div>
+    </div>
+
+    <div class="card">
+      <h3>Login</h3>
+      <label>Email</label>
+      <input id="li_email" placeholder="name@gmail.com" />
+
+      <label>Password</label>
+      <input id="li_pass" type="password" placeholder="Your password" />
+
+      <button onclick="login()">Login</button>
+      <button onclick="logout()">Logout</button>
+      <div id="li_msg" class="msg"></div>
+      <p class="muted">After login: <a href="./dashboard.html">Go to Dashboard</a></p>
+    </div>
+  </div>
+
+  <script>
+    function setMsg(id, text, ok) {
+      const el = document.getElementById(id);
+      el.textContent = text || "";
+      el.className = "msg " + (ok ? "ok" : "err");
+    }
+
+    async function signUp() {
+      setMsg("su_msg", "Creating account...", true);
+
+      const full_name = document.getElementById("su_name").value.trim();
+      const email = document.getElementById("su_email").value.trim().toLowerCase();
+      const password = document.getElementById("su_pass").value;
+
+      if (!full_name || !email || !password) {
+        setMsg("su_msg", "Please fill Name, Email, Password.", false);
+        return;
+      }
+
+      const { data, error } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          data: { full_name }
+        }
+      });
+
+      if (error) {
+        setMsg("su_msg", "Sign Up error: " + error.message, false);
+        return;
+      }
+
+      setMsg("su_msg",
+        "Account created.\nNow check your email inbox/spam and confirm your email.\nAfter confirmation, come back and login.",
+        true
+      );
+    }
+
+    async function login() {
+      setMsg("li_msg", "Logging in...", true);
+
+      const email = document.getElementById("li_email").value.trim().toLowerCase();
+      const password = document.getElementById("li_pass").value;
+
+      if (!email || !password) {
+        setMsg("li_msg", "Please fill Email and Password.", false);
+        return;
+      }
+
+      const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+
+      if (error) {
+        setMsg("li_msg", "Login error: " + error.message, false);
+        return;
+      }
+
+      setMsg("li_msg", "Login success ✅\nRedirecting to dashboard...", true);
+      setTimeout(() => location.href = "./dashboard.html", 700);
+    }
+
+    async function logout() {
+      await supabase.auth.signOut();
+      setMsg("li_msg", "Logged out ✅", true);
+    }
+  </script>
+</body>
+</html>

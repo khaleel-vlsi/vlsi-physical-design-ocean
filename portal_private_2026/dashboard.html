@@ -61,6 +61,12 @@
       color:#021016;
       box-shadow:0 12px 28px rgba(0,180,255,.25);
     }
+    .btnGold{
+      border:none;
+      background:linear-gradient(90deg,#ffd66b,#ffb84a);
+      color:#1a1000;
+      box-shadow:0 12px 28px rgba(255,214,107,.18);
+    }
     .btnDanger{
       background:rgba(255,154,167,.08);
       border:1px solid rgba(255,154,167,.25);
@@ -124,6 +130,24 @@
     }
     .miniList{margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:13px}
     .miniList li{margin:6px 0}
+
+    .payGrid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:10px;
+      margin-top:12px;
+    }
+    @media(min-width:640px){
+      .payGrid{grid-template-columns:1fr 1fr;}
+    }
+    .payCard{
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(0,0,0,.18);
+      border-radius:16px;
+      padding:14px;
+    }
+    .payTitle{font-weight:900; margin-bottom:4px;}
+    .payLine{color:var(--muted); font-size:13px; line-height:1.45;}
   </style>
 </head>
 
@@ -183,6 +207,42 @@
             <a class="btn btnPrimary" id="placementBtn" href="./placement/" style="display:none;">Open Placement Area</a>
           </div>
         </div>
+
+        <div class="hr"></div>
+
+        <!-- ✅ PAYMENT SECTION (INSIDE WEBSITE) -->
+        <div class="card" id="paySection" style="background:rgba(0,0,0,.14); box-shadow:none; display:none;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+            <h2>💳 Upgrade / Buy Access</h2>
+            <div class="statusBig" id="payHint">Choose plan</div>
+          </div>
+          <div class="muted" style="margin-top:6px;">
+            After successful payment, refresh dashboard (or wait 10–30 sec). Access will unlock automatically after webhook setup.
+          </div>
+
+          <div class="payGrid">
+            <div class="payCard" id="pay499Card" style="display:none;">
+              <div class="payTitle">🌊 Website Course Access — ₹499</div>
+              <div class="payLine">Unlock Paid Modules (9–32).</div>
+              <div style="margin-top:10px;">
+                <a class="btn btnGold" href="https://rzp.io/rzp/xdogbsA" target="_self">Pay ₹499</a>
+              </div>
+            </div>
+
+            <div class="payCard" id="pay1999Card" style="display:none;">
+              <div class="payTitle">🚀 Website + Placement Support — ₹1999</div>
+              <div class="payLine">Unlock Paid Modules + Placement + Mock Interview support.</div>
+              <div style="margin-top:10px;">
+                <a class="btn btnGold" href="https://rzp.io/rzp/rCnkpRSH" target="_self">Pay ₹1999</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="muted" style="margin-top:10px;">
+            If payment done but still locked → refresh once and login again.
+          </div>
+        </div>
+
       </div>
 
       <!-- SIDE -->
@@ -245,6 +305,11 @@
       return data;
     }
 
+    function show(elId, yes){
+      const el = document.getElementById(elId);
+      el.style.display = yes ? "" : "none";
+    }
+
     async function main(){
       const user = await requireAuth();
 
@@ -303,6 +368,25 @@
         : `<span class="err"><b>Not active.</b></span><br/>Buy placement to unlock booking + mocks.`;
 
       document.getElementById("placementBtn").style.display = placementValid ? "inline-flex" : "none";
+
+      // ✅ Payment Section logic (automatic)
+      const needCourse = !courseValid;
+      const needPlacement = !placementValid;
+
+      const paySection = document.getElementById("paySection");
+      const payHint = document.getElementById("payHint");
+
+      if (needCourse || needPlacement) {
+        paySection.style.display = "";
+        show("pay499Card", needCourse);       // show ₹499 when course locked
+        show("pay1999Card", needPlacement);   // show ₹1999 when placement locked
+
+        if (needCourse && needPlacement) payHint.textContent = "Locked 🔒 Choose plan";
+        else if (needCourse) payHint.textContent = "Course locked 🔒";
+        else payHint.textContent = "Placement locked 🔒";
+      } else {
+        paySection.style.display = "none";
+      }
     }
 
     main();

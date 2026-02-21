@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dashboard | VLSI Physical Design Ocean</title>
@@ -241,7 +242,7 @@
             <div class="buyTitle">🚀 Website + Placement Support <span class="buyPrice">₹1999</span></div>
             <div class="buyNote">Unlock Paid Modules (9–32) + Placement Support + Mock Interviews.</div>
             <div style="margin-top:10px;">
-              <a class="btn btnGold" href="https://rzp.io/rzp/9OQH86Z" target="_self">Pay ₹1999</a>
+             <button class="btn btnGold" id="buy499Btn" onclick="startCheckout('PLAN_499')" style="display:none;"> 💳 Pay ₹499 (Unlock Modules)</button>
             </div>
           </div>
 
@@ -249,7 +250,7 @@
             <div class="buyTitle">🌊 Paid Modules Access <span class="buyPrice">₹499</span></div>
             <div class="buyNote">Unlock only Paid Modules (9–32).</div>
             <div style="margin-top:10px;">
-              <a class="btn btnGold" href="https://rzp.io/rzp/90ezeOg" target="_self">Pay ₹499</a>
+             <button class="btn btnGold" id="buy1999Btn" onclick="startCheckout('PLAN_1999')" style="display:none;">🚀 Pay ₹1999 (Modules + Placement)</button> 
             </div>
           </div>
         </div>
@@ -370,6 +371,57 @@
       document.getElementById("placementBtn").style.display = placementValid ? "inline-flex" : "none";
       document.getElementById("buy1999Btn").style.display = placementValid ? "none" : "inline-flex";
     }
+    <script>
+  // Uses your existing: const sb = window.sb;
+
+  async function startCheckout(plan){
+    // 1) Must be logged in
+    const { data: { session } } = await sb.auth.getSession();
+    if(!session?.access_token){
+      alert("Please login first.");
+      location.href = "./login.html";
+      return;
+    }
+
+    // 2) Create Razorpay order via Supabase function
+    const fnUrl = "https://ygcvcoynmyrplwrpisd.supabase.co/functions/v1/create-razorpay-order";
+
+    const res = await fetch(fnUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer " + session.access_token
+      },
+      body: JSON.stringify({ plan })
+    });
+
+    const data = await res.json();
+    if(!res.ok){
+      console.log(data);
+      alert("Order create failed: " + (data?.error || "Unknown"));
+      return;
+    }
+
+    // 3) Open Razorpay Checkout
+    const options = {
+      key: data.key,
+      amount: data.amount,
+      currency: data.currency,
+      name: "VLSI Physical Design Ocean",
+      description: plan === "PLAN_499" ? "Paid Modules Access (6 months)" : "Paid Modules + Placement (1 year)",
+      order_id: data.order_id,
+      prefill: { email: data.user_email || "" },
+      theme: { color: "#00b4ff" },
+      handler: function () {
+        alert("Payment successful ✅\nNow wait 5–10 seconds and refresh dashboard.");
+        // webhook will unlock in backend
+      }
+    };
+
+    const rzp = new Razorpay(options);
+    rzp.open();
+  }
+</script>
 
     main();
   </script>

@@ -1,63 +1,147 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dashboard | VLSI Physical Design Ocean</title>
 
+  <!-- Razorpay Checkout -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <!-- Supabase -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="./supabaseClient.js"></script>
 
   <style>
     :root{
-      --bg1:#041726; --bg2:#020b12;
+      --bg1:#041726;
+      --bg2:#020b12;
       --glass:rgba(255,255,255,.08);
       --border:rgba(255,255,255,.14);
-      --text:#eaf7ff; --muted:rgba(234,247,255,.78);
-      --good:#7CFFB2; --bad:#ff9aa7;
-      --accent1:#00b4ff; --accent2:#00ffc8;
-      --gold:#f7c76b; --shadow:rgba(0,0,0,.45);
+      --text:#eaf7ff;
+      --muted:rgba(234,247,255,.78);
+      --good:#7CFFB2;
+      --bad:#ff9aa7;
+      --accent1:#00b4ff;
+      --accent2:#00ffc8;
+      --gold:#f7c76b;
+      --shadow:rgba(0,0,0,.45);
     }
+
     body{
-      margin:0; font-family: Inter, Arial, sans-serif; color:var(--text);
+      margin:0;
+      font-family: Inter, Arial, sans-serif;
+      color:var(--text);
       background:
         radial-gradient(1200px 700px at 15% 10%, rgba(0,180,255,.26), transparent 60%),
         radial-gradient(900px 600px at 85% 18%, rgba(0,255,200,.18), transparent 55%),
         linear-gradient(180deg, var(--bg1), var(--bg2) 65%, #01060b);
-      min-height:100vh; padding:22px;
+      min-height:100vh;
+      padding:26px;
     }
-    .wrap{width:min(980px, 100%); margin:0 auto;}
+
+    .wrap{width:min(1200px, 100%); margin:0 auto;}
     .top{display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:14px;}
     .brand{display:flex; align-items:center; gap:10px; font-weight:900;}
     .dot{width:12px; height:12px; border-radius:50%; background:linear-gradient(90deg,var(--accent1),var(--accent2)); box-shadow:0 0 22px rgba(0,255,200,.35);}
+
     .btn{
-      padding:11px 14px; border-radius:14px;
+      padding:11px 14px;
+      border-radius:14px;
       border:1px solid rgba(255,255,255,.18);
       background:rgba(255,255,255,.06);
-      color:var(--text); cursor:pointer; text-decoration:none;
-      font-weight:900; font-size:13px; display:inline-flex; gap:8px; align-items:center;
+      color:var(--text);
+      cursor:pointer;
+      text-decoration:none;
+      font-weight:900;
+      font-size:13px;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
     }
-    .btnDanger{background:rgba(255,154,167,.08); border:1px solid rgba(255,154,167,.25);}
+    .btnPrimary{
+      border:none;
+      background:linear-gradient(90deg,var(--accent1),var(--accent2));
+      color:#021016;
+      box-shadow:0 12px 28px rgba(0,180,255,.25);
+    }
     .btnGold{
-      border:none; background:linear-gradient(90deg,#ffd66b,#f7c76b);
-      color:#1a1205; box-shadow:0 12px 28px rgba(247,199,107,.22);
+      border:none;
+      background:linear-gradient(90deg,#ffd66b,#f7c76b);
+      color:#1a1205;
+      box-shadow:0 12px 28px rgba(247,199,107,.22);
     }
-    .grid{display:grid; grid-template-columns:1fr; gap:14px;}
-    @media(min-width:820px){ .grid{grid-template-columns:1fr 1fr;} }
+    .btnDanger{
+      background:rgba(255,154,167,.08);
+      border:1px solid rgba(255,154,167,.25);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:14px;
+    }
+    @media(min-width:980px){
+      .grid{grid-template-columns: 1.3fr .7fr;}
+    }
+
     .card{
       border:1px solid var(--border);
       background:var(--glass);
-      border-radius:18px; padding:18px;
+      border-radius:18px;
+      padding:18px;
       box-shadow:0 18px 60px var(--shadow);
       backdrop-filter: blur(10px);
-      min-height:160px;
     }
+
     h1{margin:0 0 6px; font-size:22px;}
-    h2{margin:0 0 8px; font-size:16px;}
+    h2{margin:0 0 6px; font-size:16px;}
     .muted{color:var(--muted); font-size:13px; line-height:1.55}
-    .status{margin-top:10px; display:inline-flex; gap:8px; align-items:center; font-weight:900}
-    .ok{color:var(--good)} .err{color:var(--bad)}
-    .hr{height:1px; background:rgba(255,255,255,.12); margin:12px 0;}
+    .pillRow{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px;}
+    .pill{
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(0,0,0,.16);
+      font-size:12px;
+      color:var(--muted);
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+    }
+    .pill b{color:var(--text); font-weight:900;}
+    .ok{color:var(--good) !important}
+    .err{color:var(--bad) !important}
+    .statusBig{
+      font-weight:900;
+      font-size:13px;
+      padding:9px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(0,0,0,.18);
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+    .hr{height:1px; background:rgba(255,255,255,.12); margin:14px 0;}
+    code{
+      background:rgba(0,0,0,.25);
+      border:1px solid rgba(255,255,255,.12);
+      padding:2px 6px;
+      border-radius:8px;
+      color:var(--text);
+      font-size:12px;
+    }
+    .miniList{margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:13px}
+    .miniList li{margin:6px 0}
+
+    .planBox{
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(0,0,0,.16);
+      border-radius:16px;
+      padding:14px;
+      margin-top:10px;
+    }
   </style>
 </head>
 
@@ -72,60 +156,94 @@
       </div>
     </div>
 
-    <div class="card" style="margin-bottom:14px;">
-      <h1>📘 Student Dashboard</h1>
-      <div class="muted" id="helloLine">Checking login…</div>
-      <div class="status" id="authState">Loading…</div>
-    </div>
-
     <div class="grid">
-      <!-- PAID MODULES -->
+      <!-- MAIN -->
       <div class="card">
-        <h2>🌊 Paid Modules (9–32)</h2>
-        <div class="muted" id="courseBox">Checking…</div>
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+          <div>
+            <h1>📘 Student Dashboard</h1>
+            <div class="muted">Premium access status for paid modules & placement support.</div>
+          </div>
+          <div class="statusBig" id="authState">Checking…</div>
+        </div>
 
         <div class="hr"></div>
 
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn" id="openPaidBtn" href="./paid/" style="display:none;">Open Paid Modules</a>
-
-          <!-- WORKING Payment Link -->
-          <a class="btn btnGold" id="pay499Btn"
-             href="https://rzp.io/rzp/90ezeOg"
-             target="_self"
-             style="display:none;">
-            💳 Pay ₹499
-          </a>
-        </div>
-      </div>
-
-      <!-- PLACEMENT -->
-      <div class="card">
-        <h2>🚀 Placement Support + Mock Interviews</h2>
-        <div class="muted" id="placementBox">Checking…</div>
+        <div id="helloLine" class="muted">Loading profile…</div>
+        <div class="pillRow" id="pillRow"></div>
 
         <div class="hr"></div>
 
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn" id="openPlacementBtn" href="./placement/" style="display:none;">Open Placement Area</a>
+        <!-- COURSE -->
+        <div class="card" style="background:rgba(0,0,0,.14); box-shadow:none;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+            <h2>🌊 Paid Modules (9–32)</h2>
+            <div class="statusBig" id="courseStatus">Loading…</div>
+          </div>
 
-          <!-- WORKING Payment Link -->
-          <a class="btn btnGold" id="pay1999Btn"
-             href="https://rzp.io/rzp/9OQH86Z"
-             target="_self"
-             style="display:none;">
-            🚀 Pay ₹1999
-          </a>
+          <div id="courseBox" class="muted" style="margin-top:8px;">Checking…</div>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
+            <a class="btn btnPrimary" id="courseBtn" href="./paid/" style="display:none;">Open Paid Modules</a>
+            <button class="btn btnGold" id="pay499Btn" style="display:none;">💳 Pay ₹499 (Unlock Modules)</button>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <!-- PLACEMENT -->
+        <div class="card" style="background:rgba(0,0,0,.14); box-shadow:none;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+            <h2>🚀 Placement Support + Mock Interviews</h2>
+            <div class="statusBig" id="placementStatus">Loading…</div>
+          </div>
+
+          <div id="placementBox" class="muted" style="margin-top:8px;">Checking…</div>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
+            <a class="btn btnPrimary" id="placementBtn" href="./placement/" style="display:none;">Open Placement Area</a>
+            <button class="btn btnGold" id="pay1999Btn" style="display:none;">🚀 Pay ₹1999 (Modules + Placement)</button>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="card" style="margin-top:14px;">
-      <h2>ℹ️ After Payment</h2>
-      <div class="muted">
-        Payment link will take payment successfully.<br/>
-        <b>Auto-unlock will happen only after webhook code is working.</b><br/>
-        Until then, you can unlock manually in Supabase profiles table.
+      <!-- SIDE -->
+      <div class="card">
+        <h2>✅ Rules</h2>
+        <ul class="miniList">
+          <li><b>Paid Modules:</b> 6 months from purchase date</li>
+          <li><b>Placement:</b> 1 year from purchase date</li>
+          <li><b>Mock Interviews:</b> 3 per user (tracked)</li>
+        </ul>
+
+        <div class="hr"></div>
+
+        <h2>💳 Upgrade / Buy Access</h2>
+        <div class="muted">If locked, click Pay. After success, wait 5–10 seconds and refresh.</div>
+
+        <div class="planBox">
+          <div style="font-weight:900;">🌊 Paid Modules Access — ₹499</div>
+          <div class="muted">Unlock only Paid Modules (9–32) for 6 months.</div>
+          <div style="margin-top:10px;">
+            <button class="btn btnGold" id="pay499BtnSide">💳 Pay ₹499</button>
+          </div>
+        </div>
+
+        <div class="planBox">
+          <div style="font-weight:900;">🚀 Modules + Placement — ₹1999</div>
+          <div class="muted">Unlock Paid Modules + Placement Support + Mock interviews.</div>
+          <div style="margin-top:10px;">
+            <button class="btn btnGold" id="pay1999BtnSide">🚀 Pay ₹1999</button>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <h2>🔄 After payment</h2>
+        <div class="muted">
+          If still locked: refresh once, then logout + login again.
+          (Unlock happens automatically via webhook.)
+        </div>
       </div>
     </div>
   </div>
@@ -133,76 +251,167 @@
   <script>
     const sb = window.sb;
 
-    function isFuture(ts){
-      if(!ts) return false;
+    // ✅ Your order-create function URL (already in your screenshots)
+    const CREATE_ORDER_FN = "https://ygcvcoynmyrplwrpisd.supabase.co/functions/v1/create-razorpay-order";
+
+    function fmtDate(ts) {
+      if (!ts) return "-";
+      try { return new Date(ts).toLocaleString(); } catch(e) { return String(ts); }
+    }
+    function isFuture(ts) {
+      if (!ts) return false;
       return new Date(ts).getTime() > Date.now();
     }
 
-    function setAuth(text, ok){
-      const a = document.getElementById("authState");
-      a.textContent = text;
-      a.className = "status " + (ok ? "ok" : "err");
+    function setAuthState(text, ok){
+      const el = document.getElementById("authState");
+      el.textContent = text;
+      el.classList.remove("ok","err");
+      el.classList.add(ok ? "ok" : "err");
     }
 
-    document.getElementById("logoutBtn").addEventListener("click", async () => {
+    async function logout() {
       await sb.auth.signOut();
       location.href = "./login.html";
-    });
+    }
 
-    async function loadProfile(user){
+    async function requireAuth() {
+      const { data: { user } } = await sb.auth.getUser();
+      return user || null;
+    }
+
+    async function loadProfile(user) {
       const { data, error } = await sb
         .from("profiles")
-        .select("email, full_name, course_active, course_expiry, placement_active, placement_expiry")
+        .select("email, full_name, course_active, course_expiry, placement_active, placement_expiry, mock_remaining")
         .eq("id", user.id)
         .single();
-      if(error) throw error;
+
+      if (error) throw error;
       return data;
     }
 
-    async function main(){
-      const { data: { user } } = await sb.auth.getUser();
-
-      if(!user){
-        document.getElementById("helloLine").innerHTML =
-          `You are not logged in. Please <a style="color:#9be7ff;text-decoration:underline" href="./login.html">login</a>.`;
-        setAuth("Not logged in", false);
-
-        // show payment even without login (optional)
-        document.getElementById("pay499Btn").style.display = "inline-flex";
-        document.getElementById("pay1999Btn").style.display = "inline-flex";
-        document.getElementById("courseBox").innerHTML = "Locked 🔒 (Login recommended before paying)";
-        document.getElementById("placementBox").innerHTML = "Locked 🔒 (Login recommended before paying)";
+    async function startCheckout(plan){
+      // must be logged in
+      const { data: { session } } = await sb.auth.getSession();
+      if(!session?.access_token){
+        alert("Please login first.");
+        location.href = "./login.html";
         return;
       }
 
-      setAuth("Logged in ✅", true);
+      // create order
+      const res = await fetch(CREATE_ORDER_FN, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer " + session.access_token
+        },
+        body: JSON.stringify({ plan })
+      });
 
-      let p;
-      try { p = await loadProfile(user); }
-      catch(e){
-        document.getElementById("helloLine").textContent = "Profile error: " + e.message;
-        setAuth("Profile error", false);
+      const data = await res.json().catch(()=> ({}));
+      if(!res.ok){
+        console.log("Order create failed:", data);
+        alert("Order create failed: " + (data?.error || "Unknown"));
+        return;
+      }
+
+      // open checkout
+      const options = {
+        key: data.key,
+        amount: data.amount,
+        currency: data.currency,
+        name: "VLSI Physical Design Ocean",
+        description: data.description || (plan === "PLAN_499" ? "Paid Modules Access" : "Modules + Placement"),
+        order_id: data.order_id,
+        prefill: { email: data.user_email || "" },
+        handler: function () {
+          alert("Payment successful ✅\nWait 5–10 seconds and refresh dashboard.");
+        }
+      };
+
+      const rzp = new Razorpay(options);
+      rzp.open();
+    }
+
+    function wireButtons(){
+      document.getElementById("logoutBtn").addEventListener("click", logout);
+
+      // Main buttons
+      document.getElementById("pay499Btn").addEventListener("click", ()=> startCheckout("PLAN_499"));
+      document.getElementById("pay1999Btn").addEventListener("click", ()=> startCheckout("PLAN_1999"));
+
+      // Side buttons
+      document.getElementById("pay499BtnSide").addEventListener("click", ()=> startCheckout("PLAN_499"));
+      document.getElementById("pay1999BtnSide").addEventListener("click", ()=> startCheckout("PLAN_1999"));
+    }
+
+    async function main(){
+      const user = await requireAuth();
+
+      if(!user){
+        setAuthState("Not logged in", false);
+        document.getElementById("helloLine").innerHTML =
+          `You are not logged in. Please <a style="color:#9be7ff;text-decoration:underline" href="./login.html">login</a>.`;
+
+        // show pay buttons even when logged out? (better: hide)
+        document.getElementById("courseStatus").textContent = "Locked 🔒";
+        document.getElementById("placementStatus").textContent = "Locked 🔒";
+        return;
+      }
+
+      setAuthState("Logged in ✅", true);
+
+      let profile;
+      try{
+        profile = await loadProfile(user);
+      }catch(e){
+        setAuthState("Profile error", false);
+        document.getElementById("helloLine").innerHTML =
+          `<span class="err"><b>Error loading profile:</b> ${e.message}</span>`;
         return;
       }
 
       document.getElementById("helloLine").innerHTML =
-        `<b>Welcome,</b> ${p.full_name || "Student"}<br/><span class="muted">${p.email || ""}</span>`;
+        `<b>Welcome,</b> ${profile.full_name || "Student"}<br/>
+         <span class="muted">${profile.email}</span>`;
 
-      const courseValid = p.course_active && isFuture(p.course_expiry);
-      const placementValid = p.placement_active && isFuture(p.placement_expiry);
+      const courseValid = profile.course_active && isFuture(profile.course_expiry);
+      const placementValid = profile.placement_active && isFuture(profile.placement_expiry);
 
-      document.getElementById("courseBox").innerHTML =
-        courseValid ? `<span class="ok"><b>Unlocked ✅</b></span>` : `<span class="err"><b>Locked 🔒</b></span>`;
-      document.getElementById("placementBox").innerHTML =
-        placementValid ? `<span class="ok"><b>Unlocked ✅</b></span>` : `<span class="err"><b>Locked 🔒</b></span>`;
+      document.getElementById("pillRow").innerHTML = `
+        <span class="pill">Course: <b class="${courseValid ? "ok":"err"}">${courseValid ? "Active":"Inactive"}</b></span>
+        <span class="pill">Course Expiry: <b>${fmtDate(profile.course_expiry)}</b></span>
+        <span class="pill">Placement: <b class="${placementValid ? "ok":"err"}">${placementValid ? "Active":"Inactive"}</b></span>
+        <span class="pill">Placement Expiry: <b>${fmtDate(profile.placement_expiry)}</b></span>
+        <span class="pill">Mock Remaining: <b>${profile.mock_remaining ?? 0}</b></span>
+      `;
 
-      document.getElementById("openPaidBtn").style.display = courseValid ? "inline-flex" : "none";
+      // Course
+      const courseStatus = document.getElementById("courseStatus");
+      courseStatus.textContent = courseValid ? "Unlocked ✅" : "Locked 🔒";
+      courseStatus.className = "statusBig " + (courseValid ? "ok":"err");
+      document.getElementById("courseBox").innerHTML = courseValid
+        ? `<span class="ok"><b>Premium access granted.</b></span><br/>Folder: <code>/portal_private_2026/paid/</code>`
+        : `<span class="err"><b>Not active.</b></span><br/>Buy/renew course to unlock modules 9–32.`;
+
+      document.getElementById("courseBtn").style.display = courseValid ? "inline-flex" : "none";
       document.getElementById("pay499Btn").style.display = courseValid ? "none" : "inline-flex";
 
-      document.getElementById("openPlacementBtn").style.display = placementValid ? "inline-flex" : "none";
+      // Placement
+      const placementStatus = document.getElementById("placementStatus");
+      placementStatus.textContent = placementValid ? "Unlocked ✅" : "Locked 🔒";
+      placementStatus.className = "statusBig " + (placementValid ? "ok":"err");
+      document.getElementById("placementBox").innerHTML = placementValid
+        ? `<span class="ok"><b>Placement support active.</b></span><br/>Mock remaining: <b>${profile.mock_remaining ?? 0}</b><br/>Folder: <code>/portal_private_2026/placement/</code>`
+        : `<span class="err"><b>Not active.</b></span><br/>Buy placement to unlock booking + mocks.`;
+
+      document.getElementById("placementBtn").style.display = placementValid ? "inline-flex" : "none";
       document.getElementById("pay1999Btn").style.display = placementValid ? "none" : "inline-flex";
     }
 
+    wireButtons();
     main();
   </script>
 </body>

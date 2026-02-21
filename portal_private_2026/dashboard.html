@@ -286,11 +286,21 @@
       return data;
     }
 
+    // ✅ FIXED VERSION (refresh token first -> take fresh access_token)
     async function startCheckout(plan) {
       try {
-        // must be logged in
-        const { data: { session }, error } = await sb.auth.getSession();
+        // 1) refresh session (this makes JWT valid)
+        const refreshRes = await sb.auth.refreshSession();
+        if (refreshRes?.error) {
+          console.log("refreshSession error:", refreshRes.error);
+          // continue, we will still try getSession
+        }
+
+        // 2) get fresh session
+        const { data, error } = await sb.auth.getSession();
         if (error) throw error;
+
+        const session = data.session;
 
         if (!session?.access_token) {
           alert("Please login first.");
@@ -304,30 +314,32 @@
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            // ✅ important: fresh token
             "Authorization": "Bearer " + session.access_token,
+            // ✅ required for functions gateway
             "apikey": window.SUPABASE_ANON_KEY
           },
           body: JSON.stringify({ plan })
         });
 
-        const data = await res.json().catch(() => ({}));
+        const dataJson = await res.json().catch(() => ({}));
 
         if (!res.ok) {
-          console.log("Order create failed:", data);
-          alert("Order create failed: " + (data?.error || res.status));
+          console.log("Order create failed:", dataJson);
+          alert("Order create failed: " + (dataJson?.error || dataJson?.message || res.status));
           return;
         }
 
         const options = {
-          key: data.key,
-          amount: data.amount,
-          currency: data.currency,
+          key: dataJson.key,
+          amount: dataJson.amount,
+          currency: dataJson.currency,
           name: "VLSI Physical Design Ocean",
           description: plan === "PLAN_499"
             ? "Paid Modules Access (6 months)"
             : "Paid Modules + Placement (1 year)",
-          order_id: data.order_id,
-          prefill: { email: data.user_email || "" },
+          order_id: dataJson.order_id,
+          prefill: { email: dataJson.user_email || "" },
           handler: function () {
             alert("Payment successful ✅\nWait 5–15 seconds and refresh dashboard.");
           }

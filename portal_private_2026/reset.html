@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reset Password | VLSI PD Ocean</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./supabaseClient.js"></script>
+
+  <style>
+    body{
+      margin:0; font-family:Inter, Arial, sans-serif; color:#eaf7ff;
+      background: radial-gradient(1200px 600px at 20% 10%, rgba(0,180,255,.25), transparent 60%),
+                  radial-gradient(1000px 700px at 80% 20%, rgba(0,255,200,.15), transparent 55%),
+                  linear-gradient(180deg, #041726, #03111d 60%, #020a12);
+      min-height:100vh; display:flex; align-items:center; justify-content:center; padding:20px;
+    }
+    .card{
+      width:min(520px, 100%); background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12); border-radius:18px;
+      box-shadow:0 20px 60px rgba(0,0,0,.45); padding:22px;
+      backdrop-filter: blur(10px);
+    }
+    h1{margin:0 0 6px; font-size:22px;}
+    p{margin:0 0 14px; opacity:.9}
+    label{display:block; margin:12px 0 6px; font-size:13px; opacity:.9}
+    input{
+      width:100%; padding:12px 12px; border-radius:12px;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(0,0,0,.25); color:#eaf7ff; outline:none;
+    }
+    button{
+      width:100%; margin-top:12px; padding:12px 14px; border-radius:12px;
+      border:1px solid rgba(255,255,255,.18);
+      background:linear-gradient(90deg,#00b4ff,#00ffc8);
+      color:#03111d; font-weight:700; cursor:pointer;
+    }
+    .msg{margin-top:10px; white-space:pre-wrap; font-size:13px}
+    .ok{color:#7CFFB2}
+    .err{color:#ff9aa7}
+    a{color:#9be7ff}
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h1>🔑 Reset Password</h1>
+    <p>Set a new password for your VLSI PD Ocean account.</p>
+
+    <label>New Password</label>
+    <input id="p1" type="password" placeholder="Enter new password" />
+
+    <label>Confirm Password</label>
+    <input id="p2" type="password" placeholder="Re-enter new password" />
+
+    <button onclick="updatePass()">Update Password</button>
+
+    <div id="msg" class="msg"></div>
+
+    <p style="margin-top:12px;opacity:.85">
+      After success: <a href="./login.html">Go to Login</a>
+    </p>
+  </div>
+
+  <script>
+    const sb = window.sb;
+
+    function setMsg(text, ok){
+      const el = document.getElementById("msg");
+      el.textContent = text || "";
+      el.className = "msg " + (ok ? "ok" : "err");
+    }
+
+    async function updatePass(){
+      const p1 = document.getElementById("p1").value;
+      const p2 = document.getElementById("p2").value;
+
+      if(!p1 || !p2) return setMsg("Please enter password in both fields.", false);
+      if(p1.length < 6) return setMsg("Password should be at least 6 characters.", false);
+      if(p1 !== p2) return setMsg("Passwords do not match.", false);
+
+      setMsg("Updating password...", true);
+
+      const { data, error } = await sb.auth.updateUser({ password: p1 });
+      if(error) return setMsg("Error: " + error.message, false);
+
+      setMsg("Password updated ✅\nNow you can login with your new password.", true);
+    }
+  </script>
+</body>
+</html>

@@ -8,14 +8,16 @@
     body{font-family:Arial, sans-serif; max-width:900px; margin:40px auto; padding:0 16px;}
     .card{border:1px solid #ddd; border-radius:12px; padding:16px; margin:12px 0;}
     .row{display:flex; gap:12px; flex-wrap:wrap;}
-    .pill{display:inline-block; padding:6px 10px; border-radius:999px; border:1px solid #222; font-size:13px;}
+    .pill{display:inline-block; padding:6px 10px; border-radius:999px; border:1px solid #222; font-size:13px; margin:4px 6px 0 0;}
     button,a.btn{padding:10px 14px; border-radius:10px; border:1px solid #222; background:#fff; cursor:pointer; text-decoration:none; display:inline-block;}
     .muted{color:#666}
     .ok{color:green}
     .err{color:#b00020}
     code{background:#f7f7f7; padding:2px 6px; border-radius:6px;}
+    .small{font-size:13px}
   </style>
 
+  <!-- Supabase JS v2 (browser) -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="./supabaseClient.js"></script>
 </head>
@@ -42,6 +44,9 @@
   </div>
 
   <script>
+    // ✅ Use the global client created in supabaseClient.js
+    const sb = window.sb;
+
     function fmtDate(ts) {
       if (!ts) return "-";
       try { return new Date(ts).toLocaleString(); } catch(e) { return String(ts); }
@@ -52,16 +57,34 @@
     }
 
     async function requireAuth() {
-      const { data: { user } } = await supabase.auth.getUser();
-      if (!user) {
+      // more reliable than getUser() alone for browser pages
+      const { data: sessionData } = await sb.auth.getSession();
+      const session = sessionData?.session;
+
+      if (!session?.user) {
         location.href = "./login.html";
         return null;
       }
-      return user;
+      return session.user;
+    }
+
+    async function ensureProfile(user) {
+      // If profile row doesn't exist, create it once
+      // NOTE: This requires your Supabase table/RLS to allow users to insert their own row.
+      const payload = {
+        id: user.id,
+        email: user.email || null,
+        full_name: user.user_metadata?.full_name || user.user_metadata?.name || null,
+      };
+
+      const { error } = await sb.from("profiles").upsert(payload, { onConflict: "id" });
+      // If RLS blocks it, we will show a clear message later.
+      if (error) return { ok: false, error };
+      return { ok: true };
     }
 
     async function loadProfile(user) {
-      const { data, error } = await supabase
+      const { data, error } = await sb
         .from("profiles")
         .select("email, full_name, course_active, course_expiry, placement_active, placement_expiry, mock_remaining")
         .eq("id", user.id)
@@ -72,7 +95,7 @@
     }
 
     async function logout() {
-      await supabase.auth.signOut();
+      await sb.auth.signOut();
       location.href = "./login.html";
     }
 
@@ -80,20 +103,33 @@
       const user = await requireAuth();
       if (!user) return;
 
+      // Try to ensure profile exists (first time user)
+      const ensured = await ensureProfile(user);
+
       let profile;
       try {
         profile = await loadProfile(user);
       } catch (e) {
-        document.getElementById("status").innerHTML =
-          `<b class="err">Error loading profile:</b> ${e.message}`;
+        // Most common issues: RLS not configured OR row missing and insert was blocked.
+        const hint = `
+<b class="err">Error loading profile:</b> ${e.message}<br/><br/>
+<b>Most common fix:</b><br/>
+1) Supabase → Table Editor → profiles → enable RLS properly<br/>
+2) Add policies so logged-in users can <b>SELECT/INSERT/UPDATE</b> their own row (id = auth.uid())<br/><br/>
+<b class="small muted">If you want, send your RLS policy screenshot and I will tell exact policies.</b>
+        `;
+
+        document.getElementById("status").innerHTML = hint;
+        document.getElementById("courseBox").innerHTML = `<div class="err"><b>Locked 🔒</b></div><p class="muted">Profile not readable yet.</p>`;
+        document.getElementById("placementBox").innerHTML = `<div class="err"><b>Locked 🔒</b></div><p class="muted">Profile not readable yet.</p>`;
         return;
       }
 
       document.getElementById("status").innerHTML = `
         <b>Logged in as:</b> ${profile.full_name || "Student"} <br/>
-        <span class="muted">${profile.email}</span><br/><br/>
+        <span class="muted">${profile.email || user.email || "-"}</span><br/><br/>
         <span class="pill">Course: ${profile.course_active ? "Active" : "Inactive"}</span>
-        <span class="pill">Course Expiry: ${fmtDate(profile.course_expiry)}</span><br/><br/>
+        <span class="pill">Course Expiry: ${fmtDate(profile.course_expiry)}</span><br/>
         <span class="pill">Placement: ${profile.placement_active ? "Active" : "Inactive"}</span>
         <span class="pill">Placement Expiry: ${fmtDate(profile.placement_expiry)}</span>
         <span class="pill">Mock Remaining: ${profile.mock_remaining ?? 0}</span>
@@ -103,9 +139,9 @@
       const courseValid = profile.course_active && isFuture(profile.course_expiry);
       document.getElementById("courseBox").innerHTML = courseValid
         ? `<div class="ok"><b>Unlocked ✅</b></div>
-           <p>Now you can access modules in <code>/portal_private_2026/paid/</code></p>
-           <a class="btn" href="./paid/">Open Paid Modules Folder</a>
-           <p class="muted">Later we will create Module9.html ... Module32.html pages.</p>`
+           <p>Access modules in <code>/portal_private_2026/paid/</code></p>
+           <a class="btn" href="./paid/">Open Paid Modules</a>
+           <p class="muted small">Later we will create Module9.html ... Module32.html pages (each embeds your Google Docs).</p>`
         : `<div class="err"><b>Locked 🔒</b></div>
            <p class="muted">Buy/renew course to unlock Modules 9–32.</p>
            <p><b>Payment link:</b> paste your ₹499 Razorpay link here on this dashboard.</p>`;
@@ -115,11 +151,11 @@
       document.getElementById("placementBox").innerHTML = placementValid
         ? `<div class="ok"><b>Unlocked ✅</b></div>
            <p>Mock remaining: <b>${profile.mock_remaining ?? 0}</b></p>
-           <p class="muted">Next we will build booking page inside <code>/portal_private_2026/placement/</code>.</p>
-           <a class="btn" href="./placement/">Open Placement Folder</a>`
+           <p class="muted">Next we will build booking page in <code>/portal_private_2026/placement/</code>.</p>
+           <a class="btn" href="./placement/">Open Placement</a>`
         : `<div class="err"><b>Locked 🔒</b></div>
            <p class="muted">Buy Placement Support to unlock booking + mocks.</p>
-           <p><b>Payment link:</b> paste your ₹1499 Razorpay link here on this dashboard.</p>`;
+           <p><b>Payment link:</b> paste your ₹1499/₹1999 Razorpay link here on this dashboard.</p>`;
     }
 
     main();

@@ -26,7 +26,7 @@
 <body>
   <h1>🔐 Login / Register</h1>
   <p class="muted">
-    Note: In Supabase you kept <b>Email confirmations ON</b>. So after Sign Up, you must verify from email first, then login will work.
+    Note: Email confirmation is ON. After Sign Up, verify from email first, then login will work.
   </p>
 
   <div class="grid">
@@ -61,6 +61,9 @@
   </div>
 
   <script>
+    // Supabase client from supabaseClient.js
+    const sb = window.sb;
+
     function setMsg(id, text, ok) {
       const el = document.getElementById(id);
       el.textContent = text || "";
@@ -79,23 +82,26 @@
         return;
       }
 
-      const { data, error } = await supabase.auth.signUp({
-        email,
-        password,
-        options: {
-          data: { full_name }
+      try {
+        const { data, error } = await sb.auth.signUp({
+          email,
+          password,
+          options: { data: { full_name } }
+        });
+
+        if (error) {
+          setMsg("su_msg", "Sign Up error: " + error.message, false);
+          return;
         }
-      });
 
-      if (error) {
-        setMsg("su_msg", "Sign Up error: " + error.message, false);
-        return;
+        setMsg(
+          "su_msg",
+          "Account created ✅\nNow check your email inbox/spam and confirm your email.\nAfter confirmation, come back and login.",
+          true
+        );
+      } catch (e) {
+        setMsg("su_msg", "Sign Up failed: " + e.message, false);
       }
-
-      setMsg("su_msg",
-        "Account created.\nNow check your email inbox/spam and confirm your email.\nAfter confirmation, come back and login.",
-        true
-      );
     }
 
     async function login() {
@@ -109,19 +115,23 @@
         return;
       }
 
-      const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+      try {
+        const { data, error } = await sb.auth.signInWithPassword({ email, password });
 
-      if (error) {
-        setMsg("li_msg", "Login error: " + error.message, false);
-        return;
+        if (error) {
+          setMsg("li_msg", "Login error: " + error.message, false);
+          return;
+        }
+
+        setMsg("li_msg", "Login success ✅\nRedirecting to dashboard...", true);
+        setTimeout(() => location.href = "./dashboard.html", 700);
+      } catch (e) {
+        setMsg("li_msg", "Login failed: " + e.message, false);
       }
-
-      setMsg("li_msg", "Login success ✅\nRedirecting to dashboard...", true);
-      setTimeout(() => location.href = "./dashboard.html", 700);
     }
 
     async function logout() {
-      await supabase.auth.signOut();
+      await sb.auth.signOut();
       setMsg("li_msg", "Logged out ✅", true);
     }
   </script>

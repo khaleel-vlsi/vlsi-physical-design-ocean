@@ -3,48 +3,209 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dashboard | VLSI PD Ocean</title>
-  <style>
-    body{font-family:Arial, sans-serif; max-width:900px; margin:40px auto; padding:0 16px;}
-    .card{border:1px solid #ddd; border-radius:12px; padding:16px; margin:12px 0;}
-    .row{display:flex; gap:12px; flex-wrap:wrap;}
-    .pill{display:inline-block; padding:6px 10px; border-radius:999px; border:1px solid #222; font-size:13px; margin:4px 6px 0 0;}
-    button,a.btn{padding:10px 14px; border-radius:10px; border:1px solid #222; background:#fff; cursor:pointer; text-decoration:none; display:inline-block;}
-    .muted{color:#666}
-    .ok{color:green}
-    .err{color:#b00020}
-    code{background:#f7f7f7; padding:2px 6px; border-radius:6px;}
-    .small{font-size:13px}
-  </style>
+  <title>Dashboard | VLSI Physical Design Ocean</title>
 
-  <!-- Supabase JS v2 (browser) -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="./supabaseClient.js"></script>
+
+  <style>
+    :root{
+      --bg1:#041726;
+      --bg2:#020b12;
+      --glass:rgba(255,255,255,.08);
+      --border:rgba(255,255,255,.14);
+      --text:#eaf7ff;
+      --muted:rgba(234,247,255,.78);
+      --good:#7CFFB2;
+      --bad:#ff9aa7;
+      --accent1:#00b4ff;
+      --accent2:#00ffc8;
+      --gold:#f7c76b;
+      --shadow:rgba(0,0,0,.45);
+    }
+
+    body{
+      margin:0;
+      font-family: Inter, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 15% 10%, rgba(0,180,255,.26), transparent 60%),
+        radial-gradient(900px 600px at 85% 18%, rgba(0,255,200,.18), transparent 55%),
+        linear-gradient(180deg, var(--bg1), var(--bg2) 65%, #01060b);
+      min-height:100vh;
+      padding:26px;
+    }
+
+    .wrap{width:min(1200px, 100%); margin:0 auto;}
+    .top{display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:14px;}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:900;}
+    .dot{width:12px; height:12px; border-radius:50%; background:linear-gradient(90deg,var(--accent1),var(--accent2)); box-shadow:0 0 22px rgba(0,255,200,.35);}
+
+    .btn{
+      padding:11px 14px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      cursor:pointer;
+      text-decoration:none;
+      font-weight:900;
+      font-size:13px;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+    }
+    .btnPrimary{
+      border:none;
+      background:linear-gradient(90deg,var(--accent1),var(--accent2));
+      color:#021016;
+      box-shadow:0 12px 28px rgba(0,180,255,.25);
+    }
+    .btnDanger{
+      background:rgba(255,154,167,.08);
+      border:1px solid rgba(255,154,167,.25);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:14px;
+    }
+    @media(min-width:980px){
+      .grid{grid-template-columns: 1.3fr .7fr;}
+    }
+
+    .card{
+      border:1px solid var(--border);
+      background:var(--glass);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:0 18px 60px var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    h1{margin:0 0 6px; font-size:22px;}
+    h2{margin:0 0 6px; font-size:16px;}
+    .muted{color:var(--muted); font-size:13px; line-height:1.55}
+    .pillRow{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px;}
+    .pill{
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(0,0,0,.16);
+      font-size:12px;
+      color:var(--muted);
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+    }
+    .pill b{color:var(--text); font-weight:900;}
+    .ok{color:var(--good) !important}
+    .err{color:var(--bad) !important}
+    .statusBig{
+      font-weight:900;
+      font-size:13px;
+      padding:9px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(0,0,0,.18);
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+    .hr{height:1px; background:rgba(255,255,255,.12); margin:14px 0;}
+    code{
+      background:rgba(0,0,0,.25);
+      border:1px solid rgba(255,255,255,.12);
+      padding:2px 6px;
+      border-radius:8px;
+      color:var(--text);
+      font-size:12px;
+    }
+    .miniList{margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:13px}
+    .miniList li{margin:6px 0}
+  </style>
 </head>
+
 <body>
-  <h1>📘 Dashboard</h1>
-  <p class="muted">If you are not logged in, you will be redirected to Login.</p>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand"><span class="dot"></span> VLSI Physical Design Ocean</div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a class="btn" href="./index.html">🏠 Portal Home</a>
+        <a class="btn" href="./login.html">🔐 Login</a>
+        <button class="btn btnDanger" onclick="logout()">🚪 Logout</button>
+      </div>
+    </div>
 
-  <div class="row">
-    <a class="btn" href="./index.html">Portal Home</a>
-    <a class="btn" href="./login.html">Login</a>
-    <button onclick="logout()">Logout</button>
-  </div>
+    <div class="grid">
+      <!-- MAIN -->
+      <div class="card">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+          <div>
+            <h1>📘 Student Dashboard</h1>
+            <div class="muted">Premium access status for paid modules & placement support.</div>
+          </div>
+          <div class="statusBig" id="authState">Checking…</div>
+        </div>
 
-  <div id="status" class="card">Loading...</div>
+        <div class="hr"></div>
 
-  <div class="card">
-    <h3>Paid Modules 9–32</h3>
-    <div id="courseBox" class="muted">Checking course access...</div>
-  </div>
+        <div id="helloLine" class="muted">Loading profile…</div>
+        <div class="pillRow" id="pillRow"></div>
 
-  <div class="card">
-    <h3>Placement Support + Mock Interviews</h3>
-    <div id="placementBox" class="muted">Checking placement access...</div>
+        <div class="hr"></div>
+
+        <!-- COURSE -->
+        <div class="card" style="background:rgba(0,0,0,.14); box-shadow:none;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+            <h2>🌊 Paid Modules (9–32)</h2>
+            <div class="statusBig" id="courseStatus">Loading…</div>
+          </div>
+          <div id="courseBox" class="muted" style="margin-top:8px;">Checking…</div>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
+            <a class="btn btnPrimary" id="courseBtn" href="./paid/" style="display:none;">Open Paid Modules</a>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <!-- PLACEMENT -->
+        <div class="card" style="background:rgba(0,0,0,.14); box-shadow:none;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+            <h2>🚀 Placement Support + Mock Interviews</h2>
+            <div class="statusBig" id="placementStatus">Loading…</div>
+          </div>
+          <div id="placementBox" class="muted" style="margin-top:8px;">Checking…</div>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
+            <a class="btn btnPrimary" id="placementBtn" href="./placement/" style="display:none;">Open Placement Area</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDE -->
+      <div class="card">
+        <h2>✅ Rules</h2>
+        <ul class="miniList">
+          <li><b>Paid Modules:</b> 6 months from purchase date</li>
+          <li><b>Placement:</b> 1 year from purchase date</li>
+          <li><b>Mock Interviews:</b> 3 per user (tracked)</li>
+        </ul>
+
+        <div class="hr"></div>
+
+        <h2>🔗 Next Step</h2>
+        <div class="muted">
+          After Razorpay payment integration, access can unlock automatically.
+          For now you can unlock manually in Supabase profiles table.
+        </div>
+      </div>
+    </div>
   </div>
 
   <script>
-    // ✅ Use the global client created in supabaseClient.js
     const sb = window.sb;
 
     function fmtDate(ts) {
@@ -56,31 +217,21 @@
       return new Date(ts).getTime() > Date.now();
     }
 
-    async function requireAuth() {
-      // more reliable than getUser() alone for browser pages
-      const { data: sessionData } = await sb.auth.getSession();
-      const session = sessionData?.session;
-
-      if (!session?.user) {
-        location.href = "./login.html";
-        return null;
-      }
-      return session.user;
+    function setAuthState(text, ok){
+      const el = document.getElementById("authState");
+      el.textContent = text;
+      el.classList.remove("ok","err");
+      el.classList.add(ok ? "ok" : "err");
     }
 
-    async function ensureProfile(user) {
-      // If profile row doesn't exist, create it once
-      // NOTE: This requires your Supabase table/RLS to allow users to insert their own row.
-      const payload = {
-        id: user.id,
-        email: user.email || null,
-        full_name: user.user_metadata?.full_name || user.user_metadata?.name || null,
-      };
+    async function logout() {
+      await sb.auth.signOut();
+      location.href = "./login.html";
+    }
 
-      const { error } = await sb.from("profiles").upsert(payload, { onConflict: "id" });
-      // If RLS blocks it, we will show a clear message later.
-      if (error) return { ok: false, error };
-      return { ok: true };
+    async function requireAuth() {
+      const { data: { user } } = await sb.auth.getUser();
+      return user || null;
     }
 
     async function loadProfile(user) {
@@ -94,68 +245,64 @@
       return data;
     }
 
-    async function logout() {
-      await sb.auth.signOut();
-      location.href = "./login.html";
-    }
-
-    async function main() {
+    async function main(){
       const user = await requireAuth();
-      if (!user) return;
 
-      // Try to ensure profile exists (first time user)
-      const ensured = await ensureProfile(user);
-
-      let profile;
-      try {
-        profile = await loadProfile(user);
-      } catch (e) {
-        // Most common issues: RLS not configured OR row missing and insert was blocked.
-        const hint = `
-<b class="err">Error loading profile:</b> ${e.message}<br/><br/>
-<b>Most common fix:</b><br/>
-1) Supabase → Table Editor → profiles → enable RLS properly<br/>
-2) Add policies so logged-in users can <b>SELECT/INSERT/UPDATE</b> their own row (id = auth.uid())<br/><br/>
-<b class="small muted">If you want, send your RLS policy screenshot and I will tell exact policies.</b>
-        `;
-
-        document.getElementById("status").innerHTML = hint;
-        document.getElementById("courseBox").innerHTML = `<div class="err"><b>Locked 🔒</b></div><p class="muted">Profile not readable yet.</p>`;
-        document.getElementById("placementBox").innerHTML = `<div class="err"><b>Locked 🔒</b></div><p class="muted">Profile not readable yet.</p>`;
+      if(!user){
+        setAuthState("Not logged in", false);
+        document.getElementById("helloLine").innerHTML =
+          `You are not logged in. Please <a style="color:#9be7ff;text-decoration:underline" href="./login.html">login</a>.`;
+        document.getElementById("courseStatus").textContent = "Locked 🔒";
+        document.getElementById("placementStatus").textContent = "Locked 🔒";
         return;
       }
 
-      document.getElementById("status").innerHTML = `
-        <b>Logged in as:</b> ${profile.full_name || "Student"} <br/>
-        <span class="muted">${profile.email || user.email || "-"}</span><br/><br/>
-        <span class="pill">Course: ${profile.course_active ? "Active" : "Inactive"}</span>
-        <span class="pill">Course Expiry: ${fmtDate(profile.course_expiry)}</span><br/>
-        <span class="pill">Placement: ${profile.placement_active ? "Active" : "Inactive"}</span>
-        <span class="pill">Placement Expiry: ${fmtDate(profile.placement_expiry)}</span>
-        <span class="pill">Mock Remaining: ${profile.mock_remaining ?? 0}</span>
+      setAuthState("Logged in ✅", true);
+
+      let profile;
+      try{
+        profile = await loadProfile(user);
+      }catch(e){
+        setAuthState("Profile error", false);
+        document.getElementById("helloLine").innerHTML =
+          `<span class="err"><b>Error loading profile:</b> ${e.message}</span>`;
+        return;
+      }
+
+      document.getElementById("helloLine").innerHTML =
+        `<b>Welcome,</b> ${profile.full_name || "Student"}<br/>
+         <span class="muted">${profile.email}</span>`;
+
+      const courseValid = profile.course_active && isFuture(profile.course_expiry);
+      const placementValid = profile.placement_active && isFuture(profile.placement_expiry);
+
+      document.getElementById("pillRow").innerHTML = `
+        <span class="pill">Course: <b class="${courseValid ? "ok":"err"}">${courseValid ? "Active":"Inactive"}</b></span>
+        <span class="pill">Course Expiry: <b>${fmtDate(profile.course_expiry)}</b></span>
+        <span class="pill">Placement: <b class="${placementValid ? "ok":"err"}">${placementValid ? "Active":"Inactive"}</b></span>
+        <span class="pill">Placement Expiry: <b>${fmtDate(profile.placement_expiry)}</b></span>
+        <span class="pill">Mock Remaining: <b>${profile.mock_remaining ?? 0}</b></span>
       `;
 
-      // Course access
-      const courseValid = profile.course_active && isFuture(profile.course_expiry);
+      // Course
+      const courseStatus = document.getElementById("courseStatus");
+      courseStatus.textContent = courseValid ? "Unlocked ✅" : "Locked 🔒";
+      courseStatus.className = "statusBig " + (courseValid ? "ok":"err");
       document.getElementById("courseBox").innerHTML = courseValid
-        ? `<div class="ok"><b>Unlocked ✅</b></div>
-           <p>Access modules in <code>/portal_private_2026/paid/</code></p>
-           <a class="btn" href="./paid/">Open Paid Modules</a>
-           <p class="muted small">Later we will create Module9.html ... Module32.html pages (each embeds your Google Docs).</p>`
-        : `<div class="err"><b>Locked 🔒</b></div>
-           <p class="muted">Buy/renew course to unlock Modules 9–32.</p>
-           <p><b>Payment link:</b> paste your ₹499 Razorpay link here on this dashboard.</p>`;
+        ? `<span class="ok"><b>Premium access granted.</b></span><br/>Folder: <code>/portal_private_2026/paid/</code>`
+        : `<span class="err"><b>Not active.</b></span><br/>Buy/renew course to unlock modules 9–32.`;
 
-      // Placement access
-      const placementValid = profile.placement_active && isFuture(profile.placement_expiry);
+      document.getElementById("courseBtn").style.display = courseValid ? "inline-flex" : "none";
+
+      // Placement
+      const placementStatus = document.getElementById("placementStatus");
+      placementStatus.textContent = placementValid ? "Unlocked ✅" : "Locked 🔒";
+      placementStatus.className = "statusBig " + (placementValid ? "ok":"err");
       document.getElementById("placementBox").innerHTML = placementValid
-        ? `<div class="ok"><b>Unlocked ✅</b></div>
-           <p>Mock remaining: <b>${profile.mock_remaining ?? 0}</b></p>
-           <p class="muted">Next we will build booking page in <code>/portal_private_2026/placement/</code>.</p>
-           <a class="btn" href="./placement/">Open Placement</a>`
-        : `<div class="err"><b>Locked 🔒</b></div>
-           <p class="muted">Buy Placement Support to unlock booking + mocks.</p>
-           <p><b>Payment link:</b> paste your ₹1499/₹1999 Razorpay link here on this dashboard.</p>`;
+        ? `<span class="ok"><b>Placement support active.</b></span><br/>Mock remaining: <b>${profile.mock_remaining ?? 0}</b><br/>Folder: <code>/portal_private_2026/placement/</code>`
+        : `<span class="err"><b>Not active.</b></span><br/>Buy placement to unlock booking + mocks.`;
+
+      document.getElementById("placementBtn").style.display = placementValid ? "inline-flex" : "none";
     }
 
     main();

@@ -19,6 +19,7 @@
       --shadow:rgba(0,0,0,.45);
       --good:#7CFFB2; --bad:#ff9aa7;
     }
+
     body{
       margin:0;
       font-family: Inter, Arial, sans-serif;
@@ -33,6 +34,7 @@
       align-items:center;
       justify-content:center;
     }
+
     .wrap{width:min(1100px,100%);}
     .top{display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:14px;}
     .brand{display:flex; align-items:center; gap:10px; font-weight:900;}
@@ -70,6 +72,7 @@
       box-shadow:0 18px 60px var(--shadow);
       backdrop-filter: blur(10px);
     }
+
     h1{margin:0 0 6px; font-size:22px;}
     h2{margin:0 0 10px; font-size:16px;}
     .muted{color:var(--muted); font-size:13px; line-height:1.55}
@@ -92,6 +95,7 @@
     .msg{margin-top:10px; font-size:13px;}
     .ok{color:var(--good)}
     .err{color:var(--bad)}
+
     .tabs{display:flex; gap:10px; margin-bottom:10px;}
     .tab{
       padding:10px 12px;
@@ -103,7 +107,11 @@
       font-weight:900;
       font-size:13px;
     }
-    .tab.active{color:var(--text); border-color:rgba(0,180,255,.45); box-shadow:0 0 0 2px rgba(0,180,255,.12) inset;}
+    .tab.active{
+      color:var(--text);
+      border-color:rgba(0,180,255,.45);
+      box-shadow:0 0 0 2px rgba(0,180,255,.12) inset;
+    }
   </style>
 </head>
 
@@ -118,21 +126,22 @@
     </div>
 
     <div class="grid">
-      <!-- LEFT -->
       <div class="card">
         <h1>🔐 Login / Register</h1>
         <div class="muted">
-          Use same email for payments & access. If you forgot password, use reset below.
+          Use same email for payments & access.
+          If you forgot password, use reset below.
         </div>
 
         <div class="hr"></div>
 
+        <!-- TABS -->
         <div class="tabs">
-          <div class="tab active" id="tabLogin" onclick="showMode('login')">Login</div>
-          <div class="tab" id="tabRegister" onclick="showMode('register')">Create Account</div>
+          <button type="button" class="tab active" id="tabLogin">Login</button>
+          <button type="button" class="tab" id="tabRegister">Create Account</button>
         </div>
 
-        <!-- LOGIN FORM -->
+        <!-- LOGIN -->
         <div id="loginBox">
           <h2>Login</h2>
           <label>Email</label>
@@ -140,13 +149,13 @@
           <label>Password</label>
           <input id="loginPass" type="password" placeholder="Your password" />
           <div class="row" style="margin-top:12px;">
-            <button class="btn btnPrimary" onclick="doLogin()">Login</button>
-            <span class="smallLink" onclick="toggleReset(true)">Forgot password?</span>
+            <button type="button" class="btn btnPrimary" id="loginBtn">Login</button>
+            <span class="smallLink" id="forgotLink">Forgot password?</span>
           </div>
           <div class="msg" id="loginMsg"></div>
         </div>
 
-        <!-- REGISTER FORM -->
+        <!-- REGISTER -->
         <div id="registerBox" style="display:none;">
           <h2>Create Account</h2>
           <label>Full Name</label>
@@ -156,12 +165,12 @@
           <label>Password</label>
           <input id="regPass" type="password" placeholder="Create a strong password" />
           <div class="row" style="margin-top:12px;">
-            <button class="btn btnPrimary" onclick="doRegister()">Create Account</button>
+            <button type="button" class="btn btnPrimary" id="regBtn">Create Account</button>
           </div>
           <div class="msg" id="regMsg"></div>
         </div>
 
-        <!-- RESET PASSWORD -->
+        <!-- RESET -->
         <div id="resetBox" style="display:none; margin-top:16px;">
           <div class="hr"></div>
           <h2>Reset Password</h2>
@@ -169,19 +178,18 @@
           <label>Email</label>
           <input id="resetEmail" type="email" placeholder="name@gmail.com" />
           <div class="row" style="margin-top:12px;">
-            <button class="btn btnPrimary" onclick="sendReset()">Send Reset Link</button>
-            <span class="smallLink" onclick="toggleReset(false)">Close</span>
+            <button type="button" class="btn btnPrimary" id="resetBtn">Send Reset Link</button>
+            <span class="smallLink" id="closeReset">Close</span>
           </div>
           <div class="msg" id="resetMsg"></div>
         </div>
       </div>
 
-      <!-- RIGHT -->
       <div class="card">
         <h2>✅ Tips</h2>
         <div class="muted">
           • After signup, check email and confirm.<br/>
-          • If reset email opens login page, your redirect URL is wrong — this file fixes it by using <b>reset.html</b>.<br/>
+          • Reset email must open <b>reset.html</b>.<br/>
           • After login, you will auto go to dashboard.
         </div>
         <div class="hr"></div>
@@ -196,6 +204,88 @@
   <script>
     const sb = window.sb;
 
+    const tabLogin = document.getElementById("tabLogin");
+    const tabRegister = document.getElementById("tabRegister");
+    const loginBox = document.getElementById("loginBox");
+    const registerBox = document.getElementById("registerBox");
+    const resetBox = document.getElementById("resetBox");
+
     function setMsg(id, text, ok){
       const el = document.getElementById(id);
-      el.className = "msg "
+      el.className = "msg " + (ok ? "ok" : "err");
+      el.innerHTML = text;
+    }
+
+    function showMode(mode){
+      const isLogin = (mode === "login");
+      tabLogin.classList.toggle("active", isLogin);
+      tabRegister.classList.toggle("active", !isLogin);
+      loginBox.style.display = isLogin ? "" : "none";
+      registerBox.style.display = isLogin ? "none" : "";
+      resetBox.style.display = "none";
+    }
+
+    function openReset(){
+      resetBox.style.display = "";
+      const v = document.getElementById("loginEmail").value || "";
+      document.getElementById("resetEmail").value = v;
+    }
+
+    tabLogin.addEventListener("click", () => showMode("login"));
+    tabRegister.addEventListener("click", () => showMode("register"));
+
+    document.getElementById("forgotLink").addEventListener("click", openReset);
+    document.getElementById("closeReset").addEventListener("click", () => resetBox.style.display = "none");
+
+    document.getElementById("loginBtn").addEventListener("click", async () => {
+      const email = document.getElementById("loginEmail").value.trim();
+      const password = document.getElementById("loginPass").value.trim();
+      if(!email || !password) return setMsg("loginMsg","Please enter email + password.", false);
+
+      const { error } = await sb.auth.signInWithPassword({ email, password });
+      if(error) return setMsg("loginMsg", error.message, false);
+
+      setMsg("loginMsg","Login success ✅ Redirecting…", true);
+      setTimeout(() => location.href = "./dashboard.html", 700);
+    });
+
+    document.getElementById("regBtn").addEventListener("click", async () => {
+      const full_name = document.getElementById("regName").value.trim();
+      const email = document.getElementById("regEmail").value.trim();
+      const password = document.getElementById("regPass").value.trim();
+
+      if(!full_name || !email || !password)
+        return setMsg("regMsg","Please fill Full Name, Email, Password.", false);
+
+      const { error } = await sb.auth.signUp({
+        email,
+        password,
+        options: { data: { full_name } }
+      });
+
+      if(error) return setMsg("regMsg", error.message, false);
+
+      setMsg("regMsg","Account created ✅ Check email and confirm signup.", true);
+      showMode("login");
+      document.getElementById("loginEmail").value = email;
+    });
+
+    document.getElementById("resetBtn").addEventListener("click", async () => {
+      const email = document.getElementById("resetEmail").value.trim();
+      if(!email) return setMsg("resetMsg","Enter your email.", false);
+
+      const redirectTo = location.origin + "/portal_private_2026/reset.html";
+      const { error } = await sb.auth.resetPasswordForEmail(email, { redirectTo });
+
+      if(error) return setMsg("resetMsg", error.message, false);
+      setMsg("resetMsg","Reset link sent ✅ Check email (spam also).", true);
+    });
+
+    // If already logged in -> go dashboard
+    (async () => {
+      const { data: { user } } = await sb.auth.getUser();
+      if(user) location.href = "./dashboard.html";
+    })();
+  </script>
+</body>
+</html>

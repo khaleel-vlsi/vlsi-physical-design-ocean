@@ -1,531 +1,201 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Login | VLSI Physical Design Ocean</title>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./supabaseClient.js"></script>
+
   <style>
     :root{
-      --bg1:#041427;
-      --bg2:#062a4a;
-      --card:rgba(255,255,255,.08);
-      --card2:rgba(255,255,255,.10);
-      --stroke:rgba(255,255,255,.16);
-      --text:#eaf6ff;
-      --muted:rgba(234,246,255,.75);
-      --accent:#4fd1ff;
-      --accent2:#1fb6ff;
-      --gold:#ffd54f;
-      --danger:#ff5c7a;
-      --ok:#36d399;
-      --shadow: 0 18px 50px rgba(0,0,0,.45);
-      --radius:18px;
+      --bg1:#041726; --bg2:#020b12;
+      --glass:rgba(255,255,255,.08);
+      --border:rgba(255,255,255,.14);
+      --text:#eaf7ff;
+      --muted:rgba(234,247,255,.78);
+      --accent1:#00b4ff; --accent2:#00ffc8;
+      --shadow:rgba(0,0,0,.45);
+      --good:#7CFFB2; --bad:#ff9aa7;
     }
-
-    *{box-sizing:border-box}
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-family: Inter, Arial, sans-serif;
       color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 15% 10%, rgba(0,180,255,.26), transparent 60%),
+        radial-gradient(900px 600px at 85% 18%, rgba(0,255,200,.18), transparent 55%),
+        linear-gradient(180deg, var(--bg1), var(--bg2) 65%, #01060b);
       min-height:100vh;
-      background:
-        radial-gradient(1200px 600px at 10% 10%, rgba(79,209,255,.18), transparent 55%),
-        radial-gradient(900px 500px at 90% 20%, rgba(255,213,79,.10), transparent 55%),
-        linear-gradient(160deg, var(--bg1), var(--bg2));
-      overflow-x:hidden;
-    }
-
-    /* subtle ocean wave overlay */
-    .waves{
-      position:fixed; inset:-40px 0 0 0;
-      pointer-events:none;
-      opacity:.18;
-      background:
-        radial-gradient(600px 220px at 20% 10%, rgba(79,209,255,.35), transparent 60%),
-        radial-gradient(700px 260px at 80% 20%, rgba(79,209,255,.28), transparent 60%),
-        radial-gradient(900px 320px at 45% 0%, rgba(31,182,255,.18), transparent 65%);
-      filter: blur(0px);
-      transform: translateZ(0);
-    }
-
-    .wrap{
-      max-width:1100px;
-      margin:0 auto;
-      padding:28px 16px 60px;
-      position:relative;
-      z-index:1;
-    }
-
-    .topbar{
+      padding:26px;
       display:flex;
       align-items:center;
-      justify-content:space-between;
-      gap:14px;
-      margin-bottom:22px;
+      justify-content:center;
     }
+    .wrap{width:min(1100px,100%);}
+    .top{display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:14px;}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:900;}
+    .dot{width:12px; height:12px; border-radius:50%; background:linear-gradient(90deg,var(--accent1),var(--accent2)); box-shadow:0 0 22px rgba(0,255,200,.35);}
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
-    .logo{
-      width:44px;height:44px;border-radius:14px;
-      background: linear-gradient(135deg, rgba(79,209,255,.95), rgba(31,182,255,.65));
-      box-shadow: 0 12px 30px rgba(31,182,255,.22);
-      position:relative;
-      overflow:hidden;
-    }
-    .logo:after{
-      content:"";
-      position:absolute; inset:-10px;
-      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), transparent 55%);
-      transform: rotate(20deg);
-    }
-    .brand h1{
-      font-size:18px;
-      margin:0;
-      line-height:1.1;
-      letter-spacing:.3px;
-    }
-    .brand p{
-      margin:4px 0 0;
-      color:var(--muted);
-      font-size:13px;
-    }
-
-    .nav{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
     .btn{
-      border:1px solid var(--stroke);
+      padding:11px 14px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.18);
       background:rgba(255,255,255,.06);
       color:var(--text);
-      padding:10px 14px;
-      border-radius:14px;
+      cursor:pointer;
       text-decoration:none;
-      font-weight:600;
+      font-weight:900;
       font-size:13px;
-      transition:.2s;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+    }
+    .btnPrimary{
+      border:none;
+      background:linear-gradient(90deg,var(--accent1),var(--accent2));
+      color:#021016;
+      box-shadow:0 12px 28px rgba(0,180,255,.25);
+    }
+
+    .grid{display:grid; grid-template-columns:1fr; gap:14px;}
+    @media(min-width:980px){ .grid{grid-template-columns:1fr 1fr;} }
+
+    .card{
+      border:1px solid var(--border);
+      background:var(--glass);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:0 18px 60px var(--shadow);
       backdrop-filter: blur(10px);
     }
-    .btn:hover{ transform: translateY(-1px); background:rgba(255,255,255,.10); }
-
-    .hero{
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap:18px;
-      align-items:stretch;
-    }
-    @media (max-width: 920px){
-      .hero{ grid-template-columns: 1fr; }
-      .nav{ justify-content:flex-start; }
-    }
-
-    .panel{
-      background: linear-gradient(180deg, var(--card), var(--card2));
-      border:1px solid var(--stroke);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding:18px;
-      backdrop-filter: blur(14px);
-    }
-
-    .headline{
-      padding:22px;
-      position:relative;
-      overflow:hidden;
-    }
-    .headline h2{
-      margin:0 0 10px;
-      font-size:26px;
-      letter-spacing:.3px;
-    }
-    .headline p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.45;
-      max-width:720px;
-    }
-    .badge{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      background: rgba(79,209,255,.14);
-      border:1px solid rgba(79,209,255,.28);
-      color:var(--text);
-      padding:8px 12px;
-      border-radius:999px;
-      font-size:13px;
-      font-weight:700;
-      margin-top:14px;
-    }
-
-    .grid2{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
-    }
-    @media (max-width: 760px){
-      .grid2{ grid-template-columns:1fr; }
-    }
-
-    .cardTitle{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
-      margin-bottom:10px;
-    }
-    .cardTitle h3{
-      margin:0;
-      font-size:16px;
-      letter-spacing:.2px;
-    }
-    .smallNote{
-      font-size:12px;
-      color:var(--muted);
-    }
-
-    label{
-      display:block;
-      margin:12px 0 6px;
-      font-size:13px;
-      color:var(--muted);
-    }
+    h1{margin:0 0 6px; font-size:22px;}
+    h2{margin:0 0 10px; font-size:16px;}
+    .muted{color:var(--muted); font-size:13px; line-height:1.55}
+    .hr{height:1px; background:rgba(255,255,255,.12); margin:14px 0;}
 
     input{
       width:100%;
       padding:12px 12px;
       border-radius:14px;
-      border:1px solid rgba(255,255,255,.22);
-      background: rgba(0,0,0,.20);
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(0,0,0,.22);
       color:var(--text);
       outline:none;
+      font-size:14px;
+      box-sizing:border-box;
     }
-    input::placeholder{ color:rgba(234,246,255,.50); }
-
-    .actions{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:14px;
-      align-items:center;
-    }
-
-    .primary{
-      border:0;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color:#001a2a;
-      font-weight:900;
-      padding:12px 14px;
-      border-radius:14px;
-      cursor:pointer;
-      transition:.2s;
-      box-shadow: 0 12px 26px rgba(79,209,255,.22);
-    }
-    .primary:hover{ transform: translateY(-1px); }
-
-    .secondary{
-      border:1px solid var(--stroke);
-      background: rgba(255,255,255,.06);
-      color:var(--text);
-      font-weight:800;
-      padding:12px 14px;
-      border-radius:14px;
-      cursor:pointer;
-      transition:.2s;
-    }
-    .secondary:hover{ transform: translateY(-1px); background:rgba(255,255,255,.10); }
-
-    .linkBtn{
-      border:none;
-      background: transparent;
-      color: var(--gold);
-      font-weight:800;
-      cursor:pointer;
-      padding:10px 0;
-      text-decoration: underline;
-    }
-
-    .msg{
-      margin-top:12px;
-      padding:12px 12px;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(0,0,0,.20);
-      white-space:pre-wrap;
-      font-size:13px;
-      line-height:1.35;
-      display:none;
-    }
-    .msg.ok{ display:block; border-color: rgba(54,211,153,.35); }
-    .msg.err{ display:block; border-color: rgba(255,92,122,.35); }
-
-    .okText{ color: var(--ok); font-weight:900; }
-    .errText{ color: var(--danger); font-weight:900; }
-
-    .foot{
-      margin-top:14px;
-      color:var(--muted);
-      font-size:12px;
-      line-height:1.45;
-    }
-    .foot a{ color: var(--accent); }
-
-    .notice{
-      margin-top:12px;
-      font-size:12px;
-      color:var(--muted);
-      border:1px dashed rgba(255,255,255,.22);
+    label{display:block; font-size:12px; color:var(--muted); margin:10px 0 6px;}
+    .row{display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:space-between;}
+    .smallLink{color:#9be7ff; text-decoration:underline; cursor:pointer; font-size:13px;}
+    .msg{margin-top:10px; font-size:13px;}
+    .ok{color:var(--good)}
+    .err{color:var(--bad)}
+    .tabs{display:flex; gap:10px; margin-bottom:10px;}
+    .tab{
       padding:10px 12px;
       border-radius:14px;
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(0,0,0,.16);
+      color:var(--muted);
+      cursor:pointer;
+      font-weight:900;
+      font-size:13px;
     }
+    .tab.active{color:var(--text); border-color:rgba(0,180,255,.45); box-shadow:0 0 0 2px rgba(0,180,255,.12) inset;}
   </style>
-
-  <!-- Supabase JS v2 (browser) -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <!-- Your client file (must define window.supabaseClient or window.sb) -->
-  <script src="./supabaseClient.js"></script>
 </head>
 
 <body>
-  <div class="waves"></div>
-
   <div class="wrap">
-    <div class="topbar">
-      <div class="brand">
-        <div class="logo"></div>
-        <div>
-          <h1>VLSI Physical Design Ocean</h1>
-          <p>Paid Portal • Login • Modules • Placement Support</p>
-        </div>
-      </div>
-
-      <div class="nav">
-        <a class="btn" href="./index.html">Portal Home</a>
-        <a class="btn" href="./dashboard.html">Dashboard</a>
+    <div class="top">
+      <div class="brand"><span class="dot"></span> VLSI Physical Design Ocean</div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a class="btn" href="./index.html">🏠 Portal Home</a>
+        <a class="btn" href="./dashboard.html">📘 Dashboard</a>
       </div>
     </div>
 
-    <div class="hero">
-      <div class="panel headline">
-        <h2>Welcome back to the Ocean 🌊</h2>
-        <p>
-          Register once and use your login to access Paid Modules and Placement Support.
-          If Email Confirmation is ON in Supabase, you must verify your email once after signup.
-        </p>
-        <div class="badge">✅ Secure Login • ✅ Premium Access • ✅ Ocean Theme</div>
+    <div class="grid">
+      <!-- LEFT -->
+      <div class="card">
+        <h1>🔐 Login / Register</h1>
+        <div class="muted">
+          Use same email for payments & access. If you forgot password, use reset below.
+        </div>
 
-        <div class="notice">
-          <b>Important:</b> Password reset will work only when you have a reset page:
-          <code>/portal_private_2026/reset.html</code> and your Supabase Redirect URLs include it.
+        <div class="hr"></div>
+
+        <div class="tabs">
+          <div class="tab active" id="tabLogin" onclick="showMode('login')">Login</div>
+          <div class="tab" id="tabRegister" onclick="showMode('register')">Create Account</div>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <div id="loginBox">
+          <h2>Login</h2>
+          <label>Email</label>
+          <input id="loginEmail" type="email" placeholder="name@gmail.com" />
+          <label>Password</label>
+          <input id="loginPass" type="password" placeholder="Your password" />
+          <div class="row" style="margin-top:12px;">
+            <button class="btn btnPrimary" onclick="doLogin()">Login</button>
+            <span class="smallLink" onclick="toggleReset(true)">Forgot password?</span>
+          </div>
+          <div class="msg" id="loginMsg"></div>
+        </div>
+
+        <!-- REGISTER FORM -->
+        <div id="registerBox" style="display:none;">
+          <h2>Create Account</h2>
+          <label>Full Name</label>
+          <input id="regName" type="text" placeholder="Your name" />
+          <label>Email</label>
+          <input id="regEmail" type="email" placeholder="name@gmail.com" />
+          <label>Password</label>
+          <input id="regPass" type="password" placeholder="Create a strong password" />
+          <div class="row" style="margin-top:12px;">
+            <button class="btn btnPrimary" onclick="doRegister()">Create Account</button>
+          </div>
+          <div class="msg" id="regMsg"></div>
+        </div>
+
+        <!-- RESET PASSWORD -->
+        <div id="resetBox" style="display:none; margin-top:16px;">
+          <div class="hr"></div>
+          <h2>Reset Password</h2>
+          <div class="muted">Enter your email. We will send a reset link.</div>
+          <label>Email</label>
+          <input id="resetEmail" type="email" placeholder="name@gmail.com" />
+          <div class="row" style="margin-top:12px;">
+            <button class="btn btnPrimary" onclick="sendReset()">Send Reset Link</button>
+            <span class="smallLink" onclick="toggleReset(false)">Close</span>
+          </div>
+          <div class="msg" id="resetMsg"></div>
         </div>
       </div>
 
-      <div class="panel">
-        <div class="grid2">
-
-          <!-- Register -->
-          <div class="panel" style="box-shadow:none;">
-            <div class="cardTitle">
-              <h3>📝 Register</h3>
-              <span class="smallNote">New student</span>
-            </div>
-
-            <label>Full Name (for certificate)</label>
-            <input id="su_name" placeholder="Sk Md Khaleel" />
-
-            <label>Email</label>
-            <input id="su_email" placeholder="name@gmail.com" />
-
-            <label>Password</label>
-            <input id="su_pass" type="password" placeholder="Create a strong password" />
-
-            <div class="actions">
-              <button class="primary" onclick="signUp()">Create Account</button>
-              <button class="secondary" onclick="clearRegister()">Clear</button>
-            </div>
-
-            <div id="su_msg" class="msg"></div>
-
-            <div class="foot">
-              After signup, check inbox + spam and confirm email (if enabled).
-            </div>
-          </div>
-
-          <!-- Login -->
-          <div class="panel" style="box-shadow:none;">
-            <div class="cardTitle">
-              <h3>🔐 Login</h3>
-              <span class="smallNote">Existing user</span>
-            </div>
-
-            <label>Email</label>
-            <input id="li_email" placeholder="name@gmail.com" />
-
-            <label>Password</label>
-            <input id="li_pass" type="password" placeholder="Your password" />
-
-            <div class="actions">
-              <button class="primary" onclick="login()">Login</button>
-              <button class="secondary" onclick="logout()">Logout</button>
-            </div>
-
-            <div class="actions">
-              <button class="linkBtn" onclick="forgotPassword()">Forgot Password?</button>
-            </div>
-
-            <div id="li_msg" class="msg"></div>
-
-            <div class="foot">
-              After login you will be redirected to <a href="./dashboard.html">Dashboard</a>.
-            </div>
-          </div>
-
+      <!-- RIGHT -->
+      <div class="card">
+        <h2>✅ Tips</h2>
+        <div class="muted">
+          • After signup, check email and confirm.<br/>
+          • If reset email opens login page, your redirect URL is wrong — this file fixes it by using <b>reset.html</b>.<br/>
+          • After login, you will auto go to dashboard.
+        </div>
+        <div class="hr"></div>
+        <div class="muted">
+          Portal path: <code>/portal_private_2026/</code><br/>
+          Pages: <code>index.html</code>, <code>login.html</code>, <code>dashboard.html</code>, <code>reset.html</code>
         </div>
       </div>
     </div>
   </div>
 
   <script>
-    // ========= IMPORTANT =========
-    // Your supabaseClient.js MUST expose a usable client.
-    // We'll support 3 common styles:
-    // 1) window.sb
-    // 2) window.supabaseClient
-    // 3) window.supabase (created via supabase.createClient) BUT NOT overriding library name
-    // =============================
+    const sb = window.sb;
 
-    const sb =
-      window.sb ||
-      window.supabaseClient ||
-      window.supabase; // fallback if you used "window.supabase = supabase.createClient(...)"
-
-    function setMsg(id, text, ok) {
+    function setMsg(id, text, ok){
       const el = document.getElementById(id);
-      el.textContent = text || "";
-      el.className = "msg " + (ok ? "ok" : "err");
-      el.style.display = text ? "block" : "none";
-    }
-
-    function clearRegister(){
-      document.getElementById("su_name").value = "";
-      document.getElementById("su_email").value = "";
-      document.getElementById("su_pass").value = "";
-      setMsg("su_msg", "", true);
-    }
-
-    async function signUp() {
-      setMsg("su_msg", "Creating account...", true);
-
-      const full_name = document.getElementById("su_name").value.trim();
-      const email = document.getElementById("su_email").value.trim().toLowerCase();
-      const password = document.getElementById("su_pass").value;
-
-      if (!full_name || !email || !password) {
-        setMsg("su_msg", "❌ Please fill Name, Email, Password.", false);
-        return;
-      }
-
-      if (!sb || !sb.auth) {
-        setMsg("su_msg", "❌ Supabase client not loaded. Check supabaseClient.js file path.", false);
-        return;
-      }
-
-      try {
-        const { data, error } = await sb.auth.signUp({
-          email,
-          password,
-          options: {
-            data: { full_name }
-          }
-        });
-
-        if (error) {
-          setMsg("su_msg", "❌ Sign Up error: " + error.message, false);
-          return;
-        }
-
-        setMsg("su_msg",
-          "✅ Account created.\n\nNext Step:\n1) Check your email inbox/spam\n2) Click Confirm Email\n3) Come back and Login.",
-          true
-        );
-      } catch (e) {
-        setMsg("su_msg", "❌ Sign Up failed: " + e.message, false);
-      }
-    }
-
-    async function login() {
-      setMsg("li_msg", "Logging in...", true);
-
-      const email = document.getElementById("li_email").value.trim().toLowerCase();
-      const password = document.getElementById("li_pass").value;
-
-      if (!email || !password) {
-        setMsg("li_msg", "❌ Please fill Email and Password.", false);
-        return;
-      }
-
-      if (!sb || !sb.auth) {
-        setMsg("li_msg", "❌ Supabase client not loaded. Check supabaseClient.js file path.", false);
-        return;
-      }
-
-      try {
-        const { data, error } = await sb.auth.signInWithPassword({ email, password });
-
-        if (error) {
-          setMsg("li_msg", "❌ Login error: " + error.message, false);
-          return;
-        }
-
-        setMsg("li_msg", "✅ Login success!\nRedirecting to dashboard...", true);
-        setTimeout(() => location.href = "./dashboard.html", 700);
-
-      } catch (e) {
-        setMsg("li_msg", "❌ Login failed: " + e.message, false);
-      }
-    }
-
-    async function logout() {
-      if (!sb || !sb.auth) return;
-      await sb.auth.signOut();
-      setMsg("li_msg", "✅ Logged out.", true);
-    }
-
-    async function forgotPassword() {
-      const email = document.getElementById("li_email").value.trim().toLowerCase();
-
-      if (!email) {
-        setMsg("li_msg", "❌ Enter your email first, then click Forgot Password.", false);
-        return;
-      }
-
-      setMsg("li_msg", "Sending reset link to your email...", true);
-
-      try {
-        const { error } = await sb.auth.resetPasswordForEmail(email, {
-          redirectTo: "https://vlsiphysicaldesignocean.com/portal_private_2026/reset.html"
-        });
-
-        if (error) {
-          setMsg("li_msg", "❌ Reset error: " + error.message, false);
-          return;
-        }
-
-        setMsg("li_msg",
-          "✅ Reset link sent!\n\nNext:\n1) Check inbox + spam\n2) Open the link\n3) Set new password in reset page.",
-          true
-        );
-      } catch (e) {
-        setMsg("li_msg", "❌ Reset failed: " + e.message, false);
-      }
-    }
-  </script>
-</body>
-</html>
+      el.className = "msg "

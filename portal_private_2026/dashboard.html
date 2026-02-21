@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dashboard | VLSI Physical Design Ocean</title>
 
-  <!-- Razorpay Checkout -->
+  <!-- Razorpay -->
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
   <!-- Supabase -->
@@ -58,6 +58,11 @@
       display:inline-flex;
       gap:8px;
       align-items:center;
+      user-select:none;
+    }
+    .btn:disabled{
+      opacity:.55;
+      cursor:not-allowed;
     }
     .btnPrimary{
       border:none;
@@ -76,8 +81,14 @@
       border:1px solid rgba(255,154,167,.25);
     }
 
-    .grid{display:grid; grid-template-columns: 1fr; gap:14px;}
-    @media(min-width:980px){ .grid{grid-template-columns: 1.3fr .7fr;} }
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:14px;
+    }
+    @media(min-width:980px){
+      .grid{grid-template-columns: 1.3fr .7fr;}
+    }
 
     .card{
       border:1px solid var(--border);
@@ -128,6 +139,8 @@
     }
     .miniList{margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:13px}
     .miniList li{margin:6px 0}
+
+    .rowBtns{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;}
   </style>
 </head>
 
@@ -138,7 +151,7 @@
       <div style="display:flex; gap:10px; flex-wrap:wrap;">
         <a class="btn" href="./index.html">🏠 Portal Home</a>
         <a class="btn" href="./login.html">🔐 Login</a>
-        <button class="btn btnDanger" id="logoutBtn">🚪 Logout</button>
+        <button class="btn btnDanger" id="logoutBtn" type="button">🚪 Logout</button>
       </div>
     </div>
 
@@ -169,9 +182,13 @@
 
           <div id="courseBox" class="muted" style="margin-top:8px;">Checking…</div>
 
-          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
+          <div class="rowBtns">
             <a class="btn btnPrimary" id="courseBtn" href="./paid/" style="display:none;">Open Paid Modules</a>
-            <button class="btn btnGold" id="pay499Btn" style="display:none;">💳 Pay ₹499 (Unlock Modules)</button>
+
+            <!-- ✅ ONLY ONE PAY BUTTON -->
+            <button class="btn btnGold" id="pay499Btn" type="button" style="display:none;">
+              💳 Pay ₹499 (Unlock Modules)
+            </button>
           </div>
         </div>
 
@@ -186,9 +203,13 @@
 
           <div id="placementBox" class="muted" style="margin-top:8px;">Checking…</div>
 
-          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
+          <div class="rowBtns">
             <a class="btn btnPrimary" id="placementBtn" href="./placement/" style="display:none;">Open Placement Area</a>
-            <button class="btn btnGold" id="pay1999Btn" style="display:none;">🚀 Pay ₹1999 (Modules + Placement)</button>
+
+            <!-- ✅ ONLY ONE PAY BUTTON -->
+            <button class="btn btnGold" id="pay1999Btn" type="button" style="display:none;">
+              🚀 Pay ₹1999 (Modules + Placement)
+            </button>
           </div>
         </div>
       </div>
@@ -204,11 +225,19 @@
 
         <div class="hr"></div>
 
-        <h2>⚡ Automation (Important)</h2>
+        <h2>⚡ Automation</h2>
         <div class="muted">
           Payment → Razorpay webhook → Supabase update → Dashboard unlocks automatically.
-          <br/><br/>
-          After payment, wait 5–15 seconds, then refresh this page.
+          <br/>After payment, wait 5–15 seconds and refresh.
+        </div>
+
+        <div class="hr"></div>
+
+        <h2>🛟 If still locked</h2>
+        <div class="muted">
+          1) Refresh<br/>
+          2) Logout & Login again<br/>
+          3) If still locked → webhook not updating Supabase.
         </div>
       </div>
     </div>
@@ -217,7 +246,6 @@
   <script>
     const sb = window.sb;
 
-    // ✅ Put your exact function URL here
     const FN_URL = "https://ygcvcyoynmyrplwrpisd.supabase.co/functions/v1/create-razorpay-order";
 
     function fmtDate(ts) {
@@ -228,6 +256,7 @@
       if (!ts) return false;
       return new Date(ts).getTime() > Date.now();
     }
+
     function setAuthState(text, ok){
       const el = document.getElementById("authState");
       el.textContent = text;
@@ -235,12 +264,12 @@
       el.classList.add(ok ? "ok" : "err");
     }
 
-    document.getElementById("logoutBtn").addEventListener("click", async () => {
+    async function logout() {
       await sb.auth.signOut();
       location.href = "./login.html";
-    });
+    }
 
-    async function requireUser() {
+    async function requireAuth() {
       const { data: { user } } = await sb.auth.getUser();
       return user || null;
     }
@@ -251,76 +280,110 @@
         .select("email, full_name, course_active, course_expiry, placement_active, placement_expiry, mock_remaining")
         .eq("id", user.id)
         .single();
+
       if (error) throw error;
       return data;
     }
 
-    async function startCheckout(plan){
-      // Must be logged in to map payment -> user
-      const { data: { session } } = await sb.auth.getSession();
-      if(!session?.access_token){
-        alert("Please login first.");
-        location.href = "./login.html";
-        return;
-      }
+    function setPayButtonsEnabled(enabled){
+      document.getElementById("pay499Btn").disabled = !enabled;
+      document.getElementById("pay1999Btn").disabled = !enabled;
+    }
 
-      // Create order via Edge Function
-      let res, data;
+    async function startCheckout(plan){
       try{
-        res = await fetch(FN_URL, {
+        setPayButtonsEnabled(false);
+
+        // 1) Get session
+        const { data: sessionData, error: sessErr } = await sb.auth.getSession();
+        if (sessErr) throw sessErr;
+
+        let session = sessionData?.session;
+        if(!session?.access_token){
+          alert("Please login first.");
+          location.href = "./login.html";
+          return;
+        }
+
+        // 2) Refresh token once (prevents expired token 401)
+        const { data: refreshed, error: refreshErr } = await sb.auth.refreshSession();
+        if(!refreshErr && refreshed?.session?.access_token){
+          session = refreshed.session;
+        }
+
+        // 3) Call Edge Function (IMPORTANT headers)
+        const res = await fetch(FN_URL, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            "apikey": window.SUPABASE_ANON_KEY,                 // ✅ important
-            "Authorization": "Bearer " + session.access_token   // ✅ important
+            "Authorization": "Bearer " + session.access_token,
+            "apikey": window.SUPABASE_ANON_KEY,
+            "x-client-info": "vlsiocean-web"
           },
           body: JSON.stringify({ plan })
         });
-        data = await res.json();
-      }catch(e){
-        alert("Checkout error: Failed to fetch\n\nReason: Edge Function not reachable / CORS / network.");
-        console.log(e);
-        return;
-      }
 
-      if(!res.ok){
-        console.log(data);
-        alert("Order create failed: " + (data?.error || "Unknown"));
-        return;
-      }
+        const data = await res.json().catch(() => ({}));
 
-      const options = {
-        key: data.key,
-        amount: data.amount,
-        currency: data.currency,
-        name: "VLSI Physical Design Ocean",
-        description: plan === "PLAN_499"
-          ? "Paid Modules Access (6 months)"
-          : "Paid Modules + Placement (1 year)",
-        order_id: data.order_id,
-        prefill: { email: data.user_email || "" },
-        handler: function () {
-          alert("Payment successful ✅\nWait 10 seconds, then refresh dashboard.");
+        if(!res.ok){
+          console.log("Function error:", data);
+          alert("Order create failed: " + (data?.error || res.status));
+          return;
         }
-      };
 
-      const rzp = new Razorpay(options);
-      rzp.open();
+        if(typeof Razorpay === "undefined"){
+          alert("Razorpay checkout.js not loaded.");
+          return;
+        }
+
+        // 4) Razorpay popup
+        const options = {
+          key: data.key,
+          amount: data.amount,
+          currency: data.currency,
+          name: "VLSI Physical Design Ocean",
+          description: plan === "PLAN_499"
+            ? "Paid Modules Access (6 months)"
+            : "Paid Modules + Placement (1 year)",
+          order_id: data.order_id,
+          prefill: { email: data.user_email || "" },
+          theme: { color: "#00b4ff" },
+          handler: function () {
+            alert("Payment successful ✅\nWait 5–15 seconds, then refresh.");
+            setTimeout(() => location.reload(), 6000);
+          }
+        };
+
+        const rzp = new Razorpay(options);
+        rzp.open();
+
+      } catch(e){
+        console.log("Checkout error:", e);
+        alert("Checkout error: " + (e?.message || e));
+      } finally {
+        setPayButtonsEnabled(true);
+      }
     }
 
-    // Attach button handlers
-    document.getElementById("pay499Btn").addEventListener("click", () => startCheckout("PLAN_499"));
-    document.getElementById("pay1999Btn").addEventListener("click", () => startCheckout("PLAN_1999"));
-
     async function main(){
-      const user = await requireUser();
+      document.getElementById("logoutBtn").addEventListener("click", logout);
+
+      // attach pay buttons
+      document.getElementById("pay499Btn").addEventListener("click", () => startCheckout("PLAN_499"));
+      document.getElementById("pay1999Btn").addEventListener("click", () => startCheckout("PLAN_1999"));
+
+      const user = await requireAuth();
 
       if(!user){
         setAuthState("Not logged in", false);
         document.getElementById("helloLine").innerHTML =
           `You are not logged in. Please <a style="color:#9be7ff;text-decoration:underline" href="./login.html">login</a>.`;
+
+        // show pay buttons only if you want (I keep them hidden unless logged in)
         document.getElementById("courseStatus").textContent = "Locked 🔒";
         document.getElementById("placementStatus").textContent = "Locked 🔒";
+        document.getElementById("courseBox").innerHTML = `<span class="err"><b>Please login to purchase.</b></span>`;
+        document.getElementById("placementBox").innerHTML = `<span class="err"><b>Please login to purchase.</b></span>`;
         return;
       }
 
@@ -351,7 +414,7 @@
         <span class="pill">Mock Remaining: <b>${profile.mock_remaining ?? 0}</b></span>
       `;
 
-      // Course section
+      // Course UI
       const courseStatus = document.getElementById("courseStatus");
       courseStatus.textContent = courseValid ? "Unlocked ✅" : "Locked 🔒";
       courseStatus.className = "statusBig " + (courseValid ? "ok":"err");
@@ -362,12 +425,12 @@
       document.getElementById("courseBtn").style.display = courseValid ? "inline-flex" : "none";
       document.getElementById("pay499Btn").style.display = courseValid ? "none" : "inline-flex";
 
-      // Placement section
+      // Placement UI
       const placementStatus = document.getElementById("placementStatus");
       placementStatus.textContent = placementValid ? "Unlocked ✅" : "Locked 🔒";
       placementStatus.className = "statusBig " + (placementValid ? "ok":"err");
       document.getElementById("placementBox").innerHTML = placementValid
-        ? `<span class="ok"><b>Placement support active.</b></span><br/>Folder: <code>/portal_private_2026/placement/</code>`
+        ? `<span class="ok"><b>Placement support active.</b></span><br/>Mock remaining: <b>${profile.mock_remaining ?? 0}</b><br/>Folder: <code>/portal_private_2026/placement/</code>`
         : `<span class="err"><b>Not active.</b></span><br/>Pay ₹1999 to unlock Modules + Placement.`;
 
       document.getElementById("placementBtn").style.display = placementValid ? "inline-flex" : "none";

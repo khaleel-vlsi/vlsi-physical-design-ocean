@@ -1,18 +1,20 @@
 <!doctype html>
 <html>
 <head>
-  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dashboard | VLSI Physical Design Ocean</title>
 
+  <!-- Razorpay Checkout -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <!-- Supabase -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="./supabaseClient.js"></script>
 
   <style>
     :root{
-      --bg1:#041726;
-      --bg2:#020b12;
+      --bg1:#041726; --bg2:#020b12;
       --glass:rgba(255,255,255,.08);
       --border:rgba(255,255,255,.14);
       --text:#eaf7ff;
@@ -73,14 +75,8 @@
       border:1px solid rgba(255,154,167,.25);
     }
 
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap:14px;
-    }
-    @media(min-width:980px){
-      .grid{grid-template-columns: 1.3fr .7fr;}
-    }
+    .grid{display:grid; grid-template-columns:1fr; gap:14px;}
+    @media(min-width:980px){ .grid{grid-template-columns: 1.3fr .7fr;} }
 
     .card{
       border:1px solid var(--border);
@@ -185,14 +181,9 @@
 
           <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
             <a class="btn btnPrimary" id="courseBtn" href="./paid/" style="display:none;">Open Paid Modules</a>
-
-            <!-- BUY 499 (only visible if locked) -->
-            <a class="btn btnGold" id="buy499Btn"
-               href="https://rzp.io/rzp/xdogbsA"
-               target="_self"
-               style="display:none;">
+            <button class="btn btnGold" id="buyCourseBtn" onclick="startCheckout('PLAN_499')" style="display:none;">
               💳 Pay ₹499 (Unlock Modules)
-            </a>
+            </button>
           </div>
         </div>
 
@@ -209,14 +200,9 @@
 
           <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
             <a class="btn btnPrimary" id="placementBtn" href="./placement/" style="display:none;">Open Placement Area</a>
-
-            <!-- BUY 1999 (only visible if locked) -->
-            <a class="btn btnGold" id="buy1999Btn"
-               href="https://rzp.io/rzp/rCnkpRSH"
-               target="_self"
-               style="display:none;">
+            <button class="btn btnGold" id="buyBundleBtn" onclick="startCheckout('PLAN_1999')" style="display:none;">
               🚀 Pay ₹1999 (Modules + Placement)
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -234,23 +220,23 @@
 
         <h2>💳 Upgrade / Buy Access</h2>
         <div class="muted">
-          If your access is locked, choose a plan below. After successful payment, refresh this dashboard.
+          If your access is locked, buy from here. After successful payment, wait 10 seconds and refresh.
         </div>
 
         <div class="buyGrid">
           <div class="buyCard">
-            <div class="buyTitle">🚀 Website + Placement Support <span class="buyPrice">₹1999</span></div>
-            <div class="buyNote">Unlock Paid Modules (9–32) + Placement Support + Mock Interviews.</div>
+            <div class="buyTitle">🚀 Modules + Placement <span class="buyPrice">₹1999</span></div>
+            <div class="buyNote">Unlock Paid Modules (9–32) + Placement Support (1 year).</div>
             <div style="margin-top:10px;">
-             <button class="btn btnGold" id="buy499Btn" onclick="startCheckout('PLAN_499')" style="display:none;"> 💳 Pay ₹499 (Unlock Modules)</button>
+              <button class="btn btnGold" onclick="startCheckout('PLAN_1999')">🚀 Pay ₹1999</button>
             </div>
           </div>
 
           <div class="buyCard">
-            <div class="buyTitle">🌊 Paid Modules Access <span class="buyPrice">₹499</span></div>
-            <div class="buyNote">Unlock only Paid Modules (9–32).</div>
+            <div class="buyTitle">🌊 Paid Modules Only <span class="buyPrice">₹499</span></div>
+            <div class="buyNote">Unlock only Paid Modules (9–32) for 6 months.</div>
             <div style="margin-top:10px;">
-             <button class="btn btnGold" id="buy1999Btn" onclick="startCheckout('PLAN_1999')" style="display:none;">🚀 Pay ₹1999 (Modules + Placement)</button> 
+              <button class="btn btnGold" onclick="startCheckout('PLAN_499')">💳 Pay ₹499</button>
             </div>
           </div>
         </div>
@@ -259,8 +245,8 @@
 
         <h2>🔄 After payment</h2>
         <div class="muted">
-          If payment is done but access still locked: refresh once, logout & login again.
-          (Automatic unlock happens after webhook setup.)
+          After payment: wait 10 seconds → refresh this page.
+          If still locked: logout → login again → refresh.
         </div>
       </div>
     </div>
@@ -306,6 +292,53 @@
       return data;
     }
 
+    // ✅ CHECKOUT START (calls Supabase edge function)
+    async function startCheckout(plan){
+      const { data: { session } } = await sb.auth.getSession();
+      if(!session?.access_token){
+        alert("Please login first.");
+        location.href = "./login.html";
+        return;
+      }
+
+      const fnUrl = "https://ygcvcoynmyrplwrpisd.supabase.co/functions/v1/create-razorpay-order";
+
+      const res = await fetch(fnUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer " + session.access_token
+        },
+        body: JSON.stringify({ plan })
+      });
+
+      const data = await res.json();
+      if(!res.ok){
+        console.log(data);
+        alert("Order create failed: " + (data?.error || "Unknown"));
+        return;
+      }
+
+      const options = {
+        key: data.key,
+        amount: data.amount,
+        currency: data.currency,
+        name: "VLSI Physical Design Ocean",
+        description: plan === "PLAN_499"
+          ? "Paid Modules Access (6 months)"
+          : "Paid Modules + Placement (1 year)",
+        order_id: data.order_id,
+        prefill: { email: data.user_email || "" },
+        theme: { color: "#00b4ff" },
+        handler: function () {
+          alert("Payment successful ✅\nWait 10 seconds and refresh dashboard.");
+        }
+      };
+
+      const rzp = new Razorpay(options);
+      rzp.open();
+    }
+
     async function main(){
       const user = await requireAuth();
 
@@ -315,10 +348,6 @@
           `You are not logged in. Please <a style="color:#9be7ff;text-decoration:underline" href="./login.html">login</a>.`;
         document.getElementById("courseStatus").textContent = "Locked 🔒";
         document.getElementById("placementStatus").textContent = "Locked 🔒";
-
-        // show buy buttons even if not logged in (optional). if you want hide, keep them none.
-        document.getElementById("buy499Btn").style.display = "inline-flex";
-        document.getElementById("buy1999Btn").style.display = "inline-flex";
         return;
       }
 
@@ -358,7 +387,7 @@
         : `<span class="err"><b>Not active.</b></span><br/>Buy/renew course to unlock modules 9–32.`;
 
       document.getElementById("courseBtn").style.display = courseValid ? "inline-flex" : "none";
-      document.getElementById("buy499Btn").style.display = courseValid ? "none" : "inline-flex";
+      document.getElementById("buyCourseBtn").style.display = courseValid ? "none" : "inline-flex";
 
       // Placement
       const placementStatus = document.getElementById("placementStatus");
@@ -369,59 +398,8 @@
         : `<span class="err"><b>Not active.</b></span><br/>Buy placement to unlock booking + mocks.`;
 
       document.getElementById("placementBtn").style.display = placementValid ? "inline-flex" : "none";
-      document.getElementById("buy1999Btn").style.display = placementValid ? "none" : "inline-flex";
+      document.getElementById("buyBundleBtn").style.display = placementValid ? "none" : "inline-flex";
     }
-    <script>
-  // Uses your existing: const sb = window.sb;
-
-  async function startCheckout(plan){
-    // 1) Must be logged in
-    const { data: { session } } = await sb.auth.getSession();
-    if(!session?.access_token){
-      alert("Please login first.");
-      location.href = "./login.html";
-      return;
-    }
-
-    // 2) Create Razorpay order via Supabase function
-    const fnUrl = "https://ygcvcoynmyrplwrpisd.supabase.co/functions/v1/create-razorpay-order";
-
-    const res = await fetch(fnUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": "Bearer " + session.access_token
-      },
-      body: JSON.stringify({ plan })
-    });
-
-    const data = await res.json();
-    if(!res.ok){
-      console.log(data);
-      alert("Order create failed: " + (data?.error || "Unknown"));
-      return;
-    }
-
-    // 3) Open Razorpay Checkout
-    const options = {
-      key: data.key,
-      amount: data.amount,
-      currency: data.currency,
-      name: "VLSI Physical Design Ocean",
-      description: plan === "PLAN_499" ? "Paid Modules Access (6 months)" : "Paid Modules + Placement (1 year)",
-      order_id: data.order_id,
-      prefill: { email: data.user_email || "" },
-      theme: { color: "#00b4ff" },
-      handler: function () {
-        alert("Payment successful ✅\nNow wait 5–10 seconds and refresh dashboard.");
-        // webhook will unlock in backend
-      }
-    };
-
-    const rzp = new Razorpay(options);
-    rzp.open();
-  }
-</script>
 
     main();
   </script>

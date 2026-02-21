@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dashboard | VLSI Physical Design Ocean</title>
 
-  <!-- Razorpay -->
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-
-  <!-- Supabase -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="./supabaseClient.js"></script>
 
@@ -114,7 +111,6 @@
     </div>
 
     <div class="grid">
-      <!-- MAIN -->
       <div class="card">
         <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
           <div>
@@ -142,7 +138,9 @@
 
           <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
             <a class="btn btnPrimary" id="courseBtn" href="./paid/" style="display:none;">Open Paid Modules</a>
-            <button class="btn btnGold" id="pay499Btn" style="display:none;">💳 Pay ₹499 (Unlock Modules)</button>
+
+            <!-- ALWAYS visible at start -->
+            <button class="btn btnGold" id="pay499Btn">💳 Pay ₹499 (Unlock Modules)</button>
           </div>
         </div>
 
@@ -159,12 +157,13 @@
 
           <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
             <a class="btn btnPrimary" id="placementBtn" href="./placement/" style="display:none;">Open Placement Area</a>
-            <button class="btn btnGold" id="pay1999Btn" style="display:none;">🚀 Pay ₹1999 (Modules + Placement)</button>
+
+            <!-- ALWAYS visible at start -->
+            <button class="btn btnGold" id="pay1999Btn">🚀 Pay ₹1999 (Modules + Placement)</button>
           </div>
         </div>
       </div>
 
-      <!-- SIDE -->
       <div class="card">
         <h2>✅ Rules</h2>
         <ul class="miniList">
@@ -177,9 +176,12 @@
 
         <h2>⚡ Automation</h2>
         <div class="muted">
-          Payment → Razorpay webhook → Supabase updates profile automatically.<br/>
+          Payment → Razorpay webhook → Supabase profile auto-updates.<br/>
           After payment, wait 5–15 seconds and refresh.
         </div>
+
+        <div class="hr"></div>
+        <div class="muted" id="debugBox"></div>
       </div>
     </div>
   </div>
@@ -188,22 +190,18 @@
     const sb = window.sb;
     const SUPABASE_URL = window.SUPABASE_URL;
     const SUPABASE_ANON_KEY = window.SUPABASE_ANON_KEY;
-
     const FN_URL = `${SUPABASE_URL}/functions/v1/create-razorpay-order`;
 
-    function fmtDate(ts) {
-      if (!ts) return "-";
-      try { return new Date(ts).toLocaleString(); } catch(e) { return String(ts); }
-    }
-    function isFuture(ts) {
-      if (!ts) return false;
-      return new Date(ts).getTime() > Date.now();
-    }
     function setAuthState(text, ok){
       const el = document.getElementById("authState");
       el.textContent = text;
       el.classList.remove("ok","err");
       el.classList.add(ok ? "ok" : "err");
+    }
+
+    function showDebug(msg){
+      document.getElementById("debugBox").innerHTML =
+        `<span style="color:#ffb3bd;font-weight:900;">Debug:</span> ${msg}`;
     }
 
     async function logout() {
@@ -212,18 +210,13 @@
     }
     document.getElementById("logoutBtn").addEventListener("click", logout);
 
-    async function requireAuth() {
-      const { data: { user } } = await sb.auth.getUser();
-      return user || null;
+    function fmtDate(ts) {
+      if (!ts) return "-";
+      try { return new Date(ts).toLocaleString(); } catch(e) { return String(ts); }
     }
-    async function loadProfile(user) {
-      const { data, error } = await sb
-        .from("profiles")
-        .select("email, full_name, course_active, course_expiry, placement_active, placement_expiry, mock_remaining")
-        .eq("id", user.id)
-        .single();
-      if (error) throw error;
-      return data;
+    function isFuture(ts) {
+      if (!ts) return false;
+      return new Date(ts).getTime() > Date.now();
     }
 
     async function startCheckout(plan){
@@ -235,7 +228,6 @@
           return;
         }
 
-        // Create order via Edge Function
         const res = await fetch(FN_URL, {
           method: "POST",
           headers: {
@@ -247,14 +239,12 @@
         });
 
         const data = await res.json().catch(()=> ({}));
-
         if(!res.ok){
-          console.log("Order create failed:", data);
+          console.log(data);
           alert("Order create failed: " + (data?.error || res.status));
           return;
         }
 
-        // Open Razorpay checkout
         const options = {
           key: data.key,
           amount: data.amount,
@@ -270,8 +260,7 @@
           }
         };
 
-        const rzp = new Razorpay(options);
-        rzp.open();
+        new Razorpay(options).open();
       }catch(e){
         console.log(e);
         alert("Checkout error: " + (e?.message || e));
@@ -282,7 +271,16 @@
     document.getElementById("pay1999Btn").addEventListener("click", ()=> startCheckout("PLAN_1999"));
 
     async function main(){
-      const user = await requireAuth();
+      // Hard fail message if supabaseClient.js not loaded
+      if(!sb || !SUPABASE_URL || !SUPABASE_ANON_KEY){
+        setAuthState("Config error", false);
+        document.getElementById("helloLine").innerHTML =
+          `<span class="err"><b>supabaseClient.js not loaded or keys missing.</b></span>`;
+        showDebug("Check: dashboard.html and supabaseClient.js must be in same folder. Also ANON KEY must be pasted.");
+        return;
+      }
+
+      const { data: { user } } = await sb.auth.getUser();
 
       if(!user){
         setAuthState("Not logged in", false);
@@ -290,20 +288,23 @@
           `You are not logged in. Please <a style="color:#9be7ff;text-decoration:underline" href="./login.html">login</a>.`;
         document.getElementById("courseStatus").textContent = "Locked 🔒";
         document.getElementById("placementStatus").textContent = "Locked 🔒";
-        document.getElementById("pay499Btn").style.display = "inline-flex";
-        document.getElementById("pay1999Btn").style.display = "inline-flex";
+        showDebug("Login first, then dashboard will load your profile and unlock automatically after webhook.");
         return;
       }
 
       setAuthState("Logged in ✅", true);
 
-      let profile;
-      try{
-        profile = await loadProfile(user);
-      }catch(e){
-        setAuthState("Profile error", false);
+      // Load profile
+      const { data: profile, error } = await sb
+        .from("profiles")
+        .select("email, full_name, course_active, course_expiry, placement_active, placement_expiry, mock_remaining")
+        .eq("id", user.id)
+        .single();
+
+      if(error){
         document.getElementById("helloLine").innerHTML =
-          `<span class="err"><b>Error loading profile:</b> ${e.message}</span>`;
+          `<span class="err"><b>Profile load failed:</b> ${error.message}</span>`;
+        showDebug("This is usually RLS or missing profiles row. Fix profiles table / policies.");
         return;
       }
 
@@ -322,29 +323,25 @@
         <span class="pill">Mock Remaining: <b>${profile.mock_remaining ?? 0}</b></span>
       `;
 
-      // Course
-      const courseStatus = document.getElementById("courseStatus");
-      courseStatus.textContent = courseValid ? "Unlocked ✅" : "Locked 🔒";
-      courseStatus.className = "statusBig " + (courseValid ? "ok":"err");
-
+      // Course UI
+      document.getElementById("courseStatus").textContent = courseValid ? "Unlocked ✅" : "Locked 🔒";
+      document.getElementById("courseStatus").className = "statusBig " + (courseValid ? "ok":"err");
       document.getElementById("courseBox").innerHTML = courseValid
         ? `<span class="ok"><b>Premium access granted.</b></span><br/>Folder: <code>/portal_private_2026/paid/</code>`
         : `<span class="err"><b>Not active.</b></span><br/>Pay ₹499 to unlock modules 9–32.`;
-
       document.getElementById("courseBtn").style.display = courseValid ? "inline-flex" : "none";
       document.getElementById("pay499Btn").style.display = courseValid ? "none" : "inline-flex";
 
-      // Placement
-      const placementStatus = document.getElementById("placementStatus");
-      placementStatus.textContent = placementValid ? "Unlocked ✅" : "Locked 🔒";
-      placementStatus.className = "statusBig " + (placementValid ? "ok":"err");
-
+      // Placement UI
+      document.getElementById("placementStatus").textContent = placementValid ? "Unlocked ✅" : "Locked 🔒";
+      document.getElementById("placementStatus").className = "statusBig " + (placementValid ? "ok":"err");
       document.getElementById("placementBox").innerHTML = placementValid
         ? `<span class="ok"><b>Placement support active.</b></span><br/>Folder: <code>/portal_private_2026/placement/</code>`
         : `<span class="err"><b>Not active.</b></span><br/>Pay ₹1999 to unlock Modules + Placement.`;
-
       document.getElementById("placementBtn").style.display = placementValid ? "inline-flex" : "none";
       document.getElementById("pay1999Btn").style.display = placementValid ? "none" : "inline-flex";
+
+      showDebug("Dashboard OK. If payment is done and still locked → webhook is not updating profiles.");
     }
 
     main();

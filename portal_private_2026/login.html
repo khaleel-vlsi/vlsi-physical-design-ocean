@@ -3,65 +3,165 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Login | VLSI PD Ocean</title>
-  <style>
-    body{font-family:Arial, sans-serif; max-width:900px; margin:40px auto; padding:0 16px;}
-    .grid{display:grid; grid-template-columns:1fr; gap:16px;}
-    @media(min-width:840px){.grid{grid-template-columns:1fr 1fr;}}
-    .card{border:1px solid #ddd; border-radius:12px; padding:16px;}
-    label{display:block; margin:10px 0 6px; font-size:14px;}
-    input{width:100%; padding:10px; border-radius:10px; border:1px solid #bbb;}
-    button{padding:10px 14px; border-radius:10px; border:1px solid #222; background:#fff; cursor:pointer; margin-top:12px;}
-    .msg{margin-top:10px; white-space:pre-wrap;}
-    .ok{color:green;}
-    .err{color:#b00020;}
-    a{color:#0b57d0}
-    .muted{color:#666}
-  </style>
+  <title>Login | VLSI Physical Design Ocean</title>
 
-  <!-- Supabase JS v2 (browser) -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="./supabaseClient.js"></script>
+
+  <style>
+    :root{
+      --bg1:#041726;
+      --bg2:#020b12;
+      --glass:rgba(255,255,255,.08);
+      --border:rgba(255,255,255,.14);
+      --text:#eaf7ff;
+      --muted:rgba(234,247,255,.78);
+      --good:#7CFFB2;
+      --bad:#ff9aa7;
+      --accent1:#00b4ff;
+      --accent2:#00ffc8;
+      --shadow:rgba(0,0,0,.45);
+    }
+
+    body{
+      margin:0;
+      font-family: Inter, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 15% 10%, rgba(0,180,255,.26), transparent 60%),
+        radial-gradient(900px 600px at 85% 18%, rgba(0,255,200,.18), transparent 55%),
+        linear-gradient(180deg, var(--bg1), var(--bg2) 65%, #01060b);
+      min-height:100vh;
+      padding:26px;
+    }
+
+    .wrap{width:min(1100px, 100%); margin:0 auto;}
+    .top{display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:14px;}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:900;}
+    .dot{width:12px; height:12px; border-radius:50%; background:linear-gradient(90deg,var(--accent1),var(--accent2)); box-shadow:0 0 22px rgba(0,255,200,.35);}
+    .btn{
+      padding:11px 14px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      cursor:pointer;
+      text-decoration:none;
+      font-weight:900;
+      font-size:13px;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+    }
+    .btnPrimary{
+      border:none;
+      background:linear-gradient(90deg,var(--accent1),var(--accent2));
+      color:#021016;
+      box-shadow:0 12px 28px rgba(0,180,255,.25);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+    }
+    @media(min-width:920px){
+      .grid{grid-template-columns:1fr 1fr;}
+    }
+
+    .card{
+      border:1px solid var(--border);
+      background:var(--glass);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:0 18px 60px var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+    h1{margin:0 0 6px; font-size:22px;}
+    h2{margin:0 0 10px; font-size:16px;}
+    .muted{color:var(--muted); font-size:13px; line-height:1.55}
+    label{display:block; margin:10px 0 6px; font-size:13px; color:var(--muted); font-weight:800;}
+    input{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(0,0,0,.18);
+      color:var(--text);
+      outline:none;
+    }
+    input::placeholder{color:rgba(234,247,255,.45)}
+    .msg{margin-top:10px; white-space:pre-wrap; font-size:13px;}
+    .ok{color:var(--good)}
+    .err{color:var(--bad)}
+    .row{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;}
+    a.link{color:#9be7ff; text-decoration:underline; cursor:pointer;}
+  </style>
 </head>
+
 <body>
-  <h1>🔐 Login / Register</h1>
-  <p class="muted">
-    Note: Email confirmation is ON. After Sign Up, verify from email first, then login will work.
-  </p>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Register</h3>
-      <label>Full Name</label>
-      <input id="su_name" placeholder="Sk Md Khaleel" />
-
-      <label>Email</label>
-      <input id="su_email" placeholder="name@gmail.com" />
-
-      <label>Password</label>
-      <input id="su_pass" type="password" placeholder="Create a strong password" />
-
-      <button onclick="signUp()">Create Account</button>
-      <div id="su_msg" class="msg"></div>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand"><span class="dot"></span> VLSI Physical Design Ocean</div>
+      <div class="row">
+        <a class="btn" href="./index.html">🏠 Portal Home</a>
+        <a class="btn" href="./dashboard.html">📘 Dashboard</a>
+      </div>
     </div>
 
-    <div class="card">
-      <h3>Login</h3>
-      <label>Email</label>
-      <input id="li_email" placeholder="name@gmail.com" />
+    <div class="card" style="margin-bottom:14px;">
+      <h1>🔐 Login / Register</h1>
+      <div class="muted">
+        If email confirmation is ON in Supabase, after sign up you must confirm email first.
+      </div>
+    </div>
 
-      <label>Password</label>
-      <input id="li_pass" type="password" placeholder="Your password" />
+    <div class="grid">
+      <!-- Register -->
+      <div class="card">
+        <h2>✨ Create Account</h2>
 
-      <button onclick="login()">Login</button>
-      <button onclick="logout()">Logout</button>
-      <div id="li_msg" class="msg"></div>
-      <p class="muted">After login: <a href="./dashboard.html">Go to Dashboard</a></p>
+        <label>Full Name (for certificate)</label>
+        <input id="su_name" placeholder="Sk. Md. Khaleel" />
+
+        <label>Email</label>
+        <input id="su_email" placeholder="name@gmail.com" />
+
+        <label>Password</label>
+        <input id="su_pass" type="password" placeholder="Create a strong password" />
+
+        <div class="row">
+          <button class="btn btnPrimary" onclick="signUp()">Create Account</button>
+        </div>
+
+        <div id="su_msg" class="msg"></div>
+      </div>
+
+      <!-- Login -->
+      <div class="card">
+        <h2>✅ Login</h2>
+
+        <label>Email</label>
+        <input id="li_email" placeholder="name@gmail.com" />
+
+        <label>Password</label>
+        <input id="li_pass" type="password" placeholder="Your password" />
+
+        <div class="row">
+          <button class="btn btnPrimary" onclick="login()">Login</button>
+          <button class="btn" onclick="logout()">Logout</button>
+        </div>
+
+        <div class="muted" style="margin-top:10px;">
+          Forgot password? <span class="link" onclick="resetPassword()">Reset here</span>
+        </div>
+
+        <div id="li_msg" class="msg"></div>
+      </div>
     </div>
   </div>
 
   <script>
-    // Supabase client from supabaseClient.js
     const sb = window.sb;
 
     function setMsg(id, text, ok) {
@@ -71,68 +171,81 @@
     }
 
     async function signUp() {
-      setMsg("su_msg", "Creating account...", true);
+      setMsg("su_msg", "Creating account…", true);
 
       const full_name = document.getElementById("su_name").value.trim();
       const email = document.getElementById("su_email").value.trim().toLowerCase();
       const password = document.getElementById("su_pass").value;
 
       if (!full_name || !email || !password) {
-        setMsg("su_msg", "Please fill Name, Email, Password.", false);
+        setMsg("su_msg", "Please fill Name, Email and Password.", false);
         return;
       }
 
-      try {
-        const { data, error } = await sb.auth.signUp({
-          email,
-          password,
-          options: { data: { full_name } }
-        });
+      const { data, error } = await sb.auth.signUp({
+        email,
+        password,
+        options: { data: { full_name } }
+      });
 
-        if (error) {
-          setMsg("su_msg", "Sign Up error: " + error.message, false);
-          return;
-        }
-
-        setMsg(
-          "su_msg",
-          "Account created ✅\nNow check your email inbox/spam and confirm your email.\nAfter confirmation, come back and login.",
-          true
-        );
-      } catch (e) {
-        setMsg("su_msg", "Sign Up failed: " + e.message, false);
+      if (error) {
+        setMsg("su_msg", "Sign Up error: " + error.message, false);
+        return;
       }
+
+      setMsg("su_msg",
+        "✅ Account created!\n\nNow check your email inbox/spam and confirm the email.\nThen come back and login.",
+        true
+      );
     }
 
     async function login() {
-      setMsg("li_msg", "Logging in...", true);
+      setMsg("li_msg", "Logging in…", true);
 
       const email = document.getElementById("li_email").value.trim().toLowerCase();
       const password = document.getElementById("li_pass").value;
 
       if (!email || !password) {
-        setMsg("li_msg", "Please fill Email and Password.", false);
+        setMsg("li_msg", "Please enter email and password.", false);
         return;
       }
 
-      try {
-        const { data, error } = await sb.auth.signInWithPassword({ email, password });
+      const { data, error } = await sb.auth.signInWithPassword({ email, password });
 
-        if (error) {
-          setMsg("li_msg", "Login error: " + error.message, false);
-          return;
-        }
-
-        setMsg("li_msg", "Login success ✅\nRedirecting to dashboard...", true);
-        setTimeout(() => location.href = "./dashboard.html", 700);
-      } catch (e) {
-        setMsg("li_msg", "Login failed: " + e.message, false);
+      if (error) {
+        setMsg("li_msg", "Login error: " + error.message, false);
+        return;
       }
+
+      setMsg("li_msg", "✅ Login success! Redirecting…", true);
+      setTimeout(() => location.href = "./dashboard.html", 600);
     }
 
     async function logout() {
       await sb.auth.signOut();
       setMsg("li_msg", "Logged out ✅", true);
+    }
+
+    async function resetPassword() {
+      const email = document.getElementById("li_email").value.trim().toLowerCase();
+      if (!email) {
+        setMsg("li_msg", "Enter your email in Email box first, then click reset.", false);
+        return;
+      }
+
+      // IMPORTANT: Must be in Supabase Auth → URL Configuration → Redirect URLs
+      const redirectTo = location.origin + "/portal_private_2026/login.html";
+
+      setMsg("li_msg", "Sending reset email…", true);
+
+      const { data, error } = await sb.auth.resetPasswordForEmail(email, { redirectTo });
+
+      if (error) {
+        setMsg("li_msg", "Reset error: " + error.message, false);
+        return;
+      }
+
+      setMsg("li_msg", "✅ Reset email sent. Check inbox/spam.", true);
     }
   </script>
 </body>

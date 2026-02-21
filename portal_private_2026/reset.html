@@ -1,142 +1,129 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Reset Password | VLSI PD Ocean</title>
 
-  <style>
-    body{
-      margin:0; min-height:100vh;
-      font-family:Arial, sans-serif;
-      display:flex; align-items:center; justify-content:center;
-      background: linear-gradient(160deg,#041427,#062a4a);
-      color:#eaf6ff;
-      padding:20px;
-    }
-    .card{
-      width:min(520px, 100%);
-      background:rgba(255,255,255,.08);
-      border:1px solid rgba(255,255,255,.16);
-      border-radius:18px;
-      padding:18px;
-    }
-    h1{margin:0 0 10px}
-    p{color:rgba(234,246,255,.78); line-height:1.45}
-    label{display:block; margin:12px 0 6px; color:rgba(234,246,255,.78)}
-    input{
-      width:100%;
-      padding:12px;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,.22);
-      background: rgba(0,0,0,.20);
-      color:#eaf6ff;
-      outline:none;
-    }
-    button{
-      margin-top:14px;
-      width:100%;
-      padding:12px;
-      border-radius:14px;
-      border:0;
-      background: linear-gradient(135deg,#4fd1ff,#1fb6ff);
-      color:#001a2a;
-      font-weight:900;
-      cursor:pointer;
-    }
-    .msg{
-      margin-top:12px;
-      padding:12px;
-      border-radius:14px;
-      background: rgba(0,0,0,.20);
-      border:1px solid rgba(255,255,255,.14);
-      white-space:pre-wrap;
-      display:none;
-    }
-    .ok{display:block; border-color: rgba(54,211,153,.35)}
-    .err{display:block; border-color: rgba(255,92,122,.35)}
-    a{color:#4fd1ff}
-  </style>
-
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="./supabaseClient.js"></script>
+
+  <style>
+    :root{
+      --bg1:#041726; --bg2:#020b12;
+      --glass:rgba(255,255,255,.08);
+      --border:rgba(255,255,255,.14);
+      --text:#eaf7ff;
+      --muted:rgba(234,247,255,.78);
+      --accent1:#00b4ff; --accent2:#00ffc8;
+      --shadow:rgba(0,0,0,.45);
+      --good:#7CFFB2; --bad:#ff9aa7;
+    }
+    body{
+      margin:0;
+      font-family: Inter, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 15% 10%, rgba(0,180,255,.26), transparent 60%),
+        radial-gradient(900px 600px at 85% 18%, rgba(0,255,200,.18), transparent 55%),
+        linear-gradient(180deg, var(--bg1), var(--bg2) 65%, #01060b);
+      min-height:100vh;
+      padding:26px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .card{
+      width:min(560px,100%);
+      border:1px solid var(--border);
+      background:var(--glass);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:0 18px 60px var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+    h1{margin:0 0 6px; font-size:20px;}
+    .muted{color:var(--muted); font-size:13px; line-height:1.55}
+    .hr{height:1px; background:rgba(255,255,255,.12); margin:14px 0;}
+    input{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(0,0,0,.22);
+      color:var(--text);
+      outline:none;
+      font-size:14px;
+      box-sizing:border-box;
+    }
+    label{display:block; font-size:12px; color:var(--muted); margin:10px 0 6px;}
+    .btn{
+      padding:11px 14px;
+      border-radius:14px;
+      border:none;
+      background:linear-gradient(90deg,var(--accent1),var(--accent2));
+      color:#021016;
+      cursor:pointer;
+      font-weight:900;
+      font-size:13px;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+    }
+    .msg{margin-top:10px; font-size:13px;}
+    .ok{color:var(--good)}
+    .err{color:var(--bad)}
+    a{color:#9be7ff}
+  </style>
 </head>
+
 <body>
   <div class="card">
-    <h1>🔑 Reset Password</h1>
-    <p>
-      Enter your new password below.
-      After success, you will be redirected to Login.
-    </p>
+    <h1>🔁 Set New Password</h1>
+    <div class="muted">Enter your new password below.</div>
+
+    <div class="hr"></div>
 
     <label>New Password</label>
     <input id="p1" type="password" placeholder="New password" />
-
     <label>Confirm Password</label>
-    <input id="p2" type="password" placeholder="Confirm new password" />
+    <input id="p2" type="password" placeholder="Confirm password" />
 
-    <button onclick="updatePassword()">Update Password</button>
+    <div style="margin-top:12px;">
+      <button class="btn" onclick="updatePass()">✅ Update Password</button>
+    </div>
 
-    <div id="msg" class="msg"></div>
+    <div class="msg" id="m"></div>
 
-    <p style="margin-top:12px">
-      <a href="./login.html">← Back to Login</a>
-    </p>
+    <div class="hr"></div>
+    <div class="muted">
+      After success, go to <a href="./login.html">Login</a>.
+    </div>
   </div>
 
   <script>
-    const sb = window.sb || window.supabaseClient || window.supabase;
+    const sb = window.sb;
 
     function setMsg(text, ok){
-      const el = document.getElementById("msg");
-      el.textContent = text;
+      const el = document.getElementById("m");
       el.className = "msg " + (ok ? "ok" : "err");
+      el.innerHTML = text;
     }
 
-    async function updatePassword(){
-      const p1 = document.getElementById("p1").value;
-      const p2 = document.getElementById("p2").value;
+    async function updatePass(){
+      const p1 = document.getElementById("p1").value.trim();
+      const p2 = document.getElementById("p2").value.trim();
 
-      if(!p1 || !p2){
-        setMsg("❌ Please enter both password fields.", false);
-        return;
-      }
-      if(p1 !== p2){
-        setMsg("❌ Passwords do not match.", false);
-        return;
-      }
-      if(!sb || !sb.auth){
-        setMsg("❌ Supabase client not loaded. Check supabaseClient.js", false);
-        return;
-      }
-
-      setMsg("Updating password...", true);
+      if(!p1 || !p2) return setMsg("Enter both password fields.", false);
+      if(p1.length < 6) return setMsg("Password must be at least 6 characters.", false);
+      if(p1 !== p2) return setMsg("Passwords do not match.", false);
 
       const { error } = await sb.auth.updateUser({ password: p1 });
+      if(error) return setMsg(error.message, false);
 
-      if(error){
-        setMsg("❌ Update failed: " + error.message + "\n\nTip: Open reset link in SAME browser where it was received.", false);
-        return;
-      }
-
-      setMsg("✅ Password updated successfully!\nRedirecting to login...", true);
-      setTimeout(()=> location.href="./login.html", 1200);
+      setMsg("Password updated ✅ Now login with new password.", true);
+      setTimeout(() => location.href="./login.html", 1200);
     }
-
-    // Optional: show user if session exists
-    (async ()=>{
-      try{
-        const { data } = await sb.auth.getSession();
-        if(!data?.session){
-          setMsg(
-            "⚠️ No active reset session found.\n\nPlease open the reset email link again (copy-paste full link into browser).",
-            false
-          );
-        }
-      }catch(e){
-        // ignore
-      }
-    })();
   </script>
 </body>
 </html>

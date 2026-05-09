@@ -1,0 +1,236 @@
+.heroHeader {
+  background: linear-gradient(120deg, #1a73e8, #0f4c81);
+  color: white;
+  padding: 60px;
+  text-align: center;
+}
+
+.heroHeader h1 {
+  font-size: 36px;
+}
+
+.heroHeader p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.contentSection {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.contentSection h2 {
+  color: #0f4c81;
+  margin-bottom: 10px;
+}
+
+.contentSection ul {
+  padding-left: 20px;
+}
+
+/* Free Course Section */
+.freeSection {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.freeSection h2 {
+  font-size: 32px;
+  color: #0f4c81;
+  margin-bottom: 10px;
+}
+
+.freeSub {
+  font-size: 16px;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 35px;
+  line-height: 1.6;
+}
+
+.freePoints {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  text-align: left;
+}
+
+.freePoints li {
+  font-size: 15px;
+  padding: 6px 0;
+  color: #333;
+}
+
+.freeNote {
+  font-size: 14px;
+  color: #1a73e8;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.primaryBtn {
+  display: inline-block;
+  padding: 14px 30px;
+  background: linear-gradient(135deg, #1a73e8, #0f4c81);
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Paid Course Section */
+.paidSection {
+  margin: 60px auto;
+  max-width: 900px;
+  background: linear-gradient(135deg, #0f4c81, #1b75d0);
+  color: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.paidSection h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.paidSub {
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+.priceBox {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.priceBox div {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px 30px;
+  border-radius: 12px;
+}
+
+.priceBox strong {
+  font-size: 26px;
+  display: block;
+}
+
+.paidFeatures ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.paidFeatures li {
+  margin: 8px 0;
+}
+
+.btnRegister {
+  padding: 12px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  background: #ffcc00;
+  color: #000000;
+}
+
+.btnRegister:hover {
+  background: #ffb700;
+}
+
+/* Placement Section */
+.placementSection {
+  padding: 50px 20px;
+}
+
+.placementCard {
+  background: linear-gradient(135deg, #ff7a00, #ff9800);
+  color: white;
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.placementCard h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.placementFeatures {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.placementFeatures li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.pricingBox {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.priceCard {
+  background: rgba(255,255,255,0.2);
+  padding: 20px 30px;
+  border-radius: 15px;
+}
+
+.priceCard h3 {
+  font-size: 30px;
+  margin: 5px 0;
+}
+
+.label {
+  font-size: 14px;
+}
+
+.eligibility {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.placementBtn {
+  display: inline-block;
+  margin-top: 25px;
+  background: #fff;
+  color: #ff7a00;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.placementBtn:hover {
+  background: linear-gradient(135deg, #ff8c00, #ff6a00);
+  color: white;
+}

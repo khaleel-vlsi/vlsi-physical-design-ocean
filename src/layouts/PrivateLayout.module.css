@@ -1,0 +1,63 @@
+.privateWrap {
+  font-family: Inter, Arial, sans-serif;
+  color: #eaf7ff;
+  background:
+    radial-gradient(1200px 700px at 15% 10%, rgba(0,180,255,.26), transparent 60%),
+    radial-gradient(900px 600px at 85% 18%, rgba(0,255,200,.18), transparent 55%),
+    linear-gradient(180deg, #041726, #020b12 65%, #01060b);
+  min-height: 100vh;
+  padding: 26px;
+}
+
+.topBar {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  gap: 12px; 
+  flex-wrap: wrap; 
+  margin-bottom: 14px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.brand {
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+  font-weight: 900;
+}
+
+.dot {
+  width: 12px; 
+  height: 12px; 
+  border-radius: 50%; 
+  background: linear-gradient(90deg, #00b4ff, #00ffc8); 
+  box-shadow: 0 0 22px rgba(0,255,200,.35);
+}
+
+.topActions {
+  display: flex; 
+  gap: 10px; 
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 11px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.06);
+  color: #eaf7ff;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 13px;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.btnDanger {
+  background: rgba(255,154,167,.08);
+  border: 1px solid rgba(255,154,167,.25);
+}

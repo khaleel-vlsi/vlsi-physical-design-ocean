@@ -1,0 +1,85 @@
+.moduleHeader {
+  background: linear-gradient(120deg, #1a73e8, #0f4c81);
+  color: white;
+  text-align: center;
+  padding: 80px 20px 60px;
+}
+
+.moduleHeader h1 {
+  margin-bottom: 10px;
+}
+
+.moduleContent {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.contentSection {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.moduleNavigation {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.navBtn {
+  padding: 10px 18px;
+  background-color: #004aad;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.navBtn:hover {
+  background-color: #003080;
+}
+
+.lockedModule {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.lockedModule h2 {
+  color: #cc0000;
+}
+
+.lockMessage {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.lockBox {
+  background: #ffe6e6;
+  color: #cc0000;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 400px;
+  text-align: left;
+}
+
+.unlockBtn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #ff6a00;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.unlockBtn:hover {
+  background: #e55a00;
+}

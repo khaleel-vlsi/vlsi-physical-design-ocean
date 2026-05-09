@@ -1,0 +1,52 @@
+.moduleHeader {
+  background: linear-gradient(120deg, #1a73e8, #0f4c81);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.moduleHeader h1 {
+  font-size: 36px;
+}
+
+.moduleHeader p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.modulesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px;
+}
+
+.moduleLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.moduleCard {
+  background: white;
+  width: 250px;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.moduleCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.moduleCard h3 {
+  color: #1a73e8;
+  margin-bottom: 10px;
+}
+
+.moduleCard p {
+  color: #555;
+}

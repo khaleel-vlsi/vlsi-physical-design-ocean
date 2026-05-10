@@ -1,0 +1,164 @@
+/* Privacy Page - Oceanic Design */
+
+.policyContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+/* 1. Header Section */
+.heroSection {
+  padding: 80px 24px 40px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #9aa0a6;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+/* 2. Main Grid Layout */
+.policyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding: 0 24px 80px;
+}
+
+@media (max-width: 900px) {
+  .policyGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card Styles */
+.policyCard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 48px;
+  position: relative;
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  min-height: 480px;
+}
+
+.cardIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 32px;
+}
+
+.privacyIcon {
+  background: rgba(89, 218, 209, 0.1);
+  color: #59dad1;
+}
+
+.refundIcon {
+  background: rgba(255, 127, 80, 0.1);
+  color: #ff7f50;
+}
+
+.cardLabel {
+  font-family: var(--font-label);
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cardText {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #bdc1c6;
+  margin-bottom: 32px;
+}
+
+/* Privacy Specific List */
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.checkItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.checkCircle {
+  color: #59dad1;
+  font-size: 14px;
+}
+
+/* Refund Specific Styles */
+.quoteBox {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.quoteText {
+  font-style: italic;
+  font-size: 13px;
+  color: #9aa0a6;
+  line-height: 1.5;
+}
+
+.readMore {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #59dad1;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.readMore:hover {
+  text-decoration: underline;
+}
+
+/* 3. Bottom Banner */
+.bottomBanner {
+  margin: 20px 24px 60px;
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  height: 300px;
+}
+
+.bannerImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}

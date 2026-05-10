@@ -5,7 +5,7 @@ import { AuthProvider } from './context/AuthContext';
 
 function App() {
   return (
-    <BrowserRouter basename="/vlsi-physical-design-ocean">
+    <BrowserRouter basename="/">
       <AuthProvider>
         <AppRoutes />
       </AuthProvider>

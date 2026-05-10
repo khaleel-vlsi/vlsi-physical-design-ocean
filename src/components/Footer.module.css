@@ -1,17 +1,30 @@
+/* ── Footer — Oceanic Design System ─────────────────────────────────────── */
+
 .siteFooter {
-  background-color: #f4f6f8;
+  background: var(--surface-container-lowest);
+  border-top: 1px solid var(--glass-border);
   text-align: center;
-  padding: 20px;
-  margin-top: 60px;
-  color: #666;
+  padding: 32px var(--margin-desktop);
+  margin-top: auto;
+  font-family: var(--font-label);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--on-surface-variant);
 }
 
 .siteFooter a {
-  color: #1a73e8;
+  color: var(--secondary);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .siteFooter a:hover {
-  text-decoration: underline;
+  color: var(--secondary-fixed);
+}
+
+@media (max-width: 768px) {
+  .siteFooter {
+    padding: 24px var(--margin-mobile);
+  }
 }

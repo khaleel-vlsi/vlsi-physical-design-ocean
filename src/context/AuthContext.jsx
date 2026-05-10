@@ -15,6 +15,7 @@ export const AuthProvider = ({ children }) => {
   // fetchProfile is memoized so the auth listener always has a stable reference
   const fetchProfile = useCallback(async (currentUser) => {
     try {
+      console.log('[Auth] 5. Fetching profile data from database...');
       const { data, error } = await supabase
         .from('profiles')
         .select('email, full_name, course_active, course_expiry, placement_active, placement_expiry, mock_remaining')
@@ -52,40 +53,103 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     let isMounted = true;
 
-    // Check active session on initial load
-    supabase.auth.getSession().then(({ data, error }) => {
-      if (!isMounted) return;
-      if (error) {
-        console.error('Auth session error:', error.message);
-        supabase.auth.signOut();
-        setUser(null);
-        setLoading(false);
-        return;
+    // Wraps a promise with a timeout so a silently-hung network call
+    // (e.g. CORS failure, Supabase unreachable) doesn't freeze the app.
+    const withTimeout = (promise, ms = 5000, label = 'call') =>
+      Promise.race([
+        promise,
+        new Promise((_, reject) =>
+          setTimeout(() => reject(new Error(`[Auth] ${label} timed out after ${ms}ms`)), ms)
+        ),
+      ]);
+
+    const initSession = async () => {
+      try {
+        console.log('[Auth] 1. Starting initSession: checking local session...');
+
+        // 1. Check local session first (5 s timeout guards against silent hangs)
+        let sessionResult;
+        try {
+          sessionResult = await withTimeout(supabase.auth.getSession(), 5000, 'getSession()');
+        } catch (timeoutErr) {
+          console.warn(timeoutErr.message, '— treating as no session.');
+          if (isMounted) { setUser(null); setProfile(null); setLoading(false); }
+          return;
+        }
+
+        const { data: { session }, error: sessionError } = sessionResult;
+
+        if (sessionError || !session) {
+          console.log('[Auth] 2. No local session found. Loading app as guest.');
+          if (isMounted) {
+            setUser(null);
+            setProfile(null);
+            setLoading(false);
+          }
+          return;
+        }
+
+        console.log('[Auth] 3. Local session found. Validating token via server...');
+
+        // 2. Validate token server-side (5 s timeout)
+        let userResult;
+        try {
+          userResult = await withTimeout(supabase.auth.getUser(), 5000, 'getUser()');
+        } catch (timeoutErr) {
+          console.warn(timeoutErr.message, '— session may be expired. Signing out.');
+          try { await supabase.auth.signOut(); } catch (e) { /* ignore */ }
+          if (isMounted) { setUser(null); setProfile(null); setLoading(false); }
+          return;
+        }
+
+        const { data: { user: validatedUser }, error: userError } = userResult;
+
+        if (userError || !validatedUser) {
+          console.warn('[Auth] 4. Session expired or invalid on server:', userError?.message);
+          try { await supabase.auth.signOut(); } catch (e) { /* ignore */ }
+          if (isMounted) {
+            setUser(null);
+            setProfile(null);
+            setLoading(false);
+          }
+          return;
+        }
+
+        if (isMounted) {
+          setUser(validatedUser);
+          console.log('[Auth] 4. Token valid! Fetching profile...');
+          await fetchProfile(validatedUser);
+          console.log('[Auth] 6. Profile fetch complete. App ready to render.');
+        }
+      } catch (err) {
+        console.error('Session initialization error:', err);
+        if (isMounted) {
+          setUser(null);
+          setProfile(null);
+          setLoading(false);
+        }
       }
-      const session = data?.session;
-      setUser(session?.user ?? null);
-      if (session?.user) {
-        fetchProfile(session.user);
-      } else {
-        setLoading(false);
-      }
-    }).catch((err) => {
-      if (!isMounted) return;
-      console.error('Unexpected session error:', err);
-      setUser(null);
-      setLoading(false);
-    });
+    };
+
+    initSession();
 
     // Listen for auth state changes (login, logout, token refresh)
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (event, session) => {
         if (!isMounted) return;
-        setUser(session?.user ?? null);
-        if (session?.user) {
-          fetchProfile(session.user);
-        } else {
+        
+        // Skip INITIAL_SESSION since initSession securely handles the first load
+        if (event === 'INITIAL_SESSION') return;
+        
+        if (event === 'SIGNED_OUT') {
+          setUser(null);
           setProfile(null);
           setLoading(false);
+        } else if (event === 'SIGNED_IN' || event === 'TOKEN_REFRESHED') {
+          if (session?.user) {
+            setUser(session.user);
+            fetchProfile(session.user);
+          }
         }
       }
     );
@@ -101,11 +165,25 @@ export const AuthProvider = ({ children }) => {
   }, [user, fetchProfile]);
 
   const login = async (email, password) => {
-    return supabase.auth.signInWithPassword({ email, password });
+    try {
+      const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+      if (error) console.error('Login error:', error.message);
+      return { data, error };
+    } catch (err) {
+      console.error('Unexpected login error:', err);
+      return { data: null, error: err };
+    }
   };
 
   const logout = async () => {
-    return supabase.auth.signOut();
+    try {
+      const { error } = await supabase.auth.signOut();
+      if (error) console.error('Logout error:', error.message);
+      return { error };
+    } catch (err) {
+      console.error('Unexpected logout error:', err);
+      return { error: err };
+    }
   };
 
   const value = {

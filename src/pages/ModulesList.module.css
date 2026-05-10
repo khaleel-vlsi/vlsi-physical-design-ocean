@@ -1,52 +1,270 @@
+/* ── Modules List — Oceanic Design System (Reference-aligned) ───────────── */
+
+.modulesPage {
+  width: 100%;
+  background: #111415; /* Match design system surface color if not pure black */
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+/* Hero header */
 .moduleHeader {
-  background: linear-gradient(120deg, #1a73e8, #0f4c81);
-  color: white;
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 48px 48px;
+  position: relative;
 }
 
 .moduleHeader h1 {
-  font-size: 36px;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #b9c3ff;
+  background: linear-gradient(135deg, #e1e3e4 10%, #b9c3ff 50%, #8594dc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
 }
 
 .moduleHeader p {
-  font-size: 18px;
-  margin-top: 10px;
+  font-size: 14px;
+  color: #9aa0a6;
+  max-width: 600px;
+  margin: 0 auto 24px;
+  line-height: 1.6;
 }
 
-.modulesContainer {
+.statsRow {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  padding: 40px;
+  gap: 16px;
+}
+
+.statPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #e8eaed;
+  font-family: var(--font-label);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.statIcon {
+  color: #59dad1;
+}
+
+/* Cards grid */
+.modulesGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  padding: 0 48px;
+  max-width: 1400px;
+  margin: 0 auto 64px;
 }
 
 .moduleLink {
   text-decoration: none;
-  color: inherit;
+  display: block;
 }
 
+/* Module card */
 .moduleCard {
-  background: white;
-  width: 250px;
-  margin: 15px;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px 16px;
+  height: 100%;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
 }
 
 .moduleCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transform: translateY(-4px);
+  border-color: rgba(89, 218, 209, 0.4);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.moduleBadge {
+  display: inline-block;
+  background: rgba(89, 218, 209, 0.1);
+  color: #59dad1;
+  font-family: var(--font-label);
+  font-size: 9px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  align-self: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .moduleCard h3 {
-  color: #1a73e8;
-  margin-bottom: 10px;
+  font-family: var(--font-headline);
+  font-size: 13px;
+  font-weight: 600;
+  color: #e8eaed;
+  line-height: 1.4;
+  margin: 0;
+  margin-bottom: auto;
 }
 
-.moduleCard p {
-  color: #555;
+/* Bottom teal accent line */
+.cardAccent {
+  height: 3px;
+  width: 30px;
+  background: #59dad1;
+  margin-top: 24px;
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
+/* Bottom Section (Lab & Cert) */
+.bottomSection {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.labCard {
+  background-image: url('/lab.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.labCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.2) 60%, transparent 100%);
+}
+
+.labCardInner {
+  position: relative;
+  z-index: 1;
+  padding: 32px;
+}
+
+.labTag {
+  font-family: var(--font-label);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #59dad1;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.labCard h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.labCard p {
+  font-size: 13px;
+  color: #bdc1c6;
+  max-width: 450px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.certCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.certIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(89, 218, 209, 0.15);
+  color: #59dad1;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.certCard h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.certCard p {
+  font-size: 13px;
+  color: #9aa0a6;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+}
+
+.certButton {
+  background: transparent;
+  color: #e8eaed;
+  border: 1px solid rgba(89, 218, 209, 0.5);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: var(--font-headline);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  align-self: flex-start;
+}
+
+.certButton:hover {
+  background: rgba(89, 218, 209, 0.1);
+  border-color: #59dad1;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .modulesGrid { grid-template-columns: repeat(4, 1fr); }
+  .bottomSection { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 900px) {
+  .modulesGrid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .modulesGrid { grid-template-columns: repeat(2, 1fr); padding: 0 24px; }
+  .bottomSection { padding: 0 24px; }
+  .moduleHeader { padding: 60px 24px 32px; }
+  .moduleHeader h1 { font-size: 32px; }
+}
+
+@media (max-width: 480px) {
+  .modulesGrid { grid-template-columns: 1fr; }
 }

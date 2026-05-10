@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { supabase } from '../services/supabase';
 import styles from './Dashboard.module.css';
 
 const Dashboard = () => {
   const { user, profile } = useAuth();
+  const navigate = useNavigate();
 
   const [isCheckingOut, setIsCheckingOut] = React.useState(false);
   const [isPolling, setIsPolling] = React.useState(false);
@@ -136,7 +138,7 @@ const Dashboard = () => {
       <div className={styles.card}>
         <div className={styles.flexBetween}>
           <div>
-            <h1>📘 Student Dashboard</h1>
+            <h1>🎓 Student Dashboard</h1>
             <div className={styles.muted}>
               {isPolling ? "Fetching updated access status... ⏳" : "Premium access status for paid modules & placement support."}
             </div>
@@ -147,95 +149,107 @@ const Dashboard = () => {
         <div className={styles.hr}></div>
 
         <div className={styles.muted}>
-          <b>Welcome,</b> {displayProfile.full_name || "Student"}<br />
+          <b>Welcome back,</b><br />
+          <h2 style={{ margin: '4px 0', fontSize: '20px' }}>{displayProfile.full_name || "Student"}</h2>
           <span>{displayProfile.email || user?.email}</span>
         </div>
 
-        <div className={styles.pillRow}>
-          <span className={styles.pill}>Course: <b className={courseValid ? styles.okText : styles.errText}>{courseValid ? "Active" : "Inactive"}</b></span>
-          <span className={styles.pill}>Course Expiry: <b>{fmtDate(displayProfile.course_expiry)}</b></span>
-          <span className={styles.pill}>Placement: <b className={placementValid ? styles.okText : styles.errText}>{placementValid ? "Active" : "Inactive"}</b></span>
-          <span className={styles.pill}>Placement Expiry: <b>{fmtDate(displayProfile.placement_expiry)}</b></span>
-          <span className={styles.pill}>Mock Remaining: <b>{displayProfile.mock_remaining ?? 0}</b></span>
-        </div>
-
-        <div className={styles.hr}></div>
-
-        {/* Course Section */}
-        <div className={styles.subCard}>
-          <div className={styles.flexBetween}>
-            <h2>🌊 Paid Modules (9–32)</h2>
-            <div className={`${styles.statusBig} ${courseValid ? styles.ok : styles.err}`}>
-              {courseValid ? "Unlocked ✅" : "Locked 🔒"}
-            </div>
+        <div className={styles.statBoxes}>
+          <div className={styles.statBox}>
+            <span className={styles.statBoxLabel}>Course</span>
+            <span className={`${styles.statBoxValue} ${courseValid ? styles.okText : styles.errText}`}>{courseValid ? "Active" : "Inactive"}</span>
           </div>
-          <div className={styles.muted} style={{ marginTop: '8px' }}>
-            {courseValid ? (
-              <><span className={styles.okText}><b>Premium access granted.</b></span><br />Click below to access.</>
-            ) : (
-              <><span className={styles.errText}><b>Not active.</b></span><br />Pay ₹499 to unlock modules 9–32.</>
-            )}
+          <div className={styles.statBox}>
+            <span className={styles.statBoxLabel}>Expiry</span>
+            <span className={styles.statBoxValue}>{fmtDate(displayProfile.course_expiry).split(',')[0]}</span>
           </div>
-          <div className={styles.actionRow}>
-            {courseValid ? (
-              <button className={`${styles.btn} ${styles.btnPrimary}`} onClick={() => alert("Navigating to paid modules...")}>Open Paid Modules</button>
-            ) : (
-              <button className={`${styles.btn} ${styles.btnGold}`} onClick={() => startCheckout('PLAN_499')}>
-                {isCheckingOut ? '⏳ Processing...' : '💳 Pay ₹499 (Unlock Modules)'}
-              </button>
-            )}
+          <div className={styles.statBox}>
+            <span className={styles.statBoxLabel}>Placement</span>
+            <span className={`${styles.statBoxValue} ${placementValid ? styles.okText : styles.errText}`}>{placementValid ? "Active" : "Inactive"}</span>
+          </div>
+          <div className={styles.statBox}>
+            <span className={styles.statBoxLabel}>Mock Left</span>
+            <span className={styles.statBoxValue}>{displayProfile.mock_remaining ?? 0}</span>
           </div>
         </div>
 
         <div className={styles.hr}></div>
 
-        {/* Placement Section */}
-        <div className={styles.subCard}>
-          <div className={styles.flexBetween}>
-            <h2>🚀 Placement Support + Mock Interviews</h2>
-            <div className={`${styles.statusBig} ${placementValid ? styles.ok : styles.err}`}>
-              {placementValid ? "Unlocked ✅" : "Locked 🔒"}
+        <div className={styles.actionCardsGrid}>
+          {/* Course Section */}
+          <div className={styles.subCard}>
+            <div className={styles.flexBetween}>
+              <h2>🌊 Paid Modules (9–32)</h2>
+              <div className={`${styles.statusBig} ${courseValid ? styles.ok : styles.err}`}>
+                {courseValid ? "Unlocked ✅" : "Locked 🔒"}
+              </div>
+            </div>
+            <div className={styles.muted} style={{ marginTop: '8px' }}>
+              Your premium access is granted. Continue your journey through advanced physical design concepts.
+            </div>
+            <div className={styles.actionRow}>
+              {courseValid ? (
+                <button className={`${styles.btn} ${styles.btnPrimary}`} onClick={() => alert("Coming soon! Paid modules will be integrated here.")}>Open Paid Modules →</button>
+              ) : (
+                <button className={`${styles.btn} ${styles.btnGold}`} onClick={() => startCheckout('PLAN_499')}>
+                  {isCheckingOut ? '⏳ Processing...' : 'Pay ₹499 to Unlock 💳'}
+                </button>
+              )}
             </div>
           </div>
-          <div className={styles.muted} style={{ marginTop: '8px' }}>
-            {placementValid ? (
-              <><span className={styles.okText}><b>Placement support active.</b></span><br />Mock remaining: <b>{displayProfile.mock_remaining ?? 0}</b></>
-            ) : (
-              <><span className={styles.errText}><b>Not active.</b></span><br />Pay ₹1999 to unlock modules + placement.</>
-            )}
-          </div>
-          <div className={styles.actionRow}>
-            {placementValid ? (
-              <button className={`${styles.btn} ${styles.btnPrimary}`} onClick={() => alert("Navigating to placement area...")}>Open Placement Area</button>
-            ) : (
-              <button className={`${styles.btn} ${styles.btnGold}`} onClick={() => startCheckout('PLAN_1999')}>
-                {isCheckingOut ? '⏳ Processing...' : '🚀 Pay ₹1999 (Modules + Placement)'}
-              </button>
-            )}
+
+          {/* Placement Section (Hidden per user request, but retained) */}
+          <div className={styles.subCard} style={{ display: 'none' }}>
+            <div className={styles.flexBetween}>
+              <h2>🚀 Placement &amp; Mocks</h2>
+              <div className={`${styles.statusBig} ${placementValid ? styles.ok : styles.err}`}>
+                {placementValid ? "Unlocked ✅" : "Locked 🔒"}
+              </div>
+            </div>
+            <div className={styles.muted} style={{ marginTop: '8px' }}>
+              Unlock dedicated placement support, resume reviews, and 3 mock interviews with industry veterans.
+            </div>
+            <div className={styles.actionRow}>
+              {placementValid ? (
+                <button className={`${styles.btn} ${styles.btnPrimary}`} onClick={() => alert("Navigating to placement area...")}>Open Placement Area →</button>
+              ) : (
+                <button className={`${styles.btn} ${styles.btnGold}`} onClick={() => startCheckout('PLAN_1999')}>
+                  {isCheckingOut ? '⏳ Processing...' : 'Pay ₹1999 to Unlock 💳'}
+                </button>
+              )}
+            </div>
           </div>
         </div>
       </div>
 
       <div className={styles.card}>
-        <h2>✅ Rules</h2>
+        <h2>📜 Platform Rules</h2>
         <ul className={styles.miniList}>
-          <li><b>Paid Modules:</b> 6 months from purchase date</li>
-          <li><b>Placement:</b> 1 year from purchase date</li>
-          <li><b>Mock Interviews:</b> 3 per user (tracked)</li>
+          <li><b>Paid Modules:</b> Access valid for 6 months from purchase date.</li>
+          <li><b>Placement:</b> Support valid for 1 year from enrollment.</li>
+          <li><b>Mock Interviews:</b> 3 per user, strictly tracked via session logs.</li>
         </ul>
         <div className={styles.hr}></div>
-        <h2>⚡ Automation (Important)</h2>
+        <h2>⚡ Automation</h2>
         <div className={styles.muted}>
-          Payment → Razorpay order → Payment success → Razorpay webhook → Supabase updates → Dashboard unlocks automatically.<br /><br />
-          After payment, your dashboard will automatically refresh its status within 15-30 seconds.
+          Payment → Razorpay order → Payment success → Razorpay webhook → Supabase updates → Dashboard unlocks automatically.
+          <p className={styles.noteText}>Wait 15-30 seconds after payment for status refresh.</p>
         </div>
         <div className={styles.hr}></div>
-        <h2>🛠 If still locked</h2>
+        <h2>🔧 If Still Locked</h2>
         <ul className={styles.miniList}>
-          <li>Refresh once</li>
-          <li>Logout & login again</li>
-          <li>If still locked → webhook not updating database</li>
+          <li>Refresh the page once</li>
+          <li>Logout and login again</li>
+          <li>Contact support if webhook fails</li>
         </ul>
+
+        {/* Upcoming Webinar Card */}
+        <div className={styles.webinarCard}>
+          <div className={styles.webinarContent}>
+            <h3>Upcoming Webinar</h3>
+            <p>Floorplanning Masterclass • Live</p>
+          </div>
+        </div>
       </div>
     </div>
   );

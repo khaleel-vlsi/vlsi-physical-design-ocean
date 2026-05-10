@@ -50,7 +50,7 @@ const ModuleDetail = () => {
               <p>🚫 Download: Disabled</p>
               <p>🚫 Copy/Print: Disabled</p>
             </div>
-            <Link to="/dashboard" className={styles.unlockBtn}>
+            <Link to="/contact" className={styles.unlockBtn}>
               Request Access
             </Link>
           </div>

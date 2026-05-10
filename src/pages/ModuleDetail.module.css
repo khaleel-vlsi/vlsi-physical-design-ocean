@@ -1,85 +1,160 @@
+/* ── Module Detail — Oceanic Design System ───────────────────────────────── */
+
+/* Hero header */
 .moduleHeader {
-  background: linear-gradient(120deg, #1a73e8, #0f4c81);
-  color: white;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a2a6c 0%, #0d1535 60%, #111415 100%);
+  color: var(--on-background);
   text-align: center;
-  padding: 80px 20px 60px;
+  padding: 90px var(--margin-desktop) 70px;
+}
+
+.moduleHeader::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 600px 300px at 50% 60%, rgba(185,195,255,0.12), transparent 70%);
+  pointer-events: none;
 }
 
 .moduleHeader h1 {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   margin-bottom: 10px;
+  background: linear-gradient(135deg, #e1e3e4 30%, #b9c3ff 65%, #59dad1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
+/* Content wrapper */
 .moduleContent {
-  max-width: 1000px;
-  margin: 50px auto;
-  padding: 0 20px;
+  max-width: 960px;
+  margin: 60px auto;
+  padding: 0 var(--margin-desktop);
 }
 
+/* Content body card */
 .contentSection {
-  background: white;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  background: var(--glass-bg-1);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-blur-1);
+  -webkit-backdrop-filter: var(--glass-blur-1);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  box-shadow: var(--glass-shadow);
+  color: var(--on-surface);
+  font-size: 15px;
+  line-height: 1.8;
+  position: relative;
+  overflow: hidden;
 }
 
+.contentSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+}
+
+/* Navigation buttons */
 .moduleNavigation {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin: 40px 0;
+  gap: 16px;
+  margin: 48px 0;
   flex-wrap: wrap;
 }
 
 .navBtn {
-  padding: 10px 18px;
-  background-color: #004aad;
-  color: white;
+  padding: 12px 24px;
+  background: var(--glass-bg-1);
+  border: 1px solid var(--primary-container);
+  color: var(--primary);
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: var(--radius-lg);
+  font-family: var(--font-headline);
+  font-weight: 600;
   font-size: 14px;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
 .navBtn:hover {
-  background-color: #003080;
+  background: rgba(26, 42, 108, 0.5);
+  border-color: var(--primary);
+  color: var(--primary-fixed);
+  transform: translateY(-2px);
 }
 
+/* Locked state */
 .lockedModule {
   text-align: center;
-  padding: 60px 20px;
-  max-width: 800px;
-  margin: auto;
+  padding: 80px 24px;
+  max-width: 720px;
+  margin: 60px auto;
 }
 
 .lockedModule h2 {
-  color: #cc0000;
+  font-size: 28px;
+  color: var(--error);
+  margin-bottom: 16px;
 }
 
 .lockMessage {
-  font-size: 18px;
-  margin-bottom: 20px;
+  font-size: 17px;
+  margin-bottom: 24px;
+  color: var(--on-surface-variant);
+  line-height: 1.7;
 }
 
+/* Lock info box */
 .lockBox {
-  background: #ffe6e6;
-  color: #cc0000;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px auto;
-  max-width: 400px;
+  background: rgba(147, 0, 10, 0.2);
+  border: 1px solid rgba(255, 180, 171, 0.25);
+  color: var(--error);
+  padding: 24px 28px;
+  border-radius: var(--radius-lg);
+  margin: 24px auto;
+  max-width: 420px;
   text-align: left;
+  font-size: 14px;
+  line-height: 1.7;
 }
 
+/* Unlock CTA */
 .unlockBtn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: #ff6a00;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+  padding: 14px 32px;
+  background: var(--cta);
   color: #fff;
   text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
+  border-radius: var(--radius-lg);
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 24px var(--cta-glow);
 }
 
 .unlockBtn:hover {
-  background: #e55a00;
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px var(--cta-glow);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .moduleHeader { padding: 64px var(--margin-mobile) 48px; }
+  .moduleHeader h1 { font-size: 26px; }
+  .moduleContent { padding: 0 var(--margin-mobile); margin: 40px auto; }
+  .contentSection { padding: 28px 20px; }
+  .moduleNavigation { gap: 10px; }
 }

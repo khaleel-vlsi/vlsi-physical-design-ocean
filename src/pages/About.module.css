@@ -1,0 +1,275 @@
+/* About Page */
+
+.aboutContainer {
+  background: transparent;
+  color: #e1e3e4;
+  padding-bottom: 80px;
+}
+
+/* 1. Header Section */
+.heroSection {
+  text-align: center;
+  padding: 100px 24px 60px;
+  position: relative;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #b9c3ff;
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #9aa0a6;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.divider {
+  width: 60px;
+  height: 4px;
+  background: #59dad1;
+  margin: 32px auto 0;
+  border-radius: 2px;
+}
+
+/* 2. Mission Section */
+.missionSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 24px;
+  align-items: stretch;
+}
+
+.missionCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 40px;
+  position: relative;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.missionIcon {
+  position: absolute;
+  top: -20px;
+  left: 40px;
+  background: #59dad1;
+  color: #00201e;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 8px 16px rgba(89, 218, 209, 0.3);
+}
+
+.missionCard h2 {
+  font-size: 28px;
+  color: #b9c3ff;
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.missionCard p {
+  color: #bdc1c6;
+  line-height: 1.7;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.missionList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.missionList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #e1e3e4;
+  font-size: 14px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.checkIcon {
+  color: #59dad1;
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+.missionImageWrap {
+  display: flex;
+  height: 100%;
+}
+
+.missionImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* 3. The Oceanic Approach Section */
+.approachSection {
+  text-align: center;
+  padding: 60px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.approachSection h2 {
+  font-size: 32px;
+  color: #b9c3ff;
+  margin-bottom: 16px;
+}
+
+.approachSection p {
+  color: #9aa0a6;
+  font-size: 15px;
+  max-width: 600px;
+  margin: 0 auto 48px;
+}
+
+.approachGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.approachCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 40px 32px;
+  text-align: left;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.approachCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(89, 218, 209, 0.3);
+}
+
+.approachIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(89, 218, 209, 0.1);
+  color: #59dad1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(89, 218, 209, 0.2);
+}
+
+.approachCard h3 {
+  font-size: 18px;
+  color: #e1e3e4;
+  margin-bottom: 12px;
+}
+
+.approachCard p {
+  font-size: 13px;
+  color: #9aa0a6;
+  line-height: 1.6;
+}
+
+/* 4. Team Section */
+.teamSection {
+  text-align: center;
+  padding: 60px 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.teamSection h2 {
+  font-size: 32px;
+  color: #b9c3ff;
+  margin-bottom: 16px;
+}
+
+.teamName {
+  font-size: 24px;
+  font-weight: 600;
+  color: #e1e3e4;
+  margin-bottom: 8px;
+}
+.teamRole {
+  font-family: var(--font-label);
+  color: #59dad1;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* 5. CTA Section */
+.ctaSection {
+  text-align: center;
+  margin: 60px auto 0;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, rgba(26,42,108,0.3) 0%, rgba(10,16,42,0.6) 100%);
+  border: 1px solid rgba(89, 218, 209, 0.15);
+  border-radius: 24px;
+  max-width: 900px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+}
+
+.ctaSection h2 {
+  font-size: 28px;
+  color: #e1e3e4;
+  margin-bottom: 16px;
+}
+
+.ctaSection p {
+  font-size: 14px;
+  color: #9aa0a6;
+  margin-bottom: 32px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  background: linear-gradient(90deg, #ff7f50, #ff6b35);
+  color: #fff;
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.3);
+  transition: transform 0.2s;
+}
+
+.ctaBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(255, 107, 53, 0.5);
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .missionSection { grid-template-columns: 1fr; }
+  .approachGrid { grid-template-columns: 1fr; }
+}

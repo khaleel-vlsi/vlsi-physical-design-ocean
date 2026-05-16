@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Images</title>
+    <style>
+        .gallery { display: flex; flex-wrap: wrap; gap: 20px; }
+        .item { border: 1px solid #ccc; padding: 10px; text-align: center; }
+        img { max-width: 300px; height: auto; display: block; margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Module 1 Image Gallery</h1>
+    <div id="gallery" class="gallery"></div>
+    <script>
+        const gallery = document.getElementById('gallery');
+        for (let i = 1; i <= 32; i++) {
+            const div = document.createElement('div');
+            div.className = 'item';
+            div.innerHTML = `<h3>image_${i}.png</h3><img src="/assets/modules/module1/image_${i}.png">`;
+            gallery.appendChild(div);
+        }
+    </script>
+</body>
+</html>

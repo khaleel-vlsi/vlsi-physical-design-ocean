@@ -24,8 +24,18 @@
         }
       }(window.location))
     </script>
-    <script type="module" crossorigin src="/assets/index-B7wMjAeF.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BQ3p73fh.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        }
+      };
+    </script>
+    <script type="module" crossorigin src="/assets/index-D3rsMI0h.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Cp0bDjr-.css">
   </head>
   <body>
     <div id="root"></div>

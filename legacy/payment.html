@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Payment | ASIC & VLSI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Razorpay Script -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0b4fa2, #1e6fd9);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pay-box {
+  background: #fff;
+  width: 100%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+h2 {
+  color: #0b4fa2;
+}
+
+.price {
+  background: #f1f6ff;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  background: #1e6fd9;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1558b0;
+}
+
+.note {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #333;
+}
+</style>
+</head>
+
+<body>
+
+<div class="pay-box">
+  <h2>Advanced ASIC & VLSI Course</h2>
+  <p>Modules 9–24 | 6 Months Access</p>
+
+  <div class="price">
+    <strong>India:</strong> ₹149 <br>
+    <strong>International:</strong> $12
+  </div>
+
+  <button id="payBtn">Pay Now</button>
+
+  <div class="note">
+    ✔ UPI • Card • NetBanking • Wallets<br>
+    🔒 Secure Razorpay Payment
+  </div>
+</div>
+
+<script>
+document.getElementById("payBtn").onclick = function () {
+
+  var options = {
+    "key": "rzp_test_xxxxxxxxxx",   // 🔴 PUT YOUR TEST KEY HERE
+    "amount": 14900,               // ₹149
+    "currency": "INR",
+    "name": "ASIC & VLSI Course",
+    "description": "6 Months Access",
+    "image": "https://cdn-icons-png.flaticon.com/512/906/906175.png",
+
+    "handler": function (response) {
+      alert("Payment Successful!\nPayment ID: " + response.razorpay_payment_id);
+
+      // next step later
+      // window.location.href = "dashboard.html";
+    },
+
+    "prefill": {
+      "email": "",
+      "contact": ""
+    },
+
+    "method": {
+      "upi": true,
+      "card": true,
+      "netbanking": true,
+      "wallet": true
+    },
+
+    "theme": {
+      "color": "#1e6fd9"
+    }
+  };
+
+  var rzp1 = new Razorpay(options);
+  rzp1.open();
+};
+</script>
+
+</body>
+</html>

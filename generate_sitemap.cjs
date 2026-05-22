@@ -27,9 +27,12 @@ const extractIds = (filePath) => {
 const domain = 'https://vlsiphysicaldesignocean.com';
 
 const generateSitemap = () => {
-  const moduleIds = extractIds(modulesDataPath);
-  // Optional: add paid modules if they are public facing for SEO
-  // const paidModuleIds = extractIds(paidModulesDataPath);
+  const allModuleIds = extractIds(modulesDataPath);
+  // Only include public modules (IDs 1 to 8) in sitemap as requested by user
+  const moduleIds = allModuleIds.filter(id => {
+    const num = parseInt(id, 10);
+    return num >= 1 && num <= 8;
+  });
 
   const today = new Date().toISOString().split('T')[0];
   const staticRoutes = [

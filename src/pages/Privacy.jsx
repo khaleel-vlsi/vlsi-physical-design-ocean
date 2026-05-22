@@ -1,10 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Privacy.module.css';
+import SEO from '../components/SEO';
 
 const Privacy = () => {
   return (
-    <div className={styles.policyContainer}>
+    <>
+      <SEO 
+        title="Policies & Guidelines" 
+        description="Review the terms of service, privacy policy, and refund policy for VLSI Physical Design Ocean."
+        url="/privacy"
+      />
+      <div className={styles.policyContainer}>
       {/* 1. Header Section */}
       <section className={styles.heroSection}>
         <h1 className={styles.title}>Policies & Guidelines</h1>
@@ -85,7 +92,8 @@ const Privacy = () => {
         <img loading="lazy" src="/chip.png" alt="Hardware background" className={styles.bannerImg} />
       </section>
 
-    </div>
+      </div>
+    </>
   );
 };
 

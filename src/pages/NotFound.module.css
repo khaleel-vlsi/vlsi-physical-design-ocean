@@ -1,0 +1,230 @@
+.notFoundContainer {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #0b0f19;
+  background-image: radial-gradient(circle at 50% 50%, #151e33 0%, #080b12 100%);
+  overflow: hidden;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #f3f4f6;
+}
+
+/* Silicon wafer/chip layout background lines */
+.chipBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.08;
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, #4f46e5 1px, transparent 1px),
+    linear-gradient(to bottom, #4f46e5 1px, transparent 1px);
+  pointer-events: none;
+}
+
+.gridLine {
+  position: absolute;
+  background: linear-gradient(90deg, transparent, #4f46e5, transparent);
+  height: 2px;
+  width: 100%;
+}
+
+.gridLine:nth-child(1) {
+  top: 25%;
+  animation: scanLine 8s linear infinite;
+}
+
+.gridLine:nth-child(2) {
+  top: 55%;
+  animation: scanLine 12s linear infinite reverse;
+}
+
+.gridLine:nth-child(3) {
+  top: 80%;
+  animation: scanLine 10s linear infinite;
+}
+
+.card {
+  position: relative;
+  z-index: 2;
+  max-width: 580px;
+  width: 100%;
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 50px 40px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* Microchip illustration */
+.microchip {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: #1e1b4b;
+  border: 3px solid #6366f1;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.4);
+}
+
+.inverterSymbol {
+  font-size: 42px;
+  font-weight: 700;
+  color: #818cf8;
+  transform: rotate(180deg);
+}
+
+/* Blinking LEDs on microchip */
+.led {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ef4444;
+  box-shadow: 0 0 8px #ef4444;
+}
+
+.led:nth-child(1) { top: -4px; left: 20px; background-color: #10b981; box-shadow: 0 0 8px #10b981; animation: blink 1.5s infinite; }
+.led:nth-child(2) { top: -4px; right: 20px; animation: blink 1s infinite 0.2s; }
+.led:nth-child(3) { bottom: -4px; left: 20px; animation: blink 1.2s infinite 0.5s; }
+.led:nth-child(4) { bottom: -4px; right: 20px; background-color: #10b981; box-shadow: 0 0 8px #10b981; animation: blink 1.8s infinite 0.3s; }
+
+.title {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #a5b4fc;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+}
+
+.description {
+  font-size: 14px;
+  color: #9ca3af;
+  margin: 0 0 35px 0;
+  line-height: 1.6;
+}
+
+/* Primary reset button */
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+  background: linear-gradient(135deg, #4338ca 0%, #4f46e5 100%);
+}
+
+.primaryBtn:active {
+  transform: translateY(0);
+}
+
+/* Quick recovery links styling */
+.quickLinks {
+  margin-top: 40px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.quickLinksTitle {
+  display: block;
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.linksRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.quickLink {
+  color: #9ca3af;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.quickLink:hover {
+  color: #818cf8;
+}
+
+.divider {
+  color: rgba(255, 255, 255, 0.1);
+  user-select: none;
+}
+
+/* Keyframes */
+@keyframes blink {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+@keyframes scanLine {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(80vh); }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 35px 24px;
+  }
+  .title {
+    font-size: 22px;
+  }
+  .linksRow {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .divider {
+    display: none;
+  }
+}

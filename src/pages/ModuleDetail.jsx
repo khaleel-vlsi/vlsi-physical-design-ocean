@@ -78,6 +78,7 @@ const ModuleDetail = () => {
         url={`/modules/${moduleInfo.id}`}
         isArticle={true}
         keywords={moduleInfo.keywords || []}
+        noindex={moduleInfo.isLocked}
         structuredData={
           <StructuredData 
             course={{

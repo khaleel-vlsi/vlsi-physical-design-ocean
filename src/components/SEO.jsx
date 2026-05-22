@@ -12,7 +12,7 @@ import StructuredData from './StructuredData';
  *   - keywords: array of keyword strings
  *   - structuredData: React element (e.g., <StructuredData .../>)
  */
-const SEO = ({ title, description, url, isArticle, keywords, structuredData }) => {
+const SEO = ({ title, description, url, isArticle, keywords, structuredData, noindex }) => {
   const defaultTitle = 'VLSI Physical Design Ocean – Professional Guide';
   const defaultDescription = 'VLSI Physical Design Ocean – A structured learning platform for ASIC & VLSI design from basics to advanced physical design.';
   const domain = 'https://vlsiphysicaldesignocean.com';
@@ -32,6 +32,7 @@ const SEO = ({ title, description, url, isArticle, keywords, structuredData }) =
         <meta name="description" content={seoDescription} />
         {metaKeywords && <meta name="keywords" content={metaKeywords} />}
         <link rel="canonical" href={canonicalUrl} />
+        {noindex && <meta name="robots" content="noindex, nofollow" />}
 
         {/* Open Graph */}
         <meta property="og:type" content={isArticle ? 'article' : 'website'} />

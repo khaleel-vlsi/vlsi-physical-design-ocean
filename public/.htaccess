@@ -1,12 +1,40 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-  
+
+  # 1. 301 Redirects for static pages
+  RewriteRule ^about\.html$ /about [R=301,L,NC]
+  RewriteRule ^contact\.html$ /contact [R=301,L,NC]
+  RewriteRule ^privacy\.html$ /privacy [R=301,L,NC]
+  RewriteRule ^modules\.html$ /modules [R=301,L,NC]
+  RewriteRule ^login\.html$ /login [R=301,L,NC]
+  RewriteRule ^register\.html$ /register [R=301,L,NC]
+  RewriteRule ^payment\.html$ /dashboard [R=301,L,NC]
+  RewriteRule ^index\.html$ / [R=301,L,NC]
+
+  # 2. 301 Redirects for legacy portal
+  RewriteRule ^portal_private_2026/login\.html$ /login [R=301,L,NC]
+  RewriteRule ^portal_private_2026/dashboard\.html$ /dashboard [R=301,L,NC]
+  RewriteRule ^portal_private_2026/reset\.html$ /reset-password [R=301,L,NC]
+  RewriteRule ^portal_private_2026/index\.html$ /dashboard [R=301,L,NC]
+  RewriteRule ^portal_private_2026/?$ /dashboard [R=301,L,NC]
+
+  # 3. 301 Redirects for public modules (IDs 1-8)
+  RewriteRule ^module([1-8])\.html$ /modules/$1 [R=301,L,NC]
+  RewriteRule ^module/([1-8])\.html$ /modules/$1 [R=301,L,NC]
+  RewriteRule ^module/([1-8])$ /modules/$1 [R=301,L,NC]
+
+  # 4. 301 Redirects for paid modules (IDs 9-57) redirect to public modules list
+  RewriteRule ^module([9]|[1-5][0-9])\.html$ /modules [R=301,L,NC]
+  RewriteRule ^module/([9]|[1-5][0-9])\.html$ /modules [R=301,L,NC]
+  RewriteRule ^module/([9]|[1-5][0-9])$ /modules [R=301,L,NC]
+
+  # 5. SPA Routing Fallback
   # If the requested filename is an actual file or directory, serve it directly
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
   
-  # Otherwise, rewrite all other requests to index.html (SPA routing fallback)
+  # Otherwise, rewrite all other requests to index.html
   RewriteRule ^ index.html [L]
 </IfModule>

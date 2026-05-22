@@ -1,9 +1,110 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Contact.module.css';
+import { supabase } from '../services/supabase';
+import SEO from '../components/SEO';
+import StructuredData from '../components/StructuredData';
 
 const Contact = () => {
+  const [status, setStatus] = useState(''); // '', 'sending', 'success', 'error'
+  
+  // TO CUSTOMIZE: Replace these with your EmailJS keys from emailjs.com
+  const EMAILJS_SERVICE_ID = "service_vlsiocean"; 
+  const EMAILJS_TEMPLATE_ID = "template_vlsiocean";
+  const EMAILJS_PUBLIC_KEY = "your_public_key_here";
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('sending');
+
+    const form = e.target;
+    const formData = new FormData(form);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message')
+    };
+
+    try {
+      // 1. Backup: Save to Supabase (if table exists)
+      const { error: sbError } = await supabase
+        .from('contact_messages')
+        .insert([
+          { 
+            full_name: data.name, 
+            email: data.email, 
+            message: data.message,
+            created_at: new Date()
+          }
+        ]);
+        
+      if (sbError) console.warn("Supabase save failed, but trying email...", sbError);
+
+      // 2. Main: Send via EmailJS REST API (No package needed)
+      const emailResponse = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          service_id: EMAILJS_SERVICE_ID,
+          template_id: EMAILJS_TEMPLATE_ID,
+          user_id: EMAILJS_PUBLIC_KEY,
+          template_params: {
+            from_name: data.name,
+            from_email: data.email,
+            message: data.message,
+            to_name: "Shaik Mahammad Khaleel"
+          }
+        })
+      });
+
+      if (emailResponse.ok) {
+        setStatus('success');
+        form.reset();
+      } else {
+        // Fallback for demo: if keys aren't set yet, show success if supabase worked
+        if (!sbError) {
+          setStatus('success');
+          form.reset();
+        } else {
+          setStatus('error');
+        }
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      setStatus('error');
+    }
+  };
+
   return (
     <div className={styles.contactContainer}>
+      <SEO 
+        title="Contact Us" 
+        description="Have questions or suggestions about VLSI Physical Design? Reach out to our technical experts for guidance on mastering the complexities of silicon."
+        url="/contact"
+        structuredData={
+          <StructuredData 
+            breadcrumb={{
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://vlsiphysicaldesignocean.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Contact",
+                  "item": "https://vlsiphysicaldesignocean.com/contact"
+                }
+              ]
+            }}
+          />
+        }
+      />
       {/* 1. Header Section */}
       <section className={styles.heroSection}>
         <h1 className={styles.title}>Contact</h1>
@@ -70,21 +171,34 @@ const Contact = () => {
           <h2>Send a Message</h2>
           <p>Have suggestions or queries? Fill out the form below.</p>
           
-          <form onSubmit={(e) => { e.preventDefault(); alert("Message sending functionality will be integrated soon."); }}>
+          <form onSubmit={handleSubmit}>
             <div className={styles.formGroup}>
               <label>Full Name</label>
-              <input type="text" placeholder="John Doe" className={styles.formInput} required />
+              <input type="text" name="name" placeholder="John Doe" className={styles.formInput} required />
             </div>
             <div className={styles.formGroup}>
               <label>Email Address</label>
-              <input type="email" placeholder="john@example.com" className={styles.formInput} required />
+              <input type="email" name="email" placeholder="john@example.com" className={styles.formInput} required />
             </div>
             <div className={styles.formGroup}>
               <label>Message</label>
-              <textarea placeholder="Your query or feedback..." className={styles.formTextarea} required></textarea>
+              <textarea name="message" placeholder="Your query or feedback..." className={styles.formTextarea} required></textarea>
             </div>
-            <button type="submit" className={styles.submitBtn}>
-              Send Message <span>➤</span>
+            
+            {status === 'success' && (
+              <div className={styles.successMessage}>
+                ✓ Message received! We will get back to you at your official mail.
+              </div>
+            )}
+            
+            {status === 'error' && (
+              <div className={styles.errorMessage}>
+                ✕ Something went wrong. Please check your keys or email us directly.
+              </div>
+            )}
+
+            <button type="submit" className={styles.submitBtn} disabled={status === 'sending'}>
+              {status === 'sending' ? 'Sending...' : 'Send Message'} <span>➤</span>
             </button>
           </form>
         </div>
@@ -100,11 +214,6 @@ const Contact = () => {
           <p>Precision in every micron. Our physical design experts bridge the gap between architectural logic and physical reality.</p>
         </div>
       </section>
-
-      {/* Floating button */}
-      <button className={styles.floatingHelp} onClick={() => alert("Help chat coming soon!")} title="Help">
-        ?
-      </button>
 
     </div>
   );

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './ModulesList.module.css';
+import SEO from '../components/SEO';
+import StructuredData from '../components/StructuredData';
 
 const modulesData = [
   { id: 1, title: 'Introduction to Electronics' },
@@ -27,20 +29,78 @@ const modulesData = [
   { id: 22, title: 'Physical Verification & Signoff Interview Questions' },
   { id: 23, title: 'Certification' },
   { id: 24, title: 'Resume Templates for Freshers & Experienced' },
-  { id: 25, title: 'Complete PNR Execution In ICC2, Innovus, FC' },
-  { id: 26, title: 'All Synopsys and Cadence user guides and study materials' }
+  { id: 25, title: 'Complete PNR Execution In ICC2' },
+  { id: 26, title: 'Complete PNR Execution In Innovus' },
+  { id: 27, title: 'Complete PNR Execution In FC' },
+  { id: 28, title: 'Timing Analysis User Guide' },
+  { id: 29, title: 'Tempus User Guide' },
+  { id: 30, title: 'Syn2PNR Flow Guide' },
+  { id: 31, title: 'ICC Student Guide' },
+  { id: 32, title: 'Star RC User Guide' },
+  { id: 33, title: 'Voltus IC Power Integrity Solution User Guide' },
+  { id: 34, title: 'All VLSI Questions and Answers' },
+  { id: 35, title: 'Viva Questions on Synthesis' },
+  { id: 36, title: 'PrimeTime Student Guide (2018 Version)' },
+  { id: 37, title: 'PrimeTime Crosstalk Analysis Guide' },
+  { id: 38, title: 'PrimeTime Tool User Guide' },
+  { id: 39, title: 'PNR Notes & Best Practices' },
+  { id: 40, title: 'PNR Debug & Fixes Guide' },
+  { id: 41, title: 'Block Implementation Lab Guide' },
+  { id: 42, title: 'Khaleel PNR Lab Practice Guide' },
+  { id: 43, title: 'Complete Physical Design Flow Documentation' },
+  { id: 44, title: 'Innovus TCR Reference Guide' },
+  { id: 45, title: 'ICC2 Tool User Guide' },
+  { id: 46, title: 'Genus Synthesis Tool User Guide' },
+  { id: 47, title: 'Fusion Compiler User Guide' },
+  { id: 48, title: 'Formality User Guide' },
+  { id: 49, title: 'Digital Logic & Design Interview Preparation' },
+  { id: 50, title: 'Design Compiler (DC) Tool User Guide' },
+  { id: 51, title: 'DB Get Useful Commands Reference' },
+  { id: 52, title: 'ICC2 Flow Implementation Guide' },
+  { id: 53, title: 'Complete Synthesis Flow Documentation' },
+  { id: 54, title: 'Block-Level Implementation Workshop Guide' },
+  { id: 55, title: 'Basic GVIM Commands for Faster Workflow' },
+  { id: 56, title: 'Application Options & Attributes Reference' },
+  { id: 57, title: 'Innovus User Guide (Full Version)' }
 ];
 
 const ModulesList = () => {
   return (
     <div className={styles.modulesPage}>
+      <SEO 
+        title="Learning Modules" 
+        description="Explore 57 comprehensive modules covering the entire VLSI Physical Design flow, from Electronics Fundamentals to Physical Verification & Signoff."
+        url="/modules"
+        structuredData = {
+          <StructuredData 
+            breadcrumb={{
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://vlsiphysicaldesignocean.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Modules",
+                  "item": "https://vlsiphysicaldesignocean.com/modules"
+                }
+              ]
+            }}
+          />
+        }
+      />
       <header className={styles.moduleHeader}>
         <h1>VLSI Physical Design Ocean Modules</h1>
         <p>Master the intricacies of chip design with our comprehensive, structured learning path. From silicon fundamentals to final sign-off.</p>
         <div className={styles.statsRow}>
           <div className={styles.statPill}>
             <span className={styles.statIcon}>📚</span>
-            26 Modules
+            57 Modules
           </div>
           <div className={styles.statPill}>
             <span className={styles.statIcon}>⏱️</span>

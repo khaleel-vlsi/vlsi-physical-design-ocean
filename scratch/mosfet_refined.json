@@ -1,0 +1,1381 @@
+[
+  {
+    "type": "p",
+    "text": "MOSFET"
+  },
+  {
+    "type": "h1",
+    "text": "Enhancement NMOSFET (EN-N-MOSFET): Construction and Operation"
+  },
+  {
+    "type": "h2",
+    "text": "Introduction"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Construction of Enhancement NMOSFET"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "img",
+    "src": "/assets/modules/mosfetcmos/image59.png"
+  },
+  {
+    "type": "p",
+    "text": "A thin insulating layer of silicon dioxide (SiO&#8322;)&nbsp;is grown over the substrate surface. On top of this oxide layer, a metal gate&nbsp;is deposited. The silicon dioxide layer plays a crucial role by electrically isolating the gate from the substrate, which results in very high input impedance."
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Basic Working Principle"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Operation of Enhancement NMOSFET"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h1",
+    "text": "1.2 Operation of Enhancement NMOSFET (EN-MOSFET)"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "1. Cut-Off Region (MOSFET OFF Condition)"
+  },
+  {
+    "type": "h3",
+    "text": "Case (i): VGS = 0, VDS = 0"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "Physical Explanation"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "p",
+    "text": "MOSFET"
+  },
+  {
+    "type": "h3",
+    "text": "Case (ii): 0 &lt; VGS &lt; VT, VDS = 0"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "Step-by-Step Explanation"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Strong Inversion"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Threshold Voltage (VT)"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "2. Triode (Linear) Region"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "Condition (iii): VGS &gt; VT, VDS &gt; 0 and VDS &lt; (VGS &minus; VT)"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Physical Explanation"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "img",
+    "src": "/assets/modules/mosfetcmos/image59.png"
+  },
+  {
+    "type": "p",
+    "text": "A thin insulating layer of silicon dioxide (SiO&#8322;)&nbsp;is grown over the substrate surface. On top of this oxide layer, a metal gate&nbsp;is deposited. The silicon dioxide layer plays a crucial role by electrically isolating the gate from the substrate, which results in very high input impedance."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Condition (iv): VGS &gt; VT, VDS &gt; 0 but still VDS &lt; (VGS &minus; VT)"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Pinch-Off Condition"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "img",
+    "src": "/assets/modules/mosfetcmos/image11.png"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "3. Saturation Region"
+  },
+  {
+    "type": "h3",
+    "text": "Condition (v): VGS &gt; VT and VDS &ge; (VGS &minus; VT)"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": ""
+  },
+  {
+    "type": "h3",
+    "text": "Detailed Explanation"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Important Result"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "V-l characteristics of N-MOSFET"
+  },
+  {
+    "type": "p",
+    "text": "MOSFET"
+  },
+  {
+    "type": "h2",
+    "text": ""
+  },
+  {
+    "type": "h2",
+    "text": "Summary of N-MOSFET Operation"
+  },
+  {
+    "type": "h1",
+    "text": "Enhancement P MOSFET (EN-P-MOSFET):"
+  },
+  {
+    "type": "h1",
+    "text": "Construction and Operation (Corrected &amp; Verified)"
+  },
+  {
+    "type": "p",
+    "text": "&nbsp;Important note before reading&nbsp;For PMOSFET, voltages are negative with respect to the source. To avoid confusion, absolute-value (magnitude) form&nbsp;is used in equations, which is the standard academic practice."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Introduction"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Construction of Enhancement PMOSFET"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "img",
+    "src": "/assets/modules/mosfetcmos/image59.png"
+  },
+  {
+    "type": "p",
+    "text": "A thin insulating layer of silicon dioxide (SiO&#8322;)&nbsp;is grown over the substrate surface. On top of this oxide layer, a metal gate&nbsp;is deposited. The silicon dioxide layer plays a crucial role by electrically isolating the gate from the substrate, which results in very high input impedance."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Basic Working Principle"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h1",
+    "text": "Operation of Enhancement PMOSFET"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "p",
+    "text": "&nbsp;Important note before reading&nbsp;For PMOSFET, voltages are negative with respect to the source. To avoid confusion, absolute-value (magnitude) form&nbsp;is used in equations, which is the standard academic practice."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "1. Cut-Off Region (PMOS OFF)"
+  },
+  {
+    "type": "h3",
+    "text": "Condition"
+  },
+  {
+    "type": "h3",
+    "text": "Explanation"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "img",
+    "src": "/assets/modules/mosfetcmos/image59.png"
+  },
+  {
+    "type": "p",
+    "text": "A thin insulating layer of silicon dioxide (SiO&#8322;)&nbsp;is grown over the substrate surface. On top of this oxide layer, a metal gate&nbsp;is deposited. The silicon dioxide layer plays a crucial role by electrically isolating the gate from the substrate, which results in very high input impedance."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "2. Triode (Linear / Ohmic) Region"
+  },
+  {
+    "type": "h3",
+    "text": "Condition"
+  },
+  {
+    "type": "h3",
+    "text": ""
+  },
+  {
+    "type": "h3",
+    "text": "Explanation"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Drain Current Equation (Triode Region)"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Overdrive Voltage"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Pinch-Off Condition"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "3. Saturation Region"
+  },
+  {
+    "type": "h3",
+    "text": "Condition"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Explanation"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Drain Current Equation (Saturation Region)"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Key Result"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "V&ndash;I Characteristics of PMOSFET"
+  },
+  {
+    "type": "h2",
+    "text": "Transfer Characteristics of PMOSFET"
+  },
+  {
+    "type": "h1",
+    "text": ""
+  },
+  {
+    "type": "h1",
+    "text": ""
+  },
+  {
+    "type": "h1",
+    "text": ""
+  },
+  {
+    "type": "h1",
+    "text": "3. Introduction to CMOS Technology"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Basic Concept of CMOS Operation"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "CMOS Inverter &ndash; Importance"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Why CMOS Technology Is Widely Used"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Advantages of CMOS Technology"
+  },
+  {
+    "type": "h3",
+    "text": "1. Very Low Power Consumption"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "2. High Noise Immunity"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "3. High Input Impedance"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "4. Full Voltage Swing"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "5. High Packing Density"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "6. Scalability"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Limitations of CMOS Technology"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "1. Dynamic Power Dissipation"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "2. Sensitive to Static Discharge"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "3. Fabrication Complexity"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "4. Latch-Up Problem"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "p",
+    "text": "&nbsp;Important note before reading&nbsp;For PMOSFET, voltages are negative with respect to the source. To avoid confusion, absolute-value (magnitude) form&nbsp;is used in equations, which is the standard academic practice."
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Pull-Up and Pull-Down Networks"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "1. Pull-Down Network (PDN)"
+  },
+  {
+    "type": "h3",
+    "text": "2. Pull-Up Network (PUN)"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Basic Working Principle"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h1",
+    "text": "3.2 CMOS Characteristics / Advantages (with Pull-Up and Pull-Down Operation)"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Operation of Pull-Down Transistor (NMOS)"
+  },
+  {
+    "type": "h3",
+    "text": "Condition: VGS &gt; VTN (NMOS ON)"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "/assets/modules/mosfetcmos/image79.png"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Charging and Discharging of Output Capacitor (C&#8321;)"
+  },
+  {
+    "type": "h3",
+    "text": "Charging Phase"
+  },
+  {
+    "type": "h3",
+    "text": "Discharging Phase"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Why CMOS Has Low Power Dissipation"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h1",
+    "text": ""
+  },
+  {
+    "type": "h1",
+    "text": ""
+  },
+  {
+    "type": "h1",
+    "text": ""
+  },
+  {
+    "type": "h1",
+    "text": ""
+  },
+  {
+    "type": "h1",
+    "text": ""
+  },
+  {
+    "type": "h1",
+    "text": "3.3 Noise Margin in CMOS Circuits"
+  },
+  {
+    "type": "h2",
+    "text": "Introduction"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Digital Signal Levels and NoiseDigital logic levels are not represented by single fixed voltages, but rather by ranges of voltages. This is what allows CMOS circuits to operate correctly even when noise is present."
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Critical Voltage Levels in a CMOS Inverter"
+  },
+  {
+    "type": "h2",
+    "text": ""
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "1. VOH (Maximum Output High Voltage)"
+  },
+  {
+    "type": "h3",
+    "text": "2. VOL (Maximum Output Low Voltage)"
+  },
+  {
+    "type": "h3",
+    "text": "3. VIH (Minimum Input High Voltage)"
+  },
+  {
+    "type": "h3",
+    "text": "4. VIL (Maximum Input Low Voltage)"
+  },
+  {
+    "type": "h3",
+    "text": "5. Vth (Switching Threshold Voltage)"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": ""
+  },
+  {
+    "type": "h2",
+    "text": ""
+  },
+  {
+    "type": "h2",
+    "text": ""
+  },
+  {
+    "type": "h2",
+    "text": "Interpretation of Input and Output Voltage Ranges"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "Input Logic Levels"
+  },
+  {
+    "type": "h3",
+    "text": "Output Logic Levels"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Noise Tolerance Using Cascaded Inverters"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "Low-Level Noise Case"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "High-Level Noise Case"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Definition of Noise Margins"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "Noise Margin Low (NML)"
+  },
+  {
+    "type": "h3",
+    "text": "Noise Margin High (NMH)"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Importance of Noise Margin in CMOS"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Conclusion"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h1",
+    "text": "3.4 CMOS Inverter"
+  },
+  {
+    "type": "h2",
+    "text": "Introduction"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Structure and Basic Operation of CMOS Inverter"
+  },
+  {
+    "type": "h3",
+    "text": "Input Low Condition"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Input High Condition"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Voltage Transfer Characteristics (VTC) of CMOS Inverter"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Load Line Plot Concept"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "Basic Idea"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "img",
+    "src": "/assets/modules/mosfetcmos/image11.png"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "DC Operating Points"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Region-Wise Analysis of VTC"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Region A"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Region B"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Region C (Switching Threshold Region)"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Region D"
+  },
+  {
+    "type": "img",
+    "src": "/assets/modules/mosfetcmos/image11.png"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Region E"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h2",
+    "text": "MOSFET Capacitances in CMOS Inverter"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": ""
+  },
+  {
+    "type": "h3",
+    "text": ""
+  },
+  {
+    "type": "h3",
+    "text": "Types of Capacitances"
+  },
+  {
+    "type": "img",
+    "src": "/assets/modules/mosfetcmos/image68.png"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "CMOS Parasitic Capacitance Model"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Propagation Delay in CMOS Inverter"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "Definitions"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "RC Delay Model"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Dynamic Power Dissipation"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "Energy Considerations"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Dynamic Power Equation"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Power Dissipation Due to Direct-Path Current"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Static Power Dissipation"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Conclusion"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h1",
+    "text": ""
+  },
+  {
+    "type": "h1",
+    "text": "4. Short Channel Effects"
+  },
+  {
+    "type": "h2",
+    "text": "4. Introduction"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "4.1 Channel Length Modulation (CLM)"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "Physical Explanation"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "Modified Drain Current Equation"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "4.2 Drain-Induced Barrier Lowering (DIBL)"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "Physical Mechanism"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "Consequences of DIBL"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "Mitigation"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "4.3 Velocity Saturation"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "Impact on Drain Current"
+  },
+  {
+    "type": "h3",
+    "text": "Modified Drain Current Behavior"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "4.4 Subthreshold Conduction (Weak Inversion)"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "Explanation"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "Subthreshold Slope (S)"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "4.5 Hot Carrier Effects (HCE)"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "Physical Mechanism"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "4.6 Gate-Induced Drain Leakage (GIDL)"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "Explanation"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "4.7 Body Bias (Body Effect / Short Channel Variant)"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "Impact"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "4.8 Electromigration"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "Key Points"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "4.9 CMOS Latch-Up"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  },
+  {
+    "type": "h3",
+    "text": "Latch-Up Mechanism"
+  },
+  {
+    "type": "h3",
+    "text": "Prevention Techniques"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Conclusion"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type&nbsp;device because it is normally OFF&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage."
+  }
+]

@@ -12,15 +12,10 @@ export const modulesData = {
       "Introduction to Semiconductor Devices",
       "PN Junction Diode Basics",
       "Logic Voltage Levels",
-      "Basic Measurement Units used in VLSI"
-    ],
-    "iframes": [
-      {
-        "heading": "Module 1 – Study Material (Read Only)",
-        "url": "https://docs.google.com/document/d/1D-38RuKU8oXLWb1SjRB1xLfxDOKqUklOhQAmi2BR-QA/preview"
-      }
-    ],
-    "isLocked": false
+      ],
+    "isLocked": false,
+    "hasNativeContent": true,
+    "keywords": ["basic electronics", "voltage current resistance", "ohms law", "pn junction diode", "semiconductor basics", "vlsi fundamentals for beginners"]
   },
   "2": {
     "id": 2,
@@ -44,7 +39,9 @@ export const modulesData = {
         "url": "https://docs.google.com/document/d/1QkNG2zxXULEUbQTaCw-Ifji7R2-QqihU9yIGxzsRWvM/preview"
       }
     ],
-    "isLocked": false
+    "isLocked": false,
+    "hasNativeContent": true,
+    "keywords": ["mosfet theory", "cmos inverter", "threshold voltage", "short channel effects", "nmos pmos operation", "cmos power consumption"]
   },
   "3": {
     "id": 3,
@@ -72,7 +69,8 @@ export const modulesData = {
         "url": "https://docs.google.com/document/d/10OODklWTiUBzON3gBtuxBUtCUnCMjDlO/preview"
       }
     ],
-    "isLocked": false
+    "isLocked": false,
+    "keywords": ["digital electronics", "logic gates", "boolean algebra", "flip flops", "sequential circuits", "combinational logic"]
   },
   "4": {
     "id": 4,
@@ -100,7 +98,9 @@ export const modulesData = {
         "url": "https://docs.google.com/document/d/1asOc8j_GptL5Wfwfom2MAUbR8Yb67_fujDP5V75HCfI/preview"
       }
     ],
-    "isLocked": false
+    "isLocked": false,
+    "hasNativeContent": true,
+    "keywords": ["linux for vlsi", "tcl scripting", "eda tool scripting", "shell scripting basics", "vim editor commands", "linux commands for asic design"]
   },
   "5": {
     "id": 5,
@@ -124,7 +124,9 @@ export const modulesData = {
         "url": "https://docs.google.com/document/d/1HL-1-dG3JccXsZictNpt675943ETzF18Rujlx3AQ8iQ/preview"
       }
     ],
-    "isLocked": false
+    "isLocked": false,
+    "hasNativeContent": true,
+    "keywords": ["verilog hdl", "rtl coding", "fsm design", "blocking vs non-blocking", "verilog testbench", "hardware description language"]
   },
   "6": {
     "id": 6,
@@ -156,7 +158,9 @@ export const modulesData = {
         "url": "https://docs.google.com/document/d/1qqLwJYePpj9xibZBENWoK4Vhh_M1PvTSGVgZlXNNk6c/preview"
       }
     ],
-    "isLocked": false
+    "isLocked": false,
+    "hasNativeContent": true,
+    "keywords": ["logic synthesis", "design compiler", "sdc constraints", "technology mapping", "rtl to gates", "timing optimization"]
   },
   "7": {
     "id": 7,
@@ -181,7 +185,9 @@ export const modulesData = {
         "url": "https://docs.google.com/document/d/1YC2-JEy0o3nrec5lM3KD_F3AO-uYCIAb9KGE727j0gw/preview"
       }
     ],
-    "isLocked": false
+    "isLocked": false,
+    "hasNativeContent": true,
+    "keywords": ["dft", "design for testability", "scan chain", "atpg", "stuck-at fault", "jtag boundary scan"]
   },
   "8": {
     "id": 8,
@@ -207,7 +213,9 @@ export const modulesData = {
         "url": "https://docs.google.com/document/d/1xKx0CG2Q0kDR_NsSH5GbFw8zt0RcO0FxfYlPYwo-Rdc/preview"
       }
     ],
-    "isLocked": false
+    "isLocked": false,
+    "hasNativeContent": true,
+    "keywords": ["physical synthesis", "wire load models", "congestion awareness", "timing driven placement", "buffer insertion", "logic optimization"]
   },
   "9": {
     "id": 9,
@@ -494,8 +502,9 @@ export const modulesData = {
       "File Permissions, Process Commands & Environment Variables Questions",
       "Shell Scripting Basics Interview Questions"
     ],
-    "iframes": [],
-    "isLocked": true
+    "description": "Learn Essential Linux and Tcl Scripting for VLSI Design Automation.",
+    "hasNativeContent": true,
+    "isPremium": true
   },
   "20": {
     "id": 20,
@@ -589,51 +598,300 @@ export const modulesData = {
   },
   "25": {
     "id": 25,
-    "title": "Complete PNR Exicution In ICC2,Innovus,FC",
+    "title": "Complete PNR Exicution In ICC2",
     "topics": [
-      "Step by step PNR exicution in ICC2",
-      "Step by step PNR exicution in Innovus",
-      "Step by step PNR exicution in FC"
+      "Step by step PNR exicution in ICC2"
     ],
     "iframes": [],
     "isLocked": true
   },
   "26": {
     "id": 26,
-    "title": "All Synopsis and Cadence user guides and study materials",
+    "title": "Complete PNR Exicution In Innovus",
     "topics": [
-      "Timing Analysis User Guide",
-      "Tempus User Guide",
-      "Syn2PNR Flow Guide",
-      "ICC Student Guide",
-      "Star RC User Guide",
-      "Static Timing Analysis (STA) Notes",
-      "STA Book (Handwritten Notes)",
-      "Viva Questions on Synthesis",
-      "PrimeTime Student Guide (2018 Version)",
-      "PrimeTime Crosstalk Analysis Guide",
-      "PrimeTime Tool User Guide",
-      "PNR Notes & Best Practices",
-      "PNR Debug & Fixes Guide",
-      "Block Implementation Lab Guide",
-      "Khaleel PNR Lab Practice Guide",
-      "Complete Physical Design Flow Documentation",
-      "Innovus TCL Reference Guide",
-      "ICC2 Tool User Guide",
-      "Genus Synthesis Tool User Guide",
-      "Fusion Compiler User Guide",
-      "Formality User Guide",
-      "Digital Logic & Design Interview Preparation",
-      "Design Compiler (DC) Tool User Guide",
-      "DB Get Useful Commands Reference",
-      "ICC2 Flow Implementation Guide",
-      "Complete Synthesis Flow Documentation",
-      "Block-Level Implementation Workshop Guide",
-      "Basic GVIM Commands for Faster Workflow",
-      "Application Options & Attributes Reference",
+      "Step by step PNR exicution in Innovus"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "27": {
+    "id": 27,
+    "title": "Complete PNR Exicution In FC",
+    "topics": [
+      "Step by step PNR exicution in FC"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "28": {
+    "id": 28,
+    "title": "Timing Analysis User Guide",
+    "topics": [
+      "Timing Analysis User Guide"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "29": {
+    "id": 29,
+    "title": "Tempus User Guide",
+    "topics": [
+      "Tempus User Guide"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "30": {
+    "id": 30,
+    "title": "Syn2PNR Flow Guide",
+    "topics": [
+      "Syn2PNR Flow Guide"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "31": {
+    "id": 31,
+    "title": "ICC Student Guide",
+    "topics": [
+      "ICC Student Guide"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "32": {
+    "id": 32,
+    "title": "Star RC User Guide",
+    "topics": [
+      "Star RC User Guide"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "33": {
+    "id": 33,
+    "title": "Voltus IC Power Integrity Solution User Guide",
+    "topics": [
+      "Voltus IC Power Integrity Solution User Guide"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "34": {
+    "id": 34,
+    "title": "All VLSI Questions and Answers",
+    "topics": [
+      "All VLSI Questions and Answers"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "35": {
+    "id": 35,
+    "title": "Viva Questions on Synthesis",
+    "topics": [
+      "Viva Questions on Synthesis"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "36": {
+    "id": 36,
+    "title": "PrimeTime Student Guide (2018 Version)",
+    "topics": [
+      "PrimeTime Student Guide (2018 Version)"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "37": {
+    "id": 37,
+    "title": "PrimeTime Crosstalk Analysis Guide",
+    "topics": [
+      "PrimeTime Crosstalk Analysis Guide"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "38": {
+    "id": 38,
+    "title": "PrimeTime Tool User Guide",
+    "topics": [
+      "PrimeTime Tool User Guide"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "39": {
+    "id": 39,
+    "title": "PNR Notes & Best Practices",
+    "topics": [
+      "PNR Notes & Best Practices"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "40": {
+    "id": 40,
+    "title": "PNR Debug & Fixes Guide",
+    "topics": [
+      "PNR Debug & Fixes Guide"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "41": {
+    "id": 41,
+    "title": "Block Implementation Lab Guide",
+    "topics": [
+      "Block Implementation Lab Guide"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "42": {
+    "id": 42,
+    "title": "Khaleel PNR Lab Practice Guide",
+    "topics": [
+      "Khaleel PNR Lab Practice Guide"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "43": {
+    "id": 43,
+    "title": "Complete Physical Design Flow Documentation",
+    "topics": [
+      "Complete Physical Design Flow Documentation"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "44": {
+    "id": 44,
+    "title": "Innovus TCR Reference Guide",
+    "topics": [
+      "Innovus TCR Reference Guide"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "45": {
+    "id": 45,
+    "title": "ICC2 Tool User Guide",
+    "topics": [
+      "ICC2 Tool User Guide"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "46": {
+    "id": 46,
+    "title": "Genus Synthesis Tool User Guide",
+    "topics": [
+      "Genus Synthesis Tool User Guide"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "47": {
+    "id": 47,
+    "title": "Fusion Compiler User Guide",
+    "topics": [
+      "Fusion Compiler User Guide"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "48": {
+    "id": 48,
+    "title": "Formality User Guide",
+    "topics": [
+      "Formality User Guide"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "49": {
+    "id": 49,
+    "title": "Digital Logic & Design Interview Preparation",
+    "topics": [
+      "Digital Logic & Design Interview Preparation"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "50": {
+    "id": 50,
+    "title": "Design Compiler (DC) Tool User Guide",
+    "topics": [
+      "Design Compiler (DC) Tool User Guide"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "51": {
+    "id": 51,
+    "title": "DB Get Useful Commands Reference",
+    "topics": [
+      "DB Get Useful Commands Reference"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "52": {
+    "id": 52,
+    "title": "ICC2 Flow Implementation Guide",
+    "topics": [
+      "ICC2 Flow Implementation Guide"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "53": {
+    "id": 53,
+    "title": "Complete Synthesis Flow Documentation",
+    "topics": [
+      "Complete Synthesis Flow Documentation"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "54": {
+    "id": 54,
+    "title": "Block-Level Implementation Workshop Guide",
+    "topics": [
+      "Block-Level Implementation Workshop Guide"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "55": {
+    "id": 55,
+    "title": "Basic GVIM Commands for Faster Workflow",
+    "topics": [
+      "Basic GVIM Commands for Faster Workflow"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "56": {
+    "id": 56,
+    "title": "Application Options & Attributes Reference",
+    "topics": [
+      "Application Options & Attributes Reference"
+    ],
+    "iframes": [],
+    "isLocked": true
+  },
+  "57": {
+    "id": 57,
+    "title": "Innovus User Guide (Full Version)",
+    "topics": [
       "Innovus User Guide (Full Version)"
     ],
     "iframes": [],
     "isLocked": true
   }
 };
+

@@ -1,0 +1,3552 @@
+[
+  {
+    "type": "img"
+  },
+  {
+    "type": "p",
+    "text": "MOSFET",
+    "className": "c26",
+    "html": "<span class=\"c34 c38\">MOSFET</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image56.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 624.00px; height: 416.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "h1",
+    "text": "Enhancement NMOSFET (EN-N-MOSFET): Construction and Operation",
+    "className": "c23",
+    "id": "h.k55wj52v1w6f",
+    "html": "<span class=\"c7 c19\">Enhancement NMOSFET (EN-N-MOSFET): Construction and Operation</span>"
+  },
+  {
+    "type": "h2",
+    "text": "Introduction",
+    "className": "c5",
+    "id": "h.ddau6zmbmp8f",
+    "html": "<span class=\"c14 c7\">Introduction</span>"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of Metal Oxide Semiconductor Field Effect Transistors, where the flow of current between the source and drain is controlled by the electric field produced by the gate voltage. The EN-MOSFET is called an enhancement type device because it is normally OFF and conduction takes place only when the gate voltage exceeds a certain minimum value known as the threshold voltage.",
+    "className": "c4",
+    "html": "<span>The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of </span><span class=\"c7\">Metal Oxide Semiconductor Field Effect Transistors</span><span>, where the flow of current between the source and drain is controlled by the </span><span class=\"c7\">electric field produced by the gate voltage</span><span>. The EN-MOSFET is called an </span><span class=\"c36\">enhancement type</span><span>&nbsp;device because it is </span><span class=\"c7\">normally OFF</span><span>&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the </span><span class=\"c7\">threshold voltage</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "p",
+    "text": "Because of its high input impedance, low power consumption, and excellent switching characteristics, EN-MOSFETs are extensively used in CMOS technology, digital logic circuits, microprocessors, and VLSI systems.",
+    "className": "c4",
+    "html": "<span>Because of its </span><span class=\"c7\">high input impedance, low power consumption, and excellent switching characteristics</span><span>, EN-MOSFETs are extensively used in </span><span class=\"c7\">CMOS technology, digital logic circuits, microprocessors, and VLSI systems</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Construction of Enhancement NMOSFET",
+    "className": "c5",
+    "id": "h.nrx6lpbx651b",
+    "html": "<span class=\"c14 c7\">Construction of Enhancement NMOSFET</span>"
+  },
+  {
+    "type": "p",
+    "text": "An Enhancement NMOSFET is fabricated on a p-type semiconductor substrate. Two heavily doped n⁺ regions are diffused into the substrate, which act as the source and drain terminals. The region between these two n⁺ diffusions is where the channel will be formed during operation.",
+    "className": "c4",
+    "html": "<span>An Enhancement NMOSFET is fabricated on a </span><span class=\"c7\">p-type semiconductor substrate</span><span>. Two heavily doped </span><span class=\"c7\">n⁺ regions</span><span>&nbsp;are diffused into the substrate, which act as the </span><span class=\"c7\">source</span><span>&nbsp;and </span><span class=\"c7\">drain</span><span class=\"c2\">&nbsp;terminals. The region between these two n⁺ diffusions is where the channel will be formed during operation.</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image59.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 624.00px; height: 298.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "p",
+    "text": "A thin insulating layer of silicon dioxide (SiO₂) is grown over the substrate surface. On top of this oxide layer, a metal gate is deposited. The silicon dioxide layer plays a crucial role by electrically isolating the gate from the substrate, which results in very high input impedance.",
+    "className": "c11",
+    "html": "<span>A thin insulating layer of </span><span class=\"c7\">silicon dioxide (SiO₂)</span><span>&nbsp;is grown over the substrate surface. On top of this oxide layer, a </span><span class=\"c7\">metal gate</span><span>&nbsp;is deposited. The silicon dioxide layer plays a crucial role by electrically isolating the gate from the substrate, which results in </span><span class=\"c7\">very high input impedance</span><span>.<br><br></span><span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 298.67px;\"><img alt=\"\" src=\"images/image59.png\" style=\"width: 624.00px; height: 298.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\" title=\"\"></span>"
+  },
+  {
+    "type": "p",
+    "text": "The MOSFET is a four-terminal device consisting of:",
+    "className": "c4",
+    "html": "<span>The MOSFET is a </span><span class=\"c7\">four-terminal device</span><span class=\"c2\">&nbsp;consisting of:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Source (S)Drain (D)Gate (G)Body or substrate (B)",
+    "className": "c8 lst-kix_2hdlbzvg7vc7-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Source (S)<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Drain (D)<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Gate (G)<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Body or substrate (B)<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "In most practical circuits, the body terminal is connected to the source to eliminate body effect and simplify operation.",
+    "className": "c4",
+    "html": "<span>In most practical circuits, the </span><span class=\"c7\">body terminal is connected to the source</span><span class=\"c2\">&nbsp;to eliminate body effect and simplify operation.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Basic Working Principle",
+    "className": "c5",
+    "id": "h.nz3e5knl08w3",
+    "html": "<span class=\"c14 c7\">Basic Working Principle</span>"
+  },
+  {
+    "type": "p",
+    "text": "When a positive voltage is applied to the gate, it produces an electric field across the oxide layer. This electric field repels holes from the surface of the p-type substrate and attracts electrons toward the surface. Initially, no channel exists, but as the gate voltage increases, electrons accumulate near the surface and form a thin conducting layer called the n-channel.",
+    "className": "c4",
+    "html": "<span>When a </span><span class=\"c7\">positive voltage is applied to the gate</span><span>, it produces an electric field across the oxide layer. This electric field </span><span class=\"c7\">repels holes</span><span>&nbsp;from the surface of the p-type substrate and attracts </span><span class=\"c7\">electrons</span><span>&nbsp;toward the surface. Initially, no channel exists, but as the gate voltage increases, electrons accumulate near the surface and form a thin conducting layer called the </span><span class=\"c7\">n-channel</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "p",
+    "text": "The gate structure behaves like a capacitor, with:",
+    "className": "c4",
+    "html": "<span>The gate structure behaves like a </span><span class=\"c7\">capacitor</span><span class=\"c2\">, with:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Gate metal as one plateChannel electrons as the other plateSilicon dioxide as the dielectric",
+    "className": "c8 lst-kix_sna7srgzctml-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Gate metal as one plate<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Channel electrons as the other plate<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Silicon dioxide as the dielectric<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "As the gate voltage increases, the conductivity of the channel increases, reducing channel resistance and allowing more current to flow from source to drain when a drain voltage is applied.",
+    "className": "c4",
+    "html": "<span>As the gate voltage increases, the </span><span class=\"c7\">conductivity of the channel increases</span><span class=\"c2\">, reducing channel resistance and allowing more current to flow from source to drain when a drain voltage is applied.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Operation of Enhancement NMOSFET",
+    "className": "c5",
+    "id": "h.tu0k708unuk5",
+    "html": "<span class=\"c14 c7\">Operation of Enhancement NMOSFET</span>"
+  },
+  {
+    "type": "p",
+    "text": "The operation of EN-MOSFET is explained by dividing it into three regions of operation, based on the values of gate-to-source voltage (VGS) and drain-to-source voltage (VDS).",
+    "className": "c4",
+    "html": "<span>The operation of EN-MOSFET is explained by dividing it into </span><span class=\"c7\">three regions of operation</span><span>, based on the values of </span><span class=\"c7\">gate-to-source voltage (VGS)</span><span>&nbsp;and </span><span class=\"c7\">drain-to-source voltage (VDS)</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "h1",
+    "text": "1.2 Operation of Enhancement NMOSFET (EN-MOSFET)",
+    "className": "c23",
+    "id": "h.uhgcpjqk4qhu",
+    "html": "<span class=\"c19 c7\">1.2 Operation of Enhancement NMOSFET (EN-MOSFET)</span>"
+  },
+  {
+    "type": "p",
+    "text": "After understanding the construction and basic working principle of the Enhancement NMOSFET, let us now study its operation in detail. The operation of EN-MOSFET is explained by dividing it into different regions of operation, depending on the values of gate-to-source voltage (VGS) and drain-to-source voltage (VDS).",
+    "className": "c4",
+    "html": "<span>After understanding the </span><span class=\"c7\">construction and basic working principle</span><span>&nbsp;of the Enhancement NMOSFET, let us now study its </span><span class=\"c7\">operation in detail</span><span>.<br> The operation of EN-MOSFET is explained by dividing it into </span><span class=\"c7\">different regions of operation</span><span>, depending on the values of </span><span class=\"c7\">gate-to-source voltage (VGS)</span><span>&nbsp;and </span><span class=\"c7\">drain-to-source voltage (VDS)</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "1. Cut-Off Region (MOSFET OFF Condition)",
+    "className": "c5",
+    "id": "h.3sr8hloexfz4",
+    "html": "<span class=\"c14 c7\">1. Cut-Off Region (MOSFET OFF Condition)</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Case (i): VGS = 0, VDS = 0",
+    "className": "c13",
+    "id": "h.3rl5rd782pij",
+    "html": "<span class=\"c0\">Case (i): VGS = 0, VDS = 0</span>"
+  },
+  {
+    "type": "p",
+    "text": "In this condition:",
+    "className": "c4",
+    "html": "<span class=\"c2\">In this condition:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "No voltage is applied to the gate.No voltage is applied between drain and source.",
+    "className": "c8 lst-kix_b96chattt0hm-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">No voltage is applied to the gate.<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">No voltage is applied between drain and source.<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "Physical Explanation",
+    "className": "c13",
+    "id": "h.tjopg9rkpv4u",
+    "html": "<span class=\"c0\">Physical Explanation</span>"
+  },
+  {
+    "type": "ul",
+    "text": "The source-to-bulk and drain-to-bulk junctions behave like reverse-biased PN junctions, connected back-to-back.These reverse-biased junctions offer a very high resistance, typically of the order of 10¹² Ω.Since there is no channel formed between source and drain, no current flows.",
+    "className": "c8 lst-kix_ny2ing22su13-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>The </span><span class=\"c7\">source-to-bulk</span><span>&nbsp;and </span><span class=\"c7\">drain-to-bulk</span><span>&nbsp;junctions behave like </span><span class=\"c7\">reverse-biased PN junctions</span><span class=\"c2\">, connected back-to-back.<br></span></li><li class=\"c1 li-bullet-0\"><span>These reverse-biased junctions offer a </span><span class=\"c7\">very high resistance</span><span>, typically of the order of </span><span class=\"c7\">10¹² Ω</span><span class=\"c2\">.<br></span></li><li class=\"c1 li-bullet-0\"><span>Since there is </span><span class=\"c7\">no channel formed</span><span>&nbsp;between source and drain, </span><span class=\"c7\">no current flows</span><span class=\"c2\">.<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Therefore:",
+    "className": "c4",
+    "html": "<span class=\"c2\">&nbsp;Therefore:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Drain current ID = 0MOSFET behaves like an open switch",
+    "className": "c8 lst-kix_mny7l0m1n3hi-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c9 c7\">Drain current ID = 0<br></span></li><li class=\"c1 li-bullet-0\"><span>MOSFET behaves like an </span><span class=\"c9 c7\">open switch<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "images/image69.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 509.00px; height: 266.75px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "h3",
+    "text": "Case (ii): 0 < VGS < VT, VDS = 0",
+    "className": "c13",
+    "id": "h.gi2ds8ukk4y1",
+    "html": "<span class=\"c0\">Case (ii): 0 &lt; VGS &lt; VT, VDS = 0</span>"
+  },
+  {
+    "type": "p",
+    "text": "Now a small positive voltage is applied at the gate, but it is less than the threshold voltage (VT).",
+    "className": "c4",
+    "html": "<span>Now a </span><span class=\"c7\">small positive voltage</span><span>&nbsp;is applied at the gate, but it is </span><span class=\"c7\">less than the threshold voltage (VT)</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Step-by-Step Explanation",
+    "className": "c13",
+    "id": "h.th8p88xn9vpr",
+    "html": "<span class=\"c0\">Step-by-Step Explanation</span>"
+  },
+  {
+    "type": "ol",
+    "text": "The positive gate voltage induces positive charge on the gate metal.This positive charge creates an electric field across the oxide layer.The electric field repels holes (majority carriers) from the surface of the p-type substrate.As a result, a depletion region is formed under the gate.",
+    "className": "c8 lst-kix_kldncfn989gf-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>The positive gate voltage induces </span><span class=\"c7\">positive charge on the gate metal</span><span class=\"c2\">.<br></span></li><li class=\"c1 li-bullet-0\"><span>This positive charge creates an </span><span class=\"c7\">electric field across the oxide layer</span><span class=\"c2\">.<br></span></li><li class=\"c1 li-bullet-0\"><span>The electric field </span><span class=\"c7\">repels holes</span><span class=\"c2\">&nbsp;(majority carriers) from the surface of the p-type substrate.<br></span></li><li class=\"c1 li-bullet-0\"><span>As a result, a </span><span class=\"c7\">depletion region</span><span class=\"c2\">&nbsp;is formed under the gate.<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "text": "This region contains only immobile ions.",
+    "className": "c8 lst-kix_kldncfn989gf-1 start",
+    "html": "<li class=\"c4 c15 li-bullet-0\"><span>This region contains </span><span class=\"c7\">only immobile ions</span><span class=\"c2\">.<br></span></li>"
+  },
+  {
+    "type": "ol",
+    "text": "As VGS increases, the depth of the depletion region increases.With further increase in VGS, electrons are pulled from the n⁺ source and drain regions toward the surface.Initially, a weak inversion layer is formed.With sufficient VGS, this weak inversion turns into strong inversion.",
+    "className": "c8 lst-kix_kldncfn989gf-0",
+    "html": "<li class=\"c1 li-bullet-0\"><span>As </span><span class=\"c7\">VGS increases</span><span>, the </span><span class=\"c7\">depth of the depletion region increases</span><span class=\"c2\">.<br></span></li><li class=\"c1 li-bullet-0\"><span>With further increase in VGS, </span><span class=\"c7\">electrons are pulled from the n⁺ source and drain regions</span><span class=\"c2\">&nbsp;toward the surface.<br></span></li><li class=\"c1 li-bullet-0\"><span>Initially, a </span><span class=\"c7\">weak inversion layer</span><span class=\"c2\">&nbsp;is formed.<br></span></li><li class=\"c1 li-bullet-0\"><span>With sufficient VGS, this weak inversion turns into </span><span class=\"c7\">strong inversion</span><span class=\"c2\">.<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Strong Inversion",
+    "className": "c13",
+    "id": "h.7g8wi8qrej9p",
+    "html": "<span class=\"c0\">Strong Inversion</span>"
+  },
+  {
+    "type": "p",
+    "text": "Strong inversion occurs when:",
+    "className": "c4",
+    "html": "<span class=\"c2\">Strong inversion occurs when:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "The concentration of electrons at the surface becomes equal to the concentration of holes in the p-type substrate.",
+    "className": "c8 lst-kix_9664s7bqyt36-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>The </span><span class=\"c7\">concentration of electrons at the surface</span><span>&nbsp;becomes </span><span class=\"c7\">equal to the concentration of holes</span><span class=\"c2\">&nbsp;in the p-type substrate.<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "At this point, a conducting n-channel is formed between the source and drain.",
+    "className": "c4",
+    "html": "<span>At this point, a </span><span class=\"c7\">conducting n-channel</span><span class=\"c2\">&nbsp;is formed between the source and drain.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Threshold Voltage (VT)",
+    "className": "c13",
+    "id": "h.t3mewpwctev",
+    "html": "<span class=\"c0\">Threshold Voltage (VT)</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Threshold voltage (VT) is the minimum gate-to-source voltage (VGS) required to create strong inversion and hence a conducting channel.The electric field due to VGS acts in the vertical direction, perpendicular to the substrate.",
+    "className": "c8 lst-kix_ah1qcbctafqo-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c7\">Threshold voltage (VT)</span><span>&nbsp;is the </span><span class=\"c7\">minimum gate-to-source voltage (VGS)</span><span>&nbsp;required to create </span><span class=\"c7\">strong inversion</span><span class=\"c2\">&nbsp;and hence a conducting channel.<br></span></li><li class=\"c1 li-bullet-0\"><span>The electric field due to VGS acts in the </span><span class=\"c7\">vertical direction</span><span class=\"c2\">, perpendicular to the substrate.<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Before VT:",
+    "className": "c4",
+    "html": "<span class=\"c2\">Before VT:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Channel does not existID ≈ 0",
+    "className": "c8 lst-kix_md3w4wm7e889-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Channel does not exist<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">ID ≈ 0<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "2. Triode (Linear) Region",
+    "className": "c5",
+    "id": "h.fi0z16wysrm7",
+    "html": "<span class=\"c14 c7\">2. Triode (Linear) Region</span>"
+  },
+  {
+    "type": "p",
+    "text": "Once VGS exceeds VT, the MOSFET enters the conduction mode.",
+    "className": "c4",
+    "html": "<span>Once </span><span class=\"c7\">VGS exceeds VT</span><span>, the MOSFET enters the </span><span class=\"c7\">conduction mode</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Condition (iii): VGS > VT, VDS > 0 and VDS < (VGS − VT)",
+    "className": "c13",
+    "id": "h.g9wl695002o2",
+    "html": "<span class=\"c0\">Condition (iii): VGS &gt; VT, VDS &gt; 0 and VDS &lt; (VGS − VT)</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Physical Explanation",
+    "className": "c13",
+    "id": "h.nm0ri5tk33hh",
+    "html": "<span class=\"c0\">Physical Explanation</span>"
+  },
+  {
+    "type": "ol",
+    "text": "A uniform n-channel is formed between source and drain.Applying VDS creates a horizontal electric field from drain to source.Due to this field, electrons move from source to drain, producing drain current ID.If VGS is increased much more than VT (VGS >> VT):",
+    "className": "c8 lst-kix_e7dcblj55vsr-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>A </span><span class=\"c7\">uniform n-channel</span><span class=\"c2\">&nbsp;is formed between source and drain.<br></span></li><li class=\"c1 li-bullet-0\"><span>Applying VDS creates a </span><span class=\"c7\">horizontal electric field</span><span>&nbsp;from </span><span class=\"c7\">drain to source</span><span class=\"c2\">.<br></span></li><li class=\"c1 li-bullet-0\"><span>Due to this field, electrons move from source to drain, producing </span><span class=\"c7\">drain current ID</span><span class=\"c2\">.<br></span></li><li class=\"c1 li-bullet-0\"><span>If </span><span class=\"c7\">VGS is increased much more than VT (VGS &gt;&gt; VT)</span><span class=\"c2\">:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "text": "The channel becomes deeper and more conductiveThis additional voltage is called overdrive voltage Overdrive Voltage=VGS−VT\\text{Overdrive Voltage} = VGS - VTOverdrive Voltage=VGS−VT",
+    "className": "c8 lst-kix_e7dcblj55vsr-1 start",
+    "html": "<li class=\"c4 c15 li-bullet-0\"><span>The channel becomes </span><span class=\"c9 c7\">deeper and more conductive<br></span></li><li class=\"c4 c15 li-bullet-0\"><span>This additional voltage is called </span><span class=\"c7\">overdrive voltage<br></span><span class=\"c2\">&nbsp;Overdrive Voltage=VGS−VT\\text{Overdrive Voltage} = VGS - VTOverdrive Voltage=VGS−VT</span></li>"
+  },
+  {
+    "type": "ol",
+    "text": "For a fixed VGS, as VDS increases slightly:",
+    "className": "c8 lst-kix_e7dcblj55vsr-0",
+    "html": "<li class=\"c1 li-bullet-0\"><span>For a </span><span class=\"c7\">fixed VGS</span><span class=\"c2\">, as VDS increases slightly:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "text": "ID increases linearlyThe channel behaves like a resistor",
+    "className": "c8 lst-kix_e7dcblj55vsr-1 start",
+    "html": "<li class=\"c4 c15 li-bullet-0\"><span>ID increases </span><span class=\"c9 c7\">linearly<br></span></li><li class=\"c4 c15 li-bullet-0\"><span>The channel behaves like a </span><span class=\"c9 c7\">resistor<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Hence, this region is also called the linear region or ohmic region.",
+    "className": "c4",
+    "html": "<span>&nbsp;Hence, this region is also called the </span><span class=\"c7\">linear region</span><span>&nbsp;or </span><span class=\"c7\">ohmic region</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image44.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 624.00px; height: 326.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Condition (iv): VGS > VT, VDS > 0 but still VDS < (VGS − VT)",
+    "className": "c13",
+    "id": "h.dgc7xwcewz0g",
+    "html": "<span class=\"c0\">Condition (iv): VGS &gt; VT, VDS &gt; 0 but still VDS &lt; (VGS − VT)</span>"
+  },
+  {
+    "type": "p",
+    "text": "As VDS increases further:",
+    "className": "c4",
+    "html": "<span class=\"c2\">As VDS increases further:</span>"
+  },
+  {
+    "type": "ol",
+    "text": "The gate-to-channel potential is no longer uniform.The channel becomes:",
+    "className": "c8 lst-kix_ibg78th70ao2-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>The </span><span class=\"c7\">gate-to-channel potential is no longer uniform</span><span class=\"c2\">.<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">The channel becomes:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "text": "Deeper near the sourceShallower near the drain",
+    "className": "c8 lst-kix_ibg78th70ao2-1 start",
+    "html": "<li class=\"c4 c15 li-bullet-0\"><span class=\"c9 c7\">Deeper near the source<br></span></li><li class=\"c4 c15 li-bullet-0\"><span class=\"c9 c7\">Shallower near the drain<br></span></li>"
+  },
+  {
+    "type": "ol",
+    "text": "This happens because the effective gate voltage near the drain is reduced due to higher drain potential.",
+    "className": "c8 lst-kix_ibg78th70ao2-0",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">This happens because the effective gate voltage near the drain is reduced due to higher drain potential.<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Still:",
+    "className": "c4",
+    "html": "<span class=\"c2\">Still:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Channel exists throughoutCurrent continues to increase",
+    "className": "c8 lst-kix_qb9m6cmj17v5-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Channel exists throughout<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Current continues to increase<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Pinch-Off Condition",
+    "className": "c13",
+    "id": "h.q7er5lz5fcqx",
+    "html": "<span class=\"c0\">Pinch-Off Condition</span>"
+  },
+  {
+    "type": "p",
+    "text": "When:",
+    "className": "c4",
+    "html": "<span class=\"c2\">When:</span>"
+  },
+  {
+    "type": "p",
+    "text": "VDS=VGS−VTVDS = VGS - VTVDS=VGS−VT",
+    "className": "c10",
+    "html": "<span class=\"c2\">VDS=VGS−VTVDS = VGS - VTVDS=VGS−VT</span>"
+  },
+  {
+    "type": "ul",
+    "text": "The channel gets pinched off at the drain endThis value of VDS is called VDS(sat)",
+    "className": "c8 lst-kix_nvmstxna267-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>The channel gets </span><span class=\"c9 c7\">pinched off at the drain end<br></span></li><li class=\"c1 li-bullet-0\"><span>This value of VDS is called </span><span class=\"c9 c7\">VDS(sat)<br></span></li>"
+  },
+  {
+    "type": "img",
+    "src": "images/image11.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 441.50px; height: 173.07px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "3. Saturation Region",
+    "className": "c5",
+    "id": "h.lnf99o0e858",
+    "html": "<span class=\"c14 c7\">3. Saturation Region</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Condition (v): VGS > VT and VDS ≥ (VGS − VT)",
+    "className": "c13",
+    "id": "h.iu1gx4gs6z2s",
+    "html": "<span class=\"c0\">Condition (v): VGS &gt; VT and VDS ≥ (VGS − VT)</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "images/image27.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 382.50px; height: 252.10px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "h3",
+    "text": "Detailed Explanation",
+    "className": "c13",
+    "id": "h.6bt711ve10m5",
+    "html": "<span class=\"c0\">Detailed Explanation</span>"
+  },
+  {
+    "type": "ol",
+    "text": "When VDS exceeds VDS(sat):",
+    "className": "c8 lst-kix_832slwyzpxvb-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>When </span><span class=\"c7\">VDS exceeds VDS(sat)</span><span class=\"c2\">:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "text": "The channel near the drain end is fully pinched off.",
+    "className": "c8 lst-kix_832slwyzpxvb-1 start",
+    "html": "<li class=\"c4 c15 li-bullet-0\"><span class=\"c2\">The channel near the drain end is fully pinched off.<br></span></li>"
+  },
+  {
+    "type": "ol",
+    "text": "Due to velocity saturation of carriers and the strong electric field at the drain end:",
+    "className": "c8 lst-kix_832slwyzpxvb-0",
+    "html": "<li class=\"c1 li-bullet-0\"><span>Due to </span><span class=\"c7\">velocity saturation of carriers</span><span>&nbsp;and the </span><span class=\"c7\">strong electric field</span><span class=\"c2\">&nbsp;at the drain end:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "text": "Electrons are swept quickly from the channel.",
+    "className": "c8 lst-kix_832slwyzpxvb-1 start",
+    "html": "<li class=\"c4 c15 li-bullet-0\"><span class=\"c2\">Electrons are swept quickly from the channel.<br></span></li>"
+  },
+  {
+    "type": "ol",
+    "text": "Increasing VDS further:",
+    "className": "c8 lst-kix_832slwyzpxvb-0",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Increasing VDS further:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "text": "Enlarges the depletion region at the drainEats into the channel from the drain side",
+    "className": "c8 lst-kix_832slwyzpxvb-1 start",
+    "html": "<li class=\"c4 c15 li-bullet-0\"><span class=\"c2\">Enlarges the depletion region at the drain<br></span></li><li class=\"c4 c15 li-bullet-0\"><span class=\"c2\">Eats into the channel from the drain side<br></span></li>"
+  },
+  {
+    "type": "ol",
+    "text": "The channel depth near the source remains greater than near the drain.",
+    "className": "c8 lst-kix_832slwyzpxvb-0",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">The channel depth near the source remains greater than near the drain.<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Important Result",
+    "className": "c13",
+    "id": "h.i4i4wr7zggfa",
+    "html": "<span class=\"c0\">Important Result</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Drain current ID becomes constantID is independent of VDSID depends only on VGS",
+    "className": "c8 lst-kix_babz2p2krah6-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c9 c7\">Drain current ID becomes constant<br></span></li><li class=\"c1 li-bullet-0\"><span>ID is </span><span class=\"c9 c7\">independent of VDS<br></span></li><li class=\"c1 li-bullet-0\"><span>ID depends </span><span class=\"c9 c7\">only on VGS<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "This is why this region is called the saturation region.",
+    "className": "c4",
+    "html": "<span class=\"c9 c7\">&nbsp;This is why this region is called the saturation region.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "V-l characteristics of N-MOSFET",
+    "className": "c5",
+    "id": "h.cxv4i1xtgcex",
+    "html": "<span class=\"c14 c7\">V-l characteristics of N-MOSFET</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image39.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 309.50px; height: 161.36px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "p",
+    "text": "Transfer characteristics of N-MOSFET",
+    "className": "c10",
+    "html": "<span class=\"c14 c7\">Transfer characteristics of N-MOSFET</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image40.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 339.00px; height: 280.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "h2",
+    "text": "Summary of N-MOSFET Operation",
+    "className": "c5",
+    "id": "h.76kbtlqsmjhg",
+    "html": "<span class=\"c7 c30\">Summary of N-MOSFET Operation</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image9.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 624.00px; height: 416.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "h1",
+    "text": "Enhancement P MOSFET (EN-P-MOSFET):",
+    "className": "c23",
+    "id": "h.5jpsm3lae5m7",
+    "html": "<span class=\"c7 c34\">Enhancement P MOSFET (EN-P-MOSFET): </span>"
+  },
+  {
+    "type": "h1",
+    "text": "Construction and Operation (Corrected & Verified)",
+    "className": "c23",
+    "id": "h.thhixm9hitr8",
+    "html": "<span class=\"c14 c7\">Construction and Operation (Corrected &amp; Verified)</span>"
+  },
+  {
+    "type": "p",
+    "text": "Important note before reading For PMOSFET, voltages are negative with respect to the source. To avoid confusion, absolute-value (magnitude) form is used in equations, which is the standard academic practice.",
+    "className": "c4 c21",
+    "html": "<span>&nbsp;</span><span class=\"c7\">Important note before reading<br></span><span>&nbsp;For PMOSFET, voltages are </span><span class=\"c7\">negative with respect to the source</span><span>.<br> To avoid confusion, </span><span class=\"c7\">absolute-value (magnitude) form</span><span>&nbsp;is used in equations, which is the </span><span class=\"c7\">standard academic practice</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Introduction",
+    "className": "c5",
+    "id": "h.k3pnmxs1vvk9",
+    "html": "<span class=\"c14 c7\">Introduction</span>"
+  },
+  {
+    "type": "p",
+    "text": "The Enhancement PMOSFET (EN-PMOSFET) is a voltage-controlled semiconductor device belonging to the MOSFET family. It is called an enhancement type device because no channel exists at zero gate voltage, and conduction occurs only when the gate voltage is made sufficiently negative relative to the source.",
+    "className": "c4",
+    "html": "<span>The </span><span class=\"c7\">Enhancement PMOSFET (EN-PMOSFET)</span><span>&nbsp;is a voltage-controlled semiconductor device belonging to the </span><span class=\"c7\">MOSFET family</span><span>. It is called an </span><span class=\"c7\">enhancement type device</span><span>&nbsp;because </span><span class=\"c7\">no channel exists at zero gate voltage</span><span>, and conduction occurs only when the </span><span class=\"c7\">gate voltage is made sufficiently negative</span><span class=\"c2\">&nbsp;relative to the source.</span>"
+  },
+  {
+    "type": "p",
+    "text": "PMOSFETs conduct using holes as majority carriers and are extensively used along with NMOSFETs in CMOS technology, enabling low-power and high-density integrated circuits.",
+    "className": "c4",
+    "html": "<span>PMOSFETs conduct using </span><span class=\"c7\">holes as majority carriers</span><span>&nbsp;and are extensively used along with NMOSFETs in </span><span class=\"c7\">CMOS technology</span><span class=\"c2\">, enabling low-power and high-density integrated circuits.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Construction of Enhancement PMOSFET",
+    "className": "c5",
+    "id": "h.rn44t6l1bftc",
+    "html": "<span class=\"c7 c14\">Construction of Enhancement PMOSFET</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Fabricated on an n-type substrateTwo heavily doped p⁺ regions form:",
+    "className": "c8 lst-kix_ewvp5xqd5o9e-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>Fabricated on an </span><span class=\"c9 c7\">n-type substrate<br></span></li><li class=\"c1 li-bullet-0\"><span>Two heavily doped </span><span class=\"c7\">p⁺ regions</span><span class=\"c2\">&nbsp;form:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "text": "SourceDrain",
+    "className": "c8 lst-kix_ewvp5xqd5o9e-1 start",
+    "html": "<li class=\"c4 c15 li-bullet-0\"><span class=\"c9 c7\">Source<br></span></li><li class=\"c4 c15 li-bullet-0\"><span class=\"c9 c7\">Drain<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "text": "A thin SiO₂ layer is grown on the substrateA metal gate is deposited on the oxide",
+    "className": "c8 lst-kix_ewvp5xqd5o9e-0",
+    "html": "<li class=\"c1 li-bullet-0\"><span>A thin </span><span class=\"c7\">SiO₂ layer</span><span class=\"c2\">&nbsp;is grown on the substrate<br></span></li><li class=\"c1 li-bullet-0\"><span>A </span><span class=\"c7\">metal gate</span><span class=\"c2\">&nbsp;is deposited on the oxide<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "The oxide electrically isolates the gate, resulting in very high input impedance.",
+    "className": "c4",
+    "html": "<span>The oxide electrically isolates the gate, resulting in </span><span class=\"c7\">very high input impedance</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "p",
+    "text": "The PMOSFET has four terminals:",
+    "className": "c4",
+    "html": "<span>The PMOSFET has </span><span class=\"c7\">four terminals</span><span class=\"c2\">:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Source (S)Drain (D)Gate (G)Body (B)",
+    "className": "c8 lst-kix_g13ja9i9fikr-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Source (S)<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Drain (D)<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Gate (G)<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Body (B)<br></span></li>"
+  },
+  {
+    "type": "img",
+    "src": "images/image75.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 465.00px; height: 309.37px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "p",
+    "text": "In practice, body is connected to source to avoid body effect.",
+    "className": "c11",
+    "html": "<span>&nbsp;In practice, </span><span class=\"c7\">body is connected to source</span><span>&nbsp;to avoid body effect.<br></span><span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 465.00px; height: 309.37px;\"><img alt=\"\" src=\"images/image75.png\" style=\"width: 465.00px; height: 309.37px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\" title=\"\"></span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Basic Working Principle",
+    "className": "c5",
+    "id": "h.6xbm78hgfcb3",
+    "html": "<span class=\"c14 c7\">Basic Working Principle</span>"
+  },
+  {
+    "type": "p",
+    "text": "When the gate is made negative with respect to the source, an electric field is established across the oxide layer.",
+    "className": "c4",
+    "html": "<span>When the </span><span class=\"c7\">gate is made negative with respect to the source</span><span class=\"c2\">, an electric field is established across the oxide layer.</span>"
+  },
+  {
+    "type": "p",
+    "text": "This electric field:",
+    "className": "c4",
+    "html": "<span class=\"c2\">This electric field:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Repels electrons from the surface of the n-substrateAttracts holes toward the surface",
+    "className": "c8 lst-kix_jw3bg8ehyh9d-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c7\">Repels electrons</span><span class=\"c2\">&nbsp;from the surface of the n-substrate<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c7\">Attracts holes</span><span class=\"c2\">&nbsp;toward the surface<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Initially, no channel exists. As the magnitude of negative gate voltage increases, holes accumulate and form a p-type inversion layer (p-channel) connecting source and drain.",
+    "className": "c4",
+    "html": "<span>Initially, no channel exists. As the magnitude of negative gate voltage increases, holes accumulate and form a </span><span class=\"c7\">p-type inversion layer (p-channel)</span><span class=\"c2\">&nbsp;connecting source and drain.</span>"
+  },
+  {
+    "type": "p",
+    "text": "The gate acts like a capacitor:",
+    "className": "c4",
+    "html": "<span>The gate acts like a </span><span class=\"c7\">capacitor</span><span class=\"c2\">:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Gate metal → one plateChannel holes → second plateSiO₂ → dielectric",
+    "className": "c8 lst-kix_ifuj6svl7896-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Gate metal → one plate<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Channel holes → second plate<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">SiO₂ → dielectric<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Increasing |VGS| increases channel conductivity.",
+    "className": "c4",
+    "html": "<span class=\"c2\">Increasing |VGS| increases channel conductivity.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h1",
+    "text": "Operation of Enhancement PMOSFET",
+    "className": "c23",
+    "id": "h.gnztu8c9o25",
+    "html": "<span class=\"c19 c7\">Operation of Enhancement PMOSFET</span>"
+  },
+  {
+    "type": "p",
+    "text": "The operation is divided into three regions, based on VGS and VDS.",
+    "className": "c4",
+    "html": "<span>The operation is divided into </span><span class=\"c7\">three regions</span><span>, based on </span><span class=\"c7\">VGS and VDS</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "p",
+    "text": "To keep equations correct and simple, we use magnitude form:",
+    "className": "c4 c21",
+    "html": "<span>&nbsp;To keep equations correct and simple, we use </span><span class=\"c7\">magnitude form</span><span class=\"c2\">:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "|VGS| = magnitude of gate-to-source voltage|VDS| = magnitude of drain-to-source voltage|VT| = magnitude of threshold voltage",
+    "className": "c8 lst-kix_hmrb3345tekk-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">|VGS| = magnitude of gate-to-source voltage<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">|VDS| = magnitude of drain-to-source voltage<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">|VT| = magnitude of threshold voltage<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "1. Cut-Off Region (PMOS OFF)",
+    "className": "c5",
+    "id": "h.pa4u8tuvqkva",
+    "html": "<span class=\"c14 c7\">1. Cut-Off Region (PMOS OFF)</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Condition",
+    "className": "c13",
+    "id": "h.yzc88yhuzy0",
+    "html": "<span class=\"c0\">Condition</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image6.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 187.00px; height: 52.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "h3",
+    "text": "Explanation",
+    "className": "c13",
+    "id": "h.vgqajedmjwo1",
+    "html": "<span class=\"c0\">Explanation</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Gate voltage is not sufficiently negativeNo inversion layer is formedSource-to-bulk and drain-to-bulk junctions are reverse biasedEffective resistance ≈ 10¹² Ω",
+    "className": "c8 lst-kix_awee3vfxfr8k-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>Gate voltage is </span><span class=\"c9 c7\">not sufficiently negative<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">No inversion layer is formed<br></span></li><li class=\"c1 li-bullet-0\"><span>Source-to-bulk and drain-to-bulk junctions are </span><span class=\"c9 c7\">reverse biased<br></span></li><li class=\"c1 li-bullet-0\"><span>Effective resistance ≈ </span><span class=\"c9 c7\">10¹² Ω<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Drain current:",
+    "className": "c4",
+    "html": "<span>&nbsp;</span><span class=\"c9 c7\">Drain current:</span>"
+  },
+  {
+    "type": "p",
+    "text": "ID=0I_D = 0ID​=0",
+    "className": "c10",
+    "html": "<span class=\"c2\">ID=0I_D = 0ID​=0</span>"
+  },
+  {
+    "type": "p",
+    "text": "PMOS behaves like an open switch.",
+    "className": "c4",
+    "html": "<span>PMOS behaves like an </span><span class=\"c7\">open switch</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image48.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 445.00px; height: 296.38px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "2. Triode (Linear / Ohmic) Region",
+    "className": "c5",
+    "id": "h.ij7orzmmbrj6",
+    "html": "<span class=\"c14 c7\">2. Triode (Linear / Ohmic) Region</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Condition",
+    "className": "c13",
+    "id": "h.ch82bckmjyx9",
+    "html": "<span class=\"c0\">Condition</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image19.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 461.00px; height: 46.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "h3",
+    "text": "Explanation",
+    "className": "c13",
+    "id": "h.97j5rjskue82",
+    "html": "<span class=\"c0\">Explanation</span>"
+  },
+  {
+    "type": "ul",
+    "text": "A continuous p-channel is formedApplying VDS creates a horizontal electric fieldHoles flow from source to drainChannel exists along the entire length",
+    "className": "c8 lst-kix_d85g2sgh7obi-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>A </span><span class=\"c7\">continuous p-channel</span><span class=\"c2\">&nbsp;is formed<br></span></li><li class=\"c1 li-bullet-0\"><span>Applying VDS creates a </span><span class=\"c9 c7\">horizontal electric field<br></span></li><li class=\"c1 li-bullet-0\"><span>Holes flow from </span><span class=\"c9 c7\">source to drain<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Channel exists along the entire length<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "As |VDS| increases (small values):",
+    "className": "c4",
+    "html": "<span class=\"c2\">As |VDS| increases (small values):</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Drain current increases linearlyDevice behaves like a voltage-controlled resistor",
+    "className": "c8 lst-kix_fntme6119m6c-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>Drain current increases </span><span class=\"c9 c7\">linearly<br></span></li><li class=\"c1 li-bullet-0\"><span>Device behaves like a </span><span class=\"c9 c7\">voltage-controlled resistor<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Drain Current Equation (Triode Region)",
+    "className": "c13",
+    "id": "h.5uhs62k7h3ju",
+    "html": "<span class=\"c0\">Drain Current Equation (Triode Region)</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image13.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 520.00px; height: 72.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "p",
+    "text": "Where:",
+    "className": "c4",
+    "html": "<span class=\"c2\">Where:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "μₚ = hole mobilityCox = oxide capacitance per unit areaW/L = channel width-to-length ratio",
+    "className": "c8 lst-kix_pq8ufdnk9klt-0",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">μₚ = hole mobility<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Cox = oxide capacitance per unit area<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">W/L = channel width-to-length ratio<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Overdrive Voltage",
+    "className": "c13",
+    "id": "h.nosabbu0tyn",
+    "html": "<span class=\"c0\">Overdrive Voltage</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image21.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 225.00px; height: 40.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "p",
+    "text": "This controls channel depth and conductivity.",
+    "className": "c4",
+    "html": "<span class=\"c2\">This controls channel depth and conductivity.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Pinch-Off Condition",
+    "className": "c5",
+    "id": "h.sxxsqjfvoh52",
+    "html": "<span class=\"c14 c7\">Pinch-Off Condition</span>"
+  },
+  {
+    "type": "p",
+    "text": "Pinch-off occurs when:",
+    "className": "c4",
+    "html": "<span class=\"c2\">Pinch-off occurs when:</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image64.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 233.00px; height: 57.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "p",
+    "text": "This value of drain voltage is called:",
+    "className": "c4",
+    "html": "<span class=\"c2\">This value of drain voltage is called:</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image51.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 101.00px; height: 42.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "3. Saturation Region",
+    "className": "c5",
+    "id": "h.lf3enzgzdfxt",
+    "html": "<span class=\"c14 c7\">3. Saturation Region</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Condition",
+    "className": "c13",
+    "id": "h.en4xu6tzm560",
+    "html": "<span class=\"c0\">Condition</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image54.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 476.00px; height: 50.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Explanation",
+    "className": "c13",
+    "id": "h.uf37al4vrj9g",
+    "html": "<span class=\"c0\">Explanation</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Channel is pinched off at the drain endStrong electric field sweeps carriersIncreasing |VDS| further:",
+    "className": "c8 lst-kix_begsclbizrce-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Channel is pinched off at the drain end<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Strong electric field sweeps carriers<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Increasing |VDS| further:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "text": "Increases depletion widthDoes NOT increase drain current",
+    "className": "c8 lst-kix_begsclbizrce-1 start",
+    "html": "<li class=\"c4 c15 li-bullet-0\"><span class=\"c2\">Increases depletion width<br></span></li><li class=\"c4 c15 li-bullet-0\"><span class=\"c9 c7\">Does NOT increase drain current<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Drain current becomes independent of VDS.",
+    "className": "c4",
+    "html": "<span>Drain current becomes </span><span class=\"c7\">independent of VDS</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Drain Current Equation (Saturation Region)",
+    "className": "c13",
+    "id": "h.ythkp28336qh",
+    "html": "<span class=\"c0\">Drain Current Equation (Saturation Region)</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image43.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 352.00px; height: 67.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Key Result",
+    "className": "c13",
+    "id": "h.ympukebcc83e",
+    "html": "<span class=\"c0\">Key Result</span>"
+  },
+  {
+    "type": "ul",
+    "text": "ID depends only on VGSPMOS behaves like a constant current source",
+    "className": "c8 lst-kix_q41qpmklxpfh-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>ID depends </span><span class=\"c9 c7\">only on VGS<br></span></li><li class=\"c1 li-bullet-0\"><span>PMOS behaves like a </span><span class=\"c9 c7\">constant current source<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "V–I Characteristics of PMOSFET",
+    "className": "c5",
+    "id": "h.ea9dzjpcbp3j",
+    "html": "<span class=\"c14 c7\">V–I Characteristics of PMOSFET</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Shows ID vs VDSClearly indicates:",
+    "className": "c8 lst-kix_7ebm5680mlni-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>Shows </span><span class=\"c9 c7\">ID vs VDS<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Clearly indicates:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "text": "Cut-offTriodeSaturation regions",
+    "className": "c8 lst-kix_7ebm5680mlni-1 start",
+    "html": "<li class=\"c4 c15 li-bullet-0\"><span class=\"c2\">Cut-off<br></span></li><li class=\"c4 c15 li-bullet-0\"><span class=\"c2\">Triode<br></span></li><li class=\"c4 c15 li-bullet-0\"><span class=\"c2\">Saturation regions<br></span></li>"
+  },
+  {
+    "type": "h2",
+    "text": "Transfer Characteristics of PMOSFET",
+    "className": "c5",
+    "id": "h.gbhj7ywee2ns",
+    "html": "<span class=\"c14 c7\">Transfer Characteristics of PMOSFET</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Shows ID vs VGSUsed to determine:",
+    "className": "c8 lst-kix_d8splgtwk5rr-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>Shows </span><span class=\"c9 c7\">ID vs VGS<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Used to determine:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "text": "Threshold voltageTransconductance",
+    "className": "c8 lst-kix_d8splgtwk5rr-1 start",
+    "html": "<li class=\"c4 c15 li-bullet-0\"><span class=\"c2\">Threshold voltage<br></span></li><li class=\"c4 c15 li-bullet-0\"><span class=\"c2\">Transconductance</span></li>"
+  },
+  {
+    "type": "img",
+    "src": "images/image1.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 624.00px; height: 416.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "img",
+    "src": "images/image55.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 624.00px; height: 205.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "p",
+    "text": "Depletion MOSFET :",
+    "className": "c10",
+    "html": "<span class=\"c7 c33\">Depletion MOSFET</span><span class=\"c2\">&nbsp;:</span>"
+  },
+  {
+    "type": "p",
+    "text": "The construction of depletion MOSFET is the same as enhancement MOSFET but the conduction channel that is formed is already implanted but not induced. The below table gives the information on the DE-MOSFET.",
+    "className": "c10",
+    "html": "<span class=\"c18\">The construction of depletion MOSFET is the same as enhancement MOSFET but the conduction channel that is formed is already implanted but not induced. The below table gives the information on the DE-MOSFET.</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image23.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 624.00px; height: 416.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "h1",
+    "text": "3. Introduction to CMOS Technology",
+    "className": "c23",
+    "id": "h.jkf81edk0pnl",
+    "html": "<span class=\"c19 c7\">3. Introduction to CMOS Technology</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image10.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 394.50px; height: 263.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "p",
+    "text": "The term CMOS stands for Complementary Metal Oxide Semiconductor. CMOS technology is one of the most widely used technologies in modern electronic system design, especially in the computer chip and integrated circuit industry. Today, CMOS forms the backbone of almost all digital integrated circuits, ranging from simple logic gates to complex microprocessors and memory devices.",
+    "className": "c4",
+    "html": "<span>The term </span><span class=\"c7\">CMOS</span><span>&nbsp;stands for </span><span class=\"c7\">Complementary Metal Oxide Semiconductor</span><span>. CMOS technology is one of the most widely used technologies in modern electronic system design, especially in the </span><span class=\"c7\">computer chip and integrated circuit industry</span><span>. Today, CMOS forms the backbone of almost all </span><span class=\"c7\">digital integrated circuits</span><span>, ranging from simple logic gates to complex microprocessors and memory devices.<br><br></span><span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 394.50px; height: 263.00px;\"><img alt=\"\" src=\"images/image10.png\" style=\"width: 394.50px; height: 263.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\" title=\"\"></span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image62.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 295.50px; height: 195.82px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "p",
+    "text": "The word “complementary” in CMOS refers to the use of two complementary types of MOSFETs, namely:",
+    "className": "c4",
+    "html": "<span>The word </span><span class=\"c7\">“complementary”</span><span>&nbsp;in CMOS refers to the use of </span><span class=\"c7\">two complementary types of MOSFETs</span><span class=\"c2\">, namely:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "NMOS (n-channel MOSFET) andPMOS (p-channel MOSFET)",
+    "className": "c8 lst-kix_ocxz9dwthmjq-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c7\">NMOS (n-channel MOSFET)</span><span class=\"c2\">&nbsp;and<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c9 c7\">PMOS (p-channel MOSFET)<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "These two transistors are connected in such a way that when one transistor is ON, the other is OFF. This complementary operation is the key reason for the very low power consumption of CMOS circuits.",
+    "className": "c4",
+    "html": "<span>These two transistors are connected in such a way that </span><span class=\"c7\">when one transistor is ON, the other is OFF</span><span>. This complementary operation is the key reason for the </span><span class=\"c7\">very low power consumption</span><span class=\"c2\">&nbsp;of CMOS circuits.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Basic Concept of CMOS Operation",
+    "className": "c5",
+    "id": "h.vktcm6n1exp8",
+    "html": "<span class=\"c14 c7\">Basic Concept of CMOS Operation<br></span>"
+  },
+  {
+    "type": "p",
+    "text": "In CMOS technology, NMOS and PMOS transistors are paired together to perform logic operations. The most basic and important CMOS circuit is the CMOS inverter.",
+    "className": "c4",
+    "html": "<span>In CMOS technology, NMOS and PMOS transistors are paired together to perform logic operations. The most basic and important CMOS circuit is the </span><span class=\"c7\">CMOS inverter</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "ul",
+    "text": "The PMOS transistor is connected between the output and the power supply (VDD).The NMOS transistor is connected between the output and ground (GND).Both gates are connected together and act as the input.The drains of both transistors are connected together and form the output.",
+    "className": "c8 lst-kix_4kqv1gjz08wm-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>The </span><span class=\"c7\">PMOS transistor</span><span>&nbsp;is connected between the output and the </span><span class=\"c7\">power supply (VDD)</span><span class=\"c2\">.<br></span></li><li class=\"c1 li-bullet-0\"><span>The </span><span class=\"c7\">NMOS transistor</span><span>&nbsp;is connected between the output and </span><span class=\"c7\">ground (GND)</span><span class=\"c2\">.<br></span></li><li class=\"c1 li-bullet-0\"><span>Both gates are connected together and act as the </span><span class=\"c7\">input</span><span class=\"c2\">.<br></span></li><li class=\"c1 li-bullet-0\"><span>The drains of both transistors are connected together and form the </span><span class=\"c7\">output</span><span class=\"c2\">.<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Because of this arrangement:",
+    "className": "c4",
+    "html": "<span class=\"c2\">Because of this arrangement:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "When the input is LOW, PMOS turns ON and NMOS turns OFF → output becomes HIGH.When the input is HIGH, NMOS turns ON and PMOS turns OFF → output becomes LOW.",
+    "className": "c8 lst-kix_pfuhunvzii6j-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>When the input is </span><span class=\"c7\">LOW</span><span>, PMOS turns ON and NMOS turns OFF → output becomes </span><span class=\"c7\">HIGH</span><span class=\"c2\">.<br></span></li><li class=\"c1 li-bullet-0\"><span>When the input is </span><span class=\"c7\">HIGH</span><span>, NMOS turns ON and PMOS turns OFF → output becomes </span><span class=\"c7\">LOW</span><span class=\"c2\">.<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Thus, CMOS provides a full logic swing, meaning the output voltage levels are very close to the supply voltages.",
+    "className": "c4",
+    "html": "<span>Thus, CMOS provides a </span><span class=\"c7\">full logic swing</span><span class=\"c2\">, meaning the output voltage levels are very close to the supply voltages.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "CMOS Inverter – Importance",
+    "className": "c5",
+    "id": "h.x4z0ia6i6sng",
+    "html": "<span class=\"c14 c7\">CMOS Inverter – Importance</span>"
+  },
+  {
+    "type": "p",
+    "text": "The CMOS inverter is considered the building block of all CMOS logic circuits. Using CMOS inverters, we can construct:",
+    "className": "c4",
+    "html": "<span>The CMOS inverter is considered the </span><span class=\"c7\">building block of all CMOS logic circuits</span><span class=\"c2\">. Using CMOS inverters, we can construct:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "NAND gatesNOR gatesFlip-flopsAddersMultiplexersMemory cells",
+    "className": "c8 lst-kix_cuk9fu4qcedq-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">NAND gates<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">NOR gates<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Flip-flops<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Adders<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Multiplexers<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Memory cells<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Hence, understanding CMOS inverter operation is essential for learning digital electronics, VLSI design, and CMOS circuit design.",
+    "className": "c4",
+    "html": "<span>Hence, understanding CMOS inverter operation is essential for learning </span><span class=\"c7\">digital electronics, VLSI design, and CMOS circuit design</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Why CMOS Technology Is Widely Used",
+    "className": "c5",
+    "id": "h.f6b5hxswh4z4",
+    "html": "<span class=\"c14 c7\">Why CMOS Technology Is Widely Used</span>"
+  },
+  {
+    "type": "p",
+    "text": "CMOS technology has become dominant in the semiconductor industry due to several important advantages.",
+    "className": "c4",
+    "html": "<span class=\"c2\">CMOS technology has become dominant in the semiconductor industry due to several important advantages.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Advantages of CMOS Technology",
+    "className": "c5",
+    "id": "h.8sva6djpwa7",
+    "html": "<span class=\"c14 c7\">Advantages of CMOS Technology</span>"
+  },
+  {
+    "type": "h3",
+    "text": "1. Very Low Power Consumption",
+    "className": "c13",
+    "id": "h.lhp2shq6hzl2",
+    "html": "<span class=\"c0\">1. Very Low Power Consumption</span>"
+  },
+  {
+    "type": "p",
+    "text": "In steady state, CMOS circuits draw almost zero static power, because there is no direct path between VDD and GND. Power is consumed mainly during switching.",
+    "className": "c4",
+    "html": "<span>In steady state, CMOS circuits draw </span><span class=\"c7\">almost zero static power</span><span>, because there is </span><span class=\"c7\">no direct path between VDD and GND</span><span class=\"c2\">. Power is consumed mainly during switching.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "2. High Noise Immunity",
+    "className": "c13",
+    "id": "h.pt2q1n9k25mu",
+    "html": "<span class=\"c0\">2. High Noise Immunity</span>"
+  },
+  {
+    "type": "p",
+    "text": "CMOS circuits have large noise margins, making them highly resistant to electrical noise and voltage fluctuations.",
+    "className": "c4",
+    "html": "<span>CMOS circuits have </span><span class=\"c7\">large noise margins</span><span class=\"c2\">, making them highly resistant to electrical noise and voltage fluctuations.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "3. High Input Impedance",
+    "className": "c13",
+    "id": "h.pwlitfduxtcp",
+    "html": "<span class=\"c0\">3. High Input Impedance</span>"
+  },
+  {
+    "type": "p",
+    "text": "The gate of a MOSFET is insulated by silicon dioxide, resulting in very high input impedance. This reduces loading effects on previous stages.",
+    "className": "c4",
+    "html": "<span>The gate of a MOSFET is insulated by silicon dioxide, resulting in </span><span class=\"c7\">very high input impedance</span><span class=\"c2\">. This reduces loading effects on previous stages.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "4. Full Voltage Swing",
+    "className": "c13",
+    "id": "h.gzayqs9o02zc",
+    "html": "<span class=\"c0\">4. Full Voltage Swing</span>"
+  },
+  {
+    "type": "p",
+    "text": "CMOS outputs switch between nearly 0 V and VDD, ensuring reliable logic levels.",
+    "className": "c4",
+    "html": "<span>CMOS outputs switch between </span><span class=\"c7\">nearly 0 V and VDD</span><span class=\"c2\">, ensuring reliable logic levels.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "5. High Packing Density",
+    "className": "c13",
+    "id": "h.27domvlr89le",
+    "html": "<span class=\"c0\">5. High Packing Density</span>"
+  },
+  {
+    "type": "p",
+    "text": "CMOS technology allows very large numbers of transistors to be fabricated on a single chip, which is essential for VLSI and ULSI designs.",
+    "className": "c4",
+    "html": "<span>CMOS technology allows </span><span class=\"c7\">very large numbers of transistors</span><span>&nbsp;to be fabricated on a single chip, which is essential for </span><span class=\"c7\">VLSI and ULSI</span><span class=\"c2\">&nbsp;designs.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "6. Scalability",
+    "className": "c13",
+    "id": "h.hwa7klyztdx4",
+    "html": "<span class=\"c0\">6. Scalability</span>"
+  },
+  {
+    "type": "p",
+    "text": "CMOS technology scales well with device size reduction, enabling smaller, faster, and more efficient chips.",
+    "className": "c4",
+    "html": "<span>CMOS technology scales well with device size reduction, enabling </span><span class=\"c7\">smaller, faster, and more efficient chips</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Limitations of CMOS Technology",
+    "className": "c5",
+    "id": "h.idrs7y7wu0w5",
+    "html": "<span class=\"c14 c7\">Limitations of CMOS Technology</span>"
+  },
+  {
+    "type": "p",
+    "text": "Although CMOS technology has many advantages, it also has some limitations that must be understood.",
+    "className": "c4",
+    "html": "<span class=\"c2\">Although CMOS technology has many advantages, it also has some limitations that must be understood.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "1. Dynamic Power Dissipation",
+    "className": "c13",
+    "id": "h.n6r8bhn6lg1p",
+    "html": "<span class=\"c0\">1. Dynamic Power Dissipation</span>"
+  },
+  {
+    "type": "p",
+    "text": "Power is consumed during switching due to:",
+    "className": "c4",
+    "html": "<span class=\"c2\">Power is consumed during switching due to:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Charging and discharging of load capacitancesShort-circuit current during transition",
+    "className": "c8 lst-kix_kn8l652jb4du-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Charging and discharging of load capacitances<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Short-circuit current during transition<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "As operating frequency increases, dynamic power consumption increases.",
+    "className": "c4",
+    "html": "<span>As operating frequency increases, </span><span class=\"c7\">dynamic power consumption increases</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "2. Sensitive to Static Discharge",
+    "className": "c13",
+    "id": "h.agiccdijryzl",
+    "html": "<span class=\"c0\">2. Sensitive to Static Discharge</span>"
+  },
+  {
+    "type": "p",
+    "text": "MOSFET gates are sensitive to electrostatic discharge (ESD) because of the thin oxide layer, which can get damaged easily.",
+    "className": "c4",
+    "html": "<span>MOSFET gates are sensitive to </span><span class=\"c7\">electrostatic discharge (ESD)</span><span class=\"c2\">&nbsp;because of the thin oxide layer, which can get damaged easily.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "3. Fabrication Complexity",
+    "className": "c13",
+    "id": "h.3xojdhhpvk4j",
+    "html": "<span class=\"c0\">3. Fabrication Complexity</span>"
+  },
+  {
+    "type": "p",
+    "text": "CMOS fabrication is more complex than single-transistor technologies because it requires:",
+    "className": "c4",
+    "html": "<span class=\"c2\">CMOS fabrication is more complex than single-transistor technologies because it requires:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Both NMOS and PMOS fabricationAdditional processing steps",
+    "className": "c8 lst-kix_yvr5iydzrufv-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Both NMOS and PMOS fabrication<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Additional processing steps<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "4. Latch-Up Problem",
+    "className": "c13",
+    "id": "h.u8h31mfku0hb",
+    "html": "<span class=\"c0\">4. Latch-Up Problem</span>"
+  },
+  {
+    "type": "p",
+    "text": "CMOS circuits may suffer from latch-up, a condition where a low-resistance path forms between VDD and GND, causing excessive current flow if not properly designed.",
+    "className": "c4",
+    "html": "<span>CMOS circuits may suffer from </span><span class=\"c7\">latch-up</span><span class=\"c2\">, a condition where a low-resistance path forms between VDD and GND, causing excessive current flow if not properly designed.</span>"
+  },
+  {
+    "type": "p",
+    "text": "3.1 Structure and Working of CMOS Logic",
+    "className": "c4",
+    "html": "<span class=\"c19 c7\">3.1 Structure and Working of CMOS Logic</span>"
+  },
+  {
+    "type": "p",
+    "text": "In CMOS (Complementary Metal Oxide Semiconductor) technology, both N-type MOSFETs (NMOS) and P-type MOSFETs (PMOS) are used together to implement logic functions. The fundamental idea of CMOS operation is complementary action, meaning that:",
+    "className": "c4",
+    "html": "<span>In </span><span class=\"c7\">CMOS (Complementary Metal Oxide Semiconductor) technology</span><span>, both </span><span class=\"c7\">N-type MOSFETs (NMOS)</span><span>&nbsp;and </span><span class=\"c7\">P-type MOSFETs (PMOS)</span><span>&nbsp;are used together to implement logic functions. The fundamental idea of CMOS operation is </span><span class=\"c7\">complementary action</span><span class=\"c2\">, meaning that:</span>"
+  },
+  {
+    "type": "p",
+    "text": "The same input signal that turns ON one type of transistor turns OFF the other type.",
+    "className": "c4 c21",
+    "html": "<span class=\"c9 c7\">The same input signal that turns ON one type of transistor turns OFF the other type.</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image61.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 417.50px; height: 278.90px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "p",
+    "text": "This complementary behavior ensures that only one conduction path exists at a time, either to the power supply or to ground, but never both simultaneously in steady state. Because of this property, CMOS circuits do not require pull-up resistors, unlike NMOS-only logic families.",
+    "className": "c4",
+    "html": "<span>This complementary behavior ensures that </span><span class=\"c7\">only one conduction path exists at a time</span><span>, either to the power supply or to ground, but </span><span class=\"c7\">never both simultaneously in steady state</span><span>. Because of this property, CMOS circuits </span><span class=\"c7\">do not require pull-up resistors</span><span>, unlike NMOS-only logic families.<br></span><span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 417.50px; height: 278.90px;\"><img alt=\"\" src=\"images/image61.png\" style=\"width: 417.50px; height: 278.90px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\" title=\"\"></span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Pull-Up and Pull-Down Networks",
+    "className": "c5",
+    "id": "h.pzqt9yn8wqad",
+    "html": "<span class=\"c14 c7\">Pull-Up and Pull-Down Networks</span>"
+  },
+  {
+    "type": "p",
+    "text": "In CMOS logic gates, transistors are organized into two distinct networks:",
+    "className": "c4",
+    "html": "<span class=\"c2\">In CMOS logic gates, transistors are organized into two distinct networks:</span>"
+  },
+  {
+    "type": "h3",
+    "text": "1. Pull-Down Network (PDN)",
+    "className": "c13",
+    "id": "h.6mo3jolu154t",
+    "html": "<span class=\"c0\">1. Pull-Down Network (PDN)</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Constructed using NMOS transistorsConnected between the output node and the low-voltage rail (VSS or ground)When the PDN is ON, it pulls the output to logic ‘0’",
+    "className": "c8 lst-kix_b69auigqxcmo-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>Constructed using </span><span class=\"c9 c7\">NMOS transistors<br></span></li><li class=\"c1 li-bullet-0\"><span>Connected between the </span><span class=\"c9 c7\">output node and the low-voltage rail (VSS or ground)<br></span></li><li class=\"c1 li-bullet-0\"><span>When the PDN is ON, it </span><span class=\"c9 c7\">pulls the output to logic ‘0’</span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "2. Pull-Up Network (PUN)",
+    "className": "c13",
+    "id": "h.jt1vbjgpa11r",
+    "html": "<span class=\"c0\">2. Pull-Up Network (PUN)</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Constructed using PMOS transistorsConnected between the output node and the high-voltage rail (VDD)When the PUN is ON, it pulls the output to logic ‘1’",
+    "className": "c8 lst-kix_h7m6qbo96q2-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>Constructed using </span><span class=\"c9 c7\">PMOS transistors<br></span></li><li class=\"c1 li-bullet-0\"><span>Connected between the </span><span class=\"c9 c7\">output node and the high-voltage rail (VDD)<br></span></li><li class=\"c1 li-bullet-0\"><span>When the PUN is ON, it </span><span class=\"c9 c7\">pulls the output to logic ‘1’</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "These two networks are designed such that:",
+    "className": "c4",
+    "html": "<span class=\"c2\">These two networks are designed such that:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "When PDN conducts, PUN is OFFWhen PUN conducts, PDN is OFF",
+    "className": "c8 lst-kix_dymqcb4aw0fp-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>When </span><span class=\"c7\">PDN conducts</span><span>, </span><span class=\"c9 c7\">PUN is OFF<br></span></li><li class=\"c1 li-bullet-0\"><span>When </span><span class=\"c7\">PUN conducts</span><span>, </span><span class=\"c9 c7\">PDN is OFF<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "This arrangement guarantees low static power consumption and reliable logic levels.",
+    "className": "c4",
+    "html": "<span>This arrangement guarantees </span><span class=\"c7\">low static power consumption</span><span>&nbsp;and </span><span class=\"c7\">reliable logic levels</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Basic Working Principle",
+    "className": "c5",
+    "id": "h.og8e7kk23l9c",
+    "html": "<span class=\"c14 c7\">Basic Working Principle</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Input voltage is applied simultaneously to the gates of NMOS and PMOSDepending on the input level:",
+    "className": "c8 lst-kix_7i10ne1jkrqg-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>Input voltage is applied </span><span class=\"c9 c7\">simultaneously to the gates of NMOS and PMOS<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Depending on the input level:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "text": "Either the pull-up path or the pull-down path becomes active",
+    "className": "c8 lst-kix_7i10ne1jkrqg-1 start",
+    "html": "<li class=\"c4 c15 li-bullet-0\"><span class=\"c2\">Either the pull-up path or the pull-down path becomes active<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "text": "The output node is connected either to VDD or to GND, but never both",
+    "className": "c8 lst-kix_7i10ne1jkrqg-0",
+    "html": "<li class=\"c1 li-bullet-0\"><span>The output node is connected </span><span class=\"c7\">either to VDD or to GND</span><span class=\"c2\">, but never both<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "This switch-like behavior allows CMOS circuits to be modeled as ideal logic switches, improving efficiency and noise immunity.",
+    "className": "c4",
+    "html": "<span>This switch-like behavior allows CMOS circuits to be modeled as </span><span class=\"c7\">ideal logic switches</span><span class=\"c2\">, improving efficiency and noise immunity.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h1",
+    "text": "3.2 CMOS Characteristics / Advantages (with Pull-Up and Pull-Down Operation)",
+    "className": "c23",
+    "id": "h.5w3s6lym8iml",
+    "html": "<span class=\"c19 c7\">3.2 CMOS Characteristics / Advantages (with Pull-Up and Pull-Down Operation)</span>"
+  },
+  {
+    "type": "p",
+    "text": "CMOS technology is widely used because it offers:",
+    "className": "c4",
+    "html": "<span class=\"c2\">CMOS technology is widely used because it offers:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "High operating speedVery low power dissipationLarge noise marginsOperation over a wide range of supply voltages",
+    "className": "c8 lst-kix_d5kmg440rg8z-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c9 c7\">High operating speed<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c9 c7\">Very low power dissipation<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c9 c7\">Large noise margins<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c9 c7\">Operation over a wide range of supply voltages<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "To understand these advantages clearly, let us analyze the pull-up and pull-down transistor behavior using a load capacitor (C₁), which represents the output capacitance.",
+    "className": "c4",
+    "html": "<span>To understand these advantages clearly, let us analyze the </span><span class=\"c7\">pull-up and pull-down transistor behavior using a load capacitor (C₁)</span><span class=\"c2\">, which represents the output capacitance.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Operation of Pull-Down Transistor (NMOS)",
+    "className": "c5",
+    "id": "h.fm18z276e620",
+    "html": "<span class=\"c14 c7\">Operation of Pull-Down Transistor (NMOS)</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image41.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 252.50px; height: 293.21px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "h3",
+    "text": "Condition: VGS > VTN (NMOS ON)",
+    "className": "c13",
+    "id": "h.kiyolzwtzcyo",
+    "html": "<span class=\"c0\">Condition: VGS &gt; VTN (NMOS ON)</span>"
+  },
+  {
+    "type": "ul",
+    "text": "At Vcs > VTNMOS is ONThe capacitor (C1) charges tillVDD-VtnThe C1 charges > VDD-Vtn NMOS become OFF as VGs <VtnSo NMOS act as a weak 1",
+    "className": "c8 lst-kix_dfvd4f3bjp39-0 start",
+    "html": "<li class=\"c12 li-bullet-0\"><span class=\"c18\">At Vcs &gt; VTNMOS is ON</span></li><li class=\"c12 li-bullet-0\"><span class=\"c18\">The capacitor (C1) charges tillVDD-Vtn</span></li><li class=\"c12 li-bullet-0\"><span class=\"c18\">The C1 charges &gt; VDD-Vtn NMOS become OFF as VGs &lt;Vtn</span></li><li class=\"c12 li-bullet-0\"><span class=\"c18\">So NMOS act as a weak 1</span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "images/image66.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 215.20px; height: 265.50px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "ul",
+    "text": "At VGs< VtpPMOS is ON VDD The capacitor (C1) charge up to VDD Therefore, PMOS acts as a strong 'L' The capacitor (C1) charge up to Pull-up and Pull-down transistors",
+    "className": "c8 lst-kix_k3t3sopm2ui0-0 start",
+    "html": "<li class=\"c12 li-bullet-0\"><span class=\"c2\">At VGs&lt; VtpPMOS is ON VDD </span></li><li class=\"c12 li-bullet-0\"><span class=\"c2\">The capacitor (C1) charge up to VDD </span></li><li class=\"c12 li-bullet-0\"><span class=\"c2\">Therefore, PMOS acts as a strong 'L' </span></li><li class=\"c12 li-bullet-0\"><span>The capacitor (C1) charge up to Pull-up and Pull-down transistors</span><hr></li>"
+  },
+  {
+    "type": "img",
+    "src": "images/image79.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 385.50px; height: 257.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "p",
+    "text": "Pull down makes a connection from output t ground Channel gets formed between drawn and source. NMOS is ON at VGs>V: The C1 gets discharged to OV after this channel is formed",
+    "className": "c4",
+    "html": "<span class=\"c18\">Pull down makes a connection from output t ground Channel gets formed between drawn and source. NMOS is ON at VGs&gt;V: The C1 gets discharged to OV after this channel is formed</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "images/image49.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 464.50px; height: 309.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "ul",
+    "text": "At Vcs< Vt→ PMOS ON Channel gets formed between drawn and source C1 gets discharged to Vip after the channel has formed PMOS acts as weak 0.",
+    "className": "c8 lst-kix_jlqb587ezqp0-0 start",
+    "html": "<li class=\"c22 li-bullet-0\"><span class=\"c2\">At Vcs&lt; Vt→ PMOS ON </span></li><li class=\"c22 li-bullet-0\"><span class=\"c2\">Channel gets formed between drawn and source</span></li><li class=\"c22 li-bullet-0\"><span class=\"c2\">&nbsp;C1 gets discharged to Vip after the channel has formed </span></li><li class=\"c22 li-bullet-0\"><span class=\"c2\">PMOS acts as weak 0.</span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Charging and Discharging of Output Capacitor (C₁)",
+    "className": "c5",
+    "id": "h.11z2k5lva5t7",
+    "html": "<span class=\"c14 c7\">Charging and Discharging of Output Capacitor (C₁)</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Charging Phase",
+    "className": "c13",
+    "id": "h.46pyyrojwn43",
+    "html": "<span class=\"c0\">Charging Phase</span>"
+  },
+  {
+    "type": "ul",
+    "text": "PMOS ON, NMOS OFFC₁ charges through PMOSOutput rises toward VDD",
+    "className": "c8 lst-kix_er3i1h1k81zs-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">PMOS ON, NMOS OFF<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">C₁ charges through PMOS<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Output rises toward VDD<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "Discharging Phase",
+    "className": "c13",
+    "id": "h.gpuoxi9bi0na",
+    "html": "<span class=\"c0\">Discharging Phase</span>"
+  },
+  {
+    "type": "ul",
+    "text": "NMOS ON, PMOS OFFC₁ discharges through NMOSOutput falls toward 0 V",
+    "className": "c8 lst-kix_9wjgm9a24i14-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">NMOS ON, PMOS OFF<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">C₁ discharges through NMOS<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Output falls toward 0 V<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "This charging and discharging mechanism determines:",
+    "className": "c4",
+    "html": "<span class=\"c2\">This charging and discharging mechanism determines:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Propagation delayDynamic power dissipationSwitching speed",
+    "className": "c8 lst-kix_589sdpe6jghz-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c9 c7\">Propagation delay<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c9 c7\">Dynamic power dissipation<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c9 c7\">Switching speed<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Why CMOS Has Low Power Dissipation",
+    "className": "c5",
+    "id": "h.iv5ai89o0ccy",
+    "html": "<span class=\"c14 c7\">Why CMOS Has Low Power Dissipation</span>"
+  },
+  {
+    "type": "ul",
+    "text": "In steady state:",
+    "className": "c8 lst-kix_qiq0cbuptjyg-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">In steady state:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "text": "Either PMOS or NMOS is OFFNo direct path between VDD and GND",
+    "className": "c8 lst-kix_qiq0cbuptjyg-1 start",
+    "html": "<li class=\"c4 c15 li-bullet-0\"><span class=\"c2\">Either PMOS or NMOS is OFF<br></span></li><li class=\"c4 c15 li-bullet-0\"><span class=\"c2\">No direct path between VDD and GND<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "text": "Power is consumed mainly:",
+    "className": "c8 lst-kix_qiq0cbuptjyg-0",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Power is consumed mainly:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "text": "During switchingDue to capacitor charging/discharging",
+    "className": "c8 lst-kix_qiq0cbuptjyg-1 start",
+    "html": "<li class=\"c4 c15 li-bullet-0\"><span class=\"c2\">During switching<br></span></li><li class=\"c4 c15 li-bullet-0\"><span class=\"c2\">Due to capacitor charging/discharging<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "This makes CMOS ideal for battery-powered and low-power applications.",
+    "className": "c4",
+    "html": "<span>This makes CMOS ideal for </span><span class=\"c7\">battery-powered and low-power applications</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image33.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 624.00px; height: 229.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "h1",
+    "text": "3.3 Noise Margin in CMOS Circuits",
+    "className": "c23",
+    "id": "h.mwipnjr2vajf",
+    "html": "<span class=\"c19 c7\">3.3 Noise Margin in CMOS Circuits</span>"
+  },
+  {
+    "type": "h2",
+    "text": "Introduction",
+    "className": "c5",
+    "id": "h.p2ln2tixrzqz",
+    "html": "<span class=\"c14 c7\">Introduction</span>"
+  },
+  {
+    "type": "p",
+    "text": "In practical digital circuits, signals are never perfectly clean. During transmission, digital signals are often affected by noise due to coupling, interference, switching transients, or external disturbances. Noise margin is a critical parameter that determines how much noise a CMOS circuit can tolerate without affecting correct logic operation.",
+    "className": "c4",
+    "html": "<span>In practical digital circuits, signals are never perfectly clean. During transmission, digital signals are often affected by </span><span class=\"c7\">noise</span><span>&nbsp;due to coupling, interference, switching transients, or external disturbances. </span><span class=\"c7\">Noise margin</span><span>&nbsp;is a critical parameter that determines how much noise a CMOS circuit can tolerate </span><span class=\"c7\">without affecting correct logic operation</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "p",
+    "text": "In simple terms, noise margin is the maximum noise voltage that a circuit can withstand while still interpreting the signal correctly. A larger noise margin means better reliability and robustness of the digital system.",
+    "className": "c4",
+    "html": "<span>In simple terms, </span><span class=\"c7\">noise margin is the maximum noise voltage that a circuit can withstand while still interpreting the signal correctly</span><span class=\"c2\">. A larger noise margin means better reliability and robustness of the digital system.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Digital Signal Levels and NoiseDigital logic levels are not represented by single fixed voltages, but rather by ranges of voltages. This is what allows CMOS circuits to operate correctly even when noise is present.",
+    "className": "c5",
+    "id": "h.qnhzcr621esl",
+    "html": "<span class=\"c7 c30\">Digital Signal Levels and Noise<br></span><span>Digital logic levels are </span><span class=\"c7\">not represented by single fixed voltages</span><span>, but rather by </span><span class=\"c7\">ranges of voltages</span><span class=\"c28\">. This is what allows CMOS circuits to operate correctly even when noise is present.</span>"
+  },
+  {
+    "type": "p",
+    "text": "To understand noise margin, we must first define the critical voltage levels that characterize the DC input–output behavior of a CMOS inverter.",
+    "className": "c4",
+    "html": "<span>To understand noise margin, we must first define the </span><span class=\"c7\">critical voltage levels</span><span class=\"c2\">&nbsp;that characterize the DC input–output behavior of a CMOS inverter.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Critical Voltage Levels in a CMOS Inverter",
+    "className": "c5",
+    "id": "h.4l5v65zbe7ci",
+    "html": "<span class=\"c14 c7\">Critical Voltage Levels in a CMOS Inverter</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image7.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 341.50px; height: 227.94px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "p",
+    "text": "A CMOS inverter is characterized by five important voltage parameters:",
+    "className": "c4",
+    "html": "<span>A CMOS inverter is characterized by </span><span class=\"c7\">five important voltage parameters</span><span class=\"c2\">:</span>"
+  },
+  {
+    "type": "h3",
+    "text": "1. VOH (Maximum Output High Voltage)",
+    "className": "c13",
+    "id": "h.woyhv75mk29n",
+    "html": "<span class=\"c0\">1. VOH (Maximum Output High Voltage)</span>"
+  },
+  {
+    "type": "ul",
+    "text": "The minimum voltage at the output that is guaranteed to represent logic ‘1’Ideally close to VDD",
+    "className": "c8 lst-kix_gkbx1c20eh43-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>The </span><span class=\"c7\">minimum voltage</span><span>&nbsp;at the output that is guaranteed to represent logic </span><span class=\"c9 c7\">‘1’<br></span></li><li class=\"c1 li-bullet-0\"><span>Ideally close to </span><span class=\"c9 c7\">VDD<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "2. VOL (Maximum Output Low Voltage)",
+    "className": "c13",
+    "id": "h.l6altjxmghuc",
+    "html": "<span class=\"c0\">2. VOL (Maximum Output Low Voltage)</span>"
+  },
+  {
+    "type": "ul",
+    "text": "The maximum voltage at the output that is guaranteed to represent logic ‘0’Ideally close to 0 V",
+    "className": "c8 lst-kix_ibprgayzov8o-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>The </span><span class=\"c7\">maximum voltage</span><span>&nbsp;at the output that is guaranteed to represent logic </span><span class=\"c9 c7\">‘0’<br></span></li><li class=\"c1 li-bullet-0\"><span>Ideally close to </span><span class=\"c9 c7\">0 V<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "3. VIH (Minimum Input High Voltage)",
+    "className": "c13",
+    "id": "h.rufbbs2z90kb",
+    "html": "<span class=\"c0\">3. VIH (Minimum Input High Voltage)</span>"
+  },
+  {
+    "type": "ul",
+    "text": "The minimum input voltage that the inverter will interpret as logic ‘1’",
+    "className": "c8 lst-kix_7jbn9lb6jumd-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>The </span><span class=\"c7\">minimum input voltage</span><span>&nbsp;that the inverter will interpret as logic </span><span class=\"c9 c7\">‘1’<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "4. VIL (Maximum Input Low Voltage)",
+    "className": "c13",
+    "id": "h.7o4xju3xmzs1",
+    "html": "<span class=\"c0\">4. VIL (Maximum Input Low Voltage)</span>"
+  },
+  {
+    "type": "ul",
+    "text": "The maximum input voltage that the inverter will interpret as logic ‘0’",
+    "className": "c8 lst-kix_3vpt4qhua844-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>The </span><span class=\"c7\">maximum input voltage</span><span>&nbsp;that the inverter will interpret as logic </span><span class=\"c9 c7\">‘0’<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "5. Vth (Switching Threshold Voltage)",
+    "className": "c13",
+    "id": "h.3raa7aij68u8",
+    "html": "<span class=\"c0\">5. Vth (Switching Threshold Voltage)</span>"
+  },
+  {
+    "type": "ul",
+    "text": "The input voltage at which the inverter switches from logic ‘1’ to logic ‘0’Typically near VDD / 2 for symmetric CMOS inverters",
+    "className": "c8 lst-kix_6r5kdomrpf0r-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">The input voltage at which the inverter switches from logic ‘1’ to logic ‘0’<br></span></li><li class=\"c1 li-bullet-0\"><span>Typically near </span><span class=\"c7\">VDD / 2</span><span class=\"c2\">&nbsp;for symmetric CMOS inverters<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Interpretation of Input and Output Voltage Ranges",
+    "className": "c5",
+    "id": "h.l9xi4mbol4nr",
+    "html": "<span class=\"c14 c7\">Interpretation of Input and Output Voltage Ranges</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image32.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 624.00px; height: 416.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "p",
+    "text": "Based on these voltage levels:",
+    "className": "c4",
+    "html": "<span class=\"c2\">Based on these voltage levels:</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Input Logic Levels",
+    "className": "c13",
+    "id": "h.mtdsq6s1c31u",
+    "html": "<span class=\"c0\">Input Logic Levels</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Any input voltage between 0 and VIL is interpreted as logic ‘0’Any input voltage between VIH and VDD is interpreted as logic ‘1’Input voltages between VIL and VIH fall in the undefined region and may cause incorrect operation",
+    "className": "c8 lst-kix_h4rvvsshqgct-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>Any input voltage between </span><span class=\"c7\">0 and VIL</span><span>&nbsp;is interpreted as logic </span><span class=\"c9 c7\">‘0’<br></span></li><li class=\"c1 li-bullet-0\"><span>Any input voltage between </span><span class=\"c7\">VIH and VDD</span><span>&nbsp;is interpreted as logic </span><span class=\"c9 c7\">‘1’<br></span></li><li class=\"c1 li-bullet-0\"><span>Input voltages between </span><span class=\"c7\">VIL and VIH</span><span>&nbsp;fall in the </span><span class=\"c7\">undefined region</span><span class=\"c2\">&nbsp;and may cause incorrect operation<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "Output Logic Levels",
+    "className": "c13",
+    "id": "h.mptl852gpfi6",
+    "html": "<span class=\"c0\">Output Logic Levels</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Any output voltage between 0 and VOL is interpreted as logic ‘0’Any output voltage between VOH and VDD is interpreted as logic ‘1’",
+    "className": "c8 lst-kix_86e2q3xa0dhj-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>Any output voltage between </span><span class=\"c7\">0 and VOL</span><span>&nbsp;is interpreted as logic </span><span class=\"c9 c7\">‘0’<br></span></li><li class=\"c1 li-bullet-0\"><span>Any output voltage between </span><span class=\"c7\">VOH and VDD</span><span>&nbsp;is interpreted as logic </span><span class=\"c9 c7\">‘1’<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "This separation into voltage ranges allows CMOS circuits to tolerate noise.",
+    "className": "c4",
+    "html": "<span class=\"c2\">This separation into voltage ranges allows CMOS circuits to tolerate noise.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Noise Tolerance Using Cascaded Inverters",
+    "className": "c5",
+    "id": "h.opx2xhbcdd2h",
+    "html": "<span class=\"c14 c7\">Noise Tolerance Using Cascaded Inverters</span>"
+  },
+  {
+    "type": "p",
+    "text": "Consider a chain of three cascaded CMOS inverters.",
+    "className": "c4",
+    "html": "<span>Consider a chain of </span><span class=\"c7\">three cascaded CMOS inverters</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Low-Level Noise Case",
+    "className": "c13",
+    "id": "h.za4p22bzq4dv",
+    "html": "<span class=\"c0\">Low-Level Noise Case</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Assume the output of the first inverter is VOL, representing logic ‘0’During signal transmission, noise may increase the voltage slightlyIf the input voltage of the second inverter remains below VIL, it is still correctly interpreted as logic ‘0’If noise raises the voltage above VIL, the inverter may misinterpret the signal",
+    "className": "c8 lst-kix_vuygvrfcvrpg-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>Assume the output of the first inverter is </span><span class=\"c7\">VOL</span><span class=\"c2\">, representing logic ‘0’<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">During signal transmission, noise may increase the voltage slightly<br></span></li><li class=\"c1 li-bullet-0\"><span>If the input voltage of the second inverter remains </span><span class=\"c7\">below VIL</span><span class=\"c2\">, it is still correctly interpreted as logic ‘0’<br></span></li><li class=\"c1 li-bullet-0\"><span>If noise raises the voltage </span><span class=\"c7\">above VIL</span><span class=\"c2\">, the inverter may misinterpret the signal<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Therefore, VIL is the maximum allowable noisy voltage that can still be recognized as logic ‘0’.",
+    "className": "c4",
+    "html": "<span>&nbsp;Therefore, </span><span class=\"c7\">VIL is the maximum allowable noisy voltage</span><span class=\"c2\">&nbsp;that can still be recognized as logic ‘0’.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "High-Level Noise Case",
+    "className": "c13",
+    "id": "h.shf98huqjqir",
+    "html": "<span class=\"c0\">High-Level Noise Case</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Assume the output of the second inverter is VOH, representing logic ‘1’Noise may reduce the voltage during transmissionIf the input voltage of the third inverter remains above VIH, it is correctly interpreted as logic ‘1’If the voltage drops below VIH, incorrect interpretation may occur",
+    "className": "c8 lst-kix_c1y13u5b556m-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>Assume the output of the second inverter is </span><span class=\"c7\">VOH</span><span class=\"c2\">, representing logic ‘1’<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Noise may reduce the voltage during transmission<br></span></li><li class=\"c1 li-bullet-0\"><span>If the input voltage of the third inverter remains </span><span class=\"c7\">above VIH</span><span class=\"c2\">, it is correctly interpreted as logic ‘1’<br></span></li><li class=\"c1 li-bullet-0\"><span>If the voltage drops </span><span class=\"c7\">below VIH</span><span class=\"c2\">, incorrect interpretation may occur<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Therefore, VIH is the minimum allowable noisy voltage that can still be recognized as logic ‘1’.",
+    "className": "c4",
+    "html": "<span>&nbsp;Therefore, </span><span class=\"c7\">VIH is the minimum allowable noisy voltage</span><span class=\"c2\">&nbsp;that can still be recognized as logic ‘1’.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Definition of Noise Margins",
+    "className": "c5",
+    "id": "h.7vui21z7ujc0",
+    "html": "<span class=\"c14 c7\">Definition of Noise Margins</span>"
+  },
+  {
+    "type": "p",
+    "text": "Based on the above discussion, noise margins are defined as the difference between output voltage levels and corresponding input voltage limits.",
+    "className": "c4",
+    "html": "<span>Based on the above discussion, </span><span class=\"c7\">noise margins</span><span>&nbsp;are defined as the </span><span class=\"c7\">difference between output voltage levels and corresponding input voltage limits</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Noise Margin Low (NML)",
+    "className": "c13",
+    "id": "h.izivm211t7pa",
+    "html": "<span class=\"c0\">Noise Margin Low (NML)</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image74.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 212.00px; height: 47.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "p",
+    "text": "​",
+    "className": "c10",
+    "html": "<span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 212.00px; height: 47.00px;\"><img alt=\"\" src=\"images/image74.png\" style=\"width: 212.00px; height: 47.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\" title=\"\"></span><span class=\"c2\">​</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Represents the maximum noise voltage that can be added to a logic ‘0’ signal without causing an error",
+    "className": "c8 lst-kix_9k5lgz715hrk-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Represents the maximum noise voltage that can be added to a logic ‘0’ signal without causing an error<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "Noise Margin High (NMH)",
+    "className": "c13",
+    "id": "h.v0zgzvnvkd1g",
+    "html": "<span class=\"c0\">Noise Margin High (NMH)</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image53.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 237.00px; height: 58.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "ul",
+    "text": "Represents the maximum noise voltage that can be subtracted from a logic ‘1’ signal without causing an error",
+    "className": "c8 lst-kix_r50jua9ej3ki-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 237.00px; height: 58.00px;\"><img alt=\"\" src=\"images/image53.png\" style=\"width: 237.00px; height: 58.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\" title=\"\"></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Represents the maximum noise voltage that can be subtracted from a logic ‘1’ signal without causing an error<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Importance of Noise Margin in CMOS",
+    "className": "c5",
+    "id": "h.5cmce02lfu19",
+    "html": "<span class=\"c14 c7\">Importance of Noise Margin in CMOS</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Larger noise margins improve noise immunityEnsure reliable signal transmission across multiple logic stagesAllow CMOS circuits to operate correctly in noisy environmentsOne of the major reasons CMOS technology dominates VLSI and digital IC design",
+    "className": "c8 lst-kix_mtkogzql0ny0-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>Larger noise margins improve </span><span class=\"c9 c7\">noise immunity<br></span></li><li class=\"c1 li-bullet-0\"><span>Ensure </span><span class=\"c7\">reliable signal transmission</span><span class=\"c2\">&nbsp;across multiple logic stages<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Allow CMOS circuits to operate correctly in noisy environments<br></span></li><li class=\"c1 li-bullet-0\"><span>One of the major reasons CMOS technology dominates </span><span class=\"c9 c7\">VLSI and digital IC design<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Conclusion",
+    "className": "c5",
+    "id": "h.ozfvitloy6v",
+    "html": "<span class=\"c14 c7\">Conclusion</span>"
+  },
+  {
+    "type": "p",
+    "text": "Noise margin is a key measure of the robustness of CMOS digital circuits. By defining voltage ranges instead of fixed logic levels, CMOS inverters can tolerate significant noise without malfunction. The high noise margins of CMOS technology ensure stable operation even in the presence of interference, making CMOS ideal for high-speed, low-power, and large-scale integrated systems.",
+    "className": "c4",
+    "html": "<span class=\"c2\">Noise margin is a key measure of the robustness of CMOS digital circuits. By defining voltage ranges instead of fixed logic levels, CMOS inverters can tolerate significant noise without malfunction. The high noise margins of CMOS technology ensure stable operation even in the presence of interference, making CMOS ideal for high-speed, low-power, and large-scale integrated systems.</span>"
+  },
+  {
+    "type": "h1",
+    "text": "3.4 CMOS Inverter",
+    "className": "c23",
+    "id": "h.1vlqulsypfsh",
+    "html": "<span class=\"c19 c7\">3.4 CMOS Inverter</span>"
+  },
+  {
+    "type": "h2",
+    "text": "Introduction",
+    "className": "c5",
+    "id": "h.xrl1bdipep0a",
+    "html": "<span class=\"c14 c7\">Introduction</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image35.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 624.00px; height: 305.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "p",
+    "text": "The CMOS inverter is the most fundamental and important building block in CMOS digital design. Almost all complex CMOS logic circuits such as NAND gates, NOR gates, flip-flops, adders, and memory cells are ultimately built using CMOS inverters. Understanding its structure, operation, voltage transfer characteristics, dynamic behavior, and power dissipation is therefore essential.",
+    "className": "c4",
+    "html": "<span>The </span><span class=\"c7\">CMOS inverter</span><span>&nbsp;is the most fundamental and important building block in CMOS digital design. Almost all complex CMOS logic circuits such as NAND gates, NOR gates, flip-flops, adders, and memory cells are ultimately built using CMOS inverters. Understanding its structure, operation, voltage transfer characteristics, dynamic behavior, and power dissipation is therefore essential.<br><br></span><span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 305.33px;\"><img alt=\"\" src=\"images/image35.png\" style=\"width: 624.00px; height: 305.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\" title=\"\"></span>"
+  },
+  {
+    "type": "p",
+    "text": "A CMOS inverter consists of one PMOS transistor and one NMOS transistor connected in a complementary manner. The input signal A is applied simultaneously to the gate terminals of both transistors, while the drains are connected together to form the output.",
+    "className": "c4",
+    "html": "<span>A CMOS inverter consists of </span><span class=\"c7\">one PMOS transistor and one NMOS transistor</span><span>&nbsp;connected in a complementary manner. The </span><span class=\"c7\">input signal A</span><span>&nbsp;is applied simultaneously to the </span><span class=\"c7\">gate terminals of both transistors</span><span>, while the drains are connected together to form the </span><span class=\"c7\">output</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Structure and Basic Operation of CMOS Inverter",
+    "className": "c5",
+    "id": "h.qgkh2i2snp3",
+    "html": "<span class=\"c14 c7\">Structure and Basic Operation of CMOS Inverter</span>"
+  },
+  {
+    "type": "ul",
+    "text": "The PMOS transistor is connected between the output and the positive supply voltage (VDD).The NMOS transistor is connected between the output and the ground (VSS).The input A controls both transistors simultaneously.",
+    "className": "c8 lst-kix_ejtdhl1tv5ts-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>The </span><span class=\"c7\">PMOS transistor</span><span>&nbsp;is connected between the output and the </span><span class=\"c7\">positive supply voltage (VDD)</span><span class=\"c2\">.<br></span></li><li class=\"c1 li-bullet-0\"><span>The </span><span class=\"c7\">NMOS transistor</span><span>&nbsp;is connected between the output and the </span><span class=\"c7\">ground (VSS)</span><span class=\"c2\">.<br></span></li><li class=\"c1 li-bullet-0\"><span>The </span><span class=\"c7\">input A</span><span class=\"c2\">&nbsp;controls both transistors simultaneously.<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "Input Low Condition",
+    "className": "c13",
+    "id": "h.q9dqznu7d0x6",
+    "html": "<span class=\"c0\">Input Low Condition</span>"
+  },
+  {
+    "type": "p",
+    "text": "When a low voltage is applied at the input terminal A:",
+    "className": "c4",
+    "html": "<span>When a </span><span class=\"c7\">low voltage</span><span class=\"c2\">&nbsp;is applied at the input terminal A:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "The NMOS transistor turns OFF and behaves like an open circuitThe PMOS transistor turns ONThe output node is connected to VDDOutput voltage becomes logic ‘1’ (VOH)",
+    "className": "c8 lst-kix_vz7hghjus13-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>The </span><span class=\"c7\">NMOS transistor turns OFF</span><span>&nbsp;and behaves like an </span><span class=\"c9 c7\">open circuit<br></span></li><li class=\"c1 li-bullet-0\"><span>The </span><span class=\"c9 c7\">PMOS transistor turns ON<br></span></li><li class=\"c1 li-bullet-0\"><span>The output node is connected to </span><span class=\"c9 c7\">VDD<br></span></li><li class=\"c1 li-bullet-0\"><span>Output voltage becomes </span><span class=\"c9 c7\">logic ‘1’ (VOH)<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Thus, the output is pulled upwards.",
+    "className": "c4",
+    "html": "<span>Thus, the output is pulled </span><span class=\"c7\">upwards</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Input High Condition",
+    "className": "c13",
+    "id": "h.dxg9xzdz256h",
+    "html": "<span class=\"c0\">Input High Condition</span>"
+  },
+  {
+    "type": "p",
+    "text": "When a high voltage is applied at the input terminal A:",
+    "className": "c4",
+    "html": "<span>When a </span><span class=\"c7\">high voltage</span><span class=\"c2\">&nbsp;is applied at the input terminal A:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "The PMOS transistor turns OFF and behaves like an open circuitThe NMOS transistor turns ONThe output node is connected to VSS (ground)Output voltage becomes logic ‘0’ (VOL)",
+    "className": "c8 lst-kix_8t870g1onza7-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>The </span><span class=\"c7\">PMOS transistor turns OFF</span><span>&nbsp;and behaves like an </span><span class=\"c7 c9\">open circuit<br></span></li><li class=\"c1 li-bullet-0\"><span>The </span><span class=\"c9 c7\">NMOS transistor turns ON<br></span></li><li class=\"c1 li-bullet-0\"><span>The output node is connected to </span><span class=\"c9 c7\">VSS (ground)<br></span></li><li class=\"c1 li-bullet-0\"><span>Output voltage becomes </span><span class=\"c9 c7\">logic ‘0’ (VOL)<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Thus, the output is pulled downwards.",
+    "className": "c4",
+    "html": "<span>Thus, the output is pulled </span><span class=\"c7\">downwards</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "p",
+    "text": "This complementary switching action ensures low static power dissipation and full voltage swing.",
+    "className": "c4",
+    "html": "<span>This complementary switching action ensures </span><span class=\"c7\">low static power dissipation</span><span>&nbsp;and </span><span class=\"c7\">full voltage swing</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Voltage Transfer Characteristics (VTC) of CMOS Inverter",
+    "className": "c5",
+    "id": "h.ynobt848oj5c",
+    "html": "<span class=\"c14 c7\">Voltage Transfer Characteristics (VTC) of CMOS Inverter</span>"
+  },
+  {
+    "type": "p",
+    "text": "The Voltage Transfer Characteristic (VTC) represents the relationship between:",
+    "className": "c4",
+    "html": "<span>The </span><span class=\"c7\">Voltage Transfer Characteristic (VTC)</span><span class=\"c2\">&nbsp;represents the relationship between:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Vin (input voltage)Vout (output voltage)",
+    "className": "c8 lst-kix_h9ljew9jci06-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c9 c7\">Vin (input voltage)<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c9 c7\">Vout (output voltage)<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "The VTC curve is obtained by plotting Vout versus Vin and provides critical insight into:",
+    "className": "c4",
+    "html": "<span>The VTC curve is obtained by plotting </span><span class=\"c7\">Vout versus Vin</span><span class=\"c2\">&nbsp;and provides critical insight into:</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image26.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 624.00px; height: 224.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "ul",
+    "text": "Noise marginsSwitching thresholdStability of logic levels",
+    "className": "c8 lst-kix_ssvt4g7jno32-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Noise margins<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Switching threshold<br></span></li><li class=\"c1 li-bullet-0\"><span>Stability of logic levels<br><br></span><span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 224.00px;\"><img alt=\"\" src=\"images/image26.png\" style=\"width: 624.00px; height: 224.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\" title=\"\"></span><span class=\"c2\"><br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Load Line Plot Concept",
+    "className": "c5",
+    "id": "h.ppo7p2amrqt4",
+    "html": "<span class=\"c14 c7\">Load Line Plot Concept</span>"
+  },
+  {
+    "type": "p",
+    "text": "The VTC of a CMOS inverter can be derived graphically using a load-line plot.",
+    "className": "c4",
+    "html": "<span>The VTC of a CMOS inverter can be derived graphically using a </span><span class=\"c7\">load-line plot</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Basic Idea",
+    "className": "c13",
+    "id": "h.bdp8psz3em21",
+    "html": "<span class=\"c0\">Basic Idea</span>"
+  },
+  {
+    "type": "p",
+    "text": "The load-line plot is obtained by superimposing the I–V characteristics of NMOS and PMOS transistors on a common coordinate system.",
+    "className": "c4",
+    "html": "<span>The load-line plot is obtained by </span><span class=\"c7\">superimposing the I–V characteristics of NMOS and PMOS transistors</span><span class=\"c2\">&nbsp;on a common coordinate system.</span>"
+  },
+  {
+    "type": "p",
+    "text": "To achieve this, the following transformations are used:",
+    "className": "c4",
+    "html": "<span class=\"c2\">To achieve this, the following transformations are used:</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image30.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 245.00px; height: 275.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "p",
+    "text": "The PMOS characteristics are obtained by:",
+    "className": "c4",
+    "html": "<span class=\"c2\">The PMOS characteristics are obtained by:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Mirroring around the x-axisShifting horizontally by VDD",
+    "className": "c8 lst-kix_lz55j5g3qqtr-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c9 c7\">Mirroring around the x-axis<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c9 c7\">Shifting horizontally by VDD<br></span></li>"
+  },
+  {
+    "type": "img",
+    "src": "images/image34.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 526.33px; height: 350.89px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "DC Operating Points",
+    "className": "c13",
+    "id": "h.rqvl787mo95j",
+    "html": "<span class=\"c0\">DC Operating Points</span>"
+  },
+  {
+    "type": "p",
+    "text": "For a valid DC operating point:",
+    "className": "c4",
+    "html": "<span>For a valid </span><span class=\"c7\">DC operating point</span><span class=\"c2\">:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "The drain current through NMOS must equal the drain current through PMOS",
+    "className": "c8 lst-kix_5r6mmctpsmmw-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">The drain current through NMOS must equal the drain current through PMOS<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Graphically:",
+    "className": "c4",
+    "html": "<span class=\"c2\">Graphically:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "DC operating points are located at the intersection of the NMOS and PMOS load lines",
+    "className": "c8 lst-kix_k62oixabajh5-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>DC operating points are located at the </span><span class=\"c9 c7\">intersection of the NMOS and PMOS load lines<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "It is observed that:",
+    "className": "c4",
+    "html": "<span class=\"c2\">It is observed that:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Most operating points lie near VOH or VOLThe transition region is very narrow",
+    "className": "c8 lst-kix_fl2cf60333q-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>Most operating points lie near </span><span class=\"c9 c7\">VOH or VOL<br></span></li><li class=\"c1 li-bullet-0\"><span>The transition region is </span><span class=\"c9 c7\">very narrow<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "This explains the steep slope of the CMOS inverter VTC.",
+    "className": "c4",
+    "html": "<span>This explains the </span><span class=\"c7\">steep slope</span><span class=\"c2\">&nbsp;of the CMOS inverter VTC.</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image29.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 494.50px; height: 329.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Region-Wise Analysis of VTC",
+    "className": "c5",
+    "id": "h.ta5ktg2b9rii",
+    "html": "<span class=\"c14 c7\">Region-Wise Analysis of VTC</span>"
+  },
+  {
+    "type": "p",
+    "text": "The VTC can be divided into five regions:",
+    "className": "c4",
+    "html": "<span>The VTC can be divided into </span><span class=\"c7\">five regions</span><span class=\"c2\">:</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Region A",
+    "className": "c13",
+    "id": "h.et1apa4bg5v5",
+    "html": "<span class=\"c0\">Region A</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image2.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 111.00px; height: 38.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "img",
+    "src": "images/image78.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 212.00px; height: 50.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "ul",
+    "text": "NMOS is cut-offPMOS is ON (linear region)Output voltage:",
+    "className": "c8 lst-kix_z6ocuqeqttig-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 111.00px; height: 38.00px;\"><img alt=\"\" src=\"images/image2.png\" style=\"width: 111.00px; height: 38.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\" title=\"\"></span><span class=\"c2\"><br></span></li><li class=\"c1 li-bullet-0\"><span>NMOS is </span><span class=\"c9 c7\">cut-off<br></span></li><li class=\"c1 li-bullet-0\"><span>PMOS is </span><span class=\"c9 c7\">ON (linear region)<br></span></li><li class=\"c1 li-bullet-0\"><span>Output voltage:<br> </span><span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 212.00px; height: 50.00px;\"><img alt=\"\" src=\"images/image78.png\" style=\"width: 212.00px; height: 50.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\" title=\"\"></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Region B",
+    "className": "c13",
+    "id": "h.twpn2sf8ocst",
+    "html": "<span class=\"c0\">Region B</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image14.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 130.00px; height: 43.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "img",
+    "src": "images/image57.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 117.00px; height: 45.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "img",
+    "src": "images/image16.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 140.00px; height: 77.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "ul",
+    "text": "NMOS is ON (saturation)PMOS is ON (linear)At:Output remains close to VOH",
+    "className": "c8 lst-kix_yfzgdkcu3zyy-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 130.00px; height: 43.00px;\"><img alt=\"\" src=\"images/image14.png\" style=\"width: 130.00px; height: 43.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\" title=\"\"></span></li><li class=\"c1 li-bullet-0\"><span>NMOS is </span><span class=\"c9 c7\">ON (saturation)<br></span></li><li class=\"c1 li-bullet-0\"><span>PMOS is </span><span class=\"c9 c7\">ON (linear)<br></span></li><li class=\"c1 li-bullet-0\"><span>At</span><span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 117.00px; height: 45.00px;\"><img alt=\"\" src=\"images/image57.png\" style=\"width: 117.00px; height: 45.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\" title=\"\"></span><span>:<br></span><span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 140.00px; height: 77.00px;\"><img alt=\"\" src=\"images/image16.png\" style=\"width: 140.00px; height: 77.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\" title=\"\"></span></li><li class=\"c1 li-bullet-0\"><span>Output remains close to </span><span class=\"c9 c7\">VOH<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Region C (Switching Threshold Region)",
+    "className": "c13",
+    "id": "h.qram6gvbmttm",
+    "html": "<span class=\"c0\">Region C (Switching Threshold Region)</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image38.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 181.00px; height: 43.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "ul",
+    "text": "Both NMOS and PMOS operate in saturationThis is the inverter threshold voltage",
+    "className": "c8 lst-kix_wgd9xm5lj0qx-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 181.00px; height: 43.00px;\"><img alt=\"\" src=\"images/image38.png\" style=\"width: 181.00px; height: 43.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\" title=\"\"></span><span class=\"c2\"><br></span></li><li class=\"c1 li-bullet-0\"><span>Both NMOS and PMOS operate in </span><span class=\"c9 c7\">saturation<br></span></li><li class=\"c1 li-bullet-0\"><span>This is the </span><span class=\"c9 c7\">inverter threshold voltage<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Region D",
+    "className": "c13",
+    "id": "h.gkpehccgp0ls",
+    "html": "<span class=\"c0\">Region D</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image24.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 115.00px; height: 40.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "ul",
+    "text": "NMOS is linearPMOS is saturationSlope:",
+    "className": "c8 lst-kix_jp556zpx1b0q-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 115.00px; height: 40.00px;\"><img alt=\"\" src=\"images/image24.png\" style=\"width: 115.00px; height: 40.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\" title=\"\"></span></li><li class=\"c1 li-bullet-0\"><span>NMOS is </span><span class=\"c9 c7\">linear<br></span></li><li class=\"c1 li-bullet-0\"><span>PMOS is </span><span class=\"c9 c7\">saturation<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Slope:</span></li>"
+  },
+  {
+    "type": "img",
+    "src": "images/image5.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 153.00px; height: 83.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "ul",
+    "text": "Output voltage approaches VOL",
+    "className": "c8 lst-kix_jp556zpx1b0q-0",
+    "html": "<li class=\"c1 li-bullet-0\"><span>Output voltage approaches </span><span class=\"c9 c7\">VOL<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Region E",
+    "className": "c13",
+    "id": "h.kgs5eghes7cc",
+    "html": "<span class=\"c0\">Region E</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image71.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 212.00px; height: 48.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "img",
+    "src": "images/image58.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 185.00px; height: 52.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "ul",
+    "text": "NMOS is ON (linear)PMOS is OFFOutput voltage:",
+    "className": "c8 lst-kix_kdjrs2i0ofjw-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 212.00px; height: 48.00px;\"><img alt=\"\" src=\"images/image71.png\" style=\"width: 212.00px; height: 48.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\" title=\"\"></span></li><li class=\"c1 li-bullet-0\"><span>NMOS is </span><span class=\"c9 c7\">ON (linear)<br></span></li><li class=\"c1 li-bullet-0\"><span>PMOS is </span><span class=\"c9 c7\">OFF<br></span></li><li class=\"c1 li-bullet-0\"><span>Output voltage:<br></span><span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 185.00px; height: 52.00px;\"><img alt=\"\" src=\"images/image58.png\" style=\"width: 185.00px; height: 52.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\" title=\"\"></span><hr></li>"
+  },
+  {
+    "type": "img",
+    "src": "images/image77.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 624.00px; height: 416.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "img",
+    "src": "images/image25.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 624.00px; height: 416.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "h2",
+    "text": "MOSFET Capacitances in CMOS Inverter",
+    "className": "c5",
+    "id": "h.5ckq06td3fks",
+    "html": "<span class=\"c14 c7\">MOSFET Capacitances in CMOS Inverter</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image28.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 450.50px; height: 299.71px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "p",
+    "text": "MOSFETs exhibit several parasitic capacitances that significantly affect dynamic behavior.",
+    "className": "c4",
+    "html": "<span>MOSFETs exhibit several parasitic capacitances that significantly affect dynamic behavior.<br></span><span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 450.50px; height: 299.71px;\"><img alt=\"\" src=\"images/image28.png\" style=\"width: 450.50px; height: 299.71px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\" title=\"\"></span>"
+  },
+  {
+    "type": "p",
+    "text": "Lumped representation of parasitic MOSFET capacitances",
+    "className": "c4",
+    "html": "<span class=\"c9 c7\">Lumped representation of parasitic MOSFET capacitances</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image4.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 524.50px; height: 349.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "h3",
+    "text": "Types of Capacitances",
+    "className": "c13",
+    "id": "h.6l642lrji8rd",
+    "html": "<span class=\"c0\">Types of Capacitances</span>"
+  },
+  {
+    "type": "ol",
+    "text": "Overlap (Structure-Induced) Capacitance",
+    "className": "c8 lst-kix_6ml64yirlfhp-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c9 c7\">Overlap (Structure-Induced) Capacitance<br></span></li>"
+  },
+  {
+    "type": "img",
+    "src": "images/image73.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 77.00px; height: 38.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "ol",
+    "text": "Channel Capacitances",
+    "className": "c8 lst-kix_6ml64yirlfhp-0",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c9 c7\">Channel Capacitances<br></span></li>"
+  },
+  {
+    "type": "img",
+    "src": "images/image46.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 256.00px; height: 152.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "ol",
+    "text": "Diffusion Capacitances",
+    "className": "c8 lst-kix_6ml64yirlfhp-0",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c9 c7\">Diffusion Capacitances<br></span></li>"
+  },
+  {
+    "type": "img",
+    "src": "images/image37.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 247.00px; height: 98.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "img",
+    "src": "images/image68.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 513.50px; height: 343.10px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "CMOS Parasitic Capacitance Model",
+    "className": "c5",
+    "id": "h.tdde72c91rzt",
+    "html": "<span class=\"c14 c7\">CMOS Parasitic Capacitance Model</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image36.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 624.00px; height: 416.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "p",
+    "text": "For simplicity in analysis:",
+    "className": "c4",
+    "html": "<span class=\"c2\">For simplicity in analysis:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "All parasitic capacitances are lumped into a single load capacitance CLC_LCL​CLC_LCL​ is assumed to be connected between Vout and ground",
+    "className": "c8 lst-kix_2ofiik7nni5y-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>All parasitic capacitances are lumped into a single </span><span class=\"c9 c7\">load capacitance CLC_LCL​<br></span></li><li class=\"c1 li-bullet-0\"><span>CLC_LCL​ is assumed to be connected between </span><span class=\"c9 c7\">Vout and ground<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "This simplified model is used to analyze:",
+    "className": "c4",
+    "html": "<span class=\"c2\">This simplified model is used to analyze:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Transient behaviorPropagation delayPower dissipation",
+    "className": "c8 lst-kix_d4tkfxmyuew-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Transient behavior<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Propagation delay<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Power dissipation<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Propagation Delay in CMOS Inverter",
+    "className": "c5",
+    "id": "h.tomi4xy09a81",
+    "html": "<span class=\"c14 c7\">Propagation Delay in CMOS Inverter</span>"
+  },
+  {
+    "type": "p",
+    "text": "Propagation delay is the time required for a change at the input to reflect at the output.",
+    "className": "c4",
+    "html": "<span class=\"c2\">Propagation delay is the time required for a change at the input to reflect at the output.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Definitions",
+    "className": "c13",
+    "id": "h.fygo7o9zajae",
+    "html": "<span class=\"c0\">Definitions</span>"
+  },
+  {
+    "type": "ul",
+    "text": "TPHL: Delay during high-to-low output transitionTPLH: Delay during low-to-high output transition",
+    "className": "c8 lst-kix_qs70wsb4z537-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c7\">TPHL</span><span>: Delay during </span><span class=\"c7\">high-to-low</span><span class=\"c2\">&nbsp;output transition<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c7\">TPLH</span><span>: Delay during </span><span class=\"c7\">low-to-high</span><span class=\"c2\">&nbsp;output transition<br></span></li>"
+  },
+  {
+    "type": "img",
+    "src": "images/image17.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 511.76px; height: 341.17px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "p",
+    "text": "Measured between 50% voltage points of input and output waveforms.",
+    "className": "c4",
+    "html": "<span>Measured between </span><span class=\"c7\">50% voltage points</span><span>&nbsp;of input and output waveforms.<br><br></span><span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 511.76px; height: 341.17px;\"><img alt=\"\" src=\"images/image17.png\" style=\"width: 511.76px; height: 341.17px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\" title=\"\"></span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "RC Delay Model",
+    "className": "c13",
+    "id": "h.ip9w9au6rar4",
+    "html": "<span class=\"c0\">RC Delay Model</span>"
+  },
+  {
+    "type": "p",
+    "text": "The CMOS inverter behaves like a first-order RC network.",
+    "className": "c4",
+    "html": "<span>The CMOS inverter behaves like a </span><span class=\"c7\">first-order RC network</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image31.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 232.00px; height: 98.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "img",
+    "src": "images/image12.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 488.50px; height: 325.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "p",
+    "text": "The average propagation delay is:",
+    "className": "c4",
+    "html": "<span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 488.50px; height: 325.67px;\"><img alt=\"\" src=\"images/image12.png\" style=\"width: 488.50px; height: 325.67px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\" title=\"\"></span><span><br><br>The </span><span class=\"c7\">average propagation delay</span><span class=\"c2\">&nbsp;is:</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image22.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 460.00px; height: 72.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Dynamic Power Dissipation",
+    "className": "c5",
+    "id": "h.bnpxvwi4jx0k",
+    "html": "<span class=\"c14 c7\">Dynamic Power Dissipation</span>"
+  },
+  {
+    "type": "p",
+    "text": "Each time the output switches:",
+    "className": "c4",
+    "html": "<span class=\"c2\">Each time the output switches:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Load capacitor CLC_LCL​ is charged and discharged",
+    "className": "c8 lst-kix_u08s5q4uorss-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Load capacitor CLC_LCL​ is charged and discharged<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "Energy Considerations",
+    "className": "c13",
+    "id": "h.vmc9cxj6xc23",
+    "html": "<span class=\"c0\">Energy Considerations</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image47.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 188.00px; height: 51.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "img",
+    "src": "images/image70.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 195.00px; height: 80.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "ul",
+    "text": "Energy drawn from supply: Energy stored in capacitor:",
+    "className": "c8 lst-kix_vb7dukupdf60-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>Energy drawn from supply:<br> </span><span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 188.00px; height: 51.00px;\"><img alt=\"\" src=\"images/image47.png\" style=\"width: 188.00px; height: 51.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\" title=\"\"></span></li><li class=\"c1 li-bullet-0\"><span>Energy stored in capacitor:<br> </span><span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 195.00px; height: 80.00px;\"><img alt=\"\" src=\"images/image70.png\" style=\"width: 195.00px; height: 80.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\" title=\"\"></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Dynamic Power Equation",
+    "className": "c13",
+    "id": "h.mawmd9jqc41h",
+    "html": "<span class=\"c0\">Dynamic Power Equation</span>"
+  },
+  {
+    "type": "p",
+    "text": "If switching occurs f0→1f_{0→1}f0→1​ times per second:",
+    "className": "c4",
+    "html": "<span class=\"c2\">If switching occurs f0→1f_{0→1}f0→1​ times per second:</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image72.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 242.00px; height: 57.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Power Dissipation Due to Direct-Path Current",
+    "className": "c5",
+    "id": "h.4org08dwb1h7",
+    "html": "<span class=\"c14 c7\">Power Dissipation Due to Direct-Path Current</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image15.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 514.12px; height: 342.75px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "p",
+    "text": "Due to finite input rise and fall times:",
+    "className": "c4",
+    "html": "<span>Due to </span><span class=\"c7\">finite input rise and fall times</span><span class=\"c2\">:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "NMOS and PMOS conduct simultaneously for a short durationThis creates a direct path current between VDD and GND",
+    "className": "c8 lst-kix_qjgy108f5u88-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">NMOS and PMOS conduct simultaneously for a short duration<br></span></li><li class=\"c1 li-bullet-0\"><span>This creates a </span><span class=\"c7\">direct path current</span><span class=\"c2\">&nbsp;between VDD and GND<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Energy consumed per switching:",
+    "className": "c4",
+    "html": "<span class=\"c2\">Energy consumed per switching:</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image20.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 202.00px; height: 50.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Static Power Dissipation",
+    "className": "c5",
+    "id": "h.9lhmomxm7oka",
+    "html": "<span class=\"c14 c7\">Static Power Dissipation</span>"
+  },
+  {
+    "type": "p",
+    "text": "Static power dissipation is given by:",
+    "className": "c4",
+    "html": "<span class=\"c2\">Static power dissipation is given by:</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image76.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 187.00px; height: 48.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "p",
+    "text": "Ideally:",
+    "className": "c4",
+    "html": "<span class=\"c2\">Ideally:</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image50.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 122.00px; height: 47.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "ul",
+    "text": "Because NMOS and PMOS are never ON simultaneously in steady state",
+    "className": "c8 lst-kix_1v0409qxce05-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 122.00px; height: 47.00px;\"><img alt=\"\" src=\"images/image50.png\" style=\"width: 122.00px; height: 47.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);\" title=\"\"></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Because NMOS and PMOS are never ON simultaneously in steady state<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "In practice:",
+    "className": "c4",
+    "html": "<span class=\"c2\">In practice:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Small leakage currents existUsually negligible compared to dynamic power",
+    "className": "c8 lst-kix_hwijd564irg8-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Small leakage currents exist<br></span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Usually negligible compared to dynamic power<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Conclusion",
+    "className": "c5",
+    "id": "h.2lvr647cjxzy",
+    "html": "<span class=\"c14 c7\">Conclusion</span>"
+  },
+  {
+    "type": "p",
+    "text": "The CMOS inverter exhibits excellent performance due to its complementary structure. Its steep voltage transfer characteristics provide high noise immunity, while its low static power consumption makes it ideal for modern digital systems. The combined understanding of VTC, parasitic capacitances, propagation delay, and power dissipation is crucial for designing efficient CMOS logic circuits.",
+    "className": "c4",
+    "html": "<span class=\"c2\">The CMOS inverter exhibits excellent performance due to its complementary structure. Its steep voltage transfer characteristics provide high noise immunity, while its low static power consumption makes it ideal for modern digital systems. The combined understanding of VTC, parasitic capacitances, propagation delay, and power dissipation is crucial for designing efficient CMOS logic circuits.</span>"
+  },
+  {
+    "type": "h1",
+    "text": "4. Short Channel Effects",
+    "className": "c23",
+    "id": "h.nmkc4da1rd97",
+    "html": "<span class=\"c19 c7\">4. Short Channel Effects</span>"
+  },
+  {
+    "type": "h2",
+    "text": "4. Introduction",
+    "className": "c5",
+    "id": "h.fb3dcb6c8ilb",
+    "html": "<span class=\"c14 c7\">4. Introduction</span>"
+  },
+  {
+    "type": "p",
+    "text": "A MOS transistor is referred to as a short channel device when its physical channel length becomes comparable to the depletion region widths of the source and drain junctions. In modern VLSI technologies, aggressive scaling has reduced the effective channel length (L_{eff}) to values close to the source/drain junction depth (x_j). Under such conditions, the assumptions used for long-channel MOSFET operation no longer remain valid.",
+    "className": "c4",
+    "html": "<span>A MOS transistor is referred to as a </span><span class=\"c7\">short channel device</span><span class=\"c2\">&nbsp;when its physical channel length becomes comparable to the depletion region widths of the source and drain junctions. In modern VLSI technologies, aggressive scaling has reduced the effective channel length (L_{eff}) to values close to the source/drain junction depth (x_j). Under such conditions, the assumptions used for long-channel MOSFET operation no longer remain valid.</span>"
+  },
+  {
+    "type": "p",
+    "text": "Short channel effects (SCEs) arise mainly due to two fundamental physical causes:",
+    "className": "c4",
+    "html": "<span class=\"c2\">Short channel effects (SCEs) arise mainly due to two fundamental physical causes:</span>"
+  },
+  {
+    "type": "ol",
+    "text": "Limitations on carrier transport caused by very high electric fields in the channel.Electrostatic interactions between the drain, source, and channel, which modify the threshold voltage and degrade gate control.",
+    "className": "c8 lst-kix_i8weik9mpbco-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c7\">Limitations on carrier transport</span><span class=\"c2\">&nbsp;caused by very high electric fields in the channel.</span></li><li class=\"c1 li-bullet-0\"><span class=\"c7\">Electrostatic interactions between the drain, source, and channel</span><span class=\"c2\">, which modify the threshold voltage and degrade gate control.</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "As device dimensions continue to shrink, understanding and mitigating short channel effects has become a critical aspect of CMOS circuit and process design.",
+    "className": "c4",
+    "html": "<span class=\"c2\">As device dimensions continue to shrink, understanding and mitigating short channel effects has become a critical aspect of CMOS circuit and process design.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "4.1 Channel Length Modulation (CLM)",
+    "className": "c5",
+    "id": "h.s5rh6pe8xp6k",
+    "html": "<span class=\"c14 c7\">4.1 Channel Length Modulation (CLM)</span>"
+  },
+  {
+    "type": "p",
+    "text": "In an ideal long-channel MOSFET operating in saturation, the drain current is independent of the drain-to-source voltage (V_{DS}). However, in short-channel devices, this assumption no longer holds due to channel length modulation.",
+    "className": "c4",
+    "html": "<span>In an ideal long-channel MOSFET operating in saturation, the drain current is independent of the drain-to-source voltage (V_{DS}). However, in short-channel devices, this assumption no longer holds due to </span><span class=\"c7\">channel length modulation</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Physical Explanation",
+    "className": "c13",
+    "id": "h.3rzhwwa8w08c",
+    "html": "<span class=\"c0\">Physical Explanation</span>"
+  },
+  {
+    "type": "p",
+    "text": "As (V_{DS}) increases beyond the saturation voltage:",
+    "className": "c4",
+    "html": "<span class=\"c2\">As (V_{DS}) increases beyond the saturation voltage:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "The pinch-off point near the drain moves slightly toward the source.The voltage across the channel remains approximately equal to the overdrive voltage (V_{ov} = V_{GS} - V_T).The additional drain voltage drops across the depletion region between the channel end and the drain.",
+    "className": "c8 lst-kix_9iiaf9cind3v-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">The pinch-off point near the drain moves slightly toward the source.</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">The voltage across the channel remains approximately equal to the overdrive voltage (V_{ov} = V_{GS} - V_T).</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">The additional drain voltage drops across the depletion region between the channel end and the drain.</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "As the drain depletion region widens, it encroaches into the channel region, effectively reducing the channel length from (L) to (L - \\Delta L). Since the drain current is inversely proportional to the channel length, this reduction causes the drain current to increase with increasing (V_{DS}).",
+    "className": "c4",
+    "html": "<span class=\"c2\">As the drain depletion region widens, it encroaches into the channel region, effectively reducing the channel length from (L) to (L - \\Delta L). Since the drain current is inversely proportional to the channel length, this reduction causes the drain current to increase with increasing (V_{DS}).</span>"
+  },
+  {
+    "type": "p",
+    "text": "This phenomenon is called channel length modulation and is more pronounced in advanced technologies with very small channel lengths.",
+    "className": "c4",
+    "html": "<span>This phenomenon is called </span><span class=\"c7\">channel length modulation</span><span class=\"c2\">&nbsp;and is more pronounced in advanced technologies with very small channel lengths.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Modified Drain Current Equation",
+    "className": "c13",
+    "id": "h.s9u8ngksposm",
+    "html": "<span class=\"c0\">Modified Drain Current Equation</span>"
+  },
+  {
+    "type": "p",
+    "text": "The effect of channel length modulation is incorporated into the drain current equation as:",
+    "className": "c4",
+    "html": "<span class=\"c2\">The effect of channel length modulation is incorporated into the drain current equation as:</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image42.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 422.00px; height: 70.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "p",
+    "text": "Where:",
+    "className": "c4",
+    "html": "<span class=\"c2\">Where:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "(\\lambda) is the channel length modulation parameter (V⁻¹)Its value depends on fabrication technology and channel length",
+    "className": "c8 lst-kix_nyvss5a4p2in-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">(\\lambda) is the channel length modulation parameter (V⁻¹)</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Its value depends on fabrication technology and channel length</span></li>"
+  },
+  {
+    "type": "img",
+    "src": "images/image18.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 480.50px; height: 320.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "4.2 Drain-Induced Barrier Lowering (DIBL)",
+    "className": "c5",
+    "id": "h.tb0kj5ng0rmw",
+    "html": "<span class=\"c14 c7\">4.2 Drain-Induced Barrier Lowering (DIBL)</span>"
+  },
+  {
+    "type": "p",
+    "text": "Drain-Induced Barrier Lowering is a major short channel effect resulting from excessive electrostatic coupling between the drain and the channel.",
+    "className": "c4",
+    "html": "<span class=\"c2\">Drain-Induced Barrier Lowering is a major short channel effect resulting from excessive electrostatic coupling between the drain and the channel.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Physical Mechanism",
+    "className": "c13",
+    "id": "h.3ax1nvi7brc5",
+    "html": "<span class=\"c0\">Physical Mechanism</span>"
+  },
+  {
+    "type": "p",
+    "text": "In a long-channel MOSFET:",
+    "className": "c4",
+    "html": "<span class=\"c2\">In a long-channel MOSFET:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Increasing drain voltage does not significantly affect the source-channel potential barrier.Drain current remains controlled primarily by the gate voltage.",
+    "className": "c8 lst-kix_7mrsidwndaz9-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Increasing drain voltage does not significantly affect the source-channel potential barrier.</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Drain current remains controlled primarily by the gate voltage.</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "In a short-channel MOSFET:",
+    "className": "c4",
+    "html": "<span class=\"c2\">In a short-channel MOSFET:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Increasing drain bias lowers the conduction band energy at the drain.The drain depletion region expands toward the source.This reduces the source-to-channel potential barrier, even without increasing the gate voltage.",
+    "className": "c8 lst-kix_gjuoo9n8mwc-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Increasing drain bias lowers the conduction band energy at the drain.</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">The drain depletion region expands toward the source.</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">This reduces the source-to-channel potential barrier, even without increasing the gate voltage.</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "As a result, carriers can flow from source to drain at lower gate voltages, effectively reducing the threshold voltage.",
+    "className": "c4",
+    "html": "<span class=\"c2\">As a result, carriers can flow from source to drain at lower gate voltages, effectively reducing the threshold voltage.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Consequences of DIBL",
+    "className": "c13",
+    "id": "h.9exo6fgf8gr6",
+    "html": "<span class=\"c0\">Consequences of DIBL</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Increased off-state leakage currentReduced threshold voltage with increasing (V_{DS})Loss of gate control over channel conduction",
+    "className": "c8 lst-kix_4r1y1vsh5gx7-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Increased off-state leakage current</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Reduced threshold voltage with increasing (V_{DS})</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Loss of gate control over channel conduction</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "DIBL may eventually lead to punch-through, where the source and drain depletion regions merge.",
+    "className": "c4",
+    "html": "<span>DIBL may eventually lead to </span><span class=\"c7\">punch-through</span><span class=\"c2\">, where the source and drain depletion regions merge.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Mitigation",
+    "className": "c13",
+    "id": "h.t78yqy93g7zp",
+    "html": "<span class=\"c0\">Mitigation</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Applying reverse substrate bias to increase source barrier heightUsing shallow source/drain junctionsIncreasing channel doping near the source",
+    "className": "c8 lst-kix_gvclzlezskgp-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Applying reverse substrate bias to increase source barrier height</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Using shallow source/drain junctions</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Increasing channel doping near the source</span></li>"
+  },
+  {
+    "type": "img",
+    "src": "images/image45.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 480.16px; height: 319.40px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "4.3 Velocity Saturation",
+    "className": "c5",
+    "id": "h.20l8mblr7qch",
+    "html": "<span class=\"c14 c7\">4.3 Velocity Saturation</span>"
+  },
+  {
+    "type": "p",
+    "text": "In long-channel MOSFETs, carrier velocity is proportional to the electric field:[v_d = \\mu E]",
+    "className": "c4",
+    "html": "<span class=\"c2\">In long-channel MOSFETs, carrier velocity is proportional to the electric field:<br>[<br>v_d = \\mu E<br>]</span>"
+  },
+  {
+    "type": "p",
+    "text": "However, in short-channel devices, the electric field along the channel becomes extremely high, causing carriers to reach a maximum velocity limit known as velocity saturation.",
+    "className": "c4",
+    "html": "<span>However, in short-channel devices, the electric field along the channel becomes extremely high, causing carriers to reach a maximum velocity limit known as </span><span class=\"c7\">velocity saturation</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Impact on Drain Current",
+    "className": "c13",
+    "id": "h.smqo4bdpsugd",
+    "html": "<span class=\"c0\">Impact on Drain Current</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Carrier velocity no longer increases linearly with electric fieldDrain current saturates earlier than predicted by long-channel modelsSaturation occurs before (V_{DS} = V_{GS} - V_T)",
+    "className": "c8 lst-kix_gmw78lshw5nb-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Carrier velocity no longer increases linearly with electric field</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Drain current saturates earlier than predicted by long-channel models</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Saturation occurs before (V_{DS} = V_{GS} - V_T)</span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "Modified Drain Current Behavior",
+    "className": "c13",
+    "id": "h.mithzukvj105",
+    "html": "<span class=\"c0\">Modified Drain Current Behavior</span>"
+  },
+  {
+    "type": "ul",
+    "text": "The saturation current shows a linear dependence on (V_{GS}) instead of a quadratic dependenceThis reduces the current drive capability of short-channel devices",
+    "className": "c8 lst-kix_lskan4mzkmno-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>The saturation current shows a </span><span class=\"c7\">linear dependence on (V_{GS})</span><span class=\"c2\">&nbsp;instead of a quadratic dependence</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">This reduces the current drive capability of short-channel devices</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Velocity saturation effects are generally less severe in PMOS devices due to lower hole mobility.",
+    "className": "c4",
+    "html": "<span>Velocity saturation effects are generally </span><span class=\"c7\">less severe in PMOS devices</span><span class=\"c2\">&nbsp;due to lower hole mobility.</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image3.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 410.25px; height: 273.50px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "4.4 Subthreshold Conduction (Weak Inversion)",
+    "className": "c5",
+    "id": "h.jpfnufeyubkj",
+    "html": "<span class=\"c14 c7\">4.4 Subthreshold Conduction (Weak Inversion)</span>"
+  },
+  {
+    "type": "p",
+    "text": "In an ideal switch, drain current should abruptly drop to zero when (V_{GS} < V_T). In reality, MOSFETs conduct a small current even below threshold voltage.",
+    "className": "c4",
+    "html": "<span class=\"c2\">In an ideal switch, drain current should abruptly drop to zero when (V_{GS} &lt; V_T). In reality, MOSFETs conduct a small current even below threshold voltage.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Explanation",
+    "className": "c13",
+    "id": "h.970fogx4ztgn",
+    "html": "<span class=\"c0\">Explanation</span>"
+  },
+  {
+    "type": "ul",
+    "text": "For (V_{GS} < V_T), a weak inversion layer existsCarriers move by diffusion rather than driftDrain current decreases exponentially with decreasing (V_{GS})",
+    "className": "c8 lst-kix_gar2x6aojmce-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">For (V_{GS} &lt; V_T), a weak inversion layer exists</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Carriers move by diffusion rather than drift</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Drain current decreases exponentially with decreasing (V_{GS})</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "This behavior resembles that of a bipolar transistor and is called subthreshold conduction.",
+    "className": "c4",
+    "html": "<span>This behavior resembles that of a bipolar transistor and is called </span><span class=\"c7\">subthreshold conduction</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Subthreshold Slope (S)",
+    "className": "c13",
+    "id": "h.6k39idgd1n20",
+    "html": "<span class=\"c0\">Subthreshold Slope (S)</span>"
+  },
+  {
+    "type": "p",
+    "text": "The quality of turn-off is measured using the subthreshold slope:[S = n \\frac{kT}{q} \\ln(10)]",
+    "className": "c4",
+    "html": "<span class=\"c2\">The quality of turn-off is measured using the subthreshold slope:<br>[<br>S = n \\frac{kT}{q} \\ln(10)<br>]</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Ideal value: 60 mV/decade at room temperaturePractical values are higher due to short channel effects",
+    "className": "c8 lst-kix_nwb32qnul4w9-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span>Ideal value: </span><span class=\"c7\">60 mV/decade</span><span class=\"c2\">&nbsp;at room temperature</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Practical values are higher due to short channel effects</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Lowering supply voltage requires careful control of (V_T) to limit subthreshold leakage.",
+    "className": "c4",
+    "html": "<span class=\"c2\">Lowering supply voltage requires careful control of (V_T) to limit subthreshold leakage.</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image63.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 378.75px; height: 252.50px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "4.5 Hot Carrier Effects (HCE)",
+    "className": "c5",
+    "id": "h.2dlgmnh6mib8",
+    "html": "<span class=\"c14 c7\">4.5 Hot Carrier Effects (HCE)</span>"
+  },
+  {
+    "type": "p",
+    "text": "As device dimensions shrink while supply voltages remain high, electric fields near the drain increase significantly.",
+    "className": "c4",
+    "html": "<span class=\"c2\">As device dimensions shrink while supply voltages remain high, electric fields near the drain increase significantly.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Physical Mechanism",
+    "className": "c13",
+    "id": "h.r2ygz2mx4qpr",
+    "html": "<span class=\"c0\">Physical Mechanism</span>"
+  },
+  {
+    "type": "ul",
+    "text": "High-energy electrons gain sufficient kinetic energyElectrons may enter the gate oxideTrapped charges modify threshold voltage",
+    "className": "c8 lst-kix_va0tup9qdk5r-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">High-energy electrons gain sufficient kinetic energy</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Electrons may enter the gate oxide</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Trapped charges modify threshold voltage</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Effects include:",
+    "className": "c4",
+    "html": "<span class=\"c2\">Effects include:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Increase in NMOS threshold voltageDecrease in PMOS threshold voltageLong-term reliability degradation",
+    "className": "c8 lst-kix_96ihwix09fhm-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Increase in NMOS threshold voltage</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Decrease in PMOS threshold voltage</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Long-term reliability degradation</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Modern processes reduce HCE using lightly doped drain (LDD) structures.",
+    "className": "c4",
+    "html": "<span class=\"c2\">Modern processes reduce HCE using lightly doped drain (LDD) structures.</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image67.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 377.01px; height: 251.34px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "4.6 Gate-Induced Drain Leakage (GIDL)",
+    "className": "c5",
+    "id": "h.pwmer6ybd77b",
+    "html": "<span class=\"c14 c7\">4.6 Gate-Induced Drain Leakage (GIDL)</span>"
+  },
+  {
+    "type": "p",
+    "text": "GIDL is an off-state leakage mechanism observed at high drain voltage and low or negative gate bias.",
+    "className": "c4",
+    "html": "<span class=\"c2\">GIDL is an off-state leakage mechanism observed at high drain voltage and low or negative gate bias.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Explanation",
+    "className": "c13",
+    "id": "h.zf5jedtoidxa",
+    "html": "<span class=\"c0\">Explanation</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Strong electric field at gate-drain overlapNarrow depletion region in heavily doped drainBand-to-band tunneling occursGenerated electrons flow to the drain",
+    "className": "c8 lst-kix_rl3rn2ktrc3i-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Strong electric field at gate-drain overlap</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Narrow depletion region in heavily doped drain</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Band-to-band tunneling occurs</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Generated electrons flow to the drain</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "GIDL is not due to oxide tunneling but occurs entirely within the silicon.",
+    "className": "c4",
+    "html": "<span class=\"c2\">GIDL is not due to oxide tunneling but occurs entirely within the silicon.</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image8.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 401.25px; height: 267.50px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "4.7 Body Bias (Body Effect / Short Channel Variant)",
+    "className": "c5",
+    "id": "h.6hiaxn8qb14k",
+    "html": "<span class=\"c14 c7\">4.7 Body Bias (Body Effect / Short Channel Variant)</span>"
+  },
+  {
+    "type": "p",
+    "text": "In short-channel MOSFETs, the body effect becomes more pronounced due to stronger coupling between the channel and substrate.",
+    "className": "c4",
+    "html": "<span class=\"c2\">In short-channel MOSFETs, the body effect becomes more pronounced due to stronger coupling between the channel and substrate.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Impact",
+    "className": "c13",
+    "id": "h.zid160as4kof",
+    "html": "<span class=\"c0\">Impact</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Threshold voltage varies with substrate biasIncreased sensitivity of Vt to body potentialDegraded noise margins and stability",
+    "className": "c8 lst-kix_gddnmprj7u5h-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Threshold voltage varies with substrate bias</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Increased sensitivity of Vt to body potential</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Degraded noise margins and stability</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "This effect is exploited intentionally in adaptive body-biasing techniques.",
+    "className": "c4",
+    "html": "<span class=\"c2\">This effect is exploited intentionally in adaptive body-biasing techniques.</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image52.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 403.38px; height: 268.92px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "4.8 Electromigration",
+    "className": "c5",
+    "id": "h.tjav70wjts95",
+    "html": "<span class=\"c14 c7\">4.8 Electromigration</span>"
+  },
+  {
+    "type": "p",
+    "text": "Electromigration is a reliability issue caused by prolonged current flow in metal interconnects.",
+    "className": "c4",
+    "html": "<span class=\"c2\">Electromigration is a reliability issue caused by prolonged current flow in metal interconnects.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Key Points",
+    "className": "c13",
+    "id": "h.j9bf5fgey4oi",
+    "html": "<span class=\"c0\">Key Points</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Metal ions drift under high current densityCauses opens or shorts over timeStrongly dependent on temperature and current density",
+    "className": "c8 lst-kix_u9ngz1jw5z9s-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Metal ions drift under high current density</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Causes opens or shorts over time</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Strongly dependent on temperature and current density</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Mitigation techniques include:",
+    "className": "c4",
+    "html": "<span class=\"c2\">Mitigation techniques include:</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Wider interconnectsCopper metallizationAlloying aluminum with Cu",
+    "className": "c8 lst-kix_fasj5ow3llqa-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Wider interconnects</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Copper metallization</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Alloying aluminum with Cu</span></li>"
+  },
+  {
+    "type": "img",
+    "src": "images/image60.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 334.50px; height: 223.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "4.9 CMOS Latch-Up",
+    "className": "c5",
+    "id": "h.kwwhn7su2xz6",
+    "html": "<span class=\"c14 c7\">4.9 CMOS Latch-Up</span>"
+  },
+  {
+    "type": "p",
+    "text": "CMOS processes inherently form parasitic bipolar transistors, creating an n-p-n-p thyristor structure.",
+    "className": "c4",
+    "html": "<span class=\"c2\">CMOS processes inherently form parasitic bipolar transistors, creating an n-p-n-p thyristor structure.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Latch-Up Mechanism",
+    "className": "c13",
+    "id": "h.aqrw0jf1kpfv",
+    "html": "<span class=\"c0\">Latch-Up Mechanism</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Triggered by transient currents or voltage spikesCreates low-resistance path between VDD and VSSLeads to excessive current and device failure",
+    "className": "c8 lst-kix_tgv3x62tnk9v-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Triggered by transient currents or voltage spikes</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Creates low-resistance path between VDD and VSS</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Leads to excessive current and device failure</span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "Prevention Techniques",
+    "className": "c13",
+    "id": "h.slel9ulodmod",
+    "html": "<span class=\"c0\">Prevention Techniques</span>"
+  },
+  {
+    "type": "ul",
+    "text": "Guard ringsMultiple well and substrate contactsLow-resistance wells and substrates",
+    "className": "c8 lst-kix_hpaans2ob96k-0 start",
+    "html": "<li class=\"c1 li-bullet-0\"><span class=\"c2\">Guard rings</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Multiple well and substrate contacts</span></li><li class=\"c1 li-bullet-0\"><span class=\"c2\">Low-resistance wells and substrates</span></li>"
+  },
+  {
+    "type": "img",
+    "src": "images/image65.png",
+    "alt": "",
+    "title": "",
+    "style": "width: 407.11px; height: 271.16px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Conclusion",
+    "className": "c5",
+    "id": "h.wy95l8p501t",
+    "html": "<span class=\"c14 c7\">Conclusion</span>"
+  },
+  {
+    "type": "p",
+    "text": "Short channel effects significantly impact the performance, power consumption, and reliability of modern CMOS devices. As technology scales further, careful device engineering, circuit techniques, and layout strategies are required to control these effects and ensure robust operation of VLSI systems.",
+    "className": "c4",
+    "html": "<span class=\"c2\">Short channel effects significantly impact the performance, power consumption, and reliability of modern CMOS devices. As technology scales further, careful device engineering, circuit techniques, and layout strategies are required to control these effects and ensure robust operation of VLSI systems.</span>"
+  }
+]

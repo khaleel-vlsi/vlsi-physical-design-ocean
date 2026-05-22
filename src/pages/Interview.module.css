@@ -1,0 +1,159 @@
+.interviewContainer {
+  padding: 6rem 2rem 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: var(--color-text, #E2E8F0);
+  background-color: var(--color-bg, #0B0E14);
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #4285f4, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #94A3B8;
+}
+
+.qaSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.qaCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.qaCard.active {
+  border-color: #34d399;
+  box-shadow: 0 4px 15px rgba(52, 211, 153, 0.1);
+}
+
+.questionBtn {
+  width: 100%;
+  text-align: left;
+  padding: 1.5rem 2rem;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.questionBtn:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.questionText {
+  flex: 1;
+  padding-right: 2rem;
+  line-height: 1.4;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #34d399;
+  font-weight: bold;
+}
+
+.answerBox {
+  padding: 0 2rem 1.5rem 2rem;
+}
+
+.importantPoint {
+  background-color: #000000;
+  color: #34d399;
+  padding: 1.5rem;
+  border-left: 4px solid #34d399;
+  border-radius: 6px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  margin: 0;
+}
+
+.ctaSection {
+  text-align: center;
+  padding: 3rem;
+  background: linear-gradient(135deg, rgba(66, 133, 244, 0.1), rgba(52, 211, 153, 0.1));
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ctaSection h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.ctaSection p {
+  color: #94A3B8;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.ctaBtn {
+  display: inline-block;
+  background: #34d399;
+  color: #0B0E14;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(52, 211, 153, 0.3);
+}
+
+.ctaBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 211, 153, 0.4);
+  background: #2ebd88;
+}
+
+@media (max-width: 768px) {
+  .interviewContainer {
+    padding: 5rem 1rem 2rem;
+  }
+  
+  .header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .questionBtn {
+    padding: 1.2rem;
+    font-size: 1.1rem;
+  }
+  
+  .answerBox {
+    padding: 0 1.2rem 1.2rem;
+  }
+  
+  .importantPoint {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+}

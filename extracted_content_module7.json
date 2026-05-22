@@ -1,0 +1,1311 @@
+[
+  {
+    "type": "h1",
+    "text": "INTRODUCTION TO DFT",
+    "id": "h.opfadh86grqx",
+    "html": "<span class=\"c6 c23\">INTRODUCTION TO DFT</span>"
+  },
+  {
+    "type": "h3",
+    "text": "(Design For Testability – Beginner Level)",
+    "id": "h.vtp5fgashlla",
+    "html": "<span class=\"c9 c6\">(Design For Testability – Beginner Level)</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "1️⃣ Importance of Testing (WHY testing is needed?)",
+    "id": "h.vfxhnf2bdbqa",
+    "html": "<span class=\"c11 c6\">1️⃣ Importance of Testing (WHY testing is needed?)</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Why is testing mandatory in VLSI?",
+    "id": "h.ob7yq42ylpyt",
+    "html": "<span class=\"c9 c6\">Why is testing mandatory in VLSI?</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span>As </span><span class=\"c6\">technology node reduces</span><span class=\"c0\">&nbsp;(7nm, 5nm, 3nm):<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c7 li-bullet-0\"><span>Transistors become </span><span class=\"c6 c19\">very small<br></span></li><li class=\"c2 c7 li-bullet-0\"><span>Manufacturing becomes </span><span class=\"c19 c6\">more complex<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span>Even a </span><span class=\"c6\">tiny dust particle</span><span class=\"c0\">&nbsp;can:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Short two wires<br></span></li><li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Break a connection (open fault)<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "100% defect-free manufacturing is NOT possible",
+    "html": "<span>&nbsp;</span><span class=\"c19 c6\">100% defect-free manufacturing is NOT possible</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Why we test chips?",
+    "id": "h.d6i7c87v4k78",
+    "html": "<span class=\"c9 c6\">Why we test chips?</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span>Some defects are </span><span class=\"c19 c6\">unavoidable<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Testing helps:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c7 li-bullet-0\"><span>Identify </span><span class=\"c19 c6\">good chips<br></span></li><li class=\"c2 c7 li-bullet-0\"><span>Reject </span><span class=\"c19 c6\">bad chips<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span>Faulty chips must </span><span class=\"c6\">NOT</span><span class=\"c0\">&nbsp;reach customers<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Product Quality Depends On",
+    "id": "h.wh8kz0rrp2u",
+    "html": "<span class=\"c9 c6\">Product Quality Depends On</span>"
+  },
+  {
+    "type": "table",
+    "content": "<tbody><tr class=\"c15\"><td class=\"c28\" colspan=\"1\" rowspan=\"1\"><p class=\"c17\"><span class=\"c6\">Parameter</span></p></td><td class=\"c26\" colspan=\"1\" rowspan=\"1\"><p class=\"c17\"><span class=\"c6\">Meaning</span></p></td></tr><tr class=\"c15\"><td class=\"c28\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Test Cost</span></p></td><td class=\"c26\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Cost spent on testing</span></p></td></tr><tr class=\"c15\"><td class=\"c28\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Test Time</span></p></td><td class=\"c26\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Time taken to test each chip</span></p></td></tr><tr class=\"c15\"><td class=\"c28\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Test Quality</span></p></td><td class=\"c26\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">How many faults are detected</span></p></td></tr></tbody>"
+  },
+  {
+    "type": "p",
+    "text": "Goal: ✔ Low cost ✔ Less time ✔ High fault detection",
+    "html": "<span>&nbsp;</span><span class=\"c6\">Goal:<br></span><span class=\"c0\">&nbsp;✔ Low cost<br> ✔ Less time<br> ✔ High fault detection</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "images/image9.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "2️⃣ What is DFT (Design For Testability)?",
+    "id": "h.ifbgkfxkkb5z",
+    "html": "<span class=\"c11 c6\">2️⃣ What is DFT (Design For Testability)?</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Definition (Simple Words)",
+    "id": "h.9c99t3quogan",
+    "html": "<span class=\"c9 c6\">Definition (Simple Words)</span>"
+  },
+  {
+    "type": "p",
+    "text": "DFT is the extra logic added to a chip during the design stage to make post-manufacturing testing possible.",
+    "html": "<span class=\"c19 c6\">DFT is the extra logic added to a chip during the design stage to make post-manufacturing testing possible.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Key Points",
+    "id": "h.lllq6gg7rx2b",
+    "html": "<span class=\"c9 c6\">Key Points</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span>DFT is added </span><span class=\"c19 c6\">before fabrication<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">It helps test:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Internal flip-flops<br></span></li><li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Internal nets<br></span></li><li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Memory elements<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span>Manufacturing is </span><span class=\"c19 c6\">not error-free<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">So testing after manufacturing is compulsory<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Important Clarification",
+    "id": "h.bik08t208yt1",
+    "html": "<span class=\"c9 c6\">Important Clarification</span>"
+  },
+  {
+    "type": "p",
+    "text": "DFT does NOT repair the chip  DFT only detects whether chip is GOOD or BAD",
+    "html": "<span>&nbsp;DFT does </span><span class=\"c6\">NOT repair</span><span>&nbsp;the chip<br> &nbsp;DFT only </span><span class=\"c6\">detects</span><span class=\"c0\">&nbsp;whether chip is GOOD or BAD</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "DFT is:",
+    "id": "h.luiyhdkyqyog",
+    "html": "<span class=\"c9 c6\">DFT is:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Detection → YES<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Localization → NO<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Repair → NO<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "images/image6.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "3️⃣ Difference Between Verification and Testing",
+    "id": "h.ryjko05aywpb",
+    "html": "<span class=\"c11 c6\">3️⃣ Difference Between Verification and Testing</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Functional Verification",
+    "id": "h.sbo8he6kf4y7",
+    "html": "<span class=\"c9 c6\">Functional Verification</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span>Done </span><span class=\"c19 c6\">before fabrication<br></span></li><li class=\"c2 c3 li-bullet-0\"><span>Uses </span><span class=\"c19 c6\">testbench<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Checks design logic correctness<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "Testing (DFT)",
+    "id": "h.1fwm81p1okg",
+    "html": "<span class=\"c9 c6\">Testing (DFT)</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span>Done </span><span class=\"c19 c6\">after fabrication<br></span></li><li class=\"c2 c3 li-bullet-0\"><span>Checks </span><span class=\"c19 c6\">manufacturing defects<br></span></li><li class=\"c2 c3 li-bullet-0\"><span>Uses </span><span class=\"c19 c6\">test patterns<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "images/image3.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "4️⃣ Faults, Defects, Errors (VERY IMPORTANT)",
+    "id": "h.gvc3cq6e0nhx",
+    "html": "<span class=\"c11 c6\">4️⃣ Faults, Defects, Errors (VERY IMPORTANT)</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Defect",
+    "id": "h.qii9mhodhcfs",
+    "html": "<span class=\"c9 c6\">Defect</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Physical problem in silicon<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Example:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Broken wire<br></span></li><li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Short circuit<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "Fault",
+    "id": "h.unixpt9mdtb7",
+    "html": "<span class=\"c9 c6\">Fault</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Logical model of defect<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Example:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Stuck-at-0<br></span></li><li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Stuck-at-1<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "Error",
+    "id": "h.7h6dt9hfnwfx",
+    "html": "<span class=\"c9 c6\">Error</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Wrong output seen at chip pin<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Defect → Fault → Error",
+    "html": "<span><br> </span><span class=\"c19 c6\">Defect → Fault → Error</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "images/image14.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "5️⃣ Fault Models (Core Concept of DFT)",
+    "id": "h.1abyp4uoc482",
+    "html": "<span class=\"c11 c6\">5️⃣ Fault Models (Core Concept of DFT)</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Why Fault Models?",
+    "id": "h.rfgdkwajzn19",
+    "html": "<span class=\"c9 c6\">Why Fault Models?</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">We cannot see inside silicon<br></span></li><li class=\"c2 c3 li-bullet-0\"><span>So we </span><span class=\"c19 c6\">model defects logically<br></span></li><li class=\"c2 c3 li-bullet-0\"><span>Most common model: </span><span class=\"c19 c6\">Stuck-At Fault<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Stuck-At-1 Fault",
+    "id": "h.ke0suki8xp9r",
+    "html": "<span class=\"c9 c6\">Stuck-At-1 Fault</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Net always reads logic ‘1’<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Even if we drive ‘0’<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "Stuck-At-0 Fault",
+    "id": "h.u47zkphcg0jn",
+    "html": "<span class=\"c9 c6\">Stuck-At-0 Fault</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Net always reads logic ‘0’<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Even if we drive ‘1’<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Testing a Net N2",
+    "id": "h.mu3cp0nr53if",
+    "html": "<span class=\"c9 c6\">Testing a Net N2</span>"
+  },
+  {
+    "type": "table",
+    "content": "<tbody><tr class=\"c15\"><td class=\"c25\" colspan=\"1\" rowspan=\"1\"><p class=\"c17\"><span class=\"c6\">Test</span></p></td><td class=\"c22\" colspan=\"1\" rowspan=\"1\"><p class=\"c17\"><span class=\"c6\">Purpose</span></p></td></tr><tr class=\"c15\"><td class=\"c25\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Drive N2 = 0</span></p></td><td class=\"c22\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Check stuck-at-1</span></p></td></tr><tr class=\"c15\"><td class=\"c25\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Drive N2 = 1</span></p></td><td class=\"c22\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Check stuck-at-0</span></p></td></tr></tbody>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "images/image18.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "6️⃣ Controllability & Observability",
+    "id": "h.pllwv3crlvs8",
+    "html": "<span class=\"c11 c6\">6️⃣ Controllability &amp; Observability</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Controllability",
+    "id": "h.ricwkzd0h0oz",
+    "html": "<span class=\"c9 c6\">Controllability</span>"
+  },
+  {
+    "type": "p",
+    "text": "Ability to force a node to 0 or 1",
+    "html": "<span class=\"c0\">Ability to force a node to 0 or 1</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Observability",
+    "id": "h.g3u4pedw3lp",
+    "html": "<span class=\"c9 c6\">Observability</span>"
+  },
+  {
+    "type": "p",
+    "text": "Ability to see the value of a node at output",
+    "html": "<span class=\"c0\">Ability to see the value of a node at output</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Why DFT is needed?",
+    "id": "h.stwv3uk2de7x",
+    "html": "<span class=\"c9 c6\">Why DFT is needed?</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span>Internal nodes are </span><span class=\"c19 c6\">not directly visible<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Only chip pins are visible<br></span></li><li class=\"c2 c3 li-bullet-0\"><span>DFT provides </span><span class=\"c19 c6\">path to control &amp; observe<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "images/image16.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "7️⃣ Fault Simulation & Fault Coverage",
+    "id": "h.y4an0rh68ex6",
+    "html": "<span class=\"c11 c6\">7️⃣ Fault Simulation &amp; Fault Coverage</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Fault Simulation",
+    "id": "h.7t5oivr01gg6",
+    "html": "<span class=\"c9 c6\">Fault Simulation</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span>Insert faults </span><span class=\"c19 c6\">intentionally<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Run test patterns<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Check if fault is detected<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Fault Coverage Formula",
+    "id": "h.hg0voif0ql8k",
+    "html": "<span class=\"c9 c6\">Fault Coverage Formula</span>"
+  },
+  {
+    "type": "p",
+    "text": "Fault Coverage=Detected FaultsTotal Faults×100Fault\\ Coverage = \\frac{Detected\\ Faults}{Total\\ Faults} \\times 100Fault Coverage=Total FaultsDetected Faults​×100",
+    "html": "<span>Fault Coverage=Detected FaultsTotal Faults×100Fault\\ Coverage = \\frac{Detected\\ Faults}{Total\\ Faults} \\times 100Fault Coverage=Total FaultsDetected Faults​×100</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Industry Expectation",
+    "id": "h.b10a6n5maj2i",
+    "html": "<span class=\"c6 c9\">Industry Expectation</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">95% fault coverage<br><br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Some designs target 99%+<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "8️⃣ Types of Defects in VLSI",
+    "id": "h.pjw160pftl9j",
+    "html": "<span class=\"c11 c6\">8️⃣ Types of Defects in VLSI</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Process Defects",
+    "id": "h.mqlhfhka458o",
+    "html": "<span class=\"c9 c6\">Process Defects</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Missing vias<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Shorts<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Opens<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "Material Defects",
+    "id": "h.5a02l8f9pde2",
+    "html": "<span class=\"c9 c6\">Material Defects</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Crystal imperfections<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Impurities<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "Aging Defects",
+    "id": "h.l3p2xstb7evx",
+    "html": "<span class=\"c9 c6\">Aging Defects</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Electromigration<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Oxide breakdown<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "Package Defects",
+    "id": "h.oxtiicjgp1lm",
+    "html": "<span class=\"c9 c6\">Package Defects</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Broken pins<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Seal leaks<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "images/image8.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "9️⃣ Major Types of Faults",
+    "id": "h.emp8o2m9an5u",
+    "html": "<span class=\"c11 c6\">9️⃣ Major Types of Faults</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Structural Faults",
+    "id": "h.uamvgit5a7h4",
+    "html": "<span class=\"c9 c6\">Structural Faults</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Due to manufacturing<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Shorts, opens<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "Transition Faults",
+    "id": "h.3tmhbtoqqavn",
+    "html": "<span class=\"c9 c6\">Transition Faults</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Signal does not switch fast enough<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Related to:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Setup time<br></span></li><li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Hold time<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "images/image5.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "🔟 Scan Design (MOST IMPORTANT DFT TOPIC)",
+    "id": "h.b2wnj8wpc4kp",
+    "html": "<span class=\"c11 c6\">🔟 Scan Design (MOST IMPORTANT DFT TOPIC)</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Why Scan Design?",
+    "id": "h.hwn94kujpjyh",
+    "html": "<span class=\"c9 c6\">Why Scan Design?</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Flip-flops hide internal states<br></span></li><li class=\"c2 c3 li-bullet-0\"><span>Scan converts flip-flops into </span><span class=\"c19 c6\">shift register<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Scan Chain Components",
+    "id": "h.uw2egrlwiugo",
+    "html": "<span class=\"c9 c6\">Scan Chain Components</span>"
+  },
+  {
+    "type": "table",
+    "content": "<tbody><tr class=\"c15\"><td class=\"c27\" colspan=\"1\" rowspan=\"1\"><p class=\"c17\"><span class=\"c6\">Signal</span></p></td><td class=\"c21\" colspan=\"1\" rowspan=\"1\"><p class=\"c17\"><span class=\"c6\">Purpose</span></p></td></tr><tr class=\"c15\"><td class=\"c27\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Scan In (SI)</span></p></td><td class=\"c21\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Shift data in</span></p></td></tr><tr class=\"c15\"><td class=\"c27\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Scan Out (SO)</span></p></td><td class=\"c21\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Shift data out</span></p></td></tr><tr class=\"c15\"><td class=\"c27\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Scan Enable (SE)</span></p></td><td class=\"c21\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Select test/functional</span></p></td></tr><tr class=\"c15\"><td class=\"c27\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Clock</span></p></td><td class=\"c21\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Shift &amp; capture</span></p></td></tr></tbody>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Functional Mode",
+    "id": "h.6r5p5u8r7wbz",
+    "html": "<span class=\"c9 c6\">Functional Mode</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Normal operation<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">SE = 0<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "Test Mode",
+    "id": "h.2kl9h61ojo54",
+    "html": "<span class=\"c9 c6\">Test Mode</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Scan enabled<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">SE = 1<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "images/image15.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "1️⃣1️⃣ Scan Stitching",
+    "id": "h.n89r5pd2fx8n",
+    "html": "<span class=\"c11 c6\">1️⃣1️⃣ Scan Stitching</span>"
+  },
+  {
+    "type": "h3",
+    "text": "What is Scan Stitching?",
+    "id": "h.bcgku1ly110r",
+    "html": "<span class=\"c9 c6\">What is Scan Stitching?</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Connecting flip-flops serially<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Forms scan chains<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Why Scan Stitching Needed?",
+    "id": "h.6zjx1vnoo7l",
+    "html": "<span class=\"c9 c6\">Why Scan Stitching Needed?</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Access internal flops<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Improve controllability &amp; observability<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Enable ATPG<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Problems Without Reordering",
+    "id": "h.nl1h7s3yo8fg",
+    "html": "<span class=\"c9 c6\">Problems Without Reordering</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Long wirelength<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Congestion<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Routing issues<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Scan Chain Reordering",
+    "id": "h.jn7ev3ca7dc",
+    "html": "<span class=\"c9 c6\">Scan Chain Reordering</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Reorder flops based on placement<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Reduces:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Wirelength<br></span></li><li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Congestion<br></span></li><li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Hold issues<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "images/image12.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "1️⃣2️⃣ Scan Chain Parameters",
+    "id": "h.vlryh5glbmal",
+    "html": "<span class=\"c11 c6\">1️⃣2️⃣ Scan Chain Parameters</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Scan Length",
+    "id": "h.87z98efhdot7",
+    "html": "<span class=\"c9 c6\">Scan Length</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Number of flops in one chain<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Trade-off:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Long chain → less IO, more time<br></span></li><li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Short chain → more IO, less time<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Scan Polarity",
+    "id": "h.b3g1q6y41cdr",
+    "html": "<span class=\"c9 c6\">Scan Polarity</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Active high / Active low scan enable<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Must match library cells<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Scan DEF File",
+    "id": "h.ft4i5hhaf4r2",
+    "html": "<span class=\"c9 c6\">Scan DEF File</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Contains scan chain info<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Required during physical design<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "1️⃣3️⃣ Where DFT Fits in ASIC Flow",
+    "id": "h.yj02ujfmz7ni",
+    "html": "<span class=\"c11 c6\">1️⃣3️⃣ Where DFT Fits in ASIC Flow</span>"
+  },
+  {
+    "type": "p",
+    "text": "RTL",
+    "html": "<span class=\"c16\">RTL</span>"
+  },
+  {
+    "type": "p",
+    "text": "↓",
+    "html": "<span class=\"c16\">&nbsp;↓</span>"
+  },
+  {
+    "type": "p",
+    "text": "Synthesis",
+    "html": "<span class=\"c16\">Synthesis</span>"
+  },
+  {
+    "type": "p",
+    "text": "↓",
+    "html": "<span class=\"c16\">&nbsp;↓</span>"
+  },
+  {
+    "type": "p",
+    "text": "DFT Insertion",
+    "html": "<span class=\"c16\">DFT Insertion</span>"
+  },
+  {
+    "type": "p",
+    "text": "↓",
+    "html": "<span class=\"c16\">&nbsp;↓</span>"
+  },
+  {
+    "type": "p",
+    "text": "ATPG",
+    "html": "<span class=\"c16\">ATPG</span>"
+  },
+  {
+    "type": "p",
+    "text": "↓",
+    "html": "<span class=\"c16\">&nbsp;↓</span>"
+  },
+  {
+    "type": "p",
+    "text": "Placement",
+    "html": "<span class=\"c16\">Placement</span>"
+  },
+  {
+    "type": "p",
+    "text": "↓",
+    "html": "<span class=\"c16\">&nbsp;↓</span>"
+  },
+  {
+    "type": "p",
+    "text": "Scan Reordering",
+    "html": "<span class=\"c16\">Scan Reordering</span>"
+  },
+  {
+    "type": "p",
+    "text": "↓",
+    "html": "<span class=\"c16\">&nbsp;↓</span>"
+  },
+  {
+    "type": "p",
+    "text": "Routing",
+    "html": "<span class=\"c16\">Routing</span>"
+  },
+  {
+    "type": "p",
+    "text": "↓",
+    "html": "<span class=\"c16\">&nbsp;↓</span>"
+  },
+  {
+    "type": "p",
+    "text": "Manufacturing",
+    "html": "<span class=\"c16\">Manufacturing</span>"
+  },
+  {
+    "type": "p",
+    "text": "↓",
+    "html": "<span class=\"c16\">&nbsp;↓</span>"
+  },
+  {
+    "type": "p",
+    "text": "Testing",
+    "html": "<span class=\"c16\">Testing</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "images/image13.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "FINAL SUMMARY",
+    "id": "h.p8w4lcv8aos7",
+    "html": "<span class=\"c11 c6\">&nbsp;FINAL SUMMARY</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span>DFT ensures </span><span class=\"c19 c6\">testable silicon<br></span></li><li class=\"c2 c3 li-bullet-0\"><span>Scan design is </span><span class=\"c19 c6\">heart of DFT<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Fault modeling enables detection<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Controllability + Observability are key<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Scan stitching &amp; reordering are critical for PD</span></li>"
+  },
+  {
+    "type": "h2",
+    "text": "1️⃣ ATPG – Automatic Test Pattern Generation",
+    "id": "h.jqks4z8ffoyz",
+    "html": "<span class=\"c11 c6\">1️⃣ ATPG – Automatic Test Pattern Generation</span>"
+  },
+  {
+    "type": "h3",
+    "text": "What is ATPG?",
+    "id": "h.hsd337kzwaas",
+    "html": "<span class=\"c9 c6\">What is ATPG?</span>"
+  },
+  {
+    "type": "p",
+    "text": "ATPG is a software tool that automatically generates test vectors to detect faults in a design.",
+    "html": "<span>ATPG is a software tool that </span><span class=\"c6\">automatically generates test vectors</span><span class=\"c0\">&nbsp;to detect faults in a design.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Why ATPG is needed?",
+    "id": "h.e2rdszljoui3",
+    "html": "<span class=\"c9 c6\">Why ATPG is needed?</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Millions of faults exist in large chips<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Manual test writing is impossible<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">ATPG:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Generates patterns<br></span></li><li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Maximizes fault coverage<br></span></li><li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Minimizes test time<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "ATPG Uses:",
+    "id": "h.zb9pzb9fskjj",
+    "html": "<span class=\"c9 c6\">ATPG Uses:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Scan chains<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Fault models (stuck-at, transition)<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">DFT logic<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "images/image7.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "2️⃣ Types of Scan Design",
+    "id": "h.z3iwm7o2x3h9",
+    "html": "<span class=\"c11 c6\">2️⃣ Types of Scan Design</span>"
+  },
+  {
+    "type": "h3",
+    "text": "1. Full Scan",
+    "id": "h.qz6ipuo3c8g4",
+    "html": "<span class=\"c9 c6\">1. Full Scan</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">All flip-flops are scan-enabled<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Highest fault coverage<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Most common in industry<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "2. Partial Scan",
+    "id": "h.j69o5vffivem",
+    "html": "<span class=\"c9 c6\">2. Partial Scan</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Only some flip-flops are scanned<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Used when:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Area is critical<br></span></li><li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Performance is critical<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "images/image10.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "3️⃣ Shift Cycle vs Capture Cycle (VERY IMPORTANT)",
+    "id": "h.rnjmkbb35rj7",
+    "html": "<span class=\"c11 c6\">3️⃣ Shift Cycle vs Capture Cycle (VERY IMPORTANT)</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Shift Cycle",
+    "id": "h.o32sc4j6e8z",
+    "html": "<span class=\"c9 c6\">Shift Cycle</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Scan Enable = 1<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Flip-flops act as shift registers<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Data shifted in/out<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "Capture Cycle",
+    "id": "h.j6jf83lh184",
+    "html": "<span class=\"c9 c6\">Capture Cycle</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Scan Enable = 0<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Functional clock applied<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Circuit response captured<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Test Operation Flow",
+    "id": "h.yrl959rtjwdw",
+    "html": "<span class=\"c9 c6\">Test Operation Flow</span>"
+  },
+  {
+    "type": "p",
+    "text": "Shift → Shift → Shift → Capture → Shift out",
+    "html": "<span class=\"c16\">Shift → Shift → Shift → Capture → Shift out</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "images/image1.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "4️⃣ Scan Clock vs Functional Clock",
+    "id": "h.bgm6rhzg27kw",
+    "html": "<span class=\"c11 c6\">4️⃣ Scan Clock vs Functional Clock</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Functional Clock",
+    "id": "h.v18f4zw158vu",
+    "html": "<span class=\"c9 c6\">Functional Clock</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Used during normal operation<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">High frequency<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "Scan Clock",
+    "id": "h.fj1g15m4oidj",
+    "html": "<span class=\"c9 c6\">Scan Clock</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Used during testing<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Low frequency (to reduce power)<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Why Separate Scan Clock?",
+    "id": "h.mis8uyahcg5f",
+    "html": "<span class=\"c9 c6\">Why Separate Scan Clock?</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Avoid IR drop<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Avoid overheating<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Safe shifting<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "5️⃣ Reset in Scan Design",
+    "id": "h.wr59krr6g2s8",
+    "html": "<span class=\"c11 c6\">5️⃣ Reset in Scan Design</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Why Reset is Important?",
+    "id": "h.499nfku8sg6y",
+    "html": "<span class=\"c9 c6\">Why Reset is Important?</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Initialize flip-flops<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Avoid unknown (X) states<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Types of Reset",
+    "id": "h.hgp2nqg0zy6j",
+    "html": "<span class=\"c9 c6\">Types of Reset</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Asynchronous reset<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Synchronous reset<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Reset must be scan-friendly",
+    "html": "<span>&nbsp;Reset must be </span><span class=\"c19 c6\">scan-friendly</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "images/image2.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "6️⃣ Multiple Scan Chains",
+    "id": "h.e0pnv6r77k1y",
+    "html": "<span class=\"c11 c6\">6️⃣ Multiple Scan Chains</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Why Multiple Scan Chains?",
+    "id": "h.o9gycee7mhi",
+    "html": "<span class=\"c9 c6\">Why Multiple Scan Chains?</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Single chain = very long shift time<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Multiple chains:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Reduce test time<br></span></li><li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Parallel shifting<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Example",
+    "id": "h.bah34j5g2nqt",
+    "html": "<span class=\"c9 c6\">Example</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">100,000 flops<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">10 scan chains → 10,000 flops per chain<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "images/image19.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "7️⃣ Scan Compression (High-Level)",
+    "id": "h.vsknk4tjpnrb",
+    "html": "<span class=\"c11 c6\">7️⃣ Scan Compression (High-Level)</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Problem Without Compression",
+    "id": "h.5unmq2fxawz5",
+    "html": "<span class=\"c9 c6\">Problem Without Compression</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Too many test vectors<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Long tester time<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">High memory usage<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Scan Compression",
+    "id": "h.l4i6j9yt7jnp",
+    "html": "<span class=\"c9 c6\">Scan Compression</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Compress input patterns<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Decompress on-chip<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Compress output response<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Huge test time reduction",
+    "html": "<span>&nbsp;</span><span class=\"c19 c6\">Huge test time reduction</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "images/image4.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "8️⃣ DFT for Memory – MBIST (Intro Level)",
+    "id": "h.tvjrjfrzfooa",
+    "html": "<span class=\"c6 c11\">8️⃣ DFT for Memory – MBIST (Intro Level)</span>"
+  },
+  {
+    "type": "h3",
+    "text": "What is MBIST?",
+    "id": "h.srim80326pbh",
+    "html": "<span class=\"c9 c6\">What is MBIST?</span>"
+  },
+  {
+    "type": "p",
+    "text": "Memory Built-In Self Test",
+    "html": "<span class=\"c0\">Memory Built-In Self Test</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Why MBIST?",
+    "id": "h.ovsnifi7ge00",
+    "html": "<span class=\"c9 c6\">Why MBIST?</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Memories occupy large chip area<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Scan cannot efficiently test memories<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "MBIST Tests:",
+    "id": "h.9jrgkn8yio7l",
+    "html": "<span class=\"c9 c6\">MBIST Tests:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Stuck-at faults<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Address faults<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Coupling faults<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "images/image17.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "9️⃣ Boundary Scan (JTAG) – High Level",
+    "id": "h.si3qpkiipmiu",
+    "html": "<span class=\"c11 c6\">9️⃣ Boundary Scan (JTAG) – High Level</span>"
+  },
+  {
+    "type": "h3",
+    "text": "What is Boundary Scan?",
+    "id": "h.nvb8z9g5wbz9",
+    "html": "<span class=\"c9 c6\">What is Boundary Scan?</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Test IO pins<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Used for:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Board-level testing<br></span></li><li class=\"c2 c7 li-bullet-0\"><span class=\"c0\">Debugging<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "IEEE Standard",
+    "id": "h.szv083r8iy3t",
+    "html": "<span class=\"c9 c6\">IEEE Standard</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">IEEE 1149.1 (JTAG)<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "images/image11.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "🔟 DFT Design Rules (DFT Rules)",
+    "id": "h.lp1i5jktze1c",
+    "html": "<span class=\"c11 c6\">🔟 DFT Design Rules (DFT Rules)</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Common DFT Rules",
+    "id": "h.qmpld08k9e5p",
+    "html": "<span class=\"c9 c6\">Common DFT Rules</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">No gated clocks (or scan-safe gating)<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Avoid combinational loops<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Reset must reach all flops<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Avoid latches (unless intentional)<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">No X-propagation paths<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Why Do Rules Matter?",
+    "id": "h.2r56o9whpmb1",
+    "html": "<span class=\"c9 c6\">Why Do Rules Matter?</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">ATPG depends on clean logic<br></span></li><li class=\"c2 c3 li-bullet-0\"><span class=\"c0\">Violations reduce fault coverage<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "1️⃣1️⃣ DFT Signals Summary",
+    "id": "h.3ny7xkcsy3dz",
+    "html": "<span class=\"c11 c6\">1️⃣1️⃣ DFT Signals Summary</span>"
+  },
+  {
+    "type": "table",
+    "content": "<tbody><tr class=\"c15\"><td class=\"c12\" colspan=\"1\" rowspan=\"1\"><p class=\"c17\"><span class=\"c6\">Signal</span></p></td><td class=\"c21\" colspan=\"1\" rowspan=\"1\"><p class=\"c17\"><span class=\"c6\">Purpose</span></p></td></tr><tr class=\"c15\"><td class=\"c12\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Scan In</span></p></td><td class=\"c21\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Shift test data in</span></p></td></tr><tr class=\"c15\"><td class=\"c12\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Scan Out</span></p></td><td class=\"c21\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Shift test data out</span></p></td></tr><tr class=\"c15\"><td class=\"c12\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Scan Enable</span></p></td><td class=\"c21\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Select test/functional</span></p></td></tr><tr class=\"c15\"><td class=\"c12\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Scan Clock</span></p></td><td class=\"c21\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Shift &amp; capture</span></p></td></tr><tr class=\"c15\"><td class=\"c12\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Reset</span></p></td><td class=\"c21\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Initialize flops</span></p></td></tr><tr class=\"c15\"><td class=\"c12\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Test Mode</span></p></td><td class=\"c21\" colspan=\"1\" rowspan=\"1\"><p class=\"c14\"><span class=\"c0\">Enable DFT logic</span></p></td></tr></tbody>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "1️⃣2️⃣ Common Student Mistakes (VERY USEFUL)",
+    "id": "h.1pvsm35cutms",
+    "html": "<span class=\"c11 c6\">1️⃣2️⃣ Common Student Mistakes (VERY USEFUL)</span>"
+  },
+  {
+    "type": "p",
+    "text": "DFT fixes silicon →  WRONG Scan is only for testing →  PARTIAL Fault = defect →  WRONG",
+    "html": "<span class=\"c0\">&nbsp;DFT fixes silicon → &nbsp;WRONG<br> Scan is only for testing → &nbsp;PARTIAL<br> Fault = defect → &nbsp;WRONG</span>"
+  },
+  {
+    "type": "p",
+    "text": "DFT detects, not fixes Scan improves observability Fault is a model, defect is physical",
+    "html": "<span>&nbsp;DFT </span><span class=\"c6\">detects</span><span class=\"c0\">, not fixes<br> Scan improves observability<br> Fault is a model, defect is physical</span>"
+  }
+]

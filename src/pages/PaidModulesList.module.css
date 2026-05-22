@@ -1,0 +1,110 @@
+.modulesPage {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #fff;
+  min-height: 100vh;
+  background-color: #000;
+}
+.loadingText {
+  text-align: center;
+  color: #94a3b8;
+  margin-top: 10vh;
+  font-size: 1.2rem;
+}
+.moduleHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.moduleHeader h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.moduleHeader p {
+  color: #94a3b8;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.modulesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+.moduleLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.moduleCard {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 24px;
+  height: 100%;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.moduleCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  border-color: #60a5fa;
+}
+.badgesRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.moduleBadge {
+  background: rgba(96, 165, 250, 0.2);
+  color: #60a5fa;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.premiumBadge {
+  background: rgba(250, 190, 96, 0.2);
+  color: #facc15;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.moduleCard h3 {
+  font-size: 1.25rem;
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+}
+.moduleDesc {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+.cardFooter {
+  margin-top: auto;
+}
+.openBtn {
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.2s;
+  width: 100%;
+}
+.moduleCard:hover .openBtn {
+  background: #2563eb;
+}

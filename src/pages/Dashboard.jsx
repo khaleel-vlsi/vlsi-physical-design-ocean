@@ -50,7 +50,6 @@ const Dashboard = () => {
 
       const ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlnY3ZjeW95bm15cnBsd3JwaXNkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE0NDg4NzUsImV4cCI6MjA4NzAyNDg3NX0.pfeo4p42y53fCaA49oe1yXXFU22BvTEotzlZAFhYzqU";
       const fnUrl = "https://ygcvcyoynmyrplwrpisd.supabase.co/functions/v1/create-razorpay-order";
-      debugger
       const res = await fetch(fnUrl, {
         method: "POST",
         headers: {
@@ -179,7 +178,7 @@ const Dashboard = () => {
           {/* Course Section */}
           <div className={styles.subCard}>
             <div className={styles.flexBetween}>
-              <h2>🌊 Paid Modules (9–32)</h2>
+              <h2>🌊 Paid Modules (9–57)</h2>
               <div className={`${styles.statusBig} ${courseValid ? styles.ok : styles.err}`}>
                 {courseValid ? "Unlocked ✅" : "Locked 🔒"}
               </div>
@@ -189,7 +188,7 @@ const Dashboard = () => {
             </div>
             <div className={styles.actionRow}>
               {courseValid ? (
-                <button className={`${styles.btn} ${styles.btnPrimary}`} onClick={() => alert("Coming soon! Paid modules will be integrated here.")}>Open Paid Modules →</button>
+                <button className={`${styles.btn} ${styles.btnPrimary}`} onClick={() => navigate('/paid-modules')}>Open Paid Modules →</button>
               ) : (
                 <button className={`${styles.btn} ${styles.btnGold}`} onClick={() => startCheckout('PLAN_499')}>
                   {isCheckingOut ? '⏳ Processing...' : 'Pay ₹499 to Unlock 💳'}

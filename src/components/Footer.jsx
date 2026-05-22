@@ -28,7 +28,7 @@ const Footer = () => {
             <h4>Resources</h4>
             <ul className={styles.linkList}>
               <li><Link to="/modules">Course Library</Link></li>
-              <li><Link to="/modules/26">Documentation</Link></li>
+              <li><Link to="/modules/57">Documentation</Link></li>
               <li><Link to="/contact">Help Center</Link></li>
               <li><Link to="/contact">Community Forum</Link></li>
             </ul>

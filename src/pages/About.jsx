@@ -1,15 +1,44 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './About.module.css';
+import SEO from '../components/SEO';
+import StructuredData from '../components/StructuredData.jsx';
 
 const About = () => {
   return (
     <div className={styles.aboutContainer}>
+      <SEO 
+        title="About Us" 
+        description="Learn about our mission to democratize VLSI Physical Design education. Meet the architect Shaik Mahammad Khaleel and explore our oceanic approach to silicon mastery."
+        url="/about"
+        structuredData={
+          <StructuredData 
+            breadcrumb={{
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://vlsiphysicaldesignocean.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "About",
+                  "item": "https://vlsiphysicaldesignocean.com/about"
+                }
+              ]
+            }}
+          />
+        }
+      />
       {/* 1. Header Section */}
       <section className={styles.heroSection}>
         <h1 className={styles.title}>Navigating the Depth of Silicon</h1>
         <p className={styles.subtitle}>
-          Physical design is the bridge between architectural logic and the physical reality of silicon. We provide the map and the vessel to master this complex terrain.
+          Providing a complete structural path for engineering graduates, freshers, and professionals (up to 3+ years experience) to master VLSI Physical Design from basics to advanced industrial tool execution.
         </p>
         <div className={styles.divider}></div>
       </section>
@@ -20,12 +49,15 @@ const About = () => {
           <div className={styles.missionIcon}>🚀</div>
           <h2>Our Mission</h2>
           <p>
-            At VLSI Physical Design Ocean, we aim to democratize the precision of chip design. Our mission is to empower the next generation of hardware engineers with the deep technical insights and practical methodologies required to build the world's most complex processors.
+            At VLSI Physical Design Ocean, we aim to provide an end-to-end structural learning path for anyone looking to enter or grow in the VLSI domain. From fresh engineering graduates to Physical Design Engineers with 3+ years of experience, we offer deep knowledge to solve all your questions in one platform.
           </p>
           <ul className={styles.missionList}>
-            <li><span className={styles.checkIcon}>✔</span> Accelerating career paths in semiconductors</li>
-            <li><span className={styles.checkIcon}>✔</span> Bridging the gap between theory and tape-out</li>
-            <li><span className={styles.checkIcon}>✔</span> Fostering a community of precision engineering</li>
+            <li><span className={styles.checkIcon}>✔</span> 57 comprehensive modules covering silicon mastery</li>
+            <li><span className={styles.checkIcon}>✔</span> Step-by-step industrial tool execution guides</li>
+            <li><span className={styles.checkIcon}>✔</span> Real-time problems and solutions</li>
+            <li><span className={styles.checkIcon}>✔</span> The critical role of Linux and TCL scripting</li>
+            <li><span className={styles.checkIcon}>✔</span> Secure Premium Document Viewer with Page & Full Width controls</li>
+            <li><span className={styles.checkIcon}>✔</span> Progressive module unlocking for structured learning pacing</li>
           </ul>
         </div>
         <div className={styles.missionImageWrap}>
@@ -55,6 +87,32 @@ const About = () => {
             <div className={styles.approachIcon}>🎯</div>
             <h3>Micron Precision</h3>
             <p>Precision in every micron. Our approach treats every routing path and gate placement with the reverence of a vital current.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Curriculum & Structured Access Section */}
+      <section className={styles.approachSection}>
+        <h2>Curriculum & Structured Access</h2>
+        <p>
+          We have expanded our curriculum to **57 comprehensive modules** mapping out physical design from surface transistor physics to deep-level industrial timing analysis. To support a healthy, structured learning pace and keep you aligned with industrial timelines, certain career-readiness and certification materials unlock progressively:
+        </p>
+
+        <div className={styles.approachGrid}>
+          <div className={styles.approachCard}>
+            <div className={styles.approachIcon}>📚</div>
+            <h3>57 Specialized Modules</h3>
+            <p>Complete training covering timing paths, physical design engineering guides, script building, and industrial tool execution.</p>
+          </div>
+          <div className={styles.approachCard}>
+            <div className={styles.approachIcon}>💼</div>
+            <h3>Resume Builder (Module 24)</h3>
+            <p>Advanced fresher & professional resume templates and profile guidelines unlock automatically **1 month (30 days)** after course purchase.</p>
+          </div>
+          <div className={styles.approachCard}>
+            <div className={styles.approachIcon}>🎓</div>
+            <h3>Certification (Module 23)</h3>
+            <p>Your VLSI Physical Design Ocean Course Completion Certificate unlocks automatically **3 months (90 days)** after course purchase.</p>
           </div>
         </div>
       </section>

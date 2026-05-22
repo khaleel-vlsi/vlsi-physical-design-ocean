@@ -1,0 +1,1959 @@
+[
+  {
+    "type": "h1",
+    "text": "Basic Electronics: From Materials to Energy Bands (Lecture-Style Explanation)",
+    "id": "h.oc99zvliaipw",
+    "html": "<span class=\"c6 c17\">Basic Electronics: From Materials to Energy Bands</span><span class=\"c6 c25\">&nbsp;(Lecture-Style Explanation)</span>"
+  },
+  {
+    "type": "h2",
+    "text": "Introduction",
+    "id": "h.dsvizsryqqz5",
+    "html": "<span class=\"c10 c6\">Introduction</span>"
+  },
+  {
+    "type": "p",
+    "text": "Today, we are going to discuss Basic Electronics. When we hear the word electronics, many students immediately think about circuits, wires, and devices. But before reaching that stage, we must clearly understand materials and their internal structure.",
+    "html": "<span>Today, we are going to discuss </span><span class=\"c6\">Basic Electronics</span><span>. When we hear the word </span><span class=\"c27\">electronics</span><span>, many students immediately think about circuits, wires, and devices. But before reaching that stage, we must clearly understand </span><span class=\"c6\">materials</span><span class=\"c2\">&nbsp;and their internal structure.</span>"
+  },
+  {
+    "type": "p",
+    "text": "In Basic Electronics, we mainly classify materials into three types:",
+    "html": "<span>In Basic Electronics, we mainly classify materials into </span><span class=\"c6\">three types</span><span class=\"c2\">:</span>"
+  },
+  {
+    "type": "ol",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Conductors</span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Semiconductors</span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Insulators</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "To understand why materials behave differently, we must go deep—from materials to molecules, from molecules to atoms, and finally into the internal structure of the atom.",
+    "html": "<span class=\"c2\">To understand why materials behave differently, we must go deep—from materials to molecules, from molecules to atoms, and finally into the internal structure of the atom.</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image32.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "What Is a Material?",
+    "id": "h.uny91arut36e",
+    "html": "<span class=\"c10 c6\">What Is a Material?</span>"
+  },
+  {
+    "type": "p",
+    "text": "A material is anything that exists physically in this world. If you observe carefully:",
+    "html": "<span>A </span><span class=\"c6\">material</span><span class=\"c2\">&nbsp;is anything that exists physically in this world. If you observe carefully:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Objects around us are materials</span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">The human body is also made of material</span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Solid, liquid, and gaseous substances are all materials</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Every object we see is made using some material. These materials are not continuous; they are made up of molecules.",
+    "html": "<span>Every object we see is made using some material. These materials are not continuous; they are made up of </span><span class=\"c6\">molecules</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "p",
+    "text": "The",
+    "html": "The "
+  },
+  {
+    "type": "p",
+    "text": "physical state",
+    "html": "physical state"
+  },
+  {
+    "type": "p",
+    "text": "of a material—solid, liquid, or gas—depends on how its molecules are arranged and how strongly they are bonded.",
+    "html": "&nbsp;of a material—solid, liquid, or gas—depends on how its molecules are arranged and how strongly they are bonded.<br>"
+  },
+  {
+    "type": "img",
+    "src": "images/image8.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Molecules and Atoms",
+    "id": "h.370zdzsqbowq",
+    "html": "<span class=\"c10 c6\">Molecules and Atoms</span>"
+  },
+  {
+    "type": "p",
+    "text": "A molecule is a group of atoms bonded together. Molecules are the basic units that decide the properties of a material.",
+    "html": "<span>A </span><span class=\"c6\">molecule</span><span class=\"c2\">&nbsp;is a group of atoms bonded together. Molecules are the basic units that decide the properties of a material.</span>"
+  },
+  {
+    "type": "p",
+    "text": "When we go deeper, we find that:",
+    "html": "<span class=\"c2\">When we go deeper, we find that:</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image4.png",
+    "alt": ""
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span>Molecules are made up of </span><span class=\"c3\">atoms</span></li><li class=\"c21 c16 c28 li-bullet-0\"><span>Atoms are the fundamental building blocks of matter<br>Millions of atoms together form a molecule, and millions of molecules together form a material.<br></span><span style=\"overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 454.29px; height: 302.15px;\"></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Structure of an Atom",
+    "id": "h.gkza3ec56hq2",
+    "html": "<span class=\"c10 c6\">Structure of an Atom</span>"
+  },
+  {
+    "type": "p",
+    "text": "An atom is not a solid particle; it has its own internal structure. Every atom consists of two main parts:",
+    "html": "<span class=\"c2\">An atom is not a solid particle; it has its own internal structure. Every atom consists of two main parts:</span>"
+  },
+  {
+    "type": "h3",
+    "text": "1. Nucleus",
+    "id": "h.9910wtc4wxuy",
+    "html": "<span class=\"c7 c6\">1. Nucleus</span>"
+  },
+  {
+    "type": "p",
+    "text": "The nucleus is the central core of the atom. Inside the nucleus, we have:",
+    "html": "<span>The </span><span class=\"c6\">nucleus</span><span class=\"c2\">&nbsp;is the central core of the atom. Inside the nucleus, we have:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c6\">Protons</span><span class=\"c2\">&nbsp;→ positively charged particles</span></li><li class=\"c0 li-bullet-0\"><span class=\"c6\">Neutrons</span><span class=\"c2\">&nbsp;→ particles with no charge</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "The nucleus contains almost all the mass of the atom.",
+    "html": "<span class=\"c2\">The nucleus contains almost all the mass of the atom.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "2. Electrons",
+    "id": "h.ivqws2azpldt",
+    "html": "<span class=\"c7 c6\">2. Electrons</span>"
+  },
+  {
+    "type": "p",
+    "text": "Outside the nucleus, electrons revolve around it in circular paths or energy levels.",
+    "html": "<span>Outside the nucleus, </span><span class=\"c6\">electrons</span><span class=\"c2\">&nbsp;revolve around it in circular paths or energy levels.</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span>Electrons carry </span><span class=\"c3\">negative charge</span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">They are very small and very light</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "An atom is formed by the combination of:",
+    "html": "<span class=\"c2\">An atom is formed by the combination of:</span>"
+  },
+  {
+    "type": "p",
+    "text": "Protons and neutrons inside the nucleus, and electrons revolving around the nucleus.",
+    "html": "<span class=\"c2\">Protons and neutrons inside the nucleus, and electrons revolving around the nucleus.</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image9.png",
+    "alt": ""
+  },
+  {
+    "type": "img",
+    "src": "images/image17.png",
+    "alt": ""
+  },
+  {
+    "type": "img",
+    "src": "images/image27.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "img",
+    "src": "images/image12.png",
+    "alt": ""
+  },
+  {
+    "type": "h2",
+    "text": "From Atomic Structure to Basic Electronics",
+    "id": "h.a228vu1atyj6",
+    "html": "<span class=\"c10 c6\">From Atomic Structure to Basic Electronics</span>"
+  },
+  {
+    "type": "p",
+    "text": "Now let us connect atomic structure to Basic Electronics.",
+    "html": "<span>Now let us connect atomic structure to </span><span class=\"c6\">Basic Electronics</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "p",
+    "text": "The behavior of a material in electronics depends mainly on electrons, especially the electrons present in the outermost shell of the atom.",
+    "html": "<span>The behavior of a material in electronics depends mainly on </span><span class=\"c6\">electrons</span><span class=\"c2\">, especially the electrons present in the outermost shell of the atom.</span>"
+  },
+  {
+    "type": "p",
+    "text": "To understand this clearly, we need to learn some important terms.",
+    "html": "<span class=\"c2\">To understand this clearly, we need to learn some important terms.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Important Terms in Basic Electronics",
+    "id": "h.k8gifs604gv9",
+    "html": "<span class=\"c10 c6\">Important Terms in Basic Electronics</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Valence Electron",
+    "id": "h.ehekbx1cnl9f",
+    "html": "<span class=\"c7 c6\">Valence Electron</span>"
+  },
+  {
+    "type": "p",
+    "text": "The electron that revolves around the nucleus and is under the control of the nucleus is called a Valence Electron.",
+    "html": "<span>The electron that revolves around the nucleus and is </span><span class=\"c6\">under the control of the nucleus</span><span>&nbsp;is called a </span><span class=\"c6\">Valence Electron</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">These electrons are present in the outermost shell</span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">They are involved in bonding</span></li><li class=\"c0 li-bullet-0\"><span>We say they are in the </span><span class=\"c6\">Valence Band</span></li>"
+  },
+  {
+    "type": "img",
+    "src": "images/image3.png",
+    "alt": ""
+  },
+  {
+    "type": "h3",
+    "text": "Free Electron",
+    "id": "h.cukh6omnnjt",
+    "html": "<span class=\"c7 c6\">Free Electron</span>"
+  },
+  {
+    "type": "p",
+    "text": "If a valence electron comes out of the control of the nucleus, it becomes a Free Electron.",
+    "html": "<span>If a valence electron </span><span class=\"c6\">comes out of the control of the nucleus</span><span>, it becomes a </span><span class=\"c6\">Free Electron</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">A free electron can move freely inside the material</span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">It is responsible for the flow of electric current</span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "Conduction Band",
+    "id": "h.78lce6fml0e1",
+    "html": "<span class=\"c7 c6\">Conduction Band</span>"
+  },
+  {
+    "type": "p",
+    "text": "When an electron becomes a free electron, we say it has moved into the Conduction Band.",
+    "html": "<span>When an electron becomes a free electron, we say it has moved into the </span><span class=\"c6\">Conduction Band</span><span>.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Energy Band Theory",
+    "id": "h.clmxlt71b2gk",
+    "html": "<span class=\"c10 c6\">Energy Band Theory</span>"
+  },
+  {
+    "type": "p",
+    "text": "The difference between the Valence Band and the Conduction Band is called the Energy Gap.",
+    "html": "<span>The difference between the </span><span class=\"c6\">Valence Band</span><span>&nbsp;and the </span><span class=\"c6\">Conduction Band</span><span>&nbsp;is called the </span><span class=\"c6\">Energy Gap</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "p",
+    "text": "This energy gap plays a very important role in deciding whether a material behaves as a conductor, semiconductor, or insulator.",
+    "html": "<span class=\"c2\">This energy gap plays a very important role in deciding whether a material behaves as a conductor, semiconductor, or insulator.</span>"
+  },
+  {
+    "type": "p",
+    "text": "The energy gap is measured in electron volts (eV).",
+    "html": "<span>The energy gap is measured in </span><span class=\"c6\">electron volts (eV)</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Classification of Materials Based on Energy Bands",
+    "id": "h.evrem43j65bg",
+    "html": "<span class=\"c10 c6\">Classification of Materials Based on Energy Bands</span>"
+  },
+  {
+    "type": "h3",
+    "text": "1. Conductors",
+    "id": "h.asuem8hv8jy0",
+    "html": "<span class=\"c7 c6\">1. Conductors</span>"
+  },
+  {
+    "type": "p",
+    "text": "In conductors, the Valence Band and Conduction Band overlap.",
+    "html": "<span>In </span><span class=\"c6\">conductors</span><span>, the </span><span class=\"c6\">Valence Band and Conduction Band overlap</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">There is no energy gap</span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Electrons are already free</span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">No external energy is required to move electrons</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Because conductors have a large number of free electrons:",
+    "html": "<span class=\"c2\">Because conductors have a large number of free electrons:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">They conduct electricity very easily</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Examples: Copper, Aluminum, Silver",
+    "html": "<span class=\"c2\">Examples: Copper, Aluminum, Silver</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image1.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Semiconductors",
+    "id": "h.w36clmvrvq5e",
+    "html": "<span class=\"c7 c6\">&nbsp;Semiconductors</span>"
+  },
+  {
+    "type": "p",
+    "text": "In semiconductors, the energy gap between the valence band and conduction band is approximately 1 eV.",
+    "html": "<span>In </span><span class=\"c6\">semiconductors</span><span>, the energy gap between the valence band and conduction band is approximately </span><span class=\"c6\">1 eV</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "p",
+    "text": "Important point:",
+    "html": "<span class=\"c2\">Important point:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span>This gap is </span><span class=\"c6\">not a physical gap</span><span>, it is an </span><span class=\"c3\">energy gap</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "For a valence electron to become a free electron:",
+    "html": "<span class=\"c2\">For a valence electron to become a free electron:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span>We must apply an external energy of about </span><span class=\"c3\">1 eV</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "So:",
+    "html": "<span class=\"c2\">So:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Without external energy → it behaves like an insulator</span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">With external energy → it behaves like a conductor</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "That is why this material is called a semiconductor.",
+    "html": "<span>That is why this material is called a </span><span class=\"c6\">semiconductor</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "p",
+    "text": "Examples: Silicon, Germanium",
+    "html": "<span>Examples: Silicon, Germanium</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Insulators",
+    "id": "h.5ca5oi51n5h3",
+    "html": "<span class=\"c7 c6\">&nbsp;Insulators</span>"
+  },
+  {
+    "type": "p",
+    "text": "In insulators, the energy gap between the valence band and conduction band is very large—approximately 6 eV.",
+    "html": "<span>In </span><span class=\"c6\">insulators</span><span>, the energy gap between the valence band and conduction band is very large—approximately </span><span class=\"c6\">6 eV</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">A very high external energy is required</span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Normally, we do not apply such high energy</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "As a result:",
+    "html": "<span class=\"c2\">As a result:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Electrons remain tightly bound</span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">No electric current flows</span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Examples: Rubber, Glass, Plastic, Wood",
+    "html": "<span>Examples: Rubber, Glass, Plastic, Wood</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "1. Electric Current",
+    "id": "h.nyeqc9n274bv",
+    "html": "<span class=\"c10 c6\">1. Electric Current</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Definition",
+    "id": "h.q5hpbqjaq6vp",
+    "html": "<span class=\"c7 c6\">Definition</span>"
+  },
+  {
+    "type": "p",
+    "text": "Electric current is defined as the rate of flow of electric charge through a conductor. In metallic conductors, this flow is mainly due to the movement of free electrons.",
+    "html": "<span class=\"c2\">Electric current is defined as the rate of flow of electric charge through a conductor. In metallic conductors, this flow is mainly due to the movement of free electrons.</span>"
+  },
+  {
+    "type": "p",
+    "text": "In simple terms, current tells us how much charge flows per second through a wire.",
+    "html": "<span class=\"c2\">In simple terms, current tells us how much charge flows per second through a wire.</span>"
+  },
+  {
+    "type": "p",
+    "text": "Mathematical Expression",
+    "html": "<span class=\"c2\">Mathematical Expression</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image20.png",
+    "alt": ""
+  },
+  {
+    "type": "h3",
+    "text": "Where:",
+    "id": "h.3mci9v3q9t9s",
+    "html": "<span class=\"c7 c6\">Where:</span>"
+  },
+  {
+    "type": "p",
+    "text": "I = Electric currentQ = Electric charget = Time",
+    "html": "<span>I = Electric current<br>Q = Electric charge<br></span><span class=\"c29\">t = Time</span><span class=\"c7 c6\"><br></span>"
+  },
+  {
+    "type": "p",
+    "text": "Unit",
+    "html": "<span class=\"c7 c6\">Unit</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c19\">Ampere (A)<br> One ampere is defined as the flow of one coulomb of charge</span><span class=\"c19\">&nbsp;per </span><span class=\"c32\">second</span><span class=\"c7 c6\">.<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Important Points",
+    "html": "<span class=\"c7 c6\">Important Points</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Current flows from higher potential to lower potential (conventional current direction).</span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Electron flow is in the opposite direction to conventional current.</span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Current can be DC (Direct Current) or AC (Alternating Current).<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "2. Electric Voltage",
+    "id": "h.p37qsiohk9u9",
+    "html": "<span class=\"c10 c6\">2. Electric Voltage</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Definition",
+    "id": "h.f6404pcd05sf",
+    "html": "<span class=\"c7 c6\">Definition</span>"
+  },
+  {
+    "type": "p",
+    "text": "Electric voltage, also called electric potential difference, is the energy required to move a unit charge from one point to another in an electric circuit.",
+    "html": "<span class=\"c2\">Electric voltage, also called electric potential difference, is the energy required to move a unit charge from one point to another in an electric circuit.</span>"
+  },
+  {
+    "type": "p",
+    "text": "Voltage can be understood as the driving force that causes current to flow.",
+    "html": "<span class=\"c2\">Voltage can be understood as the driving force that causes current to flow.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Mathematical Expression",
+    "id": "h.opapmufviyc2",
+    "html": "<span class=\"c7 c6\">Mathematical Expression</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image19.png",
+    "alt": ""
+  },
+  {
+    "type": "h3",
+    "text": "Where:",
+    "id": "h.3mci9v3q9t9s-2",
+    "html": "<span class=\"c7 c6\">Where:</span>"
+  },
+  {
+    "type": "p",
+    "text": "V = VoltageW = Electrical work doneQ = Charge",
+    "html": "<span class=\"c2\">V = Voltage<br>W = Electrical work done<br>Q = Charge<br></span>"
+  },
+  {
+    "type": "h3",
+    "text": "Unit",
+    "id": "h.rbocpyefwldv",
+    "html": "<span class=\"c7 c6\">Unit</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Volt (V)<br> One volt is the potential difference when one joule of energy is used to move one coulomb of charge.<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "Important Points",
+    "id": "h.hpzixbcs3u2l",
+    "html": "<span class=\"c7 c6\">Important Points</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Voltage does not flow; it exists between two points.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">A voltage source (battery or supply) is required to maintain current flow.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Without voltage, no current can flow in a circuit.<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "3. Electric Power",
+    "id": "h.jrdkg5ro6g46",
+    "html": "<span class=\"c10 c6\">3. Electric Power</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Definition",
+    "id": "h.a6h4g0lwbxdu",
+    "html": "<span class=\"c7 c6\">Definition</span>"
+  },
+  {
+    "type": "p",
+    "text": "Electric power is the rate at which electrical energy is converted into other forms of energy, such as heat, light, or mechanical energy.",
+    "html": "<span class=\"c2\">Electric power is the rate at which electrical energy is converted into other forms of energy, such as heat, light, or mechanical energy.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Mathematical Expression",
+    "id": "h.ak7n88kraoie",
+    "html": "<span class=\"c7 c6\">Mathematical Expression</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image22.png",
+    "alt": ""
+  },
+  {
+    "type": "h3",
+    "text": "Where:",
+    "id": "h.3mci9v3q9t9s-5",
+    "html": "<span class=\"c7 c6\">Where:</span>"
+  },
+  {
+    "type": "p",
+    "text": "P = PowerV = VoltageI = Current",
+    "html": "<span class=\"c2\">P = Power<br>V = Voltage<br>I = Current<br></span>"
+  },
+  {
+    "type": "h3",
+    "text": "Unit",
+    "id": "h.dhoq7xyhfl53",
+    "html": "<span class=\"c7 c6\">Unit</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Watt (W)<br> One watt is the power consumed when one volt causes one ampere of current to flow.<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "Alternate Forms",
+    "id": "h.x7ttoyak2o58",
+    "html": "<span class=\"c7 c6\">Alternate Forms</span>"
+  },
+  {
+    "type": "p",
+    "text": "Using Ohm’s Law (introduced later), power can also be written as:",
+    "html": "<span class=\"c2\">Using Ohm’s Law (introduced later), power can also be written as:</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image18.png",
+    "alt": ""
+  },
+  {
+    "type": "h3",
+    "text": "Important Points",
+    "id": "h.i1ke75vs1ipf",
+    "html": "<span class=\"c7 c6\">Important Points</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Electrical devices are rated in terms of power (e.g., 60 W bulb).<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Higher power means greater energy consumption per unit time.<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "4. Relationship Between Current, Voltage, and Power",
+    "id": "h.r25oystbt9ex",
+    "html": "<span class=\"c10 c6\">4. Relationship Between Current, Voltage, and Power</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Voltage provides the force that pushes charges.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Current represents the flow of charges.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Power indicates how fast electrical energy is being used.<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "These three quantities are interdependent, and understanding their relationship is essential for circuit analysis.",
+    "html": "<span class=\"c2\">These three quantities are interdependent, and understanding their relationship is essential for circuit analysis.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Ohm’s Law",
+    "id": "h.1mxxktb76xhh",
+    "html": "<span class=\"c7 c6\">&nbsp;Ohm’s Law</span>"
+  },
+  {
+    "type": "p",
+    "text": "Ohm’s Law is one of the most fundamental principles in electronics. It states that the voltage across a resistor is directly proportional to the current flowing through it, provided the temperature remains constant.",
+    "html": "Ohm’s Law is one of the most fundamental principles in electronics. It states that the voltage across a resistor is directly proportional to the current flowing through it, provided the temperature remains constant.<br>"
+  },
+  {
+    "type": "img",
+    "src": "images/image11.png",
+    "alt": ""
+  },
+  {
+    "type": "p",
+    "text": "V = IR, I = V/R, R = V/I",
+    "html": "<span class=\"c7 c6\">&nbsp;V = IR, I = V/R, R = V/I</span>"
+  },
+  {
+    "type": "p",
+    "text": "Here, V is the voltage across the resistor, I is the current through it, and R is the resistance. This relationship forms the basis for analyzing almost all electrical circuits.",
+    "html": "<span>Here, </span><span class=\"c27\">V</span><span>&nbsp;is the voltage across the resistor, </span><span class=\"c27\">I</span><span>&nbsp;is the current through it, and </span><span class=\"c27\">R</span><span class=\"c2\">&nbsp;is the resistance. This relationship forms the basis for analyzing almost all electrical circuits.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "1.2 Kirchhoff’s Laws",
+    "id": "h.nlds8hx1uyir",
+    "html": "<span class=\"c7 c6\">1.2 Kirchhoff’s Laws</span>"
+  },
+  {
+    "type": "h4",
+    "text": "Kirchhoff’s Current Law (KCL)",
+    "id": "h.k72fit3gyptd",
+    "html": "<span class=\"c3\">Kirchhoff’s Current Law (KCL)</span>"
+  },
+  {
+    "type": "p",
+    "text": "Kirchhoff’s Current Law states that the algebraic sum of currents at a junction is zero. In simple terms, the total current entering a node must equal the total current leaving that node.",
+    "html": "<span class=\"c2\">Kirchhoff’s Current Law states that the algebraic sum of currents at a junction is zero. In simple terms, the total current entering a node must equal the total current leaving that node.</span>"
+  },
+  {
+    "type": "p",
+    "text": "[ \\sum I_{in} = \\sum I_{out}",
+    "html": "[ \\sum I_{in} = \\sum I_{out} "
+  },
+  {
+    "type": "p",
+    "text": "]",
+    "html": "]<br>"
+  },
+  {
+    "type": "img",
+    "src": "images/image31.png",
+    "alt": ""
+  },
+  {
+    "type": "p",
+    "text": "This law is based on the conservation of charge and is widely used in nodal analysis.",
+    "html": "<span class=\"c2\">This law is based on the conservation of charge and is widely used in nodal analysis.</span>"
+  },
+  {
+    "type": "h4",
+    "text": "Kirchhoff’s Voltage Law (KVL)",
+    "id": "h.vhqz6zxfj0pp",
+    "html": "<span class=\"c3\">Kirchhoff’s Voltage Law (KVL)</span>"
+  },
+  {
+    "type": "p",
+    "text": "Kirchhoff’s Voltage Law states that the algebraic sum of all voltages around any closed loop in a circuit is zero.",
+    "html": "Kirchhoff’s Voltage Law states that the algebraic sum of all voltages around any closed loop in a circuit is zero.<br><br>"
+  },
+  {
+    "type": "img",
+    "src": "images/image10.png",
+    "alt": ""
+  },
+  {
+    "type": "p",
+    "text": "[ \\sum V = 0 ]",
+    "html": "<span class=\"c2\">[ \\sum V = 0 ]</span>"
+  },
+  {
+    "type": "p",
+    "text": "This law follows from the conservation of energy and is essential for loop or mesh analysis.",
+    "html": "<span class=\"c2\">This law follows from the conservation of energy and is essential for loop or mesh analysis.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "1.3 Resistors in Series and Parallel",
+    "id": "h.pte2jtktax6z",
+    "html": "<span class=\"c7 c6\">1.3 Resistors in Series and Parallel</span>"
+  },
+  {
+    "type": "p",
+    "text": "Resistors connected in series share the same current, and their equivalent resistance is the sum of individual resistances:d",
+    "html": "Resistors connected in series share the same current, and their equivalent resistance is the sum of individual resistances:<br>d"
+  },
+  {
+    "type": "img",
+    "src": "images/image30.png",
+    "alt": ""
+  },
+  {
+    "type": "p",
+    "text": "[ R_{eq} = R_1 + R_2 + \\dots + R_n ]",
+    "html": "<span class=\"c2\">[ R_{eq} = R_1 + R_2 + \\dots + R_n ]</span>"
+  },
+  {
+    "type": "p",
+    "text": "Resistors connected in parallel share the same voltage. The equivalent resistance is given by:",
+    "html": "<span class=\"c2\">Resistors connected in parallel share the same voltage. The equivalent resistance is given by:</span>"
+  },
+  {
+    "type": "p",
+    "text": "[ \\frac{1}{R_{eq}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\dots + \\frac{1}{R_n} ]",
+    "html": "<span class=\"c2\">[ \\frac{1}{R_{eq}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\dots + \\frac{1}{R_n} ]</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "1.4 Voltage Divider Circuit",
+    "id": "h.n5xniiyl3j4u",
+    "html": "<span class=\"c7 c6\">1.4 Voltage Divider Circuit</span>"
+  },
+  {
+    "type": "p",
+    "text": "A voltage divider is a simple yet powerful circuit used to obtain a desired fraction of an input voltage using two resistors in series. The output voltage is given by:",
+    "html": "<span class=\"c2\">A voltage divider is a simple yet powerful circuit used to obtain a desired fraction of an input voltage using two resistors in series. The output voltage is given by:</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image28.png",
+    "alt": ""
+  },
+  {
+    "type": "p",
+    "text": "[ V_{out} = V_{in} \\times \\frac{R_2}{R_1 + R_2} ]",
+    "html": "<span class=\"c2\">[ V_{out} = V_{in} \\times \\frac{R_2}{R_1 + R_2} ]</span>"
+  },
+  {
+    "type": "p",
+    "text": "Voltage dividers are widely used in biasing and reference voltage generation.",
+    "html": "<span class=\"c2\">Voltage dividers are widely used in biasing and reference voltage generation.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "p",
+    "text": "2. Energy Storage Elements",
+    "html": "<span class=\"c10 c6\">2. Energy Storage Elements</span>"
+  },
+  {
+    "type": "h3",
+    "text": "2.1 Capacitors",
+    "id": "h.5f7t3rs08nr0",
+    "html": "<span class=\"c7 c6\">2.1 Capacitors</span>"
+  },
+  {
+    "type": "p",
+    "text": "A capacitor stores energy in the form of an electric field between two conductive plates separated by a dielectric. The capacitance is given by:",
+    "html": "A capacitor stores energy in the form of an electric field between two conductive plates separated by a dielectric. The capacitance is given by:<br>"
+  },
+  {
+    "type": "img",
+    "src": "images/image26.png",
+    "alt": ""
+  },
+  {
+    "type": "p",
+    "text": "[ C = \\frac{\\varepsilon A}{d} ]",
+    "html": "<span class=\"c2\">[ C = \\frac{\\varepsilon A}{d} ]</span>"
+  },
+  {
+    "type": "p",
+    "text": "Capacitors oppose sudden changes in voltage and are essential in filtering, timing, and coupling applications. The current-voltage relationship is:",
+    "html": "<span class=\"c2\">Capacitors oppose sudden changes in voltage and are essential in filtering, timing, and coupling applications. The current-voltage relationship is:</span>"
+  },
+  {
+    "type": "p",
+    "text": "[ i = C \\frac{dV}{dt} ]",
+    "html": "<span class=\"c2\">[ i = C \\frac{dV}{dt} ]</span>"
+  },
+  {
+    "type": "p",
+    "text": "Capacitors can be connected in series or parallel to achieve desired capacitance values.",
+    "html": "<span class=\"c2\">Capacitors can be connected in series or parallel to achieve desired capacitance values.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "2.2 Inductors",
+    "id": "h.y2v2e3h82m8o",
+    "html": "<span class=\"c6 c7\">2.2 Inductors</span>"
+  },
+  {
+    "type": "p",
+    "text": "An inductor stores energy in the form of a magnetic field when current flows through it. Inductors oppose sudden changes in current and are commonly used in filters, transformers, and power electronics.",
+    "html": "An inductor stores energy in the form of a magnetic field when current flows through it. Inductors oppose sudden changes in current and are commonly used in filters, transformers, and power electronics.<br>"
+  },
+  {
+    "type": "img",
+    "src": "images/image16.png",
+    "alt": ""
+  },
+  {
+    "type": "p",
+    "text": "For series-connected inductors:[ L_{eq} = L_1 + L_2 + \\dots + L_n ]",
+    "html": "<span class=\"c2\">For series-connected inductors:<br>[ L_{eq} = L_1 + L_2 + \\dots + L_n ]</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "3. Sources in Circuits",
+    "id": "h.31y4wvykuoqy",
+    "html": "<span class=\"c10 c6\">3. Sources in Circuits</span>"
+  },
+  {
+    "type": "h3",
+    "text": "3.1 Voltage Sources",
+    "id": "h.k057lriu4pmf",
+    "html": "<span class=\"c7 c6\">3.1 Voltage Sources</span>"
+  },
+  {
+    "type": "p",
+    "text": "A voltage source maintains a constant voltage independent of the current drawn from it. Ideal voltage sources have zero internal resistance.",
+    "html": "<span class=\"c2\">A voltage source maintains a constant voltage independent of the current drawn from it. Ideal voltage sources have zero internal resistance.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "3.2 Current Sources",
+    "id": "h.5uq5tpr5aa0n",
+    "html": "<span class=\"c7 c6\">3.2 Current Sources</span>"
+  },
+  {
+    "type": "p",
+    "text": "An ideal current source delivers a constant current regardless of the voltage across it. It has infinite output resistance and is mainly used for circuit analysis and biasing concepts.",
+    "html": "<span class=\"c2\">An ideal current source delivers a constant current regardless of the voltage across it. It has infinite output resistance and is mainly used for circuit analysis and biasing concepts.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "4. RC Circuits",
+    "id": "h.p1e6qlxikpgf",
+    "html": "<span class=\"c10 c6\">4. RC Circuits</span>"
+  },
+  {
+    "type": "p",
+    "text": "RC circuits consist of a resistor and capacitor in series. The resistor controls the rate at which the capacitor charges or discharges. The time constant is defined as:",
+    "html": "<span class=\"c2\">RC circuits consist of a resistor and capacitor in series. The resistor controls the rate at which the capacitor charges or discharges. The time constant is defined as:</span>"
+  },
+  {
+    "type": "p",
+    "text": "[ \\tau = RC ]",
+    "html": "<span class=\"c2\">[ \\tau = RC ]</span>"
+  },
+  {
+    "type": "p",
+    "text": "The voltage across the capacitor during charging is:",
+    "html": "<span class=\"c2\">The voltage across the capacitor during charging is:</span>"
+  },
+  {
+    "type": "p",
+    "text": "[ V_C = V_S (1 - e^{-t/RC}) ]",
+    "html": "<span class=\"c2\">[ V_C = V_S (1 - e^{-t/RC}) ]</span>"
+  },
+  {
+    "type": "p",
+    "text": "RC circuits are fundamental in timing, filtering, and signal shaping applications.",
+    "html": "<span class=\"c2\">RC circuits are fundamental in timing, filtering, and signal shaping applications.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "p",
+    "text": "Fermi Energy",
+    "html": "<span class=\"c2\">Fermi Energy</span>"
+  },
+  {
+    "type": "p",
+    "text": "The value of the Fermi level at absolute zero temperature (–273.15 °C or 0 K) is known as the Fermi Energy. It represents the maximum kinetic energy that an electron can possess at 0 K. For a given solid, the Fermi energy is a fixed value and is a fundamental property of the material.",
+    "html": "<span class=\"c2\">The value of the Fermi level at absolute zero temperature (–273.15 °C or 0 K) is known as the Fermi Energy. It represents the maximum kinetic energy that an electron can possess at 0 K. For a given solid, the Fermi energy is a fixed value and is a fundamental property of the material.</span>"
+  },
+  {
+    "type": "p",
+    "text": "The highest energy level occupied by electrons at absolute zero temperature is called the Fermi Level. At 0 K, all energy states below the Fermi level are completely filled, and all states above it are completely empty.",
+    "html": "<span class=\"c2\">The highest energy level occupied by electrons at absolute zero temperature is called the Fermi Level. At 0 K, all energy states below the Fermi level are completely filled, and all states above it are completely empty.</span>"
+  },
+  {
+    "type": "p",
+    "text": "In semiconductors and insulators at absolute zero, the Fermi level lies between the valence band and the conduction band. In intrinsic semiconductors, it is approximately at the mid-gap.",
+    "html": "<span class=\"c2\">In semiconductors and insulators at absolute zero, the Fermi level lies between the valence band and the conduction band. In intrinsic semiconductors, it is approximately at the mid-gap.</span>"
+  },
+  {
+    "type": "p",
+    "text": "The existence of the Fermi level is a direct consequence of Pauli’s Exclusion Principle, which states that no two electrons can occupy the same quantum energy state simultaneously. As a result, electrons fill available energy states starting from the lowest energy upward, leading to a well-defined highest occupied energy level at 0 K.",
+    "html": "<span class=\"c2\">The existence of the Fermi level is a direct consequence of Pauli’s Exclusion Principle, which states that no two electrons can occupy the same quantum energy state simultaneously. As a result, electrons fill available energy states starting from the lowest energy upward, leading to a well-defined highest occupied energy level at 0 K.</span>"
+  },
+  {
+    "type": "p",
+    "text": "Fermi Function",
+    "html": "<span class=\"c2\">Fermi Function</span>"
+  },
+  {
+    "type": "p",
+    "text": "The Fermi function f(E) gives the probability of finding an electron in an energy state E at a given temperature. It is derived from Fermi–Dirac statistics and is expressed as:",
+    "html": "<span class=\"c2\">The Fermi function f(E) gives the probability of finding an electron in an energy state E at a given temperature. It is derived from Fermi–Dirac statistics and is expressed as:</span>"
+  },
+  {
+    "type": "p",
+    "text": "f(E) = 1 / [1 + exp((E − EF) / kT)]",
+    "html": "<span class=\"c2\">f(E) = 1 / [1 + exp((E − EF) / kT)]</span>"
+  },
+  {
+    "type": "p",
+    "text": "where: E = Energy level EF = Fermi level k = Boltzmann constant T = Absolute temperature (in Kelvin)",
+    "html": "<span class=\"c2\">where:<br> E = Energy level<br> EF = Fermi level<br> k = Boltzmann constant<br> T = Absolute temperature (in Kelvin)</span>"
+  },
+  {
+    "type": "p",
+    "text": "At T = 0 K:",
+    "html": "<span class=\"c2\">At T = 0 K:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">For E &lt; EF, f(E) = 1 (state completely occupied)<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">For E &gt; EF, f(E) = 0 (state completely empty)<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "At temperatures above 0 K, the transition around the Fermi level becomes gradual rather than abrupt, and the probability of occupation follows the Fermi–Dirac distribution curve.",
+    "html": "<span class=\"c2\">At temperatures above 0 K, the transition around the Fermi level becomes gradual rather than abrupt, and the probability of occupation follows the Fermi–Dirac distribution curve.</span>"
+  },
+  {
+    "type": "p",
+    "text": "Dependency of Fermi Level on Temperature and Doping Concentration",
+    "html": "<span class=\"c2\">Dependency of Fermi Level on Temperature and Doping Concentration</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image23.png",
+    "alt": ""
+  },
+  {
+    "type": "p",
+    "text": "The position of the Fermi level (EF) in a semiconductor depends strongly on both temperature and doping concentration. The behavior can be understood as follows:",
+    "html": "<span class=\"c2\">The position of the Fermi level (EF) in a semiconductor depends strongly on both temperature and doping concentration. The behavior can be understood as follows:</span>"
+  },
+  {
+    "type": "ol",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Effect of Temperature on Intrinsic Semiconductor<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "In an intrinsic semiconductor (pure semiconductor with no intentional doping), the Fermi level lies approximately at the middle of the bandgap at 0 K.",
+    "html": "<span class=\"c2\">In an intrinsic semiconductor (pure semiconductor with no intentional doping), the Fermi level lies approximately at the middle of the bandgap at 0 K.</span>"
+  },
+  {
+    "type": "p",
+    "text": "As temperature increases:",
+    "html": "<span class=\"c2\">As temperature increases:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Electron–hole pairs are generated equally.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Since electron concentration (n) equals hole concentration (p), the Fermi level remains close to the intrinsic Fermi level (Ei).<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Hence, for an intrinsic semiconductor, the Fermi level does not significantly shift with temperature; it stays near mid-gap (slight shifts may occur due to effective mass differences, but conceptually it remains centered).",
+    "html": "<span class=\"c2\">Hence, for an intrinsic semiconductor, the Fermi level does not significantly shift with temperature; it stays near mid-gap (slight shifts may occur due to effective mass differences, but conceptually it remains centered).</span>"
+  },
+  {
+    "type": "ol",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Doping is Not Applicable for Intrinsic Semiconductor<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "By definition, an intrinsic semiconductor has no intentional impurities. Therefore, doping concentration does not apply to intrinsic material. Once doping is introduced, it becomes an extrinsic semiconductor.",
+    "html": "<span class=\"c2\">By definition, an intrinsic semiconductor has no intentional impurities.<br> Therefore, doping concentration does not apply to intrinsic material. Once doping is introduced, it becomes an extrinsic semiconductor.</span>"
+  },
+  {
+    "type": "ol",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Effect of Pentavalent (Donor) Doping – n-Type Semiconductor<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "When pentavalent atoms (e.g., P, As) are added:",
+    "html": "<span class=\"c2\">When pentavalent atoms (e.g., P, As) are added:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Extra electrons are introduced.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Electron concentration increases significantly.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">The Fermi level shifts upward, toward the conduction band.<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "As donor concentration increases further:",
+    "html": "<span class=\"c2\">As donor concentration increases further:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">EF moves closer to the conduction band edge (EC).<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">In heavily doped (degenerate) n-type semiconductors, EF may even enter the conduction band.<br></span></li>"
+  },
+  {
+    "type": "ol",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Effect of Trivalent (Acceptor) Doping – p-Type Semiconductor<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "When trivalent atoms (e.g., B, Al) are added:",
+    "html": "<span class=\"c2\">When trivalent atoms (e.g., B, Al) are added:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Additional holes (empty states) are created.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Hole concentration increases.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">The Fermi level shifts downward, toward the valence band.<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "As acceptor concentration increases:",
+    "html": "<span class=\"c2\">As acceptor concentration increases:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">EF moves closer to the valence band edge (EV).<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">In heavily doped (degenerate) p-type semiconductors, EF may enter the valence band.<br></span></li>"
+  },
+  {
+    "type": "ol",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Effect of Increasing Temperature on Extrinsic Semiconductor<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "In an extrinsic semiconductor at low temperature:",
+    "html": "<span class=\"c2\">In an extrinsic semiconductor at low temperature:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Carrier concentration is dominated by dopants.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">EF is near EC (n-type) or EV (p-type).<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "As temperature increases:",
+    "html": "<span class=\"c2\">As temperature increases:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Thermally generated intrinsic carriers increase rapidly.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Intrinsic carrier concentration (ni) becomes comparable to or greater than doping concentration.<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "At sufficiently high temperature:",
+    "html": "<span class=\"c2\">At sufficiently high temperature:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">The semiconductor behaves like an intrinsic semiconductor.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">This is called intrinsic region operation.<br></span></li>"
+  },
+  {
+    "type": "ol",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Critical Temperature and Intrinsic Behavior<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "At a certain high temperature (sometimes referred to as intrinsic transition temperature):",
+    "html": "<span class=\"c2\">At a certain high temperature (sometimes referred to as intrinsic transition temperature):</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Intrinsic carrier generation dominates over dopant contribution.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">The extrinsic semiconductor effectively behaves as intrinsic.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">The Fermi level shifts back toward the intrinsic Fermi level (Ei), near the middle of the bandgap.<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Thus, temperature tends to push the Fermi level toward mid-gap, while doping pushes it toward conduction band (n-type) or valence band (p-type).",
+    "html": "<span class=\"c2\">Thus, temperature tends to push the Fermi level toward mid-gap, while doping pushes it toward conduction band (n-type) or valence band (p-type).</span>"
+  },
+  {
+    "type": "p",
+    "text": "CMOS Expert Insight",
+    "html": "<span class=\"c2\">CMOS Expert Insight</span>"
+  },
+  {
+    "type": "p",
+    "text": "From a device physics perspective:",
+    "html": "<span class=\"c2\">From a device physics perspective:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">EF position directly controls carrier concentration through exponential relationships.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Small shifts in EF can cause large changes in conductivity.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">In advanced CMOS nodes, heavy channel doping, body biasing, and temperature variation significantly impact threshold voltage (Vth), which is strongly related to Fermi level position.<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Understanding Fermi level movement is fundamental to analyzing leakage current, threshold voltage variation, and temperature-dependent behavior in modern CMOS technologies.",
+    "html": "<span class=\"c2\">Understanding Fermi level movement is fundamental to analyzing leakage current, threshold voltage variation, and temperature-dependent behavior in modern CMOS technologies.</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image6.png",
+    "alt": ""
+  },
+  {
+    "type": "img",
+    "src": "images/image2.png",
+    "alt": ""
+  },
+  {
+    "type": "p",
+    "text": "Summary",
+    "html": "<span class=\"c2\">Summary</span>"
+  },
+  {
+    "type": "p",
+    "text": "Diffusion current arises due to the concentration gradient of majority charge carriers in a semiconductor. Whenever there is a difference in carrier concentration between two regions, carriers naturally move from the region of higher concentration to the region of lower concentration. This movement results in diffusion current.",
+    "html": "<span class=\"c6\">Diffusion current</span><span class=\"c2\">&nbsp;arises due to the concentration gradient of majority charge carriers in a semiconductor. Whenever there is a difference in carrier concentration between two regions, carriers naturally move from the region of higher concentration to the region of lower concentration. This movement results in diffusion current.</span>"
+  },
+  {
+    "type": "p",
+    "text": "In a P-type semiconductor, diffusion occurs due to the motion of holes. Since holes are the majority carriers, they move from the P-region (high hole concentration) toward the N-region (low hole concentration). Hence, the diffusion current direction is from P to N.",
+    "html": "<span class=\"c2\">In a P-type semiconductor, diffusion occurs due to the motion of holes. Since holes are the majority carriers, they move from the P-region (high hole concentration) toward the N-region (low hole concentration). Hence, the diffusion current direction is from P to N.</span>"
+  },
+  {
+    "type": "p",
+    "text": "In an N-type semiconductor, diffusion occurs due to the motion of electrons. Electrons move from the N-region (high electron concentration) toward the P-region (low electron concentration). Hence, the diffusion current direction is from N to P.",
+    "html": "<span class=\"c2\">In an N-type semiconductor, diffusion occurs due to the motion of electrons. Electrons move from the N-region (high electron concentration) toward the P-region (low electron concentration). Hence, the diffusion current direction is from N to P.</span>"
+  },
+  {
+    "type": "p",
+    "text": "Because of diffusion, charge separation takes place near the junction. This creates an electric field directed from the N-region toward the P-region. This internally generated electric field opposes further diffusion and leads to the formation of the depletion region in a PN junction.",
+    "html": "<span class=\"c2\">Because of diffusion, charge separation takes place near the junction. This creates an electric field directed from the N-region toward the P-region. This internally generated electric field opposes further diffusion and leads to the formation of the depletion region in a PN junction.</span>"
+  },
+  {
+    "type": "p",
+    "text": "Diffusion current density of electrons is given by Fick’s law as:",
+    "html": "<span class=\"c2\">Diffusion current density of electrons is given by Fick’s law as:</span>"
+  },
+  {
+    "type": "p",
+    "text": "Jn(diff) = q Dn (dn/dx)",
+    "html": "<span class=\"c2\">Jn(diff) = q Dn (dn/dx)</span>"
+  },
+  {
+    "type": "p",
+    "text": "where: Jn(diff) = Electron diffusion current density q = Charge of an electron Dn = Electron diffusion coefficient dn/dx = Gradient of electron concentration",
+    "html": "<span class=\"c2\">where:<br> Jn(diff) = Electron diffusion current density<br> q = Charge of an electron<br> Dn = Electron diffusion coefficient<br> dn/dx = Gradient of electron concentration</span>"
+  },
+  {
+    "type": "p",
+    "text": "Similarly, the hole diffusion current density is:",
+    "html": "<span class=\"c2\">Similarly, the hole diffusion current density is:</span>"
+  },
+  {
+    "type": "p",
+    "text": "Jp(diff) = − q Dp (dp/dx)",
+    "html": "<span class=\"c2\">Jp(diff) = − q Dp (dp/dx)</span>"
+  },
+  {
+    "type": "p",
+    "text": "where Dp is the hole diffusion coefficient and dp/dx is the hole concentration gradient.",
+    "html": "<span class=\"c2\">where Dp is the hole diffusion coefficient and dp/dx is the hole concentration gradient.</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image21.png",
+    "alt": ""
+  },
+  {
+    "type": "p",
+    "text": "Drift Current",
+    "html": "<span class=\"c3\">Drift Current</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image13.png",
+    "alt": ""
+  },
+  {
+    "type": "p",
+    "text": "Drift current is the current produced due to the motion of charged particles (electrons or holes) under the influence of an externally applied electric field. When an electric field is applied across a semiconductor material, charge carriers experience a force and begin to move with an average velocity known as drift velocity. This movement of carriers results in drift current.",
+    "html": "<span class=\"c2\">Drift current is the current produced due to the motion of charged particles (electrons or holes) under the influence of an externally applied electric field. When an electric field is applied across a semiconductor material, charge carriers experience a force and begin to move with an average velocity known as drift velocity. This movement of carriers results in drift current.</span>"
+  },
+  {
+    "type": "p",
+    "text": "The magnitude of the drift current depends on:",
+    "html": "<span class=\"c2\">The magnitude of the drift current depends on:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">The strength of the applied electric field<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">The number of charge carriers available<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">The mobility of carriers<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "In a PN junction, the applied electric field affects the width of the depletion region. Under reverse bias, the electric field increases and the depletion width widens. Under forward bias, the electric field reduces and the depletion width narrows. Drift current plays a significant role particularly under reverse bias conditions.",
+    "html": "<span class=\"c2\">In a PN junction, the applied electric field affects the width of the depletion region. Under reverse bias, the electric field increases and the depletion width widens. Under forward bias, the electric field reduces and the depletion width narrows. Drift current plays a significant role particularly under reverse bias conditions.</span>"
+  },
+  {
+    "type": "p",
+    "text": "Summary",
+    "html": "<span class=\"c2\">Summary</span>"
+  },
+  {
+    "type": "p",
+    "text": "Drift current arises due to the potential gradient (electric field) present in the semiconductor.",
+    "html": "<span class=\"c2\">Drift current arises due to the potential gradient (electric field) present in the semiconductor.</span>"
+  },
+  {
+    "type": "p",
+    "text": "In a PN junction under reverse bias, drift current is mainly due to minority charge carriers (electrons in P-region and holes in N-region).",
+    "html": "<span class=\"c2\">In a PN junction under reverse bias, drift current is mainly due to minority charge carriers (electrons in P-region and holes in N-region).</span>"
+  },
+  {
+    "type": "p",
+    "text": "The current density associated with the drift of electrons due to an applied electric field is given by:",
+    "html": "<span class=\"c2\">The current density associated with the drift of electrons due to an applied electric field is given by:</span>"
+  },
+  {
+    "type": "p",
+    "text": "Jn(drift) = q n μn E",
+    "html": "<span class=\"c2\">Jn(drift) = q n μn E</span>"
+  },
+  {
+    "type": "p",
+    "text": "where: Jn(drift) = Electron drift current density q = Electronic charge n = Electron concentration μn = Electron mobility E = Applied electric field",
+    "html": "<span class=\"c2\">where:<br> Jn(drift) = Electron drift current density<br> q = Electronic charge<br> n = Electron concentration<br> μn = Electron mobility<br> E = Applied electric field</span>"
+  },
+  {
+    "type": "p",
+    "text": "Similarly, for holes:",
+    "html": "<span class=\"c2\">Similarly, for holes:</span>"
+  },
+  {
+    "type": "p",
+    "text": "Jp(drift) = q p μp E",
+    "html": "<span class=\"c2\">Jp(drift) = q p μp E</span>"
+  },
+  {
+    "type": "p",
+    "text": "where μp is the hole mobility and p is the hole concentration.",
+    "html": "<span class=\"c2\">where μp is the hole mobility and p is the hole concentration.</span>"
+  },
+  {
+    "type": "p",
+    "text": "From a device physics standpoint, drift current is directly proportional to the electric field and carrier mobility, and it forms the basis of Ohm’s law in semiconductors.",
+    "html": "<span class=\"c2\">From a device physics standpoint, drift current is directly proportional to the electric field and carrier mobility, and it forms the basis of Ohm’s law in semiconductors.</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image24.png",
+    "alt": ""
+  },
+  {
+    "type": "h1",
+    "text": "Why Silicon is Preferred Over Germanium",
+    "id": "h.j8wuifwpf58z",
+    "html": "<span class=\"c10 c6\">Why Silicon is Preferred Over Germanium</span>"
+  },
+  {
+    "type": "p",
+    "text": "Silicon (Si) is widely used in semiconductor device fabrication instead of Germanium (Ge) due to the following reasons:",
+    "html": "<span class=\"c2\">Silicon (Si) is widely used in semiconductor device fabrication instead of Germanium (Ge) due to the following reasons:</span>"
+  },
+  {
+    "type": "h3",
+    "text": "1. Energy Band Gap",
+    "id": "h.10hikhrv7551",
+    "html": "<span class=\"c7 c6\">1. Energy Band Gap</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span>Bandgap of </span><span class=\"c6\">Silicon (Si) ≈ 1.12 eV</span><span class=\"c2\">&nbsp;(at 300K)<br></span></li><li class=\"c0 li-bullet-0\"><span>Bandgap of </span><span class=\"c6\">Germanium (Ge) ≈ 0.66 eV</span><span class=\"c2\">&nbsp;(at 300K)<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "A larger bandgap in silicon results in:",
+    "html": "<span class=\"c2\">A larger bandgap in silicon results in:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Lower intrinsic carrier concentration<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Better high-temperature operation<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Reduced leakage current<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "2. Lower Thermal Carrier Generation",
+    "id": "h.3yfgyvvn812z",
+    "html": "<span class=\"c7 c6\">2. Lower Thermal Carrier Generation</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span>Due to its larger bandgap, silicon has </span><span class=\"c3\">lower thermal generation of electron-hole pairs<br></span></li><li class=\"c0 li-bullet-0\"><span>This improves </span><span class=\"c3\">device stability and reliability<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "3. Formation of Native Oxide (SiO₂)",
+    "id": "h.7lv20e7y4ncz",
+    "html": "<span class=\"c7 c6\">3. Formation of Native Oxide (SiO₂)</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span>Silicon forms a high-quality native oxide layer (</span><span class=\"c6\">SiO₂</span><span class=\"c2\">)<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">SiO₂ is:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c1 c23 li-bullet-0\"><span class=\"c2\">An excellent insulator<br></span></li><li class=\"c1 c23 li-bullet-0\"><span class=\"c2\">Chemically stable<br></span></li><li class=\"c1 c23 li-bullet-0\"><span class=\"c2\">Thermally stable<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span>This property makes </span><span class=\"c3\">MOS technology possible<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">One of the biggest reasons CMOS technology is based on silicon<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Germanium does not form a stable native oxide suitable for device fabrication.",
+    "html": "<span>Germanium does </span><span class=\"c6\">not</span><span class=\"c2\">&nbsp;form a stable native oxide suitable for device fabrication.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "4. Abundance in Nature",
+    "id": "h.k9wspnbh9fps",
+    "html": "<span class=\"c7 c6\">4. Abundance in Nature</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span>Silicon is the </span><span class=\"c3\">second most abundant element in Earth’s crust<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Germanium is comparatively rare and expensive<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "5. Lower Noise",
+    "id": "h.i264652vyfiw",
+    "html": "<span class=\"c7 c6\">5. Lower Noise</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span>Silicon devices exhibit </span><span class=\"c3\">lower leakage and lower noise<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">More suitable for analog and mixed-signal applications<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "6. Industrial Ecosystem",
+    "id": "h.dwys0kpgxgqa",
+    "html": "<span class=\"c7 c6\">6. Industrial Ecosystem</span>"
+  },
+  {
+    "type": "p",
+    "text": "Silicon supports fabrication of:",
+    "html": "<span class=\"c2\">Silicon supports fabrication of:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Resistors<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Capacitors<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Diodes<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Tunnel diodes<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Varactor diodes<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">BJTs<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">MOSFETs<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">CMOS ICs<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Hence, Silicon dominates modern semiconductor manufacturing.",
+    "html": "<span class=\"c2\">Hence, Silicon dominates modern semiconductor manufacturing.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h1",
+    "text": "Diffusion Current in Semiconductors",
+    "id": "h.imaq5obs14n0",
+    "html": "<span class=\"c4\">Diffusion Current in Semiconductors</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Definition",
+    "id": "h.638p6djqviok",
+    "html": "<span class=\"c7 c6\">Definition</span>"
+  },
+  {
+    "type": "p",
+    "text": "Diffusion current is the current in a semiconductor caused by the movement of charge carriers (electrons and holes) due to concentration gradient, without any external electric field.",
+    "html": "<span>Diffusion current is the current in a semiconductor caused by the movement of charge carriers (electrons and holes) due to </span><span class=\"c6\">concentration gradient</span><span class=\"c2\">, without any external electric field.</span>"
+  },
+  {
+    "type": "p",
+    "text": "It occurs because charge carriers move from:",
+    "html": "<span class=\"c2\">It occurs because charge carriers move from:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c3\">High concentration region → Low concentration region<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h1",
+    "text": "PN Junction Formation and Diffusion",
+    "id": "h.u5oq42jy9n2n",
+    "html": "<span class=\"c4\">PN Junction Formation and Diffusion</span>"
+  },
+  {
+    "type": "p",
+    "text": "Consider:",
+    "html": "<span class=\"c2\">Consider:</span>"
+  },
+  {
+    "type": "h3",
+    "text": "N-Type Semiconductor",
+    "id": "h.5c59uklswdiq",
+    "html": "<span class=\"c7 c6\">N-Type Semiconductor</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span>Majority carriers: </span><span class=\"c3\">Electrons<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Minority carriers: Holes<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "P-Type Semiconductor",
+    "id": "h.5zb2apaaf32s",
+    "html": "<span class=\"c7 c6\">P-Type Semiconductor</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span>Majority carriers: </span><span class=\"c3\">Holes<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Minority carriers: Electrons<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "p",
+    "text": "When N-type and P-type materials are brought together:",
+    "html": "<span class=\"c2\">When N-type and P-type materials are brought together:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span>Electrons diffuse from </span><span class=\"c3\">N → P<br></span></li><li class=\"c0 li-bullet-0\"><span>Holes diffuse from </span><span class=\"c3\">P → N</span></li>"
+  },
+  {
+    "type": "img",
+    "src": "images/image14.png",
+    "alt": ""
+  },
+  {
+    "type": "p",
+    "text": "This movement happens due to concentration difference.",
+    "html": "<span class=\"c2\">This movement happens due to concentration difference.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h3",
+    "text": "Depletion Region",
+    "id": "h.wtmwz76s9wtq",
+    "html": "<span class=\"c7 c6\">Depletion Region</span>"
+  },
+  {
+    "type": "p",
+    "text": "The region near the junction where:",
+    "html": "<span class=\"c2\">The region near the junction where:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Mobile charge carriers recombine<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Ions are left behind<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">An internal electric field is created<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "is called the Depletion Region.",
+    "html": "<span>is called the </span><span class=\"c6\">Depletion Region</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h1",
+    "text": "Diffusion Current",
+    "id": "h.wa335bpi9pnj",
+    "html": "<span class=\"c4\">Diffusion Current</span>"
+  },
+  {
+    "type": "p",
+    "text": "The current formed due to this carrier movement without external voltage is called:",
+    "html": "<span>The current formed due to this carrier movement </span><span class=\"c6\">without external voltage</span><span class=\"c2\">&nbsp;is called:</span>"
+  },
+  {
+    "type": "p",
+    "text": "Diffusion Current",
+    "html": "<span class=\"c3\">Diffusion Current</span>"
+  },
+  {
+    "type": "p",
+    "text": "It exists because of non-uniform carrier concentration.",
+    "html": "<span>It exists because of </span><span class=\"c6\">non-uniform carrier concentration</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h1",
+    "text": "Diffusion Current Density Equations",
+    "id": "h.ytcgfjk1lo10",
+    "html": "<span class=\"c4\">Diffusion Current Density Equations</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image15.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h1",
+    "text": "P-Type Semiconductor – Boron Doping in Germanium",
+    "id": "h.p5msogipqje",
+    "html": "<span class=\"c10 c6\">P-Type Semiconductor – Boron Doping in Germanium</span>"
+  },
+  {
+    "type": "h2",
+    "text": "Example: Boron Doping in Germanium",
+    "id": "h.5kl6qc5ya3ft",
+    "html": "<span class=\"c6 c10\">Example: Boron Doping in Germanium</span>"
+  },
+  {
+    "type": "p",
+    "text": "Let us consider that a Boron (B) atom is added to a Germanium (Ge) crystal lattice.",
+    "html": "<span>Let us consider that a </span><span class=\"c6\">Boron (B)</span><span>&nbsp;atom is added to a </span><span class=\"c6\">Germanium (Ge)</span><span class=\"c2\">&nbsp;crystal lattice.</span>"
+  },
+  {
+    "type": "p",
+    "text": "Boron is a trivalent impurity (it has 3 valence electrons). When it replaces a Germanium atom in the lattice:",
+    "html": "<span>Boron is a </span><span class=\"c6\">trivalent impurity</span><span class=\"c2\">&nbsp;(it has 3 valence electrons). When it replaces a Germanium atom in the lattice:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span>Three of the valence electrons of Boron form </span><span class=\"c6\">three covalent bonds</span><span class=\"c2\">&nbsp;with neighboring Germanium atoms.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">However, one bond remains incomplete because Boron has only three valence electrons.<br></span></li><li class=\"c0 li-bullet-0\"><span>The missing electron in the fourth bond creates an empty space known as a </span><span class=\"c6\">hole</span><span class=\"c2\">.<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "This hole behaves as a positive charge carrier.",
+    "html": "<span>This hole behaves as a </span><span class=\"c6\">positive charge carrier</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "p",
+    "text": "When Boron impurities are added in small amounts, they generate a large number of holes. These holes contribute to electrical conduction.",
+    "html": "<span class=\"c2\">When Boron impurities are added in small amounts, they generate a large number of holes. These holes contribute to electrical conduction.</span>"
+  },
+  {
+    "type": "p",
+    "text": "All these holes together form what is called the",
+    "html": "All these holes together form what is called the "
+  },
+  {
+    "type": "p",
+    "text": "hole current",
+    "html": "hole current"
+  },
+  {
+    "type": "p",
+    "text": ".",
+    "html": ".<br>"
+  },
+  {
+    "type": "img",
+    "src": "images/image29.png",
+    "alt": ""
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "P-Type Extrinsic Semiconductor",
+    "id": "h.4p26l188dzaf",
+    "html": "<span class=\"c10 c6\">P-Type Extrinsic Semiconductor</span>"
+  },
+  {
+    "type": "p",
+    "text": "In a P-type semiconductor, conduction occurs primarily through holes.",
+    "html": "<span>In a </span><span class=\"c6\">P-type semiconductor</span><span>, conduction occurs primarily through </span><span class=\"c6\">holes</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span>Holes are the </span><span class=\"c6\">majority carriers</span><span class=\"c2\">.<br></span></li><li class=\"c0 li-bullet-0\"><span>Electrons are the </span><span class=\"c6\">minority carriers</span><span class=\"c2\">.<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "The trivalent impurity (Boron) creates holes and is therefore called an acceptor impurity, because it accepts electrons from neighboring Germanium atoms.",
+    "html": "<span>The trivalent impurity (Boron) creates holes and is therefore called an </span><span class=\"c6\">acceptor impurity</span><span class=\"c2\">, because it accepts electrons from neighboring Germanium atoms.</span>"
+  },
+  {
+    "type": "p",
+    "text": "The number of mobile holes is equal to the number of acceptor atoms added. Hence, the semiconductor remains electrically neutral.",
+    "html": "<span>The number of mobile holes is equal to the number of acceptor atoms added. Hence, the semiconductor remains </span><span class=\"c6\">electrically neutral</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "p",
+    "text": "Behavior Under Applied Electric Field",
+    "html": "<span class=\"c10 c6\">Behavior Under Applied Electric Field</span>"
+  },
+  {
+    "type": "p",
+    "text": "When an external electric field is applied:",
+    "html": "<span class=\"c2\">When an external electric field is applied:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span>Holes move toward the </span><span class=\"c6\">negative terminal</span><span class=\"c2\">.<br></span></li><li class=\"c0 li-bullet-0\"><span>The movement of holes constitutes </span><span class=\"c6\">P-type conductivity</span><span class=\"c2\">.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Hole movement is slower compared to electron movement.<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "In reality, conduction happens because valence electrons jump from one covalent bond to another, making it appear as though holes are moving.",
+    "html": "<span>In reality, conduction happens because </span><span class=\"c6\">valence electrons jump from one covalent bond to another</span><span class=\"c2\">, making it appear as though holes are moving.</span>"
+  },
+  {
+    "type": "p",
+    "text": "This mechanism is different from N-type conduction, where electrons are the majority carriers.",
+    "html": "<span>This mechanism is different from </span><span class=\"c6\">N-type conduction</span><span class=\"c2\">, where electrons are the majority carriers.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h1",
+    "text": "Why Silicon is Preferred Over Germanium?",
+    "id": "h.7m7p8qb1idfd",
+    "html": "<span class=\"c4\">Why Silicon is Preferred Over Germanium?</span>"
+  },
+  {
+    "type": "p",
+    "text": "Among semiconductor materials like Germanium (Ge) and Silicon (Si), Silicon is widely preferred for the manufacture of electronic components for the following reasons:",
+    "html": "<span>Among semiconductor materials like </span><span class=\"c6\">Germanium (Ge)</span><span>&nbsp;and </span><span class=\"c6\">Silicon (Si)</span><span class=\"c2\">, Silicon is widely preferred for the manufacture of electronic components for the following reasons:</span>"
+  },
+  {
+    "type": "ol",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Silicon has a larger bandgap (≈ 1.1 eV) compared to Germanium (≈ 0.7 eV).<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Lower leakage current.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Better thermal stability.<br></span></li><li class=\"c0 li-bullet-0\"><span>Easy formation of high-quality </span><span class=\"c6\">SiO₂ layer</span><span class=\"c2\">&nbsp;(important for MOS devices).<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Abundant availability in nature.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Lower noise in electronic circuits.<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Because of these advantages, Silicon is extensively used in the fabrication of:",
+    "html": "<span class=\"c2\">Because of these advantages, Silicon is extensively used in the fabrication of:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Diodes<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Transistors<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">BJTs<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">MOSFETs<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Integrated Circuits (ICs)</span></li>"
+  },
+  {
+    "type": "h1",
+    "text": "Extrinsic Semiconductors",
+    "id": "h.4mejzvdqvu05",
+    "html": "<span class=\"c10 c6\">Extrinsic Semiconductors</span>"
+  },
+  {
+    "type": "p",
+    "text": "An impure semiconductor formed by doping a pure (intrinsic) semiconductor with controlled impurities is called an extrinsic semiconductor.",
+    "html": "<span>An impure semiconductor formed by doping a pure (intrinsic) semiconductor with controlled impurities is called an </span><span class=\"c6\">extrinsic semiconductor</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "p",
+    "text": "Depending on the type of impurity added, extrinsic semiconductors are classified into:",
+    "html": "<span class=\"c2\">Depending on the type of impurity added, extrinsic semiconductors are classified into:</span>"
+  },
+  {
+    "type": "ol",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c3\">N-Type Extrinsic Semiconductor<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c3\">P-Type Extrinsic Semiconductor<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h1",
+    "text": "N-Type Semiconductor",
+    "id": "h.vpj1i9qt4jal",
+    "html": "<span class=\"c10 c6\">N-Type Semiconductor</span>"
+  },
+  {
+    "type": "p",
+    "text": "When a small amount of pentavalent impurity is added to a pure semiconductor (such as Silicon or Germanium), it forms an N-type extrinsic semiconductor.",
+    "html": "<span>When a small amount of </span><span class=\"c6\">pentavalent impurity</span><span>&nbsp;is added to a pure semiconductor (such as Silicon or Germanium), it forms an </span><span class=\"c6\">N-type extrinsic semiconductor</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "p",
+    "text": "A pentavalent impurity atom has five valence electrons.",
+    "html": "<span>A pentavalent impurity atom has </span><span class=\"c6\">five valence electrons</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Example: Arsenic Doped Germanium",
+    "id": "h.g4qqjvuw0gwy",
+    "html": "<span class=\"c7 c6\">Example: Arsenic Doped Germanium</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image25.png",
+    "alt": ""
+  },
+  {
+    "type": "p",
+    "text": "Let us consider that an Arsenic (As) atom is added to a Germanium (Ge) crystal.",
+    "html": "<span>Let us consider that an </span><span class=\"c6\">Arsenic (As)</span><span class=\"c2\">&nbsp;atom is added to a Germanium (Ge) crystal.</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Arsenic has five valence electrons.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Four of these electrons form covalent bonds with neighboring Germanium atoms.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">One electron remains loosely bound.<br></span></li><li class=\"c0 li-bullet-0\"><span>This extra electron becomes a </span><span class=\"c6\">free electron</span><span class=\"c2\">&nbsp;available for conduction.<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "All such free electrons collectively form the electron current.",
+    "html": "<span>All such free electrons collectively form the </span><span class=\"c6\">electron current</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "p",
+    "text": "Thus, the impurity added provides additional free electrons for conduction.",
+    "html": "<span class=\"c2\">Thus, the impurity added provides additional free electrons for conduction.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Characteristics of N-Type Semiconductor",
+    "id": "h.z66w0a9k403",
+    "html": "<span class=\"c4\">Characteristics of N-Type Semiconductor</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span>Conduction takes place mainly through </span><span class=\"c6\">electrons</span><span class=\"c2\">.<br></span></li><li class=\"c0 li-bullet-0\"><span>Electrons are the </span><span class=\"c6\">majority carriers</span><span class=\"c2\">.<br></span></li><li class=\"c0 li-bullet-0\"><span>Holes are the </span><span class=\"c6\">minority carriers</span><span class=\"c2\">.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">The semiconductor remains electrically neutral because no net positive or negative charge is added.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">When an external electric field is applied:<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c1 c23 li-bullet-0\"><span>Free electrons move toward the </span><span class=\"c6\">positive terminal</span><span class=\"c2\">.<br></span></li><li class=\"c1 c23 li-bullet-0\"><span>This conduction mechanism is called </span><span class=\"c6\">N-type conductivity</span><span class=\"c2\">.<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h2",
+    "text": "Donor Impurity",
+    "id": "h.zcm2dy4weaf5",
+    "html": "<span class=\"c4\">Donor Impurity</span>"
+  },
+  {
+    "type": "p",
+    "text": "Pentavalent atoms are called donor atoms because they donate one extra electron to the conduction band of the semiconductor.",
+    "html": "<span>Pentavalent atoms are called </span><span class=\"c6\">donor atoms</span><span class=\"c2\">&nbsp;because they donate one extra electron to the conduction band of the semiconductor.</span>"
+  },
+  {
+    "type": "p",
+    "text": "Common pentavalent impurities include:",
+    "html": "<span class=\"c2\">Common pentavalent impurities include:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Arsenic (As)<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Phosphorus (P)<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Antimony (Sb)<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "h1",
+    "text": "P-Type Semiconductor",
+    "id": "h.h2bsktkzml4",
+    "html": "<span class=\"c4\">P-Type Semiconductor</span>"
+  },
+  {
+    "type": "p",
+    "text": "When a small amount of trivalent impurity is added to a pure semiconductor, it forms a P-type extrinsic semiconductor.",
+    "html": "<span>When a small amount of </span><span class=\"c6\">trivalent impurity</span><span>&nbsp;is added to a pure semiconductor, it forms a </span><span class=\"c6\">P-type extrinsic semiconductor</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "p",
+    "text": "A trivalent impurity atom has three valence electrons.",
+    "html": "<span>A trivalent impurity atom has </span><span class=\"c6\">three valence electrons</span><span class=\"c2\">.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "p",
+    "text": "Trivalent Impurities",
+    "html": "<span class=\"c10 c6\">Trivalent Impurities</span>"
+  },
+  {
+    "type": "p",
+    "text": "Trivalent impurities have three valence electrons in their outermost shell.",
+    "html": "<span class=\"c2\">Trivalent impurities have three valence electrons in their outermost shell.</span>"
+  },
+  {
+    "type": "p",
+    "text": "Examples:",
+    "html": "<span class=\"c2\">Examples:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">Boron (B)<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Gallium (Ga)<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Indium (In)<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Aluminum (Al)<br></span></li>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "p",
+    "text": "Acceptor Impurity",
+    "html": "<span class=\"c10 c6\">Acceptor Impurity</span>"
+  },
+  {
+    "type": "p",
+    "text": "Trivalent atoms are called acceptor atoms because:",
+    "html": "<span>Trivalent atoms are called </span><span class=\"c6\">acceptor atoms</span><span class=\"c2\">&nbsp;because:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c2\">They accept one electron from the semiconductor atom.<br></span></li><li class=\"c0 li-bullet-0\"><span>This creates a </span><span class=\"c6\">hole</span><span class=\"c2\">&nbsp;in the valence band.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">The hole acts as a positive charge carrier.<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "In a P-type semiconductor:",
+    "html": "<span class=\"c2\">In a P-type semiconductor:</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span>Holes are the </span><span class=\"c6\">majority carriers</span><span class=\"c2\">.<br></span></li><li class=\"c0 li-bullet-0\"><span>Electrons are the </span><span class=\"c6\">minority carriers</span><span class=\"c2\">.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c2\">Conduction occurs mainly through hole movement.<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Intrinsic Semiconductors",
+    "html": "<span class=\"c3\">Intrinsic Semiconductors</span>"
+  },
+  {
+    "type": "p",
+    "text": "An intrinsic semiconductor is the pure form of a semiconductor material without any intentional doping. In this type of material, the electrical properties are solely determined by the semiconductor itself, such as Silicon (Si) or Germanium (Ge).",
+    "html": "<span class=\"c2\">An intrinsic semiconductor is the pure form of a semiconductor material without any intentional doping. In this type of material, the electrical properties are solely determined by the semiconductor itself, such as Silicon (Si) or Germanium (Ge).</span>"
+  },
+  {
+    "type": "h3",
+    "text": "Key Properties of Intrinsic Semiconductors",
+    "id": "h.ynuijq8fqpia",
+    "html": "<span class=\"c7 c6\">Key Properties of Intrinsic Semiconductors</span>"
+  },
+  {
+    "type": "ol",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c6\">Electron–Hole Pair (EHP) Generation<br></span><span class=\"c2\">&nbsp;Charge carriers (electrons and holes) are generated due to thermal excitation. When thermal energy is supplied, some valence electrons gain enough energy to move to the conduction band, leaving behind holes in the valence band.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c6\">Equal Number of Electrons and Holes<br></span><span class=\"c2\">&nbsp;In an intrinsic semiconductor:</span></li>"
+  },
+  {
+    "type": "img",
+    "src": "images/image5.png",
+    "alt": ""
+  },
+  {
+    "type": "p",
+    "text": "Since no impurity atoms are added, the number of free electrons is equal to the number of holes.",
+    "html": "<br>Since no impurity atoms are added, the number of free electrons is equal to the number of holes.<br>"
+  },
+  {
+    "type": "ol",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c6\">Low Conductivity at Room Temperature<br></span><span class=\"c2\">&nbsp;The conduction in intrinsic semiconductors is relatively small at room temperature because the number of thermally generated carriers is limited.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c6\">Insulating Behavior at 0°C (Approximately Absolute Zero)<br></span><span class=\"c2\">&nbsp;At very low temperatures, particularly near absolute zero, there is no thermal energy available to excite electrons. Hence, no free charge carriers are present, and the material behaves like an insulator.<br></span></li><li class=\"c0 li-bullet-0\"><span class=\"c6\">Continuous Generation and Recombination<br></span><span class=\"c2\">&nbsp;Electron–hole pair generation and recombination is a continuous process due to thermal agitation.<br></span></li>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c1 c23 li-bullet-0\"><span class=\"c2\">Generation: Thermal energy creates electron–hole pairs.<br></span></li><li class=\"c1 c23 li-bullet-0\"><span class=\"c2\">Recombination: Free electrons recombine with holes, releasing energy.<br></span></li>"
+  },
+  {
+    "type": "h3",
+    "text": "Important Definitions",
+    "id": "h.3vz73jfc63ea",
+    "html": "<span class=\"c7 c6\">Important Definitions</span>"
+  },
+  {
+    "type": "ul",
+    "html": "<li class=\"c0 li-bullet-0\"><span class=\"c6\">Intrinsic Carrier Concentration (nin_ini​)<br></span><span class=\"c2\">&nbsp;The intrinsic carrier concentration refers to the concentration of charge carriers (electrons or holes) in a pure semiconductor material.<br></span></li>"
+  },
+  {
+    "type": "p",
+    "text": "Since:",
+    "html": "<span class=\"c2\">Since:</span>"
+  },
+  {
+    "type": "img",
+    "src": "images/image7.png",
+    "alt": ""
+  },
+  {
+    "type": "p",
+    "text": "The intrinsic carrier concentration represents both intrinsic electron and intrinsic hole concentrations.",
+    "html": "<span class=\"c2\">The intrinsic carrier concentration represents both intrinsic electron and intrinsic hole concentrations.</span>"
+  },
+  {
+    "type": "hr"
+  },
+  {
+    "type": "p",
+    "text": "In summary, intrinsic semiconductors are electrically neutral materials in which conduction occurs purely due to thermally generated electron–hole pairs, without the influence of impurity atoms.",
+    "html": "<span class=\"c2\">In summary, intrinsic semiconductors are electrically neutral materials in which conduction occurs purely due to thermally generated electron–hole pairs, without the influence of impurity atoms.</span>"
+  }
+]

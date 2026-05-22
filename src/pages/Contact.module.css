@@ -305,3 +305,29 @@
 .floatingHelp:hover {
   transform: scale(1.1);
 }
+.successMessage {
+  background: rgba(89, 218, 209, 0.1);
+  border: 1px solid rgba(89, 218, 209, 0.3);
+  color: #59dad1;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+
+.errorMessage {
+  background: rgba(255, 107, 53, 0.1);
+  border: 1px solid rgba(255, 107, 53, 0.3);
+  color: #ff6b35;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}

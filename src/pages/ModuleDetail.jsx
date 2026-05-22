@@ -151,8 +151,8 @@ const ModuleDetail = () => {
               <p>🚫 Download: Disabled</p>
               <p>🚫 Copy/Print: Disabled</p>
             </div>
-            <Link to="/contact" className={styles.unlockBtn}>
-              Request Access
+            <Link to="/login" className={styles.unlockBtn}>
+              Login to Request Access
             </Link>
           </div>
         ) : (

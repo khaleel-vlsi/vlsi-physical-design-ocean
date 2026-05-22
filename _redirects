@@ -1,0 +1,57 @@
+# 1. 301 Redirects for static pages
+/index.html   /   301
+/about.html   /about   301
+/contact.html /contact 301
+/privacy.html /privacy 301
+/modules.html /modules 301
+/login.html   /login   301
+/register.html /register 301
+/payment.html  /dashboard 301
+
+# 2. 301 Redirects for legacy portal
+/portal_private_2026/login.html      /login   301
+/portal_private_2026/dashboard.html  /dashboard 301
+/portal_private_2026/reset.html      /reset-password 301
+/portal_private_2026/index.html      /dashboard 301
+/portal_private_2026                 /dashboard 301
+
+# 3. 301 Redirects for public modules (IDs 1-8)
+/module1.html   /modules/1  301
+/module/1.html  /modules/1  301
+/module/1       /modules/1  301
+
+/module2.html   /modules/2  301
+/module/2.html  /modules/2  301
+/module/2       /modules/2  301
+
+/module3.html   /modules/3  301
+/module/3.html  /modules/3  301
+/module/3       /modules/3  301
+
+/module4.html   /modules/4  301
+/module/4.html  /modules/4  301
+/module/4       /modules/4  301
+
+/module5.html   /modules/5  301
+/module/5.html  /modules/5  301
+/module/5       /modules/5  301
+
+/module6.html   /modules/6  301
+/module/6.html  /modules/6  301
+/module/6       /modules/6  301
+
+/module7.html   /modules/7  301
+/module/7.html  /modules/7  301
+/module/7       /modules/7  301
+
+/module8.html   /modules/8  301
+/module/8.html  /modules/8  301
+/module/8       /modules/8  301
+
+# 4. 301 Redirects for paid modules (9-57) redirecting to public modules index
+/module:id.html  /modules  301
+/module/:id.html /modules  301
+/module/:id      /modules  301
+
+# 5. SPA Fallback for Netlify routing
+/*    /index.html   200

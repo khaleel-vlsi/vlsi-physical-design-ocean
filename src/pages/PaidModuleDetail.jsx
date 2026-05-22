@@ -125,6 +125,7 @@ const PaidModuleDetail = () => {
   return (
     <div className={styles.detailPage}>
       <Link to="/paid-modules" className={styles.backLink}>← Back to Paid Modules</Link>
+      <Link to="/dashboard" className={styles.dashboardLink}>Go to Dashboard</Link>
       
       <header className={styles.header}>
         <div className={styles.badgeWrapper}>
@@ -236,6 +237,49 @@ const PaidModuleDetail = () => {
                       .site-footer,
                       .locked-module { 
                         display: none !important; 
+                      }
+                      .backLink {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 8px;
+                        background: rgba(255, 255, 255, 0.03);
+                        border: 1px solid rgba(255, 255, 255, 0.06);
+                        padding: 10px 20px;
+                        border-radius: 9999px;
+                        color: #94a3b8;
+                        text-decoration: none;
+                        font-weight: 600;
+                        font-size: 0.85rem;
+                        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                        backdrop-filter: blur(10px);
+                        position: relative;
+                        z-index: 10;
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                      }
+                      
+                      .dashboardLink {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 8px;
+                        background: rgba(255, 255, 255, 0.04);
+                        border: 1px solid rgba(255, 255, 255, 0.08);
+                        padding: 10px 20px;
+                        border-radius: 9999px;
+                        color: #60a5fa;
+                        text-decoration: none;
+                        font-weight: 600;
+                        font-size: 0.85rem;
+                        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                        backdrop-filter: blur(10px);
+                        position: relative;
+                        z-index: 10;
+                        box-shadow: 0 4px 12px rgba(96, 165, 250, 0.2);
+                      }
+                      
+                      .dashboardLink:hover {
+                        color: #fff;
+                        background: rgba(96, 165, 250, 0.2);
+                        border-color: rgba(96, 165, 250, 0.4);
                       }
                       body {
                         background-color: #0f172a !important;

@@ -17,6 +17,8 @@ const ModulesList = lazy(() => import('../pages/ModulesList'));
 const ModuleDetail = lazy(() => import('../pages/ModuleDetail'));
 const Login = lazy(() => import('../pages/Login'));
 const Register = lazy(() => import('../pages/Register'));
+const ForgotPassword = lazy(() => import('../pages/ForgotPassword'));
+const ResetPassword = lazy(() => import('../pages/ResetPassword'));
 
 const PaidModulesList = lazy(() => import('../pages/PaidModulesList'));
 const PaidModuleDetail = lazy(() => import('../pages/PaidModuleDetail'));
@@ -42,6 +44,8 @@ const AppRoutes = () => {
         <Route path="/module/:id" element={<Navigate to="/modules/:id" replace />} />
         <Route path="/login" element={<LazyWrapper><Login /></LazyWrapper>} />
         <Route path="/register" element={<LazyWrapper><Register /></LazyWrapper>} />
+        <Route path="/forgot-password" element={<LazyWrapper><ForgotPassword /></LazyWrapper>} />
+        <Route path="/reset-password" element={<LazyWrapper><ResetPassword /></LazyWrapper>} />
       </Route>
 
       <Route element={<PrivateRoute><PrivateLayout /></PrivateRoute>}>

@@ -59,6 +59,8 @@ const Login = () => {
           </button>
         </form>
         <div className={styles.authLinks}>
+          <Link to="/forgot-password">Forgot password?</Link>
+          <span style={{ margin: '0 8px', color: 'var(--outline)' }}>•</span>
           <Link to="/register">Create an account</Link>
         </div>
       </div>

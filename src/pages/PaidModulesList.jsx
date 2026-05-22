@@ -57,10 +57,11 @@ const PaidModulesList = () => {
 
   return (
     <div className={styles.modulesPage}>
-      <header className={styles.moduleHeader}>
-        <h1>💎 Premium Paid Modules</h1>
-        <p>Your exclusive access to advanced physical design execution, interview preparation, and complete sign-off materials.</p>
-      </header>
+        <header className={styles.moduleHeader}>
+          <h1>💎 Premium Paid Modules</h1>
+          <p>Your exclusive access to advanced physical design execution, interview preparation, and complete sign-off materials.</p>
+          <Link to="/dashboard" className={styles.dashboardLink}>Go to Dashboard</Link>
+        </header>
 
       <div className={styles.modulesGrid}>
         {(paidModulesData || []).map((mod) => (
@@ -73,9 +74,6 @@ const PaidModulesList = () => {
               <h3>{mod.title}</h3>
               <p className={styles.moduleDesc}>{mod.description}</p>
               
-              <div className={styles.cardFooter}>
-                <button className={styles.openBtn}>Open Module</button>
-              </div>
               <div className={styles.cardAccent}></div>
             </div>
           </Link>

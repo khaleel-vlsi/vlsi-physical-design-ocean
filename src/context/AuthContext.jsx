@@ -51,6 +51,20 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
+    // Check if we have recovery tokens in the query string or hash on homepage redirect
+    const hasRecoveryQuery = window.location.search && window.location.search.includes('type=recovery');
+    const hasRecoveryHash = window.location.hash && window.location.hash.includes('type=recovery');
+    
+    if (
+      (hasRecoveryQuery || hasRecoveryHash) && 
+      window.location.pathname !== '/reset-password'
+    ) {
+      // Retain search and hash so Supabase client on /reset-password can parse them
+      const targetUrl = '/reset-password' + window.location.search + window.location.hash;
+      window.location.replace(targetUrl);
+      return;
+    }
+
     let isMounted = true;
 
     // Wraps a promise with a timeout so a silently-hung network call
@@ -133,7 +147,7 @@ export const AuthProvider = ({ children }) => {
 
     initSession();
 
-    // Listen for auth state changes (login, logout, token refresh)
+    // Listen for auth state changes (login, logout, token refresh, password recovery)
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (event, session) => {
         if (!isMounted) return;
@@ -145,6 +159,14 @@ export const AuthProvider = ({ children }) => {
           setUser(null);
           setProfile(null);
           setLoading(false);
+        } else if (event === 'PASSWORD_RECOVERY') {
+          if (session?.user) {
+            setUser(session.user);
+            fetchProfile(session.user);
+            if (window.location.pathname !== '/reset-password') {
+              window.location.replace('/reset-password');
+            }
+          }
         } else if (event === 'SIGNED_IN' || event === 'TOKEN_REFRESHED') {
           if (session?.user) {
             setUser(session.user);
@@ -186,6 +208,29 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  const resetPassword = async (email) => {
+    try {
+      const redirectTo = `${window.location.origin}/?type=recovery`;
+      const { data, error } = await supabase.auth.resetPasswordForEmail(email, { redirectTo });
+      if (error) console.error('Reset password error:', error.message);
+      return { data, error };
+    } catch (err) {
+      console.error('Unexpected reset password error:', err);
+      return { data: null, error: err };
+    }
+  };
+
+  const updatePassword = async (newPassword) => {
+    try {
+      const { data, error } = await supabase.auth.updateUser({ password: newPassword });
+      if (error) console.error('Update password error:', error.message);
+      return { data, error };
+    } catch (err) {
+      console.error('Unexpected update password error:', err);
+      return { data: null, error: err };
+    }
+  };
+
   const value = {
     user,
     profile,
@@ -193,6 +238,8 @@ export const AuthProvider = ({ children }) => {
     logout,
     loading,
     refreshProfile,
+    resetPassword,
+    updatePassword,
   };
 
   return (

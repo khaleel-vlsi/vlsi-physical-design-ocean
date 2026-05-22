@@ -194,9 +194,9 @@ const Home = () => {
           </div>
 
           <p className={styles.comingSoonText}>Available Soon</p>
-          <a href="https://forms.gle/2SFaTeVEibtfAgKJ8" target="_blank" rel="noreferrer" className={styles.btnRegister}>
+          <Link to="/login" className={styles.btnRegister}>
             REGISTER &amp; GET PAID ACCESS
-          </a>
+          </Link>
         </div>
 
         {/* Placement Support Card */}

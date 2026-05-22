@@ -160,6 +160,13 @@ const Home = () => {
             </p>
           </div>
         </div>
+
+        <div className={styles.freeLoginPrompt}>
+          <span>Already have an account?</span>
+          <Link to="/login" className={styles.freeLoginLink}>
+            Login to Your Dashboard &raquo;
+          </Link>
+        </div>
       </section>
 
       {/* ── Paid & Placement Row ───────────────────────────────────────── */}

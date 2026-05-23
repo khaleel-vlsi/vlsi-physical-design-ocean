@@ -1,0 +1,39 @@
+name: Send Automated Drip Emails
+
+on:
+  schedule:
+    # Run once every hour at minute 0
+    - cron: '0 * * * *'
+  workflow_dispatch:
+    # Allow manual triggering of the workflow from the Actions tab
+
+jobs:
+  send-emails:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        # Install nodemailer dynamically to prevent it from bloating the main web client package
+        run: npm install nodemailer
+
+      - name: Run Drip Email Script
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_SECURE: ${{ secrets.SMTP_SECURE }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
+          SITE_URL: "https://vlsiphysicaldesignocean.com"
+        run: node scripts/send-drip-emails.js

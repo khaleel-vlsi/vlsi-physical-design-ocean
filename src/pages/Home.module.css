@@ -658,10 +658,17 @@
 
 /* ── Stepper Onboarding Section ─────────────────────────────────────────── */
 .onboardingSection {
-  max-width: 1200px;
-  margin: 0 auto 48px;
-  padding: 0 48px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 48px;
   text-align: center;
+  max-width: 1200px;
+  margin: 48px auto;
+  position: relative;
+  overflow: hidden;
 }
 
 .onboardingTitle {
@@ -732,9 +739,15 @@
 }
 
 .onboardingCard.locked {
-  opacity: 0.65;
-  background: rgba(255, 255, 255, 0.02);
-  border-color: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.onboardingCard.locked h3,
+.onboardingCard.locked p,
+.onboardingCard.locked .stepHeader,
+.onboardingCard.locked .stepFooter {
+  opacity: 0.45;
 }
 
 .stepHeader {

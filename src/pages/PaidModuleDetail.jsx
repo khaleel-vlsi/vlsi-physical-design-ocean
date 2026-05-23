@@ -298,7 +298,7 @@ const PaidModuleDetail = () => {
         ) : (
           <div className={styles.emptyState}>
             <span className={styles.docIcon}>📄</span>
-            <h2>Documentation Preparing</h2>
+            <h2>Preparing Documentation</h2>
             <p>The premium study materials for this module are currently being attached to the server.</p>
           </div>
         )}

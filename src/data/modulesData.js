@@ -130,7 +130,7 @@ export const modulesData = {
   },
   "6": {
     "id": 6,
-    "title": "Logical Sytnesis",
+    "title": "Logical Synthesis",
     "topics": [
       "Introduction to Synthesis Flow",
       "RTL to Gate Conversion",
@@ -142,7 +142,7 @@ export const modulesData = {
       "Power Optimization",
       "Synthesis Reports Analysis",
       "Pre-Layout Timing Concepts",
-      "Design Compiler and genus Step by step exicution sample scripts"
+      "Design Compiler and Genus Step-by-Step execution sample scripts"
     ],
     "iframes": [
       {

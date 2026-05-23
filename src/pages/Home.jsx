@@ -25,8 +25,8 @@ const Home = () => {
   const isFutureTs = (ts) => ts && new Date(ts).getTime() > Date.now();
   const isPaid = !!(profile?.course_active && isFutureTs(profile?.course_expiry));
 
-  const step1Status = isRegistered ? 'completed' : 'active';
-  const step2Status = isRegistered ? (isLoggedIn ? 'completed' : 'active') : 'locked';
+  const step1Status = isLoggedIn ? 'completed' : 'active';
+  const step2Status = isLoggedIn ? 'completed' : 'active';
   const step3Status = isLoggedIn ? 'active' : 'locked';
   const step4Status = isLoggedIn ? (isPaid ? 'completed' : 'active') : 'locked';
   const step5Status = isPaid ? 'active' : 'locked';
@@ -194,17 +194,13 @@ const Home = () => {
               <span className={styles.stepNum}>2</span>
               <span className={styles.stepIcon}>🔑</span>
             </div>
-            <h3>Login to Portal</h3>
-            <p>Sign in to establish your authenticated learning session.</p>
+            <h3>Already have an account?</h3>
+            <p>Login to establish your authenticated learning session.</p>
             <div className={styles.stepFooter}>
               {isLoggedIn ? (
                 <span className={styles.completedBadge}>✓ Completed</span>
               ) : (
-                isRegistered ? (
-                  <Link to="/login" className={styles.activeBtn}>Login Now</Link>
-                ) : (
-                  <span className={styles.lockedBadge}>🔒 Locked</span>
-                )
+                <Link to="/login" className={styles.activeBtn}>Login</Link>
               )}
             </div>
           </div>
@@ -312,21 +308,6 @@ const Home = () => {
               No registration required to begin access.
             </p>
           </div>
-        </div>
-
-        <div className={styles.freeLoginPrompt}>
-          {isLoggedIn ? (
-            <Link to="/dashboard" className={styles.freeLoginLink}>
-              Go to Student Dashboard &raquo;
-            </Link>
-          ) : (
-            <>
-              <span>Already have an account?</span>
-              <Link to="/login" className={styles.freeLoginLink}>
-                Login to Your Dashboard &raquo;
-              </Link>
-            </>
-          )}
         </div>
       </section>
 

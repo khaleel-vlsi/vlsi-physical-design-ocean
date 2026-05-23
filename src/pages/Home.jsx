@@ -315,10 +315,18 @@ const Home = () => {
         </div>
 
         <div className={styles.freeLoginPrompt}>
-          <span>Already have an account?</span>
-          <Link to="/login" className={styles.freeLoginLink}>
-            Login to Your Dashboard &raquo;
-          </Link>
+          {isLoggedIn ? (
+            <Link to="/dashboard" className={styles.freeLoginLink}>
+              Go to Student Dashboard &raquo;
+            </Link>
+          ) : (
+            <>
+              <span>Already have an account?</span>
+              <Link to="/login" className={styles.freeLoginLink}>
+                Login to Your Dashboard &raquo;
+              </Link>
+            </>
+          )}
         </div>
       </section>
 

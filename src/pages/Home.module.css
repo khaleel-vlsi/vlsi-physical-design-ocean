@@ -59,7 +59,7 @@
   align-items: center;
   justify-content: center;
   padding: 14px 28px;
-  background: #ff6b35; /* vibrant orange */
+  background: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%);
   color: #ffffff;
   font-family: var(--font-headline);
   font-weight: 700;
@@ -70,12 +70,12 @@
   cursor: pointer;
   text-transform: uppercase;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.35);
+  box-shadow: 0 8px 24px rgba(66, 133, 244, 0.3);
 }
 
 .heroPrimaryBtn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 36px rgba(255, 107, 53, 0.5);
+  box-shadow: 0 14px 36px rgba(66, 133, 244, 0.55);
 }
 
 .heroPrimaryBtn:active {
@@ -87,24 +87,23 @@
   align-items: center;
   justify-content: center;
   padding: 14px 28px;
-  background: rgba(66, 133, 244, 0.12); /* transparent blue */
+  background: transparent;
   color: #ffffff;
   font-family: var(--font-headline);
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 0.05em;
   border-radius: 10px;
-  border: 1px solid rgba(66, 133, 244, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   cursor: pointer;
   text-transform: uppercase;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 15px rgba(66, 133, 244, 0.1);
 }
 
 .heroSecondaryBtn:hover {
-  background: rgba(66, 133, 244, 0.25);
-  border-color: rgba(66, 133, 244, 0.6);
-  box-shadow: 0 6px 20px rgba(66, 133, 244, 0.25);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
 }
 
@@ -692,9 +691,11 @@
 
 /* Base card style */
 .onboardingCard {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
   padding: 24px 20px;
   display: flex;
   flex-direction: column;
@@ -711,8 +712,8 @@
   right: -14px;
   top: 50%;
   transform: translateY(-50%);
-  color: rgba(255, 255, 255, 0.15);
-  font-size: 18px;
+  color: rgba(66, 133, 244, 0.5);
+  font-size: 20px;
   font-weight: bold;
   z-index: 3;
   pointer-events: none;
@@ -720,19 +721,20 @@
 
 /* Card states */
 .onboardingCard.completed {
-  border-color: rgba(52, 211, 153, 0.25);
-  background: rgba(52, 211, 153, 0.03);
+  border-color: rgba(52, 211, 153, 0.4);
+  background: rgba(52, 211, 153, 0.05);
 }
 
 .onboardingCard.active {
-  border-color: rgba(66, 133, 244, 0.4);
-  background: rgba(66, 133, 244, 0.05);
-  box-shadow: 0 0 20px rgba(66, 133, 244, 0.15);
+  border-color: rgba(66, 133, 244, 0.5);
+  background: rgba(66, 133, 244, 0.08);
+  box-shadow: 0 0 24px rgba(66, 133, 244, 0.2);
 }
 
 .onboardingCard.locked {
-  opacity: 0.5;
-  background: rgba(0, 0, 0, 0.2);
+  opacity: 0.65;
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.06);
 }
 
 .stepHeader {

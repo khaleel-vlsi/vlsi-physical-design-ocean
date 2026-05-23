@@ -7,6 +7,13 @@ export const useAuth = () => {
   return useContext(AuthContext);
 };
 
+const generateUUID = () => {
+  if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
+    return crypto.randomUUID();
+  }
+  return Math.random().toString(36).substring(2, 15) + '-' + Date.now().toString(36);
+};
+
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [profile, setProfile] = useState(null);
@@ -130,6 +137,33 @@ export const AuthProvider = ({ children }) => {
         }
 
         if (isMounted) {
+          // Validate session ID
+          let localSessionId = localStorage.getItem('active_session_id');
+          const serverSessionId = validatedUser.user_metadata?.last_session_id;
+
+          if (serverSessionId && localSessionId && serverSessionId !== localSessionId) {
+            console.warn('[Auth] Session ID mismatch on init. Signing out...');
+            localStorage.removeItem('active_session_id');
+            await supabase.auth.signOut();
+            setUser(null);
+            setProfile(null);
+            setLoading(false);
+            return;
+          }
+
+          // If logged in but no local session ID exists (e.g. first login or cache cleared)
+          if (!localSessionId) {
+            localSessionId = generateUUID();
+            localStorage.setItem('active_session_id', localSessionId);
+            await supabase.auth.updateUser({
+              data: { last_session_id: localSessionId }
+            });
+            validatedUser.user_metadata = {
+              ...validatedUser.user_metadata,
+              last_session_id: localSessionId
+            };
+          }
+
           setUser(validatedUser);
           console.log('[Auth] 4. Token valid! Fetching profile...');
           await fetchProfile(validatedUser);
@@ -182,6 +216,67 @@ export const AuthProvider = ({ children }) => {
     };
   }, [fetchProfile]);
 
+  useEffect(() => {
+    if (!user) return;
+
+    let isChecking = false;
+
+    const checkSessionId = async () => {
+      if (isChecking) return;
+      isChecking = true;
+
+      try {
+        console.log('[Auth] Checking session validity...');
+        const { data, error } = await supabase.auth.getUser();
+
+        if (error || !data?.user) {
+          return;
+        }
+
+        const serverSessionId = data.user.user_metadata?.last_session_id;
+        const localSessionId = localStorage.getItem('active_session_id');
+
+        if (serverSessionId && localSessionId && serverSessionId !== localSessionId) {
+          console.warn('[Auth] Session ID mismatch detected! Logging out...');
+          localStorage.removeItem('active_session_id');
+          alert('You have been logged out because this account was logged in from another device.');
+          await supabase.auth.signOut();
+          window.location.href = '/login';
+        }
+      } catch (err) {
+        console.error('Error checking session ID:', err);
+      } finally {
+        isChecking = false;
+      }
+    };
+
+    // Run check immediately on mount/focus
+    checkSessionId();
+
+    // Check periodically every 30 seconds
+    const intervalId = setInterval(checkSessionId, 30000);
+
+    // Check on window focus and visibility change
+    const handleFocus = () => {
+      checkSessionId();
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        checkSessionId();
+      }
+    };
+
+    window.addEventListener('focus', handleFocus);
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      clearInterval(intervalId);
+      window.removeEventListener('focus', handleFocus);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, [user]);
+
   const refreshProfile = useCallback(() => {
     if (user) return fetchProfile(user);
   }, [user, fetchProfile]);
@@ -189,7 +284,19 @@ export const AuthProvider = ({ children }) => {
   const login = async (email, password) => {
     try {
       const { data, error } = await supabase.auth.signInWithPassword({ email, password });
-      if (error) console.error('Login error:', error.message);
+      if (error) {
+        console.error('Login error:', error.message);
+        return { data, error };
+      }
+
+      if (data?.user) {
+        const newSessionId = generateUUID();
+        localStorage.setItem('active_session_id', newSessionId);
+        await supabase.auth.updateUser({
+          data: { last_session_id: newSessionId }
+        });
+      }
+
       return { data, error };
     } catch (err) {
       console.error('Unexpected login error:', err);
@@ -199,6 +306,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = async () => {
     try {
+      localStorage.removeItem('active_session_id');
       const { error } = await supabase.auth.signOut();
       if (error) console.error('Logout error:', error.message);
       return { error };

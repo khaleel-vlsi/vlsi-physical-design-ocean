@@ -165,7 +165,7 @@ const Home = () => {
 
       {/* ── Interactive Onboarding Progress Tracker ──────────────────── */}
       <section id="onboarding-tracker" className={styles.onboardingSection}>
-        <h2 className={styles.onboardingTitle}>🗺️ Your Stepper Learning Roadmap</h2>
+        <h2 className={styles.onboardingTitle}>🗺️ Advanced VLSI Physical Design Ocean Course Steps</h2>
         <p className={styles.onboardingDesc}>
           Track your progress dynamically. Set up your account, enter the portal, and unlock the complete 57-module curriculum.
         </p>

@@ -47,6 +47,71 @@
   line-height: 1.7;
 }
 
+.heroCtaRow {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.heroPrimaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  background: #ff6b35; /* vibrant orange */
+  color: #ffffff;
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.35);
+}
+
+.heroPrimaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(255, 107, 53, 0.5);
+}
+
+.heroPrimaryBtn:active {
+  transform: translateY(0);
+}
+
+.heroSecondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  background: rgba(66, 133, 244, 0.12); /* transparent blue */
+  color: #ffffff;
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  border-radius: 10px;
+  border: 1px solid rgba(66, 133, 244, 0.35);
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(66, 133, 244, 0.1);
+}
+
+.heroSecondaryBtn:hover {
+  background: rgba(66, 133, 244, 0.25);
+  border-color: rgba(66, 133, 244, 0.6);
+  box-shadow: 0 6px 20px rgba(66, 133, 244, 0.25);
+  transform: translateY(-2px);
+}
+
+.heroSecondaryBtn:active {
+  transform: translateY(0);
+}
+
 /* ─ 3) Info Cards Row: About + Course Structure ──────────────────────────── */
 .infoRow {
   display: grid;
@@ -592,6 +657,198 @@
   box-shadow: 0 8px 24px rgba(255, 107, 53, 0.35);
 }
 
+/* ── Stepper Onboarding Section ─────────────────────────────────────────── */
+.onboardingSection {
+  max-width: 1200px;
+  margin: 0 auto 48px;
+  padding: 0 48px;
+  text-align: center;
+}
+
+.onboardingTitle {
+  font-family: var(--font-headline);
+  font-size: 24px;
+  font-weight: 700;
+  color: #4285f4;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.onboardingDesc {
+  font-size: 14px;
+  color: #9aa0a6;
+  max-width: 680px;
+  margin: 0 auto 36px;
+  line-height: 1.6;
+}
+
+/* Stepper card grid */
+.onboardingGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* Base card style */
+.onboardingCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+/* Connective arrows between cards on desktop */
+.onboardingCard:not(:last-child)::after {
+  content: '→';
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Card states */
+.onboardingCard.completed {
+  border-color: rgba(52, 211, 153, 0.25);
+  background: rgba(52, 211, 153, 0.03);
+}
+
+.onboardingCard.active {
+  border-color: rgba(66, 133, 244, 0.4);
+  background: rgba(66, 133, 244, 0.05);
+  box-shadow: 0 0 20px rgba(66, 133, 244, 0.15);
+}
+
+.onboardingCard.locked {
+  opacity: 0.5;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.stepHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.stepNum {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #bdc1c6;
+}
+
+.completed .stepNum {
+  background: rgba(52, 211, 153, 0.2);
+  border-color: rgba(52, 211, 153, 0.6);
+  color: #34d399;
+}
+
+.active .stepNum {
+  background: rgba(66, 133, 244, 0.2);
+  border-color: rgba(66, 133, 244, 0.6);
+  color: #6fa8ff;
+}
+
+.stepIcon {
+  font-size: 20px;
+}
+
+.onboardingCard h3 {
+  font-family: var(--font-headline);
+  font-size: 15px;
+  font-weight: 700;
+  color: #e8eaed;
+  margin: 0 0 10px 0;
+}
+
+.active h3 {
+  color: #6fa8ff;
+}
+
+.onboardingCard p {
+  font-size: 12px;
+  color: #9aa0a6;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+  flex-grow: 1;
+}
+
+.stepFooter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 38px;
+}
+
+/* Badges */
+.completedBadge {
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 700;
+  color: #34d399;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.lockedBadge {
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 600;
+  color: #5f6368;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Stepper CTA Button */
+.activeBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 14px;
+  background: #ff6b35;
+  color: #fff;
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  border-radius: 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  line-height: 1.3;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.25);
+}
+
+.activeBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(255, 107, 53, 0.4);
+}
+
 /* ─ Responsive ───────────────────────────────────────────────────────────── */
 @media (max-width: 900px) {
   .infoRow { grid-template-columns: 1fr; padding: 0 20px; }
@@ -599,11 +856,30 @@
   .freeCta { width: 100%; position: static; }
   .moduleGrid { grid-template-columns: 1fr; }
   .paidAndPlacementRow { grid-template-columns: 1fr; padding: 0 24px; }
+  .onboardingSection { padding: 0 24px; }
+  .onboardingGrid { grid-template-columns: 1fr; gap: 28px; }
+  .onboardingCard:not(:last-child)::after {
+    content: '↓';
+    right: 50%;
+    bottom: -22px;
+    top: auto;
+    transform: translateX(50%);
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 768px) {
   .heroHeader { padding: 60px 20px 50px; }
   .heroHeader h1 { font-size: 30px; }
+  .heroCtaRow {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+  .heroPrimaryBtn, .heroSecondaryBtn {
+    width: 100%;
+    max-width: 280px;
+  }
   .freeSectionTitle { font-size: 26px; }
   .freeSection { padding: 32px 20px; }
   .infoColumns { grid-template-columns: 1fr; }

@@ -4,6 +4,7 @@ import styles from './Home.module.css';
 import SEO from '../components/SEO';
 import LearningRoadmap from '../components/LearningRoadmap';
 import StructuredData from '../components/StructuredData';
+import { useAuth } from '../context/AuthContext';
 
 const freeModules = [
   'Electronics Fundamentals',
@@ -17,6 +18,19 @@ const freeModules = [
 ];
 
 const Home = () => {
+  const { user, profile } = useAuth();
+
+  const isRegistered = !!user;
+  const isLoggedIn = !!user;
+  const isFutureTs = (ts) => ts && new Date(ts).getTime() > Date.now();
+  const isPaid = !!(profile?.course_active && isFutureTs(profile?.course_expiry));
+
+  const step1Status = isRegistered ? 'completed' : 'active';
+  const step2Status = isRegistered ? (isLoggedIn ? 'completed' : 'active') : 'locked';
+  const step3Status = isLoggedIn ? 'active' : 'locked';
+  const step4Status = isLoggedIn ? (isPaid ? 'completed' : 'active') : 'locked';
+  const step5Status = isPaid ? 'active' : 'locked';
+
   return (
     <div className={styles.homeContainer}>
       <SEO 
@@ -67,6 +81,30 @@ const Home = () => {
           precision of integrated circuit layout through immersive, high-tech
           educational modules.
         </p>
+        <div className={styles.heroCtaRow}>
+          <button 
+            onClick={() => {
+              const element = document.getElementById('onboarding-tracker');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }} 
+            className={styles.heroPrimaryBtn}
+          >
+            Start Your Journey
+          </button>
+          <button 
+            onClick={() => {
+              const element = document.getElementById('free-modules');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }} 
+            className={styles.heroSecondaryBtn}
+          >
+            Explore Free Modules
+          </button>
+        </div>
       </header>
 
       {/* ── Info Cards Row: About + Course Structure ─────────────────── */}
@@ -125,10 +163,125 @@ const Home = () => {
         </div>
       </section>
 
+      {/* ── Interactive Onboarding Progress Tracker ──────────────────── */}
+      <section id="onboarding-tracker" className={styles.onboardingSection}>
+        <h2 className={styles.onboardingTitle}>🗺️ Your Stepper Learning Roadmap</h2>
+        <p className={styles.onboardingDesc}>
+          Track your progress dynamically. Set up your account, enter the portal, and unlock the complete 57-module curriculum.
+        </p>
+
+        <div className={styles.onboardingGrid}>
+          {/* Step 1: Create Account */}
+          <div className={`${styles.onboardingCard} ${styles[step1Status]}`}>
+            <div className={styles.stepHeader}>
+              <span className={styles.stepNum}>1</span>
+              <span className={styles.stepIcon}>📝</span>
+            </div>
+            <h3>Create Account</h3>
+            <p>Register with your name and email to initialize your student profile.</p>
+            <div className={styles.stepFooter}>
+              {isRegistered ? (
+                <span className={styles.completedBadge}>✓ Completed</span>
+              ) : (
+                <Link to="/register" className={styles.activeBtn}>Register Now</Link>
+              )}
+            </div>
+          </div>
+
+          {/* Step 2: Login */}
+          <div className={`${styles.onboardingCard} ${styles[step2Status]}`}>
+            <div className={styles.stepHeader}>
+              <span className={styles.stepNum}>2</span>
+              <span className={styles.stepIcon}>🔑</span>
+            </div>
+            <h3>Login to Portal</h3>
+            <p>Sign in to establish your authenticated learning session.</p>
+            <div className={styles.stepFooter}>
+              {isLoggedIn ? (
+                <span className={styles.completedBadge}>✓ Completed</span>
+              ) : (
+                isRegistered ? (
+                  <Link to="/login" className={styles.activeBtn}>Login Now</Link>
+                ) : (
+                  <span className={styles.lockedBadge}>🔒 Locked</span>
+                )
+              )}
+            </div>
+          </div>
+
+          {/* Step 3: Go to Dashboard */}
+          <div className={`${styles.onboardingCard} ${styles[step3Status]}`}>
+            <div className={styles.stepHeader}>
+              <span className={styles.stepNum}>3</span>
+              <span className={styles.stepIcon}>💻</span>
+            </div>
+            <h3>Student Dashboard</h3>
+            <p>Access your personalized analytics, mock history, and tools.</p>
+            <div className={styles.stepFooter}>
+              {isLoggedIn ? (
+                <Link to="/dashboard" className={styles.activeBtn}>Open Dashboard</Link>
+              ) : (
+                <span className={styles.lockedBadge}>🔒 Locked</span>
+              )}
+            </div>
+          </div>
+
+          {/* Step 4: Unlock Course */}
+          <div className={`${styles.onboardingCard} ${styles[step4Status]}`}>
+            <div className={styles.stepHeader}>
+              <span className={styles.stepNum}>4</span>
+              <span className={styles.stepIcon}>💳</span>
+            </div>
+            <h3>Unlock Course</h3>
+            <p>Subscribe to unlock all premium PNR and STA modules (9–57).</p>
+            <div className={styles.stepFooter}>
+              {isPaid ? (
+                <span className={styles.completedBadge}>✓ Paid Access Active</span>
+              ) : (
+                isLoggedIn ? (
+                  <button 
+                    onClick={() => {
+                      const element = document.getElementById('pricing-section');
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                      } else {
+                        window.location.href = '/#pricing-section';
+                      }
+                    }} 
+                    className={styles.activeBtn}
+                  >
+                    Unlock Plan
+                  </button>
+                ) : (
+                  <span className={styles.lockedBadge}>🔒 Locked</span>
+                )
+              )}
+            </div>
+          </div>
+
+          {/* Step 5: Start Learning */}
+          <div className={`${styles.onboardingCard} ${styles[step5Status]}`}>
+            <div className={styles.stepHeader}>
+              <span className={styles.stepNum}>5</span>
+              <span className={styles.stepIcon}>🎓</span>
+            </div>
+            <h3>Start Learning</h3>
+            <p>Explore the full advanced curriculum with detailed tool guides.</p>
+            <div className={styles.stepFooter}>
+              {isPaid ? (
+                <Link to="/paid-modules" className={styles.activeBtn}>Start Learning</Link>
+              ) : (
+                <span className={styles.lockedBadge}>🔒 Locked</span>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <LearningRoadmap />
 
       {/* ── Free Modules Section ──────────────────────────────────────── */}
-      <section className={styles.freeSection}>
+      <section id="free-modules" className={styles.freeSection}>
         <h2 className={styles.freeSectionTitle}>
           Free VLSI Physical Design Ocean Foundation Modules
         </h2>
@@ -170,7 +323,7 @@ const Home = () => {
       </section>
 
       {/* ── Paid & Placement Row ───────────────────────────────────────── */}
-      <section className={styles.paidAndPlacementRow}>
+      <section id="pricing-section" className={styles.paidAndPlacementRow}>
         
         {/* Advanced Course Card */}
         <div className={styles.paidSectionCard}>

@@ -162,6 +162,18 @@
   line-height: 1.5;
 }
 
+.warning {
+  background: rgba(229, 103, 23, 0.2);
+  color: #ffb74d;
+  border: 1px solid rgba(255, 183, 77, 0.25);
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  margin-bottom: 24px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 @media (max-width: 480px) {
   .authContainer { padding: var(--margin-mobile); }
   .authCard { padding: 36px 24px; }

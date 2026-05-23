@@ -148,6 +148,7 @@ export const AuthProvider = ({ children }) => {
             setUser(null);
             setProfile(null);
             setLoading(false);
+            window.location.replace('/login?reason=concurrent_login');
             return;
           }
 
@@ -239,9 +240,8 @@ export const AuthProvider = ({ children }) => {
         if (serverSessionId && localSessionId && serverSessionId !== localSessionId) {
           console.warn('[Auth] Session ID mismatch detected! Logging out...');
           localStorage.removeItem('active_session_id');
-          alert('You have been logged out because this account was logged in from another device.');
           await supabase.auth.signOut();
-          window.location.href = '/login';
+          window.location.href = '/login?reason=concurrent_login';
         }
       } catch (err) {
         console.error('Error checking session ID:', err);

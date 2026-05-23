@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import styles from './Auth.module.css';
 
 const Login = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const isConcurrentLogin = searchParams.get('reason') === 'concurrent_login';
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -34,6 +38,11 @@ const Login = () => {
     <div className={styles.authContainer}>
       <div className={styles.authCard}>
         <h2>Login to Portal</h2>
+        {isConcurrentLogin && (
+          <div className={styles.warning}>
+            ⚠️ You have been logged out because your account was logged in from another device.
+          </div>
+        )}
         {error && <div className={styles.error}>{error}</div>}
         <form onSubmit={handleSubmit}>
           <div className={styles.formGroup}>

@@ -14,6 +14,9 @@ const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const FROM_EMAIL = process.env.FROM_EMAIL || "VLSI Physical Design Ocean <noreply@vlsiphysicaldesignocean.com>";
 const SITE_URL = process.env.SITE_URL || "https://vlsiphysicaldesignocean.com";
 
+// Delay helper to avoid Resend rate limits (max 5 requests/sec)
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
 // HTML Email Layout Wrapper (Oceanic Design Theme)
 function getEmailHtml(title, greeting, paragraphs, buttonText, buttonUrl) {
   return `
@@ -355,6 +358,7 @@ async function run() {
         } catch (err) {
           console.error(`[Error] Failed to process renewal email for ${email}:`, err);
         }
+        await delay(500); // Rate limit protection
         continue; // Skip further checks if they are expired
       }
 
@@ -401,6 +405,7 @@ async function run() {
           } catch (err) {
             console.error(`[Error] Failed to process 1-hour email for ${email}:`, err);
           }
+          await delay(500); // Rate limit protection
         }
         
         // Case B: User has received the 1-hour email, remains unpaid, and needs 4-day reminders
@@ -455,6 +460,7 @@ async function run() {
             } catch (err) {
               console.error(`[Error] Failed to process 4-day email for ${email}:`, err);
             }
+            await delay(500); // Rate limit protection
           } else {
             console.log(`[Status] ${email} is not yet eligible for a 4-day reminder.`);
           }

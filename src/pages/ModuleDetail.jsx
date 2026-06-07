@@ -11,6 +11,7 @@ import Module4Content from './modules/Module4Content';
 import Module6Content from './modules/Module6Content';
 import SEO from '../components/SEO';
 import StructuredData from '../components/StructuredData';
+import { useAuth } from '../context/AuthContext';
 
 const NATIVE_COMPONENTS = {
   1: Module1Content,
@@ -54,8 +55,19 @@ class ErrorBoundary extends React.Component {
 const ModuleDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const { profile } = useAuth() || {};
   const moduleId = parseInt(id);
   const moduleInfo = modulesData[moduleId];
+
+  React.useEffect(() => {
+    if (profile) {
+      const isFuture = (ts) => ts && new Date(ts).getTime() > Date.now();
+      const courseValid = profile.course_active && isFuture(profile.course_expiry);
+      if (courseValid && moduleId >= 9 && moduleId <= 57) {
+        navigate(`/paid-modules/module/${moduleId}`, { replace: true });
+      }
+    }
+  }, [profile, moduleId, navigate]);
 
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });

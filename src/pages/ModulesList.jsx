@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './ModulesList.module.css';
 import SEO from '../components/SEO';
 import StructuredData from '../components/StructuredData';
+import { useAuth } from '../context/AuthContext';
 
 const modulesData = [
   { id: 1, title: 'Introduction to Electronics' },
@@ -65,6 +66,10 @@ const modulesData = [
 ];
 
 const ModulesList = () => {
+  const { profile } = useAuth() || {};
+  const isFuture = (ts) => ts && new Date(ts).getTime() > Date.now();
+  const courseValid = profile && profile.course_active && isFuture(profile.course_expiry);
+
   return (
     <div className={styles.modulesPage}>
       <SEO 
@@ -110,15 +115,21 @@ const ModulesList = () => {
       </header>
 
       <div className={styles.modulesGrid}>
-        {modulesData.map((mod) => (
-          <Link key={mod.id} to={`/modules/${mod.id}`} className={styles.moduleLink}>
-            <div className={styles.moduleCard}>
-              <div className={styles.moduleBadge}>Module {mod.id}</div>
-              <h3>{mod.title}</h3>
-              <div className={styles.cardAccent}></div>
-            </div>
-          </Link>
-        ))}
+        {modulesData.map((mod) => {
+          const isPaidModule = mod.id >= 9;
+          const targetUrl = (courseValid && isPaidModule) ? `/paid-modules/module/${mod.id}` : `/modules/${mod.id}`;
+          return (
+            <Link key={mod.id} to={targetUrl} className={styles.moduleLink}>
+              <div className={styles.moduleCard}>
+                <div className={styles.moduleBadge}>
+                  Module {mod.id} {isPaidModule ? (courseValid ? '🔓' : '🔒') : ''}
+                </div>
+                <h3>{mod.title}</h3>
+                <div className={styles.cardAccent}></div>
+              </div>
+            </Link>
+          );
+        })}
       </div>
 
       <div className={styles.bottomSection}>

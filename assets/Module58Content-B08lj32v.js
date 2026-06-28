@@ -1,4 +1,4 @@
-import{f as e,l as t,r as n}from"./index-mT0rP4CR.js";var r=e(t(),1),i=[{id:`fc_script_1`,part:1,toolName:`FC Tool`,index:1,title:`Count the Number of Used Library Cells in a Design`,objective:`<span >This script reports the count of each library cell that is actually instantiated in the current design. Unused library cells are automatically ignored.</span>`,code:`foreach_in_collection lib_cell [get_lib_cells] {
+import{f as e,l as t,r as n}from"./index-CTrVW3Jc.js";var r=e(t(),1),i=[{id:`fc_script_1`,part:1,toolName:`FC Tool`,index:1,title:`Count the Number of Used Library Cells in a Design`,objective:`<span >This script reports the count of each library cell that is actually instantiated in the current design. Unused library cells are automatically ignored.</span>`,code:`foreach_in_collection lib_cell [get_lib_cells] {
 set cell_count [sizeof_collection \\
 [get_cells -physical_context \\
 -filter "ref_name == [get_attribute $lib_cell name]"]]

@@ -1,4 +1,4 @@
-import{f as e,l as t,r as n}from"./index-mT0rP4CR.js";var r=e(t(),1),i=[{id:`ch_intro`,title:`1. Introduction & Design Flow`,html:`<h2 class="c22" id="h.99t7ayd42hop"> 1. Introduction</h2>
+import{f as e,l as t,r as n}from"./index-CTrVW3Jc.js";var r=e(t(),1),i=[{id:`ch_intro`,title:`1. Introduction & Design Flow`,html:`<h2 class="c22" id="h.99t7ayd42hop"> 1. Introduction</h2>
 <p class="c6">Achieving first-time success is crucial in the ASIC design league considering the soaring cost,<br /> tight time-to-market window, and competitive business environment. One key factor in<br /> ensuring first-time success is a well-defined ASIC design methodology.</p>
 <hr>
 <p class="c4 c7"></p>

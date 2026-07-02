@@ -7,7 +7,7 @@ import styles from './Module59Content.module.css';
 
 const Module59Content = () => {
   const { profile } = useAuth();
-  const isPremium = !!profile?.course_active;
+  const isPremium = profile?.course_active || profile?.role === 'admin';
 
   // Tabs: 'jobs' | 'admin' | 'notifications'
   const [activeTab, setActiveTab] = useState('jobs');
@@ -334,7 +334,8 @@ const Module59Content = () => {
               <h3>Loading live jobs from database...</h3>
             </div>
           ) : filteredJobs.length > 0 ? (
-            filteredJobs.map((job) => (
+            <>
+              {(isPremium ? filteredJobs : filteredJobs.slice(0, 3)).map((job) => (
               <article key={job.id} className={styles.jobCard}>
                 <div className={styles.cardHeader}>
                   <div className={styles.companySection}>
@@ -403,7 +404,22 @@ const Module59Content = () => {
                   </button>
                 </div>
               </article>
-            ))
+              ))}
+              {!isPremium && (
+                <div className={styles.lockBanner} style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '3rem', background: 'linear-gradient(to right, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.9))', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', marginTop: '2rem' }}>
+                  <h3 style={{ color: '#fff', fontSize: '1.5rem', marginBottom: '1rem' }}>🔒 Unlock Full Access to 90+ Company Portals</h3>
+                  <p style={{ color: '#94a3b8', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem' }}>
+                    You are currently viewing a limited preview. Upgrade your account to see all live job postings, get real-time email alerts, and instantly apply to unlisted roles.
+                  </p>
+                  <button 
+                    onClick={() => window.location.href = '/course'} 
+                    style={{ background: 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)', color: 'white', padding: '12px 24px', borderRadius: '8px', border: 'none', fontWeight: 'bold', cursor: 'pointer', boxShadow: '0 4px 12px rgba(37, 99, 235, 0.3)' }}
+                  >
+                    Upgrade Now ↗
+                  </button>
+                </div>
+              )}
+            </>
           ) : (
             <div style={{ textAlign: 'center', padding: '3rem', color: '#64748b' }}>
               <h3>No jobs found matching your criteria.</h3>

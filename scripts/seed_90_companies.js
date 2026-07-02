@@ -149,9 +149,10 @@ async function seedDatabase() {
   const mockJobs = TARGET_COMPANIES.map((company, index) => {
     const isRemote = Math.random() > 0.8;
     const title = Math.random() > 0.7 ? "Junior Physical Design Engineer" : "Physical Design Engineer";
+    const initials = company.name.substring(0, 2).toUpperCase();
     return {
       id: `seed-${company.name.replace(/[^a-zA-Z0-9]/g, '')}-${index}`,
-      job_id: `REQ-${Math.floor(Math.random() * 10000)}`,
+      job_id: `${initials}${10000 + index * 17}`,
       company: company.name,
       domain: company.domain,
       logo_color: `linear-gradient(135deg, ${company.logoColor} 0%, #111 100%)`,

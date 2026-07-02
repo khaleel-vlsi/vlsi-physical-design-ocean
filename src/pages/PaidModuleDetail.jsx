@@ -1,9 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, lazy, Suspense } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { paidModulesData } from '../data/paidModulesData';
 import styles from './PaidModuleDetail.module.css';
 import { supabase } from '../services/supabase';
+
+const ResumeBuilder = lazy(() => import('./resume-builder/ResumeBuilder'));
+const Module58Content = lazy(() => import('./modules/Module58Content'));
+const Module55Content = lazy(() => import('./modules/Module55Content'));
+const Module19Content = lazy(() => import('./modules/Module19Content'));
+const Module20Content = lazy(() => import('./modules/Module20Content'));
+const Module21Content = lazy(() => import('./modules/Module21Content'));
+const Module9Content = lazy(() => import('./modules/Module9Content'));
+const Module59Content = lazy(() => import('./modules/Module59Content'));
 
 const PaidModuleDetail = () => {
   const { id } = useParams();
@@ -38,7 +47,8 @@ const PaidModuleDetail = () => {
         const isFuture = (ts) => ts && new Date(ts).getTime() > Date.now();
         const courseValid = data.course_active && isFuture(data.course_expiry);
         
-        if (!courseValid) {
+        const moduleIdNum = parseInt(id);
+        if (!courseValid && moduleIdNum !== 59) {
           navigate('/dashboard');
         } else {
           setIsLoading(false);
@@ -49,7 +59,7 @@ const PaidModuleDetail = () => {
     };
 
     checkFreshAccess();
-  }, [user, navigate]);
+  }, [user, navigate, id]);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -203,8 +213,41 @@ const PaidModuleDetail = () => {
         </div>
       )}
 
-      <div className={styles.iframeContainer}>
-        {moduleInfo.isLockedTemporarily ? (
+      {moduleInfo.isResumeBuilder ? (
+        <Suspense fallback={<div className={styles.loadingText}>Loading Resume Builder...</div>}>
+          <ResumeBuilder />
+        </Suspense>
+      ) : moduleId === 55 ? (
+          <Suspense fallback={<div className={styles.loadingText}>Loading Script Hub...</div>}>
+            <Module55Content />
+          </Suspense>
+        ) : moduleId === 58 ? (
+          <Suspense fallback={<div className={styles.loadingText}>Loading Script Hub...</div>}>
+            <Module58Content />
+          </Suspense>
+        ) : moduleId === 19 ? (
+          <Suspense fallback={<div className={styles.loadingText}>Loading Interview Q&A...</div>}>
+            <Module19Content />
+          </Suspense>
+        ) : moduleId === 20 ? (
+          <Suspense fallback={<div className={styles.loadingText}>Loading Interview Q&A...</div>}>
+            <Module20Content />
+          </Suspense>
+        ) : moduleId === 21 ? (
+          <Suspense fallback={<div className={styles.loadingText}>Loading Interview Q&A...</div>}>
+            <Module21Content />
+          </Suspense>
+        ) : moduleId === 9 ? (
+          <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
+            <Module9Content />
+          </Suspense>
+        ) : moduleId === 59 ? (
+          <Suspense fallback={<div className={styles.loadingText}>Loading Jobs Hub...</div>}>
+            <Module59Content />
+          </Suspense>
+        ) : (
+        <div className={styles.iframeContainer}>
+          {moduleInfo.isLockedTemporarily ? (
           <div className={styles.lockedState}>
             <span className={styles.lockIcon}>🔒</span>
             <h2>Content Locked</h2>
@@ -214,6 +257,19 @@ const PaidModuleDetail = () => {
             <div className={styles.timerBadge}>
               <span>⏳ Unlocking in: {moduleInfo.unlockDays || 30} Days (Scheduled)</span>
             </div>
+            {/* Topics preview to attract users */}
+            {moduleInfo.topics && moduleInfo.topics.length > 0 && (
+              <div className={styles.topicsSection}>
+                <h3>Topics Covered</h3>
+                <div className={styles.topicsGrid}>
+                  {moduleInfo.topics.slice(0, 5).map((topic, idx) => (
+                    <div key={idx} className={styles.topicItem}>
+                      <span className={styles.topicBullet}>•</span>{topic}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         ) : moduleInfo.iframeLink ? (
           <div className={`${styles.iframeWrapper} ${viewWidth === 'standard' ? styles.widthStandard : styles.widthFull}`}>
@@ -303,6 +359,7 @@ const PaidModuleDetail = () => {
           </div>
         )}
       </div>
+      )}
 
       <div className={styles.navRow}>
         {prevModule ? <Link to={`/paid-modules/module/${prevModule.id}`} className={styles.navBtn}>&laquo; Previous</Link> : <div></div>}

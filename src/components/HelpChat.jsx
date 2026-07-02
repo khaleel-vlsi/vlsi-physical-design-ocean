@@ -6,9 +6,9 @@ const HelpChat = () => {
   const [step, setStep] = useState('menu'); 
 
   const faqs = [
-    { q: "How many modules are there?", a: "There are 57 modules in total. Modules 1-8 are free, and 9-57 cover advanced Physical Design (Paid)." },
+    { q: "How many modules are there?", a: "There are 58 modules in total. Modules 1-8 are free, and 9-58 cover advanced Physical Design (Paid)." },
     { q: "Is this for beginners?", a: "Yes! We start from Basic Electronics and CMOS fundamentals (Module 1) so anyone can start." },
-    { q: "What is the Premium Course?", a: "The Premium Course (Modules 9-57) covers industry-standard tools, Floorplanning, CTS, and Routing with 1-on-1 mentorship." },
+    { q: "What is the Premium Course?", a: "The Premium Course (Modules 9-58) covers industry-standard tools, Floorplanning, CTS, and Routing with 1-on-1 mentorship." },
     { q: "How to enroll in Paid Course?", a: "Click the 'Join Now' button on the homepage or message us on WhatsApp for the latest batch details." },
     { q: "Will I get a job?", a: "This course is designed to make you industry-ready. We provide placement support and interview prep for all premium students." }
   ];

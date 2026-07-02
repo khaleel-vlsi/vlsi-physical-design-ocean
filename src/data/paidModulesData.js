@@ -24,7 +24,10 @@ export const paidModulesData = [
       "set_false_path & set_multicycle_path Basics",
       "Introduction to Timing Reports"
     ],
-    iframeLink: "https://docs.google.com/document/d/1xTcYp9W6-CvLwJVySzj_GMOhnYGhRvBoNuu9qD3FATM/preview"
+    iframeLink: "https://docs.google.com/document/d/1xTcYp9W6-CvLwJVySzj_GMOhnYGhRvBoNuu9qD3FATM/preview",
+    isLockedTemporarily: true,
+    lockMessage: "This content will unlock automatically 30 days after your course purchase.",
+    unlockDays: 30
   },
   {
     id: 10,
@@ -266,24 +269,15 @@ export const paidModulesData = [
   },
   {
     id: 19,
-    title: "Core Interview Questions",
-    description: "Essential Q&A for VLSI physical design interviews",
+    title: "Core Interview Questions (Electronics, CMOS, Digital, Linux, TCL)",
+    description: "Master VLSI physical design interviews with our comprehensive database of 350+ core Q&As.",
     topics: [
-      "Basic Electronics Interview Questions (V, I, R, Power, Units)",
-      "Ohm’s Law, KCL/KVL Based Problem Questions",
-      "RC/RL Time Constant & Basics of Filtering Questions",
-      "Semiconductor Basics (PN Junction, Diode Operation) Questions",
-      "MOSFET Fundamentals (NMOS/PMOS, Regions of Operation) Questions",
-      "CMOS Inverter (VTC, Noise Margin, Switching) Interview Questions",
-      "Static vs Dynamic Power (Leakage, Switching) Questions",
-      "Boolean Algebra & Logic Simplification Questions",
-      "Combinational Circuits (MUX/DEMUX/Encoder/Decoder) Questions",
-      "Sequential Circuits (Latches/FFs, Setup/Hold) Questions",
-      "FSM Basics & Common Interview Problems",
-      "Timing Waveform Based Questions (Setup/Hold Examples)",
-      "Linux Commands Interview Questions (cd, ls, grep, find, awk, sed)",
-      "File Permissions, Process Commands & Environment Variables Questions",
-      "Shell Scripting Basics Interview Questions"
+      "Part 1: Basic Electronics (50 Q&As on Resistance, Capacitance, RC Delay, EM)",
+      "Part 2: MOSFET & CMOS (100 Q&As on Short Channel Effects, Inverter, VTC)",
+      "Part 3: Digital Electronics (100 Q&As on Logic Gates, Sequential/Combinational, Setup/Hold)",
+      "Part 4: Linux Commands (50 Q&As on Shell Commands, File Permissions, Environment Variables)",
+      "Part 5: TCL Scripting (50 Q&As on PnR Automation, Arrays, String Parsing)",
+      "Complete interview-level problem solving and timing waveform analysis"
     ],
     iframeLink: "https://docs.google.com/document/d/1LUQpwCQWWxKVxmqBEYYezOL1XQ8wi4G2naDie48a-Qw/preview"
   },
@@ -365,7 +359,7 @@ export const paidModulesData = [
   {
     id: 24,
     title: "Resume Templates for Freshers & Experienced",
-    description: "Industry-standard resume formats",
+    description: "Industry-standard resume formats (Under development – will be updated soon)",
     topics: [
       "Resume Structure for Freshers (Physical Design)",
       "Resume Structure for Experienced Engineers",
@@ -379,8 +373,9 @@ export const paidModulesData = [
       "Professional Resume Templates (Editable Format)"
     ],
     iframeLink: null,
+    isResumeBuilder: false,
     isLockedTemporarily: true,
-    lockMessage: "This content will unlock automatically 1 month after your course purchase.",
+    lockMessage: "⚠️ Under development – will be updated soon. This content will unlock automatically 30 days after your course purchase.",
     unlockDays: 30
   },
   {
@@ -679,5 +674,35 @@ export const paidModulesData = [
       "Innovus User Guide (Full Version)"
     ],
     iframeLink: "https://drive.google.com/file/d/1aK8S74YkFDlIeujQ7qqXDqTHfLi8O6u3/preview"
+  },
+  {
+    id: 58,
+    title: "Industrial TCL Scripts",
+    description: "Production-grade automation suite for physical design (PnR) and timing closure (STA).",
+    topics: [
+      "Introduction to Industrial TCL Scripting",
+      "dbGet & Tool Database Querying Examples",
+      "Automating Timing ECOs & Buffer Insertion",
+      "Congestion-Aware Routing & Constraints Setup",
+      "Custom Report Generation & Log Parsing Scripts",
+      "Synthesis and PnR Run Script Templates"
+    ],
+    iframeLink: "https://docs.google.com/document/d/13BnBj6PUUzn7JUsuG0Lp0szcWqOI1mAdtnYcaPX-XHc/preview",
+    isLockedTemporarily: false
+  },
+  {
+    id: 59,
+    title: "Ocean Physical Design Job Finder",
+    description: "Premium real-time job aggregator and tool-matching engine continuously tracking 100+ semiconductor careers pages.",
+    topics: [
+      "Automated Careers Scraper Engine",
+      "Confidence Match Score & Keyword Extraction",
+      "Unified Global Job Listings Feed",
+      "Crawl Logs & Sync Control Panel",
+      "Admin Threshold & Keyword Controls",
+      "Email, Web Push, and Telegram Alerts"
+    ],
+    iframeLink: null,
+    isLockedTemporarily: false
   }
 ];

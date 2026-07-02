@@ -23,8 +23,10 @@ const NotFound = lazy(() => import('../pages/NotFound'));
 
 const PaidModulesList = lazy(() => import('../pages/PaidModulesList'));
 const PaidModuleDetail = lazy(() => import('../pages/PaidModuleDetail'));
+const ResumeBuilder = lazy(() => import('../pages/resume-builder/ResumeBuilder'));
+const ResumeEditor = lazy(() => import('../pages/resume-builder/ResumeEditor'));
+const PublicResume = lazy(() => import('../pages/resume-builder/PublicResume'));
 const Dashboard = lazy(() => import('../pages/Dashboard'));
-
 const PrivateRoute = ({ children }) => {
   const { user, loading } = useAuth();
   if (loading) return <div>Loading...</div>;
@@ -73,9 +75,8 @@ const FallbackRedirect = () => {
   const match1 = normalizedPath.match(moduleRegex1);
   if (match1) {
     const id = parseInt(match1[1], 10);
-    // If it's a paid module (9-57), redirect to public modules list instead of paid details
     if (id >= 9 && id <= 57) {
-      return <Navigate to="/modules" replace />;
+      return <Navigate to={`/paid-modules/module/${id}`} replace />;
     }
     return <Navigate to={`/modules/${id}`} replace />;
   }
@@ -84,7 +85,6 @@ const FallbackRedirect = () => {
   const match2 = normalizedPath.match(moduleRegex2);
   if (match2) {
     const id = parseInt(match2[1], 10);
-    // If it's a paid module (9-57), redirect to public modules list
     if (id >= 9 && id <= 57) {
       return <Navigate to="/modules" replace />;
     }
@@ -126,6 +126,7 @@ const AppRoutes = () => {
         <Route path="/interview" element={<LazyWrapper><Interview /></LazyWrapper>} />
         <Route path="/modules" element={<LazyWrapper><ModulesList /></LazyWrapper>} />
         <Route path="/modules/:id" element={<LazyWrapper><ModuleDetail /></LazyWrapper>} />
+        <Route path="/resume/share/:token" element={<LazyWrapper><PublicResume /></LazyWrapper>} />
         
         {/* Legacy static redirects (fallback to wildcard for others) */}
         <Route path="/about.html" element={<Navigate to="/about" replace />} />
@@ -146,6 +147,8 @@ const AppRoutes = () => {
         <Route path="/dashboard" element={<LazyWrapper><Dashboard /></LazyWrapper>} />
         <Route path="/paid-modules" element={<LazyWrapper><PaidModulesList /></LazyWrapper>} />
         <Route path="/paid-modules/module/:id" element={<LazyWrapper><PaidModuleDetail /></LazyWrapper>} />
+        <Route path="/resume" element={<LazyWrapper><ResumeBuilder /></LazyWrapper>} />
+        <Route path="/resume/edit/:resumeId" element={<LazyWrapper><ResumeEditor /></LazyWrapper>} />
       </Route>
 
       {/* Wildcard fallback routing to handle legacy and unmatched paths */}

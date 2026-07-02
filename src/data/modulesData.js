@@ -242,6 +242,7 @@ export const modulesData = {
       "Introduction to Timing Reports"
     ],
     "iframes": [],
+    "hasNativeContent": true,
     "isLocked": true
   },
   "10": {
@@ -484,27 +485,18 @@ export const modulesData = {
   },
   "19": {
     "id": 19,
-    "title": "Core Interview Questions (Electronics, CMOS, Digital, Linux )",
+    "title": "Core Interview Questions (Electronics, CMOS, Digital, Linux, TCL)",
     "topics": [
-      "Basic Electronics Interview Questions (V, I, R, Power, Units)",
-      "Ohm’s Law, KCL/KVL Based Problem Questions",
-      "RC/RL Time Constant & Basics of Filtering Questions",
-      "Semiconductor Basics (PN Junction, Diode Operation) Questions",
-      "MOSFET Fundamentals (NMOS/PMOS, Regions of Operation) Questions",
-      "CMOS Inverter (VTC, Noise Margin, Switching) Interview Questions",
-      "Static vs Dynamic Power (Leakage, Switching) Questions",
-      "Boolean Algebra & Logic Simplification Questions",
-      "Combinational Circuits (MUX/DEMUX/Encoder/Decoder) Questions",
-      "Sequential Circuits (Latches/FFs, Setup/Hold) Questions",
-      "FSM Basics & Common Interview Problems",
-      "Timing Waveform Based Questions (Setup/Hold Examples)",
-      "Linux Commands Interview Questions (cd, ls, grep, find, awk, sed)",
-      "File Permissions, Process Commands & Environment Variables Questions",
-      "Shell Scripting Basics Interview Questions"
+      "Part 1: Basic Electronics (50 Q&As on Resistance, Capacitance, RC Delay, EM)",
+      "Part 2: MOSFET & CMOS (100 Q&As on Short Channel Effects, Inverter, VTC)",
+      "Part 3: Digital Electronics (100 Q&As on Logic Gates, Sequential/Combinational, Setup/Hold)",
+      "Part 4: Linux Commands (50 Q&As on Shell Commands, File Permissions, Environment Variables)",
+      "Part 5: TCL Scripting (50 Q&As on PnR Automation, Arrays, String Parsing)",
+      "Complete interview-level problem solving and timing waveform analysis"
     ],
-    "description": "Learn Essential Linux and Tcl Scripting for VLSI Design Automation.",
+    "description": "Master VLSI physical design interviews with our comprehensive database of 350+ core Q&As.",
     "hasNativeContent": true,
-    "isPremium": true
+    "isLocked": true
   },
   "20": {
     "id": 20,
@@ -522,6 +514,7 @@ export const modulesData = {
       "Real-Time Industry Scenario Questions"
     ],
     "iframes": [],
+    "hasNativeContent": true,
     "isLocked": true
   },
   "21": {
@@ -540,6 +533,7 @@ export const modulesData = {
       "Full Chip Closure Experience Questions"
     ],
     "iframes": [],
+    "hasNativeContent": true,
     "isLocked": true
   },
   "22": {
@@ -891,6 +885,25 @@ export const modulesData = {
       "Innovus User Guide (Full Version)"
     ],
     "iframes": [],
+    "isLocked": true
+  },
+  "58": {
+    "id": 58,
+    "title": "Industrial TCL Scripts",
+    "topics": [
+      "Part 1: Fusion Compiler TCL Scripts",
+      "Part 2: Innovus Tool TCL Scripts",
+      "Complete script objectives and code terminals with line numbers",
+      "Step-by-step execution flows and application scenarios",
+      "Comprehensive interview Q&As for each script"
+    ],
+    "iframes": [
+      {
+        "heading": "Module 58 – Study Material (Read Only)",
+        "url": "https://docs.google.com/document/d/13BnBj6PUUzn7JUsuG0Lp0szcWqOI1mAdtnYcaPX-XHc/preview"
+      }
+    ],
+    "hasNativeContent": true,
     "isLocked": true
   }
 };

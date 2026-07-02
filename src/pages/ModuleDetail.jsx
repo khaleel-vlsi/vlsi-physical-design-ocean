@@ -9,6 +9,7 @@ import Module7Content from './modules/Module7Content';
 import Module8Content from './modules/Module8Content';
 import Module4Content from './modules/Module4Content';
 import Module6Content from './modules/Module6Content';
+import Module58Content from './modules/Module58Content';
 import SEO from '../components/SEO';
 import StructuredData from '../components/StructuredData';
 import { useAuth } from '../context/AuthContext';
@@ -21,6 +22,7 @@ const NATIVE_COMPONENTS = {
   8: Module8Content,
   4: Module4Content,
   6: Module6Content,
+  58: Module58Content,
   // Add more modules here as they are migrated
 };
 
@@ -57,13 +59,13 @@ const ModuleDetail = () => {
   const navigate = useNavigate();
   const { profile } = useAuth() || {};
   const moduleId = parseInt(id);
-  const moduleInfo = modulesData[moduleId];
+  const moduleInfo = modulesData[String(moduleId)];
 
   React.useEffect(() => {
     if (profile) {
       const isFuture = (ts) => ts && new Date(ts).getTime() > Date.now();
       const courseValid = profile.course_active && isFuture(profile.course_expiry);
-      if (courseValid && moduleId >= 9 && moduleId <= 57) {
+      if (courseValid && moduleId >= 9 && moduleId <= 58) {
         navigate(`/paid-modules/module/${moduleId}`, { replace: true });
       }
     }
@@ -137,9 +139,9 @@ const ModuleDetail = () => {
       </header>
 
       <div className={styles.moduleContent}>
-        {!(moduleInfo.hasNativeContent && NATIVE_COMPONENTS[moduleId]) && (
+        {(!(moduleInfo.hasNativeContent && NATIVE_COMPONENTS[moduleId]) || moduleInfo.isLocked) && (
           <div className={styles.contentSection}>
-            <h2>{moduleInfo.id >= 28 ? "📚 Reference Materials & User Guides" : "Topics Covered"}</h2>
+            <h2>{(moduleInfo.id >= 28 && moduleInfo.id !== 58) ? "📚 Reference Materials & User Guides" : "Topics Covered"}</h2>
             <ul className={styles.topicsList}>
               {moduleInfo.topics.map((topic, index) => (
                 <li key={index}>{topic}</li>

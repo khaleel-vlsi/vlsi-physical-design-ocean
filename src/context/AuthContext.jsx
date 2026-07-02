@@ -141,7 +141,7 @@ export const AuthProvider = ({ children }) => {
           let localSessionId = localStorage.getItem('active_session_id');
           const serverSessionId = validatedUser.user_metadata?.last_session_id;
 
-          if (serverSessionId && localSessionId && serverSessionId !== localSessionId) {
+          if (window.location.pathname !== '/reset-password' && serverSessionId && localSessionId && serverSessionId !== localSessionId) {
             console.warn('[Auth] Session ID mismatch on init. Signing out...');
             localStorage.removeItem('active_session_id');
             await supabase.auth.signOut();
@@ -153,7 +153,7 @@ export const AuthProvider = ({ children }) => {
           }
 
           // If logged in but no local session ID exists (e.g. first login or cache cleared)
-          if (!localSessionId) {
+          if (window.location.pathname !== '/reset-password' && !localSessionId) {
             localSessionId = generateUUID();
             localStorage.setItem('active_session_id', localSessionId);
             await supabase.auth.updateUser({
@@ -237,7 +237,7 @@ export const AuthProvider = ({ children }) => {
         const serverSessionId = data.user.user_metadata?.last_session_id;
         const localSessionId = localStorage.getItem('active_session_id');
 
-        if (serverSessionId && localSessionId && serverSessionId !== localSessionId) {
+        if (window.location.pathname !== '/reset-password' && serverSessionId && localSessionId && serverSessionId !== localSessionId) {
           console.warn('[Auth] Session ID mismatch detected! Logging out...');
           localStorage.removeItem('active_session_id');
           await supabase.auth.signOut();
@@ -339,9 +339,11 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  const hasPremiumAccess = !!profile?.course_active; // true if paid course active
   const value = {
     user,
     profile,
+    hasPremiumAccess,
     login,
     logout,
     loading,

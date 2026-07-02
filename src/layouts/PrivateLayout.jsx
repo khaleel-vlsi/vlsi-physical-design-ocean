@@ -14,7 +14,7 @@ const PrivateLayout = () => {
 
   return (
     <div className={styles.privateWrap}>
-      <div className={styles.topBar}>
+      <header className={styles.topBar}>
         <div className={styles.brand}>
           <span className={styles.dot}></span> VLSI Physical Design Ocean
         </div>
@@ -22,7 +22,7 @@ const PrivateLayout = () => {
           <Link className={styles.btn} to="/">🏠 Portal Home</Link>
           <button className={`${styles.btn} ${styles.btnDanger}`} onClick={handleLogout}>🚪 Logout</button>
         </div>
-      </div>
+      </header>
       <main>
         <Outlet />
       </main>

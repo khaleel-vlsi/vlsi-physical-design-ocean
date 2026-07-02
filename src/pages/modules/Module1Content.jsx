@@ -61,7 +61,7 @@ const Module1Content = () => {
   return (
     <div className={styles.moduleLayout}>
       <div className={styles.topicsNav}>
-        <h2 className={styles.navTitle}>Topics Covered</h2>
+        className={styles.navTitle}>Topics Covered</h2>
         <div className={styles.navButtonsGrid}>
           {(showAllTopics ? headings : headings.slice(0, 9)).map((heading) => (
             <button key={heading.id} onClick={() => scrollToSection(heading.id)} className={styles.topicNavBtn}>
@@ -82,7 +82,7 @@ const Module1Content = () => {
       <div className={styles.mainContent}>
         <div className={styles.contentCard}>
           <h1 id="h.oc99zvliaipw" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c6 c17">Basic Electronics: From Materials to Energy Bands</span><span class="c6 c25"> (Lecture-Style Explanation)</span>` }} />
-          <h2 id="h.dsvizsryqqz5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">Introduction</span>` }} />
+          id="h.dsvizsryqqz5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">Introduction</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Today, we are going to discuss </span><span class="c6">Basic Electronics</span><span>. When we hear the word </span><span class="c27">electronics</span><span>, many students immediately think about circuits, wires, and devices. But before reaching that stage, we must clearly understand </span><span class="c6">materials</span><span class="c2"> and their internal structure.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>In Basic Electronics, we mainly classify materials into </span><span class="c6">three types</span><span class="c2">:</span>` }} />
           <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Conductors</span></li><li class="c0 li-bullet-0"><span class="c2">Semiconductors</span></li><li class="c0 li-bullet-0"><span class="c2">Insulators</span></li>` }} />
@@ -91,7 +91,7 @@ const Module1Content = () => {
             <img loading="lazy" src="/assets/modules/module1/image_32.png" alt="Classification of materials into Conductors, Semiconductors, and Insulators" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.uny91arut36e" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">What Is a Material?</span>` }} />
+          id="h.uny91arut36e" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">What Is a Material?</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>A </span><span class="c6">material</span><span class="c2"> is anything that exists physically in this world. If you observe carefully:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Objects around us are materials</span></li><li class="c0 li-bullet-0"><span class="c2">The human body is also made of material</span></li><li class="c0 li-bullet-0"><span class="c2">Solid, liquid, and gaseous substances are all materials</span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Every object we see is made using some material. These materials are not continuous; they are made up of </span><span class="c6">molecules</span><span class="c2">.</span>` }} />
@@ -102,7 +102,7 @@ const Module1Content = () => {
             <img loading="lazy" src="/assets/modules/module1/image_8.png" alt="Molecular arrangement in solid, liquid, and gaseous materials" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.370zdzsqbowq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">Molecules and Atoms</span>` }} />
+          id="h.370zdzsqbowq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">Molecules and Atoms</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>A </span><span class="c6">molecule</span><span class="c2"> is a group of atoms bonded together. Molecules are the basic units that decide the properties of a material.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">When we go deeper, we find that:</span>` }} />
           <div className={styles.imageContainer}>
@@ -110,7 +110,7 @@ const Module1Content = () => {
           </div>
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span>Molecules are made up of </span><span class="c3">atoms</span></li><li class="c21 c16 c28 li-bullet-0"><span>Atoms are the fundamental building blocks of matter<br>Millions of atoms together form a molecule, and millions of molecules together form a material.<br></span><span ></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.gkza3ec56hq2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">Structure of an Atom</span>` }} />
+          id="h.gkza3ec56hq2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">Structure of an Atom</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">An atom is not a solid particle; it has its own internal structure. Every atom consists of two main parts:</span>` }} />
           <h3 id="h.9910wtc4wxuy" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">1. Nucleus</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>The </span><span class="c6">nucleus</span><span class="c2"> is the central core of the atom. Inside the nucleus, we have:</span>` }} />
@@ -134,12 +134,13 @@ const Module1Content = () => {
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/module1/image_12.png" alt="Atomic bonding and interaction between atoms to form materials" className={styles.contentImage} />
           </div>
+          <AdUnit slotId="slot_module1content_mid1" />
           <h2 id="h.a228vu1atyj6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">From Atomic Structure to Basic Electronics</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Now let us connect atomic structure to </span><span class="c6">Basic Electronics</span><span class="c2">.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>The behavior of a material in electronics depends mainly on </span><span class="c6">electrons</span><span class="c2">, especially the electrons present in the outermost shell of the atom.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">To understand this clearly, we need to learn some important terms.</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.k8gifs604gv9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">Important Terms in Basic Electronics</span>` }} />
+          id="h.k8gifs604gv9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">Important Terms in Basic Electronics</span>` }} />
           <h3 id="h.ehekbx1cnl9f" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">Valence Electron</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>The electron that revolves around the nucleus and is </span><span class="c6">under the control of the nucleus</span><span> is called a </span><span class="c6">Valence Electron</span><span class="c2">.</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">These electrons are present in the outermost shell</span></li><li class="c0 li-bullet-0"><span class="c2">They are involved in bonding</span></li><li class="c0 li-bullet-0"><span>We say they are in the </span><span class="c6">Valence Band</span></li>` }} />
@@ -152,12 +153,12 @@ const Module1Content = () => {
           <h3 id="h.78lce6fml0e1" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">Conduction Band</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>When an electron becomes a free electron, we say it has moved into the </span><span class="c6">Conduction Band</span><span>.</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.clmxlt71b2gk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">Energy Band Theory</span>` }} />
+          id="h.clmxlt71b2gk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">Energy Band Theory</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>The difference between the </span><span class="c6">Valence Band</span><span> and the </span><span class="c6">Conduction Band</span><span> is called the </span><span class="c6">Energy Gap</span><span class="c2">.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">This energy gap plays a very important role in deciding whether a material behaves as a conductor, semiconductor, or insulator.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>The energy gap is measured in </span><span class="c6">electron volts (eV)</span><span class="c2">.</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.evrem43j65bg" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">Classification of Materials Based on Energy Bands</span>` }} />
+          id="h.evrem43j65bg" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">Classification of Materials Based on Energy Bands</span>` }} />
           <h3 id="h.asuem8hv8jy0" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">1. Conductors</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>In </span><span class="c6">conductors</span><span>, the </span><span class="c6">Valence Band and Conduction Band overlap</span><span class="c2">.</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">There is no energy gap</span></li><li class="c0 li-bullet-0"><span class="c2">Electrons are already free</span></li><li class="c0 li-bullet-0"><span class="c2">No external energy is required to move electrons</span></li>` }} />
@@ -186,7 +187,7 @@ const Module1Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Electrons remain tightly bound</span></li><li class="c0 li-bullet-0"><span class="c2">No electric current flows</span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Examples: Rubber, Glass, Plastic, Wood</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.nyeqc9n274bv" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">1. Electric Current</span>` }} />
+          id="h.nyeqc9n274bv" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">1. Electric Current</span>` }} />
           <h3 id="h.q5hpbqjaq6vp" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">Definition</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Electric current is defined as the rate of flow of electric charge through a conductor. In metallic conductors, this flow is mainly due to the movement of free electrons.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">In simple terms, current tells us how much charge flows per second through a wire.</span>` }} />
@@ -201,7 +202,7 @@ const Module1Content = () => {
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">Important Points</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Current flows from higher potential to lower potential (conventional current direction).</span></li><li class="c0 li-bullet-0"><span class="c2">Electron flow is in the opposite direction to conventional current.</span></li><li class="c0 li-bullet-0"><span class="c2">Current can be DC (Direct Current) or AC (Alternating Current).<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.p37qsiohk9u9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">2. Electric Voltage</span>` }} />
+          id="h.p37qsiohk9u9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">2. Electric Voltage</span>` }} />
           <h3 id="h.f6404pcd05sf" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">Definition</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Electric voltage, also called electric potential difference, is the energy required to move a unit charge from one point to another in an electric circuit.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Voltage can be understood as the driving force that causes current to flow.</span>` }} />
@@ -216,7 +217,7 @@ const Module1Content = () => {
           <h3 id="h.hpzixbcs3u2l" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">Important Points</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Voltage does not flow; it exists between two points.<br></span></li><li class="c0 li-bullet-0"><span class="c2">A voltage source (battery or supply) is required to maintain current flow.<br></span></li><li class="c0 li-bullet-0"><span class="c2">Without voltage, no current can flow in a circuit.<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.jrdkg5ro6g46" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">3. Electric Power</span>` }} />
+          id="h.jrdkg5ro6g46" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">3. Electric Power</span>` }} />
           <h3 id="h.a6h4g0lwbxdu" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">Definition</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Electric power is the rate at which electrical energy is converted into other forms of energy, such as heat, light, or mechanical energy.</span>` }} />
           <h3 id="h.ak7n88kraoie" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">Mathematical Expression</span>` }} />
@@ -235,6 +236,7 @@ const Module1Content = () => {
           <h3 id="h.i1ke75vs1ipf" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">Important Points</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Electrical devices are rated in terms of power (e.g., 60 W bulb).<br></span></li><li class="c0 li-bullet-0"><span class="c2">Higher power means greater energy consumption per unit time.<br></span></li>` }} />
           <hr className={styles.divider} />
+          <AdUnit slotId="slot_module1content_mid2" />
           <h2 id="h.r25oystbt9ex" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">4. Relationship Between Current, Voltage, and Power</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Voltage provides the force that pushes charges.<br></span></li><li class="c0 li-bullet-0"><span class="c2">Current represents the flow of charges.<br></span></li><li class="c0 li-bullet-0"><span class="c2">Power indicates how fast electrical energy is being used.<br></span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">These three quantities are interdependent, and understanding their relationship is essential for circuit analysis.</span>` }} />
@@ -296,13 +298,13 @@ const Module1Content = () => {
           </div>
           <p className={styles.mathFormula} dangerouslySetInnerHTML={{ __html: `<span class="c2">For series-connected inductors:<br>$$ L_{eq} = L_1 + L_2 + \\dots + L_n $$</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.31y4wvykuoqy" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">3. Sources in Circuits</span>` }} />
+          id="h.31y4wvykuoqy" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">3. Sources in Circuits</span>` }} />
           <h3 id="h.k057lriu4pmf" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">3.1 Voltage Sources</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">A voltage source maintains a constant voltage independent of the current drawn from it. Ideal voltage sources have zero internal resistance.</span>` }} />
           <h3 id="h.5uq5tpr5aa0n" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">3.2 Current Sources</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">An ideal current source delivers a constant current regardless of the voltage across it. It has infinite output resistance and is mainly used for circuit analysis and biasing concepts.</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.p1e6qlxikpgf" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">4. RC Circuits</span>` }} />
+          id="h.p1e6qlxikpgf" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">4. RC Circuits</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">RC circuits consist of a resistor and capacitor in series. The resistor controls the rate at which the capacitor charges or discharges. The time constant is defined as:</span>` }} />
           <p className={styles.mathFormula} dangerouslySetInnerHTML={{ __html: `<span class="c2">$$ \\tau = RC $$</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">The voltage across the capacitor during charging is:</span>` }} />
@@ -492,7 +494,7 @@ const Module1Content = () => {
           </div>
           <hr className={styles.divider} />
           <h1 id="h.p5msogipqje" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">P-Type Semiconductor – Boron Doping in Germanium</span>` }} />
-          <h2 id="h.5kl6qc5ya3ft" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c10">Example: Boron Doping in Germanium</span>` }} />
+          id="h.5kl6qc5ya3ft" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c10">Example: Boron Doping in Germanium</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Let us consider that a </span><span class="c6">Boron (B)</span><span> atom is added to a </span><span class="c6">Germanium (Ge)</span><span class="c2"> crystal lattice.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Boron is a </span><span class="c6">trivalent impurity</span><span class="c2"> (it has 3 valence electrons). When it replaces a Germanium atom in the lattice:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span>Three of the valence electrons of Boron form </span><span class="c6">three covalent bonds</span><span class="c2"> with neighboring Germanium atoms.<br></span></li><li class="c0 li-bullet-0"><span class="c2">However, one bond remains incomplete because Boron has only three valence electrons.<br></span></li><li class="c0 li-bullet-0"><span>The missing electron in the fourth bond creates an empty space known as a </span><span class="c6">hole</span><span class="c2">.<br></span></li>` }} />
@@ -505,7 +507,7 @@ const Module1Content = () => {
             <img loading="lazy" src="/assets/modules/module1/image_29.png" alt="Boron doping in Silicon/Germanium lattice creating a hole" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.4p26l188dzaf" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">P-Type Extrinsic Semiconductor</span>` }} />
+          id="h.4p26l188dzaf" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">P-Type Extrinsic Semiconductor</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>In a </span><span class="c6">P-type semiconductor</span><span>, conduction occurs primarily through </span><span class="c6">holes</span><span class="c2">.</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span>Holes are the </span><span class="c6">majority carriers</span><span class="c2">.<br></span></li><li class="c0 li-bullet-0"><span>Electrons are the </span><span class="c6">minority carriers</span><span class="c2">.<br></span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>The trivalent impurity (Boron) creates holes and is therefore called an </span><span class="c6">acceptor impurity</span><span class="c2">, because it accepts electrons from neighboring Germanium atoms.</span>` }} />
@@ -539,11 +541,11 @@ const Module1Content = () => {
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>All such free electrons collectively form the </span><span class="c6">electron current</span><span class="c2">.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Thus, the impurity added provides additional free electrons for conduction.</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.z66w0a9k403" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4">Characteristics of N-Type Semiconductor</span>` }} />
+          id="h.z66w0a9k403" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4">Characteristics of N-Type Semiconductor</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span>Conduction takes place mainly through </span><span class="c6">electrons</span><span class="c2">.<br></span></li><li class="c0 li-bullet-0"><span>Electrons are the </span><span class="c6">majority carriers</span><span class="c2">.<br></span></li><li class="c0 li-bullet-0"><span>Holes are the </span><span class="c6">minority carriers</span><span class="c2">.<br></span></li><li class="c0 li-bullet-0"><span class="c2">The semiconductor remains electrically neutral because no net positive or negative charge is added.<br></span></li><li class="c0 li-bullet-0"><span class="c2">When an external electric field is applied:<br></span></li>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 c23 li-bullet-0"><span>Free electrons move toward the </span><span class="c6">positive terminal</span><span class="c2">.<br></span></li><li class="c1 c23 li-bullet-0"><span>This conduction mechanism is called </span><span class="c6">N-type conductivity</span><span class="c2">.<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.zcm2dy4weaf5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4">Donor Impurity</span>` }} />
+          id="h.zcm2dy4weaf5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4">Donor Impurity</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Pentavalent atoms are called </span><span class="c6">donor atoms</span><span class="c2"> because they donate one extra electron to the conduction band of the semiconductor.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Common pentavalent impurities include:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Arsenic (As)<br></span></li><li class="c0 li-bullet-0"><span class="c2">Phosphorus (P)<br></span></li><li class="c0 li-bullet-0"><span class="c2">Antimony (Sb)<br></span></li>` }} />

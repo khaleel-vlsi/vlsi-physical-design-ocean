@@ -451,7 +451,7 @@ const Module4Content = () => {
       <div className={styles.topicsNav}>
         <div className={styles.navSectionsWrapper}>
           <div className={styles.navSection}>
-            <h2 className={styles.navTitle}>Linux - Topics Covered</h2>
+            className={styles.navTitle}>Linux - Topics Covered</h2>
             <div className={styles.navButtonsGrid}>
               {(showAllLinux ? linuxHeadings : linuxHeadings.slice(0, 8)).map((heading) => (
                 <button key={heading.id} onClick={() => scrollToSection(heading.id)} className={styles.topicNavBtn}>
@@ -470,7 +470,7 @@ const Module4Content = () => {
           </div>
 
           <div className={styles.navSection}>
-            <h2 className={styles.navTitle}>TCL - Topics Covered</h2>
+            className={styles.navTitle}>TCL - Topics Covered</h2>
             <div className={styles.navButtonsGrid}>
               {(showAllTcl ? tclHeadings : tclHeadings.slice(0, 8)).map((heading) => (
                 <button key={heading.id} onClick={() => scrollToSection(heading.id)} className={styles.topicNavBtn}>
@@ -494,7 +494,7 @@ const Module4Content = () => {
         <div className={styles.contentCard}>
           <h1 id="h.hb89eod6gcxs" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c24 c19">Introduction to Linux Operating System</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.sn2ibi9dtku8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. What is an Operating System (OS)?</span>` }} />
+          id="h.sn2ibi9dtku8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. What is an Operating System (OS)?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `An Operating System is a system software that acts as an interface between the user and the computer hardware.` }} />
           <h3 id="h.h0yzhhdqimur" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Main functions of an Operating System</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Controls and manages hardware (CPU, memory, disk, I/O devices)<br></span></li><li class="c10 li-bullet-0"><span class="c0">Allows users to run applications<br></span></li><li class="c10 li-bullet-0"><span class="c0">Manages files and folders<br></span></li><li class="c10 li-bullet-0"><span class="c0">Provides security and access control<br></span></li>` }} />
@@ -507,7 +507,7 @@ const Module4Content = () => {
             <img loading="lazy" src="/assets/modules/module4/image5.png" alt="Graphic showing Open Source collaborative development model" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.s93gvw1sorqy" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">2. What is Linux?</span>` }} />
+          id="h.s93gvw1sorqy" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">2. What is Linux?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Linux is a free and open-source operating system based on UNIX principles.` }} />
           <h3 id="h.tsxubnwjywd1" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Key points about Linux</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span>Developed by </span><span class="c22 c19">Linus Torvalds (1991)<br></span></li><li class="c10 li-bullet-0"><span class="c0">Open source (source code is freely available)<br></span></li><li class="c10 li-bullet-0"><span class="c0">Highly secure and stable<br></span></li><li class="c10 li-bullet-0"><span class="c0">Used in servers, mobiles, supercomputers, cloud, and embedded systems<br></span></li>` }} />
@@ -518,7 +518,7 @@ const Module4Content = () => {
             <img loading="lazy" src="/assets/modules/module4/image19.png" alt="Application layer in the Linux ecosystem" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.3asoicers4jr" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">3. Why Do We Need an Operating System?</span>` }} />
+          id="h.3asoicers4jr" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">3. Why Do We Need an Operating System?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Operating systems are required because:` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span>Hardware understands only </span><span class="c22 c19">binary (0s and 1s)<br></span></li><li class="c10 li-bullet-0"><span>Users understand </span><span class="c22 c19">commands and applications<br></span></li><li class="c10 li-bullet-0"><span class="c0">OS converts user instructions into hardware operations<br></span></li>` }} />
           <h3 id="h.46ljfxvulmqu" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Roles of OS</span>` }} />
@@ -530,7 +530,7 @@ const Module4Content = () => {
             <img loading="lazy" src="/assets/modules/module4/image16.png" alt="Conceptual diagram of Linux security and stability architecture" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.4t91rgkq0o1u" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">4. Components of Linux Operating System</span>` }} />
+          id="h.4t91rgkq0o1u" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">4. Components of Linux Operating System</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Linux operating system consists of three main components:` }} />
           <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Kernel<br></span></li><li class="c10 li-bullet-0"><span class="c0">Shell<br></span></li><li class="c10 li-bullet-0"><span class="c0">Utilities / Applications<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -538,7 +538,7 @@ const Module4Content = () => {
             <img loading="lazy" src="/assets/modules/module4/image13.png" alt="User interaction with the Linux Shell interface" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.pn2r3zidwgwi" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5. What is Kernel?</span>` }} />
+          id="h.pn2r3zidwgwi" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5. What is Kernel?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `The Kernel is the core (heart) of the operating system.` }} />
           <h3 id="h.nbxphirilsxj" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Definition</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Kernel is the central program that directly interacts with hardware and manages system resources.` }} />
@@ -551,7 +551,7 @@ const Module4Content = () => {
             <img loading="lazy" src="/assets/modules/module4/image11.png" alt="Diagram of multi-user and multi-tasking capabilities in Linux" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.m9sogcs2pfhc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">6. Why Kernel is Important?</span>` }} />
+          id="h.m9sogcs2pfhc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">6. Why Kernel is Important?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Without kernel:` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">No memory management<br></span></li><li class="c10 li-bullet-0"><span class="c0">No multitasking<br></span></li><li class="c10 li-bullet-0"><span class="c0">No device communication<br></span></li><li class="c10 li-bullet-0"><span class="c0">System will crash<br></span></li>` }} />
           <h3 id="h.4xno7pi8gai2" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Types of Kernels</span>` }} />
@@ -561,7 +561,7 @@ const Module4Content = () => {
             <img loading="lazy" src="/assets/modules/module4/image18.png" alt="Illustration of Linux operating system versatility across devices" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.pbfoiul0oboo" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">7. What is Shell?</span>` }} />
+          id="h.pbfoiul0oboo" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">7. What is Shell?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `The Shell is a command interpreter that acts as an interface between user and kernel.` }} />
           <h3 id="h.chft0q1z37ve" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Definition</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Shell is a program that takes user commands, interprets them, and sends them to the kernel for execution.` }} />
@@ -572,7 +572,7 @@ const Module4Content = () => {
             <img loading="lazy" src="/assets/modules/module4/image17.png" alt="Community support network illustration for Linux" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.x03q0jlxhof2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c19 c27">8. Types of Shells in Linux</span>` }} />
+          id="h.x03q0jlxhof2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c19 c27">8. Types of Shells in Linux</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c70" colspan="1" rowspan="1"><p class="c13"><span class="c19">Shell Name</span></p></td><td class="c74" colspan="1" rowspan="1"><p class="c13"><span class="c19">Description</span></p></td></tr><tr class="c5"><td class="c70" colspan="1" rowspan="1"><p class="c3"><span class="c0">Bash</span></p></td><td class="c74" colspan="1" rowspan="1"><p class="c3"><span class="c0">Most common shell</span></p></td></tr><tr class="c5"><td class="c70" colspan="1" rowspan="1"><p class="c3"><span class="c0">Sh</span></p></td><td class="c74" colspan="1" rowspan="1"><p class="c3"><span class="c0">Bourne Shell</span></p></td></tr><tr class="c5"><td class="c70" colspan="1" rowspan="1"><p class="c3"><span class="c0">Zsh</span></p></td><td class="c74" colspan="1" rowspan="1"><p class="c3"><span class="c0">Advanced shell</span></p></td></tr><tr class="c5"><td class="c70" colspan="1" rowspan="1"><p class="c3"><span class="c0">Fish</span></p></td><td class="c74" colspan="1" rowspan="1"><p class="c3"><span class="c0">User-friendly shell</span></p></td></tr></tbody>` }} />
           </div>
@@ -581,7 +581,7 @@ const Module4Content = () => {
             <img loading="lazy" src="/assets/modules/module4/image1.png" alt="Free and open source software logo" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.mgklsnd7c2bv" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">9. Why Do We Use Shell in Linux?</span>` }} />
+          id="h.mgklsnd7c2bv" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">9. Why Do We Use Shell in Linux?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Shell is used because:` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Faster than GUI<br></span></li><li class="c10 li-bullet-0"><span class="c0">Powerful scripting support<br></span></li><li class="c10 li-bullet-0"><span class="c0">Automates tasks<br></span></li><li class="c10 li-bullet-0"><span class="c0">Required for server administration<br></span></li>` }} />
           <h3 id="h.korm03ykj6xh" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example</span>` }} />
@@ -592,7 +592,7 @@ ls` }} />
             <img loading="lazy" src="/assets/modules/module4/image4.png" alt="Motivation graphic for learning Linux systems" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.3ouyihjkypm" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">10. Difference Between Kernel and Shell</span>` }} />
+          id="h.3ouyihjkypm" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">10. Difference Between Kernel and Shell</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c68" colspan="1" rowspan="1"><p class="c13"><span class="c19">Kernel</span></p></td><td class="c71" colspan="1" rowspan="1"><p class="c13"><span class="c19">Shell</span></p></td></tr><tr class="c5"><td class="c68" colspan="1" rowspan="1"><p class="c3"><span class="c0">Core of OS</span></p></td><td class="c71" colspan="1" rowspan="1"><p class="c3"><span class="c0">Interface to OS</span></p></td></tr><tr class="c5"><td class="c68" colspan="1" rowspan="1"><p class="c3"><span class="c0">Manages hardware</span></p></td><td class="c71" colspan="1" rowspan="1"><p class="c3"><span class="c0">Takes user commands</span></p></td></tr><tr class="c5"><td class="c68" colspan="1" rowspan="1"><p class="c3"><span class="c0">Runs in background</span></p></td><td class="c71" colspan="1" rowspan="1"><p class="c3"><span class="c0">User interacts with it</span></p></td></tr><tr class="c5"><td class="c68" colspan="1" rowspan="1"><p class="c3"><span class="c0">Cannot be replaced easily</span></p></td><td class="c71" colspan="1" rowspan="1"><p class="c3"><span class="c0">Can be changed</span></p></td></tr></tbody>` }} />
           </div>
@@ -601,21 +601,21 @@ ls` }} />
             <img loading="lazy" src="/assets/modules/module4/image7.png" alt="Career growth pathways in Linux and DevOps" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.ornv2ntuk3t7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">11. Why Linux is Preferred?</span>` }} />
+          id="h.ornv2ntuk3t7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">11. Why Linux is Preferred?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Free and open source<br></span></li><li class="c10 li-bullet-0"><span class="c0">Secure and stable<br></span></li><li class="c10 li-bullet-0"><span class="c0">High performance<br></span></li><li class="c10 li-bullet-0"><span class="c0">Multiuser &amp; multitasking<br></span></li><li class="c10 li-bullet-0"><span class="c0">Used in real-world industry<br></span></li>` }} />
           <hr className={styles.divider} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/module4/image12.png" alt="Graphic indicating system uptime without reboots" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.a3gh18h99nic" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">12. Summary (For Students)</span>` }} />
+          id="h.a3gh18h99nic" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">12. Summary (For Students)</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c19">OS</span><span class="c0"> connects user and hardware<br></span></li><li class="c10 li-bullet-0"><span class="c19">Linux</span><span class="c0"> is a free, open-source OS<br></span></li><li class="c10 li-bullet-0"><span class="c19">Kernel</span><span class="c0"> is the heart of Linux<br></span></li><li class="c10 li-bullet-0"><span class="c19">Shell</span><span class="c0"> is the command interface<br></span></li><li class="c10 li-bullet-0"><span class="c0">Linux is powerful, secure, and widely used<br></span></li>` }} />
           <hr className={styles.divider} />
           <h3 id="h.gz8l9gthkerx" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">One-Line Revision</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `“Linux = Kernel + Shell + Utilities”` }} />
           <h1 id="h.xxj5r6bwhnix" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c24 c19">Linux File System &amp; Paths (With Commands Explained Clearly)</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.yd3mh079lvip" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. What is a Path in Linux?</span>` }} />
+          id="h.yd3mh079lvip" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. What is a Path in Linux?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `A path is the location (address) of a file or folder inside the Linux system.
 Just like:` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c19">House address</span><span class="c0"> → helps you reach a house<br></span></li><li class="c10 li-bullet-0"><span class="c19">Linux path</span><span class="c0"> → helps Linux reach a file<br></span></li>` }} />
@@ -638,7 +638,7 @@ Everything like /home, /bin, /etc comes under this.` }} />
             <img loading="lazy" src="/assets/modules/module4/image20.png" alt="Icon representing the lightweight nature of Linux kernel" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.jjz8nnrzvxm7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">3. Absolute Path (Full Address)</span>` }} />
+          id="h.jjz8nnrzvxm7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">3. Absolute Path (Full Address)</span>` }} />
           <h3 id="h.fa1jp5exf5vy" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">What is Absolute Path?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span>Path that starts from </span><span class="c19">root directory (</span><span class="c55 c19">/</span><span class="c22 c19">)<br></span></li><li class="c10 li-bullet-0"><span>Gives </span><span class="c22 c19">complete location<br></span></li><li class="c10 li-bullet-0"><span>Works from </span><span class="c22 c19">anywhere<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -658,7 +658,7 @@ No matter where you are, Linux takes you to Documents` }} />
             <img loading="lazy" src="/assets/modules/module4/image9.png" alt="The Kernel layer in Linux architecture" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.1cphh8b0bsdc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">4. Relative Path (Nearby Address)</span>` }} />
+          id="h.1cphh8b0bsdc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">4. Relative Path (Nearby Address)</span>` }} />
           <h3 id="h.s7e0ynddrfto" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">What is Relative Path?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span>Path based on </span><span class="c22 c19">current location<br></span></li><li class="c10 li-bullet-0"><span>Does </span><span class="c19">not start with </span><span class="c55 c19 c75">/<br></span></li><li class="c10 li-bullet-0"><span class="c0">Shorter and faster to type<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -676,7 +676,7 @@ Linux understands: “Go inside Documents which is inside my current folder”`
             <img loading="lazy" src="/assets/modules/module4/image15.png" alt="System utilities and tools in Linux" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.cs0yt3wz18zq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5. pwd Command (Where Am I?)</span>` }} />
+          id="h.cs0yt3wz18zq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5. pwd Command (Where Am I?)</span>` }} />
           <h3 id="h.j1vuuiokrtv0" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">pwd</span><span class="c17">?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c12">pwd</span><span> means </span><span class="c22 c19">Print Working Directory<br></span></li><li class="c10 li-bullet-0"><span>Shows </span><span class="c22 c19">current location<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -693,7 +693,7 @@ Means you are inside Linux folder` }} />
             <img loading="lazy" src="/assets/modules/module4/image3.png" alt="The Root directory (/) in Linux file hierarchy" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.ksvu87dz0obm" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">6. ls Command (What is Inside?)</span>` }} />
+          id="h.ksvu87dz0obm" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">6. ls Command (What is Inside?)</span>` }} />
           <h3 id="h.jfizzjez5vwf" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">ls</span><span class="c17">?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Lists files and folders in a directory<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -710,7 +710,7 @@ Shows files inside student folder` }} />
             <img loading="lazy" src="/assets/modules/module4/image21.png" alt="/bin directory containing essential binary executables" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.dszlvqhmnddo" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">7. cd Command (Move Between Folders)</span>` }} />
+          id="h.dszlvqhmnddo" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">7. cd Command (Move Between Folders)</span>` }} />
           <h3 id="h.ch14t3t5yo5l" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">cd</span><span class="c17">?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Changes directory<br></span></li><li class="c10 li-bullet-0"><span class="c0">Helps move inside folders<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -726,7 +726,7 @@ cd ~` }} />
             <img loading="lazy" src="/assets/modules/module4/image2.png" alt="/sbin directory for system administrator binaries" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.bp5jz7cwo478" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">8. mkdir Command (Create Folder)</span>` }} />
+          id="h.bp5jz7cwo478" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">8. mkdir Command (Create Folder)</span>` }} />
           <h3 id="h.shu3vaq2v2fm" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">mkdir</span><span class="c17">?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Creates a new directory<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -734,7 +734,7 @@ cd ~` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `mkdir LinuxNotes
 A folder named LinuxNotes is created` }} />
           <hr className={styles.divider} />
-          <h2 id="h.j2evlniefcge" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">9. rmdir Command (Delete Empty Folder)</span>` }} />
+          id="h.j2evlniefcge" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">9. rmdir Command (Delete Empty Folder)</span>` }} />
           <h3 id="h.jbf904ppqw0d" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">rmdir</span><span class="c17">?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span>Deletes </span><span class="c19">empty</span><span class="c0"> directories only<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -745,7 +745,7 @@ A folder named LinuxNotes is created` }} />
             <img loading="lazy" src="/assets/modules/module4/image6.png" alt="/etc directory for system configuration files" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.qrdwjohagq76" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">10. Special Path Symbols (Very Important)</span>` }} />
+          id="h.qrdwjohagq76" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">10. Special Path Symbols (Very Important)</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c62" colspan="1" rowspan="1"><p class="c13"><span class="c19">Symbol</span></p></td><td class="c37" colspan="1" rowspan="1"><p class="c13"><span class="c19">Meaning</span></p></td><td class="c44" colspan="1" rowspan="1"><p class="c13"><span class="c19">Example</span></p></td></tr><tr class="c5"><td class="c62" colspan="1" rowspan="1"><p class="c3"><span class="c12">/</span></p></td><td class="c37" colspan="1" rowspan="1"><p class="c3"><span class="c0">Root directory</span></p></td><td class="c44" colspan="1" rowspan="1"><p class="c3"><span class="c12">/home</span></p></td></tr><tr class="c5"><td class="c62" colspan="1" rowspan="1"><p class="c3"><span class="c12">.</span></p></td><td class="c37" colspan="1" rowspan="1"><p class="c3"><span class="c0">Current directory</span></p></td><td class="c44" colspan="1" rowspan="1"><p class="c3"><span class="c12">./file.txt</span></p></td></tr><tr class="c5"><td class="c62" colspan="1" rowspan="1"><p class="c3"><span class="c12">..</span></p></td><td class="c37" colspan="1" rowspan="1"><p class="c3"><span class="c0">Parent directory</span></p></td><td class="c44" colspan="1" rowspan="1"><p class="c3"><span class="c12">cd ..</span></p></td></tr><tr class="c5"><td class="c62" colspan="1" rowspan="1"><p class="c3"><span class="c12">~</span></p></td><td class="c37" colspan="1" rowspan="1"><p class="c3"><span class="c0">Home directory</span></p></td><td class="c44" colspan="1" rowspan="1"><p class="c3"><span class="c12">cd ~</span></p></td></tr></tbody>` }} />
           </div>
@@ -754,7 +754,7 @@ A folder named LinuxNotes is created` }} />
             <img loading="lazy" src="/assets/modules/module4/image8.png" alt="/home directory structure for user files" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.2egsj5bt0wvk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">11. Home Directory (</span><span class="c55 c38 c19">~</span><span class="c27 c19">)</span>` }} />
+          id="h.2egsj5bt0wvk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">11. Home Directory (</span><span class="c55 c38 c19">~</span><span class="c27 c19">)</span>` }} />
           <h3 id="h.8ibjcbvbc5hc" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">What is Home Directory?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Personal space for each user<br></span></li><li class="c10 li-bullet-0"><span class="c0">Stores documents, downloads, files<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -767,7 +767,7 @@ Shortcut:
             <img loading="lazy" src="/assets/modules/module4/image14.png" alt="/root home directory for the superuser" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.365b1dx9gj1b" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">12. Practical Real Example (Lab Style)</span>` }} />
+          id="h.365b1dx9gj1b" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">12. Practical Real Example (Lab Style)</span>` }} />
           <h3 id="h.af1tnk6hpmtc" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Step 1: Check location</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `pwd` }} />
           <h3 id="h.fypuis1r4y1x" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Step 2: Create folder</span>` }} />
@@ -783,14 +783,14 @@ Output:
             <img loading="lazy" src="/assets/modules/module4/image22.png" alt="/var directory for variable data like logs and spool files" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.djrl5as3ld2q" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">13. Student Revision Summary</span>` }} />
+          id="h.djrl5as3ld2q" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">13. Student Revision Summary</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c12">pwd</span><span class="c0"> → Where am I?<br></span></li><li class="c10 li-bullet-0"><span class="c12">ls</span><span class="c0"> → What is inside?<br></span></li><li class="c10 li-bullet-0"><span class="c12">cd</span><span class="c0"> → Move folders<br></span></li><li class="c10 li-bullet-0"><span class="c12">mkdir</span><span class="c0"> → Create folder<br></span></li><li class="c10 li-bullet-0"><span class="c0">Absolute path → Full address<br></span></li><li class="c10 li-bullet-0"><span class="c0">Relative path → Nearby address<br></span></li>` }} />
           <hr className={styles.divider} />
           <h3 id="h.jba9q1usgwn3" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Final One-Line Understanding</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Linux paths are addresses, and commands help us move, see, and manage those a
 LINUX FILE &amp; DIRECTORY COMMANDS – DETAILED LECTURE NOTES` }} />
           <hr className={styles.divider} />
-          <h2 id="h.lzpe0wqu1flc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. pwd – Present Working Directory</span>` }} />
+          id="h.lzpe0wqu1flc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. pwd – Present Working Directory</span>` }} />
           <h3 id="h.9byeoed2iw3t" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">pwd</span><span class="c17">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `pwd shows where you are currently working in the Linux file system.
 Linux is hierarchical (tree structure). If you don’t know your location, you may work on the wrong files.` }} />
@@ -811,7 +811,7 @@ First you move into Documents  Then pwd confirms your new location` }} />
 pwd
 Shows root directory /` }} />
           <hr className={styles.divider} />
-          <h2 id="h.lcdvumf3h42e" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">2. ls – List Directory Contents</span>` }} />
+          id="h.lcdvumf3h42e" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">2. ls – List Directory Contents</span>` }} />
           <h3 id="h.tkxywigzmhoq" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">ls</span><span class="c17">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Used to see files and directories inside a folder.` }} />
           <hr className={styles.divider} />
@@ -832,7 +832,7 @@ Shows hidden files like .bashrc` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `ls -lh
 File size shown in KB, MB instead of bytes` }} />
           <hr className={styles.divider} />
-          <h2 id="h.8dzqnd9dty4u" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">3. cd – Change Directory</span>` }} />
+          id="h.8dzqnd9dty4u" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">3. cd – Change Directory</span>` }} />
           <h3 id="h.jj96apwliacu" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">cd</span><span class="c17">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Used to move between directories.` }} />
           <hr className={styles.divider} />
@@ -848,7 +848,7 @@ Moves one level up (parent directory)` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `cd ~
 Moves directly to home directory` }} />
           <hr className={styles.divider} />
-          <h2 id="h.z7ng0ouyci0c" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">4. mkdir – Make Directory</span>` }} />
+          id="h.z7ng0ouyci0c" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">4. mkdir – Make Directory</span>` }} />
           <h3 id="h.rtuf5k4tw5pv" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">mkdir</span><span class="c17">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Used to create new directories.` }} />
           <hr className={styles.divider} />
@@ -864,7 +864,7 @@ Creates multiple directories at once` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `mkdir -p Linux/Notes/Day1
 Creates parent &amp; child directories together` }} />
           <hr className={styles.divider} />
-          <h2 id="h.ifp99fi1j1e2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5. rmdir – Remove Empty Directory</span>` }} />
+          id="h.ifp99fi1j1e2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5. rmdir – Remove Empty Directory</span>` }} />
           <h3 id="h.eomit9tovxfg" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">rmdir</span><span class="c17">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Deletes empty directories only.` }} />
           <hr className={styles.divider} />
@@ -880,7 +880,7 @@ Deletes multiple empty directories` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `rmdir Linux
 Error if Linux contains files` }} />
           <hr className={styles.divider} />
-          <h2 id="h.l3pohtvlzb3e" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">6. touch – Create File / Update Time</span>` }} />
+          id="h.l3pohtvlzb3e" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">6. touch – Create File / Update Time</span>` }} />
           <h3 id="h.tentlskb7mua" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c19 c56">touch</span><span class="c17">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Creates empty files or updates timestamp.` }} />
           <hr className={styles.divider} />
@@ -896,7 +896,7 @@ Creates multiple files` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `touch oldfile.txt
 Updates modification time if file exists` }} />
           <hr className={styles.divider} />
-          <h2 id="h.4i21qgl0elep" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">7. cat – View File Content</span>` }} />
+          id="h.4i21qgl0elep" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">7. cat – View File Content</span>` }} />
           <h3 id="h.v0rwsalo3q53" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">cat</span><span class="c17">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Displays entire content of a file.` }} />
           <hr className={styles.divider} />
@@ -914,7 +914,7 @@ Hello Linux
 Ctrl+D
 Creates file and writes content` }} />
           <hr className={styles.divider} />
-          <h2 id="h.tdeypgpyowdl" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">8. less – View Large Files</span>` }} />
+          id="h.tdeypgpyowdl" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">8. less – View Large Files</span>` }} />
           <h3 id="h.aizv1tz487nx" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">less</span><span class="c17">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Used to read big files page by page.` }} />
           <hr className={styles.divider} />
@@ -930,7 +930,7 @@ Safely read system files` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `ps aux | less
 View output page by page` }} />
           <hr className={styles.divider} />
-          <h2 id="h.ipnmxsqbf1kl" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">9. head – First Lines of File</span>` }} />
+          id="h.ipnmxsqbf1kl" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">9. head – First Lines of File</span>` }} />
           <h3 id="h.aiqlcydzhidv" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">head</span><span class="c17">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Shows top lines of a file.` }} />
           <hr className={styles.divider} />
@@ -946,7 +946,7 @@ Shows first 5 lines` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `head /etc/passwd
 Quickly view important file header` }} />
           <hr className={styles.divider} />
-          <h2 id="h.v06b5nk955u2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">10. tail – Last Lines of File</span>` }} />
+          id="h.v06b5nk955u2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">10. tail – Last Lines of File</span>` }} />
           <h3 id="h.b6ozbgam97ar" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">tail</span><span class="c17">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Shows last lines, mainly for logs.` }} />
           <hr className={styles.divider} />
@@ -962,7 +962,7 @@ Shows last 5 lines` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `tail -f logfile.txt
 Watches logs live` }} />
           <hr className={styles.divider} />
-          <h2 id="h.7oorfrlrzc7h" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">11. cp – Copy Files &amp; Directories</span>` }} />
+          id="h.7oorfrlrzc7h" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">11. cp – Copy Files &amp; Directories</span>` }} />
           <h3 id="h.r1hayjz65r8e" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">cp</span><span class="c17">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Copies files or directories.` }} />
           <hr className={styles.divider} />
@@ -978,7 +978,7 @@ Copies file to another directory` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `cp -r Dir1 Dir2
 Copies entire directory` }} />
           <hr className={styles.divider} />
-          <h2 id="h.mve0l3uu13ak" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">12. mv – Move / Rename</span>` }} />
+          id="h.mve0l3uu13ak" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">12. mv – Move / Rename</span>` }} />
           <h3 id="h.ghdae6yja6em" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">mv</span><span class="c17">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Used to move OR rename.` }} />
           <hr className={styles.divider} />
@@ -992,7 +992,7 @@ Copies entire directory` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `mv *.txt Backup/
 Moves all txt files` }} />
           <hr className={styles.divider} />
-          <h2 id="h.5jgww1wjag7c" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">13. rm – Remove Files &amp; Directories</span>` }} />
+          id="h.5jgww1wjag7c" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">13. rm – Remove Files &amp; Directories</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `⚠ Dangerous command` }} />
           <hr className={styles.divider} />
           <h3 id="h.hot9pceefryn" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example 1</span>` }} />
@@ -1006,7 +1006,7 @@ Deletes folder and content` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `rm -f file.txt
 Force delete without confirmation` }} />
           <hr className={styles.divider} />
-          <h2 id="h.q6ljllw3214w" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">14. find – Search Files</span>` }} />
+          id="h.q6ljllw3214w" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">14. find – Search Files</span>` }} />
           <h3 id="h.w52hdaa4wd81" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c19 c35">What is </span><span class="c55 c56 c19">find</span><span class="c17">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Search files based on name, type, size.` }} />
           <hr className={styles.divider} />
@@ -1021,7 +1021,7 @@ Finds directories` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `find . -name "*.txt"
 Finds all text files` }} />
           <hr className={styles.divider} />
-          <h2 id="h.sar86bxvsbmi" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">15. grep – Search Inside Files</span>` }} />
+          id="h.sar86bxvsbmi" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">15. grep – Search Inside Files</span>` }} />
           <h3 id="h.ii26aw24hwwc" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">grep</span><span class="c17">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Search text inside files.` }} />
           <hr className={styles.divider} />
@@ -1036,7 +1036,7 @@ Case-insensitive search` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `ls | grep txt
 Filters output` }} />
           <hr className={styles.divider} />
-          <h2 id="h.69rpind97kbo" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">16. which – Command Location</span>` }} />
+          id="h.69rpind97kbo" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">16. which – Command Location</span>` }} />
           <h3 id="h.mne29va52bk2" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">which</span><span class="c17">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Shows where command is installed.` }} />
           <hr className={styles.divider} />
@@ -1049,7 +1049,7 @@ Filters output` }} />
           <h3 id="h.uucj64g7ocw1" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example 3</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `which python` }} />
           <hr className={styles.divider} />
-          <h2 id="h.5ztsnnwgslxj" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">17. echo – Display Output</span>` }} />
+          id="h.5ztsnnwgslxj" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">17. echo – Display Output</span>` }} />
           <h3 id="h.fyhmxs122aem" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">echo</span><span class="c17">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Prints text or variables.` }} />
           <hr className={styles.divider} />
@@ -1062,12 +1062,12 @@ Filters output` }} />
           <h3 id="h.8m8en0h7xp8b" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example 3</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `echo "Today is Linux class"` }} />
           <hr className={styles.divider} />
-          <h2 id="h.gvl8tl146pc0" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">FINAL STUDENT UNDERSTANDING FLOW</span>` }} />
+          id="h.gvl8tl146pc0" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">FINAL STUDENT UNDERSTANDING FLOW</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `1️⃣ Where am I? → pwd 2️⃣ What is here? → ls 3️⃣ Go somewhere → cd 4️⃣ Create → mkdir, touch 5️⃣ View → cat, less, head, tail 6️⃣ Copy/Move → cp, mv 7️⃣ Delete → rm 8️⃣ Search → find, grep 9️⃣ Know command → which` }} />
           <hr className={styles.divider} />
           <h1 id="h.mfeo5a1c4nlp" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c24 c19">LINUX EDITORS – DETAILED LECTURE NOTES</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.w4ddpwwfrbr8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. What is an Editor?</span>` }} />
+          id="h.w4ddpwwfrbr8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. What is an Editor?</span>` }} />
           <h3 id="h.p7hvu1yf5c7o" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Definition:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `An editor is a software tool used to create, modify, and save text files.
 In Linux:` }} />
@@ -1077,7 +1077,7 @@ In Linux:` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span>Linux is </span><span class="c22 c19">command-line driven<br></span></li><li class="c10 li-bullet-0"><span>Almost everything is configured using </span><span class="c22 c19">text files<br></span></li><li class="c10 li-bullet-0"><span class="c0">Editors allow:<br></span></li>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c15 c26 li-bullet-0"><span class="c0">Editing system files<br></span></li><li class="c15 c26 li-bullet-0"><span class="c0">Writing shell scripts<br></span></li><li class="c15 c26 li-bullet-0"><span class="c0">Programming<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.h7d034q71mn8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">2. Types of Editors in Linux</span>` }} />
+          id="h.h7d034q71mn8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">2. Types of Editors in Linux</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Linux editors are mainly divided into two categories:` }} />
           <h3 id="h.hyydn76wqny5" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">A. CLI Editors (Command Line Editors)</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Work inside terminal<br></span></li><li class="c10 li-bullet-0"><span class="c0">Lightweight<br></span></li><li class="c10 li-bullet-0"><span class="c0">Very powerful<br></span></li>` }} />
@@ -1089,14 +1089,14 @@ In Linux:` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Examples:` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c1">gvim<br></span></li><li class="c10 li-bullet-0"><span class="c1">gedit<br></span></li><li class="c10 li-bullet-0"><span class="c1">kate<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.uy7b71us1t2w" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">3. Vi Editor</span>` }} />
+          id="h.uy7b71us1t2w" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">3. Vi Editor</span>` }} />
           <h3 id="h.2pwpfnrr47u1" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">vi</span><span class="c17">?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Oldest and most basic Linux editor<br></span></li><li class="c10 li-bullet-0"><span>Available in </span><span class="c22 c19">almost all Linux systems<br></span></li><li class="c10 li-bullet-0"><span class="c0">Modal editor (works in modes)<br></span></li>` }} />
           <hr className={styles.divider} />
           <h3 id="h.gidziwnaq5lc" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Characteristics:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Lightweight<br></span></li><li class="c10 li-bullet-0"><span class="c0">Keyboard-based<br></span></li><li class="c10 li-bullet-0"><span class="c0">Difficult for beginners<br></span></li><li class="c10 li-bullet-0"><span class="c0">Foundation for vim &amp; gvim<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.ji334748b7da" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">4. Vim Editor</span>` }} />
+          id="h.ji334748b7da" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">4. Vim Editor</span>` }} />
           <h3 id="h.g6ylx95wensd" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">vim</span><span class="c17">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `vim = Vi Improved` }} />
           <h3 id="h.vrqu09pky2n0" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Advantages over vi:</span>` }} />
@@ -1105,7 +1105,7 @@ In Linux:` }} />
           <h3 id="h.25o5grykp9bx" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Command:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `vim file.txt` }} />
           <hr className={styles.divider} />
-          <h2 id="h.a46h645qakok" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5. rvim Editor</span>` }} />
+          id="h.a46h645qakok" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5. rvim Editor</span>` }} />
           <h3 id="h.mfrmdu729pg2" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">rvim</span><span class="c17">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `rvim = Restricted Vim` }} />
           <h3 id="h.fqj228kizddo" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Purpose:</span>` }} />
@@ -1114,7 +1114,7 @@ In Linux:` }} />
           <h3 id="h.8rnu77ds18sn" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Usage:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `rvim file.txt` }} />
           <hr className={styles.divider} />
-          <h2 id="h.1v0uir9hp8qp" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">6. GVIM Editor (MAIN FOCUS)</span>` }} />
+          id="h.1v0uir9hp8qp" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">6. GVIM Editor (MAIN FOCUS)</span>` }} />
           <h3 id="h.b089ucu7gha1" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">What is GVIM?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `gvim = Graphical Vim` }} />
           <h3 id="h.drl2jr4x4z78" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Features:</span>` }} />
@@ -1126,12 +1126,12 @@ In Linux:` }} />
           <h3 id="h.fpzt23269u6y" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Command to Open GVIM:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `gvim file.txt` }} />
           <hr className={styles.divider} />
-          <h2 id="h.tszekayo077v" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">7. GVIM MODES (VERY IMPORTANT)</span>` }} />
+          id="h.tszekayo077v" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">7. GVIM MODES (VERY IMPORTANT)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `GVIM works using MODES.` }} />
           <h3 id="h.6xhkukskxcj4" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Total Main Modes:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `1️⃣ Normal Mode 2️⃣ Insert Mode 3️⃣ Visual Mode 4️⃣ Command-Line Mode 5️⃣ Replace Mode` }} />
           <hr className={styles.divider} />
-          <h2 id="h.nbbog5j7w5l2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">8. Normal Mode (Default Mode)</span>` }} />
+          id="h.nbbog5j7w5l2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">8. Normal Mode (Default Mode)</span>` }} />
           <h3 id="h.75evgjz6f84u" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">What is Normal Mode?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Default mode when GVIM opens<br></span></li><li class="c10 li-bullet-0"><span class="c0">Used for:<br></span></li>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c15 c26 li-bullet-0"><span class="c0">Navigation<br></span></li><li class="c15 c26 li-bullet-0"><span class="c0">Copy, delete<br></span></li><li class="c15 c26 li-bullet-0"><span class="c0">Editing commands<br></span></li>` }} />
@@ -1162,7 +1162,7 @@ In Linux:` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Linux is powerful` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Cursor on "is"<br></span></li><li class="c10 li-bullet-0"><span>Press </span><span class="c12">dw</span><span class="c0"> → deletes "is"<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.acq6y3ypng1w" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">9. Insert Mode</span>` }} />
+          id="h.acq6y3ypng1w" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">9. Insert Mode</span>` }} />
           <h3 id="h.mrgvyeqvyjb1" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">What is Insert Mode?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span>Used to </span><span class="c22 c19">type text<br></span></li><li class="c10 li-bullet-0"><span class="c0">Similar to Notepad typing<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -1177,7 +1177,7 @@ In Linux:` }} />
           <h3 id="h.7b28jv4ffn1q" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example:</span>` }} />
           <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span>Press </span><span class="c1">i<br></span></li><li class="c10 li-bullet-0"><span>Type: </span><span class="c1">Linux Editor<br></span></li><li class="c10 li-bullet-0"><span>Press </span><span class="c1">ESC<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.50iflzmvyhgk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">10. Visual Mode</span>` }} />
+          id="h.50iflzmvyhgk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">10. Visual Mode</span>` }} />
           <h3 id="h.ct7thq524rjx" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">What is Visual Mode?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span>Used to </span><span class="c22 c19">select text<br></span></li><li class="c10 li-bullet-0"><span class="c0">Similar to mouse selection<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -1194,7 +1194,7 @@ In Linux:` }} />
           <h3 id="h.dshadkgm1481" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example:</span>` }} />
           <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span>Press </span><span class="c1">V<br></span></li><li class="c10 li-bullet-0"><span class="c0">Select lines<br></span></li><li class="c10 li-bullet-0"><span>Press </span><span class="c12">y</span><span class="c0"> → copied<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.s57ss84v9fsq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">11. Command-Line Mode</span>` }} />
+          id="h.s57ss84v9fsq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">11. Command-Line Mode</span>` }} />
           <h3 id="h.pfn4i4df5h0r" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">What is Command Mode?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Used to:<br></span></li>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c15 c26 li-bullet-0"><span class="c0">Save file<br></span></li><li class="c15 c26 li-bullet-0"><span class="c0">Quit<br></span></li><li class="c15 c26 li-bullet-0"><span class="c0">Search<br></span></li><li class="c15 c26 li-bullet-0"><span class="c0">Replace<br></span></li>` }} />
@@ -1219,7 +1219,7 @@ Replace all occurrences` }} />
           <h3 id="h.hr18y68h2t25" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `:%s/linux/Linux/g` }} />
           <hr className={styles.divider} />
-          <h2 id="h.zfn5v3ttbjim" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">12. Replace Mode</span>` }} />
+          id="h.zfn5v3ttbjim" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">12. Replace Mode</span>` }} />
           <h3 id="h.wffimqhvow87" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">What is Replace Mode?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Replaces text instead of inserting<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -1229,25 +1229,25 @@ Replace all occurrences` }} />
           <h3 id="h.4917rt9ogtik" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span>Press </span><span class="c1">R<br></span></li><li class="c10 li-bullet-0"><span class="c0">Type new text<br></span></li><li class="c10 li-bullet-0"><span class="c0">Existing text is overwritten<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.1vm8y0393i65" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">13. GVIM WORKFLOW (REAL LIFE)</span>` }} />
+          id="h.1vm8y0393i65" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">13. GVIM WORKFLOW (REAL LIFE)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `1️⃣ Open file → gvim file.txt 2️⃣ Navigate → Normal Mode 3️⃣ Edit → Insert Mode 4️⃣ Select → Visual Mode 5️⃣ Save → Command Mode` }} />
           <hr className={styles.divider} />
-          <h2 id="h.ngwf35vt4b7o" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">14. Why GVIM is Used in Industry?</span>` }} />
+          id="h.ngwf35vt4b7o" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">14. Why GVIM is Used in Industry?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Configuration editing  Programming  Remote system editing  Fast editing` }} />
           <hr className={styles.divider} />
-          <h2 id="h.1904gnwhmv8f" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">15. STUDENT SUMMARY (ONE GLANCE)</span>` }} />
+          id="h.1904gnwhmv8f" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">15. STUDENT SUMMARY (ONE GLANCE)</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c11" colspan="1" rowspan="1"><p class="c13"><span class="c19">Mode</span></p></td><td class="c87" colspan="1" rowspan="1"><p class="c13"><span class="c19">Purpose</span></p></td></tr><tr class="c5"><td class="c11" colspan="1" rowspan="1"><p class="c3"><span class="c0">Normal</span></p></td><td class="c87" colspan="1" rowspan="1"><p class="c3"><span class="c0">Navigation &amp; commands</span></p></td></tr><tr class="c5"><td class="c11" colspan="1" rowspan="1"><p class="c3"><span class="c0">Insert</span></p></td><td class="c87" colspan="1" rowspan="1"><p class="c3"><span class="c0">Typing text</span></p></td></tr><tr class="c5"><td class="c11" colspan="1" rowspan="1"><p class="c3"><span class="c0">Visual</span></p></td><td class="c87" colspan="1" rowspan="1"><p class="c3"><span class="c0">Select text</span></p></td></tr><tr class="c5"><td class="c11" colspan="1" rowspan="1"><p class="c3"><span class="c0">Command</span></p></td><td class="c87" colspan="1" rowspan="1"><p class="c3"><span class="c0">Save, search</span></p></td></tr><tr class="c5"><td class="c11" colspan="1" rowspan="1"><p class="c3"><span class="c0">Replace</span></p></td><td class="c87" colspan="1" rowspan="1"><p class="c3"><span class="c0">Overwrite</span></p></td></tr></tbody>` }} />
           </div>
           <h1 id="h.s29ah6n704jo" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c24 c19">GVIM EDITOR – COMPLETE COMMANDS (DETAILED LECTURE NOTES)</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.t7pjwadio0zi" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. GVIM MODES (REVISION)</span>` }} />
+          id="h.t7pjwadio0zi" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. GVIM MODES (REVISION)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `GVIM works using modes. Commands depend on which mode you are in.` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c50" colspan="1" rowspan="1"><p class="c13"><span class="c19">Mode</span></p></td><td class="c34" colspan="1" rowspan="1"><p class="c13"><span class="c19">Purpose</span></p></td></tr><tr class="c5"><td class="c50" colspan="1" rowspan="1"><p class="c3"><span class="c0">Normal Mode</span></p></td><td class="c34" colspan="1" rowspan="1"><p class="c3"><span class="c0">Navigation, delete, copy</span></p></td></tr><tr class="c5"><td class="c50" colspan="1" rowspan="1"><p class="c3"><span class="c0">Insert Mode</span></p></td><td class="c34" colspan="1" rowspan="1"><p class="c3"><span class="c0">Typing text</span></p></td></tr><tr class="c5"><td class="c50" colspan="1" rowspan="1"><p class="c3"><span class="c0">Visual Mode</span></p></td><td class="c34" colspan="1" rowspan="1"><p class="c3"><span class="c0">Selection</span></p></td></tr><tr class="c5"><td class="c50" colspan="1" rowspan="1"><p class="c3"><span class="c0">Command Mode</span></p></td><td class="c34" colspan="1" rowspan="1"><p class="c3"><span class="c0">Save, search, replace</span></p></td></tr><tr class="c5"><td class="c50" colspan="1" rowspan="1"><p class="c3"><span class="c0">Replace Mode</span></p></td><td class="c34" colspan="1" rowspan="1"><p class="c3"><span class="c0">Overwrite text</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.aim0iye9w621" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">2. NORMAL MODE COMMANDS (MOST IMPORTANT)</span>` }} />
+          id="h.aim0iye9w621" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">2. NORMAL MODE COMMANDS (MOST IMPORTANT)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Default mode when GVIM opens` }} />
           <hr className={styles.divider} />
           <h3 id="h.64s89f7k6e8p" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">2.1 Cursor Movement Commands</span>` }} />
@@ -1280,7 +1280,7 @@ World` }} />
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c13"><span class="c19">Command</span></p></td><td class="c65" colspan="1" rowspan="1"><p class="c13"><span class="c19">Meaning</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">gg</span></p></td><td class="c65" colspan="1" rowspan="1"><p class="c3"><span class="c0">First line</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">G</span></p></td><td class="c65" colspan="1" rowspan="1"><p class="c3"><span class="c0">Last line</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">10G</span></p></td><td class="c65" colspan="1" rowspan="1"><p class="c3"><span class="c0">Go to line 10</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">Ctrl + g</span></p></td><td class="c65" colspan="1" rowspan="1"><p class="c3"><span class="c0">Show line number</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.ph06ddks4rfz" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">3. INSERT MODE COMMANDS</span>` }} />
+          id="h.ph06ddks4rfz" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">3. INSERT MODE COMMANDS</span>` }} />
           <h3 id="h.37qj8nqvkihq" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Enter Insert Mode</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c13"><span class="c19">Command</span></p></td><td class="c30" colspan="1" rowspan="1"><p class="c13"><span class="c19">Action</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">i</span></p></td><td class="c30" colspan="1" rowspan="1"><p class="c3"><span class="c0">Insert before cursor</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">a</span></p></td><td class="c30" colspan="1" rowspan="1"><p class="c3"><span class="c0">Insert after cursor</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">I</span></p></td><td class="c30" colspan="1" rowspan="1"><p class="c3"><span class="c0">Insert at start</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">A</span></p></td><td class="c30" colspan="1" rowspan="1"><p class="c3"><span class="c0">Insert at end</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">o</span></p></td><td class="c30" colspan="1" rowspan="1"><p class="c3"><span class="c0">New line below</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">O</span></p></td><td class="c30" colspan="1" rowspan="1"><p class="c3"><span class="c0">New line above</span></p></td></tr></tbody>` }} />
@@ -1291,7 +1291,7 @@ World` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span>Cursor on </span><span class="c1">L<br></span></li><li class="c10 li-bullet-0"><span class="c12">a</span><span> → type </span><span class="c12">OS<br></span><span class="c0"> Result:<br></span></li>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Linux OS` }} />
           <hr className={styles.divider} />
-          <h2 id="h.ch84jy9r8n77" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">4. DELETE COMMANDS (NORMAL MODE)</span>` }} />
+          id="h.ch84jy9r8n77" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">4. DELETE COMMANDS (NORMAL MODE)</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c13"><span class="c19">Command</span></p></td><td class="c84" colspan="1" rowspan="1"><p class="c13"><span class="c19">Meaning</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">x</span></p></td><td class="c84" colspan="1" rowspan="1"><p class="c3"><span class="c0">Delete character</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">dw</span></p></td><td class="c84" colspan="1" rowspan="1"><p class="c3"><span class="c0">Delete word</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">dd</span></p></td><td class="c84" colspan="1" rowspan="1"><p class="c3"><span class="c0">Delete line</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">D</span></p></td><td class="c84" colspan="1" rowspan="1"><p class="c3"><span class="c0">Delete till end</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">dG</span></p></td><td class="c84" colspan="1" rowspan="1"><p class="c3"><span class="c0">Delete till end of file</span></p></td></tr></tbody>` }} />
           </div>
@@ -1305,7 +1305,7 @@ Line2
 Line3` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span>Cursor on </span><span class="c1">Line2<br></span></li><li class="c10 li-bullet-0"><span class="c12">dd</span><span> → deletes </span><span class="c1">Line2<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.dwiwq269b3w3" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5. COPY (YANK) COMMANDS</span>` }} />
+          id="h.dwiwq269b3w3" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5. COPY (YANK) COMMANDS</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c13"><span class="c19">Command</span></p></td><td class="c7" colspan="1" rowspan="1"><p class="c13"><span class="c19">Meaning</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">yy</span></p></td><td class="c7" colspan="1" rowspan="1"><p class="c3"><span class="c0">Copy line</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">yw</span></p></td><td class="c7" colspan="1" rowspan="1"><p class="c3"><span class="c0">Copy word</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">y$</span></p></td><td class="c7" colspan="1" rowspan="1"><p class="c3"><span class="c0">Copy till end</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">yG</span></p></td><td class="c7" colspan="1" rowspan="1"><p class="c3"><span class="c0">Copy till end file</span></p></td></tr></tbody>` }} />
           </div>
@@ -1314,12 +1314,12 @@ Line3` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Linux is powerful` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span>Cursor on </span><span class="c1">Linux<br></span></li><li class="c10 li-bullet-0"><span class="c1">yw<br></span></li><li class="c10 li-bullet-0"><span>Move cursor → </span><span class="c1">p<br></span></li><li class="c10 li-bullet-0"><span class="c0">Word pasted<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.867nl9poviyz" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">6. PASTE COMMANDS</span>` }} />
+          id="h.867nl9poviyz" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">6. PASTE COMMANDS</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c13"><span class="c19">Command</span></p></td><td class="c47" colspan="1" rowspan="1"><p class="c13"><span class="c19">Meaning</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">p</span></p></td><td class="c47" colspan="1" rowspan="1"><p class="c3"><span class="c0">Paste after cursor</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">P</span></p></td><td class="c47" colspan="1" rowspan="1"><p class="c3"><span class="c0">Paste before cursor</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.zgklyvsckgd" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">7. UNDO / REDO</span>` }} />
+          id="h.zgklyvsckgd" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">7. UNDO / REDO</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c13"><span class="c19">Command</span></p></td><td class="c81" colspan="1" rowspan="1"><p class="c13"><span class="c19">Meaning</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">u</span></p></td><td class="c81" colspan="1" rowspan="1"><p class="c3"><span class="c0">Undo</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">Ctrl + r</span></p></td><td class="c81" colspan="1" rowspan="1"><p class="c3"><span class="c0">Redo</span></p></td></tr></tbody>` }} />
           </div>
@@ -1327,7 +1327,7 @@ Line3` }} />
           <h3 id="h.u2ayncshuexz" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Delete a line<br></span></li><li class="c10 li-bullet-0"><span>Press </span><span class="c12">u</span><span class="c0"> → restored<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.9gsvztfs9wwm" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">8. VISUAL MODE COMMANDS</span>` }} />
+          id="h.9gsvztfs9wwm" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">8. VISUAL MODE COMMANDS</span>` }} />
           <h3 id="h.vah1xivg14fc" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Enter Visual Mode</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c13"><span class="c19">Command</span></p></td><td class="c64" colspan="1" rowspan="1"><p class="c13"><span class="c19">Mode</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">v</span></p></td><td class="c64" colspan="1" rowspan="1"><p class="c3"><span class="c0">Character</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">V</span></p></td><td class="c64" colspan="1" rowspan="1"><p class="c3"><span class="c0">Line</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">Ctrl + v</span></p></td><td class="c64" colspan="1" rowspan="1"><p class="c3"><span class="c0">Block</span></p></td></tr></tbody>` }} />
@@ -1341,7 +1341,7 @@ Line3` }} />
           <h3 id="h.lnplnmqgbryv" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span>Press </span><span class="c1">V<br></span></li><li class="c10 li-bullet-0"><span class="c0">Select 3 lines<br></span></li><li class="c10 li-bullet-0"><span class="c12">&gt;</span><span class="c0"> → indented<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.uubl5oxxrm9h" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">9. SEARCH COMMANDS</span>` }} />
+          id="h.uubl5oxxrm9h" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">9. SEARCH COMMANDS</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c13"><span class="c19">Command</span></p></td><td class="c28" colspan="1" rowspan="1"><p class="c13"><span class="c19">Meaning</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">/word</span></p></td><td class="c28" colspan="1" rowspan="1"><p class="c3"><span class="c0">Search forward</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">?word</span></p></td><td class="c28" colspan="1" rowspan="1"><p class="c3"><span class="c0">Search backward</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">n</span></p></td><td class="c28" colspan="1" rowspan="1"><p class="c3"><span class="c0">Next</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">N</span></p></td><td class="c28" colspan="1" rowspan="1"><p class="c3"><span class="c0">Previous</span></p></td></tr></tbody>` }} />
           </div>
@@ -1350,7 +1350,7 @@ Line3` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Linux is Linux` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c1">/Linux<br></span></li><li class="c10 li-bullet-0"><span class="c12">n</span><span class="c0"> → next Linux<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.axu6nac8isdq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">10. COMMAND MODE COMMANDS</span>` }} />
+          id="h.axu6nac8isdq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">10. COMMAND MODE COMMANDS</span>` }} />
           <h3 id="h.z9zw3ezgg9sc" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Enter Command Mode</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `:` }} />
           <hr className={styles.divider} />
@@ -1363,7 +1363,7 @@ Line3` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `:w myfile.txt
 (Save as new file)` }} />
           <hr className={styles.divider} />
-          <h2 id="h.7wptd0xxxe3" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">11. REPLACE COMMANDS</span>` }} />
+          id="h.7wptd0xxxe3" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">11. REPLACE COMMANDS</span>` }} />
           <h3 id="h.ewxoqus6nsl3" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Single Replace</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c13"><span class="c19">Command</span></p></td><td class="c71" colspan="1" rowspan="1"><p class="c13"><span class="c19">Meaning</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">r</span></p></td><td class="c71" colspan="1" rowspan="1"><p class="c3"><span class="c0">Replace one character</span></p></td></tr></tbody>` }} />
@@ -1377,38 +1377,38 @@ Replace everywhere
 :5,10s/a/A/g
 Replace only lines 5–10` }} />
           <hr className={styles.divider} />
-          <h2 id="h.jj05uhe2sm47" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">12. MULTI-FILE COMMANDS</span>` }} />
+          id="h.jj05uhe2sm47" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">12. MULTI-FILE COMMANDS</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c13"><span class="c19">Command</span></p></td><td class="c64" colspan="1" rowspan="1"><p class="c13"><span class="c19">Meaning</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">:e file</span></p></td><td class="c64" colspan="1" rowspan="1"><p class="c3"><span class="c0">Open file</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">:n</span></p></td><td class="c64" colspan="1" rowspan="1"><p class="c3"><span class="c0">Next file</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">:prev</span></p></td><td class="c64" colspan="1" rowspan="1"><p class="c3"><span class="c0">Previous</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">:ls</span></p></td><td class="c64" colspan="1" rowspan="1"><p class="c3"><span class="c0">List files</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">:bd</span></p></td><td class="c64" colspan="1" rowspan="1"><p class="c3"><span class="c0">Close file</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.53fva7zgiwkx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">13. WINDOW / SPLIT COMMANDS</span>` }} />
+          id="h.53fva7zgiwkx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">13. WINDOW / SPLIT COMMANDS</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c13"><span class="c19">Command</span></p></td><td class="c52" colspan="1" rowspan="1"><p class="c13"><span class="c19">Meaning</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">:split</span></p></td><td class="c52" colspan="1" rowspan="1"><p class="c3"><span class="c0">Horizontal split</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">:vsplit</span></p></td><td class="c52" colspan="1" rowspan="1"><p class="c3"><span class="c0">Vertical split</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">Ctrl+w w</span></p></td><td class="c52" colspan="1" rowspan="1"><p class="c3"><span class="c0">Switch window</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">Ctrl+w q</span></p></td><td class="c52" colspan="1" rowspan="1"><p class="c3"><span class="c0">Close split</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.x266lj3q8hxj" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">14. SETTINGS COMMANDS</span>` }} />
+          id="h.x266lj3q8hxj" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">14. SETTINGS COMMANDS</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c13"><span class="c19">Command</span></p></td><td class="c72" colspan="1" rowspan="1"><p class="c13"><span class="c19">Meaning</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">:set nu</span></p></td><td class="c72" colspan="1" rowspan="1"><p class="c3"><span class="c0">Show line numbers</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">:set nonu</span></p></td><td class="c72" colspan="1" rowspan="1"><p class="c3"><span class="c0">Hide numbers</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">:set ic</span></p></td><td class="c72" colspan="1" rowspan="1"><p class="c3"><span class="c0">Ignore case</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">:syntax on</span></p></td><td class="c72" colspan="1" rowspan="1"><p class="c3"><span class="c0">Syntax highlight</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.xzebbmi4egm9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">15. HELP COMMAND</span>` }} />
+          id="h.xzebbmi4egm9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">15. HELP COMMAND</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c13"><span class="c19">Command</span></p></td><td class="c80" colspan="1" rowspan="1"><p class="c13"><span class="c19">Meaning</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">:help</span></p></td><td class="c80" colspan="1" rowspan="1"><p class="c3"><span class="c0">Open help</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c12">:help dd</span></p></td><td class="c80" colspan="1" rowspan="1"><p class="c3"><span>Help on </span><span class="c12">dd</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.awkdeynrfb8t" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">16. REAL-TIME GVIM USAGE EXAMPLE</span>` }} />
+          id="h.awkdeynrfb8t" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">16. REAL-TIME GVIM USAGE EXAMPLE</span>` }} />
           <h3 id="h.a7wgvy2wgnjy" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Editing Config File:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `gvim /etc/passwd` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c1">/root<br></span></li><li class="c10 li-bullet-0"><span class="c1">dd<br></span></li><li class="c10 li-bullet-0"><span class="c1">:wq<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.ss1w2eypn27s" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">17. COMPLETE STUDENT SUMMARY</span>` }} />
+          id="h.ss1w2eypn27s" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">17. COMPLETE STUDENT SUMMARY</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Navigation  Editing  Copy/Paste  Search  Replace  Multi-file  Splits  Settings` }} />
           <hr className={styles.divider} />
           <h1 id="h.rfbmvqpy75et" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c24 c19">LINUX WILDCARD CHARACTERS (PATTERN MATCHING)</span>` }} />
           <h3 id="h.cvzcvk6nitam" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c92 c35 c19">(Complete Beginner-to-Advanced Notes)</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.3ztj258txqmh" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. What is a Wildcard Character?</span>` }} />
+          id="h.3ztj258txqmh" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. What is a Wildcard Character?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `A wildcard is a special character used in Linux shell to represent one or more characters in file or directory names.
 Instead of typing full file names, we use patterns.` }} />
           <h3 id="h.rs9yd56nk5k6" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example:</span>` }} />
@@ -1420,20 +1420,20 @@ rm file1.txt file2.txt file3.txt
 We can use:
 rm file*.txt` }} />
           <hr className={styles.divider} />
-          <h2 id="h.uwj27fxhsiyl" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">2. Why Do We Use Wildcards?</span>` }} />
+          id="h.uwj27fxhsiyl" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">2. Why Do We Use Wildcards?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Save time  Handle multiple files  Powerful file filtering  Used in ls, cp, mv, rm, find, grep` }} />
           <hr className={styles.divider} />
-          <h2 id="h.4mrwf0iehlf4" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">3. Types of Wildcard Characters</span>` }} />
+          id="h.4mrwf0iehlf4" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">3. Types of Wildcard Characters</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Linux mainly supports these wildcard characters:` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c23" colspan="1" rowspan="1"><p class="c13"><span class="c19">Wildcard</span></p></td><td class="c85" colspan="1" rowspan="1"><p class="c13"><span class="c19">Name</span></p></td></tr><tr class="c5"><td class="c23" colspan="1" rowspan="1"><p class="c3"><span class="c12">*</span></p></td><td class="c85" colspan="1" rowspan="1"><p class="c3"><span class="c0">Asterisk</span></p></td></tr><tr class="c5"><td class="c23" colspan="1" rowspan="1"><p class="c3"><span class="c12">?</span></p></td><td class="c85" colspan="1" rowspan="1"><p class="c3"><span class="c0">Question mark</span></p></td></tr><tr class="c5"><td class="c23" colspan="1" rowspan="1"><p class="c3"><span class="c12">[ ]</span></p></td><td class="c85" colspan="1" rowspan="1"><p class="c3"><span class="c0">Bracket expression</span></p></td></tr><tr class="c5"><td class="c23" colspan="1" rowspan="1"><p class="c3"><span class="c12">{ }</span></p></td><td class="c85" colspan="1" rowspan="1"><p class="c3"><span class="c0">Brace expansion</span></p></td></tr><tr class="c5"><td class="c23" colspan="1" rowspan="1"><p class="c3"><span class="c12">!</span></p></td><td class="c85" colspan="1" rowspan="1"><p class="c3"><span class="c0">Negation (inside brackets)</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
           <h1 id="h.x2y8bdma8chg" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c61 c19">4. Asterisk Wildcard (</span><span class="c51 c19">*</span><span class="c24 c19">)</span>` }} />
-          <h2 id="h.xkdlyl16kqsi" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">4.1 Meaning</span>` }} />
+          id="h.xkdlyl16kqsi" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">4.1 Meaning</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `* matches ZERO or MORE characters` }} />
           <hr className={styles.divider} />
-          <h2 id="h.197r4ya2y0mq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">4.2 Examples</span>` }} />
+          id="h.197r4ya2y0mq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">4.2 Examples</span>` }} />
           <h3 id="h.qn0ms3d7cegg" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example 1: List all files</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `ls *
 Lists all files and directories` }} />
@@ -1464,10 +1464,10 @@ log_backup
 ⚠ Be careful with rm *` }} />
           <hr className={styles.divider} />
           <h1 id="h.22slqb9qmz22" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c61 c19">5. Question Mark (</span><span class="c51 c19">?</span><span class="c24 c19">) Wildcard</span>` }} />
-          <h2 id="h.hk990ket8k2q" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5.1 Meaning</span>` }} />
+          id="h.hk990ket8k2q" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5.1 Meaning</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `? matches EXACTLY ONE character` }} />
           <hr className={styles.divider} />
-          <h2 id="h.4u889w5nv72r" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5.2 Examples</span>` }} />
+          id="h.4u889w5nv72r" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5.2 Examples</span>` }} />
           <h3 id="h.pdw5taezv8ch" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example 1:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `ls file?.txt
 Matches:
@@ -1494,10 +1494,10 @@ data2.csv` }} />
           </div>
           <hr className={styles.divider} />
           <h1 id="h.7akprw67uap4" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c61 c19">6. Bracket Wildcard </span><span class="c39 c19">[ ]</span>` }} />
-          <h2 id="h.dmxcx430tsjb" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">6.1 Meaning</span>` }} />
+          id="h.dmxcx430tsjb" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">6.1 Meaning</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `[ ] matches ANY ONE character from the list or range` }} />
           <hr className={styles.divider} />
-          <h2 id="h.yjcndp96gv9g" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">6.2 Examples</span>` }} />
+          id="h.yjcndp96gv9g" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">6.2 Examples</span>` }} />
           <h3 id="h.kdu9dmgu6x52" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example 1: Specific characters</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `ls file[123].txt
 Matches:
@@ -1517,7 +1517,7 @@ Matches:
 report1.pdf
 report9.pdf` }} />
           <hr className={styles.divider} />
-          <h2 id="h.becszmqhvocd" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">6.3 Bracket with Negation </span><span class="c90 c55 c38 c19">[! ]</span>` }} />
+          id="h.becszmqhvocd" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">6.3 Bracket with Negation </span><span class="c90 c55 c38 c19">[! ]</span>` }} />
           <h3 id="h.h3llqdvwbxze" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Meaning:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Matches NOT these characters` }} />
           <hr className={styles.divider} />
@@ -1530,10 +1530,10 @@ Excludes:
 file1.txt` }} />
           <hr className={styles.divider} />
           <h1 id="h.8jtd9emyot4b" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c19 c61">7. Brace Expansion </span><span class="c39 c19">{ }</span>` }} />
-          <h2 id="h.uq8vx36ks9mo" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">7.1 Meaning</span>` }} />
+          id="h.uq8vx36ks9mo" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">7.1 Meaning</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `&#123; &#125; is used to generate multiple strings` }} />
           <hr className={styles.divider} />
-          <h2 id="h.pr1fh5y9rgcn" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">7.2 Examples</span>` }} />
+          id="h.pr1fh5y9rgcn" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">7.2 Examples</span>` }} />
           <h3 id="h.5uyzsm2h3qy4" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example 1:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `ls file&#123;1,2,3&#125;.txt
 Expands to:
@@ -1583,18 +1583,18 @@ ls .*` }} />
           <h1 id="h.ty513i3oh7a6" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c24 c19">LINUX FILE &amp; DIRECTORY PERMISSIONS</span>` }} />
           <h3 id="h.gr2c13r84thi" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c92 c35 c19">(Complete Beginner → Practical Level Notes)</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.f5ptpmb74v20" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. Why Permissions Are Needed in Linux</span>` }} />
+          id="h.f5ptpmb74v20" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. Why Permissions Are Needed in Linux</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Linux is a multi-user operating system. Many users can access the same system at the same time.
 Permissions ensure:` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Data security<br></span></li><li class="c10 li-bullet-0"><span class="c0">Controlled access<br></span></li><li class="c10 li-bullet-0"><span class="c0">Protection from accidental deletion<br></span></li><li class="c10 li-bullet-0"><span class="c0">Proper system management<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.8cizh46qq7ha" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">2. Types of Users in Linux</span>` }} />
+          id="h.8cizh46qq7ha" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">2. Types of Users in Linux</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Every file and directory has 3 permission categories:` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c29" colspan="1" rowspan="1"><p class="c13"><span class="c19">Category</span></p></td><td class="c28" colspan="1" rowspan="1"><p class="c13"><span class="c19">Meaning</span></p></td></tr><tr class="c5"><td class="c29" colspan="1" rowspan="1"><p class="c3"><span class="c19">User (u)</span></p></td><td class="c28" colspan="1" rowspan="1"><p class="c3"><span class="c0">Owner of the file</span></p></td></tr><tr class="c5"><td class="c29" colspan="1" rowspan="1"><p class="c3"><span class="c19">Group (g)</span></p></td><td class="c28" colspan="1" rowspan="1"><p class="c3"><span class="c0">Group of users</span></p></td></tr><tr class="c5"><td class="c29" colspan="1" rowspan="1"><p class="c3"><span class="c19">Others (o)</span></p></td><td class="c28" colspan="1" rowspan="1"><p class="c3"><span class="c0">Everyone else</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.ch3wxzd3gflr" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">3. Understanding </span><span class="c55 c38 c19">ls -l</span><span class="c27 c19"> Output</span>` }} />
+          id="h.ch3wxzd3gflr" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">3. Understanding </span><span class="c55 c38 c19">ls -l</span><span class="c27 c19"> Output</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Command:
 ls -l
 Example output:
@@ -1604,22 +1604,22 @@ Breakdown:` }} />
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c48" colspan="1" rowspan="1"><p class="c13"><span class="c19">Field</span></p></td><td class="c47" colspan="1" rowspan="1"><p class="c13"><span class="c19">Meaning</span></p></td></tr><tr class="c5"><td class="c48" colspan="1" rowspan="1"><p class="c3"><span class="c12">-</span></p></td><td class="c47" colspan="1" rowspan="1"><p class="c3"><span class="c0">File type</span></p></td></tr><tr class="c5"><td class="c48" colspan="1" rowspan="1"><p class="c3"><span class="c12">rwx</span></p></td><td class="c47" colspan="1" rowspan="1"><p class="c3"><span class="c0">User permissions</span></p></td></tr><tr class="c5"><td class="c48" colspan="1" rowspan="1"><p class="c3"><span class="c12">r-x</span></p></td><td class="c47" colspan="1" rowspan="1"><p class="c3"><span class="c0">Group permissions</span></p></td></tr><tr class="c5"><td class="c48" colspan="1" rowspan="1"><p class="c3"><span class="c12">r--</span></p></td><td class="c47" colspan="1" rowspan="1"><p class="c3"><span class="c0">Others permissions</span></p></td></tr><tr class="c5"><td class="c48" colspan="1" rowspan="1"><p class="c3"><span class="c0">khalil</span></p></td><td class="c47" colspan="1" rowspan="1"><p class="c3"><span class="c0">Owner</span></p></td></tr><tr class="c5"><td class="c48" colspan="1" rowspan="1"><p class="c3"><span class="c0">dev</span></p></td><td class="c47" colspan="1" rowspan="1"><p class="c3"><span class="c0">Group</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.ij85lcfpx75a" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">4. File Types</span>` }} />
+          id="h.ij85lcfpx75a" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">4. File Types</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c62" colspan="1" rowspan="1"><p class="c13"><span class="c19">Symbol</span></p></td><td class="c18" colspan="1" rowspan="1"><p class="c13"><span class="c19">Meaning</span></p></td></tr><tr class="c5"><td class="c62" colspan="1" rowspan="1"><p class="c3"><span class="c12">-</span></p></td><td class="c18" colspan="1" rowspan="1"><p class="c3"><span class="c0">Regular file</span></p></td></tr><tr class="c5"><td class="c62" colspan="1" rowspan="1"><p class="c3"><span class="c12">d</span></p></td><td class="c18" colspan="1" rowspan="1"><p class="c3"><span class="c0">Directory</span></p></td></tr><tr class="c5"><td class="c62" colspan="1" rowspan="1"><p class="c3"><span class="c12">l</span></p></td><td class="c18" colspan="1" rowspan="1"><p class="c3"><span class="c0">Link</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.fhplqhiey259" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5. Permission Types</span>` }} />
+          id="h.fhplqhiey259" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5. Permission Types</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c18" colspan="1" rowspan="1"><p class="c13"><span class="c19">Permission</span></p></td><td class="c62" colspan="1" rowspan="1"><p class="c13"><span class="c19">Symbol</span></p></td><td class="c28" colspan="1" rowspan="1"><p class="c13"><span class="c19">File Meaning</span></p></td><td class="c97" colspan="1" rowspan="1"><p class="c13"><span class="c19">Directory Meaning</span></p></td></tr><tr class="c5"><td class="c18" colspan="1" rowspan="1"><p class="c3"><span class="c0">Read</span></p></td><td class="c62" colspan="1" rowspan="1"><p class="c3"><span class="c12">r</span></p></td><td class="c28" colspan="1" rowspan="1"><p class="c3"><span class="c0">View file content</span></p></td><td class="c97" colspan="1" rowspan="1"><p class="c3"><span class="c0">List files</span></p></td></tr><tr class="c5"><td class="c18" colspan="1" rowspan="1"><p class="c3"><span class="c0">Write</span></p></td><td class="c62" colspan="1" rowspan="1"><p class="c3"><span class="c12">w</span></p></td><td class="c28" colspan="1" rowspan="1"><p class="c3"><span class="c0">Modify file</span></p></td><td class="c97" colspan="1" rowspan="1"><p class="c3"><span class="c0">Create/Delete files</span></p></td></tr><tr class="c5"><td class="c18" colspan="1" rowspan="1"><p class="c3"><span class="c0">Execute</span></p></td><td class="c62" colspan="1" rowspan="1"><p class="c3"><span class="c12">x</span></p></td><td class="c28" colspan="1" rowspan="1"><p class="c3"><span class="c0">Run file</span></p></td><td class="c97" colspan="1" rowspan="1"><p class="c3"><span class="c0">Enter directory</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.9isnstckunvk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">6. Permission Structure (9 Bits)</span>` }} />
+          id="h.9isnstckunvk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">6. Permission Structure (9 Bits)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `rwx r-x r--
 u   g   o` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span>First 3 → </span><span class="c22 c19">User<br></span></li><li class="c10 li-bullet-0"><span>Next 3 → </span><span class="c22 c19">Group<br></span></li><li class="c10 li-bullet-0"><span>Last 3 → </span><span class="c22 c19">Others<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.v69ypkpjeot0" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">7. Permissions on Files vs Directories</span>` }} />
+          id="h.v69ypkpjeot0" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">7. Permissions on Files vs Directories</span>` }} />
           <h3 id="h.zj4i5nb50ic" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">File</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c18" colspan="1" rowspan="1"><p class="c13"><span class="c19">Permission</span></p></td><td class="c59" colspan="1" rowspan="1"><p class="c13"><span class="c19">Effect</span></p></td></tr><tr class="c5"><td class="c18" colspan="1" rowspan="1"><p class="c3"><span class="c0">r</span></p></td><td class="c59" colspan="1" rowspan="1"><p class="c3"><span class="c0">Can read file</span></p></td></tr><tr class="c5"><td class="c18" colspan="1" rowspan="1"><p class="c3"><span class="c0">w</span></p></td><td class="c59" colspan="1" rowspan="1"><p class="c3"><span class="c0">Can modify</span></p></td></tr><tr class="c5"><td class="c18" colspan="1" rowspan="1"><p class="c3"><span class="c0">x</span></p></td><td class="c59" colspan="1" rowspan="1"><p class="c3"><span class="c0">Can execute</span></p></td></tr></tbody>` }} />
@@ -1630,16 +1630,16 @@ u   g   o` }} />
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c18" colspan="1" rowspan="1"><p class="c13"><span class="c19">Permission</span></p></td><td class="c37" colspan="1" rowspan="1"><p class="c13"><span class="c19">Effect</span></p></td></tr><tr class="c5"><td class="c18" colspan="1" rowspan="1"><p class="c3"><span class="c0">r</span></p></td><td class="c37" colspan="1" rowspan="1"><p class="c3"><span class="c0">Can list files</span></p></td></tr><tr class="c5"><td class="c18" colspan="1" rowspan="1"><p class="c3"><span class="c0">w</span></p></td><td class="c37" colspan="1" rowspan="1"><p class="c3"><span class="c0">Can create/delete</span></p></td></tr><tr class="c5"><td class="c18" colspan="1" rowspan="1"><p class="c3"><span class="c0">x</span></p></td><td class="c37" colspan="1" rowspan="1"><p class="c3"><span class="c0">Can enter (cd)</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.nqsf58jefrse" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">8. Symbolic Mode of </span><span class="c90 c55 c38 c19">chmod</span>` }} />
+          id="h.nqsf58jefrse" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">8. Symbolic Mode of </span><span class="c90 c55 c38 c19">chmod</span>` }} />
           <h3 id="h.slfwaklbcv8f" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Syntax:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `chmod [u/g/o/a][+/-/=][r/w/x] filename` }} />
           <hr className={styles.divider} />
-          <h2 id="h.vbtyzo48zi3" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">9. Symbol Meaning</span>` }} />
+          id="h.vbtyzo48zi3" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">9. Symbol Meaning</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c62" colspan="1" rowspan="1"><p class="c13"><span class="c19">Symbol</span></p></td><td class="c34" colspan="1" rowspan="1"><p class="c13"><span class="c19">Meaning</span></p></td></tr><tr class="c5"><td class="c62" colspan="1" rowspan="1"><p class="c3"><span class="c12">+</span></p></td><td class="c34" colspan="1" rowspan="1"><p class="c3"><span class="c0">Add permission</span></p></td></tr><tr class="c5"><td class="c62" colspan="1" rowspan="1"><p class="c3"><span class="c12">-</span></p></td><td class="c34" colspan="1" rowspan="1"><p class="c3"><span class="c0">Remove permission</span></p></td></tr><tr class="c5"><td class="c62" colspan="1" rowspan="1"><p class="c3"><span class="c12">=</span></p></td><td class="c34" colspan="1" rowspan="1"><p class="c3"><span class="c0">Assign exact permission</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.fo6b7n8vdfv3" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">10. Examples – Symbolic Mode</span>` }} />
+          id="h.fo6b7n8vdfv3" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">10. Examples – Symbolic Mode</span>` }} />
           <h3 id="h.i6v2fy1aqhdh" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Add execute permission to user:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `chmod u+x script.sh` }} />
           <hr className={styles.divider} />
@@ -1655,7 +1655,7 @@ u   g   o` }} />
           <h3 id="h.qf0pllbh40yb" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Give permissions to all:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `chmod a+rx data.txt` }} />
           <hr className={styles.divider} />
-          <h2 id="h.lbd2nba1mekk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">11. Octal (Numeric) Permission System</span>` }} />
+          id="h.lbd2nba1mekk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">11. Octal (Numeric) Permission System</span>` }} />
           <h3 id="h.c17mtxa4mz6g" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Numeric Values:</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c18" colspan="1" rowspan="1"><p class="c13"><span class="c19">Permission</span></p></td><td class="c42" colspan="1" rowspan="1"><p class="c13"><span class="c19">Value</span></p></td></tr><tr class="c5"><td class="c18" colspan="1" rowspan="1"><p class="c3"><span class="c0">r</span></p></td><td class="c42" colspan="1" rowspan="1"><p class="c3"><span class="c0">4</span></p></td></tr><tr class="c5"><td class="c18" colspan="1" rowspan="1"><p class="c3"><span class="c0">w</span></p></td><td class="c42" colspan="1" rowspan="1"><p class="c3"><span class="c0">2</span></p></td></tr><tr class="c5"><td class="c18" colspan="1" rowspan="1"><p class="c3"><span class="c0">x</span></p></td><td class="c42" colspan="1" rowspan="1"><p class="c3"><span class="c0">1</span></p></td></tr></tbody>` }} />
@@ -1666,7 +1666,7 @@ u   g   o` }} />
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c18" colspan="1" rowspan="1"><p class="c13"><span class="c19">Permission</span></p></td><td class="c42" colspan="1" rowspan="1"><p class="c13"><span class="c19">Value</span></p></td></tr><tr class="c5"><td class="c18" colspan="1" rowspan="1"><p class="c3"><span class="c0">rwx</span></p></td><td class="c42" colspan="1" rowspan="1"><p class="c3"><span class="c0">7</span></p></td></tr><tr class="c5"><td class="c18" colspan="1" rowspan="1"><p class="c3"><span class="c0">rw-</span></p></td><td class="c42" colspan="1" rowspan="1"><p class="c3"><span class="c0">6</span></p></td></tr><tr class="c5"><td class="c18" colspan="1" rowspan="1"><p class="c3"><span class="c0">r--</span></p></td><td class="c42" colspan="1" rowspan="1"><p class="c3"><span class="c0">4</span></p></td></tr><tr class="c5"><td class="c18" colspan="1" rowspan="1"><p class="c3"><span class="c0">r-x</span></p></td><td class="c42" colspan="1" rowspan="1"><p class="c3"><span class="c0">5</span></p></td></tr><tr class="c5"><td class="c18" colspan="1" rowspan="1"><p class="c3"><span class="c0">---</span></p></td><td class="c42" colspan="1" rowspan="1"><p class="c3"><span class="c0">0</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.osnobths8wdj" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">12. Common Octal Examples</span>` }} />
+          id="h.osnobths8wdj" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">12. Common Octal Examples</span>` }} />
           <h3 id="h.mqlttvklyolm" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c19 c54">755</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `rwx r-x r-x
 Command:
@@ -1682,19 +1682,19 @@ chmod 644 notes.txt` }} />
 Command:
 chmod 777 test.txt` }} />
           <hr className={styles.divider} />
-          <h2 id="h.2tmigc4noak2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">13. Directory Permission Examples</span>` }} />
+          id="h.2tmigc4noak2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">13. Directory Permission Examples</span>` }} />
           <h3 id="h.rpkb34tct762" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Allow everyone to enter directory:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `chmod 755 mydir` }} />
           <hr className={styles.divider} />
           <h3 id="h.ddkcdi885tth" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Private directory:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `chmod 700 private` }} />
           <hr className={styles.divider} />
-          <h2 id="h.vvgei4c7hycz" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">14. Recursive Permission Change</span>` }} />
+          id="h.vvgei4c7hycz" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">14. Recursive Permission Change</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `chmod -R 755 project/
 Changes permission for:` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Folder<br></span></li><li class="c10 li-bullet-0"><span class="c0">All subfolders<br></span></li><li class="c10 li-bullet-0"><span class="c0">All files<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.xiemfcar7oaf" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">15. </span><span class="c55 c38 c19">chown</span><span class="c27 c19"> – Change Owner</span>` }} />
+          id="h.xiemfcar7oaf" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">15. </span><span class="c55 c38 c19">chown</span><span class="c27 c19"> – Change Owner</span>` }} />
           <h3 id="h.bn57p9fx4s0n" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Syntax:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `chown user filename` }} />
           <hr className={styles.divider} />
@@ -1708,7 +1708,7 @@ Changes permission for:` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `chown -R ravi:dev project/
 ⚠ Only root can use chown` }} />
           <hr className={styles.divider} />
-          <h2 id="h.33gvjsdghx97" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">16. </span><span class="c55 c38 c19">chgrp</span><span class="c27 c19"> – Change Group</span>` }} />
+          id="h.33gvjsdghx97" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">16. </span><span class="c55 c38 c19">chgrp</span><span class="c27 c19"> – Change Group</span>` }} />
           <h3 id="h.abbeunxuziw7" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Syntax:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `chgrp group filename` }} />
           <hr className={styles.divider} />
@@ -1718,7 +1718,7 @@ Changes permission for:` }} />
           <h3 id="h.xv8ao7w5lprr" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Recursive:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `chgrp -R admin project/` }} />
           <hr className={styles.divider} />
-          <h2 id="h.4ev1sudtnf37" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">17. Real-World Scenario Example</span>` }} />
+          id="h.4ev1sudtnf37" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">17. Real-World Scenario Example</span>` }} />
           <h3 id="h.vtpiyze7gfoa" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Create secure project folder:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `mkdir project
 chown khalil:dev project
@@ -1726,32 +1726,33 @@ chmod 750 project
 Result:` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Owner → Full access<br></span></li><li class="c10 li-bullet-0"><span class="c0">Group → Read + Execute<br></span></li><li class="c10 li-bullet-0"><span class="c0">Others → No access<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.zdxqusy4loqf" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">18. Common Mistakes Students Make</span>` }} />
+          id="h.zdxqusy4loqf" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">18. Common Mistakes Students Make</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Using 777 always  Forgetting execute permission on directories  Removing read permission but expecting ls to work` }} />
           <hr className={styles.divider} />
-          <h2 id="h.258s7rqv0qkk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">19. Quick Revision Table</span>` }} />
+          id="h.258s7rqv0qkk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">19. Quick Revision Table</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c13"><span class="c19">Command</span></p></td><td class="c49" colspan="1" rowspan="1"><p class="c13"><span class="c19">Purpose</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c0">chmod</span></p></td><td class="c49" colspan="1" rowspan="1"><p class="c3"><span class="c0">Change permissions</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c0">chown</span></p></td><td class="c49" colspan="1" rowspan="1"><p class="c3"><span class="c0">Change owner</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c0">chgrp</span></p></td><td class="c49" colspan="1" rowspan="1"><p class="c3"><span class="c0">Change group</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c3"><span class="c0">ls -l</span></p></td><td class="c49" colspan="1" rowspan="1"><p class="c3"><span class="c0">View permissions</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
+          <AdUnit slotId="slot_module4content_mid1" />
           <h2 id="h.b9lzd9qzp2p2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">20. Student Final Summary</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Linux permissions protect files<br></span></li><li class="c10 li-bullet-0"><span class="c0">Three levels: User, Group, Others<br></span></li><li class="c10 li-bullet-0"><span class="c0">Two methods: Symbolic &amp; Octal<br></span></li><li class="c10 li-bullet-0"><span class="c0">Directories behave differently<br></span></li><li class="c10 li-bullet-0"><span class="c12">chown</span><span> &amp; </span><span class="c12">chgrp</span><span class="c0"> control ownership<br></span></li>` }} />
           <h1 id="h.z15rfdqyu7ew" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c24 c19">LINUX REDIRECTION OPERATORS</span>` }} />
           <h3 id="h.9k2wfcaj9phh" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19 c92">(Input &amp; Output Redirection – Complete Beginner Guide)</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.wyu0c05prchz" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. What is Redirection in Linux?</span>` }} />
+          id="h.wyu0c05prchz" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. What is Redirection in Linux?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `By default in Linux:` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c19">Input</span><span class="c0"> → Keyboard<br></span></li><li class="c10 li-bullet-0"><span class="c19">Output</span><span class="c0"> → Screen (Terminal)<br></span></li>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Redirection allows us to change the direction of input or output to:` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Files<br></span></li><li class="c10 li-bullet-0"><span class="c0">Other commands<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.mbj4lfj2cxzm" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">2. Standard Streams in Linux</span>` }} />
+          id="h.mbj4lfj2cxzm" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">2. Standard Streams in Linux</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Every command uses 3 standard streams:` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c79" colspan="1" rowspan="1"><p class="c13"><span class="c19">Stream</span></p></td><td class="c94" colspan="1" rowspan="1"><p class="c13"><span class="c19">Name</span></p></td><td class="c96" colspan="1" rowspan="1"><p class="c13"><span class="c19">Number</span></p></td><td class="c100" colspan="1" rowspan="1"><p class="c13"><span class="c19">Default</span></p></td></tr><tr class="c5"><td class="c79" colspan="1" rowspan="1"><p class="c3"><span class="c0">Standard Input</span></p></td><td class="c94" colspan="1" rowspan="1"><p class="c3"><span class="c0">stdin</span></p></td><td class="c96" colspan="1" rowspan="1"><p class="c3"><span class="c0">0</span></p></td><td class="c100" colspan="1" rowspan="1"><p class="c3"><span class="c0">Keyboard</span></p></td></tr><tr class="c5"><td class="c79" colspan="1" rowspan="1"><p class="c3"><span class="c0">Standard Output</span></p></td><td class="c94" colspan="1" rowspan="1"><p class="c3"><span class="c0">stdout</span></p></td><td class="c96" colspan="1" rowspan="1"><p class="c3"><span class="c0">1</span></p></td><td class="c100" colspan="1" rowspan="1"><p class="c3"><span class="c0">Screen</span></p></td></tr><tr class="c5"><td class="c79" colspan="1" rowspan="1"><p class="c3"><span class="c0">Standard Error</span></p></td><td class="c94" colspan="1" rowspan="1"><p class="c3"><span class="c0">stderr</span></p></td><td class="c96" colspan="1" rowspan="1"><p class="c3"><span class="c0">2</span></p></td><td class="c100" colspan="1" rowspan="1"><p class="c3"><span class="c0">Screen</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.8x6ke3kh8p" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">3. Types of Redirection</span>` }} />
+          id="h.8x6ke3kh8p" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">3. Types of Redirection</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `1️⃣ Output Redirection 2️⃣ Input Redirection 3️⃣ Here Document (&lt;&lt;)` }} />
           <hr className={styles.divider} />
           <h1 id="h.k0y29uc15i6g" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c61 c19">4. Output Redirection Operator </span><span class="c39 c19">&gt;</span>` }} />
@@ -1889,12 +1890,12 @@ Reads from file  Writes sorted output to new file` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Redirection controls data flow  Saves time  Avoids manual typing  Very useful in scripting` }} />
           <h1 id="h.d29279u3fokz" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c24 c19">HELPFUL COMMANDS IN LINUX (LECTURE STYLE)</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.8yygpjfbtwyi" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. Why Helpful Commands Are Important</span>` }} />
+          id="h.8yygpjfbtwyi" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. Why Helpful Commands Are Important</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `In Linux:` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Thousands of commands exist<br></span></li><li class="c10 li-bullet-0"><span class="c0">No one can memorize all options<br></span></li><li class="c10 li-bullet-0"><span>Linux provides </span><span class="c22 c19">built-in documentation<br></span></li>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Helpful commands act as your Linux teacher` }} />
           <hr className={styles.divider} />
-          <h2 id="h.1iocpws7hq3c" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">2. </span><span class="c55 c38 c19">man</span><span class="c27 c19"> Command (Manual Pages)</span>` }} />
+          id="h.1iocpws7hq3c" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">2. </span><span class="c55 c38 c19">man</span><span class="c27 c19"> Command (Manual Pages)</span>` }} />
           <h3 id="h.ibtvo4dkqhh1" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">man</span><span class="c17">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `man stands for manual
 It displays:` }} />
@@ -1936,7 +1937,7 @@ Section 5 → file formats` }} />
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c88" colspan="1" rowspan="1"><p class="c77"><span class="c19">Section</span></p></td><td class="c76" colspan="1" rowspan="1"><p class="c77"><span class="c19">Meaning</span></p></td></tr><tr class="c5"><td class="c88" colspan="1" rowspan="1"><p class="c15"><span class="c0">1</span></p></td><td class="c76" colspan="1" rowspan="1"><p class="c15"><span class="c0">User commands</span></p></td></tr><tr class="c5"><td class="c88" colspan="1" rowspan="1"><p class="c15"><span class="c0">2</span></p></td><td class="c76" colspan="1" rowspan="1"><p class="c15"><span class="c0">System calls</span></p></td></tr><tr class="c5"><td class="c88" colspan="1" rowspan="1"><p class="c15"><span class="c0">3</span></p></td><td class="c76" colspan="1" rowspan="1"><p class="c15"><span class="c0">Library calls</span></p></td></tr><tr class="c5"><td class="c88" colspan="1" rowspan="1"><p class="c15"><span class="c0">4</span></p></td><td class="c76" colspan="1" rowspan="1"><p class="c15"><span class="c0">Devices</span></p></td></tr><tr class="c5"><td class="c88" colspan="1" rowspan="1"><p class="c15"><span class="c0">5</span></p></td><td class="c76" colspan="1" rowspan="1"><p class="c15"><span class="c0">File formats</span></p></td></tr><tr class="c5"><td class="c88" colspan="1" rowspan="1"><p class="c15"><span class="c0">8</span></p></td><td class="c76" colspan="1" rowspan="1"><p class="c15"><span class="c0">Admin commands</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.a58ni5xpmo6b" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">3. </span><span class="c55 c38 c19">help</span><span class="c27 c19"> Command (Shell Built-ins)</span>` }} />
+          id="h.a58ni5xpmo6b" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">3. </span><span class="c55 c38 c19">help</span><span class="c27 c19"> Command (Shell Built-ins)</span>` }} />
           <h3 id="h.j24q1u7l4dc8" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">help</span><span class="c17">?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span>Shows help for </span><span class="c22 c19">shell built-in commands<br></span></li><li class="c10 li-bullet-0"><span>Faster than </span><span class="c1">man<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -1958,7 +1959,7 @@ Change the shell working directory.` }} />
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c57" colspan="1" rowspan="1"><p class="c77"><span class="c19">man</span></p></td><td class="c32" colspan="1" rowspan="1"><p class="c77"><span class="c19">help</span></p></td></tr><tr class="c5"><td class="c57" colspan="1" rowspan="1"><p class="c15"><span class="c0">External commands</span></p></td><td class="c32" colspan="1" rowspan="1"><p class="c15"><span class="c0">Shell built-ins</span></p></td></tr><tr class="c5"><td class="c57" colspan="1" rowspan="1"><p class="c15"><span class="c0">Detailed</span></p></td><td class="c32" colspan="1" rowspan="1"><p class="c15"><span class="c0">Short explanation</span></p></td></tr><tr class="c5"><td class="c57" colspan="1" rowspan="1"><p class="c15"><span class="c0">Uses pager</span></p></td><td class="c32" colspan="1" rowspan="1"><p class="c15"><span class="c0">Instant output</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.q9y0g9lhdg5t" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">4. </span><span class="c55 c38 c19">info</span><span class="c27 c19"> Command</span>` }} />
+          id="h.q9y0g9lhdg5t" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">4. </span><span class="c55 c38 c19">info</span><span class="c27 c19"> Command</span>` }} />
           <h3 id="h.2b7v1ipil724" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">info</span><span class="c17">?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">GNU documentation system<br></span></li><li class="c10 li-bullet-0"><span class="c0">More structured than man<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -1978,7 +1979,7 @@ Change the shell working directory.` }} />
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c36" colspan="1" rowspan="1"><p class="c77"><span class="c19">man</span></p></td><td class="c53" colspan="1" rowspan="1"><p class="c77"><span class="c19">info</span></p></td></tr><tr class="c5"><td class="c36" colspan="1" rowspan="1"><p class="c15"><span class="c0">Short &amp; quick</span></p></td><td class="c53" colspan="1" rowspan="1"><p class="c15"><span class="c0">Detailed &amp; structured</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.641mpyeg7y6i" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">5. </span><span class="c55 c38 c19">whatis</span><span class="c27 c19"> Command</span>` }} />
+          id="h.641mpyeg7y6i" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">5. </span><span class="c55 c38 c19">whatis</span><span class="c27 c19"> Command</span>` }} />
           <h3 id="h.gt6u3wxouiql" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">whatis</span><span class="c17">?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">One-line description of command<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -1998,7 +1999,7 @@ chmod (1) - change file mode bits` }} />
           <h3 id="h.geqq3cyyts1b" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">When to Use</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Quick reference  Interview preparation  Command recall` }} />
           <hr className={styles.divider} />
-          <h2 id="h.8dh4rrm4e02t" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">6. </span><span class="c55 c38 c19">apropos</span><span class="c27 c19"> Command</span>` }} />
+          id="h.8dh4rrm4e02t" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">6. </span><span class="c55 c38 c19">apropos</span><span class="c27 c19"> Command</span>` }} />
           <h3 id="h.l3mrje36je7g" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">apropos</span><span class="c17">?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Searches man page descriptions<br></span></li><li class="c10 li-bullet-0"><span class="c0">Finds commands by keyword<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -2014,7 +2015,7 @@ scp (1) - secure copy` }} />
           <h3 id="h.qykgfa3536gk" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example 2</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `apropos network` }} />
           <hr className={styles.divider} />
-          <h2 id="h.kjaz69dycpc9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">7. </span><span class="c55 c38 c19">type</span><span class="c27 c19"> Command</span>` }} />
+          id="h.kjaz69dycpc9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">7. </span><span class="c55 c38 c19">type</span><span class="c27 c19"> Command</span>` }} />
           <h3 id="h.nga45k10yw6d" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">type</span><span class="c17">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Shows:` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Command type<br></span></li><li class="c10 li-bullet-0"><span class="c0">Built-in / external / alias<br></span></li>` }} />
@@ -2032,7 +2033,7 @@ cd is a shell builtin` }} />
 Output:
 ls is /usr/bin/ls` }} />
           <hr className={styles.divider} />
-          <h2 id="h.19tls63m0usi" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">8. </span><span class="c55 c38 c19">which</span><span class="c27 c19"> Command</span>` }} />
+          id="h.19tls63m0usi" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">8. </span><span class="c55 c38 c19">which</span><span class="c27 c19"> Command</span>` }} />
           <h3 id="h.2av26qiw49wv" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">which</span><span class="c17">?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Shows full path of command<br></span></li><li class="c10 li-bullet-0"><span class="c0">Uses PATH variable<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -2044,7 +2045,7 @@ ls is /usr/bin/ls` }} />
 Output:
 /usr/bin/python` }} />
           <hr className={styles.divider} />
-          <h2 id="h.2xn7c1do25gl" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">9. </span><span class="c55 c38 c19">whereis</span><span class="c27 c19"> Command</span>` }} />
+          id="h.2xn7c1do25gl" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">9. </span><span class="c55 c38 c19">whereis</span><span class="c27 c19"> Command</span>` }} />
           <h3 id="h.wjd6bwymf8bf" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">whereis</span><span class="c17">?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Finds binary, source, man pages<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -2056,7 +2057,7 @@ Output:
 Output:
 gcc: /usr/bin/gcc /usr/lib/gcc /usr/share/man/man1/gcc.1.gz` }} />
           <hr className={styles.divider} />
-          <h2 id="h.kwsb5un4ekxy" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">10. </span><span class="c55 c38 c19">--help</span><span class="c27 c19"> Option</span>` }} />
+          id="h.kwsb5un4ekxy" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">10. </span><span class="c55 c38 c19">--help</span><span class="c27 c19"> Option</span>` }} />
           <h3 id="h.6r78pdtbe4mo" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c35 c19">What is </span><span class="c55 c56 c19">--help</span><span class="c17">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Most commands support quick help` }} />
           <hr className={styles.divider} />
@@ -2071,12 +2072,12 @@ gcc: /usr/bin/gcc /usr/lib/gcc /usr/share/man/man1/gcc.1.gz` }} />
 Shows:` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Syntax<br></span></li><li class="c10 li-bullet-0"><span class="c0">Options<br></span></li><li class="c10 li-bullet-0"><span class="c0">Usage<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.hqtdoryrj1bg" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">11. Comparison Table (Quick Revision)</span>` }} />
+          id="h.hqtdoryrj1bg" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">11. Comparison Table (Quick Revision)</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c77"><span class="c19">Command</span></p></td><td class="c30" colspan="1" rowspan="1"><p class="c77"><span class="c19">Purpose</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c15"><span class="c0">man</span></p></td><td class="c30" colspan="1" rowspan="1"><p class="c15"><span class="c0">Full documentation</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c15"><span class="c0">help</span></p></td><td class="c30" colspan="1" rowspan="1"><p class="c15"><span class="c0">Shell built-ins</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c15"><span class="c0">info</span></p></td><td class="c30" colspan="1" rowspan="1"><p class="c15"><span class="c0">GNU docs</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c15"><span class="c0">whatis</span></p></td><td class="c30" colspan="1" rowspan="1"><p class="c15"><span class="c0">One-line info</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c15"><span class="c0">apropos</span></p></td><td class="c30" colspan="1" rowspan="1"><p class="c15"><span class="c0">Search commands</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c15"><span class="c0">type</span></p></td><td class="c30" colspan="1" rowspan="1"><p class="c15"><span class="c0">Command type</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c15"><span class="c0">which</span></p></td><td class="c30" colspan="1" rowspan="1"><p class="c15"><span class="c0">Command path</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c15"><span class="c0">whereis</span></p></td><td class="c30" colspan="1" rowspan="1"><p class="c15"><span class="c0">Binary + man</span></p></td></tr><tr class="c5"><td class="c4" colspan="1" rowspan="1"><p class="c15"><span class="c0">--help</span></p></td><td class="c30" colspan="1" rowspan="1"><p class="c15"><span class="c0">Quick help</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.cog0sv7gl6pg" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">12. Real Student Workflow</span>` }} />
+          id="h.cog0sv7gl6pg" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">12. Real Student Workflow</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `1️⃣ Forgot command usage
 man command
 2️⃣ Need quick syntax
@@ -2086,79 +2087,79 @@ apropos keyword
 4️⃣ Check built-in
 type command` }} />
           <hr className={styles.divider} />
-          <h2 id="h.4u6on730opf8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">14. Student Summary</span>` }} />
+          id="h.4u6on730opf8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">14. Student Summary</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Linux is self-documented  No need to memorize everything  man is your best friend  Helpful commands save time  Essential for Linux mastery
 LINUX TEXT VIEWING, SEARCHING &amp; PROCESSING COMMANDS` }} />
           <h3 id="h.sqci5zhbs8j5" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c92 c35 c19">(more, less, grep, pipe, sed – COMPLETE GUIDE)</span>` }} />
           <hr className={styles.divider} />
           <h1 id="h.d9kke6286jzt" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c61 c19">1. </span><span class="c51 c19">more</span><span class="c24 c19"> Command</span>` }} />
-          <h2 id="h.7uw6g5mddczo" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">What is </span><span class="c55 c38 c19">more</span><span class="c27 c19">?</span>` }} />
+          id="h.7uw6g5mddczo" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">What is </span><span class="c55 c38 c19">more</span><span class="c27 c19">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `more is used to view file content page by page when the file is large.` }} />
           <hr className={styles.divider} />
-          <h2 id="h.1h6bepkyghj0" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Syntax</span>` }} />
+          id="h.1h6bepkyghj0" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Syntax</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `more filename` }} />
           <hr className={styles.divider} />
-          <h2 id="h.y2fxdmlowxa2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Example 1</span>` }} />
+          id="h.y2fxdmlowxa2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Example 1</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `more /etc/passwd
 Displays content one screen at a time` }} />
           <hr className={styles.divider} />
-          <h2 id="h.37mengy98a2k" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Example 2</span>` }} />
+          id="h.37mengy98a2k" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Example 2</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `ls -l /etc | more
 Output of ls viewed page by page` }} />
           <hr className={styles.divider} />
-          <h2 id="h.2kqwblaj1q96" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Example 3</span>` }} />
+          id="h.2kqwblaj1q96" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Example 3</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `ps aux | more
 Large process list readable` }} />
           <hr className={styles.divider} />
-          <h2 id="h.f0ixnroiop3m" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">Important Keys in </span><span class="c90 c55 c38 c19">more</span>` }} />
+          id="h.f0ixnroiop3m" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">Important Keys in </span><span class="c90 c55 c38 c19">more</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c73" colspan="1" rowspan="1"><p class="c13"><span class="c19">Key</span></p></td><td class="c23" colspan="1" rowspan="1"><p class="c13"><span class="c19">Action</span></p></td></tr><tr class="c5"><td class="c73" colspan="1" rowspan="1"><p class="c3"><span class="c0">Space</span></p></td><td class="c23" colspan="1" rowspan="1"><p class="c3"><span class="c0">Next page</span></p></td></tr><tr class="c5"><td class="c73" colspan="1" rowspan="1"><p class="c3"><span class="c0">Enter</span></p></td><td class="c23" colspan="1" rowspan="1"><p class="c3"><span class="c0">Next line</span></p></td></tr><tr class="c5"><td class="c73" colspan="1" rowspan="1"><p class="c3"><span class="c0">q</span></p></td><td class="c23" colspan="1" rowspan="1"><p class="c3"><span class="c0">Quit</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.9gcdoqvhqx03" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">Limitations of </span><span class="c55 c38 c19 c90">more</span>` }} />
+          id="h.9gcdoqvhqx03" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">Limitations of </span><span class="c55 c38 c19 c90">more</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Cannot scroll backward  Limited search` }} />
           <hr className={styles.divider} />
           <h1 id="h.qxmz7beq3mc0" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c61 c19">2. </span><span class="c51 c19">less</span><span class="c24 c19"> Command</span>` }} />
-          <h2 id="h.kar4rsbwgzsa" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">What is </span><span class="c55 c38 c19">less</span><span class="c27 c19">?</span>` }} />
+          id="h.kar4rsbwgzsa" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">What is </span><span class="c55 c38 c19">less</span><span class="c27 c19">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Advanced version of more  Scroll forward &amp; backward` }} />
           <hr className={styles.divider} />
-          <h2 id="h.dplx879av57m" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Syntax</span>` }} />
+          id="h.dplx879av57m" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Syntax</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `less filename` }} />
           <hr className={styles.divider} />
-          <h2 id="h.r10tqa6dhvzd" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Example 1</span>` }} />
+          id="h.r10tqa6dhvzd" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Example 1</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `less /var/log/syslog` }} />
           <hr className={styles.divider} />
-          <h2 id="h.vzudwbscg0as" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Example 2</span>` }} />
+          id="h.vzudwbscg0as" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Example 2</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `ls -R / | less` }} />
           <hr className={styles.divider} />
-          <h2 id="h.ewmw0j390m5x" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Example 3</span>` }} />
+          id="h.ewmw0j390m5x" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Example 3</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `history | less` }} />
           <hr className={styles.divider} />
-          <h2 id="h.phtuzdw1te4l" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">Useful Keys in </span><span class="c90 c55 c38 c19">less</span>` }} />
+          id="h.phtuzdw1te4l" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">Useful Keys in </span><span class="c90 c55 c38 c19">less</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c73" colspan="1" rowspan="1"><p class="c13"><span class="c19">Key</span></p></td><td class="c66" colspan="1" rowspan="1"><p class="c13"><span class="c19">Action</span></p></td></tr><tr class="c5"><td class="c73" colspan="1" rowspan="1"><p class="c3"><span class="c0">Space</span></p></td><td class="c66" colspan="1" rowspan="1"><p class="c3"><span class="c0">Next page</span></p></td></tr><tr class="c5"><td class="c73" colspan="1" rowspan="1"><p class="c3"><span class="c0">b</span></p></td><td class="c66" colspan="1" rowspan="1"><p class="c3"><span class="c0">Previous page</span></p></td></tr><tr class="c5"><td class="c73" colspan="1" rowspan="1"><p class="c3"><span class="c0">/word</span></p></td><td class="c66" colspan="1" rowspan="1"><p class="c3"><span class="c0">Search</span></p></td></tr><tr class="c5"><td class="c73" colspan="1" rowspan="1"><p class="c3"><span class="c0">n</span></p></td><td class="c66" colspan="1" rowspan="1"><p class="c3"><span class="c0">Next match</span></p></td></tr><tr class="c5"><td class="c73" colspan="1" rowspan="1"><p class="c3"><span class="c0">q</span></p></td><td class="c66" colspan="1" rowspan="1"><p class="c3"><span class="c0">Quit</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.5oeqwap0nzei" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">Why </span><span class="c55 c38 c19">less</span><span class="c27 c19"> is better</span>` }} />
+          id="h.5oeqwap0nzei" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">Why </span><span class="c55 c38 c19">less</span><span class="c27 c19"> is better</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Faster  Search support  Backward navigation` }} />
           <hr className={styles.divider} />
           <h1 id="h.mx202zywgf3g" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c61 c19">3. </span><span class="c19 c51">grep</span><span class="c24 c19"> Command</span>` }} />
-          <h2 id="h.jlizgh77wb7o" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">What is </span><span class="c38 c19 c55">grep</span><span class="c27 c19">?</span>` }} />
+          id="h.jlizgh77wb7o" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">What is </span><span class="c38 c19 c55">grep</span><span class="c27 c19">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Search text patterns inside files or output` }} />
           <hr className={styles.divider} />
-          <h2 id="h.dlcx6yaxb8gr" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Syntax</span>` }} />
+          id="h.dlcx6yaxb8gr" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Syntax</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `grep "pattern" file` }} />
           <hr className={styles.divider} />
-          <h2 id="h.p9d8az9oghfh" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Example 1</span>` }} />
+          id="h.p9d8az9oghfh" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Example 1</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `grep root /etc/passwd` }} />
           <hr className={styles.divider} />
-          <h2 id="h.ul3s3hqb2nj9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Example 2</span>` }} />
+          id="h.ul3s3hqb2nj9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Example 2</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `ps aux | grep ssh` }} />
           <hr className={styles.divider} />
-          <h2 id="h.4xzes0y1np4c" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Example 3</span>` }} />
+          id="h.4xzes0y1np4c" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Example 3</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `grep error logfile.txt` }} />
           <hr className={styles.divider} />
-          <h2 id="h.3icwf1lzugoj" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">Common </span><span class="c55 c38 c19">grep</span><span class="c27 c19"> Options</span>` }} />
+          id="h.3icwf1lzugoj" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">Common </span><span class="c55 c38 c19">grep</span><span class="c27 c19"> Options</span>` }} />
           <h3 id="h.dyj7e9qcj5qg" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c55 c56 c19">-i</span><span class="c17"> (Ignore case)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `grep -i linux file.txt` }} />
           <hr className={styles.divider} />
@@ -2178,35 +2179,35 @@ Large process list readable` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `grep -c error logfile.txt` }} />
           <hr className={styles.divider} />
           <h1 id="h.qled5kfjmoz8" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c61 c19">4. Pipe Operator </span><span class="c39 c19">|</span>` }} />
-          <h2 id="h.wk1eyfrqyblc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">What is Pipe?</span>` }} />
+          id="h.wk1eyfrqyblc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">What is Pipe?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Pass output of one command as input to another` }} />
           <hr className={styles.divider} />
-          <h2 id="h.yxtreztb9yn2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Syntax</span>` }} />
+          id="h.yxtreztb9yn2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Syntax</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `command1 | command2` }} />
           <hr className={styles.divider} />
-          <h2 id="h.z6ipl35ehjzq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Example 1</span>` }} />
+          id="h.z6ipl35ehjzq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Example 1</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `ls | more` }} />
           <hr className={styles.divider} />
-          <h2 id="h.xi1720z8zbkl" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Example 2</span>` }} />
+          id="h.xi1720z8zbkl" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Example 2</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `ps aux | grep root` }} />
           <hr className={styles.divider} />
-          <h2 id="h.jp57ww5yu4o6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Example 3</span>` }} />
+          id="h.jp57ww5yu4o6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Example 3</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `cat file.txt | wc -l` }} />
           <hr className={styles.divider} />
-          <h2 id="h.pammkiduxqbn" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Multiple Pipes</span>` }} />
+          id="h.pammkiduxqbn" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Multiple Pipes</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `ps aux | grep ssh | wc -l` }} />
           <hr className={styles.divider} />
-          <h2 id="h.i1js79l0q6y" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Why Pipes are powerful</span>` }} />
+          id="h.i1js79l0q6y" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Why Pipes are powerful</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Avoid temporary files  Faster processing  Clean output` }} />
           <hr className={styles.divider} />
           <h1 id="h.4yszufg1ypt5" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c61 c19">5. </span><span class="c51 c19">sed</span><span class="c24 c19"> Command (Stream Editor)</span>` }} />
-          <h2 id="h.5zwey1uru8l6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">What is </span><span class="c55 c38 c19">sed</span><span class="c27 c19">?</span>` }} />
+          id="h.5zwey1uru8l6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">What is </span><span class="c55 c38 c19">sed</span><span class="c27 c19">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Used to search, replace, delete, edit text without opening editor` }} />
           <hr className={styles.divider} />
-          <h2 id="h.16w0tovdi9u4" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Syntax</span>` }} />
+          id="h.16w0tovdi9u4" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Syntax</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `sed 'operation' filename` }} />
           <hr className={styles.divider} />
-          <h2 id="h.nj92mpw0ckpj" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5.1 Replace Text</span>` }} />
+          id="h.nj92mpw0ckpj" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5.1 Replace Text</span>` }} />
           <h3 id="h.3figlhbfp80o" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example 1</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `sed 's/Linux/UNIX/' file.txt
 Replaces first occurrence per line` }} />
@@ -2217,7 +2218,7 @@ Replaces first occurrence per line` }} />
           <h3 id="h.3056ew1s06qn" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Case insensitive</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `sed 's/linux/UNIX/gi' file.txt` }} />
           <hr className={styles.divider} />
-          <h2 id="h.gyq2sx637l0n" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5.2 Delete Lines</span>` }} />
+          id="h.gyq2sx637l0n" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5.2 Delete Lines</span>` }} />
           <h3 id="h.ojickzhg73q6" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Delete specific line</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `sed '3d' file.txt` }} />
           <hr className={styles.divider} />
@@ -2227,14 +2228,14 @@ Replaces first occurrence per line` }} />
           <h3 id="h.zgvktfp636n7" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Delete matching pattern</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `sed '/error/d' logfile.txt` }} />
           <hr className={styles.divider} />
-          <h2 id="h.ah8tebfp4tme" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5.3 Print Specific Lines</span>` }} />
+          id="h.ah8tebfp4tme" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5.3 Print Specific Lines</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `sed -n '5p' file.txt
 sed -n '2,6p' file.txt` }} />
           <hr className={styles.divider} />
-          <h2 id="h.im5chad6fv0x" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5.4 Save Output to File</span>` }} />
+          id="h.im5chad6fv0x" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5.4 Save Output to File</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `sed 's/old/new/g' file.txt &gt; newfile.txt` }} />
           <hr className={styles.divider} />
-          <h2 id="h.ad037ks11wo7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">5.5 Edit File Permanently (</span><span class="c55 c38 c19">-i</span><span class="c27 c19">)</span>` }} />
+          id="h.ad037ks11wo7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">5.5 Edit File Permanently (</span><span class="c55 c38 c19">-i</span><span class="c27 c19">)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `sed -i 's/old/new/g' file.txt
 ⚠ Be careful – modifies file directly` }} />
           <hr className={styles.divider} />
@@ -2260,12 +2261,12 @@ sed -n '2,6p' file.txt` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `less preferred over more  grep + pipe very common  sed used in scripts  Pipes reduce memory usage` }} />
           <h1 id="h.kd8qdhscsemg" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c24 c19">AWK COMMAND – COMPLETE LECTURE WITH OUTPUTS</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.8axnskzfckad" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. What is AWK (Simple Explanation)</span>` }} />
+          id="h.8axnskzfckad" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. What is AWK (Simple Explanation)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `awk is a text processing tool used to:` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span>Read a file </span><span class="c22 c19">line by line<br></span></li><li class="c10 li-bullet-0"><span>Split each line into </span><span class="c22 c19">columns (fields)<br></span></li><li class="c10 li-bullet-0"><span>Perform </span><span class="c22 c19">filtering, calculations, formatting<br></span></li>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Think of AWK like Excel for text files.` }} />
           <hr className={styles.divider} />
-          <h2 id="h.4zdelz9krj5q" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">2. Sample File Used for All Examples</span>` }} />
+          id="h.4zdelz9krj5q" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">2. Sample File Used for All Examples</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Let us create a file called data.txt
 ID Name Marks
 1 Ravi 85
@@ -2273,7 +2274,7 @@ ID Name Marks
 3 Kumar 78
 4 Anil 92` }} />
           <hr className={styles.divider} />
-          <h2 id="h.21o33tytqsqv" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">3. Basic AWK Syntax</span>` }} />
+          id="h.21o33tytqsqv" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">3. Basic AWK Syntax</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `awk '&#123; action &#125;' filename` }} />
           <hr className={styles.divider} />
           <h3 id="h.71vs46ukobs4" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example 1: Print entire file</span>` }} />
@@ -2286,7 +2287,7 @@ ID Name Marks
 4 Anil 92
 Same as cat, but processed line by line.` }} />
           <hr className={styles.divider} />
-          <h2 id="h.spasvm840o8a" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">4. </span><span class="c55 c38 c19">$0</span><span class="c27 c19"> – Print Complete Line</span>` }} />
+          id="h.spasvm840o8a" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">4. </span><span class="c55 c38 c19">$0</span><span class="c27 c19"> – Print Complete Line</span>` }} />
           <h3 id="h.ti2c4xgwoyeb" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Command</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `awk '&#123;print $0&#125;' data.txt` }} />
           <h3 id="h.vu1cpl1il2i" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Output</span>` }} />
@@ -2297,7 +2298,7 @@ Same as cat, but processed line by line.` }} />
 4 Anil 92
 $0 means entire current line` }} />
           <hr className={styles.divider} />
-          <h2 id="h.6a99yqeq0uyi" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">5. </span><span class="c55 c38 c19">$1</span><span class="c38 c19">, </span><span class="c55 c38 c19">$2</span><span class="c38 c19">, </span><span class="c55 c38 c19">$3</span><span class="c27 c19"> – Fields (Columns)</span>` }} />
+          id="h.6a99yqeq0uyi" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">5. </span><span class="c55 c38 c19">$1</span><span class="c38 c19">, </span><span class="c55 c38 c19">$2</span><span class="c38 c19">, </span><span class="c55 c38 c19">$3</span><span class="c27 c19"> – Fields (Columns)</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c20" colspan="1" rowspan="1"><p class="c13"><span class="c19">Variable</span></p></td><td class="c69" colspan="1" rowspan="1"><p class="c13"><span class="c19">Meaning</span></p></td></tr><tr class="c5"><td class="c20" colspan="1" rowspan="1"><p class="c3"><span class="c0">$1</span></p></td><td class="c69" colspan="1" rowspan="1"><p class="c3"><span class="c0">First column</span></p></td></tr><tr class="c5"><td class="c20" colspan="1" rowspan="1"><p class="c3"><span class="c0">$2</span></p></td><td class="c69" colspan="1" rowspan="1"><p class="c3"><span class="c0">Second column</span></p></td></tr><tr class="c5"><td class="c20" colspan="1" rowspan="1"><p class="c3"><span class="c0">$3</span></p></td><td class="c69" colspan="1" rowspan="1"><p class="c3"><span class="c0">Third column</span></p></td></tr></tbody>` }} />
           </div>
@@ -2320,7 +2321,7 @@ Anil` }} />
 3 78
 4 92` }} />
           <hr className={styles.divider} />
-          <h2 id="h.v1bkpjl1529r" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">6. </span><span class="c55 c38 c19">NR</span><span class="c27 c19"> – Line Number</span>` }} />
+          id="h.v1bkpjl1529r" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">6. </span><span class="c55 c38 c19">NR</span><span class="c27 c19"> – Line Number</span>` }} />
           <h3 id="h.mhtt8bchnf1a" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Command</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `awk '&#123;print NR, $0&#125;' data.txt` }} />
           <h3 id="h.tqgbnj9bwu4f" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Output</span>` }} />
@@ -2336,7 +2337,7 @@ NR = record (line) number` }} />
           <h3 id="h.la4j8me7d6kr" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Output</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `2 Sita 90` }} />
           <hr className={styles.divider} />
-          <h2 id="h.frl7bz1elsq6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">7. </span><span class="c55 c38 c19">NF</span><span class="c27 c19"> – Number of Fields</span>` }} />
+          id="h.frl7bz1elsq6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">7. </span><span class="c55 c38 c19">NF</span><span class="c27 c19"> – Number of Fields</span>` }} />
           <h3 id="h.oexb0lk38806" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Command</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `awk '&#123;print NF&#125;' data.txt` }} />
           <h3 id="h.8a2jf9128c2l" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Output</span>` }} />
@@ -2347,7 +2348,7 @@ NR = record (line) number` }} />
 3
 Each line has 3 columns` }} />
           <hr className={styles.divider} />
-          <h2 id="h.u68d9wm4q5y" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">8. </span><span class="c55 c38 c19">FS</span><span class="c27 c19"> – Field Separator</span>` }} />
+          id="h.u68d9wm4q5y" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">8. </span><span class="c55 c38 c19">FS</span><span class="c27 c19"> – Field Separator</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Default separator = space` }} />
           <hr className={styles.divider} />
           <h3 id="h.gaxj7deorvlk" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example File: users.txt</span>` }} />
@@ -2363,7 +2364,7 @@ ravi
 sita
 FS=":" tells awk to split by colon` }} />
           <hr className={styles.divider} />
-          <h2 id="h.xhm0b9q82br8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">9. </span><span class="c55 c38 c19">OFS</span><span class="c27 c19"> – Output Field Separator</span>` }} />
+          id="h.xhm0b9q82br8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">9. </span><span class="c55 c38 c19">OFS</span><span class="c27 c19"> – Output Field Separator</span>` }} />
           <hr className={styles.divider} />
           <h3 id="h.3sobk64rknxn" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Command</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `awk 'BEGIN&#123;OFS=" | "&#125; &#123;print $1,$2,$3&#125;' data.txt` }} />
@@ -2374,7 +2375,7 @@ FS=":" tells awk to split by colon` }} />
 3 | Kumar | 78
 4 | Anil | 92` }} />
           <hr className={styles.divider} />
-          <h2 id="h.e1ymgobu90b1" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">10. BEGIN Block (Pre-Processing)</span>` }} />
+          id="h.e1ymgobu90b1" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">10. BEGIN Block (Pre-Processing)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Executed once before reading file` }} />
           <hr className={styles.divider} />
           <h3 id="h.nz3tjhh0i3vy" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Command</span>` }} />
@@ -2387,7 +2388,7 @@ Sita 90
 Kumar 78
 Anil 92` }} />
           <hr className={styles.divider} />
-          <h2 id="h.h8h3gu3xsc7y" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">11. END Block (Post-Processing)</span>` }} />
+          id="h.h8h3gu3xsc7y" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">11. END Block (Post-Processing)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Executed once after file ends` }} />
           <hr className={styles.divider} />
           <h3 id="h.twpuuej5rmct" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Command</span>` }} />
@@ -2395,14 +2396,14 @@ Anil 92` }} />
           <h3 id="h.23yv7nr6beng" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Output</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Total Marks: 345` }} />
           <hr className={styles.divider} />
-          <h2 id="h.hf7rds9xcbpx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">12. Calculate Average</span>` }} />
+          id="h.hf7rds9xcbpx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">12. Calculate Average</span>` }} />
           <h3 id="h.4uasaxayesg7" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Command</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `awk '&#123;sum+=$3&#125; END&#123;print "Average:", sum/(NR-1)&#125;' data.txt` }} />
           <h3 id="h.an23u9m1p73m" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Output</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Average: 86.25
 (NR-1 because first line is header)` }} />
           <hr className={styles.divider} />
-          <h2 id="h.k8as2agx94v2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">13. Conditional Statements</span>` }} />
+          id="h.k8as2agx94v2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">13. Conditional Statements</span>` }} />
           <hr className={styles.divider} />
           <h3 id="h.pig77ylpb1mi" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example: Marks &gt; 80</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `awk '$3&gt;80 &#123;print $2,$3&#125;' data.txt` }} />
@@ -2411,14 +2412,14 @@ Anil 92` }} />
 Sita 90
 Anil 92` }} />
           <hr className={styles.divider} />
-          <h2 id="h.kh5btcfh2gvj" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">14. Pattern Matching</span>` }} />
+          id="h.kh5btcfh2gvj" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">14. Pattern Matching</span>` }} />
           <hr className={styles.divider} />
           <h3 id="h.gtge388tsygz" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example: Find name "Sita"</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `awk '/Sita/ &#123;print&#125;' data.txt` }} />
           <h3 id="h.73lgo4pktbfk" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Output</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `2 Sita 90` }} />
           <hr className={styles.divider} />
-          <h2 id="h.blfhftv98s6a" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">15. Multiple Conditions</span>` }} />
+          id="h.blfhftv98s6a" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">15. Multiple Conditions</span>` }} />
           <hr className={styles.divider} />
           <h3 id="h.2vpa47huozq7" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Command</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `awk '$3&gt;80 &amp;&amp; $2!="Ravi" &#123;print $2&#125;' data.txt` }} />
@@ -2426,7 +2427,7 @@ Anil 92` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Sita
 Anil` }} />
           <hr className={styles.divider} />
-          <h2 id="h.mdf98njt2rxh" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c19 c38">16. </span><span class="c90 c55 c38 c19">FILENAME</span>` }} />
+          id="h.mdf98njt2rxh" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c19 c38">16. </span><span class="c90 c55 c38 c19">FILENAME</span>` }} />
           <hr className={styles.divider} />
           <h3 id="h.b3s7fyw28rro" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Command</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `awk '&#123;print FILENAME, NR, $0&#125;' data.txt` }} />
@@ -2437,7 +2438,7 @@ data.txt 3 2 Sita 90
 data.txt 4 3 Kumar 78
 data.txt 5 4 Anil 92` }} />
           <hr className={styles.divider} />
-          <h2 id="h.dl9ew57d9htp" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">17. AWK with Pipe</span>` }} />
+          id="h.dl9ew57d9htp" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">17. AWK with Pipe</span>` }} />
           <hr className={styles.divider} />
           <h3 id="h.br36j5atbrlz" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `ls -l | awk '&#123;print $9&#125;'` }} />
@@ -2445,7 +2446,7 @@ data.txt 5 4 Anil 92` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `data.txt
 users.txt` }} />
           <hr className={styles.divider} />
-          <h2 id="h.vpnrrixy54se" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">18. Full AWK Program (BEGIN + BODY + END)</span>` }} />
+          id="h.vpnrrixy54se" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">18. Full AWK Program (BEGIN + BODY + END)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `awk '
 BEGIN &#123; print "----Report Start----" &#125;
 &#123; print NR, $2, $3 &#125;
@@ -2460,7 +2461,7 @@ END &#123; print "----Report End----" &#125;
 5 Anil 92
 ----Report End----` }} />
           <hr className={styles.divider} />
-          <h2 id="h.q8selvn3fksh" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">19. Real-Time Use Case (Log Analysis)</span>` }} />
+          id="h.q8selvn3fksh" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">19. Real-Time Use Case (Log Analysis)</span>` }} />
           <h3 id="h.wb6ejm1gibji" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">log.txt</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `INFO server started
 ERROR disk full
@@ -2473,20 +2474,20 @@ ERROR memory low` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `2 ERROR disk full
 4 ERROR memory low` }} />
           <hr className={styles.divider} />
-          <h2 id="h.b0vtxhvv1nzc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">20. Student Practice (Important)</span>` }} />
+          id="h.b0vtxhvv1nzc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">20. Student Practice (Important)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `1️⃣ Print only 2nd column 2️⃣ Print lines &gt; 80 marks 3️⃣ Calculate total marks 4️⃣ Show line numbers 5️⃣ Change field separator` }} />
           <h1 id="h.2s1s0w2dndow" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c24 c19">AWK OPERATORS – COMPLETE LECTURE WITH OUTPUTS</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `We will cover ALL AWK operators step by step:` }} />
           <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Arithmetic Operators<br></span></li><li class="c10 li-bullet-0"><span class="c0">Increment &amp; Decrement Operators<br></span></li><li class="c10 li-bullet-0"><span class="c0">Assignment Operators<br></span></li><li class="c10 li-bullet-0"><span class="c0">Relational Operators<br></span></li><li class="c10 li-bullet-0"><span class="c0">Logical Operators<br></span></li><li class="c10 li-bullet-0"><span class="c0">Ternary Operator<br></span></li><li class="c10 li-bullet-0"><span class="c0">Exponential Operator<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.uwapzt3g5kmv" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Common Sample File (marks.txt)</span>` }} />
+          id="h.uwapzt3g5kmv" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Common Sample File (marks.txt)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `ID Name Marks
 1 Ravi 85
 2 Sita 90
 3 Kumar 78
 4 Anil 92` }} />
           <hr className={styles.divider} />
-          <h2 id="h.4mxc8ms9ael5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. Arithmetic Operators in AWK</span>` }} />
+          id="h.4mxc8ms9ael5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. Arithmetic Operators in AWK</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c13"><span class="c19">Operator</span></p></td><td class="c25" colspan="1" rowspan="1"><p class="c13"><span class="c19">Meaning</span></p></td></tr><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c3"><span class="c0">+</span></p></td><td class="c25" colspan="1" rowspan="1"><p class="c3"><span class="c0">Addition</span></p></td></tr><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c3"><span class="c0">-</span></p></td><td class="c25" colspan="1" rowspan="1"><p class="c3"><span class="c0">Subtraction</span></p></td></tr><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c3"><span class="c0">*</span></p></td><td class="c25" colspan="1" rowspan="1"><p class="c3"><span class="c0">Multiplication</span></p></td></tr><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c3"><span class="c0">/</span></p></td><td class="c25" colspan="1" rowspan="1"><p class="c3"><span class="c0">Division</span></p></td></tr><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c3"><span class="c0">%</span></p></td><td class="c25" colspan="1" rowspan="1"><p class="c3"><span class="c0">Modulus</span></p></td></tr></tbody>` }} />
           </div>
@@ -2521,7 +2522,7 @@ Kumar 0
 Anil 0
 1 = Odd, 0 = Even` }} />
           <hr className={styles.divider} />
-          <h2 id="h.ddau3lhxslsw" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">2. Increment &amp; Decrement Operators</span>` }} />
+          id="h.ddau3lhxslsw" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">2. Increment &amp; Decrement Operators</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c13"><span class="c19">Operator</span></p></td><td class="c31" colspan="1" rowspan="1"><p class="c13"><span class="c19">Meaning</span></p></td></tr><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c3"><span class="c0">++</span></p></td><td class="c31" colspan="1" rowspan="1"><p class="c3"><span class="c0">Increment by 1</span></p></td></tr><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c3"><span class="c0">--</span></p></td><td class="c31" colspan="1" rowspan="1"><p class="c3"><span class="c0">Decrement by 1</span></p></td></tr></tbody>` }} />
           </div>
@@ -2547,7 +2548,7 @@ Anil 91` }} />
           <h3 id="h.catiwd8w9vv1" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Output</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `5` }} />
           <hr className={styles.divider} />
-          <h2 id="h.tboie26bvyud" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">3. Assignment Operators</span>` }} />
+          id="h.tboie26bvyud" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">3. Assignment Operators</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c13"><span class="c19">Operator</span></p></td><td class="c74" colspan="1" rowspan="1"><p class="c13"><span class="c19">Meaning</span></p></td></tr><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c3"><span class="c0">=</span></p></td><td class="c74" colspan="1" rowspan="1"><p class="c3"><span class="c0">Assign</span></p></td></tr><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c3"><span class="c0">+=</span></p></td><td class="c74" colspan="1" rowspan="1"><p class="c3"><span class="c0">Add and assign</span></p></td></tr><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c3"><span class="c0">-=</span></p></td><td class="c74" colspan="1" rowspan="1"><p class="c3"><span class="c0">Subtract and assign</span></p></td></tr><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c3"><span class="c0">*=</span></p></td><td class="c74" colspan="1" rowspan="1"><p class="c3"><span class="c0">Multiply and assign</span></p></td></tr><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c3"><span class="c0">/=</span></p></td><td class="c74" colspan="1" rowspan="1"><p class="c3"><span class="c0">Divide and assign</span></p></td></tr></tbody>` }} />
           </div>
@@ -2570,7 +2571,7 @@ Anil 82` }} />
           <h3 id="h.sq3x3p1891b5" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Output</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `690` }} />
           <hr className={styles.divider} />
-          <h2 id="h.gz62r0yinleb" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">4. Relational Operators</span>` }} />
+          id="h.gz62r0yinleb" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">4. Relational Operators</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c13"><span class="c19">Operator</span></p></td><td class="c33" colspan="1" rowspan="1"><p class="c13"><span class="c19">Meaning</span></p></td></tr><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c3"><span class="c0">&gt;</span></p></td><td class="c33" colspan="1" rowspan="1"><p class="c3"><span class="c0">Greater than</span></p></td></tr><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c3"><span class="c0">&lt;</span></p></td><td class="c33" colspan="1" rowspan="1"><p class="c3"><span class="c0">Less than</span></p></td></tr><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c3"><span class="c0">&gt;=</span></p></td><td class="c33" colspan="1" rowspan="1"><p class="c3"><span class="c0">Greater than or equal</span></p></td></tr><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c3"><span class="c0">&lt;=</span></p></td><td class="c33" colspan="1" rowspan="1"><p class="c3"><span class="c0">Less than or equal</span></p></td></tr><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c3"><span class="c0">==</span></p></td><td class="c33" colspan="1" rowspan="1"><p class="c3"><span class="c0">Equal</span></p></td></tr><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c3"><span class="c0">!=</span></p></td><td class="c33" colspan="1" rowspan="1"><p class="c3"><span class="c0">Not equal</span></p></td></tr></tbody>` }} />
           </div>
@@ -2594,7 +2595,7 @@ Anil 92` }} />
 Sita 90
 Anil 92` }} />
           <hr className={styles.divider} />
-          <h2 id="h.9m73aenz2a6v" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5. Logical Operators</span>` }} />
+          id="h.9m73aenz2a6v" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5. Logical Operators</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c13"><span class="c19">Operator</span></p></td><td class="c81" colspan="1" rowspan="1"><p class="c13"><span class="c19">Meaning</span></p></td></tr><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c3"><span class="c0">&amp;&amp;</span></p></td><td class="c81" colspan="1" rowspan="1"><p class="c3"><span class="c0">AND</span></p></td></tr><tr class="c103"><td class="c67" colspan="1" rowspan="1"><p class="c2"><span class="c0"></span></p></td><td class="c81" colspan="1" rowspan="1"><p class="c2"><span class="c0"></span></p></td></tr><tr class="c5"><td class="c67" colspan="1" rowspan="1"><p class="c3"><span class="c0">!</span></p></td><td class="c81" colspan="1" rowspan="1"><p class="c3"><span class="c0">NOT</span></p></td></tr></tbody>` }} />
           </div>
@@ -2615,7 +2616,7 @@ Anil 92` }} />
           <h3 id="h.wnmmgipse6bd" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Output</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Kumar 78` }} />
           <hr className={styles.divider} />
-          <h2 id="h.6k2uohhk273s" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">6. Ternary Operator</span>` }} />
+          id="h.6k2uohhk273s" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">6. Ternary Operator</span>` }} />
           <h3 id="h.kg8idvs4ptx1" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Syntax</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `condition ? true : false` }} />
           <hr className={styles.divider} />
@@ -2635,7 +2636,7 @@ Sita A
 Kumar C
 Anil A` }} />
           <hr className={styles.divider} />
-          <h2 id="h.serhrx1kkmgd" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">7. Exponential Operator (</span><span class="c55 c38 c19">^</span><span class="c38 c19"> or </span><span class="c55 c38 c19">**</span><span class="c27 c19">)</span>` }} />
+          id="h.serhrx1kkmgd" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">7. Exponential Operator (</span><span class="c55 c38 c19">^</span><span class="c38 c19"> or </span><span class="c55 c38 c19">**</span><span class="c27 c19">)</span>` }} />
           <hr className={styles.divider} />
           <h3 id="h.ghai5crw4w87" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example 1: Square of marks</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `awk '&#123;if(NR&gt;1) print $2, $3^2&#125;' marks.txt` }} />
@@ -2653,19 +2654,19 @@ Sita 729000
 Kumar 474552
 Anil 778688` }} />
           <hr className={styles.divider} />
-          <h2 id="h.8rdeh2k9u0l2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">8. Combined Operator Example (Real Life)</span>` }} />
+          id="h.8rdeh2k9u0l2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">8. Combined Operator Example (Real Life)</span>` }} />
           <h3 id="h.w2xoyjus7ac" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Command</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `awk '&#123;if(NR&gt;1)&#123;total+=$3; count++&#125;&#125; END&#123;print "Average:", total/count&#125;' marks.txt` }} />
           <h3 id="h.56nnrpdnzsgi" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Output</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Average: 86.25` }} />
           <hr className={styles.divider} />
-          <h2 id="h.1kjov1bu1cx9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">9. Key Points for Students</span>` }} />
+          id="h.1kjov1bu1cx9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">9. Key Points for Students</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `$3 += 5 means add 5 marks  &amp;&amp; means both must be true  ?: replaces if-else  ^ used for power  ++ increases value by 1` }} />
           <h1 id="h.yk7wdkqjn8e9" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c24 c19">DECISION MAKING STATEMENTS IN AWK</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Decision-making statements are used to make decisions based on conditions. In AWK, we mainly use:` }} />
           <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c1">if<br></span></li><li class="c10 li-bullet-0"><span class="c1">if–else<br></span></li><li class="c10 li-bullet-0"><span class="c1">if–else if–else<br></span></li><li class="c10 li-bullet-0"><span class="c0">Conditional expressions using relational &amp; logical operators<br></span></li><li class="c10 li-bullet-0"><span class="c0">Ternary operator (short decision)<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.11wx4ktu2e74" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Sample Input File (student.txt)</span>` }} />
+          id="h.11wx4ktu2e74" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Sample Input File (student.txt)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `ID Name Marks
 1 Ravi 85
 2 Sita 90
@@ -2673,7 +2674,7 @@ Anil 778688` }} />
 4 Anil 92
 5 Raju 60` }} />
           <hr className={styles.divider} />
-          <h2 id="h.pl7rnddyvgb5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. IF Statement in AWK</span>` }} />
+          id="h.pl7rnddyvgb5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. IF Statement in AWK</span>` }} />
           <h3 id="h.m32dn6bic8oj" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Syntax</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `if (condition)
 action
@@ -2701,7 +2702,7 @@ Kumar 78
 Anil 92
 Raju 60` }} />
           <hr className={styles.divider} />
-          <h2 id="h.a5ic346v9n1m" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">2. IF–ELSE Statement</span>` }} />
+          id="h.a5ic346v9n1m" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">2. IF–ELSE Statement</span>` }} />
           <h3 id="h.pm2b69p1lto7" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Syntax</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `if (condition)
 action1
@@ -2737,7 +2738,7 @@ Kumar Even
 Anil Even
 Raju Even` }} />
           <hr className={styles.divider} />
-          <h2 id="h.u4edjdkk7yjx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">3. IF – ELSE IF – ELSE Statement</span>` }} />
+          id="h.u4edjdkk7yjx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">3. IF – ELSE IF – ELSE Statement</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Used when multiple conditions are needed.` }} />
           <h3 id="h.mt4mrcvrlorh" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Syntax</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `if (condition1)
@@ -2782,7 +2783,7 @@ Kumar First Class
 Anil Distinction
 Raju First Class` }} />
           <hr className={styles.divider} />
-          <h2 id="h.xu5z6srx88mx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">4. Decision Making Using Logical Operators</span>` }} />
+          id="h.xu5z6srx88mx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">4. Decision Making Using Logical Operators</span>` }} />
           <h3 id="h.wv2hhjbqxl4n" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example 1: Marks &gt;80 AND &lt;90</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `awk '&#123;if($3&gt;80 &amp;&amp; $3&lt;90) print $2,$3&#125;' student.txt` }} />
           <h3 id="h.h7wkr915527c" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Output</span>` }} />
@@ -2800,7 +2801,7 @@ Raju 60` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Kumar Below Average
 Raju Below Average` }} />
           <hr className={styles.divider} />
-          <h2 id="h.uay1r8bw72jn" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5. Nested IF (IF inside IF)</span>` }} />
+          id="h.uay1r8bw72jn" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5. Nested IF (IF inside IF)</span>` }} />
           <h3 id="h.mk473wjv03zz" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example: Scholarship + Hostel Eligibility</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `awk '&#123;
 if($3&gt;=80)
@@ -2816,7 +2817,7 @@ print $2,"Merit"
 Sita Topper
 Anil Topper` }} />
           <hr className={styles.divider} />
-          <h2 id="h.hc8j5ex99v2s" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">6. Ternary Operator (Short Decision Making)</span>` }} />
+          id="h.hc8j5ex99v2s" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">6. Ternary Operator (Short Decision Making)</span>` }} />
           <h3 id="h.v9gxwj8y5eks" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Syntax</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `condition ? true : false` }} />
           <hr className={styles.divider} />
@@ -2840,7 +2841,7 @@ Kumar C
 Anil A
 Raju C` }} />
           <hr className={styles.divider} />
-          <h2 id="h.3dxfoph4oxfb" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">7. Decision Making in BEGIN and END Blocks</span>` }} />
+          id="h.3dxfoph4oxfb" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">7. Decision Making in BEGIN and END Blocks</span>` }} />
           <h3 id="h.aqfz7jd51r1p" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example: Check file size</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `awk 'END&#123;
 if(NR&gt;5)
@@ -2851,7 +2852,7 @@ print "Small File"
           <h3 id="h.tl1ogn44ynkj" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Output</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Large File` }} />
           <hr className={styles.divider} />
-          <h2 id="h.y4wjqnbdoq2m" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">8. Real-Time Example (Total Pass Count)</span>` }} />
+          id="h.y4wjqnbdoq2m" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">8. Real-Time Example (Total Pass Count)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `awk '&#123;
 if($3&gt;=80)
 pass++
@@ -2866,7 +2867,7 @@ print "Fail:",fail
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Pass: 3
 Fail: 2` }} />
           <hr className={styles.divider} />
-          <h2 id="h.s2mezjb92r2w" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">KEY NOTES FOR STUDENTS</span>` }} />
+          id="h.s2mezjb92r2w" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">KEY NOTES FOR STUDENTS</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `if → single condition  if–else → yes / no  else if → multiple decisions  Logical operators combine conditions  Ternary → short &amp; fast decision` }} />
           <h1 id="h.nvq870q129lo" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c24 c19">AWK LOOPS &amp; LOOP CONTROL STATEMENTS</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Loops are used when a set of statements must be executed repeatedly until a condition becomes false.
@@ -2874,7 +2875,7 @@ In AWK, we have:` }} />
           <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c12">while</span><span class="c0"> loop<br></span></li><li class="c10 li-bullet-0"><span class="c12">do–while</span><span class="c0"> loop<br></span></li><li class="c10 li-bullet-0"><span class="c12">for</span><span class="c0"> loop<br></span></li><li class="c10 li-bullet-0"><span class="c0">Loop control statements<br></span></li>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c15 c26 li-bullet-0"><span class="c1">break<br></span></li><li class="c15 c26 li-bullet-0"><span class="c1">continue<br></span></li><li class="c15 c26 li-bullet-0"><span class="c1">exit<br></span></li><li class="c15 c26 li-bullet-0"><span class="c1">next<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.f6i2aphiobyv" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Sample Input File (marks.txt)</span>` }} />
+          id="h.f6i2aphiobyv" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Sample Input File (marks.txt)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `ID Name Marks
 1 Ravi 85
 2 Sita 90
@@ -3062,7 +3063,7 @@ Fail 2` }} />
           <hr className={styles.divider} />
           <h1 id="h.yp7ci81ekdf1" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c24 c19">5. LOOP CONTROL STATEMENTS</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.csqc1puyftqr" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5.1 BREAK STATEMENT</span>` }} />
+          id="h.csqc1puyftqr" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5.1 BREAK STATEMENT</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Exits the loop immediately` }} />
           <hr className={styles.divider} />
           <h3 id="h.82rmnc3tj6ed" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example 1: Stop at 5</span>` }} />
@@ -3091,7 +3092,7 @@ print $2,$3
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Ravi 85
 Sita 90` }} />
           <hr className={styles.divider} />
-          <h2 id="h.453sl96lhv1n" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5.2 CONTINUE STATEMENT</span>` }} />
+          id="h.453sl96lhv1n" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5.2 CONTINUE STATEMENT</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Skips current iteration only` }} />
           <hr className={styles.divider} />
           <h3 id="h.frfixed3wpgb" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example 1: Skip number 5</span>` }} />
@@ -3125,7 +3126,7 @@ print $2,$3
 Sita 90
 Anil 92` }} />
           <hr className={styles.divider} />
-          <h2 id="h.9ewnojpgy9sk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5.3 NEXT STATEMENT</span>` }} />
+          id="h.9ewnojpgy9sk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5.3 NEXT STATEMENT</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Skips current record and moves to next line` }} />
           <hr className={styles.divider} />
           <h3 id="h.qkxp5mysw4rw" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example 1: Skip header</span>` }} />
@@ -3148,7 +3149,7 @@ print $2,$3
 Sita 90
 Anil 92` }} />
           <hr className={styles.divider} />
-          <h2 id="h.5x2p1ttubet4" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5.4 EXIT STATEMENT</span>` }} />
+          id="h.5x2p1ttubet4" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5.4 EXIT STATEMENT</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Stops entire AWK program` }} />
           <hr className={styles.divider} />
           <h3 id="h.8yhx7w93syz3" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Example 1: Stop after 3 lines</span>` }} />
@@ -3191,16 +3192,16 @@ Anil 92` }} />
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c80" colspan="1" rowspan="1"><p class="c13"><span class="c19">Statement</span></p></td><td class="c25" colspan="1" rowspan="1"><p class="c13"><span class="c19">Purpose</span></p></td></tr><tr class="c5"><td class="c80" colspan="1" rowspan="1"><p class="c3"><span class="c12">break</span></p></td><td class="c25" colspan="1" rowspan="1"><p class="c3"><span class="c0">Exit loop only</span></p></td></tr><tr class="c5"><td class="c80" colspan="1" rowspan="1"><p class="c3"><span class="c12">continue</span></p></td><td class="c25" colspan="1" rowspan="1"><p class="c3"><span class="c0">Skip iteration</span></p></td></tr><tr class="c5"><td class="c80" colspan="1" rowspan="1"><p class="c3"><span class="c12">next</span></p></td><td class="c25" colspan="1" rowspan="1"><p class="c3"><span class="c0">Skip record</span></p></td></tr><tr class="c5"><td class="c80" colspan="1" rowspan="1"><p class="c3"><span class="c12">exit</span></p></td><td class="c25" colspan="1" rowspan="1"><p class="c3"><span class="c0">Stop program</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.25k63kty3n8q" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">🎯 STUDENT TAKEAWAY</span>` }} />
+          id="h.25k63kty3n8q" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">🎯 STUDENT TAKEAWAY</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Use for loop mostly  Use while/do-while for conditions  Control flow using break, continue, next, exit  Combine with if conditions for real power` }} />
           <h1 id="h.5e40sbft13n1" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c24 c19">MAKEFILE – COMPLETE EXPLANATION (LECTURE STYLE)</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.anozpmorwiq7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. What is a Makefile?</span>` }} />
+          id="h.anozpmorwiq7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">1. What is a Makefile?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `A Makefile is a special file that contains instructions (rules) used by the make command to:` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">Compile programs<br></span></li><li class="c10 li-bullet-0"><span class="c0">Build executables<br></span></li><li class="c10 li-bullet-0"><span class="c0">Automate repetitive tasks<br></span></li><li class="c10 li-bullet-0"><span class="c0">Save time and avoid manual compilation errors<br></span></li>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Makefile automates the build process` }} />
           <hr className={styles.divider} />
-          <h2 id="h.wnipw5qe8i3j" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">2. Why Do We Need a Makefile?</span>` }} />
+          id="h.wnipw5qe8i3j" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">2. Why Do We Need a Makefile?</span>` }} />
           <h3 id="h.qm4z0bsrng8p" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Without Makefile</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `gcc file1.c file2.c file3.c -o myapp
 Problems:` }} />
@@ -3210,18 +3211,18 @@ Problems:` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `make
 Automatically compiles only modified files  Faster build  Industry standard  Used in Linux kernel, drivers, embedded systems, DevOps, CI/CD` }} />
           <hr className={styles.divider} />
-          <h2 id="h.sqn7ge1b9lyg" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">3. Where Makefile is Used in Industry</span>` }} />
+          id="h.sqn7ge1b9lyg" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">3. Where Makefile is Used in Industry</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c86" colspan="1" rowspan="1"><p class="c13"><span class="c19">Industry Area</span></p></td><td class="c93" colspan="1" rowspan="1"><p class="c13"><span class="c19">Usage</span></p></td></tr><tr class="c5"><td class="c86" colspan="1" rowspan="1"><p class="c3"><span class="c0">Linux Kernel</span></p></td><td class="c93" colspan="1" rowspan="1"><p class="c3"><span class="c0">Build kernel &amp; drivers</span></p></td></tr><tr class="c5"><td class="c86" colspan="1" rowspan="1"><p class="c3"><span class="c0">Embedded Systems</span></p></td><td class="c93" colspan="1" rowspan="1"><p class="c3"><span class="c0">Firmware compilation</span></p></td></tr><tr class="c5"><td class="c86" colspan="1" rowspan="1"><p class="c3"><span class="c0">DevOps</span></p></td><td class="c93" colspan="1" rowspan="1"><p class="c3"><span class="c0">Automation pipelines</span></p></td></tr><tr class="c5"><td class="c86" colspan="1" rowspan="1"><p class="c3"><span class="c0">Software Companies</span></p></td><td class="c93" colspan="1" rowspan="1"><p class="c3"><span class="c0">Large C/C++ projects</span></p></td></tr><tr class="c5"><td class="c86" colspan="1" rowspan="1"><p class="c3"><span class="c0">Open Source</span></p></td><td class="c93" colspan="1" rowspan="1"><p class="c3"><span class="c0">Standard build system</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.lhfc0d87mw" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">4. What is </span><span class="c55 c38 c19">make</span><span class="c27 c19"> Command?</span>` }} />
+          id="h.lhfc0d87mw" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c38 c19">4. What is </span><span class="c55 c38 c19">make</span><span class="c27 c19"> Command?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `make reads Makefile and executes commands only when required
 make
 Automatically checks:` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c0">File timestamps<br></span></li><li class="c10 li-bullet-0"><span class="c0">Dependencies<br></span></li><li class="c10 li-bullet-0"><span class="c0">Rebuilds only changed parts<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.egfrjdje0jkt" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5. Basic Structure of a Makefile</span>` }} />
+          id="h.egfrjdje0jkt" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">5. Basic Structure of a Makefile</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `target: dependencies
 &lt;TAB&gt; command
 ⚠ TAB is mandatory, not spaces` }} />
@@ -3230,7 +3231,7 @@ Automatically checks:` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `hello: hello.c
 gcc hello.c -o hello` }} />
           <hr className={styles.divider} />
-          <h2 id="h.958l3ebv7hbm" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">6. First Simple Example (Beginner)</span>` }} />
+          id="h.958l3ebv7hbm" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">6. First Simple Example (Beginner)</span>` }} />
           <h3 id="h.lr6ixll2nect" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">hello.c</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `#include &lt;stdio.h&gt;
 int main()
@@ -3251,10 +3252,10 @@ gcc hello.c -o hello` }} />
           <h3 id="h.1yykf3wvfrmw" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Program Output</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Hello Makefile` }} />
           <hr className={styles.divider} />
-          <h2 id="h.eg9robi44j08" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">7. How Makefile Works (Internally)</span>` }} />
+          id="h.eg9robi44j08" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">7. How Makefile Works (Internally)</span>` }} />
           <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c10 li-bullet-0"><span class="c12">make</span><span> looks for file named </span><span class="c22 c19">Makefile<br></span></li><li class="c10 li-bullet-0"><span class="c0">Reads the first target<br></span></li><li class="c10 li-bullet-0"><span class="c0">Checks dependency timestamps<br></span></li><li class="c10 li-bullet-0"><span class="c0">If source is modified → recompiles<br></span></li><li class="c10 li-bullet-0"><span class="c0">Else → does nothing<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.ey87t4v0ypiw" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">8. Multiple Files Example (Real Industry Style)</span>` }} />
+          id="h.ey87t4v0ypiw" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">8. Multiple Files Example (Real Industry Style)</span>` }} />
           <h3 id="h.vxeph7a9x3yg" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17">Project Structure</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `project/
 ├── main.c
@@ -3287,7 +3288,7 @@ return a + b;
 return a - b;
 &#125;` }} />
           <hr className={styles.divider} />
-          <h2 id="h.9aibibqm3zuk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Makefile (Without Variables)</span>` }} />
+          id="h.9aibibqm3zuk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">Makefile (Without Variables)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `myapp: main.o add.o sub.o
 gcc main.o add.o sub.o -o myapp
 main.o: main.c
@@ -3312,7 +3313,7 @@ gcc main.o add.o sub.o -o myapp` }} />
 gcc main.o add.o sub.o -o myapp
 Only modified file is compiled  Time-saving` }} />
           <hr className={styles.divider} />
-          <h2 id="h.bpb151ujq8ca" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">9. Using Variables (Professional Way)</span>` }} />
+          id="h.bpb151ujq8ca" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">9. Using Variables (Professional Way)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `CC = gcc
 CFLAGS = -Wall -g
 myapp: main.o add.o sub.o
@@ -3324,7 +3325,7 @@ $(CC) $(CFLAGS) -c add.c
 sub.o: sub.c
 $(CC) $(CFLAGS) -c sub.c` }} />
           <hr className={styles.divider} />
-          <h2 id="h.jaljv6jqfi0l" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">10. Automatic Variables (Important for Interviews)</span>` }} />
+          id="h.jaljv6jqfi0l" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">10. Automatic Variables (Important for Interviews)</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c5"><td class="c20" colspan="1" rowspan="1"><p class="c13"><span class="c19">Variable</span></p></td><td class="c37" colspan="1" rowspan="1"><p class="c13"><span class="c19">Meaning</span></p></td></tr><tr class="c5"><td class="c20" colspan="1" rowspan="1"><p class="c3"><span class="c12">$@</span></p></td><td class="c37" colspan="1" rowspan="1"><p class="c3"><span class="c0">Target name</span></p></td></tr><tr class="c5"><td class="c20" colspan="1" rowspan="1"><p class="c3"><span class="c12">$&lt;</span></p></td><td class="c37" colspan="1" rowspan="1"><p class="c3"><span class="c0">First dependency</span></p></td></tr><tr class="c5"><td class="c20" colspan="1" rowspan="1"><p class="c3"><span class="c12">$^</span></p></td><td class="c37" colspan="1" rowspan="1"><p class="c3"><span class="c0">All dependencies</span></p></td></tr></tbody>` }} />
           </div>
@@ -3337,6 +3338,7 @@ $(CC) $^ -o $@
 %.o: %.c
 $(CC) $(CFLAGS) -c $&lt;` }} />
           <hr className={styles.divider} />
+          <AdUnit slotId="slot_module4content_mid2" />
           <h2 id="h.ueiiuz8gwlzw" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">11. PHONY Targets (Industry Standard)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Targets that are not files` }} />
           <hr className={styles.divider} />
@@ -3349,7 +3351,7 @@ rm -f *.o myapp` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `make clean
 Removes object files  Very common in industry` }} />
           <hr className={styles.divider} />
-          <h2 id="h.sdu1izd0e0f2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">12. Complete Industry-Level Makefile</span>` }} />
+          id="h.sdu1izd0e0f2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">12. Complete Industry-Level Makefile</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `CC = gcc
 CFLAGS = -Wall -g
 TARGET = myapp
@@ -3361,29 +3363,29 @@ $(CC) $(CFLAGS) -c $&lt;
 clean:
 rm -f $(OBJ) $(TARGET)` }} />
           <hr className={styles.divider} />
-          <h2 id="h.z107gc7ddrjz" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">13. Real Industry Workflow</span>` }} />
+          id="h.z107gc7ddrjz" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">13. Real Industry Workflow</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `1️⃣ Developer modifies code 2️⃣ Runs make 3️⃣ Only changed files compile 4️⃣ Faster CI/CD pipeline 5️⃣ Used in Git, Jenkins, Docker` }} />
           <hr className={styles.divider} />
-          <h2 id="h.vdzfgatdpp9r" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">14. Common Mistakes (Students Should Know)</span>` }} />
+          id="h.vdzfgatdpp9r" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">14. Common Mistakes (Students Should Know)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Using spaces instead of TAB  Forgetting dependencies  Not using variables  Not adding clean target` }} />
           <hr className={styles.divider} />
-          <h2 id="h.j5jrzei1ta7m" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">15. Makefile Interview Questions</span>` }} />
+          id="h.j5jrzei1ta7m" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">15. Makefile Interview Questions</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `What is Makefile?  Difference between make &amp; gcc?  What is $@, $&lt;, $^?  What is .PHONY?  How make improves build time?` }} />
           <hr className={styles.divider} />
-          <h2 id="h.nou6y48ers5k" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">17. Student Summary</span>` }} />
+          id="h.nou6y48ers5k" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c27 c19">17. Student Summary</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Makefile automates compilation  Used in real companies  Saves time &amp; avoids errors  Essential for Linux programmers  Must-know for interviews` }} />
           <h1 id="h.oouxwmttz0p8" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">INTRODUCTION TO TCL (Tool Command Language)</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.jhu2pnsvuroc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">1. What is TCL?</span>` }} />
+          id="h.jhu2pnsvuroc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">1. What is TCL?</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c4">TCL</span><span> stands for </span><span class="c18 c4">Tool Command Language</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> TCL is:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 c16 li-bullet-0"><span>A </span><span class="c18 c4">high-level scripting language<br></span></li><li class="c0 c16 li-bullet-0"><span class="c1">Interpreted (not compiled)<br></span></li><li class="c0 c16 li-bullet-0"><span>Very </span><span class="c18 c4">simple syntax<br></span></li><li class="c0 c16 li-bullet-0"><span>Designed for </span><span class="c18 c4">command execution and automation<br></span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> Created by </span><span class="c18 c4">John Ousterhout</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.scjb86hdx8l1" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">2. Why TCL is Popular (Key Features)</span>` }} />
+          id="h.scjb86hdx8l1" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">2. Why TCL is Popular (Key Features)</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> </span><span>✔ Easy to learn<br> ✔ Powerful string handling<br> ✔ Strong scripting capability<br> ✔ Platform independent<br> ✔ Widely used in </span><span class="c18 c4">EDA tools</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.g9s1slybclx1" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">3. Real-Time Applications of TCL</span>` }} />
+          id="h.g9s1slybclx1" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">3. Real-Time Applications of TCL</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>TCL is heavily used in </span><span class="c4">industry</span><span>, especially where </span><span class="c4">automation</span><span class="c1"> is required.</span>` }} />
           <h3 id="h.khhn0gbsgbi4" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Major Real-Time Uses</span>` }} />
           <h3 id="h.qm1pyhynu4gq" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">1️⃣ EDA / VLSI Industry</span>` }} />
@@ -3406,7 +3408,7 @@ rm -f $(OBJ) $(TARGET)` }} />
 → Tool executes commands
 → Reports generated automatically` }} />
           <hr className={styles.divider} />
-          <h2 id="h.k7363xqjrdaq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">4. Basic Structure of a TCL Script</span>` }} />
+          id="h.k7363xqjrdaq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">4. Basic Structure of a TCL Script</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `command argument1 argument2` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">✔ No semicolon required<br> ✔ One command per line</span>` }} />
           <hr className={styles.divider} />
@@ -3415,11 +3417,11 @@ rm -f $(OBJ) $(TARGET)` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Output:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Hello TCL` }} />
           <hr className={styles.divider} />
-          <h2 id="h.u35i33nbp3x8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">5. TCL Variables</span>` }} />
+          id="h.u35i33nbp3x8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">5. TCL Variables</span>` }} />
           <h3 id="h.z7jsd8rq9bfo" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Important Rule</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> </span><span class="c4">TCL variables are NOT typed<br></span><span>  Everything is a </span><span class="c18 c4">string</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.sz2u4afbb0w" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">6. How to Set a Variable (set command)</span>` }} />
+          id="h.sz2u4afbb0w" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">6. How to Set a Variable (set command)</span>` }} />
           <h3 id="h.3d95dznqvlkv" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Syntax</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `set variable_name value` }} />
           <hr className={styles.divider} />
@@ -3445,12 +3447,12 @@ puts $x` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Output:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `20` }} />
           <hr className={styles.divider} />
-          <h2 id="h.ejgt21bmzq77" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">7. Variable Substitution in TCL</span>` }} />
+          id="h.ejgt21bmzq77" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">7. Variable Substitution in TCL</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>TCL performs </span><span class="c18 c4">substitution BEFORE execution</span>` }} />
           <h3 id="h.a7i4yri2cqe5" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Types of Substitution</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `1️⃣ Variable substitution ($) 2️⃣ Command substitution ([]) 3️⃣ Backslash substitution (\)` }} />
           <hr className={styles.divider} />
-          <h2 id="h.oca9bpjw5lev" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">8. Variable Substitution (</span><span class="c10 c4">$</span><span class="c6 c4">) – Deep Explanation</span>` }} />
+          id="h.oca9bpjw5lev" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">8. Variable Substitution (</span><span class="c10 c4">$</span><span class="c6 c4">) – Deep Explanation</span>` }} />
           <h3 id="h.ubu2flnw7iq" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Example 1</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `set a 5
 set b 10
@@ -3472,7 +3474,7 @@ puts "My name is $name"` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `My name is $name` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> Single quotes do </span><span class="c4">NOT</span><span class="c1"> substitute variables</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.r8wwbkdmftme" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">9. Command Substitution (</span><span class="c10 c4">[ ]</span><span class="c6 c4">) – VERY IMPORTANT</span>` }} />
+          id="h.r8wwbkdmftme" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">9. Command Substitution (</span><span class="c10 c4">[ ]</span><span class="c6 c4">) – VERY IMPORTANT</span>` }} />
           <h3 id="h.ioamepou5w7q" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">What is Command Substitution?</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Execute a command first<br>  Use its output as value</span>` }} />
           <hr className={styles.divider} />
@@ -3498,7 +3500,7 @@ puts $y` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Output:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `20` }} />
           <hr className={styles.divider} />
-          <h2 id="h.q91ufg7l1qh5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">10. expr Command (Arithmetic in TCL)</span>` }} />
+          id="h.q91ufg7l1qh5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">10. expr Command (Arithmetic in TCL)</span>` }} />
           <h3 id="h.rttn6aqyv2gt" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Syntax</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `expr expression` }} />
           <hr className={styles.divider} />
@@ -3521,7 +3523,7 @@ puts $result` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Output:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `5` }} />
           <hr className={styles.divider} />
-          <h2 id="h.l3uk4rszedb2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">11. Difference Between </span><span class="c10 c4">{}</span><span class="c4 c29"> and </span><span class="c10 c4">""</span><span class="c6 c4"> in TCL</span>` }} />
+          id="h.l3uk4rszedb2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">11. Difference Between </span><span class="c10 c4">{}</span><span class="c4 c29"> and </span><span class="c10 c4">""</span><span class="c6 c4"> in TCL</span>` }} />
           <h3 id="h.tb80nelba6at" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c4 c36">Double Quotes </span><span class="c19 c4 c23">" "</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">✔ Variable substitution<br> ✔ Command substitution</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `set a 10
@@ -3538,7 +3540,7 @@ puts "Value is $a"` }} />
           <h3 id="h.rwluj9yuwj88" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Best Practice</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 c16 li-bullet-0"><span>Use </span><span class="c34">{}</span><span class="c1"> when no substitution needed<br></span></li><li class="c0 c16 li-bullet-0"><span>Use </span><span class="c34">""</span><span class="c1"> when substitution required<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.v09h6mp2ipso" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">12. Backslash Substitution (</span><span class="c10 c4">\\</span><span class="c6 c4">)</span>` }} />
+          id="h.v09h6mp2ipso" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">12. Backslash Substitution (</span><span class="c10 c4">\\</span><span class="c6 c4">)</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Used for:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 c16 li-bullet-0"><span class="c1">New line<br></span></li><li class="c0 c16 li-bullet-0"><span class="c1">Tab<br></span></li><li class="c0 c16 li-bullet-0"><span class="c1">Escape characters<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -3553,7 +3555,7 @@ TCL` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Output:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Name:   Rahul` }} />
           <hr className={styles.divider} />
-          <h2 id="h.4bolwievgg6n" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">13. Real-Time Example (Automation Script)</span>` }} />
+          id="h.4bolwievgg6n" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">13. Real-Time Example (Automation Script)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `set file_count [exec ls | wc -l]
 puts "Total files: $file_count"` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Output:</span>` }} />
@@ -3561,55 +3563,55 @@ puts "Total files: $file_count"` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Used in:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 c16 li-bullet-0"><span class="c1">Build systems<br></span></li><li class="c0 c16 li-bullet-0"><span class="c1">Verification flows<br></span></li><li class="c0 c16 li-bullet-0"><span class="c1">Reports generation<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.2cf43sihbnrc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">14. Common Mistakes Students Make</span>` }} />
+          id="h.2cf43sihbnrc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">14. Common Mistakes Students Make</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Forgetting $  Not using [ ] for expr  Using single quotes  Mixing &#123;&#125; and ""` }} />
           <hr className={styles.divider} />
-          <h2 id="h.qi15h7dr1ink" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">15. TCL Summary (Exam + Industry)</span>` }} />
+          id="h.qi15h7dr1ink" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">15. TCL Summary (Exam + Industry)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `✔ Everything is a command ✔ Variables are strings ✔ $ → variable substitution ✔ [ ] → command substitution ✔ &#123;&#125; → no substitution ✔ expr → arithmetic` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">TCL COMMANDS – DETAILED EXPLANATION</span>` }} />
-          <h2 id="h.nru52btdsvvx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Commands Covered</span>` }} />
+          id="h.nru52btdsvvx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Commands Covered</span>` }} />
           <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 c16 li-bullet-0"><span class="c2">puts<br></span></li><li class="c0 c16 li-bullet-0"><span class="c2">gets<br></span></li><li class="c0 c16 li-bullet-0"><span class="c2">split<br></span></li><li class="c0 c16 li-bullet-0"><span class="c2">join<br></span></li><li class="c0 c16 li-bullet-0"><span class="c2">expr<br></span></li>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 c45 li-bullet-0"><span class="c1">Arithmetic operators<br></span></li><li class="c0 c45 li-bullet-0"><span class="c1">Relational operators<br></span></li><li class="c0 c45 li-bullet-0"><span class="c1">Logical operators<br></span></li>` }} />
           <hr className={styles.divider} />
           <h1 id="h.ic7g814n8x2f" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">1. puts Command</span>` }} />
-          <h2 id="h.gai1oh94aiwo" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">What is </span><span class="c10 c4">puts</span><span class="c6 c4">?</span>` }} />
+          id="h.gai1oh94aiwo" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">What is </span><span class="c10 c4">puts</span><span class="c6 c4">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `puts is used to print output on the screen or write output to a file.` }} />
           <hr className={styles.divider} />
-          <h2 id="h.b3hqy2p8py8r" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Syntax</span>` }} />
+          id="h.b3hqy2p8py8r" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Syntax</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `puts "message"
 puts variable` }} />
           <hr className={styles.divider} />
-          <h2 id="h.plwd5fhtlup9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 1: Simple Output</span>` }} />
+          id="h.plwd5fhtlup9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 1: Simple Output</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `puts "Welcome to TCL"` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Output:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Welcome to TCL` }} />
           <hr className={styles.divider} />
-          <h2 id="h.z892j8swt1u5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 2: Printing Variable</span>` }} />
+          id="h.z892j8swt1u5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 2: Printing Variable</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `set name Linux
 puts $name` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Output:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Linux` }} />
           <hr className={styles.divider} />
-          <h2 id="h.95b1z15x97rw" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 3: With Variable Substitution</span>` }} />
+          id="h.95b1z15x97rw" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 3: With Variable Substitution</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `set x 10
 puts "Value of x is $x"` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Output:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Value of x is 10` }} />
           <hr className={styles.divider} />
-          <h2 id="h.v22detwuchzb" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 4: Without New Line</span>` }} />
+          id="h.v22detwuchzb" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 4: Without New Line</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `puts -nonewline "Enter name: "` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Output:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Enter name:` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> Used in </span><span class="c18 c4">user input programs</span>` }} />
           <hr className={styles.divider} />
           <h1 id="h.45mnengg5o61" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">2. gets Command</span>` }} />
-          <h2 id="h.7940i65nfrzq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">What is </span><span class="c10 c4">gets</span><span class="c6 c4">?</span>` }} />
+          id="h.7940i65nfrzq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">What is </span><span class="c10 c4">gets</span><span class="c6 c4">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `gets is used to take input from the user or read input from a file.` }} />
           <hr className={styles.divider} />
-          <h2 id="h.tyccuy2h6dpt" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Syntax</span>` }} />
+          id="h.tyccuy2h6dpt" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Syntax</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `gets stdin variable` }} />
           <hr className={styles.divider} />
-          <h2 id="h.k6zgqupo55wo" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 1: Basic Input</span>` }} />
+          id="h.k6zgqupo55wo" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 1: Basic Input</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `puts -nonewline "Enter your name: "
 gets stdin name
 puts "Hello $name"` }} />
@@ -3618,7 +3620,7 @@ puts "Hello $name"` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Output:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Hello Rahul` }} />
           <hr className={styles.divider} />
-          <h2 id="h.8lkn9gutykw5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 2: Input and Arithmetic</span>` }} />
+          id="h.8lkn9gutykw5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 2: Input and Arithmetic</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `puts "Enter first number:"
 gets stdin a
 puts "Enter second number:"
@@ -3630,20 +3632,20 @@ puts "Sum = [expr $a + $b]"` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Output:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Sum = 8` }} />
           <hr className={styles.divider} />
-          <h2 id="h.h03zb8wxpc9v" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 3: Input Validation Style</span>` }} />
+          id="h.h03zb8wxpc9v" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 3: Input Validation Style</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `puts "Enter age:"
 gets stdin age
 puts "Your age is $age"` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> Used in </span><span class="c18 c4">interactive scripts</span>` }} />
           <hr className={styles.divider} />
           <h1 id="h.vbhr53ugvb2j" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">3. split Command</span>` }} />
-          <h2 id="h.3d1nn7j1vcrc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">What is </span><span class="c4 c10">split</span><span class="c6 c4">?</span>` }} />
+          id="h.3d1nn7j1vcrc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">What is </span><span class="c4 c10">split</span><span class="c6 c4">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `split is used to convert a string into a list based on a delimiter.` }} />
           <hr className={styles.divider} />
-          <h2 id="h.vjotcz3x4rqj" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Syntax</span>` }} />
+          id="h.vjotcz3x4rqj" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Syntax</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `split string delimiter` }} />
           <hr className={styles.divider} />
-          <h2 id="h.dxyjbewp6w0g" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 1: Split by Space</span>` }} />
+          id="h.dxyjbewp6w0g" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 1: Split by Space</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `set str "Linux TCL Shell"
 set result [split $str " "]
 puts $result` }} />
@@ -3652,14 +3654,14 @@ puts $result` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Internally stored as:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `&#123;Linux&#125; &#123;TCL&#125; &#123;Shell&#125;` }} />
           <hr className={styles.divider} />
-          <h2 id="h.f6g6czs835n6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 2: Split by Comma</span>` }} />
+          id="h.f6g6czs835n6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 2: Split by Comma</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `set data "10,20,30"
 set nums [split $data ","]
 puts $nums` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Output:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `10 20 30` }} />
           <hr className={styles.divider} />
-          <h2 id="h.u003an3w5vkl" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 3: Access Split Values</span>` }} />
+          id="h.u003an3w5vkl" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 3: Access Split Values</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `set str "A:B:C"
 set list [split $str ":"]
 puts [lindex $list 0]
@@ -3671,25 +3673,25 @@ B
 C` }} />
           <hr className={styles.divider} />
           <h1 id="h.770romzwpbn" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">4. join Command</span>` }} />
-          <h2 id="h.4u2eo7w3fro9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">What is </span><span class="c10 c4">join</span><span class="c6 c4">?</span>` }} />
+          id="h.4u2eo7w3fro9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">What is </span><span class="c10 c4">join</span><span class="c6 c4">?</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `join is used to convert a list into a string using a delimiter.` }} />
           <hr className={styles.divider} />
-          <h2 id="h.nzyfug4iy6ia" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Syntax</span>` }} />
+          id="h.nzyfug4iy6ia" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Syntax</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `join list delimiter` }} />
           <hr className={styles.divider} />
-          <h2 id="h.v1djluxh7oyg" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 1: Join with Space</span>` }} />
+          id="h.v1djluxh7oyg" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 1: Join with Space</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `set list &#123;Linux TCL Script&#125;
 puts [join $list " "]` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Output:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Linux TCL Script` }} />
           <hr className={styles.divider} />
-          <h2 id="h.t068tqyrxf44" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 2: Join with Comma</span>` }} />
+          id="h.t068tqyrxf44" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 2: Join with Comma</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `set nums &#123;10 20 30&#125;
 puts [join $nums ","]` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Output:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `10,20,30` }} />
           <hr className={styles.divider} />
-          <h2 id="h.djkeqj2c9vo4" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 3: File Path Example</span>` }} />
+          id="h.djkeqj2c9vo4" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 3: File Path Example</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `set path &#123;/home user docs&#125;
 puts [join $path "/"]` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Output:</span>` }} />
@@ -3699,7 +3701,7 @@ puts [join $path "/"]` }} />
           <h1 id="h.qrajc0qofbbd" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">5. expr Command (MOST IMPORTANT)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `expr is used to evaluate expressions.` }} />
           <hr className={styles.divider} />
-          <h2 id="h.s3ll3v5ndt8b" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Syntax</span>` }} />
+          id="h.s3ll3v5ndt8b" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Syntax</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `expr expression` }} />
           <hr className={styles.divider} />
           <h1 id="h.jpl2gt2kwcdg" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">5.1 Arithmetic Operators</span>` }} />
@@ -3788,7 +3790,7 @@ puts "FAIL"
           <h1 id="h.swxbsnv7fquj" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">TCL MATH FUNCTIONS – COMPLETE &amp; DEEP EXPLANATION</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `In TCL, mathematical functions are mainly used inside the expr command.` }} />
           <hr className={styles.divider} />
-          <h2 id="h.5xy0971nzinc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">General Rule</span>` }} />
+          id="h.5xy0971nzinc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">General Rule</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `All math functions are written inside expr` }} />
           <h3 id="h.oury9wzdfkbl" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Syntax</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `expr function(value)` }} />
@@ -3797,7 +3799,7 @@ puts "FAIL"
 Using &#123; &#125; is recommended (safe &amp; faster)` }} />
           <hr className={styles.divider} />
           <h1 id="h.irtcezr6d17g" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">1. abs() – Absolute Value</span>` }} />
-          <h2 id="h.deqp6dj74hqh" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is abs()?</span>` }} />
+          id="h.deqp6dj74hqh" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is abs()?</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Returns the </span><span class="c4">positive value</span><span class="c1"> of a number (removes sign).</span>` }} />
           <hr className={styles.divider} />
           <h3 id="h.f6nfx2hpkznd" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Example 1</span>` }} />
@@ -3818,7 +3820,7 @@ puts "Final amount = [expr &#123;abs($balance)&#125;]"` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> </span><span class="c18 c4">Used in banking &amp; difference calculations</span>` }} />
           <hr className={styles.divider} />
           <h1 id="h.cqauwnljri7g" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">2. ceil() – Ceiling Value</span>` }} />
-          <h2 id="h.e7c9rrf28j80" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is ceil()?</span>` }} />
+          id="h.e7c9rrf28j80" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is ceil()?</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Rounds </span><span class="c4">UP</span><span> to the </span><span class="c4">nearest integer</span><span class="c1">.</span>` }} />
           <hr className={styles.divider} />
           <h3 id="h.xp1b1loxwr1w" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Example 1</span>` }} />
@@ -3839,7 +3841,7 @@ puts "Total pages = [expr &#123;ceil($pages)&#125;]"` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> </span><span class="c18 c4">Used in billing &amp; resource allocation</span>` }} />
           <hr className={styles.divider} />
           <h1 id="h.izolx9xp5h5x" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">3. floor() – Floor Value</span>` }} />
-          <h2 id="h.7p8skcc0b3v3" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is floor()?</span>` }} />
+          id="h.7p8skcc0b3v3" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is floor()?</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Rounds </span><span class="c4">DOWN</span><span class="c1"> to the nearest integer.</span>` }} />
           <hr className={styles.divider} />
           <h3 id="h.ewp5gb8fegny" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Example 1</span>` }} />
@@ -3859,7 +3861,7 @@ puts "Rounded price = [expr &#123;floor($price)&#125;]"` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `99` }} />
           <hr className={styles.divider} />
           <h1 id="h.aufxt8iwv4rw" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">4. double() – Convert to Floating Point</span>` }} />
-          <h2 id="h.prx6lqsxw7qz" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is double()?</span>` }} />
+          id="h.prx6lqsxw7qz" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is double()?</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Converts a number into </span><span class="c4">floating-point (decimal)</span><span class="c1">.</span>` }} />
           <hr className={styles.divider} />
           <h3 id="h.s5j14iv8pgyp" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Example 1</span>` }} />
@@ -3881,7 +3883,7 @@ puts [expr &#123;double($x)/3&#125;]` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">⚠️ Integer division</span>` }} />
           <hr className={styles.divider} />
           <h1 id="h.9evozz33eb16" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">5. int() – Convert to Integer</span>` }} />
-          <h2 id="h.7zchbxz4q4d5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is int()?</span>` }} />
+          id="h.7zchbxz4q4d5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is int()?</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Removes the </span><span class="c4">decimal part</span><span class="c1"> and keeps integer.</span>` }} />
           <hr className={styles.divider} />
           <h3 id="h.c7mj42tr1ay3" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Example 1</span>` }} />
@@ -3901,7 +3903,7 @@ puts "Final marks = [expr &#123;int($marks)&#125;]"` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Final marks = 89` }} />
           <hr className={styles.divider} />
           <h1 id="h.b66n20rznw07" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">6. min() – Minimum Value</span>` }} />
-          <h2 id="h.wpsjhfbr0rlb" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is min()?</span>` }} />
+          id="h.wpsjhfbr0rlb" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is min()?</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Returns the </span><span class="c4">smallest value</span><span class="c1">.</span>` }} />
           <hr className={styles.divider} />
           <h3 id="h.rlbmawhhn7lh" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Example 1</span>` }} />
@@ -3922,7 +3924,7 @@ puts "Lowest value = [expr &#123;min($a,$b)&#125;]"` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Lowest value = 9` }} />
           <hr className={styles.divider} />
           <h1 id="h.opqbe7np0yn1" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">7. max() – Maximum Value</span>` }} />
-          <h2 id="h.nz6nhht3p3b6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is max()?</span>` }} />
+          id="h.nz6nhht3p3b6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is max()?</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Returns the </span><span class="c4">largest value</span><span class="c1">.</span>` }} />
           <hr className={styles.divider} />
           <h3 id="h.4ath2q6eeiig" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Example 1</span>` }} />
@@ -3943,7 +3945,7 @@ puts "Top score = [expr &#123;max($score1,$score2)&#125;]"` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Top score = 92` }} />
           <hr className={styles.divider} />
           <h1 id="h.9ffgg3c059ym" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">8. pow() – Power Function</span>` }} />
-          <h2 id="h.goskosjwwody" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is pow()?</span>` }} />
+          id="h.goskosjwwody" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is pow()?</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Calculates </span><span class="c4">base raised to power</span><span class="c1">.</span>` }} />
           <hr className={styles.divider} />
           <h3 id="h.trk1rkmcibsc" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Example 1</span>` }} />
@@ -3985,7 +3987,7 @@ Square    = 21.16` }} />
           <hr className={styles.divider} />
           <h1 id="h.gj9lb09yz6gr" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">TCL LISTS – COMPLETE &amp; IN-DEPTH EXPLANATION</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.p7yt048xhmwc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">1. What is a List in TCL?</span>` }} />
+          id="h.p7yt048xhmwc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">1. What is a List in TCL?</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>A </span><span class="c4">list</span><span> is a collection of elements stored in </span><span class="c4">order</span><span class="c1">.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Elements can be:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 c16 li-bullet-0"><span class="c1">Numbers<br></span></li><li class="c0 c16 li-bullet-0"><span class="c1">Strings<br></span></li><li class="c0 c16 li-bullet-0"><span class="c1">Variables<br></span></li><li class="c0 c16 li-bullet-0"><span class="c1">Even other lists<br></span></li>` }} />
@@ -4005,7 +4007,7 @@ puts $names` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Ravi Kumar Sita Mohan` }} />
           <hr className={styles.divider} />
           <h1 id="h.ogugzbchcs9c" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">2. llength – Length of List</span>` }} />
-          <h2 id="h.gwce2p7yzfrh" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is llength?</span>` }} />
+          id="h.gwce2p7yzfrh" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is llength?</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Returns the </span><span class="c4">number of elements</span><span class="c1"> in a list.</span>` }} />
           <hr className={styles.divider} />
           <h3 id="h.lki77ud3q6i2" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Syntax</span>` }} />
@@ -4030,7 +4032,7 @@ puts [llength $list2]` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `2` }} />
           <hr className={styles.divider} />
           <h1 id="h.3fa3fkwy0oc2" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">3. lindex – Access Element by Index</span>` }} />
-          <h2 id="h.m9lu2swc3xo8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is lindex?</span>` }} />
+          id="h.m9lu2swc3xo8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is lindex?</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Returns the </span><span class="c4">element at a specific index</span><span class="c1">.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> Index starts from </span><span class="c18 c4">0</span>` }} />
           <hr className={styles.divider} />
@@ -4060,7 +4062,7 @@ puts [lindex $data 1]` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `30` }} />
           <hr className={styles.divider} />
           <h1 id="h.5azomovi077w" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">4. lappend – Add Element to List</span>` }} />
-          <h2 id="h.nejvlotaaal4" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is lappend?</span>` }} />
+          id="h.nejvlotaaal4" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is lappend?</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Adds elements </span><span class="c4">at the end</span><span class="c1"> of a list.</span>` }} />
           <hr className={styles.divider} />
           <h3 id="h.hdm2tzm39bk0" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Syntax</span>` }} />
@@ -4087,7 +4089,7 @@ puts $students` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Ravi Sita Mohan` }} />
           <hr className={styles.divider} />
           <h1 id="h.j4xjrdxshua4" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">5. lset – Modify List Element</span>` }} />
-          <h2 id="h.7q16e48p9dvb" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is lset?</span>` }} />
+          id="h.7q16e48p9dvb" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is lset?</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Replaces an element at a given index.</span>` }} />
           <hr className={styles.divider} />
           <h3 id="h.aosrdh38xcdl" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Syntax</span>` }} />
@@ -4115,7 +4117,7 @@ puts $matrix` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `&#123;1 2&#125; &#123;3 99&#125;` }} />
           <hr className={styles.divider} />
           <h1 id="h.nmpl2uifecle" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">6. lsort – Sort a List</span>` }} />
-          <h2 id="h.en06mu7ag6kx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is lsort?</span>` }} />
+          id="h.en06mu7ag6kx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is lsort?</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Sorts elements in </span><span class="c4">ascending order</span><span class="c1"> (default).</span>` }} />
           <hr className={styles.divider} />
           <h3 id="h.qvk6z1j61o8n" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Syntax</span>` }} />
@@ -4145,7 +4147,7 @@ puts [lsort -integer $values]` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `2 10 30` }} />
           <hr className={styles.divider} />
           <h1 id="h.6rgyzkblfvs4" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">7. lsearch – Search Element in List</span>` }} />
-          <h2 id="h.3zb3qm8r7z7c" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is lsearch?</span>` }} />
+          id="h.3zb3qm8r7z7c" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">What is lsearch?</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Returns the </span><span class="c4">index of an element</span><span class="c1">.</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Returns -1 if not found` }} />
           <hr className={styles.divider} />
@@ -4195,26 +4197,26 @@ Sorted list: Anil Mohan Ravi Sita` }} />
           <hr className={styles.divider} />
           <h1 id="h.h48m1e8jyyv6" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">TCL LOOPS – COMPLETE &amp; IN-DEPTH EXPLANATION</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.99rpp1s6ix5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">1. What is a Loop?</span>` }} />
+          id="h.99rpp1s6ix5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">1. What is a Loop?</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>A </span><span class="c4">loop</span><span> is used to </span><span class="c4">repeat a block of code</span><span> multiple times </span><span class="c4">until a condition is met</span><span class="c1">.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Why loops?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 c16 li-bullet-0"><span class="c1">Avoid writing same code again and again<br></span></li><li class="c0 c16 li-bullet-0"><span class="c1">Process lists, files, numbers<br></span></li><li class="c0 c16 li-bullet-0"><span class="c1">Automate real-time tasks (industry scripts)<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.ihkmgfl4oamg" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Types of Loops in TCL</span>` }} />
+          id="h.ihkmgfl4oamg" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Types of Loops in TCL</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c31"><td class="c7" colspan="1" rowspan="1"><p class="c24"><span class="c4">Loop</span></p></td><td class="c40" colspan="1" rowspan="1"><p class="c24"><span class="c4">Used for</span></p></td></tr><tr class="c31"><td class="c7" colspan="1" rowspan="1"><p class="c0"><span class="c34">for</span></p></td><td class="c40" colspan="1" rowspan="1"><p class="c0"><span class="c1">Known number of iterations</span></p></td></tr><tr class="c31"><td class="c7" colspan="1" rowspan="1"><p class="c0"><span class="c34">while</span></p></td><td class="c40" colspan="1" rowspan="1"><p class="c0"><span class="c1">Loop based on condition</span></p></td></tr><tr class="c31"><td class="c7" colspan="1" rowspan="1"><p class="c0"><span class="c34">foreach</span></p></td><td class="c40" colspan="1" rowspan="1"><p class="c0"><span class="c1">Loop over list elements</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
           <h1 id="h.bcjxy5pi9y6s" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">2. FOR LOOP</span>` }} />
-          <h2 id="h.2xyyw2gvlk3c" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Syntax</span>` }} />
+          id="h.2xyyw2gvlk3c" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Syntax</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `for &#123;initialization&#125; &#123;condition&#125; &#123;increment&#125; &#123;
 statements
 &#125;` }} />
           <hr className={styles.divider} />
-          <h2 id="h.225rxvv9rtmj" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">How for loop works</span>` }} />
+          id="h.225rxvv9rtmj" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">How for loop works</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">1️⃣ Initialization runs once<br> 2️⃣ Condition checked<br> 3️⃣ Body executes<br> 4️⃣ Increment runs<br> 5️⃣ Repeat until condition fails</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.4hgziegvag6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 1: Print numbers 1 to 5</span>` }} />
+          id="h.4hgziegvag6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 1: Print numbers 1 to 5</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `for &#123;set i 1&#125; &#123;$i &lt;= 5&#125; &#123;incr i&#125; &#123;
 puts $i
 &#125;` }} />
@@ -4225,7 +4227,7 @@ puts $i
 4
 5` }} />
           <hr className={styles.divider} />
-          <h2 id="h.m3csva6nh5v9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 2: Print even numbers</span>` }} />
+          id="h.m3csva6nh5v9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 2: Print even numbers</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `for &#123;set i 2&#125; &#123;$i &lt;= 10&#125; &#123;incr i 2&#125; &#123;
 puts $i
 &#125;` }} />
@@ -4236,7 +4238,7 @@ puts $i
 8
 10` }} />
           <hr className={styles.divider} />
-          <h2 id="h.6attfwoyfhcr" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 3: Table of 5</span>` }} />
+          id="h.6attfwoyfhcr" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 3: Table of 5</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `for &#123;set i 1&#125; &#123;$i &lt;= 10&#125; &#123;incr i&#125; &#123;
 puts "5 x $i = [expr 5 * $i]"
 &#125;` }} />
@@ -4246,7 +4248,7 @@ puts "5 x $i = [expr 5 * $i]"
 ...
 5 x 10 = 50` }} />
           <hr className={styles.divider} />
-          <h2 id="h.2apc2nfkzlrt" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 4: Real-time Script (File creation)</span>` }} />
+          id="h.2apc2nfkzlrt" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 4: Real-time Script (File creation)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `for &#123;set i 1&#125; &#123;$i &lt;= 3&#125; &#123;incr i&#125; &#123;
 puts "Creating file$i.txt"
 &#125;` }} />
@@ -4256,15 +4258,15 @@ Creating file2.txt
 Creating file3.txt` }} />
           <hr className={styles.divider} />
           <h1 id="h.8ddjt9bb9ooo" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">3. WHILE LOOP</span>` }} />
-          <h2 id="h.gsiocl8vy72b" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Syntax</span>` }} />
+          id="h.gsiocl8vy72b" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Syntax</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `while &#123;condition&#125; &#123;
 statements
 &#125;` }} />
           <hr className={styles.divider} />
-          <h2 id="h.ricenie520ga" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">How while loop works</span>` }} />
+          id="h.ricenie520ga" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">How while loop works</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>✔ Condition checked first<br> ✔ Loop runs </span><span class="c18 c4">only if condition is true</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.t5wbpsz7dv1b" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 1: Print numbers 1 to 5</span>` }} />
+          id="h.t5wbpsz7dv1b" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 1: Print numbers 1 to 5</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `set i 1
 while &#123;$i &lt;= 5&#125; &#123;
 puts $i
@@ -4277,7 +4279,7 @@ incr i
 4
 5` }} />
           <hr className={styles.divider} />
-          <h2 id="h.wmkhedrxgm47" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 2: Countdown</span>` }} />
+          id="h.wmkhedrxgm47" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 2: Countdown</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `set n 5
 while &#123;$n &gt; 0&#125; &#123;
 puts "Countdown: $n"
@@ -4289,7 +4291,7 @@ Countdown: 4
 ...
 Countdown: 1` }} />
           <hr className={styles.divider} />
-          <h2 id="h.vamm8ia77a6i" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 3: Sum of numbers</span>` }} />
+          id="h.vamm8ia77a6i" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 3: Sum of numbers</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `set i 1
 set sum 0
 while &#123;$i &lt;= 5&#125; &#123;
@@ -4300,19 +4302,19 @@ puts "Sum = $sum"` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Output:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Sum = 15` }} />
           <hr className={styles.divider} />
-          <h2 id="h.8hccw4hbil29" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Real-time Use</span>` }} />
+          id="h.8hccw4hbil29" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Real-time Use</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">✔ Unknown number of iterations<br> ✔ Log monitoring<br> ✔ Waiting for condition</span>` }} />
           <hr className={styles.divider} />
           <h1 id="h.1wj6alnmrnxw" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">4. FOREACH LOOP (MOST IMPORTANT)</span>` }} />
-          <h2 id="h.901t86qogxdv" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Syntax</span>` }} />
+          id="h.901t86qogxdv" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Syntax</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `foreach variable list &#123;
 statements
 &#125;` }} />
           <hr className={styles.divider} />
-          <h2 id="h.ce4jrcl37t47" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Why foreach is powerful</span>` }} />
+          id="h.ce4jrcl37t47" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Why foreach is powerful</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 c16 li-bullet-0"><span>Best for </span><span class="c18 c4">lists<br></span></li><li class="c0 c16 li-bullet-0"><span class="c1">Clean &amp; readable<br></span></li><li class="c0 c16 li-bullet-0"><span>Widely used in </span><span class="c18 c4">industry TCL scripts<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.4a9e7whh0vgq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 1: Print list elements</span>` }} />
+          id="h.4a9e7whh0vgq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 1: Print list elements</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `set fruits &#123;apple banana mango&#125;
 foreach f $fruits &#123;
 puts $f
@@ -4322,7 +4324,7 @@ puts $f
 banana
 mango` }} />
           <hr className={styles.divider} />
-          <h2 id="h.rimp2seazvuj" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 2: Sum of list values</span>` }} />
+          id="h.rimp2seazvuj" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 2: Sum of list values</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `set nums &#123;10 20 30&#125;
 set sum 0
 foreach n $nums &#123;
@@ -4332,7 +4334,7 @@ puts "Total = $sum"` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Output:</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Total = 60` }} />
           <hr className={styles.divider} />
-          <h2 id="h.7yrsqxu6q17m" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 3: Index + Value</span>` }} />
+          id="h.7yrsqxu6q17m" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 3: Index + Value</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `set students &#123;Ravi Sita Mohan&#125;
 set i 0
 foreach s $students &#123;
@@ -4344,7 +4346,7 @@ incr i
 Index 1 = Sita
 Index 2 = Mohan` }} />
           <hr className={styles.divider} />
-          <h2 id="h.4ch7oueqli16" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 4: Multiple variables</span>` }} />
+          id="h.4ch7oueqli16" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 4: Multiple variables</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `foreach &#123;name age&#125; &#123;Ravi 25 Sita 23 Mohan 28&#125; &#123;
 puts "$name is $age years old"
 &#125;` }} />
@@ -4353,7 +4355,7 @@ puts "$name is $age years old"
 Sita is 23 years old
 Mohan is 28 years old` }} />
           <hr className={styles.divider} />
-          <h2 id="h.td1x13x027hu" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 5: Nested foreach</span>` }} />
+          id="h.td1x13x027hu" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Example 5: Nested foreach</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `set matrix &#123;&#123;1 2&#125; &#123;3 4&#125;&#125;
 foreach row $matrix &#123;
 foreach val $row &#123;
@@ -4388,7 +4390,7 @@ puts $i
 3` }} />
           <hr className={styles.divider} />
           <h1 id="h.hde5iu7r0pd0" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">6. Loop Control Commands</span>` }} />
-          <h2 id="h.mkmuyh6mp02h" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">break – Exit loop</span>` }} />
+          id="h.mkmuyh6mp02h" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">break – Exit loop</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `for &#123;set i 1&#125; &#123;$i &lt;= 5&#125; &#123;incr i&#125; &#123;
 if &#123;$i == 3&#125; &#123;
 break
@@ -4399,7 +4401,7 @@ puts $i
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `1
 2` }} />
           <hr className={styles.divider} />
-          <h2 id="h.rnl21yx162c" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">continue – Skip iteration</span>` }} />
+          id="h.rnl21yx162c" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">continue – Skip iteration</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `for &#123;set i 1&#125; &#123;$i &lt;= 5&#125; &#123;incr i&#125; &#123;
 if &#123;$i == 3&#125; &#123;
 continue
@@ -4433,7 +4435,7 @@ Checking server3...` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> In TCL, we mainly use:</span>` }} />
           <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 c16 li-bullet-0"><span class="c18 c4">break<br></span></li><li class="c0 c16 li-bullet-0"><span class="c4 c18">continue<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.bb94itkve4t2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">1. </span><span class="c10 c4">break</span><span class="c6 c4"> Statement</span>` }} />
+          id="h.bb94itkve4t2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">1. </span><span class="c10 c4">break</span><span class="c6 c4"> Statement</span>` }} />
           <h3 id="h.ouetxlptm3on" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c36 c4">What is </span><span class="c23 c4">break</span><span class="c17 c4">?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 c16 li-bullet-0"><span class="c34">break</span><span> is used to </span><span class="c18 c4">immediately stop the loop<br></span></li><li class="c0 c16 li-bullet-0"><span>Control comes </span><span class="c18 c4">outside the loop<br></span></li><li class="c0 c16 li-bullet-0"><span>Remaining iterations are </span><span class="c18 c4">skipped<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -4467,7 +4469,7 @@ puts "Checking $s"
 Checking srv2
 Error found on fail_srv` }} />
           <hr className={styles.divider} />
-          <h2 id="h.qgvn8q8lker0" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">2. </span><span class="c10 c4">continue</span><span class="c6 c4"> Statement</span>` }} />
+          id="h.qgvn8q8lker0" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">2. </span><span class="c10 c4">continue</span><span class="c6 c4"> Statement</span>` }} />
           <h3 id="h.y2om93m872zk" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c36 c4">What is </span><span class="c23 c4">continue</span><span class="c17 c4">?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 c16 li-bullet-0"><span class="c34">continue</span><span> </span><span class="c18 c4">skips the current iteration<br></span></li><li class="c0 c16 li-bullet-0"><span>Loop </span><span class="c18 c4">continues with next iteration<br></span></li><li class="c0 c16 li-bullet-0"><span>Loop does </span><span class="c18 c4">NOT stop<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -4501,7 +4503,7 @@ puts "Valid value: $d"
 Valid value: 20
 Valid value: 30` }} />
           <hr className={styles.divider} />
-          <h2 id="h.u4thigpi7eih" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">3. Difference Between </span><span class="c10 c4">break</span><span class="c4 c29"> and </span><span class="c19 c10 c4">continue</span>` }} />
+          id="h.u4thigpi7eih" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">3. Difference Between </span><span class="c10 c4">break</span><span class="c4 c29"> and </span><span class="c19 c10 c4">continue</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c31"><td class="c43" colspan="1" rowspan="1"><p class="c24"><span class="c4">Feature</span></p></td><td class="c42" colspan="1" rowspan="1"><p class="c24"><span class="c4">break</span></p></td><td class="c39" colspan="1" rowspan="1"><p class="c24"><span class="c4">continue</span></p></td></tr><tr class="c44"><td class="c43" colspan="1" rowspan="1"><p class="c0"><span class="c1">Stops loop</span></p></td><td class="c42" colspan="1" rowspan="1"><p class="c0"><span class="c1"> Yes</span></p></td><td class="c39" colspan="1" rowspan="1"><p class="c0"><span class="c1"> No</span></p></td></tr><tr class="c44"><td class="c43" colspan="1" rowspan="1"><p class="c0"><span class="c1">Skips iteration</span></p></td><td class="c42" colspan="1" rowspan="1"><p class="c0"><span class="c1"> No</span></p></td><td class="c39" colspan="1" rowspan="1"><p class="c0"><span class="c1"> Yes</span></p></td></tr><tr class="c31"><td class="c43" colspan="1" rowspan="1"><p class="c0"><span class="c1">Control</span></p></td><td class="c42" colspan="1" rowspan="1"><p class="c0"><span class="c1">Goes outside loop</span></p></td><td class="c39" colspan="1" rowspan="1"><p class="c0"><span class="c1">Goes to next iteration</span></p></td></tr></tbody>` }} />
           </div>
@@ -4513,7 +4515,7 @@ Valid value: 30` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> In TCL, decision making is done using:</span>` }} />
           <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 c16 li-bullet-0"><span class="c2">if<br></span></li><li class="c0 c16 li-bullet-0"><span class="c2">if…else<br></span></li><li class="c0 c16 li-bullet-0"><span class="c2">if…elseif…else<br></span></li><li class="c0 c16 li-bullet-0"><span class="c2">switch<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.sbaofho5c9aj" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">1. </span><span class="c10 c4">if</span><span class="c6 c4"> Statement</span>` }} />
+          id="h.sbaofho5c9aj" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">1. </span><span class="c10 c4">if</span><span class="c6 c4"> Statement</span>` }} />
           <h3 id="h.77ip34j17ide" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Purpose</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 c16 li-bullet-0"><span>Executes a block </span><span class="c18 c4">only when condition is TRUE<br></span></li><li class="c0 c16 li-bullet-0"><span class="c1">No action when condition is FALSE<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -4539,7 +4541,7 @@ if &#123;$isAdmin&#125; &#123;
 puts "Access granted"
 &#125;` }} />
           <hr className={styles.divider} />
-          <h2 id="h.n7zv4xpgbtln" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">2. </span><span class="c10 c4">if … else</span><span class="c6 c4"> Statement</span>` }} />
+          id="h.n7zv4xpgbtln" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">2. </span><span class="c10 c4">if … else</span><span class="c6 c4"> Statement</span>` }} />
           <h3 id="h.wh28tne5u5f4" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Purpose</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 c16 li-bullet-0"><span class="c1">Executes one block if condition is TRUE<br></span></li><li class="c0 c16 li-bullet-0"><span class="c1">Executes alternate block if FALSE<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -4571,7 +4573,7 @@ puts "File exists"
 puts "File not found"
 &#125;` }} />
           <hr className={styles.divider} />
-          <h2 id="h.aqytrgl07brx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">3. </span><span class="c10 c4">if … elseif … else</span><span class="c6 c4"> Statement</span>` }} />
+          id="h.aqytrgl07brx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">3. </span><span class="c10 c4">if … elseif … else</span><span class="c6 c4"> Statement</span>` }} />
           <h3 id="h.xzxr0ee171zq" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Purpose</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 c16 li-bullet-0"><span>Used when </span><span class="c4">multiple conditions</span><span class="c1"> need checking<br></span></li><li class="c0 c16 li-bullet-0"><span>Executes </span><span class="c18 c4">only one matching block<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -4611,7 +4613,7 @@ puts "Medium load"
 puts "Low load"
 &#125;` }} />
           <hr className={styles.divider} />
-          <h2 id="h.7dth3l662xlh" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">4. </span><span class="c10 c4">switch</span><span class="c4 c6"> Statement</span>` }} />
+          id="h.7dth3l662xlh" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">4. </span><span class="c10 c4">switch</span><span class="c4 c6"> Statement</span>` }} />
           <h3 id="h.598yy5n9gdxc" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Purpose</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 c16 li-bullet-0"><span>Used for </span><span class="c18 c4">fixed value comparisons<br></span></li><li class="c0 c16 li-bullet-0"><span>Cleaner than multiple </span><span class="c2">elseif<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -4645,33 +4647,33 @@ switch $day &#123;
 default &#123; puts "Invalid day" &#125;
 &#125;` }} />
           <hr className={styles.divider} />
-          <h2 id="h.44kxdi3s8cm1" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">Comparison: </span><span class="c10 c4">if</span><span class="c4 c29"> vs </span><span class="c10 c4 c19">switch</span>` }} />
+          id="h.44kxdi3s8cm1" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">Comparison: </span><span class="c10 c4">if</span><span class="c4 c29"> vs </span><span class="c10 c4 c19">switch</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c31"><td class="c13" colspan="1" rowspan="1"><p class="c24"><span class="c4">Feature</span></p></td><td class="c38" colspan="1" rowspan="1"><p class="c24"><span class="c4">if / elseif</span></p></td><td class="c9" colspan="1" rowspan="1"><p class="c24"><span class="c4">switch</span></p></td></tr><tr class="c44"><td class="c13" colspan="1" rowspan="1"><p class="c0"><span class="c1">Range checking</span></p></td><td class="c38" colspan="1" rowspan="1"><p class="c0"><span class="c1"> Yes</span></p></td><td class="c9" colspan="1" rowspan="1"><p class="c0"><span class="c1"> No</span></p></td></tr><tr class="c44"><td class="c13" colspan="1" rowspan="1"><p class="c0"><span class="c1">Exact match</span></p></td><td class="c38" colspan="1" rowspan="1"><p class="c0"><span class="c1"> Not ideal</span></p></td><td class="c9" colspan="1" rowspan="1"><p class="c0"><span class="c1"> Best</span></p></td></tr><tr class="c31"><td class="c13" colspan="1" rowspan="1"><p class="c0"><span class="c1">Readability</span></p></td><td class="c38" colspan="1" rowspan="1"><p class="c0"><span class="c1">Medium</span></p></td><td class="c9" colspan="1" rowspan="1"><p class="c0"><span class="c1">High</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.95v54kwv888d" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Final Summary for Students</span>` }} />
+          id="h.95v54kwv888d" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Final Summary for Students</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 c16 li-bullet-0"><span>Use </span><span class="c41 c4">if</span><span class="c1"> → single condition<br></span></li><li class="c0 c16 li-bullet-0"><span>Use </span><span class="c41 c4">if…else</span><span class="c1"> → yes / no decision<br></span></li><li class="c0 c16 li-bullet-0"><span>Use </span><span class="c4 c41">if…elseif…else</span><span class="c1"> → multiple conditions<br></span></li><li class="c0 c16 li-bullet-0"><span>Use </span><span class="c41 c4">switch</span><span class="c1"> → fixed value matching<br></span></li><li class="c0 c16 li-bullet-0"><span>Decision making is </span><span class="c18 c4">core logic of automation scripts</span></li>` }} />
           <h1 id="h.2mas1btaq5jr" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c8 c4">TCL PROCEDURES (proc)</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c47">(Industrial-Level Explanation)</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.u718lldc1gt1" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">1. What is a Procedure (</span><span class="c10 c4">proc</span><span class="c6 c4">) in TCL?</span>` }} />
+          id="h.u718lldc1gt1" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">1. What is a Procedure (</span><span class="c10 c4">proc</span><span class="c6 c4">) in TCL?</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>A </span><span class="c4">procedure</span><span> is a </span><span class="c4">reusable block of code</span><span class="c1"> that:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 c16 li-bullet-0"><span>Performs a </span><span class="c18 c4">specific task<br></span></li><li class="c0 c16 li-bullet-0"><span>Can accept </span><span class="c18 c4">inputs (arguments)<br></span></li><li class="c0 c16 li-bullet-0"><span>Can </span><span class="c18 c4">return a value<br></span></li><li class="c0 c16 li-bullet-0"><span>Helps in </span><span class="c18 c4">modular, readable, maintainable scripts<br></span></li>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `In industry, 90% of large TCL scripts use proc.` }} />
           <hr className={styles.divider} />
-          <h2 id="h.pt7kpp7841b1" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">2. Why Procedures Are Used (Industry View)</span>` }} />
+          id="h.pt7kpp7841b1" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">2. Why Procedures Are Used (Industry View)</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c31"><td class="c37" colspan="1" rowspan="1"><p class="c24"><span class="c4">Reason</span></p></td><td class="c27" colspan="1" rowspan="1"><p class="c24"><span class="c4">Explanation</span></p></td></tr><tr class="c31"><td class="c37" colspan="1" rowspan="1"><p class="c0"><span class="c1">Code reuse</span></p></td><td class="c27" colspan="1" rowspan="1"><p class="c0"><span class="c1">Avoid repeating code</span></p></td></tr><tr class="c31"><td class="c37" colspan="1" rowspan="1"><p class="c0"><span class="c1">Maintenance</span></p></td><td class="c27" colspan="1" rowspan="1"><p class="c0"><span class="c1">Change once, effect everywhere</span></p></td></tr><tr class="c31"><td class="c37" colspan="1" rowspan="1"><p class="c0"><span class="c1">Readability</span></p></td><td class="c27" colspan="1" rowspan="1"><p class="c0"><span class="c1">Script becomes clean</span></p></td></tr><tr class="c31"><td class="c37" colspan="1" rowspan="1"><p class="c0"><span class="c1">Debugging</span></p></td><td class="c27" colspan="1" rowspan="1"><p class="c0"><span class="c1">Easy to test functions</span></p></td></tr><tr class="c31"><td class="c37" colspan="1" rowspan="1"><p class="c0"><span class="c1">Automation</span></p></td><td class="c27" colspan="1" rowspan="1"><p class="c0"><span class="c1">Used in EDA, DevOps, CI pipelines</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          <h2 id="h.xd45nzmfzi3e" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">3. Basic Syntax of </span><span class="c19 c10 c4">proc</span>` }} />
+          id="h.xd45nzmfzi3e" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">3. Basic Syntax of </span><span class="c19 c10 c4">proc</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `proc procedure_name &#123;arguments&#125; &#123;
 statements
 return value
 &#125;` }} />
           <hr className={styles.divider} />
-          <h2 id="h.b5rqa8n5ye0d" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">4. Script 1: Simple Procedure (No Arguments)</span>` }} />
+          id="h.b5rqa8n5ye0d" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">4. Script 1: Simple Procedure (No Arguments)</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `proc greet &#123;&#125; &#123;
 puts "Welcome to TCL programming"
 &#125;
@@ -4680,7 +4682,7 @@ greet` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Welcome to TCL programming` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> Used for </span><span class="c18 c4">common startup messages</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.bdq9nfl36t2h" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">5. Script 2: Procedure with One Argument</span>` }} />
+          id="h.bdq9nfl36t2h" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">5. Script 2: Procedure with One Argument</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `proc sayHello &#123;name&#125; &#123;
 puts "Hello $name"
 &#125;
@@ -4689,7 +4691,7 @@ sayHello "Rahul"` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Hello Rahul` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> Used in </span><span class="c18 c4">user-specific automation</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.jazemwb3ja3a" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">6. Script 3: Procedure with Multiple Arguments</span>` }} />
+          id="h.jazemwb3ja3a" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">6. Script 3: Procedure with Multiple Arguments</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `proc add &#123;a b&#125; &#123;
 set sum [expr &#123;$a + $b&#125;]
 puts "Sum is $sum"
@@ -4699,7 +4701,7 @@ add 10 20` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Sum is 30` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> Used in </span><span class="c18 c4">EDA calculations / reports</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.3f6lve2qgl9g" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">7. Script 4: Procedure with Return Value</span>` }} />
+          id="h.3f6lve2qgl9g" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">7. Script 4: Procedure with Return Value</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `proc square &#123;n&#125; &#123;
 return [expr &#123;$n * $n&#125;]
 &#125;
@@ -4709,7 +4711,7 @@ puts "Square = $result"` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Square = 25` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> </span><span class="c4">Return</span><span class="c1"> sends value back to caller</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.140cxhc4cq29" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">8. Script 5: Real-Time File Check Procedure</span>` }} />
+          id="h.140cxhc4cq29" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">8. Script 5: Real-Time File Check Procedure</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `proc checkFile &#123;filename&#125; &#123;
 if &#123;[file exists $filename]&#125; &#123;
 return "File exists"
@@ -4722,7 +4724,7 @@ puts [checkFile "data.txt"]` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `File not found` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> Used in </span><span class="c18 c4">build &amp; deployment scripts</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.9a8bk4gay0vk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">9. Script 6: Procedure with Default Arguments</span>` }} />
+          id="h.9a8bk4gay0vk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">9. Script 6: Procedure with Default Arguments</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `proc greetUser &#123;&#123;name "Guest"&#125;&#125; &#123;
 puts "Welcome $name"
 &#125;
@@ -4733,7 +4735,7 @@ greetUser "Admin"` }} />
 Welcome Admin` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> Used in </span><span class="c18 c4">optional input handling</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.syj91p3zazs" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">10. Script 7: Industrial Logging Procedure</span>` }} />
+          id="h.syj91p3zazs" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">10. Script 7: Industrial Logging Procedure</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `proc logMessage &#123;level msg&#125; &#123;
 set time [clock format [clock seconds]]
 puts "$time [$level] $msg"
@@ -4745,7 +4747,7 @@ logMessage ERROR "File missing"` }} />
 Mon Jan 8 10:30:20 2026 [ERROR] File missing` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> Used in </span><span class="c18 c4">EDA tools, CI/CD logs</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.6sti1rbb366o" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">11. Script 8: Mathematical Utility Procedure</span>` }} />
+          id="h.6sti1rbb366o" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">11. Script 8: Mathematical Utility Procedure</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `proc average &#123;a b c&#125; &#123;
 return [expr &#123;($a + $b + $c) / 3.0&#125;]
 &#125;
@@ -4754,7 +4756,7 @@ puts "Average = [average 10 20 30]"` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Average = 20.0` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> Used in </span><span class="c18 c4">data analysis scripts</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.7v8e1aemxii9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">12. Script 9: Loop Inside Procedure</span>` }} />
+          id="h.7v8e1aemxii9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">12. Script 9: Loop Inside Procedure</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `proc printNumbers &#123;n&#125; &#123;
 for &#123;set i 1&#125; &#123;$i &lt;= $n&#125; &#123;incr i&#125; &#123;
 puts $i
@@ -4769,7 +4771,7 @@ printNumbers 5` }} />
 5` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> Used in </span><span class="c18 c4">batch processing</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.queswycptnmx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">13. Script 10: Real Industrial Automation Script</span>` }} />
+          id="h.queswycptnmx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">13. Script 10: Real Industrial Automation Script</span>` }} />
           <h3 id="h.jbd0w0v9u0p1" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c17 c4">Task</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">✔ Read file<br> ✔ Count lines<br> ✔ Return count</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `proc countLines &#123;filename&#125; &#123;
@@ -4794,13 +4796,13 @@ puts "Total lines: $lines"
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Total lines: 15` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> </span><span class="c18 c4">Very common in EDA verification flows</span>` }} />
           <hr className={styles.divider} />
-          <h2 id="h.52szm1kujmxw" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">14. Important Industry Rules for </span><span class="c19 c10 c4">proc</span>` }} />
+          id="h.52szm1kujmxw" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c4 c29">14. Important Industry Rules for </span><span class="c19 c10 c4">proc</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `✔ Always use meaningful names ✔ Keep procedures small &amp; single-purpose ✔ Always use return ✔ Avoid global variables (use arguments) ✔ Add comments in production scripts` }} />
           <hr className={styles.divider} />
-          <h2 id="h.y5aophoblkvx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">15. Common Mistakes Students Make</span>` }} />
+          id="h.y5aophoblkvx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">15. Common Mistakes Students Make</span>` }} />
           <div className={styles.commandBox} dangerouslySetInnerHTML={{ __html: `Forgetting &#123;&#125; in arguments  Not returning values  Using global variables unnecessarily  Writing too much logic in one procedure` }} />
           <hr className={styles.divider} />
-          <h2 id="h.ybrqj24pf2t8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Final Student Summary</span>` }} />
+          id="h.ybrqj24pf2t8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c4">Final Student Summary</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 c16 li-bullet-0"><span class="c34">proc</span><span class="c1"> = reusable function<br></span></li><li class="c0 c16 li-bullet-0"><span class="c1">Arguments pass data<br></span></li><li class="c0 c16 li-bullet-0"><span class="c34">return</span><span class="c1"> sends result<br></span></li><li class="c0 c16 li-bullet-0"><span>Used heavily in </span><span class="c18 c4">EDA, automation, DevOps<br></span></li><li class="c0 c16 li-bullet-0"><span>Industry TCL scripts are </span><span class="c18 c4">procedure-driven</span></li>` }} />
           <AdUnit slotId="slot_module4content" />
         </div>

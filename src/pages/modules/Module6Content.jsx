@@ -1797,7 +1797,7 @@ const Module6Content = () => {
         <div className={styles.navSectionsWrapper}>
           {/* Section 1: Synthesis Basics */}
           <div className={styles.navSection}>
-            <h2 className={styles.navTitle}>Synthesis Basics - Topics</h2>
+            className={styles.navTitle}>Synthesis Basics - Topics</h2>
             <div className={styles.navButtonsGrid}>
               {(showAllIntro ? introHeadings : introHeadings.slice(0, 8)).map((heading) => (
                 <button key={heading.id} onClick={() => scrollToSection(heading.id)} className={styles.topicNavBtn}>
@@ -1817,7 +1817,7 @@ const Module6Content = () => {
 
           {/* Section 2: DC Execution */}
           <div className={styles.navSection}>
-            <h2 className={styles.navTitle}>DC Execution - Topics</h2>
+            className={styles.navTitle}>DC Execution - Topics</h2>
             <div className={styles.navButtonsGrid}>
               {(showAllDC ? dcHeadings : dcHeadings.slice(0, 8)).map((heading) => (
                 <button key={heading.id} onClick={() => scrollToSection(heading.id)} className={styles.topicNavBtn}>
@@ -1837,7 +1837,7 @@ const Module6Content = () => {
 
           {/* Section 3: Genus Execution */}
           <div className={styles.navSection}>
-            <h2 className={styles.navTitle}>Genus Execution - Topics</h2>
+            className={styles.navTitle}>Genus Execution - Topics</h2>
             <div className={styles.navButtonsGrid}>
               {(showAllGenus ? genusHeadings : genusHeadings.slice(0, 8)).map((heading) => (
                 <button key={heading.id} onClick={() => scrollToSection(heading.id)} className={styles.topicNavBtn}>
@@ -1859,7 +1859,7 @@ const Module6Content = () => {
 
       <div className={styles.contentCard}>
         <h1 id="h.h2cgzqenuno7" className={styles.h1}>TOPIC 1: WHAT IS SYNTHESIS (DEEP, FROM ZERO)</h1>
-        <h2 id="h.wingvyc6q50i" className={styles.h2}>1. Why do we need synthesis at all?</h2>
+        id="h.wingvyc6q50i" className={styles.h2}>1. Why do we need synthesis at all?</h2>
         <p className={styles.paragraph}>A student writes RTL code like this:</p>
         <p className={styles.paragraph}>always @(posedge clk)</p>
         <p className={styles.paragraph}>{`q <= a & b;`}</p>
@@ -1869,17 +1869,17 @@ const Module6Content = () => {
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Gates (AND, OR, INV)<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Flip-flops<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Wires<br></span></li>` }} />
         <p className={styles.paragraph}>So someone must convert RTL into gates. That someone is called SYNTHESIS.</p>
         <hr className={styles.divider} />
-        <h2 id="h.cu3btduiykgm" className={styles.h2}>{`2. SIMPLE & INDUSTRY-CORRECT DEFINITION`}</h2>
+        id="h.cu3btduiykgm" className={styles.h2}>{`2. SIMPLE & INDUSTRY-CORRECT DEFINITION`}</h2>
         <p className={styles.paragraph}>Synthesis is a process of converting RTL code into an optimized gate-level netlist by applying design constraints such as timing, power, and area, so that the design can be physically implemented on silicon.</p>
         <hr className={styles.divider} />
-        <h2 id="h.h2dnb1ezaajq" className={styles.h2}>3. What synthesis is NOT (important clarity)</h2>
+        id="h.h2dnb1ezaajq" className={styles.h2}>3. What synthesis is NOT (important clarity)</h2>
         <p className={styles.paragraph}>Synthesis is NOT:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Simulation<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Verification<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Fabrication<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Physical design<br></span></li>` }} />
         <p className={styles.paragraph}>Synthesis does not place gates, does not route wires.</p>
         <p className={styles.paragraph}>It only decides:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Which gates?<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">How many?<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">How fast?<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">How optimized?<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.h2t817175kx8" className={styles.h2}>4. Real-life analogy (VERY IMPORTANT FOR STUDENTS)</h2>
+        id="h.h2t817175kx8" className={styles.h2}>4. Real-life analogy (VERY IMPORTANT FOR STUDENTS)</h2>
         <h3 id="h.vuo8y8gggd6l" className={styles.h3}>RTL = Recipe</h3>
         <h3 id="h.mi5gc7wwkh7j" className={styles.h3}>Synthesis = Chef</h3>
         <h3 id="h.ybeq2modzfrn" className={styles.h3}>Gates = Ingredients</h3>
@@ -1895,13 +1895,13 @@ const Module6Content = () => {
         <p className={styles.paragraph}>Synthesis decides:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Which adder?<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Ripple adder or CLA?<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">High drive or low drive?<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.kwupvhi7yo44" className={styles.h2}>5. What exactly goes INTO synthesis?</h2>
+        id="h.kwupvhi7yo44" className={styles.h2}>5. What exactly goes INTO synthesis?</h2>
         <p className={styles.paragraph}>Synthesis does NOT work blindly.</p>
         <p className={styles.paragraph}>It needs:</p>
         <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">RTL → What logic to build<br></span></li><li class="c5 c6 li-bullet-0"><span class="c24">.lib</span><span class="c4">&nbsp;→ What gates are available<br></span></li><li class="c5 c6 li-bullet-0"><span class="c24">.sdc</span><span class="c4">&nbsp;→ How fast &amp; how optimized<br></span></li>` }} />
         <p className={styles.paragraph}>Without ALL THREE, synthesis cannot work.</p>
         <hr className={styles.divider} />
-        <h2 id="h.rk9iwp5o84o5" className={styles.h2}>6. What exactly comes OUT of synthesis?</h2>
+        id="h.rk9iwp5o84o5" className={styles.h2}>6. What exactly comes OUT of synthesis?</h2>
         <p className={styles.paragraph}>After synthesis, you get:</p>
         <p className={styles.paragraph}>Gate-level netlist</p>
         <p className={styles.paragraph}>AND2_X1 U1 (.A(a), .B(b), .Y(n1));</p>
@@ -1910,7 +1910,7 @@ const Module6Content = () => {
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Placed<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Routed<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Fabricated<br></span></li>` }} />
         <p className={styles.paragraph}>RTL cannot.</p>
         <hr className={styles.divider} />
-        <h2 id="h.na8uubo7o7me" className={styles.h2}>7. What happens INSIDE synthesis (conceptual, not headlines)</h2>
+        id="h.na8uubo7o7me" className={styles.h2}>7. What happens INSIDE synthesis (conceptual, not headlines)</h2>
         <p className={styles.paragraph}>Synthesis internally does three BIG jobs:</p>
         <h3 id="h.d6dbptj0atln" className={styles.h3}>1. Understand logic</h3>
         <p className={styles.paragraph}>RTL → Boolean equations</p>
@@ -1921,7 +1921,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>Boolean logic → Real gates from .lib</p>
         <p className={styles.paragraph}>This happens automatically, based on constraints.</p>
         <hr className={styles.divider} />
-        <h2 id="h.z0kqfxlsqqx7" className={styles.h2}>8. Very small RTL → synthesis example (CLEAR)</h2>
+        id="h.z0kqfxlsqqx7" className={styles.h2}>8. Very small RTL → synthesis example (CLEAR)</h2>
         <h3 id="h.9liokinlcggh" className={styles.h3}>RTL:</h3>
         <p className={styles.paragraph}>{`assign y = a & b;`}</p>
         <h3 id="h.1u7fokctx90a" className={styles.h3}>Library has:</h3>
@@ -1934,7 +1934,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>“Relaxed → use AND2_X1”</p>
         <p className={styles.paragraph}>THIS is synthesis intelligence</p>
         <hr className={styles.divider} />
-        <h2 id="h.qzgsg5npvfnf" className={styles.h2}>9. Why synthesis optimization is REQUIRED</h2>
+        id="h.qzgsg5npvfnf" className={styles.h2}>9. Why synthesis optimization is REQUIRED</h2>
         <p className={styles.paragraph}>If synthesis did not optimize:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Chip would be too slow<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Too large<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Too hot (power)<br></span></li>` }} />
         <p className={styles.paragraph}>Manufacturing cost increases  Product fails</p>
@@ -1944,7 +1944,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image27.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.u0pjla1cg9nb" className={styles.h2}>11. Student takeaway (CRITICAL)</h2>
+        id="h.u0pjla1cg9nb" className={styles.h2}>11. Student takeaway (CRITICAL)</h2>
         <p className={styles.paragraph}>After this topic, a student must remember:</p>
         <p className={styles.paragraph}>RTL is human readable  Gates are silicon readable  Synthesis is the translator + optimizer + Mapping  Constraints control synthesis decisions</p>
         <p className={styles.paragraph}>If a student understands this → foundation is strong.</p>
@@ -1952,7 +1952,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>Before going deep, remember one golden rule:</p>
         <p className={styles.paragraph}>Synthesis is NOT a single step. It has TYPES depending on HOW MUCH physical information is known.</p>
         <hr className={styles.divider} />
-        <h2 id="h.pags1i7mndoa" className={styles.h2}>1. Why do we need “types” of synthesis?</h2>
+        id="h.pags1i7mndoa" className={styles.h2}>1. Why do we need “types” of synthesis?</h2>
         <p className={styles.paragraph}>Think like this</p>
         <p className={styles.paragraph}>When you write RTL, you don’t know:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Where gates will be placed<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">How long wires will be<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">How congested the chip will be<br></span></li>` }} />
@@ -1960,12 +1960,12 @@ const Module6Content = () => {
         <p className={styles.paragraph}>Just like:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">School → College → Job<br> Each level has more real-world constraints.<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.5xh7lbabcoa4" className={styles.h2}>2. Main Types of Synthesis (Industry View)</h2>
+        id="h.5xh7lbabcoa4" className={styles.h2}>2. Main Types of Synthesis (Industry View)</h2>
         <p className={styles.paragraph}>There are TWO MAIN TYPES:</p>
         <p className={styles.paragraph}>1. Logical Synthesis 2. Physical Synthesis</p>
         <p className={styles.paragraph}>This is NOT book language — this is industry language</p>
         <hr className={styles.divider} />
-        <h2 id="h.u979mkpm5aj2" className={styles.h2}>3. Logical Synthesis (MOST IMPORTANT FOR BEGINNERS)</h2>
+        id="h.u979mkpm5aj2" className={styles.h2}>3. Logical Synthesis (MOST IMPORTANT FOR BEGINNERS)</h2>
         <h3 id="h.j4esktty56pw" className={styles.h3}>What Logical Synthesis means (CLEAR definition)</h3>
         <p className={styles.paragraph}>Logical synthesis is the process of converting RTL into an optimized gate-level netlist using timing, power, and area constraints, WITHOUT considering actual physical placement and routing.</p>
         <p className={styles.paragraph}>Key point   No placement, no routing, no wire lengths</p>
@@ -1976,7 +1976,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>Exact wire length  Cell placement  Congestion</p>
         <p className={styles.paragraph}>So it assumes ideal conditions.</p>
         <hr className={styles.divider} />
-        <h2 id="h.pe86hdq7vmk7" className={styles.h2}>4. What exactly happens in Logical Synthesis (INSIDE TOOL)</h2>
+        id="h.pe86hdq7vmk7" className={styles.h2}>4. What exactly happens in Logical Synthesis (INSIDE TOOL)</h2>
         <p className={styles.paragraph}>Step by step (student must visualize this):</p>
         <h3 id="h.7f1qm0ugmhvb" className={styles.h3}>STEP 1: RTL is read</h3>
         <p className={styles.paragraph}>{`assign y = (a & b) | c;`}</p>
@@ -1987,7 +1987,7 @@ const Module6Content = () => {
         <h3 id="h.rut4n8pe6lbc" className={styles.h3}>STEP 4: Mapping happens</h3>
         <p className={styles.paragraph}>Logic → Standard cells from .lib</p>
         <hr className={styles.divider} />
-        <h2 id="h.grpsxtujricx" className={styles.h2}>5. Example (VERY IMPORTANT)</h2>
+        id="h.grpsxtujricx" className={styles.h2}>5. Example (VERY IMPORTANT)</h2>
         <h3 id="h.aziaonz2uaa" className={styles.h3}>RTL:</h3>
         <p className={styles.paragraph}>{`assign y = a & a;`}</p>
         <h3 id="h.aatsf6o29h49" className={styles.h3}>What student wrote:</h3>
@@ -1997,26 +1997,26 @@ const Module6Content = () => {
         <p className={styles.paragraph}>{`AND gate removed  Why? Because a & a = a`}</p>
         <p className={styles.paragraph}>This is logical optimization</p>
         <hr className={styles.divider} />
-        <h2 id="h.139vuh8ai34k" className={styles.h2}>6. Why Logical Synthesis is REQUIRED</h2>
+        id="h.139vuh8ai34k" className={styles.h2}>6. Why Logical Synthesis is REQUIRED</h2>
         <p className={styles.paragraph}>If we skip logical synthesis:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Design too slow <br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Area too big <br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Power too high <br></span></li>` }} />
         <p className={styles.paragraph}>PNR tools expect: ✔ Clean ✔ Optimized ✔ Gate-level netlist</p>
         <p className={styles.paragraph}>RTL cannot be given directly to PNR.</p>
         <hr className={styles.divider} />
-        <h2 id="h.lnex976mp8p3" className={styles.h2}>7. Advantages of Logical Synthesis</h2>
+        id="h.lnex976mp8p3" className={styles.h2}>7. Advantages of Logical Synthesis</h2>
         <p className={styles.paragraph}>Fast execution  Early timing estimation  Catches RTL issues early  Reduces logic complexity  Industry standard first step</p>
         <hr className={styles.divider} />
-        <h2 id="h.weckgsihnqw3" className={styles.h2}>8. Disadvantages of Logical Synthesis (VERY IMPORTANT)</h2>
+        id="h.weckgsihnqw3" className={styles.h2}>8. Disadvantages of Logical Synthesis (VERY IMPORTANT)</h2>
         <p className={styles.paragraph}>No real wire delay  Timing may change after placement  Congestion not visible  Clock skew not accurate</p>
         <p className={styles.paragraph}>That’s why Physical Synthesis exists.</p>
         <hr className={styles.divider} />
-        <h2 id="h.dp5cjsy4ihf8" className={styles.h2}>9. Physical Synthesis (HIGH-LEVEL, not deep yet)</h2>
+        id="h.dp5cjsy4ihf8" className={styles.h2}>9. Physical Synthesis (HIGH-LEVEL, not deep yet)</h2>
         <h3 id="h.xh66jkfahxos" className={styles.h3}>Simple definition:</h3>
         <p className={styles.paragraph}>Physical synthesis is synthesis performed with placement awareness, where gate optimization considers real wire lengths and congestion.</p>
         <p className={styles.paragraph}>Logical synthesis = assumption Physical synthesis = reality</p>
         <p className={styles.paragraph}>We will cover this later in detail.</p>
         <hr className={styles.divider} />
-        <h2 id="h.um0ltxrsolp8" className={styles.h2}>Comparison Table (Student Friendly)</h2>
+        id="h.um0ltxrsolp8" className={styles.h2}>Comparison Table (Student Friendly)</h2>
         <div className={styles.tableContainer}>
           <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c10"><td class="c12" colspan="1" rowspan="1"><p class="c0"><span class="c14">Feature</span></p></td><td class="c18" colspan="1" rowspan="1"><p class="c0"><span class="c14">Logical Synthesis</span></p></td><td class="c40" colspan="1" rowspan="1"><p class="c0"><span class="c14">Physical Synthesis</span></p></td></tr><tr class="c63"><td class="c12" colspan="1" rowspan="1"><p class="c7"><span class="c4">Placement aware</span></p></td><td class="c18" colspan="1" rowspan="1"><p class="c7"><span class="c4">&nbsp;No</span></p></td><td class="c40" colspan="1" rowspan="1"><p class="c7"><span class="c4">&nbsp;Yes</span></p></td></tr><tr class="c10"><td class="c12" colspan="1" rowspan="1"><p class="c7"><span class="c4">Wire delay</span></p></td><td class="c18" colspan="1" rowspan="1"><p class="c7"><span class="c4">Estimated</span></p></td><td class="c40" colspan="1" rowspan="1"><p class="c7"><span class="c4">Realistic</span></p></td></tr><tr class="c10"><td class="c12" colspan="1" rowspan="1"><p class="c7"><span class="c4">Speed</span></p></td><td class="c18" colspan="1" rowspan="1"><p class="c7"><span class="c4">Faster</span></p></td><td class="c40" colspan="1" rowspan="1"><p class="c7"><span class="c4">Slower</span></p></td></tr><tr class="c10"><td class="c12" colspan="1" rowspan="1"><p class="c7"><span class="c4">Accuracy</span></p></td><td class="c18" colspan="1" rowspan="1"><p class="c7"><span class="c4">Medium</span></p></td><td class="c40" colspan="1" rowspan="1"><p class="c7"><span class="c4">High</span></p></td></tr><tr class="c10"><td class="c12" colspan="1" rowspan="1"><p class="c7"><span class="c4">Used when</span></p></td><td class="c18" colspan="1" rowspan="1"><p class="c7"><span class="c4">Early stage</span></p></td><td class="c40" colspan="1" rowspan="1"><p class="c7"><span class="c4">Later stage</span></p></td></tr></tbody>` }} />
         </div>
@@ -2025,24 +2025,24 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image21.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.4s2jjbax1qju" className={styles.h2}>1.2. Student Conclusion (VERY IMPORTANT)</h2>
+        id="h.4s2jjbax1qju" className={styles.h2}>1.2. Student Conclusion (VERY IMPORTANT)</h2>
         <p className={styles.paragraph}>A student should remember:</p>
         <p className={styles.paragraph}>✔ Logical synthesis = logic + constraints ✔ Physical synthesis = logic + constraints + placement ✔ Logical synthesis ALWAYS comes first ✔ Physical synthesis refines it</p>
         <h1 id="h.k39uqpi48av0" className={styles.h1}>TOPIC 3: TRANSLATION IN LOGICAL SYNTHESIS (FROM ZERO)</h1>
         <p className={styles.paragraph}>This is the first real internal step of logical synthesis. Most students don’t understand it — now you will</p>
         <hr className={styles.divider} />
-        <h2 id="h.2iwczqvlj0ok" className={styles.h2}>1. What is Translation? (Very clear definition)</h2>
+        id="h.2iwczqvlj0ok" className={styles.h2}>1. What is Translation? (Very clear definition)</h2>
         <p className={styles.paragraph}>Translation is the process where the synthesis tool converts RTL code (Verilog/VHDL) into an internal Boolean and data-structure representation that the tool can understand and manipulate.</p>
         <p className={styles.paragraph}>Key idea   Tool does NOT work directly on Verilog text  It first converts RTL into its own internal model</p>
         <hr className={styles.divider} />
-        <h2 id="h.b3aoag13q1sm" className={styles.h2}>2. In which stage of synthesis does Translation happen?</h2>
+        id="h.b3aoag13q1sm" className={styles.h2}>2. In which stage of synthesis does Translation happen?</h2>
         <p className={styles.paragraph}>Translation happens at the VERY BEGINNING of Logical Synthesis.</p>
         <h3 id="h.4bsgwhm5bs1m" className={styles.h3}>Logical Synthesis Flow (high level):</h3>
         <p className={styles.paragraph}>1. Translation  2. Optimization 3. Technology Mapping 4. Netlist Generation</p>
         <p className={styles.paragraph}>So remember clearly:</p>
         <p className={styles.paragraph}>Translation = FIRST STEP</p>
         <hr className={styles.divider} />
-        <h2 id="h.tbyro5qenhe5" className={styles.h2}>3. Why Translation is required?</h2>
+        id="h.tbyro5qenhe5" className={styles.h2}>3. Why Translation is required?</h2>
         <p className={styles.paragraph}>Humans understand RTL like this:</p>
         <p className={styles.paragraph}>{`assign y = (a & b) | c;`}</p>
         <p className={styles.paragraph}>But tools understand logic like:</p>
@@ -2052,14 +2052,14 @@ const Module6Content = () => {
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Removes syntax<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Builds logic graph<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Creates internal data structures<br></span></li>` }} />
         <p className={styles.paragraph}>Without translation  → No optimization → No mapping → No synthesis</p>
         <hr className={styles.divider} />
-        <h2 id="h.qg2c1gu590v" className={styles.h2}>4. What exactly happens during Translation? (Internals)</h2>
+        id="h.qg2c1gu590v" className={styles.h2}>4. What exactly happens during Translation? (Internals)</h2>
         <p className={styles.paragraph}>During translation, the tool:</p>
         <p className={styles.paragraph}>✔ Parses RTL syntax ✔ Checks syntax errors ✔ Identifies modules, ports, wires, regs ✔ Builds Boolean equations ✔ Creates RTL database / design database</p>
         <p className={styles.paragraph}>At this stage:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">&nbsp;No optimization<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">&nbsp;No gates<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">&nbsp;No timing improvement<br></span></li>` }} />
         <p className={styles.paragraph}>Only understanding the design</p>
         <hr className={styles.divider} />
-        <h2 id="h.62hgfpgfgvnz" className={styles.h2}>5. Simple Example (VERY IMPORTANT)</h2>
+        id="h.62hgfpgfgvnz" className={styles.h2}>5. Simple Example (VERY IMPORTANT)</h2>
         <h3 id="h.7eehm6js3d2q" className={styles.h3}>RTL Code:</h3>
         <p className={styles.paragraph}>module and_or (</p>
         <p className={styles.paragraph}>input a, b, c,</p>
@@ -2076,7 +2076,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>y  = t1 OR c</p>
         <p className={styles.paragraph}>Still no NAND, NOR, INV  Only logic relationships</p>
         <hr className={styles.divider} />
-        <h2 id="h.coasll6utayt" className={styles.h2}>6. Commands related to Translation (Industry tools)</h2>
+        id="h.coasll6utayt" className={styles.h2}>6. Commands related to Translation (Industry tools)</h2>
         <h3 id="h.aowvkxx4sy3t" className={styles.h3}>In Synopsys Design Compiler (example):</h3>
         <p className={styles.paragraph}>analyze -format verilog and_or.v</p>
         <p className={styles.paragraph}>elaborate and_or</p>
@@ -2094,17 +2094,17 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image23.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.pgs9fe7v5367" className={styles.h2}>9. Student-Level Summary</h2>
+        id="h.pgs9fe7v5367" className={styles.h2}>9. Student-Level Summary</h2>
         <p className={styles.paragraph}>A student should remember:</p>
         <p className={styles.paragraph}>✔ Translation is the first step of logical synthesis ✔ RTL is converted into tool-understandable logic ✔ No optimization happens here ✔ Commands: analyze, elaborate, read_verilog ✔ Errors are caught early</p>
         <h1 id="h.u10dfe1abzcz" className={styles.h1}>TOPIC 4: OPTIMIZATION IN LOGICAL SYNTHESIS (FROM ZERO)</h1>
         <p className={styles.paragraph}>This is the heart of synthesis. Most beginners think synthesis = conversion.  No. Synthesis = OPTIMIZATION</p>
         <hr className={styles.divider} />
-        <h2 id="h.7e3wo2rcewh7" className={styles.h2}>{`1. What is Optimization? (Clear & Practical Definition)`}</h2>
+        id="h.7e3wo2rcewh7" className={styles.h2}>{`1. What is Optimization? (Clear & Practical Definition)`}</h2>
         <p className={styles.paragraph}>Optimization is the process of modifying the translated RTL logic to achieve the best possible timing, area, and power while still maintaining the same functionality.</p>
         <p className={styles.paragraph}>Simple words for students   Same output  Less delay  Less gates  Less power</p>
         <hr className={styles.divider} />
-        <h2 id="h.6cwr2z38p5gu" className={styles.h2}>2. Why Optimization is Needed? (Real-life example)</h2>
+        id="h.6cwr2z38p5gu" className={styles.h2}>2. Why Optimization is Needed? (Real-life example)</h2>
         <p className={styles.paragraph}>Imagine you write RTL like this:</p>
         <p className={styles.paragraph}>{`assign y = a & b;`}</p>
         <p className={styles.paragraph}>{`assign z = a & b;`}</p>
@@ -2116,12 +2116,12 @@ const Module6Content = () => {
         <p className={styles.paragraph}>assign z = t;</p>
         <p className={styles.paragraph}>✔ One AND gate ✔ Less area ✔ Less power</p>
         <hr className={styles.divider} />
-        <h2 id="h.725xonbbcgoe" className={styles.h2}>3. When does Optimization happen in synthesis?</h2>
+        id="h.725xonbbcgoe" className={styles.h2}>3. When does Optimization happen in synthesis?</h2>
         <p className={styles.paragraph}>Logical Synthesis Flow (updated):</p>
         <p className={styles.paragraph}>1. Translation  2. Optimization  3. Mapping 4. Netlist generation</p>
         <p className={styles.paragraph}>So optimization happens AFTER translation and BEFORE mapping.</p>
         <hr className={styles.divider} />
-        <h2 id="h.intr1ffgcurb" className={styles.h2}>4. Types of Optimization (VERY IMPORTANT)</h2>
+        id="h.intr1ffgcurb" className={styles.h2}>4. Types of Optimization (VERY IMPORTANT)</h2>
         <p className={styles.paragraph}>Optimization is driven by constraints.</p>
         <h3 id="h.a1juqv2r9em2" className={styles.h3}>1. Timing Optimization</h3>
         <p className={styles.paragraph}>Goal: Make design faster</p>
@@ -2137,7 +2137,7 @@ const Module6Content = () => {
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Remove unnecessary toggles<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Clock gating (we’ll cover later)<br></span></li>` }} />
         <p className={styles.paragraph}>Tool tries to balance Timing ↔ Area ↔ Power</p>
         <hr className={styles.divider} />
-        <h2 id="h.e8616lhm3pqi" className={styles.h2}>5. Example: Timing Optimization (Clear)</h2>
+        id="h.e8616lhm3pqi" className={styles.h2}>5. Example: Timing Optimization (Clear)</h2>
         <h3 id="h.b8wrdbaawvw0" className={styles.h3}>RTL:</h3>
         <p className={styles.paragraph}>{`assign y = ((a & b) | (c & d)) & e;`}</p>
         <p className={styles.paragraph}>Logic depth = 3 levels</p>
@@ -2145,7 +2145,7 @@ const Module6Content = () => {
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Reduce critical path<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Balance gates<br></span></li>` }} />
         <p className={styles.paragraph}>You don’t change RTL  Tool changes structure internally</p>
         <hr className={styles.divider} />
-        <h2 id="h.qfda424j8u33" className={styles.h2}>6. Optimization Techniques (What tool actually does)</h2>
+        id="h.qfda424j8u33" className={styles.h2}>6. Optimization Techniques (What tool actually does)</h2>
         <p className={styles.paragraph}>During optimization, tool performs:</p>
         <p className={styles.paragraph}>✔ Boolean simplification ✔ Constant propagation ✔ Dead logic removal ✔ Logic sharing ✔ DeMorgan transformations ✔ Path restructuring</p>
         <p className={styles.paragraph}>Example:</p>
@@ -2153,7 +2153,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>Optimized to:</p>
         <p className={styles.paragraph}>assign y = a;</p>
         <hr className={styles.divider} />
-        <h2 id="h.1qkf2sxx8wrk" className={styles.h2}>7. Optimization is Constraint Driven (Very Important)</h2>
+        id="h.1qkf2sxx8wrk" className={styles.h2}>7. Optimization is Constraint Driven (Very Important)</h2>
         <p className={styles.paragraph}>Without constraints:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span>Tool does </span><span class="c20 c14">minimum work<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">No guarantee of timing<br></span></li>` }} />
         <p className={styles.paragraph}>Constraints guide optimization:</p>
@@ -2163,11 +2163,11 @@ const Module6Content = () => {
         <p className={styles.paragraph}>set_max_delay 5</p>
         <p className={styles.paragraph}>Tool now knows:  “I MUST make design fast”</p>
         <hr className={styles.divider} />
-        <h2 id="h.y98hdh6a2t8v" className={styles.h2}>8. What Optimization is NOT</h2>
+        id="h.y98hdh6a2t8v" className={styles.h2}>8. What Optimization is NOT</h2>
         <p className={styles.paragraph}>Not technology mapping  Not gate selection  Not placement aware</p>
         <p className={styles.paragraph}>It is still technology-independent logic optimization.</p>
         <hr className={styles.divider} />
-        <h2 id="h.w8p5h11taoy4" className={styles.h2}>9. Commands Related to Optimization</h2>
+        id="h.w8p5h11taoy4" className={styles.h2}>9. Commands Related to Optimization</h2>
         <p className={styles.paragraph}>Optimization happens during:</p>
         <p className={styles.paragraph}>compile</p>
         <p className={styles.paragraph}>or advanced:</p>
@@ -2178,19 +2178,19 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image11.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.q9nxk2wwoynn" className={styles.h2}>1.1. Student-Level Summary</h2>
+        id="h.q9nxk2wwoynn" className={styles.h2}>1.1. Student-Level Summary</h2>
         <p className={styles.paragraph}>{`✔ Optimization improves timing, area, power ✔ Happens after translation ✔ Same function, better hardware ✔ Driven by constraints ✔ Uses Boolean simplification & restructuring`}</p>
         <h1 id="h.flce0gc6b72z" className={styles.h1}>TOPIC 5: MAPPING (TECHNOLOGY MAPPING)</h1>
         <p className={styles.paragraph}>Till now:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">RTL ✔<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Translation ✔<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Optimization ✔ (technology-independent)<br></span></li>` }} />
         <p className={styles.paragraph}>Now comes the MOST CRITICAL STEP in logical synthesis.</p>
         <hr className={styles.divider} />
-        <h2 id="h.yeiyyb92zke9" className={styles.h2}>1. What is Mapping? (Best Beginner Definition)</h2>
+        id="h.yeiyyb92zke9" className={styles.h2}>1. What is Mapping? (Best Beginner Definition)</h2>
         <p className={styles.paragraph}>Mapping is the process of converting the optimized generic logic into actual standard cells (gates) available in the target technology library (.lib).</p>
         <p className={styles.paragraph}>In simple student language   Till now, tool knows only AND, OR, NOT (abstract logic)  After mapping, tool knows real gates like NAND2_X1, DFF_X2, AOI21_X4</p>
         <p className={styles.paragraph}>Without mapping → no real hardware</p>
         <hr className={styles.divider} />
-        <h2 id="h.3yg7l8dl1xgy" className={styles.h2}>2. Why Mapping is Needed? (Very Important Question)</h2>
+        id="h.3yg7l8dl1xgy" className={styles.h2}>2. Why Mapping is Needed? (Very Important Question)</h2>
         <h3 id="h.jq3kmtrf452g" className={styles.h3}>RTL says:</h3>
         <p className={styles.paragraph}>{`assign y = a & b;`}</p>
         <p className={styles.paragraph}>But fabrication factory does NOT understand:</p>
@@ -2204,11 +2204,11 @@ const Module6Content = () => {
         <p className={styles.paragraph}>DFF_X1</p>
         <p className={styles.paragraph}>Mapping connects logic → real silicon gates</p>
         <hr className={styles.divider} />
-        <h2 id="h.s3jsgcl5tp7g" className={styles.h2}>3. Where Mapping Happens in Synthesis Flow?</h2>
+        id="h.s3jsgcl5tp7g" className={styles.h2}>3. Where Mapping Happens in Synthesis Flow?</h2>
         <p className={styles.paragraph}>Logical Synthesis Flow (updated):</p>
         <p className={styles.paragraph}>1. RTL 2. Translation 3. Optimization  4. Mapping  5. Gate-level netlist generation</p>
         <hr className={styles.divider} />
-        <h2 id="h.yn6dt95ckma4" className={styles.h2}>4. What Does Tool Use for Mapping?</h2>
+        id="h.yn6dt95ckma4" className={styles.h2}>4. What Does Tool Use for Mapping?</h2>
         <h3 id="h.hld36vjqf80r" className={styles.h3}>Standard Cell Library (.lib)</h3>
         <p className={styles.paragraph}>This file contains:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Gate functionality<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Delay<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Area<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Power<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Drive strength<br></span></li>` }} />
@@ -2218,7 +2218,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>NAND2_X4</p>
         <p className={styles.paragraph}>{`Same function, different strength & delay.`}</p>
         <hr className={styles.divider} />
-        <h2 id="h.pnzzjqm4w1vt" className={styles.h2}>5. Simple Mapping Example (Clear)</h2>
+        id="h.pnzzjqm4w1vt" className={styles.h2}>5. Simple Mapping Example (Clear)</h2>
         <h3 id="h.v00if3vtqpf3" className={styles.h3}>RTL:</h3>
         <p className={styles.paragraph}>{`assign y = a & b;`}</p>
         <h3 id="h.uf3r53grgo26" className={styles.h3}>Tool Decision:</h3>
@@ -2229,7 +2229,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>y = NOT (a NAND b)</p>
         <p className={styles.paragraph}>Function same ✔ Uses available cells ✔</p>
         <hr className={styles.divider} />
-        <h2 id="h.gm1nv6rt21qm" className={styles.h2}>6. Mapping is Constraint Driven (Again!)</h2>
+        id="h.gm1nv6rt21qm" className={styles.h2}>6. Mapping is Constraint Driven (Again!)</h2>
         <p className={styles.paragraph}>Mapping depends on:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Timing constraints<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Area constraints<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Power constraints<br></span></li>` }} />
         <h3 id="h.kd1sn2lazzlj" className={styles.h3}>Example:</h3>
@@ -2239,12 +2239,12 @@ const Module6Content = () => {
         <p className={styles.paragraph}>NAND2_X1 (slower, smaller)</p>
         <p className={styles.paragraph}>Tool automatically decides.</p>
         <hr className={styles.divider} />
-        <h2 id="h.cbwxhxrhg4nj" className={styles.h2}>7. What Exactly Happens During Mapping?</h2>
+        id="h.cbwxhxrhg4nj" className={styles.h2}>7. What Exactly Happens During Mapping?</h2>
         <p className={styles.paragraph}>Tool performs:</p>
         <p className={styles.paragraph}>✔ Cell selection ✔ Drive strength selection ✔ Gate restructuring ✔ Delay balancing</p>
         <p className={styles.paragraph}>Example: Instead of one slow gate:  Tool may use two faster gates</p>
         <hr className={styles.divider} />
-        <h2 id="h.we3e7lxxbexf" className={styles.h2}>8. Commands Related to Mapping</h2>
+        id="h.we3e7lxxbexf" className={styles.h2}>8. Commands Related to Mapping</h2>
         <p className={styles.paragraph}>Mapping is performed during:</p>
         <p className={styles.paragraph}>compile</p>
         <p className={styles.paragraph}>or</p>
@@ -2254,7 +2254,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>set link_library "* slow.lib"</p>
         <p className={styles.paragraph}>Without .lib:  Mapping fails  No gate-level netlist</p>
         <hr className={styles.divider} />
-        <h2 id="h.66rwfrpyxsrw" className={styles.h2}>9. Gate-Level Netlist After Mapping</h2>
+        id="h.66rwfrpyxsrw" className={styles.h2}>9. Gate-Level Netlist After Mapping</h2>
         <p className={styles.paragraph}>Before mapping (generic):</p>
         <p className={styles.paragraph}>AND</p>
         <p className={styles.paragraph}>OR</p>
@@ -2269,13 +2269,13 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image8.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.ms8iih2g8q6a" className={styles.h2}>1.1. Student Summary</h2>
+        id="h.ms8iih2g8q6a" className={styles.h2}>1.1. Student Summary</h2>
         <p className={styles.paragraph}>✔ Mapping converts logic → real gates ✔ Uses .lib file ✔ Happens after optimization ✔ Produces gate-level netlist ✔ Decides speed, area, power</p>
         <h1 id="h.3ad5ir8t4to7" className={styles.h1}>TOPIC 6: RTL vs GATE-LEVEL NETLIST</h1>
         <h3 id="h.wl0bush7fwsm" className={styles.h3}>{`& Why RTL is NOT Used as PNR Input`}</h3>
         <p className={styles.paragraph}>This topic is EXTREMELY IMPORTANT for students. Many beginners get confused here.</p>
         <hr className={styles.divider} />
-        <h2 id="h.lczt8pirsxdt" className={styles.h2}>1. What is RTL? (Quick Recall – in Simple English)</h2>
+        id="h.lczt8pirsxdt" className={styles.h2}>1. What is RTL? (Quick Recall – in Simple English)</h2>
         <p className={styles.paragraph}>RTL (Register Transfer Level) describes:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c20 c14">What logic should do<br></span></li><li class="c5 c6 li-bullet-0"><span class="c20 c14">How data flows between registers<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Written by humans<br></span></li>` }} />
         <p className={styles.paragraph}>Example:</p>
@@ -2284,26 +2284,26 @@ const Module6Content = () => {
         <p className={styles.paragraph}>RTL:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Abstract<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Technology-independent<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">No physical meaning<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.bpfu7acikb6p" className={styles.h2}>2. What is Gate-Level Netlist?</h2>
+        id="h.bpfu7acikb6p" className={styles.h2}>2. What is Gate-Level Netlist?</h2>
         <p className={styles.paragraph}>Gate-level netlist is the synthesized output where the design is described using real standard cells from a technology library.</p>
         <p className={styles.paragraph}>Example:</p>
         <p className={styles.paragraph}>DFF_X1 U1 ( .D(d), .CLK(clk), .Q(q) );</p>
         <p className={styles.paragraph}>Gate-level netlist:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Uses real gates<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Technology-dependent<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Ready for physical design<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.pkvzescfv19p" className={styles.h2}>3. Key Differences (STUDENT MUST MEMORIZE)</h2>
+        id="h.pkvzescfv19p" className={styles.h2}>3. Key Differences (STUDENT MUST MEMORIZE)</h2>
         <div className={styles.tableContainer}>
           <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c10"><td class="c28" colspan="1" rowspan="1"><p class="c0"><span class="c14">Aspect</span></p></td><td class="c26" colspan="1" rowspan="1"><p class="c0"><span class="c14">RTL</span></p></td><td class="c36" colspan="1" rowspan="1"><p class="c0"><span class="c14">Gate-Level Netlist</span></p></td></tr><tr class="c10"><td class="c28" colspan="1" rowspan="1"><p class="c7"><span class="c4">Written by</span></p></td><td class="c26" colspan="1" rowspan="1"><p class="c7"><span class="c4">Designer</span></p></td><td class="c36" colspan="1" rowspan="1"><p class="c7"><span class="c4">Synthesis tool</span></p></td></tr><tr class="c10"><td class="c28" colspan="1" rowspan="1"><p class="c7"><span class="c4">Abstraction</span></p></td><td class="c26" colspan="1" rowspan="1"><p class="c7"><span class="c4">High</span></p></td><td class="c36" colspan="1" rowspan="1"><p class="c7"><span class="c4">Very low</span></p></td></tr><tr class="c10"><td class="c28" colspan="1" rowspan="1"><p class="c7"><span class="c4">Gates</span></p></td><td class="c26" colspan="1" rowspan="1"><p class="c7"><span class="c4">Not shown</span></p></td><td class="c36" colspan="1" rowspan="1"><p class="c7"><span class="c4">Explicit gates</span></p></td></tr><tr class="c10"><td class="c28" colspan="1" rowspan="1"><p class="c7"><span class="c4">Technology</span></p></td><td class="c26" colspan="1" rowspan="1"><p class="c7"><span class="c4">Independent</span></p></td><td class="c36" colspan="1" rowspan="1"><p class="c7"><span class="c4">Dependent (.lib)</span></p></td></tr><tr class="c10"><td class="c28" colspan="1" rowspan="1"><p class="c7"><span class="c4">Timing info</span></p></td><td class="c26" colspan="1" rowspan="1"><p class="c7"><span class="c4">No</span></p></td><td class="c36" colspan="1" rowspan="1"><p class="c7"><span class="c4">Yes (cell delays)</span></p></td></tr><tr class="c63"><td class="c28" colspan="1" rowspan="1"><p class="c7"><span class="c4">Used for PNR?</span></p></td><td class="c26" colspan="1" rowspan="1"><p class="c7"><span class="c4">&nbsp;NO</span></p></td><td class="c36" colspan="1" rowspan="1"><p class="c7"><span class="c4">&nbsp;YES</span></p></td></tr></tbody>` }} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.oxhqxgtyvuqy" className={styles.h2}>4. Why RTL Cannot Be Used for PNR? (Very Important)</h2>
+        id="h.oxhqxgtyvuqy" className={styles.h2}>4. Why RTL Cannot Be Used for PNR? (Very Important)</h2>
         <h3 id="h.igoqw8md69ig" className={styles.h3}>PNR needs:</h3>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Exact gate locations<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Exact delays<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Exact connectivity<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Exact cell dimensions<br></span></li>` }} />
         <h3 id="h.alwurhdldir5" className={styles.h3}>RTL does NOT have:</h3>
         <p className={styles.paragraph}>Cell size  Delay  Power  Drive strength</p>
         <p className={styles.paragraph}>PNR tools cannot place always blocks or assign statements</p>
         <hr className={styles.divider} />
-        <h2 id="h.u3dir7xf4zkk" className={styles.h2}>5. Real-Life Example (BEST FOR STUDENTS)</h2>
+        id="h.u3dir7xf4zkk" className={styles.h2}>5. Real-Life Example (BEST FOR STUDENTS)</h2>
         <p className={styles.paragraph}>Think like this:</p>
         <p className={styles.paragraph}>RTL = House Blueprint</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">“Room here”<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">“Door there”<br></span></li>` }} />
@@ -2311,7 +2311,7 @@ const Module6Content = () => {
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Brick size<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Wall thickness<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Material type<br></span></li>` }} />
         <p className={styles.paragraph}>You cannot build a house from only blueprint  You need bricks → same as PNR needs gates</p>
         <hr className={styles.divider} />
-        <h2 id="h.xtblwfi254h3" className={styles.h2}>6. What Exactly PNR Expects as Input?</h2>
+        id="h.xtblwfi254h3" className={styles.h2}>6. What Exactly PNR Expects as Input?</h2>
         <p className={styles.paragraph}>PNR expects:</p>
         <p className={styles.paragraph}>- Gate-level netlist</p>
         <p className={styles.paragraph}>- Timing constraints (SDC)</p>
@@ -2319,7 +2319,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>- Physical libraries</p>
         <p className={styles.paragraph}>RTL gives NONE of these.</p>
         <hr className={styles.divider} />
-        <h2 id="h.qz6mphbymgcw" className={styles.h2}>7. Example Comparison (Clear)</h2>
+        id="h.qz6mphbymgcw" className={styles.h2}>7. Example Comparison (Clear)</h2>
         <h3 id="h.yvd12h4t4zbr" className={styles.h3}>RTL:</h3>
         <p className={styles.paragraph}>{`assign y = a & b;`}</p>
         <h3 id="h.n4g510lp9qrg" className={styles.h3}>Gate-level:</h3>
@@ -2331,20 +2331,20 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image5.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.utnlm3wmm1p7" className={styles.h2}>9. Student Conclusion</h2>
+        id="h.utnlm3wmm1p7" className={styles.h2}>9. Student Conclusion</h2>
         <p className={styles.paragraph}>✔ RTL = functional description ✔ Gate netlist = real hardware ✔ PNR works only on gate-level ✔ Synthesis bridges RTL → gates</p>
         <hr className={styles.divider} />
         <h1 id="h.u6uslf5p5c2k" className={styles.h1}>TOPIC 7: INPUTS OF LOGICAL SYNTHESIS</h1>
         <p className={styles.paragraph}>(VERY IMPORTANT – Students must clearly understand this)</p>
         <p className={styles.paragraph}>Logical synthesis cannot start without proper inputs. If any input is wrong or missing → synthesis result will be wrong.</p>
         <hr className={styles.divider} />
-        <h2 id="h.evbwilb1alet" className={styles.h2}>1. What Are the Inputs of Logical Synthesis?</h2>
+        id="h.evbwilb1alet" className={styles.h2}>1. What Are the Inputs of Logical Synthesis?</h2>
         <p className={styles.paragraph}>Logical synthesis mainly needs THREE mandatory inputs:</p>
         <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c20 c14">RTL (Design description)<br></span></li><li class="c5 c6 li-bullet-0"><span class="c20 c14">Technology Library (.lib)<br></span></li><li class="c5 c6 li-bullet-0"><span class="c20 c14">Timing Constraints (.sdc)<br></span></li>` }} />
         <p className={styles.paragraph}>Optional but commonly used:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">UPF / CPF (for low power)<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Design constraints (.tcl)<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.o6zvede10egu" className={styles.h2}>2. Input-1: RTL (Register Transfer Level)</h2>
+        id="h.o6zvede10egu" className={styles.h2}>2. Input-1: RTL (Register Transfer Level)</h2>
         <h3 id="h.dz7qztxtww0r" className={styles.h3}>What is RTL input?</h3>
         <p className={styles.paragraph}>RTL is the functional description of the design written in:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Verilog<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">SystemVerilog<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">VHDL<br></span></li>` }} />
@@ -2373,7 +2373,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image42.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.r56ge5bm1m1u" className={styles.h2}>3. Input-2: Technology Library (.lib)</h2>
+        id="h.r56ge5bm1m1u" className={styles.h2}>3. Input-2: Technology Library (.lib)</h2>
         <h3 id="h.vdb6pgkuvflv" className={styles.h3}>What is .lib file?</h3>
         <p className={styles.paragraph}>lib describes ALL standard cells available in the technology.</p>
         <p className={styles.paragraph}>It is provided by:</p>
@@ -2407,7 +2407,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image7.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.xzh9gw6p3w7x" className={styles.h2}>4. Input-3: Timing Constraints (.sdc)</h2>
+        id="h.xzh9gw6p3w7x" className={styles.h2}>4. Input-3: Timing Constraints (.sdc)</h2>
         <h3 id="h.kt1z13o01ip7" className={styles.h3}>What is SDC?</h3>
         <p className={styles.paragraph}>SDC (Synopsys Design Constraints) tells the tool HOW FAST the design must run.</p>
         <p className={styles.paragraph}>{`RTL says what to build SDC says how fast & how strict`}</p>
@@ -2431,23 +2431,23 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image31.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.wwjtdx2fnxri" className={styles.h2}>5. What Happens If Inputs Are Wrong?</h2>
+        id="h.wwjtdx2fnxri" className={styles.h2}>5. What Happens If Inputs Are Wrong?</h2>
         <div className={styles.tableContainer}>
           <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c10"><td class="c21" colspan="1" rowspan="1"><p class="c0"><span class="c14">Issue</span></p></td><td class="c59" colspan="1" rowspan="1"><p class="c0"><span class="c14">Result</span></p></td></tr><tr class="c10"><td class="c21" colspan="1" rowspan="1"><p class="c7"><span class="c4">Wrong RTL</span></p></td><td class="c59" colspan="1" rowspan="1"><p class="c7"><span class="c4">Functional failure</span></p></td></tr><tr class="c10"><td class="c21" colspan="1" rowspan="1"><p class="c7"><span class="c4">Wrong .lib</span></p></td><td class="c59" colspan="1" rowspan="1"><p class="c7"><span class="c4">Timing mismatch</span></p></td></tr><tr class="c10"><td class="c21" colspan="1" rowspan="1"><p class="c7"><span class="c4">Missing SDC</span></p></td><td class="c59" colspan="1" rowspan="1"><p class="c7"><span class="c4">Over-design or under-design</span></p></td></tr><tr class="c10"><td class="c21" colspan="1" rowspan="1"><p class="c7"><span class="c4">Tight SDC</span></p></td><td class="c59" colspan="1" rowspan="1"><p class="c7"><span class="c4">Area &amp; power increase</span></p></td></tr><tr class="c10"><td class="c21" colspan="1" rowspan="1"><p class="c7"><span class="c4">Loose SDC</span></p></td><td class="c59" colspan="1" rowspan="1"><p class="c7"><span class="c4">Timing failure later</span></p></td></tr></tbody>` }} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.yuh6f5bvpb36" className={styles.h2}>6. Complete Input Flow (Student Friendly)</h2>
+        id="h.yuh6f5bvpb36" className={styles.h2}>6. Complete Input Flow (Student Friendly)</h2>
         <p className={styles.paragraph}>RTL  ─────┐</p>
         <p className={styles.paragraph}>{`├──> LOGICAL SYNTHESIS ──> Gate Netlist`}</p>
         <p className={styles.paragraph}>lib ─────┤</p>
         <p className={styles.paragraph}>│</p>
         <p className={styles.paragraph}>SDC ──────┘</p>
         <hr className={styles.divider} />
-        <h2 id="h.rp7hdbv5bcfk" className={styles.h2}>7. Student Conclusion</h2>
+        id="h.rp7hdbv5bcfk" className={styles.h2}>7. Student Conclusion</h2>
         <p className={styles.paragraph}>✔ RTL = what to build ✔ .lib = what gates exist ✔ SDC = how fast it should run ✔ All three are MANDATORY</p>
-        <h2 id="h.riaawckn7jqe" className={styles.h2}>What Exactly Happens in Logical Synthesis – FLOW DIAGRAM EXPLANATION</h2>
+        id="h.riaawckn7jqe" className={styles.h2}>What Exactly Happens in Logical Synthesis – FLOW DIAGRAM EXPLANATION</h2>
         <hr className={styles.divider} />
-        <h2 id="h.vy2lbmu68gmd" className={styles.h2}>1. First: Why a “flow diagram” is needed</h2>
+        id="h.vy2lbmu68gmd" className={styles.h2}>1. First: Why a “flow diagram” is needed</h2>
         <p className={styles.paragraph}>Students often see this and feel confused:</p>
         <p className={styles.paragraph}>RTL → Synthesis → Netlist</p>
         <p className={styles.paragraph}>This is NOT sufficient</p>
@@ -2455,7 +2455,7 @@ const Module6Content = () => {
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Debugging timing<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Fixing synthesis errors<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Understanding reports<br></span></li>` }} />
         <p className={styles.paragraph}>So now we go box by box, like an industry lecture.</p>
         <hr className={styles.divider} />
-        <h2 id="h.5v0gtupgizze" className={styles.h2}>2. Complete Logical Synthesis Flow (High-Level)</h2>
+        id="h.5v0gtupgizze" className={styles.h2}>2. Complete Logical Synthesis Flow (High-Level)</h2>
         <p className={styles.paragraph}>Here is the correct industry flow:</p>
         <p className={styles.paragraph}>RTL Code</p>
         <p className={styles.paragraph}>↓</p>
@@ -2472,7 +2472,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>Gate-Level Netlist + Reports</p>
         <p className={styles.paragraph}>Now we will open each box.</p>
         <hr className={styles.divider} />
-        <h2 id="h.p43kkuvc1jlb" className={styles.h2}>3. Block-1: RTL Code (Input Stage)</h2>
+        id="h.p43kkuvc1jlb" className={styles.h2}>3. Block-1: RTL Code (Input Stage)</h2>
         <h3 id="h.co3ydl7tpvrk" className={styles.h3}>What is given to the tool?</h3>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Verilog / SystemVerilog RTL<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Behavioral + structural code<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">May contain:<br></span></li>` }} />
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c41 li-bullet-0"><span class="c4">if / case<br></span></li><li class="c5 c41 li-bullet-0"><span class="c4">always blocks<br></span></li><li class="c5 c41 li-bullet-0"><span class="c4">arithmetic<br></span></li><li class="c5 c41 li-bullet-0"><span class="c4">hierarchy<br></span></li>` }} />
@@ -2490,7 +2490,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image12.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.rnmozenvez97" className={styles.h2}>4. Block-2: RTL Analysis (Syntax + Semantic Check)</h2>
+        id="h.rnmozenvez97" className={styles.h2}>4. Block-2: RTL Analysis (Syntax + Semantic Check)</h2>
         <h3 id="h.uudylv3513w0" className={styles.h3}>What happens internally?</h3>
         <p className={styles.paragraph}>The tool:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Checks syntax correctness<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Checks signal directions<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Checks multiple drivers<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Checks width mismatches<br></span></li>` }} />
@@ -2500,7 +2500,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>Tool stops here if error exists</p>
         <p className={styles.paragraph}>No hardware thinking yet</p>
         <hr className={styles.divider} />
-        <h2 id="h.vvj8noo4duc2" className={styles.h2}>5. Block-3: Elaboration (Hierarchy Construction)</h2>
+        id="h.vvj8noo4duc2" className={styles.h2}>5. Block-3: Elaboration (Hierarchy Construction)</h2>
         <h3 id="h.4pjh672uyp03" className={styles.h3}>This is the MOST misunderstood stage</h3>
         <h3 id="h.819akqwgtefj" className={styles.h3}>What elaboration really does:</h3>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span>Expands </span><span class="c24">generate</span><span class="c4">&nbsp;blocks<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Resolves parameters<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Connects all submodules<br></span></li><li class="c5 c6 li-bullet-0"><span>Builds </span><span class="c20 c14">full design hierarchy<br></span></li>` }} />
@@ -2517,7 +2517,8 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image28.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.tw44u2vehmkv" className={styles.h2}>6. Block-4: Generic Logic Creation (Abstract Logic)</h2>
+        <AdUnit slotId="slot_module6content_mid1" />
+          <h2 id="h.tw44u2vehmkv" className={styles.h2}>6. Block-4: Generic Logic Creation (Abstract Logic)</h2>
         <p className={styles.paragraph}>Now tool converts behavior into generic logic</p>
         <p className={styles.paragraph}>Example:</p>
         <p className={styles.paragraph}>{`assign y = (a & b) | c;`}</p>
@@ -2527,7 +2528,7 @@ const Module6Content = () => {
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span>Still </span><span class="c20 c14">technology independent<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">No NAND / NOR yet<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">No delay<br></span></li>` }} />
         <p className={styles.paragraph}>This is called generic netlist</p>
         <hr className={styles.divider} />
-        <h2 id="h.6v5hsfke6sk7" className={styles.h2}>7. Block-5: Design Optimization (Pre-Mapping)</h2>
+        id="h.6v5hsfke6sk7" className={styles.h2}>7. Block-5: Design Optimization (Pre-Mapping)</h2>
         <h3 id="h.hnl9j7tfy28" className={styles.h3}>What optimization means here:</h3>
         <p className={styles.paragraph}>Improve logic without knowing real gates</p>
         <h4 id="h.sw6wj1kid4vy" className={styles.h4}>Types of optimization here:</h4>
@@ -2542,7 +2543,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image40.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.570narnzkvbp" className={styles.h2}>8. Block-6: Technology Mapping (Gate Selection)</h2>
+        id="h.570narnzkvbp" className={styles.h2}>8. Block-6: Technology Mapping (Gate Selection)</h2>
         <p className={styles.paragraph}>Now tool asks:</p>
         <p className={styles.paragraph}>“Which real cells can implement this logic?”</p>
         <p className={styles.paragraph}>Tool looks into:</p>
@@ -2561,7 +2562,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image13.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.okjweivx7gwq" className={styles.h2}>9. Block-7: Constraint-Driven Optimization (Post-Mapping)</h2>
+        id="h.okjweivx7gwq" className={styles.h2}>9. Block-7: Constraint-Driven Optimization (Post-Mapping)</h2>
         <p className={styles.paragraph}>Now SDC controls everything</p>
         <p className={styles.paragraph}>Constraints like:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Clock period<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Input delay<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Output delay<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Max area<br></span></li>` }} />
@@ -2569,7 +2570,7 @@ const Module6Content = () => {
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Upsize gates<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Restructure logic<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Replicate logic<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Balance paths<br></span></li>` }} />
         <p className={styles.paragraph}>This loop may run many times.</p>
         <hr className={styles.divider} />
-        <h2 id="h.2w3cr8lpo7d" className={styles.h2}>Block-8: Final Output Generation</h2>
+        id="h.2w3cr8lpo7d" className={styles.h2}>Block-8: Final Output Generation</h2>
         <p className={styles.paragraph}>Tool produces:</p>
         <h3 id="h.8g1sqsjwlntt" className={styles.h3}>Main outputs:</h3>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">✔ Gate-level netlist (.v)<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">✔ Timing reports<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">✔ Area reports<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">✔ Power reports<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">✔ Constraint files<br></span></li>` }} />
@@ -2580,29 +2581,29 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image30.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.6y2gpsv9f67n" className={styles.h2}>1.1. Very Important Student Note</h2>
+        id="h.6y2gpsv9f67n" className={styles.h2}>1.1. Very Important Student Note</h2>
         <h3 id="h.w2jqb643p8kc" className={styles.h3}>Logical synthesis flow is:</h3>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c20 c14">RTL understanding → logic thinking → gate thinking<br></span></li>` }} />
         <p className={styles.paragraph}>It is NOT:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Coding tool<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Simulation tool<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Physical tool<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.xmp0fty30n4b" className={styles.h2}>1.2. Summary (Must remember)</h2>
+        id="h.xmp0fty30n4b" className={styles.h2}>1.2. Summary (Must remember)</h2>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span>Flow has </span><span class="c20 c14">multiple internal stages<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Each stage modifies the design<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Errors at early stages affect everything later<br></span></li><li class="c5 c6 li-bullet-0"><span>Understanding flow = </span><span class="c20 c14">strong VLSI foundation<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.atcz12f2rp9r" className={styles.h2}>CONCLUSION (Lecture Style)</h2>
+        id="h.atcz12f2rp9r" className={styles.h2}>CONCLUSION (Lecture Style)</h2>
         <p className={styles.paragraph}>Logical synthesis is not a black box. It is a step-by-step transformation engine that turns RTL intent into real gates under constraints.</p>
         <hr className={styles.divider} />
-        <h2 id="h.x17jpytcnqy" className={styles.h2}>Logical Synthesis – Advantages and Disadvantages (Industry Perspective)</h2>
+        id="h.x17jpytcnqy" className={styles.h2}>Logical Synthesis – Advantages and Disadvantages (Industry Perspective)</h2>
         <p className={styles.paragraph}>This topic is very important for students, because interviewers often ask:</p>
         <p className={styles.paragraph}>“Why do we need logical synthesis? What are its limitations?”</p>
         <p className={styles.paragraph}>So we will not write bullet points only — we will explain WHY.</p>
         <hr className={styles.divider} />
-        <h2 id="h.6kkb9xyto8sj" className={styles.h2}>1. Why we even need Logical Synthesis (Context)</h2>
+        id="h.6kkb9xyto8sj" className={styles.h2}>1. Why we even need Logical Synthesis (Context)</h2>
         <p className={styles.paragraph}>Before synthesis existed:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Designers manually drew gates<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Huge designs → impossible to manage<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">No automatic timing optimization<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Very high error rate<br></span></li>` }} />
         <p className={styles.paragraph}>Logical synthesis solves this problem.</p>
         <hr className={styles.divider} />
-        <h2 id="h.h15ucoc0o74f" className={styles.h2}>2. Advantages of Logical Synthesis (With Explanation)</h2>
+        id="h.h15ucoc0o74f" className={styles.h2}>2. Advantages of Logical Synthesis (With Explanation)</h2>
         <hr className={styles.divider} />
         <h3 id="h.g7b7ha6xrn3v" className={styles.h3}>Advantage 1: Converts Human Intent into Hardware</h3>
         <p className={styles.paragraph}>RTL is human-readable:</p>
@@ -2661,7 +2662,7 @@ const Module6Content = () => {
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Manages hierarchy<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Handles complexity automatically<br></span></li>` }} />
         <p className={styles.paragraph}>✔ Impossible manually ✔ Industry-scale solution</p>
         <hr className={styles.divider} />
-        <h2 id="h.9wr5b68v5caa" className={styles.h2}>3. Disadvantages of Logical Synthesis (Very Important)</h2>
+        id="h.9wr5b68v5caa" className={styles.h2}>3. Disadvantages of Logical Synthesis (Very Important)</h2>
         <p className={styles.paragraph}>Now the truth students must know.</p>
         <hr className={styles.divider} />
         <h3 id="h.3o08f88b3mv5" className={styles.h3}>Disadvantage 1: Depends Heavily on RTL Quality</h3>
@@ -2707,31 +2708,31 @@ const Module6Content = () => {
         <p className={styles.paragraph}>..</p>
         <p className={styles.paragraph}>✔ Debugging needs experience</p>
         <hr className={styles.divider} />
-        <h2 id="h.ip91bhv5qw26" className={styles.h2}>4. When Logical Synthesis is NOT Enough</h2>
+        id="h.ip91bhv5qw26" className={styles.h2}>4. When Logical Synthesis is NOT Enough</h2>
         <p className={styles.paragraph}>Logical synthesis cannot handle:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Congestion<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">IR drop<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Crosstalk<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Real wire delay<br></span></li>` }} />
         <p className={styles.paragraph}>That is why:  Physical synthesis exists</p>
         <hr className={styles.divider} />
-        <h2 id="h.7xwyt0dmydcy" className={styles.h2}>5. Industry Reality (Very Important)</h2>
+        id="h.7xwyt0dmydcy" className={styles.h2}>5. Industry Reality (Very Important)</h2>
         <div className={styles.tableContainer}>
           <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c10"><td class="c50" colspan="1" rowspan="1"><p class="c0"><span class="c14">Stage</span></p></td><td class="c38" colspan="1" rowspan="1"><p class="c0"><span class="c14">Role</span></p></td></tr><tr class="c10"><td class="c50" colspan="1" rowspan="1"><p class="c7"><span class="c4">RTL</span></p></td><td class="c38" colspan="1" rowspan="1"><p class="c7"><span class="c4">Function correctness</span></p></td></tr><tr class="c10"><td class="c50" colspan="1" rowspan="1"><p class="c7"><span class="c4">Logical Synthesis</span></p></td><td class="c38" colspan="1" rowspan="1"><p class="c7"><span class="c4">Logic optimization</span></p></td></tr><tr class="c10"><td class="c50" colspan="1" rowspan="1"><p class="c7"><span class="c4">Physical Synthesis</span></p></td><td class="c38" colspan="1" rowspan="1"><p class="c7"><span class="c4">Physical realism</span></p></td></tr><tr class="c10"><td class="c50" colspan="1" rowspan="1"><p class="c7"><span class="c4">PNR</span></p></td><td class="c38" colspan="1" rowspan="1"><p class="c7"><span class="c4">Final silicon</span></p></td></tr></tbody>` }} />
         </div>
         <p className={styles.paragraph}>Skipping logical synthesis is impossible  Over-trusting logical synthesis is dangerous</p>
         <hr className={styles.divider} />
-        <h2 id="h.8zsct9abyw2t" className={styles.h2}>6. Student-Friendly Summary</h2>
+        id="h.8zsct9abyw2t" className={styles.h2}>6. Student-Friendly Summary</h2>
         <h3 id="h.qc5o4xfbig46" className={styles.h3}>Advantages:</h3>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Automates gate creation<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Optimizes timing, area, power<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Technology independent<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Handles large designs<br></span></li>` }} />
         <h3 id="h.zcfx4ryw9do1" className={styles.h3}>Disadvantages:</h3>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">RTL quality matters<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Limited physical awareness<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Tool-dependent<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Debug is hard<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.m8wd1ggdee25" className={styles.h2}>7. Final Conclusion (Lecture Style)</h2>
+        id="h.m8wd1ggdee25" className={styles.h2}>7. Final Conclusion (Lecture Style)</h2>
         <p className={styles.paragraph}>Logical synthesis is the brain of the ASIC flow. It understands intent, optimizes logic, and prepares the design for physical reality — but it cannot replace good RTL or physical design knowledge.</p>
-        <h2 id="h.vm88f3y6879a" className={styles.h2}>{`Combinational Merging & Sequential Merging in Logical Synthesis`}</h2>
+        id="h.vm88f3y6879a" className={styles.h2}>{`Combinational Merging & Sequential Merging in Logical Synthesis`}</h2>
         <p className={styles.paragraph}>This topic is very important because:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span>It directly affects </span><span class="c20 c14">area, timing, and power<br></span></li><li class="c5 c6 li-bullet-0"><span>Many students see this in reports but </span><span class="c20 c14">don’t understand WHY it happens<br></span></li>` }} />
         <p className={styles.paragraph}>We will explain slowly, from basics, with examples.</p>
         <hr className={styles.divider} />
-        <h2 id="h.50nlchw76wt2" className={styles.h2}>1. First Understand: What is “Merging”?</h2>
+        id="h.50nlchw76wt2" className={styles.h2}>1. First Understand: What is “Merging”?</h2>
         <p className={styles.paragraph}>Merging means:</p>
         <p className={styles.paragraph}>The synthesis tool combines similar or duplicate logic into a single logic block to optimize the design.</p>
         <p className={styles.paragraph}>Why?</p>
@@ -2739,7 +2740,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>There are two types:</p>
         <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Combinational Merging<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Sequential Merging<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.kp63d6dc88a" className={styles.h2}>2. Combinational Merging (In Depth)</h2>
+        id="h.kp63d6dc88a" className={styles.h2}>2. Combinational Merging (In Depth)</h2>
         <hr className={styles.divider} />
         <h3 id="h.9yovqg37t5qt" className={styles.h3}>What is Combinational Logic?</h3>
         <p className={styles.paragraph}>Combinational logic:</p>
@@ -2787,7 +2788,7 @@ const Module6Content = () => {
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span>On </span><span class="c20 c14">critical paths<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Drives different timing paths<br></span></li>` }} />
         <p className={styles.paragraph}>Tool may avoid merging to meet timing.</p>
         <hr className={styles.divider} />
-        <h2 id="h.f8jlzkvihji5" className={styles.h2}>3. Sequential Merging (In Depth)</h2>
+        id="h.f8jlzkvihji5" className={styles.h2}>3. Sequential Merging (In Depth)</h2>
         <hr className={styles.divider} />
         <h3 id="h.taou57ajs7kt" className={styles.h3}>What is Sequential Logic?</h3>
         <p className={styles.paragraph}>Sequential logic:</p>
@@ -2823,7 +2824,7 @@ const Module6Content = () => {
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Harder timing fixes<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Harder ECOs<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Can break testability (DFT)<br></span></li>` }} />
         <p className={styles.paragraph}>Because of this, sequential merging is often restricted.</p>
         <hr className={styles.divider} />
-        <h2 id="h.gq5cdaphnma6" className={styles.h2}>4. How to Control Merging (Very Important)</h2>
+        id="h.gq5cdaphnma6" className={styles.h2}>4. How to Control Merging (Very Important)</h2>
         <hr className={styles.divider} />
         <h3 id="h.83drubm5xk3z" className={styles.h3}>Prevent Merging (Industry Usage)</h3>
         <p className={styles.paragraph}>set_dont_touch [get_cells reg1]</p>
@@ -2833,24 +2834,24 @@ const Module6Content = () => {
         <h3 id="h.p8pxaulv1l0s" className={styles.h3}>Why Engineers Prevent Merging?</h3>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Critical path isolation<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Debug simplicity<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">ECO friendliness<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">DFT requirements<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.1lgzhb5b9dv3" className={styles.h2}>5. Combinational vs Sequential Merging (Comparison)</h2>
+        id="h.1lgzhb5b9dv3" className={styles.h2}>5. Combinational vs Sequential Merging (Comparison)</h2>
         <div className={styles.tableContainer}>
           <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c10"><td class="c44" colspan="1" rowspan="1"><p class="c0"><span class="c14">Feature</span></p></td><td class="c52" colspan="1" rowspan="1"><p class="c0"><span class="c14">Combinational</span></p></td><td class="c9" colspan="1" rowspan="1"><p class="c0"><span class="c14">Sequential</span></p></td></tr><tr class="c10"><td class="c44" colspan="1" rowspan="1"><p class="c7"><span class="c4">Logic type</span></p></td><td class="c52" colspan="1" rowspan="1"><p class="c7"><span class="c4">Gates</span></p></td><td class="c9" colspan="1" rowspan="1"><p class="c7"><span class="c4">Flip-flops</span></p></td></tr><tr class="c10"><td class="c44" colspan="1" rowspan="1"><p class="c7"><span class="c4">Risk</span></p></td><td class="c52" colspan="1" rowspan="1"><p class="c7"><span class="c4">Low</span></p></td><td class="c9" colspan="1" rowspan="1"><p class="c7"><span class="c4">High</span></p></td></tr><tr class="c10"><td class="c44" colspan="1" rowspan="1"><p class="c7"><span class="c4">Area gain</span></p></td><td class="c52" colspan="1" rowspan="1"><p class="c7"><span class="c4">Medium</span></p></td><td class="c9" colspan="1" rowspan="1"><p class="c7"><span class="c4">High</span></p></td></tr><tr class="c10"><td class="c44" colspan="1" rowspan="1"><p class="c7"><span class="c4">Timing impact</span></p></td><td class="c52" colspan="1" rowspan="1"><p class="c7"><span class="c4">Usually good</span></p></td><td class="c9" colspan="1" rowspan="1"><p class="c7"><span class="c4">Risky</span></p></td></tr><tr class="c10"><td class="c44" colspan="1" rowspan="1"><p class="c7"><span class="c4">DFT impact</span></p></td><td class="c52" colspan="1" rowspan="1"><p class="c7"><span class="c4">Low</span></p></td><td class="c9" colspan="1" rowspan="1"><p class="c7"><span class="c4">High</span></p></td></tr></tbody>` }} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.gyv3ip8108lc" className={styles.h2}>6. Interview-Level Understanding</h2>
+        id="h.gyv3ip8108lc" className={styles.h2}>6. Interview-Level Understanding</h2>
         <p className={styles.paragraph}>Q: Does synthesis always merge logic? A: No. It depends on:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Timing constraints<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Dont_touch constraints<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Design structure<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.a89z7ib7c6vi" className={styles.h2}>7. Student Summary</h2>
+        id="h.a89z7ib7c6vi" className={styles.h2}>7. Student Summary</h2>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Merging = removing duplicate logic<br></span></li><li class="c5 c6 li-bullet-0"><span>Happens in </span><span class="c20 c14">optimization phase<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Saves area and power<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Must be controlled carefully<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.x1urbzs4ov40" className={styles.h2}>8. Conclusion (Lecture Style)</h2>
+        id="h.x1urbzs4ov40" className={styles.h2}>8. Conclusion (Lecture Style)</h2>
         <p className={styles.paragraph}>Combinational merging is generally safe and beneficial, while sequential merging must be handled carefully because it affects timing, testability, and ECO flexibility.</p>
-        <h2 id="h.ef1jvdnz1u5n" className={styles.h2}>Empty Module in Logical Synthesis – What it is, Why Tool Removes it</h2>
+        id="h.ef1jvdnz1u5n" className={styles.h2}>Empty Module in Logical Synthesis – What it is, Why Tool Removes it</h2>
         <p className={styles.paragraph}>This topic confuses many beginners, so we’ll start from absolute ZERO.</p>
         <hr className={styles.divider} />
-        <h2 id="h.4p7m7g3bi4hn" className={styles.h2}>1. What is a Module in RTL?</h2>
+        id="h.4p7m7g3bi4hn" className={styles.h2}>1. What is a Module in RTL?</h2>
         <p className={styles.paragraph}>A module in Verilog:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span>Is a </span><span class="c20 c14">block of hardware<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Contains logic (combinational or sequential)<br></span></li><li class="c5 c6 li-bullet-0"><span>Has </span><span class="c20 c14">inputs, outputs, internal logic<br></span></li>` }} />
         <p className={styles.paragraph}>Example:</p>
@@ -2862,7 +2863,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>endmodule</p>
         <p className={styles.paragraph}>✔ This module does something</p>
         <hr className={styles.divider} />
-        <h2 id="h.wddeee45l419" className={styles.h2}>2. What is an Empty Module?</h2>
+        id="h.wddeee45l419" className={styles.h2}>2. What is an Empty Module?</h2>
         <p className={styles.paragraph}>An empty module:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span>Has </span><span class="c20 c14">no logic<br></span></li><li class="c5 c6 li-bullet-0"><span>May have ports, but </span><span class="c20 c14">nothing inside<br></span></li><li class="c5 c6 li-bullet-0"><span>Produces </span><span class="c20 c14">no hardware<br></span></li>` }} />
         <hr className={styles.divider} />
@@ -2879,7 +2880,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image37.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.3p10b0rgjwfl" className={styles.h2}>3. Why Do Empty Modules Exist?</h2>
+        id="h.3p10b0rgjwfl" className={styles.h2}>3. Why Do Empty Modules Exist?</h2>
         <p className={styles.paragraph}>Very important question</p>
         <h3 id="h.awcwuvuhdpsf" className={styles.h3}>Common reasons:</h3>
         <h3 id="h.irillgg2090y" className={styles.h3}>1. Placeholder modules</h3>
@@ -2898,7 +2899,7 @@ const Module6Content = () => {
         <h3 id="h.z0p9863zxmhn" className={styles.h3}>4. IP integration shells</h3>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Top-level created<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">IP logic added later<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.e5rm1o7f5hk5" className={styles.h2}>4. What Does Synthesis Do with Empty Modules?</h2>
+        id="h.e5rm1o7f5hk5" className={styles.h2}>4. What Does Synthesis Do with Empty Modules?</h2>
         <h3 id="h.ioodg33tvgom" className={styles.h3}>Synthesis Tool Behavior</h3>
         <p className={styles.paragraph}>If a module produces no hardware, the tool removes it</p>
         <p className={styles.paragraph}>Because:</p>
@@ -2908,7 +2909,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>Warning: Removing empty module empty_block</p>
         <p className={styles.paragraph}>This is NORMAL, not an error.</p>
         <hr className={styles.divider} />
-        <h2 id="h.z3j37ljp369b" className={styles.h2}>5. At Which Stage Empty Modules Are Removed?</h2>
+        id="h.z3j37ljp369b" className={styles.h2}>5. At Which Stage Empty Modules Are Removed?</h2>
         <p className={styles.paragraph}>Stage: ✔ Translation + Optimization</p>
         <p className={styles.paragraph}>Flow:</p>
         <p className={styles.paragraph}>RTL Read</p>
@@ -2917,12 +2918,12 @@ const Module6Content = () => {
         <p className={styles.paragraph}>→ Optimization  ← empty modules removed</p>
         <p className={styles.paragraph}>→ Mapping</p>
         <hr className={styles.divider} />
-        <h2 id="h.x2mic9n6os49" className={styles.h2}>6. Does Removing Empty Module Break Design?</h2>
+        id="h.x2mic9n6os49" className={styles.h2}>6. Does Removing Empty Module Break Design?</h2>
         <p className={styles.paragraph}>NO, if:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Module truly has no logic<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">No outputs are used<br></span></li>` }} />
         <p className={styles.paragraph}>✔ Safe removal</p>
         <hr className={styles.divider} />
-        <h2 id="h.26isq4nghc7e" className={styles.h2}>7. When Empty Module Removal is a PROBLEM?</h2>
+        id="h.26isq4nghc7e" className={styles.h2}>7. When Empty Module Removal is a PROBLEM?</h2>
         <h3 id="h.96g8wyx4tifz" className={styles.h3}>Dangerous scenarios:</h3>
         <h3 id="h.g3t9tt58skpn" className={styles.h3}>Case 1: Expected logic missing</h3>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span>You </span><span class="c46">thought</span><span class="c4">&nbsp;logic exists<br></span></li><li class="c5 c6 li-bullet-0"><span>But </span><span class="c24">ifdef</span><span class="c4">&nbsp;disabled it<br></span></li>` }} />
@@ -2930,14 +2931,14 @@ const Module6Content = () => {
         <p className={styles.paragraph}>analyze -define FEATURE_ON</p>
         <p className={styles.paragraph}>If missing → logic disappears</p>
         <hr className={styles.divider} />
-        <h2 id="h.p9jwoulbz5rq" className={styles.h2}>8. How to Detect Empty Modules Early?</h2>
+        id="h.p9jwoulbz5rq" className={styles.h2}>8. How to Detect Empty Modules Early?</h2>
         <h3 id="h.htxfftaf9tjd" className={styles.h3}>Check Elaboration Report</h3>
         <p className={styles.paragraph}>elaborate top</p>
         <p className={styles.paragraph}>check_design</p>
         <p className={styles.paragraph}>Look for:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">“No logic inferred”<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">“Empty module removed”<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.4n7kfjq0zn0" className={styles.h2}>9. How to Prevent Removal (If Needed)?</h2>
+        id="h.4n7kfjq0zn0" className={styles.h2}>9. How to Prevent Removal (If Needed)?</h2>
         <h3 id="h.ywibozvq0aa4" className={styles.h3}>Option 1. Add Dummy Logic (Rare)</h3>
         <p className={styles.paragraph}>wire dummy;</p>
         <p className={styles.paragraph}>assign dummy = 1'b0;</p>
@@ -2945,23 +2946,23 @@ const Module6Content = () => {
         <p className={styles.paragraph}>set_dont_touch [get_designs empty_block]</p>
         <p className={styles.paragraph}>⚠ Tool may still remove if truly empty</p>
         <hr className={styles.divider} />
-        <h2 id="h.ffq193zbrqaa" className={styles.h2}>Real Industry Example</h2>
+        id="h.ffq193zbrqaa" className={styles.h2}>Real Industry Example</h2>
         <p className={styles.paragraph}>In SoC projects:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Many feature blocks are optional<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Disabled blocks → empty modules<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Tools automatically clean them<br></span></li>` }} />
         <p className={styles.paragraph}>This is expected behavior</p>
         <hr className={styles.divider} />
-        <h2 id="h.l3f038ywkd4s" className={styles.h2}>1.1. Interview Question</h2>
+        id="h.l3f038ywkd4s" className={styles.h2}>1.1. Interview Question</h2>
         <p className={styles.paragraph}>Q: Why synthesis removes empty modules? A: Because they generate no hardware and have no functional impact.</p>
         <hr className={styles.divider} />
-        <h2 id="h.1gla5rrpso1c" className={styles.h2}>1.2. Student Summary</h2>
+        id="h.1gla5rrpso1c" className={styles.h2}>1.2. Student Summary</h2>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Empty module = no logic<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Synthesis removes it automatically<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Happens during optimization<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Usually NOT an issue<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Sometimes indicates missing macro/parameter<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.2c0e5oacqfcj" className={styles.h2}>1.3. Conclusion (Lecture Style)</h2>
+        id="h.2c0e5oacqfcj" className={styles.h2}>1.3. Conclusion (Lecture Style)</h2>
         <p className={styles.paragraph}>Empty module removal is a cleanup process in logical synthesis to ensure only meaningful hardware is implemented in silicon.</p>
-        <h2 id="h.mkrzqhg21ft5" className={styles.h2}>{`set_dont_touch & set_dont_use – How to Control Synthesis Optimization`}</h2>
+        id="h.mkrzqhg21ft5" className={styles.h2}>{`set_dont_touch & set_dont_use – How to Control Synthesis Optimization`}</h2>
         <p className={styles.paragraph}>This is a VERY IMPORTANT topic in logical synthesis. Many real-time bugs happen because engineers don’t understand this properly.</p>
         <hr className={styles.divider} />
-        <h2 id="h.b68bbb82xkn" className={styles.h2}>1. Why Do We Need These Commands?</h2>
+        id="h.b68bbb82xkn" className={styles.h2}>1. Why Do We Need These Commands?</h2>
         <h3 id="h.qocbbrfg4t17" className={styles.h3}>Reality of Logical Synthesis</h3>
         <p className={styles.paragraph}>Synthesis tool is intelligent. It tries to:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Remove unused logic<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Merge logic<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Replace gates<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Optimize timing, power, area<br></span></li>` }} />
@@ -2969,7 +2970,7 @@ const Module6Content = () => {
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span>You </span><span class="c14">DON’T want</span><span class="c4">&nbsp;optimization<br></span></li><li class="c5 c6 li-bullet-0"><span>You want to </span><span class="c20 c14">protect logic<br></span></li><li class="c5 c6 li-bullet-0"><span>You want to </span><span class="c20 c14">block certain cells<br></span></li>` }} />
         <p className={styles.paragraph}>That is why set_dont_touch and set_dont_use exist.</p>
         <hr className={styles.divider} />
-        <h2 id="h.p5laqtxhkja4" className={styles.h2}>2. set_dont_touch – What Exactly It Does</h2>
+        id="h.p5laqtxhkja4" className={styles.h2}>2. set_dont_touch – What Exactly It Does</h2>
         <h3 id="h.pxc37crxjavm" className={styles.h3}>Definition (Simple English)</h3>
         <p className={styles.paragraph}>set_dont_touch tells the synthesis tool: “DO NOT optimize, remove, or modify this object.”</p>
         <hr className={styles.divider} />
@@ -2996,7 +2997,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image14.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.myrmkt2m8d4k" className={styles.h2}>3. When Do We Use set_dont_touch? (Industry Cases)</h2>
+        id="h.myrmkt2m8d4k" className={styles.h2}>3. When Do We Use set_dont_touch? (Industry Cases)</h2>
         <h3 id="h.ui0o16kq5qtq" className={styles.h3}>Case 1: Debug logic</h3>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Scan logic<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Observation logic<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Debug counters<br></span></li>` }} />
         <hr className={styles.divider} />
@@ -3009,20 +3010,20 @@ const Module6Content = () => {
         <h3 id="h.m4xlzosxa6sb" className={styles.h3}>Case 4: Clock gating cells</h3>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Must not be altered<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.h6929my7km6d" className={styles.h2}>4. set_dont_touch vs dont_touch_network</h2>
+        id="h.h6929my7km6d" className={styles.h2}>4. set_dont_touch vs dont_touch_network</h2>
         <h3 id="h.1wqnuuo7qrd2" className={styles.h3}>dont_touch_network</h3>
         <p className={styles.paragraph}>set_dont_touch_network [get_nets clk]</p>
         <p className={styles.paragraph}>✔ Protects:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Clock tree nets<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Reset nets<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.84lzhkfuvf1y" className={styles.h2}>5. Important Warning  (Very Important)</h2>
+        id="h.84lzhkfuvf1y" className={styles.h2}>5. Important Warning  (Very Important)</h2>
         <p className={styles.paragraph}>Overusing set_dont_touch is BAD</p>
         <p className={styles.paragraph}>Why?</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Tool cannot optimize timing<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Area increases<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Power increases<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Timing violations may remain<br></span></li>` }} />
         <p className={styles.paragraph}>Industry Rule</p>
         <p className={styles.paragraph}>Use set_dont_touch only when absolutely required</p>
         <hr className={styles.divider} />
-        <h2 id="h.ts9ljkj30k6e" className={styles.h2}>6. set_dont_use – What Exactly It Does</h2>
+        id="h.ts9ljkj30k6e" className={styles.h2}>6. set_dont_use – What Exactly It Does</h2>
         <h3 id="h.s8z4bgqpievi" className={styles.h3}>Definition</h3>
         <p className={styles.paragraph}>set_dont_use tells synthesis tool: “DO NOT use this library cell for mapping.”</p>
         <hr className={styles.divider} />
@@ -3039,7 +3040,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image29.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.akj6cidp566d" className={styles.h2}>7. Why set_dont_use is Needed?</h2>
+        id="h.akj6cidp566d" className={styles.h2}>7. Why set_dont_use is Needed?</h2>
         <h3 id="h.m8gdooik2txn" className={styles.h3}>Industry Reasons:</h3>
         <h3 id="h.gqz5p7704olf" className={styles.h3}>1. Timing risk</h3>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Certain cells are slow<br></span></li>` }} />
@@ -3050,12 +3051,12 @@ const Module6Content = () => {
         <h3 id="h.12bzdplxyqh8" className={styles.h3}>4. Physical design constraints</h3>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Cell causes congestion<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.wxix50fzbd08" className={styles.h2}>8. Difference: set_dont_touch vs set_dont_use</h2>
+        id="h.wxix50fzbd08" className={styles.h2}>8. Difference: set_dont_touch vs set_dont_use</h2>
         <div className={styles.tableContainer}>
           <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c10"><td class="c9" colspan="1" rowspan="1"><p class="c0"><span class="c14">Feature</span></p></td><td class="c69" colspan="1" rowspan="1"><p class="c0"><span class="c14">set_dont_touch</span></p></td><td class="c56" colspan="1" rowspan="1"><p class="c0"><span class="c14">set_dont_use</span></p></td></tr><tr class="c10"><td class="c9" colspan="1" rowspan="1"><p class="c7"><span class="c4">Applied to</span></p></td><td class="c69" colspan="1" rowspan="1"><p class="c7"><span class="c4">Design objects</span></p></td><td class="c56" colspan="1" rowspan="1"><p class="c7"><span class="c4">Library cells</span></p></td></tr><tr class="c10"><td class="c9" colspan="1" rowspan="1"><p class="c7"><span class="c4">Prevents</span></p></td><td class="c69" colspan="1" rowspan="1"><p class="c7"><span class="c4">Optimization</span></p></td><td class="c56" colspan="1" rowspan="1"><p class="c7"><span class="c4">Cell usage</span></p></td></tr><tr class="c10"><td class="c9" colspan="1" rowspan="1"><p class="c7"><span class="c4">Used when</span></p></td><td class="c69" colspan="1" rowspan="1"><p class="c7"><span class="c4">Logic must stay</span></p></td><td class="c56" colspan="1" rowspan="1"><p class="c7"><span class="c4">Cell must not be used</span></p></td></tr><tr class="c10"><td class="c9" colspan="1" rowspan="1"><p class="c7"><span class="c4">Stage</span></p></td><td class="c69" colspan="1" rowspan="1"><p class="c7"><span class="c4">Optimization</span></p></td><td class="c56" colspan="1" rowspan="1"><p class="c7"><span class="c4">Mapping</span></p></td></tr></tbody>` }} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.phm7sf7u45s" className={styles.h2}>9. Where These Commands Act in Synthesis Flow?</h2>
+        id="h.phm7sf7u45s" className={styles.h2}>9. Where These Commands Act in Synthesis Flow?</h2>
         <p className={styles.paragraph}>RTL</p>
         <p className={styles.paragraph}>↓</p>
         <p className={styles.paragraph}>Elaboration</p>
@@ -3066,7 +3067,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>↓</p>
         <p className={styles.paragraph}>Technology Mapping ← set_dont_use works</p>
         <hr className={styles.divider} />
-        <h2 id="h.lm4t7v4m3m9" className={styles.h2}>Real Industry Flow Example</h2>
+        id="h.lm4t7v4m3m9" className={styles.h2}>Real Industry Flow Example</h2>
         <p className={styles.paragraph}>read_verilog top.v</p>
         <p className={styles.paragraph}>read_liberty slow.lib</p>
         <p className={styles.paragraph}>set_dont_use [get_lib_cells */NAND2_X1]</p>
@@ -3074,19 +3075,19 @@ const Module6Content = () => {
         <p className={styles.paragraph}>compile</p>
         <p className={styles.paragraph}>✔ Scan logic preserved ✔ Bad cells avoided</p>
         <hr className={styles.divider} />
-        <h2 id="h.ncxyidnrq7uz" className={styles.h2}>1.1. Interview Questions</h2>
+        id="h.ncxyidnrq7uz" className={styles.h2}>1.1. Interview Questions</h2>
         <p className={styles.paragraph}>Q1: What happens if dont_touch is applied on large block?  Timing closure becomes difficult</p>
         <p className={styles.paragraph}>Q2: Can dont_touch prevent empty module removal?   No, empty logic still removed</p>
         <hr className={styles.divider} />
-        <h2 id="h.qp8ttxyhdoez" className={styles.h2}>1.2. Student Summary</h2>
+        id="h.qp8ttxyhdoez" className={styles.h2}>1.2. Student Summary</h2>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c24">set_dont_touch</span><span class="c4">&nbsp;→ protect logic<br></span></li><li class="c5 c6 li-bullet-0"><span class="c24">set_dont_use</span><span class="c4">&nbsp;→ block cells<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Use carefully<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Overuse causes timing &amp; area problems<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.xri2ruzymm2" className={styles.h2}>1.3. Conclusion</h2>
+        id="h.xri2ruzymm2" className={styles.h2}>1.3. Conclusion</h2>
         <p className={styles.paragraph}>These commands give control to synthesis engineer. Used wisely → design success Used blindly → timing failure</p>
-        <h2 id="h.rkgkyfxekj8p" className={styles.h2}>Unresolved References in Logical Synthesis</h2>
+        id="h.rkgkyfxekj8p" className={styles.h2}>Unresolved References in Logical Synthesis</h2>
         <p className={styles.paragraph}>{`(One of the MOST COMMON & CONFUSING synthesis issues for beginners)`}</p>
         <hr className={styles.divider} />
-        <h2 id="h.87mpjf470aol" className={styles.h2}>1. What is an Unresolved Reference?</h2>
+        id="h.87mpjf470aol" className={styles.h2}>1. What is an Unresolved Reference?</h2>
         <h3 id="h.8q0p99o9j51s" className={styles.h3}>Simple Definition (Student Friendly)</h3>
         <p className={styles.paragraph}>Unresolved reference means: Synthesis tool sees a module or cell name, but it does NOT know its definition.</p>
         <p className={styles.paragraph}>In short:</p>
@@ -3099,7 +3100,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image26.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.dtqwmr2r75b" className={styles.h2}>2. Where Does This Error Appear in Flow?</h2>
+        id="h.dtqwmr2r75b" className={styles.h2}>2. Where Does This Error Appear in Flow?</h2>
         <p className={styles.paragraph}>RTL Read</p>
         <p className={styles.paragraph}>↓</p>
         <p className={styles.paragraph}>Analyze</p>
@@ -3114,7 +3115,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>Important Unresolved reference is mainly caught during:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c1">analyze<br></span></li><li class="c5 c6 li-bullet-0"><span class="c1">elaborate<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.h4u6ry8engi5" className={styles.h2}>3. Most Common Causes of Unresolved References</h2>
+        id="h.h4u6ry8engi5" className={styles.h2}>3. Most Common Causes of Unresolved References</h2>
         <h3 id="h.9bgeyqs9hr0s" className={styles.h3}>1. Missing RTL File</h3>
         <p className={styles.paragraph}>module top;</p>
         <p className={styles.paragraph}>fifo u1();  // fifo.v not read</p>
@@ -3144,7 +3145,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>But submodules are in:</p>
         <p className={styles.paragraph}>/rtl/core/</p>
         <hr className={styles.divider} />
-        <h2 id="h.uya35216qo6m" className={styles.h2}>4. Types of Unresolved References</h2>
+        id="h.uya35216qo6m" className={styles.h2}>4. Types of Unresolved References</h2>
         <h3 id="h.te1juqoztck4" className={styles.h3}>Type 1: RTL Unresolved Reference</h3>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Missing Verilog module<br></span></li>` }} />
         <h3 id="h.gbehyrh22j6a" className={styles.h3}>Type 2: Library Cell Unresolved Reference</h3>
@@ -3152,7 +3153,7 @@ const Module6Content = () => {
         <h3 id="h.e3k7cc8x3miy" className={styles.h3}>Type 3: IP / Memory Black Box</h3>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Expected in ASIC flow<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.tejojh2oempp" className={styles.h2}>5. How to Detect Unresolved References</h2>
+        id="h.tejojh2oempp" className={styles.h2}>5. How to Detect Unresolved References</h2>
         <h3 id="h.cunrdm4z3zko" className={styles.h3}>Command</h3>
         <p className={styles.paragraph}>check_design</p>
         <p className={styles.paragraph}>or</p>
@@ -3161,7 +3162,7 @@ const Module6Content = () => {
         <h3 id="h.9cq6t672i0h6" className={styles.h3}>Output Example</h3>
         <p className={styles.paragraph}>Warning: Unresolved reference 'ram_32x8'</p>
         <hr className={styles.divider} />
-        <h2 id="h.wwruxmv695z9" className={styles.h2}>6. How to Fix Unresolved References (Step-by-Step)</h2>
+        id="h.wwruxmv695z9" className={styles.h2}>6. How to Fix Unresolved References (Step-by-Step)</h2>
         <hr className={styles.divider} />
         <h3 id="h.5gbm5o6nzubx" className={styles.h3}>Fix 1: Read All RTL Files</h3>
         <p className={styles.paragraph}>read_verilog rtl/*.v</p>
@@ -3185,12 +3186,12 @@ const Module6Content = () => {
         <p className={styles.paragraph}>Used when:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Memory is replaced later<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Physical macro exists<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.8o6tpcywzm3k" className={styles.h2}>7. Black Box vs Unresolved Reference</h2>
+        id="h.8o6tpcywzm3k" className={styles.h2}>7. Black Box vs Unresolved Reference</h2>
         <div className={styles.tableContainer}>
           <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c10"><td class="c35" colspan="1" rowspan="1"><p class="c0"><span class="c14">Aspect</span></p></td><td class="c53" colspan="1" rowspan="1"><p class="c0"><span class="c14">Black Box</span></p></td><td class="c64" colspan="1" rowspan="1"><p class="c0"><span class="c14">Unresolved</span></p></td></tr><tr class="c10"><td class="c35" colspan="1" rowspan="1"><p class="c7"><span class="c4">Intentional</span></p></td><td class="c53" colspan="1" rowspan="1"><p class="c7"><span class="c4">Yes</span></p></td><td class="c64" colspan="1" rowspan="1"><p class="c7"><span class="c4">No</span></p></td></tr><tr class="c10"><td class="c35" colspan="1" rowspan="1"><p class="c7"><span class="c4">Tool aware</span></p></td><td class="c53" colspan="1" rowspan="1"><p class="c7"><span class="c4">Yes</span></p></td><td class="c64" colspan="1" rowspan="1"><p class="c7"><span class="c4">No</span></p></td></tr><tr class="c10"><td class="c35" colspan="1" rowspan="1"><p class="c7"><span class="c4">Error</span></p></td><td class="c53" colspan="1" rowspan="1"><p class="c7"><span class="c4">No</span></p></td><td class="c64" colspan="1" rowspan="1"><p class="c7"><span class="c4">Yes</span></p></td></tr><tr class="c10"><td class="c35" colspan="1" rowspan="1"><p class="c7"><span class="c4">Used for</span></p></td><td class="c53" colspan="1" rowspan="1"><p class="c7"><span class="c4">Memories, IPs</span></p></td><td class="c64" colspan="1" rowspan="1"><p class="c7"><span class="c4">Mistakes</span></p></td></tr></tbody>` }} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.34exw5m0nphi" className={styles.h2}>8. Real Industry Example</h2>
+        id="h.34exw5m0nphi" className={styles.h2}>8. Real Industry Example</h2>
         <h3 id="h.p50jjvnrierb" className={styles.h3}>Scenario:</h3>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">SRAM provided by foundry<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">RTL model not given<br></span></li>` }} />
         <p className={styles.paragraph}>Solution:</p>
@@ -3201,24 +3202,24 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image38.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.c1perz66vd3r" className={styles.h2}>9. What Happens If You Ignore It?</h2>
+        id="h.c1perz66vd3r" className={styles.h2}>9. What Happens If You Ignore It?</h2>
         <p className={styles.paragraph}>Tool may:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Remove logic<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Create floating nets<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Produce incorrect netlist<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Cause PNR failure<br></span></li>` }} />
         <p className={styles.paragraph}>NEVER ignore unresolved references</p>
         <hr className={styles.divider} />
-        <h2 id="h.foidbwxu19wl" className={styles.h2}>Interview Questions</h2>
+        id="h.foidbwxu19wl" className={styles.h2}>Interview Questions</h2>
         <p className={styles.paragraph}>Q1: Can synthesis proceed with unresolved references?   No (except black boxes)</p>
         <p className={styles.paragraph}>Q2: Are unresolved references allowed in PNR?   No</p>
         <hr className={styles.divider} />
-        <h2 id="h.4ir4v8fc25my" className={styles.h2}>1.1. Student Summary</h2>
+        id="h.4ir4v8fc25my" className={styles.h2}>1.1. Student Summary</h2>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Unresolved reference = missing definition<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Happens during analyze/elaborate<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Caused by missing RTL or library<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Fixed by reading files or black boxing<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.s818tf8ejau2" className={styles.h2}>1.2. Conclusion</h2>
+        id="h.s818tf8ejau2" className={styles.h2}>1.2. Conclusion</h2>
         <p className={styles.paragraph}>Unresolved reference is not a tool bug. It is a design completeness problem. A good synthesis engineer fixes it before compile.</p>
-        <h2 id="h.zfw4ocfbhi79" className={styles.h2}>Clock Gating in Logical Synthesis</h2>
+        id="h.zfw4ocfbhi79" className={styles.h2}>Clock Gating in Logical Synthesis</h2>
         <p className={styles.paragraph}>(VERY IMPORTANT – asked in interviews + used in every real chip)</p>
         <hr className={styles.divider} />
-        <h2 id="h.iyxgwvbxe0pw" className={styles.h2}>1. Why Clock Gating is Needed (Very Simple Start)</h2>
+        id="h.iyxgwvbxe0pw" className={styles.h2}>1. Why Clock Gating is Needed (Very Simple Start)</h2>
         <h3 id="h.fshmy2b34wl8" className={styles.h3}>Problem First (Without Clock Gating)</h3>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span>Clock toggles </span><span class="c20 c14">every flip-flop<br></span></li><li class="c5 c6 li-bullet-0"><span>Even when data is </span><span class="c20 c14">not changing<br></span></li><li class="c5 c6 li-bullet-0"><span>Causes </span><span class="c20 c14">huge dynamic power waste<br></span></li>` }} />
         <p className={styles.paragraph}>Fact</p>
@@ -3233,23 +3234,23 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image36.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.wh1m7ai6ekh0" className={styles.h2}>2. What is Clock Gating? (Correct Industry Definition)</h2>
+        id="h.wh1m7ai6ekh0" className={styles.h2}>2. What is Clock Gating? (Correct Industry Definition)</h2>
         <p className={styles.paragraph}>Clock gating is a low-power technique where the clock signal is selectively turned OFF for idle registers, without affecting functionality.</p>
         <p className={styles.paragraph}>In short:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">If data not changing → stop clock<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">If data needed → allow clock<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.qyd8htpr8fc7" className={styles.h2}>3. What Happens Without Clock Gating?</h2>
+        id="h.qyd8htpr8fc7" className={styles.h2}>3. What Happens Without Clock Gating?</h2>
         <div className={styles.tableContainer}>
           <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c10"><td class="c27" colspan="1" rowspan="1"><p class="c0"><span class="c14">Aspect</span></p></td><td class="c34" colspan="1" rowspan="1"><p class="c0"><span class="c14">Without Clock Gating</span></p></td></tr><tr class="c10"><td class="c27" colspan="1" rowspan="1"><p class="c7"><span class="c4">Power</span></p></td><td class="c34" colspan="1" rowspan="1"><p class="c7"><span class="c4">Very high</span></p></td></tr><tr class="c10"><td class="c27" colspan="1" rowspan="1"><p class="c7"><span class="c4">Clock toggling</span></p></td><td class="c34" colspan="1" rowspan="1"><p class="c7"><span class="c4">Always</span></p></td></tr><tr class="c10"><td class="c27" colspan="1" rowspan="1"><p class="c7"><span class="c4">Battery life</span></p></td><td class="c34" colspan="1" rowspan="1"><p class="c7"><span class="c4">Poor</span></p></td></tr><tr class="c10"><td class="c27" colspan="1" rowspan="1"><p class="c7"><span class="c4">Thermal</span></p></td><td class="c34" colspan="1" rowspan="1"><p class="c7"><span class="c4">High heat</span></p></td></tr></tbody>` }} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.dxwbtl9hruvq" className={styles.h2}>4. What Happens With Clock Gating?</h2>
+        id="h.dxwbtl9hruvq" className={styles.h2}>4. What Happens With Clock Gating?</h2>
         <div className={styles.tableContainer}>
           <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c10"><td class="c27" colspan="1" rowspan="1"><p class="c0"><span class="c14">Aspect</span></p></td><td class="c47" colspan="1" rowspan="1"><p class="c0"><span class="c14">With Clock Gating</span></p></td></tr><tr class="c10"><td class="c27" colspan="1" rowspan="1"><p class="c7"><span class="c4">Power</span></p></td><td class="c47" colspan="1" rowspan="1"><p class="c7"><span class="c4">Reduced</span></p></td></tr><tr class="c10"><td class="c27" colspan="1" rowspan="1"><p class="c7"><span class="c4">Clock toggling</span></p></td><td class="c47" colspan="1" rowspan="1"><p class="c7"><span class="c4">Only when needed</span></p></td></tr><tr class="c10"><td class="c27" colspan="1" rowspan="1"><p class="c7"><span class="c4">Performance</span></p></td><td class="c47" colspan="1" rowspan="1"><p class="c7"><span class="c4">Same</span></p></td></tr><tr class="c10"><td class="c27" colspan="1" rowspan="1"><p class="c7"><span class="c4">Area</span></p></td><td class="c47" colspan="1" rowspan="1"><p class="c7"><span class="c4">Slight increase</span></p></td></tr></tbody>` }} />
         </div>
         <p className={styles.paragraph}>Important Clock gating affects power, NOT functionality.</p>
         <hr className={styles.divider} />
-        <h2 id="h.w8xde631l5bn" className={styles.h2}>5. Where Clock Gating is Added in Flow?</h2>
+        id="h.w8xde631l5bn" className={styles.h2}>5. Where Clock Gating is Added in Flow?</h2>
         <h3 id="h.v56g2j8mhf0h" className={styles.h3}>Correct Answer (Very Important)</h3>
         <p className={styles.paragraph}>RTL</p>
         <p className={styles.paragraph}>↓</p>
@@ -3264,7 +3265,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>Mapping</p>
         <p className={styles.paragraph}>Clock gating is added during OPTIMIZATION stage</p>
         <hr className={styles.divider} />
-        <h2 id="h.8ic65h444k2e" className={styles.h2}>6. Types of Clock Gating</h2>
+        id="h.8ic65h444k2e" className={styles.h2}>6. Types of Clock Gating</h2>
         <h3 id="h.mpvv45mkenm" className={styles.h3}>1. RTL Clock Gating (Manual)</h3>
         <p className={styles.paragraph}>Example:</p>
         <p className={styles.paragraph}>if (enable)</p>
@@ -3277,7 +3278,8 @@ const Module6Content = () => {
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Clock gating cells<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Based on data activity<br></span></li>` }} />
         <p className={styles.paragraph}>✔ Most common in industry</p>
         <hr className={styles.divider} />
-        <h2 id="h.xgnu4cbgy2ex" className={styles.h2}>7. Clock Gating Cell (Very Important)</h2>
+        <AdUnit slotId="slot_module6content_mid2" />
+          <h2 id="h.xgnu4cbgy2ex" className={styles.h2}>7. Clock Gating Cell (Very Important)</h2>
         <h3 id="h.w7wn0tboqc85" className={styles.h3}>What is a Clock Gating Cell?</h3>
         <p className={styles.paragraph}>A special standard cell containing:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">AND gate / Latch<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Glitch-free clock control<br></span></li>` }} />
@@ -3288,11 +3290,11 @@ const Module6Content = () => {
         <p className={styles.paragraph}>✔ Clock gating cell:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Latch-based<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Safe for clock path<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.k3dfttlc9jn2" className={styles.h2}>8. Clock Gating Working (Step-by-Step)</h2>
+        id="h.k3dfttlc9jn2" className={styles.h2}>8. Clock Gating Working (Step-by-Step)</h2>
         <p className={styles.paragraph}>1. Enable = 0 → Clock blocked → Flops do NOT toggle</p>
         <p className={styles.paragraph}>2. Enable = 1 → Clock passes → Flops toggle normally</p>
         <hr className={styles.divider} />
-        <h2 id="h.pvorqtalhmnc" className={styles.h2}>9. Command to Enable Clock Gating (Industry Tool)</h2>
+        id="h.pvorqtalhmnc" className={styles.h2}>9. Command to Enable Clock Gating (Industry Tool)</h2>
         <h3 id="h.hp8nkftv50tp" className={styles.h3}>Synopsys DC Example</h3>
         <p className={styles.paragraph}>set_clock_gating_style \</p>
         <p className={styles.paragraph}>-positive_edge_logic integrated \</p>
@@ -3304,12 +3306,12 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image45.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.yjvqfrctdhiu" className={styles.h2}>Conditions for Clock Gating Inference</h2>
+        id="h.yjvqfrctdhiu" className={styles.h2}>Conditions for Clock Gating Inference</h2>
         <p className={styles.paragraph}>Tool checks:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Enable condition<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Stable enable<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">No async reset conflict<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Timing safe<br></span></li>` }} />
         <p className={styles.paragraph}>If conditions fail →  No gating</p>
         <hr className={styles.divider} />
-        <h2 id="h.6bjburv5k3r0" className={styles.h2}>1.1. Example: RTL → Clock Gated Netlist</h2>
+        id="h.6bjburv5k3r0" className={styles.h2}>1.1. Example: RTL → Clock Gated Netlist</h2>
         <h3 id="h.78qd6ntt7q86" className={styles.h3}>RTL Code</h3>
         <p className={styles.paragraph}>always @(posedge clk)</p>
         <p className={styles.paragraph}>if (en)</p>
@@ -3320,34 +3322,34 @@ const Module6Content = () => {
         <p className={styles.paragraph}>en</p>
         <p className={styles.paragraph}>✔ Power saved ✔ Function same</p>
         <hr className={styles.divider} />
-        <h2 id="h.jetdcnr7ub9j" className={styles.h2}>1.2. Why Clock Gating is NOT Done in RTL Always?</h2>
+        id="h.jetdcnr7ub9j" className={styles.h2}>1.2. Why Clock Gating is NOT Done in RTL Always?</h2>
         <div className={styles.tableContainer}>
           <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c10"><td class="c65" colspan="1" rowspan="1"><p class="c0"><span class="c14">Reason</span></p></td></tr><tr class="c10"><td class="c65" colspan="1" rowspan="1"><p class="c7"><span class="c4">Hard to manage</span></p></td></tr><tr class="c10"><td class="c65" colspan="1" rowspan="1"><p class="c7"><span class="c4">Clock tree issues</span></p></td></tr><tr class="c10"><td class="c65" colspan="1" rowspan="1"><p class="c7"><span class="c4">Risk of glitches</span></p></td></tr><tr class="c10"><td class="c65" colspan="1" rowspan="1"><p class="c7"><span class="c4">CTS complexity</span></p></td></tr></tbody>` }} />
         </div>
         <p className={styles.paragraph}>✔ Best practice:</p>
         <p className={styles.paragraph}>Let synthesis insert gating</p>
         <hr className={styles.divider} />
-        <h2 id="h.5aza9b1ufxbf" className={styles.h2}>1.3. Advantages of Clock Gating</h2>
+        id="h.5aza9b1ufxbf" className={styles.h2}>1.3. Advantages of Clock Gating</h2>
         <p className={styles.paragraph}>✔ Huge power reduction ✔ No performance loss ✔ Industry standard ✔ Essential for low-power chips</p>
         <hr className={styles.divider} />
-        <h2 id="h.16w8h1b6o6oh" className={styles.h2}>1.4. Disadvantages of Clock Gating</h2>
+        id="h.16w8h1b6o6oh" className={styles.h2}>1.4. Disadvantages of Clock Gating</h2>
         <p className={styles.paragraph}>Extra area  Slight timing complexity  CTS becomes harder</p>
         <hr className={styles.divider} />
-        <h2 id="h.w1vbsposfnnl" className={styles.h2}>1.5. Interview Questions</h2>
+        id="h.w1vbsposfnnl" className={styles.h2}>1.5. Interview Questions</h2>
         <p className={styles.paragraph}>Q1: At which stage is clock gating added?  Optimization stage</p>
         <p className={styles.paragraph}>Q2: Why not use AND gate directly?  Causes glitches</p>
         <p className={styles.paragraph}>Q3: Does clock gating affect functionality?  No</p>
         <hr className={styles.divider} />
-        <h2 id="h.sufeqkvj03z0" className={styles.h2}>1.6. Student Summary</h2>
+        id="h.sufeqkvj03z0" className={styles.h2}>1.6. Student Summary</h2>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Clock consumes most power<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Clock gating reduces dynamic power<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Inserted during synthesis optimization<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Uses special clock gating cells<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.lkkghfakjd78" className={styles.h2}>1.7. Conclusion</h2>
+        id="h.lkkghfakjd78" className={styles.h2}>1.7. Conclusion</h2>
         <p className={styles.paragraph}>Clock gating is the heart of low-power design. No modern chip exists without it.</p>
         <hr className={styles.divider} />
-        <h2 id="h.rjtozhrt8xb" className={styles.h2}>How Timing is Met in Logical Synthesis</h2>
+        id="h.rjtozhrt8xb" className={styles.h2}>How Timing is Met in Logical Synthesis</h2>
         <p className={styles.paragraph}>{`(MOST IMPORTANT for real projects & interviews)`}</p>
         <hr className={styles.divider} />
-        <h2 id="h.n5k25he4mb6l" className={styles.h2}>1. First Understand: What is “Timing” in Synthesis?</h2>
+        id="h.n5k25he4mb6l" className={styles.h2}>1. First Understand: What is “Timing” in Synthesis?</h2>
         <h3 id="h.v0i122udv3kp" className={styles.h3}>Simple Definition</h3>
         <p className={styles.paragraph}>Timing means data must travel from one register to another within the required clock period.</p>
         <p className={styles.paragraph}>If it fails → Timing violation</p>
@@ -3362,22 +3364,22 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image34.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.adx47tl03ifr" className={styles.h2}>2. Types of Timing in Logical Synthesis</h2>
+        id="h.adx47tl03ifr" className={styles.h2}>2. Types of Timing in Logical Synthesis</h2>
         <div className={styles.tableContainer}>
           <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c10"><td class="c21" colspan="1" rowspan="1"><p class="c0"><span class="c14">Type</span></p></td><td class="c61" colspan="1" rowspan="1"><p class="c0"><span class="c14">Meaning</span></p></td></tr><tr class="c10"><td class="c21" colspan="1" rowspan="1"><p class="c7"><span class="c4">Setup Timing</span></p></td><td class="c61" colspan="1" rowspan="1"><p class="c7"><span class="c4">Data arrives before clock</span></p></td></tr><tr class="c10"><td class="c21" colspan="1" rowspan="1"><p class="c7"><span class="c4">Hold Timing</span></p></td><td class="c61" colspan="1" rowspan="1"><p class="c7"><span class="c4">Data stays stable after clock</span></p></td></tr><tr class="c10"><td class="c21" colspan="1" rowspan="1"><p class="c7"><span class="c4">Max Delay</span></p></td><td class="c61" colspan="1" rowspan="1"><p class="c7"><span class="c4">Long paths</span></p></td></tr><tr class="c10"><td class="c21" colspan="1" rowspan="1"><p class="c7"><span class="c4">Min Delay</span></p></td><td class="c61" colspan="1" rowspan="1"><p class="c7"><span class="c4">Short paths</span></p></td></tr></tbody>` }} />
         </div>
         <p className={styles.paragraph}>Logical synthesis mainly focuses on SETUP (Max delay)</p>
         <hr className={styles.divider} />
-        <h2 id="h.v8622ijfk0x3" className={styles.h2}>3. Why Timing Fails After Synthesis?</h2>
+        id="h.v8622ijfk0x3" className={styles.h2}>3. Why Timing Fails After Synthesis?</h2>
         <p className={styles.paragraph}>Common reasons:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Long combinational paths<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Too many logic levels<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Bad constraints<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Wrong hierarchy<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Over-optimized area<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.g9gw4vhpzg0h" className={styles.h2}>4. How Synthesis Tool Fixes Timing?</h2>
+        id="h.g9gw4vhpzg0h" className={styles.h2}>4. How Synthesis Tool Fixes Timing?</h2>
         <p className={styles.paragraph}>Tool uses multiple techniques, not just one.</p>
         <p className={styles.paragraph}>Main techniques:</p>
         <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Path grouping<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Ungrouping<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Boundary optimization<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Constraint tightening<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Cell resizing<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Logic restructuring<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.s17slwfq67a8" className={styles.h2}>5. Path Grouping (group_path)</h2>
+        id="h.s17slwfq67a8" className={styles.h2}>5. Path Grouping (group_path)</h2>
         <h3 id="h.np2aqfux8km5" className={styles.h3}>What is Path Grouping?</h3>
         <p className={styles.paragraph}>Dividing timing paths into meaningful groups so tool can optimize better.</p>
         <hr className={styles.divider} />
@@ -3399,7 +3401,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image44.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.8j9ksthuj3jv" className={styles.h2}>6. Ungrouping (Hierarchy Flattening)</h2>
+        id="h.8j9ksthuj3jv" className={styles.h2}>6. Ungrouping (Hierarchy Flattening)</h2>
         <h3 id="h.a5ey42iwf47s" className={styles.h3}>What is Ungrouping?</h3>
         <p className={styles.paragraph}>Removing hierarchy boundaries so synthesis can optimize across modules.</p>
         <hr className={styles.divider} />
@@ -3420,7 +3422,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image3.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.pq3fcrycon5g" className={styles.h2}>7. Boundary Optimization</h2>
+        id="h.pq3fcrycon5g" className={styles.h2}>7. Boundary Optimization</h2>
         <h3 id="h.76h7lnaapyho" className={styles.h3}>What is Boundary Optimization?</h3>
         <p className={styles.paragraph}>Optimizing logic across module boundaries to reduce delay.</p>
         <hr className={styles.divider} />
@@ -3434,7 +3436,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image25.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.k15ilac8sdc0" className={styles.h2}>8. Constraint Tightening</h2>
+        id="h.k15ilac8sdc0" className={styles.h2}>8. Constraint Tightening</h2>
         <h3 id="h.pfeaihta1enk" className={styles.h3}>What is Constraint Tightening?</h3>
         <p className={styles.paragraph}>Intentionally giving tighter timing constraints to force aggressive optimization.</p>
         <hr className={styles.divider} />
@@ -3452,45 +3454,45 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image25.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.kr37ouadhp6y" className={styles.h2}>{`9. Cell Resizing & Logic Restructuring`}</h2>
+        id="h.kr37ouadhp6y" className={styles.h2}>{`9. Cell Resizing & Logic Restructuring`}</h2>
         <p className={styles.paragraph}>Tool automatically:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Uses faster cells<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Increases drive strength<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Reduces logic depth<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Balances paths<br></span></li>` }} />
         <p className={styles.paragraph}>Example:</p>
         <p className={styles.paragraph}>NAND → AOI → OAI</p>
         <hr className={styles.divider} />
-        <h2 id="h.m5tz9fr20uis" className={styles.h2}>Multi-Corner Multi-Mode (MCMM)</h2>
+        id="h.m5tz9fr20uis" className={styles.h2}>Multi-Corner Multi-Mode (MCMM)</h2>
         <p className={styles.paragraph}>Tool optimizes for:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Different clocks<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Different modes<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Different corners<br></span></li>` }} />
         <p className={styles.paragraph}>Ensures timing closure in real silicon</p>
         <hr className={styles.divider} />
-        <h2 id="h.s8unrtwz1k4o" className={styles.h2}>1.1. Timing Closure Strategy (Industry)</h2>
+        id="h.s8unrtwz1k4o" className={styles.h2}>1.1. Timing Closure Strategy (Industry)</h2>
         <p className={styles.paragraph}>1. Clean constraints 2. Group paths 3. Fix hierarchy 4. Optimize critical paths 5. Re-run compile 6. Check reports</p>
         <hr className={styles.divider} />
-        <h2 id="h.5y0reyytavzi" className={styles.h2}>1.2. Commands Used for Timing</h2>
+        id="h.5y0reyytavzi" className={styles.h2}>1.2. Commands Used for Timing</h2>
         <p className={styles.paragraph}>report_timing</p>
         <p className={styles.paragraph}>report_constraint</p>
         <p className={styles.paragraph}>report_qor</p>
         <hr className={styles.divider} />
-        <h2 id="h.ej4lwsgngbq" className={styles.h2}>1.3. Advantages of These Techniques</h2>
+        id="h.ej4lwsgngbq" className={styles.h2}>1.3. Advantages of These Techniques</h2>
         <p className={styles.paragraph}>✔ Better timing ✔ Fewer ECOs later ✔ Cleaner PNR handoff</p>
         <hr className={styles.divider} />
-        <h2 id="h.5rotggb4kan9" className={styles.h2}>1.4. Disadvantages / Cautions</h2>
+        id="h.5rotggb4kan9" className={styles.h2}>1.4. Disadvantages / Cautions</h2>
         <p className={styles.paragraph}>Too much flattening increases area  Over-tight constraints increase power  Poor grouping hides real critical paths</p>
         <hr className={styles.divider} />
-        <h2 id="h.l7b0vbe4kfsu" className={styles.h2}>1.5. Interview Questions</h2>
+        id="h.l7b0vbe4kfsu" className={styles.h2}>1.5. Interview Questions</h2>
         <p className={styles.paragraph}>Q: What is grouping vs ungrouping?  Grouping = path focus  Ungrouping = hierarchy removal</p>
         <p className={styles.paragraph}>Q: Why tighten constraints?  Force better optimization</p>
         <hr className={styles.divider} />
-        <h2 id="h.rt52wjarts4w" className={styles.h2}>1.6. Student Summary</h2>
+        id="h.rt52wjarts4w" className={styles.h2}>1.6. Student Summary</h2>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Timing is main goal of synthesis<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Tool uses multiple optimization tricks<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Engineer guides tool using constraints &amp; commands<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.walazcjrrx9a" className={styles.h2}>1.7. Conclusion</h2>
+        id="h.walazcjrrx9a" className={styles.h2}>1.7. Conclusion</h2>
         <p className={styles.paragraph}>Timing closure is not automatic. Good synthesis engineer = good constraint writer.</p>
         <hr className={styles.divider} />
-        <h2 id="h.kokuqpirh1u4" className={styles.h2}>Outputs of Logical Synthesis (Industry Perspective)</h2>
+        id="h.kokuqpirh1u4" className={styles.h2}>Outputs of Logical Synthesis (Industry Perspective)</h2>
         <p className={styles.paragraph}>After logical synthesis completes, tools do NOT just give one file. They generate multiple critical outputs that are used by PNR, STA, DFT, Power teams.</p>
         <hr className={styles.divider} />
-        <h2 id="h.n44eb56fcivr" className={styles.h2}>1. Why Outputs of Logical Synthesis Are Important?</h2>
+        id="h.n44eb56fcivr" className={styles.h2}>1. Why Outputs of Logical Synthesis Are Important?</h2>
         <p className={styles.paragraph}>Logical synthesis is NOT the end. It is a handoff stage.</p>
         <p className={styles.paragraph}>Outputs are used by:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Physical Design (PNR)<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Static Timing Analysis (STA)<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Power Analysis<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">ECO &amp; Debug<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Tapeout checks<br></span></li>` }} />
@@ -3499,13 +3501,13 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image49.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.ximawa7kxyh1" className={styles.h2}>2. Main Outputs of Logical Synthesis</h2>
+        id="h.ximawa7kxyh1" className={styles.h2}>2. Main Outputs of Logical Synthesis</h2>
         <div className={styles.tableContainer}>
           <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c10"><td class="c16" colspan="1" rowspan="1"><p class="c0"><span class="c14">Output</span></p></td><td class="c37" colspan="1" rowspan="1"><p class="c0"><span class="c14">Purpose</span></p></td></tr><tr class="c10"><td class="c16" colspan="1" rowspan="1"><p class="c7"><span class="c4">Gate-level Netlist</span></p></td><td class="c37" colspan="1" rowspan="1"><p class="c7"><span class="c4">Physical implementation</span></p></td></tr><tr class="c10"><td class="c16" colspan="1" rowspan="1"><p class="c7"><span class="c4">SDC</span></p></td><td class="c37" colspan="1" rowspan="1"><p class="c7"><span class="c4">Timing constraints</span></p></td></tr><tr class="c10"><td class="c16" colspan="1" rowspan="1"><p class="c7"><span class="c4">DDC / DB</span></p></td><td class="c37" colspan="1" rowspan="1"><p class="c7"><span class="c4">Tool internal database</span></p></td></tr><tr class="c10"><td class="c16" colspan="1" rowspan="1"><p class="c7"><span class="c4">Timing Reports</span></p></td><td class="c37" colspan="1" rowspan="1"><p class="c7"><span class="c4">Check timing</span></p></td></tr><tr class="c10"><td class="c16" colspan="1" rowspan="1"><p class="c7"><span class="c4">Area Reports</span></p></td><td class="c37" colspan="1" rowspan="1"><p class="c7"><span class="c4">Check area</span></p></td></tr><tr class="c10"><td class="c16" colspan="1" rowspan="1"><p class="c7"><span class="c4">Power Reports</span></p></td><td class="c37" colspan="1" rowspan="1"><p class="c7"><span class="c4">Check power</span></p></td></tr><tr class="c10"><td class="c16" colspan="1" rowspan="1"><p class="c7"><span class="c4">QoR Reports</span></p></td><td class="c37" colspan="1" rowspan="1"><p class="c7"><span class="c4">Overall quality</span></p></td></tr></tbody>` }} />
         </div>
         <p className={styles.paragraph}>We will explain each one deeply.</p>
         <hr className={styles.divider} />
-        <h2 id="h.tlskbb98d73j" className={styles.h2}>3. Gate-Level Netlist (.v)</h2>
+        id="h.tlskbb98d73j" className={styles.h2}>3. Gate-Level Netlist (.v)</h2>
         <h3 id="h.wjdcc8ssflk9" className={styles.h3}>What Is Gate-Level Netlist?</h3>
         <p className={styles.paragraph}>A Verilog file containing only standard cells from the technology library.</p>
         <hr className={styles.divider} />
@@ -3525,7 +3527,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image1.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.8vqq0cu0lgiw" className={styles.h2}>4. SDC (Synopsys Design Constraints)</h2>
+        id="h.8vqq0cu0lgiw" className={styles.h2}>4. SDC (Synopsys Design Constraints)</h2>
         <h3 id="h.vta56gt83ujr" className={styles.h3}>What Is SDC?</h3>
         <p className={styles.paragraph}>A file that contains timing intent of the design.</p>
         <p className={styles.paragraph}>Examples:</p>
@@ -3541,7 +3543,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image24.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.joys97s4qbk5" className={styles.h2}>5. DDC / DB (Design Database)</h2>
+        id="h.joys97s4qbk5" className={styles.h2}>5. DDC / DB (Design Database)</h2>
         <h3 id="h.wz1my76x59qr" className={styles.h3}>What Is DDC?</h3>
         <p className={styles.paragraph}>Tool’s internal compiled database</p>
         <hr className={styles.divider} />
@@ -3555,7 +3557,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image6.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.gabmuaa5tnoa" className={styles.h2}>6. Timing Reports</h2>
+        id="h.gabmuaa5tnoa" className={styles.h2}>6. Timing Reports</h2>
         <h3 id="h.bkte3ucou401" className={styles.h3}>Why Timing Reports?</h3>
         <p className={styles.paragraph}>To check:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Setup violations<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Slack<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Critical paths<br></span></li>` }} />
@@ -3574,7 +3576,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image17.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.6ypw051pyl3e" className={styles.h2}>7. Area Reports</h2>
+        id="h.6ypw051pyl3e" className={styles.h2}>7. Area Reports</h2>
         <h3 id="h.noxtn545jaa0" className={styles.h3}>Why Area Reports?</h3>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Check design size<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Compare optimization impact<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Cost estimation<br></span></li>` }} />
         <hr className={styles.divider} />
@@ -3588,7 +3590,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image9.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.edr00a8e7y5m" className={styles.h2}>8. Power Reports</h2>
+        id="h.edr00a8e7y5m" className={styles.h2}>8. Power Reports</h2>
         <h3 id="h.b1wtldqeoeo" className={styles.h3}>Why Power Reports?</h3>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Power budget<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Battery life<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Thermal safety<br></span></li>` }} />
         <hr className={styles.divider} />
@@ -3604,7 +3606,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image41.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.utpotsez8cta" className={styles.h2}>9. QoR (Quality of Results) Report</h2>
+        id="h.utpotsez8cta" className={styles.h2}>9. QoR (Quality of Results) Report</h2>
         <h3 id="h.9ns9itrzanwx" className={styles.h3}>What Is QoR?</h3>
         <p className={styles.paragraph}>Single report summarizing Timing, Area, Power</p>
         <hr className={styles.divider} />
@@ -3615,7 +3617,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image46.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.al3te4lxjnl0" className={styles.h2}>Industrial-Level Logical Synthesis Flow (Step-by-Step)</h2>
+        id="h.al3te4lxjnl0" className={styles.h2}>Industrial-Level Logical Synthesis Flow (Step-by-Step)</h2>
         <p className={styles.paragraph}>Now REAL FLOW, not theory.</p>
         <hr className={styles.divider} />
         <h3 id="h.3lz6ktp5ty6g" className={styles.h3}>Step 1. Read Libraries</h3>
@@ -3649,7 +3651,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image39.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.1fwdzgpsscrx" className={styles.h2}>1.1. analyze vs elaborate vs read_verilog</h2>
+        id="h.1fwdzgpsscrx" className={styles.h2}>1.1. analyze vs elaborate vs read_verilog</h2>
         <h3 id="h.2f5zdz5yr4s1" className={styles.h3}>analyze</h3>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Checks syntax<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Converts RTL to intermediate form<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">No design creation<br></span></li>` }} />
         <p className={styles.paragraph}>analyze -format verilog design.v</p>
@@ -3671,17 +3673,17 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image15.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.i4stfypno7go" className={styles.h2}>1.2.  Important Topic</h2>
+        id="h.i4stfypno7go" className={styles.h2}>1.2.  Important Topic</h2>
         <p className={styles.paragraph}>✔ Link stage ✔ QoR analysis ✔ Database handoff ✔ ECO friendliness ✔ MCMM readiness</p>
         <p className={styles.paragraph}>(All are industry-critical)</p>
         <hr className={styles.divider} />
-        <h2 id="h.u8750mfzdp3i" className={styles.h2}>1.3. Student Final Summary</h2>
+        id="h.u8750mfzdp3i" className={styles.h2}>1.3. Student Final Summary</h2>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span>Logical synthesis produces </span><span class="c20 c14">multiple outputs<br></span></li><li class="c5 c6 li-bullet-0"><span>Each output serves a </span><span class="c20 c14">different team<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Missing or wrong output = project failure<br></span></li>` }} />
         <hr className={styles.divider} />
-        <h2 id="h.654gkhascsan" className={styles.h2}>1.4. Conclusion</h2>
+        id="h.654gkhascsan" className={styles.h2}>1.4. Conclusion</h2>
         <p className={styles.paragraph}>Logical synthesis is not about “compile only”. It is about clean, correct, reusable outputs.</p>
         <hr className={styles.divider} />
-        <h2 id="h.d9f4774vlkpq" className={styles.h2}>Linking Stage (Very Important – Often Missed)</h2>
+        id="h.d9f4774vlkpq" className={styles.h2}>Linking Stage (Very Important – Often Missed)</h2>
         <h3 id="h.212i0npgl8tt" className={styles.h3}>What is Linking?</h3>
         <p className={styles.paragraph}>After elaboration, the tool must:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Match RTL cells → library cells<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Resolve references across hierarchy<br></span></li>` }} />
@@ -3692,7 +3694,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>Image Prompt</p>
         <p className={styles.paragraph}>“RTL modules linked with standard cell library blocks”</p>
         <hr className={styles.divider} />
-        <h2 id="h.7343wn6qgqop" className={styles.h2}>2. Design Rule Constraints (DRC at Synthesis Level)</h2>
+        id="h.7343wn6qgqop" className={styles.h2}>2. Design Rule Constraints (DRC at Synthesis Level)</h2>
         <h3 id="h.ny7uy2xl2sy6" className={styles.h3}>What Are These?</h3>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Max transition<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Max capacitance<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Max fanout<br></span></li>` }} />
         <p className={styles.paragraph}>set_max_transition 0.2 [all_outputs]</p>
@@ -3703,7 +3705,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image19.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.5nzdk2ast93n" className={styles.h2}>3. Multicorner Multi-Mode (MCMM) Awareness</h2>
+        id="h.5nzdk2ast93n" className={styles.h2}>3. Multicorner Multi-Mode (MCMM) Awareness</h2>
         <h3 id="h.68zs7hnmkv56" className={styles.h3}>What Is MCMM?</h3>
         <p className={styles.paragraph}>Design must work across:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Multiple corners (SS, TT, FF)<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Multiple modes (functional, scan)<br></span></li>` }} />
@@ -3712,7 +3714,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image20.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.bctlj7mpo7sa" className={styles.h2}>{`4. Clock Definition & Clock Quality`}</h2>
+        id="h.bctlj7mpo7sa" className={styles.h2}>{`4. Clock Definition & Clock Quality`}</h2>
         <h3 id="h.igfg6qttdi8j" className={styles.h3}>Why Clock Is Special?</h3>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Clock drives everything<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Bad clock = bad chip<br></span></li>` }} />
         <p className={styles.paragraph}>create_clock -name clk -period 10 [get_ports clk]</p>
@@ -3722,7 +3724,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image10.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.vuef2wv9rleh" className={styles.h2}>{`5. Scan & DFT Awareness in Synthesis`}</h2>
+        id="h.vuef2wv9rleh" className={styles.h2}>{`5. Scan & DFT Awareness in Synthesis`}</h2>
         <p className={styles.paragraph}>Even if DFT insertion is separate, synthesis must:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Preserve scan ports<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Respect scan_enable<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Avoid optimizing scan logic wrongly<br></span></li>` }} />
         <p className={styles.paragraph}>set_dont_touch [get_ports scan_enable]</p>
@@ -3730,7 +3732,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image48.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.c3dnc36d64mq" className={styles.h2}>6. Formality / LEC Readiness</h2>
+        id="h.c3dnc36d64mq" className={styles.h2}>6. Formality / LEC Readiness</h2>
         <h3 id="h.m0hhy9anhkm8" className={styles.h3}>What Is LEC?</h3>
         <p className={styles.paragraph}>Logical Equivalence Check:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">RTL vs Gate netlist must match<br></span></li>` }} />
@@ -3741,7 +3743,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image16.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.8pgwvgfzg63t" className={styles.h2}>{`7. Naming Rules & Netlist Cleanliness`}</h2>
+        id="h.8pgwvgfzg63t" className={styles.h2}>{`7. Naming Rules & Netlist Cleanliness`}</h2>
         <h3 id="h.sl1mx2oiuv6b" className={styles.h3}>Why Naming Matters?</h3>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">PNR tools are strict<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Bad names → tool errors<br></span></li>` }} />
         <p className={styles.paragraph}>set verilogout_no_tri true</p>
@@ -3750,7 +3752,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image35.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.rqhj8yxyyi3r" className={styles.h2}>8. ECO Friendliness</h2>
+        id="h.rqhj8yxyyi3r" className={styles.h2}>8. ECO Friendliness</h2>
         <h3 id="h.7ir07476rxrk" className={styles.h3}>What Is ECO?</h3>
         <p className={styles.paragraph}>Small fixes without re-synthesizing full design</p>
         <h3 id="h.livdy3tz2lt" className={styles.h3}>How Synthesis Helps?</h3>
@@ -3759,7 +3761,7 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image2.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.z9bkh7gpo99m" className={styles.h2}>9. Hierarchy Control (Flatten vs Preserve)</h2>
+        id="h.z9bkh7gpo99m" className={styles.h2}>9. Hierarchy Control (Flatten vs Preserve)</h2>
         <p className={styles.paragraph}>set_flatten false</p>
         <h3 id="h.wa74q3flwofz" className={styles.h3}>Why Important?</h3>
         <div className={styles.tableContainer}>
@@ -3769,16 +3771,16 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc1_image18.png" alt="" className={styles.contentImage} />
         </div>
         <hr className={styles.divider} />
-        <h2 id="h.yd0hiid400hx" className={styles.h2}>Low-Power Intent Awareness (CPF/UPF – Intro Level)</h2>
+        id="h.yd0hiid400hx" className={styles.h2}>Low-Power Intent Awareness (CPF/UPF – Intro Level)</h2>
         <p className={styles.paragraph}>Even if power is handled later:</p>
         <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c5 c6 li-bullet-0"><span class="c4">Synthesis must not break power intent<br></span></li><li class="c5 c6 li-bullet-0"><span class="c4">Isolation / retention logic must be preserved<br></span></li>` }} />
         <div className={styles.imageContainer}>
           <img loading="lazy" src="/assets/modules/module6/doc1_image47.png" alt="" className={styles.contentImage} />
         </div>
         <h1 id="h.672bqutyqms3" className={styles.h1}>STEP BY STEP PROCESS OF LOGICAL SYNTHESIS USING DC</h1>
-        <h2 id="h.yd89czl5jx61" className={styles.h2}>Step1: create a directory for your new project like ORCA, ARM (mkdir ORCA, cd ORCA )</h2>
-        <h2 id="h.edwjysnj5bvh" className={styles.h2}>Step2: give the permission to that directory (source .cshrc file)</h2>
-        <h2 id="h.qb1jizxp62uh" className={styles.h2}>Step3: launch the dc_shell using below command</h2>
+        id="h.yd89czl5jx61" className={styles.h2}>Step1: create a directory for your new project like ORCA, ARM (mkdir ORCA, cd ORCA )</h2>
+        id="h.edwjysnj5bvh" className={styles.h2}>Step2: give the permission to that directory (source .cshrc file)</h2>
+        id="h.qb1jizxp62uh" className={styles.h2}>Step3: launch the dc_shell using below command</h2>
         <div className={styles.imageContainer}>
           <img loading="lazy" src="/assets/modules/module6/doc2_image23.png" alt="" className={styles.contentImage} />
         </div>
@@ -3797,7 +3799,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>debugging, documentation, progress tracking, and optimization analysis.</p>
         <p className={styles.paragraph}>✓ Overall, a .log file is an essential tool for designers and engineers who need to</p>
         <p className={styles.paragraph}>synthesize complex designs and ensure that they are functioning correctly.</p>
-        <h2 id="h.q6iuofph543e" className={styles.h2}>Step4: search_path</h2>
+        id="h.q6iuofph543e" className={styles.h2}>Step4: search_path</h2>
         <p className={styles.paragraph}>➢ The search_path command is used to specify the directories where the tool should</p>
         <p className={styles.paragraph}>search for files that are included in the design.</p>
         <p className={styles.paragraph}>➢ By specifying the search_path command, the user can tell the tool where to look for</p>
@@ -3827,7 +3829,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>specified in the tool settings.</p>
         <p className={styles.paragraph}>➢ If the required files are not found in these locations, the tool will generate errors and</p>
         <p className={styles.paragraph}>fail to compile the design.</p>
-        <h2 id="h.knydw88ga0ds" className={styles.h2}>Step5: setting link and target libraries</h2>
+        id="h.knydw88ga0ds" className={styles.h2}>Step5: setting link and target libraries</h2>
         <p className={styles.paragraph}>Reason to provide set target_library and set link_library at beginning</p>
         <p className={styles.paragraph}>In the DC Shell compiler, the link and target libraries are specified at the beginning of the</p>
         <p className={styles.paragraph}>compilation process for a few reasons:</p>
@@ -4502,43 +4504,43 @@ const Module6Content = () => {
           <img loading="lazy" src="/assets/modules/module6/doc2_image54.png" alt="" className={styles.contentImage} />
         </div>
         <h1 id="h.672bqutyqms3" className={styles.h1}>STEP BY STEP PROCESS OF LOGICAL SYNTHESIS USING Genus</h1>
-        <h2 id="h.7k2zhk6el5g1" className={styles.h2}>1. Set the library search path (Where Genus will look for technology libraries)</h2>
+        id="h.7k2zhk6el5g1" className={styles.h2}>1. Set the library search path (Where Genus will look for technology libraries)</h2>
         <p className={styles.paragraph}>{`set_db init_lib_search_path {./libs/}`}</p>
         <p className={styles.paragraph}>This tells Genus where the standard cell library files are stored.</p>
         <hr className={styles.divider} />
-        <h2 id="h.vkt18hk332hi" className={styles.h2}>2. Set the SDC (timing constraints) search path</h2>
+        id="h.vkt18hk332hi" className={styles.h2}>2. Set the SDC (timing constraints) search path</h2>
         <p className={styles.paragraph}>{`set_db script_search_path {./constraints/}`}</p>
         <p className={styles.paragraph}>This tells Genus where your timing constraint file (SDC) is located.</p>
         <hr className={styles.divider} />
-        <h2 id="h.na3nvyc6y4e" className={styles.h2}>3. Set the Verilog (RTL) search path</h2>
+        id="h.na3nvyc6y4e" className={styles.h2}>3. Set the Verilog (RTL) search path</h2>
         <p className={styles.paragraph}>{`set_db init_hdl_search_path {./rtl/}`}</p>
         <p className={styles.paragraph}>This tells Genus where your design (Verilog files) are stored.</p>
         <hr className={styles.divider} />
-        <h2 id="h.hre3q7phsx15" className={styles.h2}>4. Set the library file (technology file used for synthesis)</h2>
+        id="h.hre3q7phsx15" className={styles.h2}>4. Set the library file (technology file used for synthesis)</h2>
         <p className={styles.paragraph}>{`set_db library {./libs/tech_library.lib}`}</p>
         <p className={styles.paragraph}>This selects which standard cell library Genus should use.</p>
         <hr className={styles.divider} />
-        <h2 id="h.5wkyg79zzowp" className={styles.h2}>5. Read the Verilog design</h2>
+        id="h.5wkyg79zzowp" className={styles.h2}>5. Read the Verilog design</h2>
         <p className={styles.paragraph}>read_hdl ./rtl/alu.v</p>
         <p className={styles.paragraph}>Loads your RTL design into Genus.</p>
         <hr className={styles.divider} />
-        <h2 id="h.lp8p6soz2anh" className={styles.h2}>6. Elaborate the design (build internal model)</h2>
+        id="h.lp8p6soz2anh" className={styles.h2}>6. Elaborate the design (build internal model)</h2>
         <p className={styles.paragraph}>elaborate</p>
         <p className={styles.paragraph}>Genus builds the complete logic hierarchy of your design.</p>
         <hr className={styles.divider} />
-        <h2 id="h.e7fnskweqk39" className={styles.h2}>7. Find clock ports automatically</h2>
+        id="h.e7fnskweqk39" className={styles.h2}>7. Find clock ports automatically</h2>
         <p className={styles.paragraph}>get_clock_ports</p>
         <p className={styles.paragraph}>Genus identifies all clock signals in the design.</p>
         <hr className={styles.divider} />
-        <h2 id="h.5blsk3u4mryw" className={styles.h2}>8. Check initial timing status</h2>
+        id="h.5blsk3u4mryw" className={styles.h2}>8. Check initial timing status</h2>
         <p className={styles.paragraph}>check_timing_intent</p>
         <p className={styles.paragraph}>Checks if basic timing information is missing.</p>
         <hr className={styles.divider} />
-        <h2 id="h.yyawzipr5y8k" className={styles.h2}>9. Source (load) the SDC constraints file</h2>
+        id="h.yyawzipr5y8k" className={styles.h2}>9. Source (load) the SDC constraints file</h2>
         <p className={styles.paragraph}>source ./constraints/sdcfile.tcl</p>
         <p className={styles.paragraph}>This file contains all timing constraints like clock, input delay, output delay, etc.</p>
         <hr className={styles.divider} />
-        <h2 id="h.8j3tvpxqtz08" className={styles.h2}>10. (Inside sdcfile.tcl) – Clock and timing constraints</h2>
+        id="h.8j3tvpxqtz08" className={styles.h2}>10. (Inside sdcfile.tcl) – Clock and timing constraints</h2>
         <p className={styles.paragraph}>create_clock -period 10 [get_ports clk]</p>
         <p className={styles.paragraph}>create_clock -period 5 [get_ports ll]</p>
         <p className={styles.paragraph}>{`set_input_delay 6 -clock clk [get_ports [remove_from_collection [all_inputs] {ll clk}]]`}</p>
@@ -4556,7 +4558,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>create_generated_clock -name gen_clk -divide_by 2 -source clk [get_pins ckGen/ckDiv_reg/Q]</p>
         <p className={styles.paragraph}>(These define clocks, input/output delays, uncertainty, loads, and generated clocks.)</p>
         <hr className={styles.divider} />
-        <h2 id="h.jtro6y7phy6y" className={styles.h2}>11. Terminal commands (extra checks)</h2>
+        id="h.jtro6y7phy6y" className={styles.h2}>11. Terminal commands (extra checks)</h2>
         <p className={styles.paragraph}>check_timing_intent</p>
         <p className={styles.paragraph}>filter_collection [all_fanin -to [all_outputs]] "port_direction == in"</p>
         <p className={styles.paragraph}>filter_collection [all_fanout -from [all_inputs]] "port_direction == out"</p>
@@ -4566,7 +4568,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>set_false_path -from ll -to ver</p>
         <p className={styles.paragraph}>set_false_path -from ver -to ll</p>
         <hr className={styles.divider} />
-        <h2 id="h.rbcutjolc576" className={styles.h2}>12. After report timing fixes (multi-cycle paths)</h2>
+        id="h.rbcutjolc576" className={styles.h2}>12. After report timing fixes (multi-cycle paths)</h2>
         <p className={styles.paragraph}>(Kept same commands, but they are fixing long paths for timing)</p>
         <p className={styles.paragraph}>set_multicycle_path -from ci -to ADD1_q_reg[7]/D -setup 2</p>
         <p className={styles.paragraph}>set_multicycle_path -from ci -to ADD1_q_reg[7]/D -hold 1</p>
@@ -4574,13 +4576,13 @@ const Module6Content = () => {
         <p className={styles.paragraph}>(set of similar commands for other registers)</p>
         <p className={styles.paragraph}>(These tell Genus that some paths have more than one clock cycle.)</p>
         <hr className={styles.divider} />
-        <h2 id="h.nlz0dhg9jtz3" className={styles.h2}>13. Run synthesis (Translate → Map → Optimize)</h2>
+        id="h.nlz0dhg9jtz3" className={styles.h2}>13. Run synthesis (Translate → Map → Optimize)</h2>
         <p className={styles.paragraph}>syn_generic</p>
         <p className={styles.paragraph}>syn_map</p>
         <p className={styles.paragraph}>syn_opt</p>
         <p className={styles.paragraph}>This converts RTL to gates and optimizes the logic.</p>
         <hr className={styles.divider} />
-        <h2 id="h.22t1grju4xyc" className={styles.h2}>14. Generate reports</h2>
+        id="h.22t1grju4xyc" className={styles.h2}>14. Generate reports</h2>
         <p className={styles.paragraph}>gui_show</p>
         <p className={styles.paragraph}>report_summary</p>
         <p className={styles.paragraph}>{`report_area > reports/area_report.txt`}</p>
@@ -4588,7 +4590,7 @@ const Module6Content = () => {
         <p className={styles.paragraph}>{`report_timing -max_paths 100 > reports/timing_report.txt`}</p>
         <p className={styles.paragraph}>Creates area, gate count, and timing reports.</p>
         <hr className={styles.divider} />
-        <h2 id="h.f5ki3b13am0m" className={styles.h2}>15. Write final output files</h2>
+        id="h.f5ki3b13am0m" className={styles.h2}>15. Write final output files</h2>
         <p className={styles.paragraph}>{`write_hdl > outputs/netlist_ALU.v`}</p>
         <p className={styles.paragraph}>{`write_script > outputs/script_ALU.g`}</p>
         <p className={styles.paragraph}>{`write_sdc > outputs/script_ALU.sdc`}</p>

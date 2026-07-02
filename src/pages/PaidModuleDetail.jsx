@@ -247,6 +247,14 @@ const PaidModuleDetail = () => {
           <Suspense fallback={<div className={styles.loadingText}>Loading Jobs Hub...</div>}>
             <Module59Content />
           </Suspense>
+        ) : moduleId === 6 ? (
+          <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
+            <Module6Content />
+          </Suspense>
+        ) : moduleId === 12 ? (
+          <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
+            <Module12Content />
+          </Suspense>
         ) : (
         <div className={styles.iframeContainer}>
           {moduleInfo.isLockedTemporarily ? (

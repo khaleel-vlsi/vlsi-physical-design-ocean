@@ -916,7 +916,6 @@ export const modulesData = {
     ],
     "iframes": [],
     "hasNativeContent": true,
-    "isLocked": true
+    "isLocked": false
   }
 };
-

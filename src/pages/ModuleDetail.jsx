@@ -10,6 +10,7 @@ import Module8Content from './modules/Module8Content';
 import Module4Content from './modules/Module4Content';
 import Module6Content from './modules/Module6Content';
 import Module58Content from './modules/Module58Content';
+import Module59Content from './modules/Module59Content';
 import SEO from '../components/SEO';
 import StructuredData from '../components/StructuredData';
 import { useAuth } from '../context/AuthContext';
@@ -23,6 +24,7 @@ const NATIVE_COMPONENTS = {
   4: Module4Content,
   6: Module6Content,
   58: Module58Content,
+  59: Module59Content,
   // Add more modules here as they are migrated
 };
 

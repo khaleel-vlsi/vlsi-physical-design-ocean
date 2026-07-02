@@ -1,8 +1,9 @@
-
 const fs = require('fs');
-const content = fs.readFileSync('c:\\Users\\priya\\vlsi-physical-design-ocean\\temp_MOSFETCMOS\\MOSFETCMOS.html', 'utf8');
-const regex = /<img[^>]+src="([^">]+)"/g;
-let match;
-while ((match = regex.exec(content)) !== null) {
-    console.log(match[0]);
-}
+const cheerio = require('cheerio');
+const html = fs.readFileSync('scratch/module12/inputs.html', 'utf8');
+const $ = cheerio.load(html);
+
+console.log(`Found ${$('img').length} images.`);
+$('img').each((i, el) => {
+    console.log(`Image ${i}:`, $(el).attr('src'));
+});

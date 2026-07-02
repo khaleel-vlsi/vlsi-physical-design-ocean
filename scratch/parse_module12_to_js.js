@@ -63,6 +63,7 @@ if (currentChapter) {
 
 const finalChapters = [];
 
+let imgCounter = 1;
 rawChapters.forEach((ch, idx) => {
   const htmlParts = [];
   ch.elements.forEach(el => {
@@ -74,8 +75,8 @@ rawChapters.forEach((ch, idx) => {
     $(el).find('img').each((j, img) => {
       const src = $(img).attr('src');
       if (src && src.startsWith('images/')) {
-        const filename = path.basename(src);
-        $(img).attr('src', `/assets/modules/module12/${filename}`);
+        $(img).attr('src', `/assets/modules/module12/image${imgCounter}.png`);
+        imgCounter++;
       }
       $(img).removeAttr('style');
       $(img).addClass('native-img');
@@ -84,8 +85,8 @@ rawChapters.forEach((ch, idx) => {
     if ($(el).is('img')) {
       const src = $(el).attr('src');
       if (src && src.startsWith('images/')) {
-        const filename = path.basename(src);
-        $(el).attr('src', `/assets/modules/module12/${filename}`);
+        $(el).attr('src', `/assets/modules/module12/image${imgCounter}.png`);
+        imgCounter++;
       }
       $(el).removeAttr('style');
       $(el).addClass('native-img');

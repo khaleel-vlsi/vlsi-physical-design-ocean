@@ -171,6 +171,20 @@
   transform: scale(1.02);
 }
 
+.chapterBody :global(.native-img) {
+  max-width: min(100%, 850px);
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  display: block;
+  margin: 1.5rem auto;
+}
+
+.chapterBody :global(.native-img:hover) {
+  transform: scale(1.02);
+}
+
 .imageCaption {
   margin-top: 1rem;
   font-size: 0.9rem;

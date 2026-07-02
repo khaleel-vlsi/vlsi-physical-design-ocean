@@ -1,0 +1,2108 @@
+[
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "1. Why is basic electronics important for a Physical Design engineer?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Physical Design decisions directly affect electrical behavior such as delay, power, noise, and reliability. Understanding resistance, capacitance, current flow, and voltage behavior is critical for timing closure, IR drop analysis, and signal integrity.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "2. What is resistance and how does it impact timing in PD?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Resistance opposes current flow. In PD, higher interconnect resistance increases RC delay, slowing signal transitions and degrading setup/hold margins.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "3. Explain capacitance in the context of VLSI interconnects.",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Capacitance exists between metal lines and substrate or neighboring wires. It contributes to delay and coupling noise, impacting signal integrity and timing.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "4. What is RC delay and why is it critical in backend design?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;RC delay is the product of resistance and capacitance of a net. It determines signal propagation delay and dominates timing at advanced technology nodes.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "5. How does wire length affect circuit performance?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Longer wires increase resistance and capacitance, resulting in higher delay, more power dissipation, and increased susceptibility to noise.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "6. Why does power increase with switching activity?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Dynamic power is proportional to switching activity because charging and discharging capacitances consumes energy each time a signal toggles.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "7. What is Ohm’s Law and how is it used in PD?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Ohm’s Law states V = IR. In PD, it helps estimate voltage drops in power networks and analyze IR drop issues.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "8. Define current density and its relevance in routing.",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Current density is current per unit area. Excessive current density can cause electromigration, leading to metal failure.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "9. What is electromigration (EM)?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Electromigration is the movement of metal atoms due to high current density, causing opens or shorts in interconnects over time.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "10. How does temperature affect resistance?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Resistance increases with temperature, which increases delay and worsens IR drop, especially in high-power blocks.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "11. Why is capacitance higher in lower metal layers?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Lower metal layers are closer to the substrate and have smaller spacing, increasing parasitic capacitance.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "12. What is the difference between lumped and distributed RC models?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Lumped models approximate the entire net as one R and C, while distributed models divide the wire into segments for accurate delay estimation.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "13. Why is distributed RC modeling important in timing analysis?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Long interconnects behave like transmission lines, and distributed models give more accurate delay and slew calculations.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "14. What is slew rate and why does it matter?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Slew rate is the rise/fall time of a signal. Poor slew increases delay, causes signal integrity issues, and can violate timing constraints.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "15. How does capacitance affect power consumption?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Higher capacitance requires more energy to charge and discharge, increasing dynamic power consumption.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "16. What is dynamic power equation?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Dynamic power = α × C × V² × f<br> where α is switching activity, C is capacitance, V is voltage, and f is frequency.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "17. What is static power?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Static power is power consumed due to leakage currents even when the circuit is not switching.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "18. Why does leakage power increase at advanced nodes?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Thinner oxides, lower threshold voltages, and short channel effects increase subthreshold and gate leakage.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "19. What is voltage drop (IR drop)?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Voltage drop occurs due to resistance in the power delivery network when current flows, reducing effective supply voltage.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "20. How does IR drop affect timing?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Lower supply voltage reduces cell drive strength, increasing delay and potentially causing setup violations.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "21. What is noise margin?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Noise margin is the allowable noise voltage that a signal can tolerate without causing logic failure.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "22. How does coupling capacitance cause noise?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Switching activity on one net can induce unwanted voltage changes on adjacent nets through capacitive coupling.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "23. What is crosstalk?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Crosstalk is interference caused by capacitive or inductive coupling between neighboring interconnects.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "24. Why are shielding and spacing used in routing?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;They reduce coupling capacitance, minimize noise, and improve signal integrity.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "25. What is decoupling capacitance (decap)?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Decaps provide local charge storage to stabilize supply voltage during switching, reducing IR drop and noise.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "26. Where are decaps placed in PD?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Near standard cells, macros, and clock buffers where switching activity is high.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "27. What is ground bounce?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Ground bounce is voltage fluctuation on ground due to sudden current changes, causing logic errors.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "28. Why is power integrity critical in PD?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Poor power integrity leads to timing failures, functional errors, and long-term reliability issues.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "29. What is signal attenuation?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Loss of signal amplitude due to resistive and capacitive effects along interconnects.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "30. Why are repeaters used in long nets?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Repeaters break long RC paths, improving delay and signal integrity.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "31. What happens if wire resistance is underestimated?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Timing will be optimistic, leading to silicon failures after fabrication.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "32. What is parasitic extraction?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;The process of calculating resistance and capacitance of interconnects for accurate timing and power analysis.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "33. Why does PD rely heavily on extracted parasitics?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because ideal nets do not reflect real silicon behavior, parasitics determine actual performance.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "34. What is power dissipation density?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Power consumed per unit area. High density causes thermal issues.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "35. How does heat affect reliability?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Higher temperature accelerates electromigration, leakage, and device aging.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "36. What is thermal runaway?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;A condition where increasing temperature causes more leakage, which further increases temperature.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "37. Why are wider metals used for power routing?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;To reduce resistance, lower IR drop, and prevent electromigration.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "38. What is voltage scaling and its effect?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Reducing supply voltage lowers power but increases delay and sensitivity to noise.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "39. Why is grounding important in chip design?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;A stable ground reference ensures correct logic levels and minimizes noise.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "40. What is the impact of supply noise on clock networks?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It causes clock jitter and skew, affecting timing closure.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "41. Why do backend engineers care about basic circuit theory?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because layout decisions directly influence electrical behavior and chip performance.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "42. What is transient current?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Sudden current spikes during switching that stress the power network.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "43. How does metal thickness impact resistance?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Thicker metals have lower resistance and better current handling capability.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "44. What is self-heating effect?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Local temperature rise due to power dissipation in dense regions.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "45. Why is timing more wire-dominated in advanced nodes?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Transistor delays reduce, but interconnect RC delays increase significantly.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "46. What is effective capacitance?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Capacitance experienced by a driver considering coupling and switching activity.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "47. Why is low-power design linked with PD?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Placement, routing, and clock design directly affect power consumption.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "48. What is reliability vs performance trade-off?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Aggressive optimization improves speed but may increase EM and power issues.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "49. How does basic electronics help in ECO fixing?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Understanding RC effects helps in choosing buffer insertion or rerouting strategies.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "BASIC ELECTRONICS",
+    "subCategory": "General Q&A",
+    "question": "50. What is the key takeaway of basic electronics for PD interviews?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Physical Design is applied electronics—every layout choice has electrical consequences.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "1. What are short channel effects (SCE)?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Deviation from ideal MOSFET behavior when channel length is comparable to depletion regions, reducing gate control.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "2. Why do SCE become severe at advanced nodes?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Drain electric field penetrates into the channel, competing with gate control.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "3. Why are SCE unavoidable below 28nm?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Physical electrostatic limits prevent perfect scaling.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "4. What is threshold voltage roll-off?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Reduction of Vt as channel length decreases.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "5. How does Vt roll-off affect leakage?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Leakage increases exponentially due to reduced barrier height.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "6. What is Drain Induced Barrier Lowering (DIBL)?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Drain voltage lowers source-channel barrier, increasing off-current.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "7. Why is DIBL critical for PD engineers?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Causes VDD-dependent timing and leakage variation.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "8. How does DIBL impact timing closure?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Delay varies across voltage corners, increasing uncertainty.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "9. What is subthreshold leakage?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Diffusion current when VGS &lt; Vt.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "10. Why does subthreshold leakage dominate at 7nm?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Low Vt and strong SCE effects.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "11. Why is leakage exponential in nature?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Governed by Boltzmann carrier distribution.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "12. What is punch-through?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Source and drain depletion regions merge, bypassing gate control.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "13. Punch-through vs DIBL?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Punch-through is catastrophic; DIBL is gradual.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "14. How does punch-through affect functionality?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Device cannot be fully turned off.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "15. What layout conditions worsen punch-through impact?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Dense low-Vt cell placement.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "16. What is Gate-Induced Drain Leakage (GIDL)?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Leakage due to band-to-band tunneling near drain.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "17. When does GIDL increase?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;High drain voltage and low gate voltage.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "18. Why is GIDL relevant in PD?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Increases standby power in clock and IO regions.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "19. How does temperature affect SCE?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Higher temperature increases leakage and DIBL.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "20. Why does IR drop worsen SCE effects?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Lower VDD increases delay sensitivity.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "21. How does SCE affect noise margins?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Reduced Vt lowers logic level robustness.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "22. Why does SCE cause corner explosion?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Delay becomes highly sensitive to PVT variations.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "23. How does SCE impact hold timing?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Faster cells worsen hold violations.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "24. Why is SCE dominant in always-on blocks?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Leakage exists even in idle mode.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "25. Why is voltage scaling limited today?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;SCE and variability increase at low VDD.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "26. How does transistor stacking reduce leakage?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Reduces effective VDS across each transistor.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "27. Why are multi-Vt cells used?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;To balance leakage and performance.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "28. How does SCE impact ECO fixes?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Small changes cause large power/timing shifts.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "29. Why is SCE important for CTS?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Clock buffers are sensitive to Vt variation.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "30. Why does SCE worsen at high frequency?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Increased switching stress.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "31. How do FinFETs reduce SCE?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Gate wraps around channel, improving electrostatics.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "32. Why is variability still present in FinFETs?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Fin width/height variations.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "33. Why does SCE affect yield more than speed?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Leakage failures are harder to guardband.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "34. Why is leakage non-uniform across chip?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Process, temperature, and activity variation.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "35. Why does leakage cause thermal runaway?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Heat increases leakage, forming a loop.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "36. How do foundry models capture SCE?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Advanced BSIM/FinFET models.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "37. Why is pessimism higher in sign-off?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;To cover SCE uncertainty.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "38. Why is SCE always asked in PD interviews?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It links device physics to backend decisions.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "39. Biggest SCE challenge today?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Leakage + variability at low VDD.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION A: SHORT CHANNEL EFFECTS (40 QUESTIONS)",
+    "question": "40. One-line SCE takeaway?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span>&nbsp;</span><span class=\"c6 c1\">SCE defines modern PD limits.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION B: MOSFET FUNDAMENTALS (20 QUESTIONS)",
+    "question": "41. What are the operating regions of MOSFET?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Cut-off, linear, saturation.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION B: MOSFET FUNDAMENTALS (20 QUESTIONS)",
+    "question": "42. Why does square-law model fail in short channels?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Velocity saturation dominates.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION B: MOSFET FUNDAMENTALS (20 QUESTIONS)",
+    "question": "43. What is channel length modulation?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Effective channel shortens with VDS.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION B: MOSFET FUNDAMENTALS (20 QUESTIONS)",
+    "question": "44. How does channel length modulation affect delay?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Increases current variability.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION B: MOSFET FUNDAMENTALS (20 QUESTIONS)",
+    "question": "45. What is velocity saturation?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Carrier velocity saturates at high fields.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION B: MOSFET FUNDAMENTALS (20 QUESTIONS)",
+    "question": "46. Why does velocity saturation limit performance scaling?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Current no longer increases linearly.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION B: MOSFET FUNDAMENTALS (20 QUESTIONS)",
+    "question": "47. What is mobility degradation?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Reduced carrier mobility due to vertical fields.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION B: MOSFET FUNDAMENTALS (20 QUESTIONS)",
+    "question": "48. Impact of mobility degradation on PD?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Limits timing improvement from sizing.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION B: MOSFET FUNDAMENTALS (20 QUESTIONS)",
+    "question": "49. What is body effect?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Vt increases with substrate bias.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION B: MOSFET FUNDAMENTALS (20 QUESTIONS)",
+    "question": "50. Why is body effect reduced in FinFETs?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Channel is isolated.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION B: MOSFET FUNDAMENTALS (20 QUESTIONS)",
+    "question": "51. What is on-current (Ion)?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Current when transistor is ON.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION B: MOSFET FUNDAMENTALS (20 QUESTIONS)",
+    "question": "52. What is off-current (Ioff)?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Leakage current when transistor is OFF.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION B: MOSFET FUNDAMENTALS (20 QUESTIONS)",
+    "question": "53. Why is Ion/Ioff ratio important?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Defines performance vs power trade-off.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION B: MOSFET FUNDAMENTALS (20 QUESTIONS)",
+    "question": "54. Why is Vt variability critical?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Causes timing uncertainty.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION B: MOSFET FUNDAMENTALS (20 QUESTIONS)",
+    "question": "55. Why does random dopant fluctuation matter?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Dominates variability at small nodes.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION B: MOSFET FUNDAMENTALS (20 QUESTIONS)",
+    "question": "56. Why are low-Vt cells faster?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Lower barrier height.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION B: MOSFET FUNDAMENTALS (20 QUESTIONS)",
+    "question": "57. Why do low-Vt cells leak more?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Increased subthreshold leakage.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION B: MOSFET FUNDAMENTALS (20 QUESTIONS)",
+    "question": "58. Why can’t sizing alone fix timing?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Physics limits current improvement.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION B: MOSFET FUNDAMENTALS (20 QUESTIONS)",
+    "question": "59. Why is gate oxide thinning limited?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Gate leakage increases.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION B: MOSFET FUNDAMENTALS (20 QUESTIONS)",
+    "question": "60. Why are high-k dielectrics used?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Reduce gate leakage while keeping capacitance.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION C: CMOS INVERTER & LOGIC (20 QUESTIONS)",
+    "question": "61. Why is CMOS preferred over NMOS logic?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Lower static power.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION C: CMOS INVERTER & LOGIC (20 QUESTIONS)",
+    "question": "62. Why does CMOS inverter have high noise margin?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Rail-to-rail output swing.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION C: CMOS INVERTER & LOGIC (20 QUESTIONS)",
+    "question": "63. What defines inverter switching threshold?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Relative NMOS/PMOS strength.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION C: CMOS INVERTER & LOGIC (20 QUESTIONS)",
+    "question": "64. Why is inverter delay load-dependent?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Due to output capacitance.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION C: CMOS INVERTER & LOGIC (20 QUESTIONS)",
+    "question": "65. What is logical effort?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Measure of gate driving capability.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION C: CMOS INVERTER & LOGIC (20 QUESTIONS)",
+    "question": "66. Why is fan-out limited?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Increased RC delay.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION C: CMOS INVERTER & LOGIC (20 QUESTIONS)",
+    "question": "67. Why does short channel reduce noise margin?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Lower Vt reduces logic robustness.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION C: CMOS INVERTER & LOGIC (20 QUESTIONS)",
+    "question": "68. Why are buffers inserted?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;To reduce long RC delay.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION C: CMOS INVERTER & LOGIC (20 QUESTIONS)",
+    "question": "69. What is crowbar current?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Short-circuit current during switching.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION C: CMOS INVERTER & LOGIC (20 QUESTIONS)",
+    "question": "70. Why does crowbar current increase at short channels?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Faster transitions and overlap.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION C: CMOS INVERTER & LOGIC (20 QUESTIONS)",
+    "question": "71. Why is skew important in CMOS logic?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Causes race conditions.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION C: CMOS INVERTER & LOGIC (20 QUESTIONS)",
+    "question": "72. Why is duty cycle distortion harmful?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Affects sequential logic.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION C: CMOS INVERTER & LOGIC (20 QUESTIONS)",
+    "question": "73. Why does voltage scaling affect CMOS logic?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Reduces drive strength.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION C: CMOS INVERTER & LOGIC (20 QUESTIONS)",
+    "question": "74. Why is PVT analysis critical?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;CMOS behavior varies strongly.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION C: CMOS INVERTER & LOGIC (20 QUESTIONS)",
+    "question": "75. Why is setup more sensitive than hold?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Depends on worst-case slow corner.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION C: CMOS INVERTER & LOGIC (20 QUESTIONS)",
+    "question": "76. Why does hold worsen with fast cells?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Short delays violate minimum path.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION C: CMOS INVERTER & LOGIC (20 QUESTIONS)",
+    "question": "77. Why is clock uncertainty added?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;To cover jitter and variation.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION C: CMOS INVERTER & LOGIC (20 QUESTIONS)",
+    "question": "78. Why does logic depth affect timing?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Accumulated gate delay.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION C: CMOS INVERTER & LOGIC (20 QUESTIONS)",
+    "question": "79. Why is low-power logic harder today?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Leakage dominates.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION C: CMOS INVERTER & LOGIC (20 QUESTIONS)",
+    "question": "80. Why is CMOS still scalable?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;FinFET and new materials.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION D: POWER, RELIABILITY & ADVANCED NODES (20 QUESTIONS)",
+    "question": "81. Difference between dynamic and static power?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Switching vs leakage power.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION D: POWER, RELIABILITY & ADVANCED NODES (20 QUESTIONS)",
+    "question": "82. Why is leakage dominant at advanced nodes?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;SCE effects.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION D: POWER, RELIABILITY & ADVANCED NODES (20 QUESTIONS)",
+    "question": "83. What is BTI?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Bias Temperature Instability causing Vt shift.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION D: POWER, RELIABILITY & ADVANCED NODES (20 QUESTIONS)",
+    "question": "84. NBTI affects which transistor?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;PMOS.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION D: POWER, RELIABILITY & ADVANCED NODES (20 QUESTIONS)",
+    "question": "85. Why is aging considered in STA?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;To ensure lifetime timing.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION D: POWER, RELIABILITY & ADVANCED NODES (20 QUESTIONS)",
+    "question": "86. What is Hot Carrier Injection?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;High-energy carriers damage oxide.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION D: POWER, RELIABILITY & ADVANCED NODES (20 QUESTIONS)",
+    "question": "87. Why does aging worsen timing?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Increases delay over time.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION D: POWER, RELIABILITY & ADVANCED NODES (20 QUESTIONS)",
+    "question": "88. Why do high-performance blocks age faster?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Higher stress and activity.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION D: POWER, RELIABILITY & ADVANCED NODES (20 QUESTIONS)",
+    "question": "89. What is EM?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Electromigration due to high current density.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION D: POWER, RELIABILITY & ADVANCED NODES (20 QUESTIONS)",
+    "question": "90. Why is EM linked with MOS behavior?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Higher leakage increases current.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION D: POWER, RELIABILITY & ADVANCED NODES (20 QUESTIONS)",
+    "question": "91. Why is power density important?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Causes thermal hotspots.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION D: POWER, RELIABILITY & ADVANCED NODES (20 QUESTIONS)",
+    "question": "92. Why is thermal analysis part of PD?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Temperature affects leakage and delay.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION D: POWER, RELIABILITY & ADVANCED NODES (20 QUESTIONS)",
+    "question": "93. Why does IR drop interact with MOS physics?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Reduces effective VDD.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION D: POWER, RELIABILITY & ADVANCED NODES (20 QUESTIONS)",
+    "question": "94. Why is sign-off pessimistic?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;To ensure silicon safety.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION D: POWER, RELIABILITY & ADVANCED NODES (20 QUESTIONS)",
+    "question": "95. Why is margining unavoidable?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Due to SCE uncertainty.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION D: POWER, RELIABILITY & ADVANCED NODES (20 QUESTIONS)",
+    "question": "96. Why is ECO risky at advanced nodes?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Small changes cause large effects.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION D: POWER, RELIABILITY & ADVANCED NODES (20 QUESTIONS)",
+    "question": "97. Why is FinFET sizing quantized?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Fin count limitation.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION D: POWER, RELIABILITY & ADVANCED NODES (20 QUESTIONS)",
+    "question": "98. Why does PD need device knowledge?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Layout decisions affect physics.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION D: POWER, RELIABILITY & ADVANCED NODES (20 QUESTIONS)",
+    "question": "99. Why is interview focus shifting to SCE?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It dominates modern failures.</span></p>"
+  },
+  {
+    "category": "MOSFET & CMOS – PHYSICAL DESIGN INTERVIEW",
+    "subCategory": "SECTION D: POWER, RELIABILITY & ADVANCED NODES (20 QUESTIONS)",
+    "question": "100. Final MOSFET interview takeaway?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span>&nbsp;</span><span class=\"c6 c1\">Modern PD is device-physics-driven, not just layout-driven.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "A. DIGITAL ABSTRACTION & LOGIC BEHAVIOR (1–20)",
+    "question": "1. Why is digital abstraction still valid even though hardware is analog?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span>&nbsp;Digital abstraction works because circuits are designed with sufficient noise margins so that small analog variations do not change logical interpretation. Interviewers ask this to see if you understand the </span><span class=\"c16\">limits</span><span class=\"c0\">&nbsp;of digital abstraction.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "A. DIGITAL ABSTRACTION & LOGIC BEHAVIOR (1–20)",
+    "question": "2. When does digital abstraction break down?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;At very low voltage, high frequency, or asynchronous boundaries where noise margins shrink and timing assumptions fail.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "A. DIGITAL ABSTRACTION & LOGIC BEHAVIOR (1–20)",
+    "question": "3. Why is Boolean logic sufficient to describe complex systems?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because any computation can be decomposed into combinations of AND, OR, and NOT, enabling scalable hierarchical design.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "A. DIGITAL ABSTRACTION & LOGIC BEHAVIOR (1–20)",
+    "question": "4. Why is logic equivalence not the same as timing equivalence?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Two Boolean-equivalent circuits can have very different propagation delays due to different logic depth and structure.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "A. DIGITAL ABSTRACTION & LOGIC BEHAVIOR (1–20)",
+    "question": "5. Why does logic restructuring change behavior even if truth table is same?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because internal signal transitions and hazards change, affecting glitches and timing.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "A. DIGITAL ABSTRACTION & LOGIC BEHAVIOR (1–20)",
+    "question": "6. Why is monotonic logic preferred in some designs?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because it avoids hazards and unwanted transitions, improving reliability.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "A. DIGITAL ABSTRACTION & LOGIC BEHAVIOR (1–20)",
+    "question": "7. Why does digital design assume finite transition times?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Zero-delay assumption breaks causality; real designs must consider propagation delay to avoid races.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "A. DIGITAL ABSTRACTION & LOGIC BEHAVIOR (1–20)",
+    "question": "8. Why is determinism important in digital systems?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Predictable behavior is essential for verification and correctness.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "A. DIGITAL ABSTRACTION & LOGIC BEHAVIOR (1–20)",
+    "question": "9. Why is logic hierarchy critical for scalability?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It limits complexity and allows independent reasoning about subsystems.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "A. DIGITAL ABSTRACTION & LOGIC BEHAVIOR (1–20)",
+    "question": "10. Why does flattening logic sometimes hurt rather than help?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It destroys locality and increases interconnection complexity.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "A. DIGITAL ABSTRACTION & LOGIC BEHAVIOR (1–20)",
+    "question": "11. Why is functional correctness independent of performance?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;A slow circuit can still be logically correct but unusable in practice.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "A. DIGITAL ABSTRACTION & LOGIC BEHAVIOR (1–20)",
+    "question": "12. Why does digital logic ignore absolute voltage values?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Only relative logic levels matter, not exact voltages.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "A. DIGITAL ABSTRACTION & LOGIC BEHAVIOR (1–20)",
+    "question": "13. Why are logic thresholds asymmetric?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;To improve noise immunity.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "A. DIGITAL ABSTRACTION & LOGIC BEHAVIOR (1–20)",
+    "question": "14. Why is fanout a logical concern, not just physical?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because fanout determines how many logical loads a signal must drive.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "A. DIGITAL ABSTRACTION & LOGIC BEHAVIOR (1–20)",
+    "question": "15. Why does logic depth dominate performance?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Each additional stage adds delay that accumulates along critical paths.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "A. DIGITAL ABSTRACTION & LOGIC BEHAVIOR (1–20)",
+    "question": "16. Why do wide logic cones cause timing issues?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;They increase both depth and fanout.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "A. DIGITAL ABSTRACTION & LOGIC BEHAVIOR (1–20)",
+    "question": "17. Why does reconvergent fanout complicate analysis?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because signals diverge and reconverge with different delays, causing hazards.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "A. DIGITAL ABSTRACTION & LOGIC BEHAVIOR (1–20)",
+    "question": "18. Why does logic locality matter?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Closely related logic minimizes signal dependency complexity.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "A. DIGITAL ABSTRACTION & LOGIC BEHAVIOR (1–20)",
+    "question": "19. Why are purely combinational systems impractical?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;They lack state and cannot perform sequential computation.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "A. DIGITAL ABSTRACTION & LOGIC BEHAVIOR (1–20)",
+    "question": "20. Why is state the foundation of computation?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;State allows systems to remember past information.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "B. COMBINATIONAL LOGIC – HIGH-LEVEL THINKING (21–40)",
+    "question": "21. Why is combinational logic considered memoryless?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Its output depends only on current inputs, not history.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "B. COMBINATIONAL LOGIC – HIGH-LEVEL THINKING (21–40)",
+    "question": "22. Why are hazards unavoidable in large combinational networks?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Unequal propagation delays are inherent in real circuits.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "B. COMBINATIONAL LOGIC – HIGH-LEVEL THINKING (21–40)",
+    "question": "23. Why does reconvergent logic amplify glitch probability?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because signals arriving from different paths rarely align in time.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "B. COMBINATIONAL LOGIC – HIGH-LEVEL THINKING (21–40)",
+    "question": "24. Why does logic balancing reduce glitching?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It equalizes arrival times of inputs.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "B. COMBINATIONAL LOGIC – HIGH-LEVEL THINKING (21–40)",
+    "question": "25. Why is canonical form rarely used in implementation?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It leads to excessive logic and poor efficiency.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "B. COMBINATIONAL LOGIC – HIGH-LEVEL THINKING (21–40)",
+    "question": "26. Why does Boolean minimization not guarantee minimum delay?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Minimized logic may increase depth or fanout.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "B. COMBINATIONAL LOGIC – HIGH-LEVEL THINKING (21–40)",
+    "question": "27. Why does logic sharing sometimes hurt performance?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Shared logic increases fanout and criticality.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "B. COMBINATIONAL LOGIC – HIGH-LEVEL THINKING (21–40)",
+    "question": "28. Why is functional completeness important?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It ensures any logic can be constructed from a given gate set.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "B. COMBINATIONAL LOGIC – HIGH-LEVEL THINKING (21–40)",
+    "question": "29. Why does NAND-based logic dominate implementations?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because NAND is functionally complete and efficient.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "B. COMBINATIONAL LOGIC – HIGH-LEVEL THINKING (21–40)",
+    "question": "30. Why does XOR behave differently from other gates?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It is highly sensitive to input alignment and causes more glitches.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "B. COMBINATIONAL LOGIC – HIGH-LEVEL THINKING (21–40)",
+    "question": "31. Why is XOR logic timing-critical?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because it typically has deeper internal structure.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "B. COMBINATIONAL LOGIC – HIGH-LEVEL THINKING (21–40)",
+    "question": "32. Why does parity logic have high switching activity?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Any input change toggles the output.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "B. COMBINATIONAL LOGIC – HIGH-LEVEL THINKING (21–40)",
+    "question": "33. Why is logic duplication sometimes intentional?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;To reduce fanout and improve timing.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "B. COMBINATIONAL LOGIC – HIGH-LEVEL THINKING (21–40)",
+    "question": "34. Why does logic depth vary across input patterns?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Different paths activate depending on inputs.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "B. COMBINATIONAL LOGIC – HIGH-LEVEL THINKING (21–40)",
+    "question": "35. Why is worst-case analysis required?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because rare input combinations can still break correctness.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "B. COMBINATIONAL LOGIC – HIGH-LEVEL THINKING (21–40)",
+    "question": "36. Why are comparators logically expensive?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;They require bit-wise evaluation and priority logic.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "B. COMBINATIONAL LOGIC – HIGH-LEVEL THINKING (21–40)",
+    "question": "37. Why does arithmetic logic scale poorly with width?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because carry-like dependencies grow with bit count.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "B. COMBINATIONAL LOGIC – HIGH-LEVEL THINKING (21–40)",
+    "question": "38. Why is combinational feedback illegal?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It creates unstable oscillations.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "B. COMBINATIONAL LOGIC – HIGH-LEVEL THINKING (21–40)",
+    "question": "39. Why does logic decomposition help?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It limits complexity and improves predictability.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "B. COMBINATIONAL LOGIC – HIGH-LEVEL THINKING (21–40)",
+    "question": "40. Why is combinational delay data-dependent?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Different logic paths activate for different inputs.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "41. Why is sequential logic necessary?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It enables memory and time-ordered computation.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "42. Why is edge-triggered behavior preferred?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It provides discrete sampling points, simplifying analysis.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "43. Why does sequential logic break combinational loops?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It introduces state boundaries.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "44. Why is setup constraint fundamental?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It ensures correct sampling of data.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "45. Why is hold constraint more dangerous?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because violation causes immediate incorrect capture.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "46. Why does sequential timing depend on both data and clock?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because state change is clock-controlled.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "47. Why is clock considered a control signal?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It governs when computation is committed.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "48. Why does skew affect correctness?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Different state elements sample data at different times.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "49. Why does sequential logic enforce ordering?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It ensures causality between operations.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "50. Why is race condition a logical problem?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It arises from ambiguous ordering of events.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "51. Why are latches harder to reason about?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because they are level-sensitive.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "52. Why does pipeline depth affect latency?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Each stage adds one unit of delay.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "53. Why does pipelining not reduce total work?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It only redistributes it across time.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "54. Why is state explosion a concern?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Number of reachable states grows exponentially.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "55. Why is reset logic conceptually special?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It defines the initial state of the system.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "56. Why must reset be deterministic?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Undefined initial state breaks correctness.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "57. Why does sequential logic enable reuse?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Same logic can operate across cycles.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "58. Why does sequential abstraction simplify verification?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It limits temporal dependencies.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "59. Why are asynchronous inputs problematic?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;They violate timing assumptions.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "60. Why does synchronization require multiple stages?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;To reduce uncertainty over time.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "61. Why is sequential logic sensitive to ordering?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because state updates are time-dependent.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "62. Why does feedback become safe with registers?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;State breaks instantaneous dependency.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "63. Why is finite state machine modeling powerful?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It captures both logic and time behavior.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "64. Why do FSMs become complex quickly?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;State count increases combinatorially.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "C. SEQUENTIAL LOGIC – HIGH-LEVEL CONCEPTS (41–65)",
+    "question": "65. Why is state encoding important?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It affects complexity and transition behavior.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "D. TIMING, CONCURRENCY & SYSTEM-LEVEL DIGITAL THINKING (66–85)",
+    "question": "66. Why is concurrency fundamental in digital systems?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Multiple operations happen in parallel.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "D. TIMING, CONCURRENCY & SYSTEM-LEVEL DIGITAL THINKING (66–85)",
+    "question": "67. Why does concurrency complicate reasoning?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because interactions occur simultaneously.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "D. TIMING, CONCURRENCY & SYSTEM-LEVEL DIGITAL THINKING (66–85)",
+    "question": "68. Why is worst-case timing assumed?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;To guarantee correctness under all conditions.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "D. TIMING, CONCURRENCY & SYSTEM-LEVEL DIGITAL THINKING (66–85)",
+    "question": "69. Why does timing define maximum throughput?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It limits how fast state can safely change.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "D. TIMING, CONCURRENCY & SYSTEM-LEVEL DIGITAL THINKING (66–85)",
+    "question": "70. Why does faster logic increase sensitivity?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Margins become smaller.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "D. TIMING, CONCURRENCY & SYSTEM-LEVEL DIGITAL THINKING (66–85)",
+    "question": "71. Why does timing margin matter more than raw speed?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Margin ensures robustness.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "D. TIMING, CONCURRENCY & SYSTEM-LEVEL DIGITAL THINKING (66–85)",
+    "question": "72. Why does digital timing analysis assume pessimism?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Optimism risks functional failure.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "D. TIMING, CONCURRENCY & SYSTEM-LEVEL DIGITAL THINKING (66–85)",
+    "question": "73. Why does concurrency cause hidden dependencies?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Signals interact in non-obvious ways.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "D. TIMING, CONCURRENCY & SYSTEM-LEVEL DIGITAL THINKING (66–85)",
+    "question": "74. Why is isolation of timing domains important?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;To preserve assumptions locally.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "D. TIMING, CONCURRENCY & SYSTEM-LEVEL DIGITAL THINKING (66–85)",
+    "question": "75. Why is temporal decoupling useful?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It simplifies design and reasoning.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "D. TIMING, CONCURRENCY & SYSTEM-LEVEL DIGITAL THINKING (66–85)",
+    "question": "76. Why does buffering change logical behavior?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It adds delay and may filter glitches.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "D. TIMING, CONCURRENCY & SYSTEM-LEVEL DIGITAL THINKING (66–85)",
+    "question": "77. Why is logic retiming conceptually valid?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because moving state preserves functionality.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "D. TIMING, CONCURRENCY & SYSTEM-LEVEL DIGITAL THINKING (66–85)",
+    "question": "78. Why is retiming not always safe?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It may violate assumptions about ordering.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "D. TIMING, CONCURRENCY & SYSTEM-LEVEL DIGITAL THINKING (66–85)",
+    "question": "79. Why does digital logic depend on causality?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Effects must follow causes.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "D. TIMING, CONCURRENCY & SYSTEM-LEVEL DIGITAL THINKING (66–85)",
+    "question": "80. Why does event ordering matter?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Incorrect order breaks correctness.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "D. TIMING, CONCURRENCY & SYSTEM-LEVEL DIGITAL THINKING (66–85)",
+    "question": "81. Why is temporal verification hard?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Time adds an extra dimension to logic.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "D. TIMING, CONCURRENCY & SYSTEM-LEVEL DIGITAL THINKING (66–85)",
+    "question": "82. Why does digital correctness depend on timing closure?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Correct logic at wrong time is incorrect.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "D. TIMING, CONCURRENCY & SYSTEM-LEVEL DIGITAL THINKING (66–85)",
+    "question": "83. Why is digital design both static and dynamic?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Structure is static; behavior evolves over time.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "D. TIMING, CONCURRENCY & SYSTEM-LEVEL DIGITAL THINKING (66–85)",
+    "question": "84. Why does abstraction hierarchy matter?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Each level hides complexity.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "D. TIMING, CONCURRENCY & SYSTEM-LEVEL DIGITAL THINKING (66–85)",
+    "question": "85. Why is digital design about trade-offs?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Speed, correctness, and robustness conflict.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "E. INTERVIEW-LEVEL CONCEPTUAL QUESTIONS (86–100)",
+    "question": "86. Why is digital electronics not just Boolean algebra?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because time and state matter.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "E. INTERVIEW-LEVEL CONCEPTUAL QUESTIONS (86–100)",
+    "question": "87. Why do interviewers ask “why” questions?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;To test understanding, not memorization.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "E. INTERVIEW-LEVEL CONCEPTUAL QUESTIONS (86–100)",
+    "question": "88. Why does correctness precede optimization?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Optimizing incorrect logic is meaningless.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "E. INTERVIEW-LEVEL CONCEPTUAL QUESTIONS (86–100)",
+    "question": "89. Why does digital design scale well?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because abstraction enables hierarchy.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "E. INTERVIEW-LEVEL CONCEPTUAL QUESTIONS (86–100)",
+    "question": "90. Why is digital logic tolerant to noise?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Due to discrete logic levels.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "E. INTERVIEW-LEVEL CONCEPTUAL QUESTIONS (86–100)",
+    "question": "91. Why does digital abstraction enable automation?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Clear rules allow algorithmic design.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "E. INTERVIEW-LEVEL CONCEPTUAL QUESTIONS (86–100)",
+    "question": "92. Why does timing break abstraction?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because physical reality re-enters.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "E. INTERVIEW-LEVEL CONCEPTUAL QUESTIONS (86–100)",
+    "question": "93. Why is digital logic ultimately approximate?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;It assumes ideal behavior with margins.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "E. INTERVIEW-LEVEL CONCEPTUAL QUESTIONS (86–100)",
+    "question": "94. Why is state the hardest concept?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because it introduces memory and time.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "E. INTERVIEW-LEVEL CONCEPTUAL QUESTIONS (86–100)",
+    "question": "95. Why is concurrency the hardest problem?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because parallel events interact.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "E. INTERVIEW-LEVEL CONCEPTUAL QUESTIONS (86–100)",
+    "question": "96. Why does digital design require discipline?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Small violations cause large failures.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "E. INTERVIEW-LEVEL CONCEPTUAL QUESTIONS (86–100)",
+    "question": "97. Why does experience matter in digital interviews?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because real failures are subtle.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "E. INTERVIEW-LEVEL CONCEPTUAL QUESTIONS (86–100)",
+    "question": "98. Why is digital electronics still relevant today?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;All computation relies on it.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "E. INTERVIEW-LEVEL CONCEPTUAL QUESTIONS (86–100)",
+    "question": "99. Why does good digital design feel simple?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">&nbsp;Because complexity is well-managed.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "E. INTERVIEW-LEVEL CONCEPTUAL QUESTIONS (86–100)",
+    "question": "100. Final high-level takeaway?",
+    "answer": ""
+  },
+  {
+    "category": "DIGITAL ELECTRONICS – 100 HIGH-LEVEL INTERVIEW QUESTIONS & ANSWERS",
+    "subCategory": "E. INTERVIEW-LEVEL CONCEPTUAL QUESTIONS (86–100)",
+    "question": "Answer: Digital electronics is the art of making logic behave correctly in time.",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "1. PD job killed suddenly. How do you confirm OOM kill?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Check kernel log:</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">dmesg | tail</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "2. How do you run ICC2 job safely after logout?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c6 c1\">A:</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">nohup icc2_shell -f run.tcl &gt; run.log &amp;</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "3. Timing report is 20GB. How do you extract WNS only?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c6 c1\">A:</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">grep \"WNS\" timing.rpt</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "4. Disk shows free space but tool fails writing files. Why?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Inode exhaustion.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">df -i</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "5. How do you find which PD job is consuming memory?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c6 c1\">A:</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">top</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\">Check RES column.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "6. How do you check server load before launching job?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c6 c1\">A:</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">uptime</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "7. Tool log growing too fast. How to monitor live?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c6 c1\">A:</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">tail -f run.log</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "8. How do you compress old PD runs?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c6 c1\">A:</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">tar -czf run1.tar.gz run1/</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "9. Your job is slow only on one machine. What do you check?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c6 c1\">A:</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "10. How do you find last modified PD run directory?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c6 c1\">A:</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">ls -lt</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "11. How do you kill only YOUR ICC2 jobs?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c6 c1\">A:</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">pkill -u $USER icc2</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "12. PD job writes huge temp files. Where?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span>&nbsp;Check </span><span class=\"c10\">$TMPDIR</span><span>&nbsp;or </span><span class=\"c10\">/tmp</span><span class=\"c0\">.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "13. How do you redirect both stdout & stderr?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c6 c1\">A:</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">command &gt; log.txt 2&gt;&amp;1</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "14. How do you find string “VIOLATED” count?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c6 c1\">A:</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">grep -c VIOLATED timing.rpt</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "15. Job runs in terminal but fails in batch. Why?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Environment not sourced.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "16. How do you source environment?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c6 c1\">A:</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">source setup.csh</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "17. How do you monitor disk IO?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1 c6\">A:</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">iostat</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "18. How do you find open files by a process?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c6 c1\">A:</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">lsof -p &lt;pid&gt;</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "19. PD job stuck at save. Why?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;NFS hang or disk latency.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "20. How do you avoid login node killing your job?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Run on compute node.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "21. How do you check swap usage?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">free -h</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "22. How do you find which script launched tool?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Check process command:</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">ps -ef | grep icc2</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "23. How do you compare two timing reports?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">diff rpt1 rpt2</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "24. How do you archive logs only?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">tar -czf logs.tar.gz *.log</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "25. How do you check environment variable?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">echo $PATH</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "26. Why avoid running many PD jobs on same server?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Memory contention → swap → slow.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "27. How do you find largest files in run?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">du -sh * | sort -h</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "28. How do you run job at night automatically?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Use cron.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "29. How do you check who is logged into server?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">who</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "30. How do you stop runaway log file?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Kill job or redirect output.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "31. How do you track job progress without GUI?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Check timestamps in log.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "32. How do you check available CPUs?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">nproc</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "33. Why does swap kill PD performance?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;EDA tools need fast random memory.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "34. How do you check mount issues?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">df -h</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "35. How do you clean temp files safely?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Only inside your run directory.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "36. How do you detect hung process?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;CPU = 0%, no log update.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "37. How do you background a running job?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">Ctrl+Z ; bg</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "38. How do you resume disconnected job?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span>&nbsp;Use </span><span class=\"c10\">screen</span><span>&nbsp;or </span><span class=\"c10\">tmux</span><span class=\"c0\">.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "39. How do you ensure reproducible PD runs?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Same tool, same server, same env.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "40. How do you track memory growth?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span>&nbsp;Repeated </span><span class=\"c10\">top</span><span class=\"c0\">.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "41. How do you find which directory consumes most space?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">du -sh *</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "42. Why do tools crash without error?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;OS kill or filesystem issue.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "43. How do you avoid log overwrite?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Timestamp logs.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "44. How do you detect zombie process?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span>&nbsp;</span><span class=\"c10\">ps</span><span>&nbsp;shows </span><span class=\"c10\">&lt;defunct&gt;</span><span class=\"c0\">.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "45. How do you kill only one hung job?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">kill &lt;pid&gt;</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "46. Why do you avoid GUI in big designs?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Consumes memory.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "47. How do you check server uptime?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">uptime</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "48. How do you clean core dump files?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">rm core.*</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "49. How do you check file permissions?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">ls -l</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-A: LINUX (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "50. What Linux skill impresses PD interviewer?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Debugging failed runs fast.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "51. Extract all setup-violating paths",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">get_timing_paths -delay_type max -slack_lesser_than 0</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "52. Dump start/end/slack to file",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">foreach_in_collection p $paths {</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">&nbsp;puts $fp \"[get_object_name [get_attribute $p startpoint]] \\</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[get_object_name [get_attribute $p endpoint]] \\</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[get_attribute $p slack]\"</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">}</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "53. Protect script from empty violations",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">if {[sizeof_collection $paths]==0} { return }</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "54. Get top 10 worst paths",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">get_timing_paths -max_paths 10 -sort_by slack</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "55. Find hold violations",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">get_timing_paths -delay_type min -slack_lesser_than 0</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "56. Get all register-to-register paths",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">get_timing_paths -from [all_registers] -to [all_registers]</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "57. Find high-fanout nets",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">get_nets -fanout_greater_than 50</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "58. Detect max transition violations",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">get_cells -filter \"max_transition_violation==true\"</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "59. Identify CTS inserted buffers",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">get_cells -filter \"is_buffer==true &amp;&amp; name=~*CTS*\"</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "60. Generate ECO upsizing script",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">size_cell $cell NEWCELL</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "61. Find unclocked flops",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">get_cells -filter \"is_sequential==true &amp;&amp; clock==\\\"\\\"\"</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "62. Dump WNS/TNS",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">set wns [get_attribute [get_timing_summary] wns]</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "63. Stop flow if WNS too bad",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">if {$wns &lt; -0.3} { error \"STOP FLOW\" }</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "64. Find worst endpoint",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">get_attribute [lindex $paths 0] endpoint</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "65. Find common cells in violations",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">get_cells -of_objects $paths</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "66. Script slow — why?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span>&nbsp;Nested loops + </span><span class=\"c10\">get_object_name</span><span class=\"c0\">.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "67. Loop safely over collections",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">foreach_in_collection obj $col { }</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "68. Extract slack only",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">get_attribute $p slack</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "69. Dump only unique endpoints",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">lsort -unique $list</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "70. Identify max cap nets",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">get_nets -capacitance_greater_than 0.2</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "71. Auto-generate timing summary report",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Query + puts to file.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "72. Check if design loaded",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">if {[llength [get_cells *]]==0} { return }</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "73. Identify false paths",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">get_false_paths</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "74. Identify multicycle paths",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">get_multicycle_paths</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "75. Handle multi-corner scripts",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Loop through scenarios.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "76. Extract clock skew",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">get_attribute [get_clocks *] skew</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "77. Debug TCL script",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Print collection sizes.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "78. Protect scripts across blocks",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;No hardcoded names.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "79. Generate report only if violations exist",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">if {[sizeof_collection $paths]&gt;0} { }</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "80. Extract critical path delay",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">get_attribute $p arrival</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "81. Identify longest combinational path",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">get_timing_paths -nworst 1</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "82. Why avoid lists for PD objects?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Memory + speed.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "83. Script to insert buffer on high fanout",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Detect → insert_buffer.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "84. Identify clock domain crossings",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Different from/to clocks.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "85. Generate ECO commands file",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span>&nbsp;Write commands to </span><span class=\"c10\">.tcl</span><span class=\"c0\">.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "86. Check tool version inside script",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">puts $tool_version</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "87. Extract worst slack per clock",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Group by clock.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "88. Handle hierarchy safely",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Use hierarchical queries.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "89. Script portability key",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Arguments + variables.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "90. Why TCL crashes randomly?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Empty collections.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "91. Extract max path depth",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Count cells in path.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "92. Auto-rerun timing after ECO",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Call timing update.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "93. Identify repeated violators",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Frequency count.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "94. Generate QoR dashboard data",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Dump metrics to CSV.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "95. When to use regexp in TCL?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Parsing reports.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "96. Why scripts fail after tool upgrade?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Attribute changes.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "97. How to stop TCL on error?",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c4\">error \"FAIL\"</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "98. Identify power-critical cells",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Query power attributes.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "99. Interviewer asks: “Show PD maturity in TCL”",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">A:<br></span><span class=\"c0\">&nbsp;Robust, guarded, scalable script.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  },
+  {
+    "category": "PART-B: TCL (PHYSICAL DESIGN PRACTICAL) – 50 Q&A",
+    "subCategory": "General Q&A",
+    "question": "100. FINAL INTERVIEW QUESTION:",
+    "answer": "<p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c6 c1\">“Can you automate PD closure?”</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c1\">Correct Answer:<br></span><span>&nbsp;Yes — via </span><span class=\"c1\">TCL + Linux</span><span class=\"c0\">, not GUI.</span></p><p style=\"margin-bottom: 12px; line-height: 1.6; color: #bdc1c6;\"><span class=\"c0\"></span></p>"
+  }
+]

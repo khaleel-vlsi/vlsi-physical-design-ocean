@@ -1,0 +1,519 @@
+/* ==========================================================================
+   AI Resume Builder Styles
+   Prefix: rb2- to avoid conflicts with existing rb- classes
+   ========================================================================== */
+
+/* ── Container & Layout ──────────────────────────────────────────────── */
+.rb2-container {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 80px; /* Account for navbar */
+  color: var(--text-primary);
+  background: radial-gradient(circle at top right, rgba(26, 42, 108, 0.4), transparent 50%),
+              radial-gradient(circle at bottom left, rgba(89, 218, 209, 0.1), transparent 50%);
+}
+
+.rb2-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* ── Dashboard (List View) ───────────────────────────────────────────── */
+.rb2-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.rb2-dashboard-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(135deg, #fff, var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rb2-limit-bar-container {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.rb2-limit-bar {
+  width: 200px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.rb2-limit-fill {
+  height: 100%;
+  background: var(--secondary);
+  transition: width 0.3s ease;
+}
+
+.rb2-create-btn {
+  background: linear-gradient(135deg, var(--cta), #ff9f7a);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.rb2-create-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 127, 80, 0.3);
+}
+
+.rb2-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.rb2-resume-card {
+  background: var(--surface-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+}
+
+.rb2-resume-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.rb2-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.rb2-card-meta {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.rb2-card-ats {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.rb2-ats-score {
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.rb2-card-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.rb2-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  flex: 1;
+  text-align: center;
+}
+
+.rb2-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.rb2-btn.primary {
+  background: var(--primary);
+  color: #000;
+  border: none;
+}
+
+.rb2-btn.primary:hover {
+  background: #a3b0fb;
+}
+
+.rb2-btn.danger {
+  color: #ef4444;
+  flex: 0 0 auto;
+}
+
+.rb2-btn.danger:hover {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+/* ── Editor Layout (3 Panel) ─────────────────────────────────────────── */
+.rb2-editor-layout {
+  display: flex;
+  height: calc(100vh - 80px); /* Full height minus navbar */
+  overflow: hidden;
+  background: var(--surface-primary);
+}
+
+.rb2-sidebar {
+  width: 250px;
+  background: var(--surface-secondary);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.rb2-sidebar-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.rb2-back-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  transition: color 0.2s;
+}
+
+.rb2-back-link:hover {
+  color: var(--text-primary);
+}
+
+.rb2-nav-list {
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+.rb2-nav-item {
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+  font-size: 0.95rem;
+}
+
+.rb2-nav-item:hover {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-primary);
+}
+
+.rb2-nav-item.active {
+  background: rgba(89, 218, 209, 0.1);
+  color: var(--secondary);
+  border-left: 3px solid var(--secondary);
+}
+
+.rb2-center-panel {
+  flex: 1;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 2rem;
+  background: var(--surface-primary);
+}
+
+.rb2-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.rb2-right-panel {
+  width: 45%;
+  min-width: 500px;
+  background: #e5e7eb; /* Light background for PDF preview area */
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.rb2-preview-toolbar {
+  height: 50px;
+  background: var(--surface-secondary);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.rb2-preview-container {
+  flex: 1;
+  overflow: auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.rb2-pdf-page {
+  background: white;
+  width: 210mm;
+  min-height: 297mm;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
+  position: relative;
+  color: #000;
+  
+  /* Visual page break indicator every A4 length */
+  background-image: linear-gradient(to bottom, transparent 296mm, #e5e7eb 296mm, #e5e7eb 297mm);
+  background-size: 100% 297mm;
+}
+
+/* ── Forms ───────────────────────────────────────────────────────────── */
+.rb2-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.rb2-form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.rb2-input, .rb2-textarea, .rb2-select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: var(--text-primary);
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.rb2-input:focus, .rb2-textarea:focus, .rb2-select:focus {
+  outline: none;
+  border-color: var(--secondary);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.rb2-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.rb2-form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.rb2-form-row > * {
+  flex: 1;
+}
+
+/* ── AI Buttons & Panels ─────────────────────────────────────────────── */
+.rb2-ai-btn {
+  background: linear-gradient(135deg, rgba(89, 218, 209, 0.2), rgba(185, 195, 255, 0.2));
+  border: 1px solid rgba(89, 218, 209, 0.4);
+  color: var(--secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+}
+
+.rb2-ai-btn:hover {
+  background: linear-gradient(135deg, rgba(89, 218, 209, 0.3), rgba(185, 195, 255, 0.3));
+  border-color: var(--secondary);
+}
+
+.rb2-ai-panel {
+  background: rgba(185, 195, 255, 0.05);
+  border: 1px dashed rgba(185, 195, 255, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* ── Dynamic Lists (Items) ───────────────────────────────────────────── */
+.rb2-item-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.rb2-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.rb2-item-remove {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.rb2-item-remove:hover {
+  color: #ef4444;
+}
+
+.rb2-add-btn {
+  width: 100%;
+  padding: 1rem;
+  background: transparent;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  color: var(--text-secondary);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.rb2-add-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(185, 195, 255, 0.05);
+}
+
+/* ── Modals & Dialogs ────────────────────────────────────────────────── */
+.rb2-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.rb2-modal {
+  background: var(--surface-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.rb2-modal h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.rb2-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* ── Loader ──────────────────────────────────────────────────────────── */
+.rb2-loader {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: var(--secondary);
+  animation: rb2-spin 1s ease-in-out infinite;
+}
+
+@keyframes rb2-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Save Status ─────────────────────────────────────────────────────── */
+.rb2-save-status {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(17, 24, 39, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .rb2-editor-layout {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+  .rb2-sidebar {
+    width: 100%;
+    height: 60px;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .rb2-sidebar-header {
+    display: none;
+  }
+  .rb2-nav-list {
+    display: flex;
+    padding: 0;
+  }
+  .rb2-nav-item {
+    white-space: nowrap;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+  }
+  .rb2-nav-item.active {
+    border-left: none;
+    border-bottom: 3px solid var(--secondary);
+  }
+  .rb2-right-panel {
+    width: 100%;
+    min-width: 100%;
+    height: 600px;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}

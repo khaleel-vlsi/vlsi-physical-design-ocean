@@ -13,6 +13,8 @@ const Module20Content = lazy(() => import('./modules/Module20Content'));
 const Module21Content = lazy(() => import('./modules/Module21Content'));
 const Module9Content = lazy(() => import('./modules/Module9Content'));
 const Module59Content = lazy(() => import('./modules/Module59Content'));
+const Module6Content = lazy(() => import('./modules/Module6Content'));
+const Module12Content = lazy(() => import('./modules/Module12Content'));
 
 const PaidModuleDetail = () => {
   const { id } = useParams();

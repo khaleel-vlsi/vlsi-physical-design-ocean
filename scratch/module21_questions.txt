@@ -1,0 +1,152 @@
+--- List of all Module 21 Questions ---
+1. 1.What are the goals of Synthesis ?
+2. 2.What are the Tech dependent inputs in PNR
+3. 3.What are the Design dependent inputs in PNR
+4. 4.What are the types of cells in PNR
+5. 5.What are the types of IO pads
+6. 6.What is the functionality of IO pads
+7. 7.What is the use of Bound pad
+8. 8.How tool differentiate the stdcell, IOpad and Macro
+9. 9.What is difference between soft and hard macro
+10. 10.How tool calculate the rectilinear blocks area
+11. 11.Can we rotated the Macro in 90 or 270 degrees
+12. 12.Assume you have three types of block 7, 9, 12 Metal layers in 28 nm Technology  which having more performance and why
+13. 13.Which inputs files having resistance and capacitance values
+14. 14.We have different RC corners im i right, why we have different RC corners
+15. 15.How multi cut via increase the performance and yeild.
+16. 16.In which stage normal flop converted into scan flop
+17. 17.what is difference between normal flop and scan flop
+18. 18.what is scan chain where we are used it
+19. 19.what is the formula for core, die and std cell utilization
+20. 20.what is the formula for channel spacing
+21. 21.How cell driving strength increase
+22. 22.How Fabrication peoples created  different types of Vt cells like HVT, LVT and SVT ect
+23. 23.what is clock gating why we are using clock gating what are the types of clock gating
+24. 24.What is difference between AND,OR and ICG based clock Gating
+25. 25.What is pad limited and Core limited  Design how to overcome it
+26. 26.What is difference between IO PADS and IO PINS
+27. 27.What is difference between IO PIN and terminal
+28. 28.What are the ways to place IO pins in design
+29. 29.what are the guidelines for pin placement
+30. 30.Why we need MMMC file
+31. 31.In which input file having high fanout information
+32. 32.In which file noise margin information contains?
+33. 33.In which file cross talk information contains?
+34. 34.what are the Macro guidelines to place in the floor plan?
+35. 35.what are the types of blockage we used and why?
+36. 36.what is keepout margin or halo?
+37. 37.what is the difference between keepout margin and blockage?
+38. 38.After loading Design what are the sanity checks we have to do and what do you observe from that?
+39. 39.why we are using Boundary or End cap cells . if we place this cells after placement what happened
+40. 40.Why do we use Well Tap and Tie cells if we are not using  what will  happen?
+41. 41.How can you estimate the power for your design?
+42. 42.What are the goals of Power plan
+43. 43.what are the techniques used to reduce IR drop?
+44. 44.what is formula for dynamic and static power
+45. 45.What is difference between flip chip and wire bound design
+46. 46.Why are we using Decap cells and filler cells?
+47. 47.What are the Floor plan  sanity checks?
+48. 48.can we do macro placement after power plan?
+49. 49.can we do a power plan after routing?
+50. 50.What is Spare cells? Why are we using Spare cells?
+51. 51. In which  stage we define spare cells?
+52. 52.What is the difference between Spare cells in floor plan and routing stage?
+53. 53.what are the ways to place std cells in the core region?
+54. 54.what are the five stages of place_opt command and explain
+55. 55.What is global routing? Why are we doing global routing?
+56. 56.what are the goals of placement?
+57. 57.what are the goals of floor plan?
+58. 58.What are the reason for congestion how to fix the congestion
+59. 59.How can you control the std cell placement?
+60. 60.What are the types of bounds?
+61. 61.If timing is bad in your design after placement stage then what kind of technique do you use to overcome?
+62. 62.Can we do optimization in the placement stage without cell swapping, upsizing and  adding buffers?
+63. 63.Why are we checking the setup only in the placement stage? Why are we not checking hold ?
+64. 64.Why are we doing IO buffering if we are not doing IO buffering what happened?
+65. 65.What is the pipeline concept we are using?
+66. 66.What is a congestion hotspot?
+67. 67.What are the sanity checks you did in the placement stage and why?
+68. 68.why we have to do a scan chain reorder in the placement stage if not what happened?
+69. 69.You don't have any pin & cell density and macro placement also  good still your getting congestion what would be the reason?
+70. 70.What are the types of CTS
+71. 71.Why we are building CTS after placement only?
+72. 72.What is the difference between CPPR and CRPR?
+73. 73.On which bases you will say your skew is good?
+74. 74.Consider you have two designs one have more skew and less latency one have less skew and more latency which one you consider and why?
+75. 75.My skew is Zero is good or bad ?
+76. 76.what are the types of skews and tool is work on which skew?
+77. 77.Consider I have two designs, one has more latency one has less latency which one you choose and why?
+78. 78.On which reference cts will be built?
+79. 79.If im not define clock can my CTS build or not?
+80. 80.What is inter clock balancing
+81. 81.What is useful skew how it is help for timing
+82. 82.Flop having setup and hold value im i right are those values constant or it can change
+83. 83.Are the flop setup and hold values negative
+84. 84.What is difference between normal buffer and clock buffer
+85. 85.For CTS building which one you choose clock buffer or clock inverter
+86. 86.What is CTS SPEC file what it contain
+87. 87.If skew is bad how you can overcome
+88. 88.If latency is bad how you can overcome
+89. 89.How Skew effect on setup and hold time
+90. 90.Why we are using NDR in CTS
+91. 91.You have nine metal layers in your design which metal layer you preferred for CTS and why
+92. 92.what are the default clock skew groups in design
+93. 93.Explain clock_opt command
+94. 94.If clock is not propagate what happened in CTS
+95. 95.What are the sanity check you did after CTS
+96. 96.What is clock mesh were we used it
+97. 97.What is multi source CTS why we used it
+98. 98.What is clock gating check
+99. 99.What is antenna effect how to reduce
+100. 100.What is antenna ratio where this information present
+101. 101.what are the sanity checks you did in routing stage
+102. 102.What are the types of routing
+103. 103.How many phases of routing will be done?
+104. 104.What is detour how its effect timing
+105. 105.What is area recovery and leakage recovery
+106. 106.What are the types of functional ECO and why we are doing it
+107. 107.What are the Inputs required for STA
+108. 108.What is the order of timing fixing
+109. 109.How to fix Max cap
+110. 110.How to fix Max Tran
+111. 110.How to fix Max fanout
+112. 111.How to fix Setup violation?
+113. 112.How to fix data to data check violation
+114. 113.How to fix Recovery check violation
+115. 114.How to fix Hold violation
+116. 115.How to fix Removal violation
+117. 116.How to fix Crosstalk and noise
+118. 117.How to fix clock gating check
+119. 118.How to fix antenna violation
+120. 119.what is positive and negative cross talk
+121. 120.What is LVS check
+122. 121.What is ERC check
+123. 122.What is LEC check
+124. 123.What is BEC check
+125. 124.How to overcome shorts and opens in your design
+126. 125.what is sequential merging
+127. 126.What is combinational merging?
+128. 127.What is SVF file where we used SVF file
+129. 128.If LVS clean means we can guarantee our design functionality
+130. 129.How to fix IR drop
+131. 130.How to fix EM
+132. 131.How LEC work
+133. 132.What are the ways to reduce the Dynamic power consumption
+134. 133.What is isolation cells and what are the types of isolation cells
+135. 134.Isolation cell information present in which file
+136. 135.What is power switch why we used power switch what are the types of power switches
+137. 136.What is  Level Shifter why we used it?
+138. 137.What is Enable Level Shifter?
+139. 138.What Information UPF/CPF file contains
+140. 139.What is always ON buffer where we used it
+141. 140.What is the Purpose of Double Patterning
+142. 141.What is min Vt violation how to overcome it.
+143. 142.How we can analyze clock tree and skew in placement stage only
+144. 143.What we did in physical verification stage
+145. 144.How we get full GDS
+146. 145.What is power gating where we used it
+147. 146.How to reduce static power in Design
+148. 147.What is difference between DRC and DRV
+149. 148.can you plz explain timing ECO flow
+150. 149.What is empty module why we used it
+151. 150.Why CMOS technology not allowed Floating inputs and Multi driven inputs

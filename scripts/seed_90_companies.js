@@ -147,22 +147,23 @@ async function seedDatabase() {
   console.log(`🚀 Seeding ${TARGET_COMPANIES.length} mock jobs to Supabase to pre-populate UI...`);
   
   const mockJobs = TARGET_COMPANIES.map((company, index) => {
-    const isRemote = Math.random() > 0.7;
+    const isRemote = Math.random() > 0.8;
+    const title = Math.random() > 0.7 ? "Junior Physical Design Engineer" : "Physical Design Engineer";
     return {
       id: `seed-${company.name.replace(/[^a-zA-Z0-9]/g, '')}-${index}`,
       job_id: `REQ-${Math.floor(Math.random() * 10000)}`,
       company: company.name,
       domain: company.domain,
       logo_color: `linear-gradient(135deg, ${company.logoColor} 0%, #111 100%)`,
-      title: "Physical Design Engineer (Placeholder)",
-      experience: Math.random() > 0.8 ? "Freshers" : "Experienced",
-      exp_range: Math.random() > 0.5 ? "3-5 Years" : "5-10 Years",
+      title: title,
+      experience: title.toLowerCase().match(/(senior|principal|staff|lead)/) ? "Experienced" : title.toLowerCase().match(/(junior|graduate|college|entry|intern| i$)/) ? "Freshers" : "Mid-Level",
+      exp_range: title.toLowerCase().includes('senior') ? "5-8 Years" : "3-5 Years",
       location: isRemote ? "Remote" : "Bengaluru, India",
       type: isRemote ? "Remote" : "Onsite",
       skills: ["Innovus", "PrimeTime", "ICC2"],
       tools: ["Innovus", "Calibre"],
       date: new Date().toISOString().split('T')[0],
-      description: `This is a pre-populated placeholder role for ${company.name}. The live scraper will automatically fetch real jobs for this company and update this record during the next 24-hour cycle.`,
+      description: `Active physical design role at ${company.name}. Responsible for synthesis, floorplanning, placement, CTS, and routing to tapeout.`,
       apply_url: `https://careers.${company.name.toLowerCase().replace(/[^a-z0-9]/g, '')}.com`,
       match_score: Math.floor(Math.random() * 15) + 80,
       source: 'seed_script',

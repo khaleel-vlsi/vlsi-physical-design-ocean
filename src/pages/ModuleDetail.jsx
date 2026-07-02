@@ -65,7 +65,7 @@ const ModuleDetail = () => {
     if (profile) {
       const isFuture = (ts) => ts && new Date(ts).getTime() > Date.now();
       const courseValid = profile.course_active && isFuture(profile.course_expiry);
-      if (courseValid && moduleId >= 9 && moduleId <= 58) {
+      if (courseValid && moduleId >= 9 && moduleId <= 59) {
         navigate(`/paid-modules/module/${moduleId}`, { replace: true });
       }
     }

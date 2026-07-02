@@ -178,7 +178,7 @@ const Dashboard = () => {
           {/* Course Section */}
           <div className={styles.subCard}>
             <div className={styles.flexBetween}>
-              <h2>🌊 Paid Modules (9–58)</h2>
+              <h2>🌊 Paid Modules (9–59)</h2>
               <div className={`${styles.statusBig} ${courseValid ? styles.ok : styles.err}`}>
                 {courseValid ? "Unlocked ✅" : "Locked 🔒"}
               </div>

@@ -905,6 +905,18 @@ export const modulesData = {
     ],
     "hasNativeContent": true,
     "isLocked": true
+  },
+  "59": {
+    "id": 59,
+    "title": "Direct ATS Global Jobs (Automation)",
+    "topics": [
+      "Automated Careers Scraper Engine",
+      "Confidence Match Score & Keyword Extraction",
+      "Unified Global Job Listings Feed"
+    ],
+    "iframes": [],
+    "hasNativeContent": true,
+    "isLocked": true
   }
 };
 

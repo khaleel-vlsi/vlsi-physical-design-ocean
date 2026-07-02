@@ -153,12 +153,9 @@ const Home = () => {
             module focuses on a specific stage of the ASIC design flow with
             clear explanations and read-only study materials.
           </p>
-          <div className={styles.courseImageWrap}>
-            <img loading="lazy" src="/chip.png"
-              alt="VLSI chip circuit board — 58 structured modules"
-              className={styles.courseChipImg}
-            />
-            <p className={styles.courseImageSub}>58 Modules · Electronics → Physical Sign-off</p>
+          <div className={styles.courseImageWrapper}>
+            <img src="/course_placeholder.png" alt="VLSI Physical Design Course Modules Overview" className={styles.courseImage} loading="lazy" />
+            <p className={styles.courseImageSub}>59 Modules · Electronics → Physical Sign-off</p>
           </div>
         </div>
       </section>
@@ -167,7 +164,7 @@ const Home = () => {
       <section id="onboarding-tracker" className={styles.onboardingSection}>
         <h2 className={styles.onboardingTitle}>🗺️ Advanced VLSI Physical Design Ocean Course Steps</h2>
         <p className={styles.onboardingDesc}>
-          Track your progress dynamically. Set up your account, enter the portal, and unlock the complete 58-module curriculum.
+          Track your progress dynamically. Set up your account, enter the portal, and unlock the complete 59-module curriculum.
         </p>
 
         <div className={styles.onboardingGrid}>
@@ -229,7 +226,7 @@ const Home = () => {
               <span className={styles.stepIcon}>💳</span>
             </div>
             <h3>Unlock Course</h3>
-            <p>Subscribe to unlock all premium PNR and STA modules (9–58).</p>
+            <p>Subscribe to unlock all premium PNR and STA modules (9–59).</p>
             <div className={styles.stepFooter}>
               {isPaid ? (
                 <span className={styles.completedBadge}>✓ Paid Access Active</span>
@@ -318,7 +315,7 @@ const Home = () => {
         <div className={styles.paidSectionCard}>
           <h2>Advanced VLSI Physical Design Ocean Course</h2>
           <p className={styles.paidSub}>
-            Modules 9–58 · Industry Level · 6 Months Access
+            Modules 9–59 · Industry Level · 6 Months Access
           </p>
 
           <div className={styles.priceBox}>

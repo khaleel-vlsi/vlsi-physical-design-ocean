@@ -63,7 +63,8 @@ const modulesData = [
   { id: 55, title: 'Basic GVIM Commands for Faster Workflow' },
   { id: 56, title: 'Application Options & Attributes Reference' },
   { id: 57, title: 'Innovus User Guide (Full Version)' },
-  { id: 58, title: 'Industrial TCL Scripts' }
+  { id: 58, title: 'Industrial TCL Scripts' },
+  { id: 59, title: 'Direct ATS Global Jobs (Automation)' }
 ];
 
 const ModulesList = () => {
@@ -75,7 +76,7 @@ const ModulesList = () => {
     <div className={styles.modulesPage}>
       <SEO 
         title="Learning Modules" 
-        description="Explore 58 comprehensive modules covering the entire VLSI Physical Design flow, from Electronics Fundamentals to Physical Verification & Signoff."
+        description="Explore 59 comprehensive modules covering the entire VLSI Physical Design flow, from Electronics Fundamentals to Physical Verification & Signoff."
         url="/modules"
         structuredData = {
           <StructuredData 
@@ -106,7 +107,7 @@ const ModulesList = () => {
         <div className={styles.statsRow}>
           <div className={styles.statPill}>
             <span className={styles.statIcon}>📚</span>
-            58 Modules
+            59 Modules
           </div>
           <div className={styles.statPill}>
             <span className={styles.statIcon}>⏱️</span>

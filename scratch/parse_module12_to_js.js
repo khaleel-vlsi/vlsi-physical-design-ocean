@@ -63,7 +63,6 @@ if (currentChapter) {
 
 const finalChapters = [];
 
-let imgCounter = 1;
 rawChapters.forEach((ch, idx) => {
   const htmlParts = [];
   ch.elements.forEach(el => {
@@ -71,12 +70,12 @@ rawChapters.forEach((ch, idx) => {
     $(el).removeAttr('style');
     $(el).find('*').removeAttr('style');
     
-    // Remap images
+    // Remap images - keep exact filename from HTML (same as Module 9)
     $(el).find('img').each((j, img) => {
       const src = $(img).attr('src');
       if (src && src.startsWith('images/')) {
-        $(img).attr('src', `/assets/modules/module12/image${imgCounter}.png`);
-        imgCounter++;
+        const filename = path.basename(src);
+        $(img).attr('src', `/assets/modules/module12/${filename}`);
       }
       $(img).removeAttr('style');
       $(img).addClass('native-img');
@@ -85,8 +84,8 @@ rawChapters.forEach((ch, idx) => {
     if ($(el).is('img')) {
       const src = $(el).attr('src');
       if (src && src.startsWith('images/')) {
-        $(el).attr('src', `/assets/modules/module12/image${imgCounter}.png`);
-        imgCounter++;
+        const filename = path.basename(src);
+        $(el).attr('src', `/assets/modules/module12/${filename}`);
       }
       $(el).removeAttr('style');
       $(el).addClass('native-img');

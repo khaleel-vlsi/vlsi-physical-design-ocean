@@ -6,7 +6,7 @@ const VISIBLE_COUNT = 6;
 
 const Module12Content = () => {
   const [showAllInputs, setShowAllInputs] = useState(false);
-  const [showAllPower, setShowAllPower] = useState(false);
+  const [showAllLibraries, setShowAllLibraries] = useState(false);
   const [showAllChecks, setShowAllChecks] = useState(false);
 
   const scrollToSection = (id) => {
@@ -25,9 +25,10 @@ const Module12Content = () => {
     e.preventDefault();
   };
 
-  const inputsHeadings = MODULE12_CHAPTERS.slice(0, 10);
-  const powerHeadings = MODULE12_CHAPTERS.slice(10, 13);
-  const checksHeadings = MODULE12_CHAPTERS.slice(13);
+  // Split chapters into 3 nav groups (same pattern as Module 9)
+  const inputsHeadings = MODULE12_CHAPTERS.slice(0, 7);       // Inputs 1-7
+  const librariesHeadings = MODULE12_CHAPTERS.slice(7, 13);   // Physical/Additional libs
+  const checksHeadings = MODULE12_CHAPTERS.slice(13);          // Sanity/Design/SDC/Lib checks
 
   const renderSection = (headings, showAll, setShowAll, title) => (
     <div className={styles.navSection}>
@@ -70,25 +71,30 @@ const Module12Content = () => {
       onDragStart={preventCopy}
     >
       <div className={styles.header}>
-        <h1 className={styles.title}>Module 12 - PNR Inputs & Sanity Checks</h1>
+        <h1 className={styles.title}>Module 12 - PNR Inputs &amp; Sanity Checks</h1>
         <p className={styles.subtitle}>
           Master the inputs required for physical design. Deep-dive into Gate Level Netlists, SDC Constraints, Logical/Physical Libraries (LEF), Power Intent (UPF/CPF), and critical Sanity/Design Checks.
         </p>
       </div>
 
-      {/* Interactive Topics Covered Navigation Grid */}
+      {/* Interactive Topics Navigation Grid */}
       <section className={styles.topicsNav}>
         <div className={styles.navSectionsWrapper}>
-          {renderSection(inputsHeadings, showAllInputs, setShowAllInputs, 'Libraries & Constraints')}
-          {renderSection(powerHeadings, showAllPower, setShowAllPower, 'Power Intent & Activities')}
-          {renderSection(checksHeadings, showAllChecks, setShowAllChecks, 'Sanity Checks & Verification')}
+          {renderSection(inputsHeadings, showAllInputs, setShowAllInputs, 'Inputs to PD Flow')}
+          {renderSection(librariesHeadings, showAllLibraries, setShowAllLibraries, 'Libraries & Additional Files')}
+          {renderSection(checksHeadings, showAllChecks, setShowAllChecks, 'Sanity Checks & Scripts')}
         </div>
       </section>
 
       {/* Main Flow of Chapter Cards */}
       <main className={styles.mainContent}>
         {MODULE12_CHAPTERS.map((ch) => (
-          <article key={ch.id} id={ch.id} className={styles.contentCard}>
+          <article
+            key={ch.id}
+            id={ch.id}
+            className={styles.contentCard}
+            data-fullimg={ch.id === 'ch_368_inputs_loading_script' ? 'true' : undefined}
+          >
             <h2 className={styles.chapterTitle}>{ch.title}</h2>
             <div
               className={styles.chapterBody}

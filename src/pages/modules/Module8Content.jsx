@@ -201,7 +201,7 @@ const Module8Content = () => {
   return (
     <div className={styles.moduleLayout}>
       <div className={styles.topicsNav}>
-        className={styles.navTitle}>Topics Covered</h2>
+        <h2 className={styles.navTitle}>Topics Covered</h2>
         <div className={styles.navButtonsGrid}>
           {(showAllTopics ? headings : headings.slice(0, 9)).map((heading) => (
             <button key={heading.id} onClick={() => scrollToSection(heading.id)} className={styles.topicNavBtn}>
@@ -223,7 +223,7 @@ const Module8Content = () => {
         <div className={styles.contentCard}>
           <h1 id="h.1kmubxsyvifs" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c5">PHYSICAL SYNTHESIS – INTRODUCTION (ZERO → HERO)</span>` }} />
           <hr className={styles.divider} />
-          id="h.c5cg8iz9uizz" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ What is Physical Synthesis? (Classroom Explanation)</span>` }} />
+          <h2 id="h.c5cg8iz9uizz" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ What is Physical Synthesis? (Classroom Explanation)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Before we understand </span><span class="c33">Physical Synthesis</span><span>, let us first understand </span><span class="c13">why it was invented</span><span class="c1">.</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>When a student learns </span><span class="c13">RTL</span><span> and </span><span class="c13">Logical Synthesis</span><span class="c1">, the output we get is:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> </span><span class="c13">Gate-level netlist<br></span><span class="c1">  Logic is correct<br>  Timing looks “okay” on paper</span>` }} />
@@ -238,8 +238,8 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Let’s rewrite it in </span><span class="c13">student-friendly English</span><span class="c1">:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> Physical Synthesis is where </span><span class="c13">logic decisions are made by considering the real physical layout of the chip</span><span class="c1">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.wkxbyn8rzza7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Why Physical Synthesis is Needed </span>` }} />
-          id="h.up5bvek888nv" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c7"> Question for Students:</span>` }} />
+          <h2 id="h.wkxbyn8rzza7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Why Physical Synthesis is Needed </span>` }} />
+          <h2 id="h.up5bvek888nv" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c7"> Question for Students:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">“If logical synthesis already meets timing, why do we need physical synthesis?”</span>` }} />
           <h3 id="h.aoiwlspkolz4" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7"> Answer:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Because logical synthesis:</span>` }} />
@@ -250,7 +250,7 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">“Fixing timing after placement is too late.”</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> </span><span class="c13">Timing must be optimized </span><span class="c13 c33">with physical awareness<br></span><span class="c1">  That is Physical Synthesis.</span>` }} />
           <hr className={styles.divider} />
-          id="h.zbktatk2qgr" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Real-Life Analogy (Very Important)</span>` }} />
+          <h2 id="h.zbktatk2qgr" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Real-Life Analogy (Very Important)</span>` }} />
           <h3 id="h.59q25ddvcltv" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7"> City Planning Analogy</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Imagine:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Logical Synthesis = Designing rooms on paper<br></span></li><li class="c3 li-bullet-0"><span class="c1">Physical Design = Building the city<br></span></li>` }} />
@@ -263,13 +263,13 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>If you planned with </span><span class="c13">city map knowledge earlier</span><span class="c1">, design would be better.</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> Physical Synthesis = </span><span class="c14 c13">Designing with city map in hand</span>` }} />
           <hr className={styles.divider} />
-          id="h.7w5kcm9k3fyd" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ What Exactly Happens in Physical Synthesis?</span>` }} />
+          <h2 id="h.7w5kcm9k3fyd" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ What Exactly Happens in Physical Synthesis?</span>` }} />
           <h3 id="h.2s7mc6vfsi6l" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">Step-by-step internal view:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>1️⃣ Tool takes </span><span class="c13">gate-level netlist<br></span><span> 2️⃣ Tool performs </span><span class="c13">initial placement</span><span class="c1"> (coarse)<br> 3️⃣ Estimates:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Wire delay<br></span></li><li class="c3 li-bullet-0"><span class="c1">Congestion<br></span></li><li class="c3 li-bullet-0"><span>Timing violations<br> 4️⃣ Performs </span><span class="c13">logic changes</span><span class="c1">:<br></span></li><li class="c3 li-bullet-0"><span class="c1">Buffer insertion<br></span></li><li class="c3 li-bullet-0"><span class="c1">Gate resizing<br></span></li><li class="c3 li-bullet-0"><span>Logic restructuring<br> 5️⃣ Re-analyzes timing using </span><span class="c13">physical estimates<br></span><span class="c1"> 6️⃣ Iterates until timing improves<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> This happens </span><span class="c14 c13">before final routing</span>` }} />
           <hr className={styles.divider} />
-          id="h.8hd373ignvax" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ Where Physical Synthesis Fits in the VLSI Flow</span>` }} />
+          <h2 id="h.8hd373ignvax" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ Where Physical Synthesis Fits in the VLSI Flow</span>` }} />
           <h3 id="h.19f8y7nznc7y" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">Full Flow View (High-Level)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c17 c12">RTL</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c17 c12"> ↓</span>` }} />
@@ -287,7 +287,7 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Important:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span>Physical Synthesis </span><span class="c14 c13">bridges logic and layout<br></span></li><li class="c3 li-bullet-0"><span class="c1">Reduces late-stage surprises<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.6mvm5lhe8co" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">6️⃣ Industry Scenario (Real Engineer Life)</span>` }} />
+          <h2 id="h.6mvm5lhe8co" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">6️⃣ Industry Scenario (Real Engineer Life)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">You are a physical design engineer.</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">You get timing report:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c17 c12">WNS = -800 ps</span>` }} />
@@ -301,10 +301,10 @@ const Module8Content = () => {
             <img loading="lazy" src="/assets/modules/module8/image9.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.nikohsh82zba" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">8️⃣ Key Takeaways (Must Remember)</span>` }} />
+          <h2 id="h.nikohsh82zba" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">8️⃣ Key Takeaways (Must Remember)</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span>Physical Synthesis uses </span><span class="c13">physical information</span><span class="c1"> to optimize logic<br></span></li><li class="c3 li-bullet-0"><span>Solves problems caused by </span><span class="c14 c13">wire delays and congestion<br></span></li><li class="c3 li-bullet-0"><span class="c1">Reduces timing closure risk<br></span></li><li class="c3 li-bullet-0"><span>Acts as a </span><span class="c14 c13">bridge between synthesis and place &amp; route<br></span></li><li class="c3 li-bullet-0"><span class="c1">Mandatory in modern deep sub-micron designs<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.f9968ev9hwfr" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">9️⃣ Mini Conclusion (Lecture Ending)</span>` }} />
+          <h2 id="h.f9968ev9hwfr" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">9️⃣ Mini Conclusion (Lecture Ending)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Think of Physical Synthesis as:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">“Don’t wait for the house to be built to fix the stairs—design them correctly before construction.”</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">This mindset separates:</span>` }} />
@@ -312,7 +312,7 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c5">INTRODUCTION TO PHYSICAL SYNTHESIS</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c34 c33">(START HERE – MOST IMPORTANT)</span>` }} />
           <hr className={styles.divider} />
-          id="h.11ln91vt4lik" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ What is Physical Synthesis (Industry Definition)</span>` }} />
+          <h2 id="h.11ln91vt4lik" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ What is Physical Synthesis (Industry Definition)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>In </span><span class="c13">real semiconductor companies</span><span class="c1">, physical synthesis is not defined in one line.</span>` }} />
           <h3 id="h.x275puxz3ir2" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7"> Industry-style Definition:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">Physical Synthesis is the process of optimizing an RTL or gate-level design using physical information such as placement, wire delay, congestion, and clock distribution to meet timing, power, and area goals before final place-and-route.</span>` }} />
@@ -322,7 +322,7 @@ const Module8Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Estimated placement<br></span></li><li class="c3 li-bullet-0"><span class="c1">Estimated routing<br></span></li><li class="c3 li-bullet-0"><span class="c1">Realistic wire delays<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> Important:<br> Physical synthesis is </span><span class="c13">not just optimization</span><span>,<br> It is </span><span class="c13">optimization with physical awareness</span><span class="c1">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.kuzq20wt2kiw" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Why Logical Synthesis Is NOT Enough</span>` }} />
+          <h2 id="h.kuzq20wt2kiw" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Why Logical Synthesis Is NOT Enough</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>This is the </span><span class="c13">core reason</span><span class="c1"> physical synthesis exists.</span>` }} />
           <h3 id="h.f3eq3slb4j0q" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What Logical Synthesis Assumes</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Logical synthesis assumes:</span>` }} />
@@ -338,7 +338,7 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c17 c12">WNS = -700ps</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> Logical synthesis </span><span class="c13">cannot see this problem</span><span class="c1">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.4brgt8htv4j0" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ What Problems Physical Synthesis Solves</span>` }} />
+          <h2 id="h.4brgt8htv4j0" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ What Problems Physical Synthesis Solves</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Physical synthesis was created to solve </span><span class="c13">real silicon problems</span><span class="c1">, not theory problems.</span>` }} />
           <h3 id="h.wml1ainigzgq" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7"> Problems Without Physical Synthesis</span>` }} />
           <div className={styles.tableContainer}>
@@ -350,7 +350,7 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">✔ Timing degradation due to wire delay<br> ✔ Congestion hotspots<br> ✔ Excessive buffering<br> ✔ Late-stage ECO explosion<br> ✔ Power inefficiency</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> It fixes problems </span><span class="c14 c13">before they become disasters</span>` }} />
           <hr className={styles.divider} />
-          id="h.iis3t4b0o9yd" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ Logical vs Physical Synthesis (Real Silicon View)</span>` }} />
+          <h2 id="h.iis3t4b0o9yd" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ Logical vs Physical Synthesis (Real Silicon View)</span>` }} />
           <h3 id="h.qzr4c6ko1vl3" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 Logical Synthesis (LS)</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Works on RTL<br></span></li><li class="c3 li-bullet-0"><span>Uses </span><span class="c14 c13">wireload models<br></span></li><li class="c3 li-bullet-0"><span class="c1">No idea where gates will be placed<br></span></li><li class="c3 li-bullet-0"><span>Timing is </span><span class="c14 c13">estimated<br></span></li>` }} />
           <h3 id="h.9p18hf2ji1ev" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 Physical Synthesis (PS)</span>` }} />
@@ -361,7 +361,7 @@ const Module8Content = () => {
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c27"><td class="c30" colspan="1" rowspan="1"><p class="c16"><span class="c13">Feature</span></p></td><td class="c36" colspan="1" rowspan="1"><p class="c16"><span class="c13">Logical Synthesis</span></p></td><td class="c6" colspan="1" rowspan="1"><p class="c16"><span class="c13">Physical Synthesis</span></p></td></tr><tr class="c27"><td class="c30" colspan="1" rowspan="1"><p class="c9"><span class="c1">Wire delay</span></p></td><td class="c36" colspan="1" rowspan="1"><p class="c9"><span class="c1">Estimated</span></p></td><td class="c6" colspan="1" rowspan="1"><p class="c9"><span class="c1">Placement-based</span></p></td></tr><tr class="c27"><td class="c30" colspan="1" rowspan="1"><p class="c9"><span class="c1">Congestion</span></p></td><td class="c36" colspan="1" rowspan="1"><p class="c9"><span class="c1">Ignored</span></p></td><td class="c6" colspan="1" rowspan="1"><p class="c9"><span class="c1">Considered</span></p></td></tr><tr class="c27"><td class="c30" colspan="1" rowspan="1"><p class="c9"><span class="c1">Clock skew</span></p></td><td class="c36" colspan="1" rowspan="1"><p class="c9"><span class="c1">Assumed ideal</span></p></td><td class="c6" colspan="1" rowspan="1"><p class="c9"><span class="c1">Modeled</span></p></td></tr><tr class="c27"><td class="c30" colspan="1" rowspan="1"><p class="c9"><span class="c1">Timing accuracy</span></p></td><td class="c36" colspan="1" rowspan="1"><p class="c9"><span class="c1">Medium</span></p></td><td class="c6" colspan="1" rowspan="1"><p class="c9"><span class="c1">High</span></p></td></tr><tr class="c27"><td class="c30" colspan="1" rowspan="1"><p class="c9"><span class="c1">ECO count</span></p></td><td class="c36" colspan="1" rowspan="1"><p class="c9"><span class="c1">High</span></p></td><td class="c6" colspan="1" rowspan="1"><p class="c9"><span class="c1">Low</span></p></td></tr><tr class="c27"><td class="c30" colspan="1" rowspan="1"><p class="c9"><span class="c1">Silicon success</span></p></td><td class="c36" colspan="1" rowspan="1"><p class="c9"><span class="c1">Risky</span></p></td><td class="c6" colspan="1" rowspan="1"><p class="c9"><span class="c1">Safer</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          id="h.lgoolrsfxbna" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ Evolution of Synthesis (Why PS Was Introduced)</span>` }} />
+          <h2 id="h.lgoolrsfxbna" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ Evolution of Synthesis (Why PS Was Introduced)</span>` }} />
           <h3 id="h.y1zk0srishqk" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 Old Technology Nodes (180nm – 90nm)</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Wires were short<br></span></li><li class="c3 li-bullet-0"><span class="c1">Gate delay dominated<br></span></li><li class="c3 li-bullet-0"><span class="c1">Logical synthesis was enough<br></span></li>` }} />
           <h3 id="h.85qu2bzhp46m" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 Advanced Nodes (28nm → 3nm)</span>` }} />
@@ -373,7 +373,7 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Thus:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">Physical Synthesis was born out of necessity, not luxury</span>` }} />
           <hr className={styles.divider} />
-          id="h.sfeivuva2l36" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">6️⃣ Tools That Support Physical Synthesis</span>` }} />
+          <h2 id="h.sfeivuva2l36" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">6️⃣ Tools That Support Physical Synthesis</span>` }} />
           <h3 id="h.nekksbqefs1y" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7"> 1. Synopsys Design Compiler Topographical (DC-T)</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Logical + physical awareness<br></span></li><li class="c3 li-bullet-0"><span class="c1">Uses floorplan<br></span></li><li class="c3 li-bullet-0"><span class="c1">Placement-driven optimization<br></span></li><li class="c3 li-bullet-0"><span class="c1">Bridge between DC and P&amp;R<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Used when:</span>` }} />
@@ -389,7 +389,7 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Used when:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Cadence-based PD flow<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.xx9iuz1zztmi" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">7️⃣ Role of a Physical Synthesis Engineer</span>` }} />
+          <h2 id="h.xx9iuz1zztmi" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">7️⃣ Role of a Physical Synthesis Engineer</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>This is </span><span class="c13">very important for students</span><span class="c1">.</span>` }} />
           <h3 id="h.b82cr8upjdf1" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7"> Physical Synthesis Engineer Responsibilities</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Analyze timing failures early<br></span></li><li class="c3 li-bullet-0"><span class="c1">Optimize logic with physical context<br></span></li><li class="c3 li-bullet-0"><span class="c1">Reduce congestion hotspots<br></span></li><li class="c3 li-bullet-0"><span class="c1">Control buffering<br></span></li><li class="c3 li-bullet-0"><span class="c1">Prepare clean netlist for P&amp;R<br></span></li><li class="c3 li-bullet-0"><span class="c1">Reduce ECO count later<br></span></li>` }} />
@@ -402,17 +402,17 @@ const Module8Content = () => {
             <img loading="lazy" src="/assets/modules/module8/image12.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.bgwbzmpfe29i" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">9️⃣ Key Takeaways (Exam + Industry)</span>` }} />
+          <h2 id="h.bgwbzmpfe29i" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">9️⃣ Key Takeaways (Exam + Industry)</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span>Logical synthesis alone is </span><span class="c14 c13">not enough<br></span></li><li class="c3 li-bullet-0"><span>Physical synthesis considers </span><span class="c14 c13">real silicon effects<br></span></li><li class="c3 li-bullet-0"><span class="c1">It improves timing closure success<br></span></li><li class="c3 li-bullet-0"><span class="c1">Reduces late-stage ECOs<br></span></li><li class="c3 li-bullet-0"><span class="c1">Mandatory for advanced technology nodes<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.d473a8vco59o" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 1 Conclusion (Lecture Style)</span>` }} />
+          <h2 id="h.d473a8vco59o" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 1 Conclusion (Lecture Style)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Physical synthesis teaches one core lesson:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">“Silicon does not care about theory — it cares about physics.”</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">If you understand this,<br> you are no longer a beginner.</span>` }} />
           <h1 id="h.lfilbn5eelht" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c5">INPUTS REQUIRED FOR PHYSICAL SYNTHESIS</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c33 c34">(What the tool needs to START Physical Synthesis)</span>` }} />
           <hr className={styles.divider} />
-          id="h.xkbiszl0odlk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">0️⃣ Why Inputs Matter in Physical Synthesis</span>` }} />
+          <h2 id="h.xkbiszl0odlk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">0️⃣ Why Inputs Matter in Physical Synthesis</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Before we discuss each input, understand </span><span class="c13">one golden rule</span><span class="c1">:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">Physical synthesis cannot “guess” silicon reality — it needs correct inputs.</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">If any input is:</span>` }} />
@@ -421,7 +421,7 @@ const Module8Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Timing closure will fail<br></span></li><li class="c3 li-bullet-0"><span class="c1">Power numbers will be wrong<br></span></li><li class="c3 li-bullet-0"><span class="c1">P&amp;R will suffer later<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>So </span><span class="c13">inputs are the foundation</span><span class="c1"> of physical synthesis.</span>` }} />
           <hr className={styles.divider} />
-          id="h.57luxoezexgx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ Gate-Level Netlist</span>` }} />
+          <h2 id="h.57luxoezexgx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ Gate-Level Netlist</span>` }} />
           <h3 id="h.smyx4p9t4ebc" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What Is a Gate-Level Netlist?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">A gate-level netlist is:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span>A </span><span class="c13">structural description</span><span class="c1"> of your design<br></span></li><li class="c3 li-bullet-0"><span>Contains </span><span class="c13">standard cells</span><span class="c1"> (AND, OR, DFF, MUX, etc.)<br></span></li><li class="c3 li-bullet-0"><span>Created by </span><span class="c14 c13">logical synthesis<br></span></li>` }} />
@@ -440,13 +440,13 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">RTL = architectural drawing<br> Gate netlist = actual bricks and beams</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Physical synthesis is about </span><span class="c13">arranging bricks</span><span class="c1">, not drawing plans.</span>` }} />
           <hr className={styles.divider} />
-          id="h.h7nw0goq997f" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Technology Libraries (Very Critical)</span>` }} />
+          <h2 id="h.h7nw0goq997f" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Technology Libraries (Very Critical)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Technology libraries tell the tool:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">“What kind of silicon world am I building this design in?”</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">There are two main types used in physical synthesis:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c17 c12">.lib<br></span></li><li class="c3 li-bullet-0"><span class="c17 c12">.lef<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.tqesdx81yvqk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c13 c40">3️⃣ </span><span class="c13 c32">.lib</span><span class="c2"> – Timing &amp; Power Library</span>` }} />
+          <h2 id="h.tqesdx81yvqk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c13 c40">3️⃣ </span><span class="c13 c32">.lib</span><span class="c2"> – Timing &amp; Power Library</span>` }} />
           <h3 id="h.ybas2tji3b9u" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What is a .lib File?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c12">.lib</span><span class="c1"> (Liberty file) contains:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Timing models<br></span></li><li class="c3 li-bullet-0"><span class="c1">Power models<br></span></li><li class="c3 li-bullet-0"><span class="c1">Functional behavior<br></span></li><li class="c3 li-bullet-0"><span class="c1">Process corners (slow, fast, typical)<br></span></li>` }} />
@@ -466,7 +466,7 @@ const Module8Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span>Replace </span><span class="c12">AND2_X1</span><span> → </span><span class="c12">AND2_X4</span><span class="c1"> to fix timing<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> Without </span><span class="c12">.lib</span><span>, </span><span class="c13">no timing analysis is possible</span><span class="c1">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.hm7roxmkfnws" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c13 c40">4️⃣ </span><span class="c32 c13">.lef</span><span class="c2"> – Physical Library Information</span>` }} />
+          <h2 id="h.hm7roxmkfnws" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c13 c40">4️⃣ </span><span class="c32 c13">.lef</span><span class="c2"> – Physical Library Information</span>` }} />
           <h3 id="h.7u9v8aus4o23" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What is a .lef File?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>LEF = </span><span class="c14 c13">Library Exchange Format</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>It contains </span><span class="c13">physical data</span><span class="c1">, not timing.</span>` }} />
@@ -483,7 +483,7 @@ const Module8Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c12">.lib</span><span> tells </span><span class="c13">how fast</span><span class="c1"> a cell is<br></span></li><li class="c3 li-bullet-0"><span class="c12">.lef</span><span> tells </span><span class="c13">how big</span><span class="c1"> a cell is<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Physical synthesis needs </span><span class="c13">both</span><span class="c1">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.69jirg5kbo0p" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ Physical Constraints</span>` }} />
+          <h2 id="h.69jirg5kbo0p" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ Physical Constraints</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Physical synthesis is </span><span class="c13">constraint-driven</span><span class="c1">, not automatic magic.</span>` }} />
           <h3 id="h.l9xogyrgsvlp" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What Are Physical Constraints?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">They define:</span>` }} />
@@ -497,7 +497,7 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">These guide:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Placement engine<br></span></li><li class="c3 li-bullet-0"><span class="c1">Congestion control<br></span></li><li class="c3 li-bullet-0"><span class="c1">Timing-aware spreading<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.s5h64mb86r5i" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">6️⃣ Floorplan Information</span>` }} />
+          <h2 id="h.s5h64mb86r5i" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">6️⃣ Floorplan Information</span>` }} />
           <h3 id="h.shfpbd2pq2oa" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What Is a Floorplan?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">A floorplan defines:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Chip boundary<br></span></li><li class="c3 li-bullet-0"><span class="c1">Core area<br></span></li><li class="c3 li-bullet-0"><span class="c1">Macro locations<br></span></li><li class="c3 li-bullet-0"><span class="c1">IO positions<br></span></li>` }} />
@@ -509,7 +509,7 @@ const Module8Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Two flops far apart → timing issue predicted early<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> No floorplan = </span><span class="c14 c13">blind optimization</span>` }} />
           <hr className={styles.divider} />
-          id="h.y8fn49i30cv3" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">7️⃣ Placement Blockages</span>` }} />
+          <h2 id="h.y8fn49i30cv3" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">7️⃣ Placement Blockages</span>` }} />
           <h3 id="h.f2arhidqt8nd" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What Are Placement Blockages?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Blockages are regions where:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Cells are not allowed<br></span></li><li class="c3 li-bullet-0"><span class="c1">Routing is restricted<br></span></li>` }} />
@@ -520,7 +520,7 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Physical synthesis:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Tries to avoid hotspots<br></span></li><li class="c3 li-bullet-0"><span class="c1">Rebalances logic early<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.7d37fywgviic" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">8️⃣ Timing Constraints (.sdc)</span>` }} />
+          <h2 id="h.7d37fywgviic" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">8️⃣ Timing Constraints (.sdc)</span>` }} />
           <h3 id="h.rtk0x5koixit" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What is .sdc?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>SDC = </span><span class="c14 c13">Synopsys Design Constraints</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">It defines:</span>` }} />
@@ -533,7 +533,7 @@ const Module8Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">What is critical<br></span></li><li class="c3 li-bullet-0"><span class="c1">What can be relaxed<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Bad SDC = bad silicon.</span>` }} />
           <hr className={styles.divider} />
-          id="h.8h5i4wl0i5ih" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">9️⃣ Power Intent (UPF / CPF – Intro Level)</span>` }} />
+          <h2 id="h.8h5i4wl0i5ih" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">9️⃣ Power Intent (UPF / CPF – Intro Level)</span>` }} />
           <h3 id="h.gug31pc4kogq" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What Is Power Intent?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Power intent describes:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Power domains<br></span></li><li class="c3 li-bullet-0"><span class="c1">Power switches<br></span></li><li class="c3 li-bullet-0"><span class="c1">Isolation cells<br></span></li><li class="c3 li-bullet-0"><span class="c1">Retention registers<br></span></li>` }} />
@@ -544,11 +544,11 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Without power intent:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Logic may break during low-power modes<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.r1fpjes3oy1g" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">🔹 Intro-Level Note (Student View)</span>` }} />
+          <h2 id="h.r1fpjes3oy1g" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">🔹 Intro-Level Note (Student View)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">You don’t master UPF now, but:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>You must know </span><span class="c13">why it exists</span><span class="c1">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.e28z4j317pvp" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">🔟 Parasitic Information (Early Estimation)</span>` }} />
+          <h2 id="h.e28z4j317pvp" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">🔟 Parasitic Information (Early Estimation)</span>` }} />
           <h3 id="h.rydxqfdq33y9" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What Are Parasitics?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Parasitics include:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Wire resistance (R)<br></span></li><li class="c3 li-bullet-0"><span class="c1">Wire capacitance (C)<br></span></li>` }} />
@@ -559,7 +559,7 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">This is called:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">Early or Estimated Parasitics</span>` }} />
           <hr className={styles.divider} />
-          id="h.hivi19r7261y" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣1️⃣ How All Inputs Work Together (Big Picture)</span>` }} />
+          <h2 id="h.hivi19r7261y" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣1️⃣ How All Inputs Work Together (Big Picture)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Think of physical synthesis like cooking:</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c27"><td class="c25" colspan="1" rowspan="1"><p class="c16"><span class="c13">Ingredient</span></p></td><td class="c19" colspan="1" rowspan="1"><p class="c16"><span class="c13">Role</span></p></td></tr><tr class="c27"><td class="c25" colspan="1" rowspan="1"><p class="c9"><span class="c1">Netlist</span></p></td><td class="c19" colspan="1" rowspan="1"><p class="c9"><span class="c1">What to cook</span></p></td></tr><tr class="c27"><td class="c25" colspan="1" rowspan="1"><p class="c9"><span class="c1">.lib</span></p></td><td class="c19" colspan="1" rowspan="1"><p class="c9"><span class="c1">How fast it cooks</span></p></td></tr><tr class="c27"><td class="c25" colspan="1" rowspan="1"><p class="c9"><span class="c1">.lef</span></p></td><td class="c19" colspan="1" rowspan="1"><p class="c9"><span class="c1">How big the pan is</span></p></td></tr><tr class="c27"><td class="c25" colspan="1" rowspan="1"><p class="c9"><span class="c1">SDC</span></p></td><td class="c19" colspan="1" rowspan="1"><p class="c9"><span class="c1">Cooking time</span></p></td></tr><tr class="c27"><td class="c25" colspan="1" rowspan="1"><p class="c9"><span class="c1">Floorplan</span></p></td><td class="c19" colspan="1" rowspan="1"><p class="c9"><span class="c1">Kitchen layout</span></p></td></tr><tr class="c27"><td class="c25" colspan="1" rowspan="1"><p class="c9"><span class="c1">Blockages</span></p></td><td class="c19" colspan="1" rowspan="1"><p class="c9"><span class="c1">No-cook zones</span></p></td></tr><tr class="c27"><td class="c25" colspan="1" rowspan="1"><p class="c9"><span class="c1">Power intent</span></p></td><td class="c19" colspan="1" rowspan="1"><p class="c9"><span class="c1">Gas / electricity rules</span></p></td></tr></tbody>` }} />
@@ -569,7 +569,7 @@ const Module8Content = () => {
             <img loading="lazy" src="/assets/modules/module8/image13.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.sgovzyloyle0" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 2 Conclusion (Lecture Style)</span>` }} />
+          <h2 id="h.sgovzyloyle0" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 2 Conclusion (Lecture Style)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Physical synthesis </span><span class="c13">does not start with commands</span><span>.<br> It starts with </span><span class="c13">correct inputs</span><span class="c1">.</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">Wrong inputs → Wrong silicon</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">A good engineer:</span>` }} />
@@ -577,7 +577,7 @@ const Module8Content = () => {
           <h1 id="h.4zyfa39uq6om" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c5">PHYSICAL AWARENESS CONCEPTS</span>` }} />
           <h3 id="h.os8ghbxijar9" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c20 c13">(VERY IMPORTANT – Students usually miss this)</span>` }} />
           <hr className={styles.divider} />
-          id="h.q7yq80thxdbd" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">0️⃣ Why This Module Is CRITICAL</span>` }} />
+          <h2 id="h.q7yq80thxdbd" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">0️⃣ Why This Module Is CRITICAL</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Most beginners think:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">“Timing is only about logic gates.”</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>That thinking is </span><span class="c13">100% wrong in modern VLSI</span><span class="c1">.</span>` }} />
@@ -586,7 +586,7 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">If students don’t understand this module:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">They will never close timing<br></span></li><li class="c3 li-bullet-0"><span class="c1">They will blame tools instead of physics<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.tmw8x9jb7khl" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ What is Physical Awareness?</span>` }} />
+          <h2 id="h.tmw8x9jb7khl" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ What is Physical Awareness?</span>` }} />
           <h3 id="h.2bo2y8xvv5v5" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 Simple Definition (Industry Style)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c13">Physical awareness</span><span class="c1"> means:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>The synthesis tool understands </span><span class="c13">real silicon effects</span><span class="c1"> like wire length, placement distance, congestion, and routing delay — not just logic equations.</span>` }} />
@@ -599,7 +599,7 @@ const Module8Content = () => {
           </div>
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Physical synthesis = </span><span class="c13 c14">logic + physics</span>` }} />
           <hr className={styles.divider} />
-          id="h.sxkut9ldfjrk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Cell Delay vs Wire Delay</span>` }} />
+          <h2 id="h.sxkut9ldfjrk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Cell Delay vs Wire Delay</span>` }} />
           <h3 id="h.mux74gjisr73" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What is Cell Delay?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Cell delay is:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Delay inside a standard cell<br></span></li><li class="c3 li-bullet-0"><span>Given by </span><span class="c17 c12">.lib<br></span></li><li class="c3 li-bullet-0"><span class="c1">Depends on:<br></span></li>` }} />
@@ -618,7 +618,7 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">That means:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Making gates faster doesn’t always fix timing<br></span></li><li class="c3 li-bullet-0"><span class="c1">Shortening wires often helps more<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.6g3jl2gyfc18" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Why Interconnect Dominates Timing</span>` }} />
+          <h2 id="h.6g3jl2gyfc18" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Why Interconnect Dominates Timing</span>` }} />
           <h3 id="h.9xtfalca9cvx" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 Old vs New Technology</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">Old technologies (180nm):</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Short wires<br></span></li><li class="c3 li-bullet-0"><span class="c1">Large gates<br></span></li><li class="c3 li-bullet-0"><span class="c1">Cell delay dominated<br></span></li>` }} />
@@ -632,7 +632,7 @@ const Module8Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Logic delay: 35%<br></span></li><li class="c3 li-bullet-0"><span class="c1">Wire delay: 65%<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>So optimizing only logic is </span><span class="c13">not enough</span><span class="c1">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.2munf4vzg8hr" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ RC Delay Basics (Must Know)</span>` }} />
+          <h2 id="h.2munf4vzg8hr" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ RC Delay Basics (Must Know)</span>` }} />
           <h3 id="h.8ubgj9ceheoo" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What is RC Delay?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Wire delay is modeled as:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">Delay ≈ R × C</span>` }} />
@@ -647,7 +647,7 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">That’s why:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Placement matters<br></span></li><li class="c3 li-bullet-0"><span class="c1">Floorplan matters<br></span></li><li class="c3 li-bullet-0"><span class="c1">Congestion matters<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.tm0p0l8c7x98" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ Congestion Awareness</span>` }} />
+          <h2 id="h.tm0p0l8c7x98" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ Congestion Awareness</span>` }} />
           <h3 id="h.h16kvhcifytm" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What is Congestion?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Congestion happens when:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Too many wires want to pass through same region<br></span></li><li class="c3 li-bullet-0"><span class="c1">Routing resources become limited<br></span></li>` }} />
@@ -661,7 +661,7 @@ const Module8Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Predicts congestion early<br></span></li><li class="c3 li-bullet-0"><span class="c1">Spreads logic<br></span></li><li class="c3 li-bullet-0"><span class="c1">Avoids hot spots<br></span></li><li class="c3 li-bullet-0"><span class="c1">Re-structures logic to reduce wiring<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Logical synthesis cannot do this.</span>` }} />
           <hr className={styles.divider} />
-          id="h.9dmb3bpda8sy" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">6️⃣ Placement-Driven Optimization</span>` }} />
+          <h2 id="h.9dmb3bpda8sy" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">6️⃣ Placement-Driven Optimization</span>` }} />
           <h3 id="h.i96vuw7e3gno" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What Does This Mean?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Instead of:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Optimize logic first<br></span></li><li class="c3 li-bullet-0"><span class="c1">Place later<br></span></li>` }} />
@@ -673,7 +673,7 @@ const Module8Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Tool may insert buffer<br></span></li><li class="c3 li-bullet-0"><span class="c1">Tool may restructure logic<br></span></li><li class="c3 li-bullet-0"><span class="c1">Tool may move logic closer<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>This is </span><span class="c13">placement-driven optimization</span><span class="c1">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.q2szqnuv3eks" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">7️⃣ Early Routing Estimation</span>` }} />
+          <h2 id="h.q2szqnuv3eks" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">7️⃣ Early Routing Estimation</span>` }} />
           <h3 id="h.w03l8du5r7qp" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What is Early Routing?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Before real routing:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Tool estimates wire paths<br></span></li><li class="c3 li-bullet-0"><span class="c1">Calculates approximate RC<br></span></li><li class="c3 li-bullet-0"><span class="c1">Predicts timing more accurately<br></span></li>` }} />
@@ -686,7 +686,7 @@ const Module8Content = () => {
             <img loading="lazy" src="/assets/modules/module8/image11.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.uqjm1q8v1yj6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 3 Conclusion</span>` }} />
+          <h2 id="h.uqjm1q8v1yj6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 3 Conclusion</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Physical awareness teaches one truth:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">Timing is not just about gates — it is about distance.</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">A good physical synthesis engineer:</span>` }} />
@@ -697,7 +697,7 @@ const Module8Content = () => {
           <h1 id="h.4wvejbh67uzo" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c5">FLOORPLAN AWARENESS IN PHYSICAL SYNTHESIS</span>` }} />
           <h3 id="h.sk1fl72dt1gr" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c20 c13">(Bridge Between Synthesis and P&amp;R)</span>` }} />
           <hr className={styles.divider} />
-          id="h.3ejwqi6yq7nb" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c5">0️⃣ Why Floorplan Awareness Exists</span>` }} />
+          <h2 id="h.3ejwqi6yq7nb" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c5">0️⃣ Why Floorplan Awareness Exists</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Students often ask:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">“Why does synthesis care about floorplan? Isn’t that P&amp;R’s job?”</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Answer:</span>` }} />
@@ -705,20 +705,20 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Without floorplan:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Tool guesses distances<br></span></li><li class="c3 li-bullet-0"><span class="c1">Timing predictions are wrong<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.1wwcvz983m8y" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ What is a Floorplan?</span>` }} />
+          <h2 id="h.1wwcvz983m8y" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ What is a Floorplan?</span>` }} />
           <h3 id="h.f2nee5izwz3i" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 Simple Definition</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">A floorplan defines:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Chip boundary<br></span></li><li class="c3 li-bullet-0"><span class="c1">Core region<br></span></li><li class="c3 li-bullet-0"><span class="c1">Macro locations<br></span></li><li class="c3 li-bullet-0"><span class="c1">IO locations<br></span></li><li class="c3 li-bullet-0"><span class="c1">Routing regions<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>It is the </span><span class="c13">physical blueprint of the chip</span><span class="c1">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.95qcj1dztrnu" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Die Area vs Core Area</span>` }} />
+          <h2 id="h.95qcj1dztrnu" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Die Area vs Core Area</span>` }} />
           <h3 id="h.tbesdmdhccr" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 Die Area</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Total chip size<br></span></li><li class="c3 li-bullet-0"><span class="c1">Includes IO ring and seal ring<br></span></li>` }} />
           <h3 id="h.iuhhpchak66i" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 Core Area</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Region where standard cells are placed<br></span></li><li class="c3 li-bullet-0"><span class="c1">Excludes IOs and pads<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Physical synthesis optimizes </span><span class="c13">inside the core</span><span class="c1">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.792uj1k4zdky" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Aspect Ratio</span>` }} />
+          <h2 id="h.792uj1k4zdky" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Aspect Ratio</span>` }} />
           <h3 id="h.ul25dzukeheh" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What is Aspect Ratio?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Aspect ratio =</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">Width : Height of the core</span>` }} />
@@ -730,7 +730,7 @@ const Module8Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Congestion<br></span></li><li class="c3 li-bullet-0"><span class="c1">Long wires<br></span></li><li class="c3 li-bullet-0"><span class="c1">Poor timing<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Physical synthesis must adapt logic based on shape.</span>` }} />
           <hr className={styles.divider} />
-          id="h.ox2fgfrfry8f" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ Utilization</span>` }} />
+          <h2 id="h.ox2fgfrfry8f" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ Utilization</span>` }} />
           <h3 id="h.ff3ijrj6bpd4" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What is Utilization?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Utilization =</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">(Standard cell area / Core area)</span>` }} />
@@ -752,7 +752,7 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Physical synthesis must know IO locations for:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Accurate timing estimation<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.84envzqn37uf" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">6️⃣ Macro Awareness (SRAM, IP Blocks)</span>` }} />
+          <h2 id="h.84envzqn37uf" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">6️⃣ Macro Awareness (SRAM, IP Blocks)</span>` }} />
           <h3 id="h.5sqrfxhokck4" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What Are Macros?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Macros are:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Large blocks (SRAM, PLL, IP)<br></span></li><li class="c3 li-bullet-0"><span class="c1">Fixed size<br></span></li><li class="c3 li-bullet-0"><span class="c1">Limited placement flexibility<br></span></li>` }} />
@@ -763,7 +763,7 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Physical synthesis:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Places logic around macros<br></span></li><li class="c3 li-bullet-0"><span class="c1">Avoids critical paths crossing macros<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.y6pqt07440g6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">7️⃣ Why Physical Synthesis MUST Know Floorplan</span>` }} />
+          <h2 id="h.y6pqt07440g6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">7️⃣ Why Physical Synthesis MUST Know Floorplan</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Without floorplan:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Wire delay is guessed<br></span></li><li class="c3 li-bullet-0"><span class="c1">Congestion is ignored<br></span></li><li class="c3 li-bullet-0"><span class="c1">Timing closure fails late<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">With floorplan:</span>` }} />
@@ -773,20 +773,20 @@ const Module8Content = () => {
             <img loading="lazy" src="/assets/modules/module8/image4.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.7j6eyfgxofkk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 4 Conclusion</span>` }} />
+          <h2 id="h.7j6eyfgxofkk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 4 Conclusion</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Floorplan awareness turns synthesis into </span><span class="c13">silicon-aware engineering</span><span class="c1">.</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">Good floorplan → good timing → good chip</span>` }} />
           <h1 id="h.h4u9unhdy3m" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c5">PHYSICAL SYNTHESIS FLOW (STEP-BY-STEP)</span>` }} />
           <h3 id="h.x57bayfcnl3f" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c20 c13">(CORE MODULE – MOST IMPORTANT)</span>` }} />
           <hr className={styles.divider} />
-          id="h.eb7ihy4sz8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c13 c40">0️⃣ </span><span class="c5">Why This Module Matters</span>` }} />
+          <h2 id="h.eb7ihy4sz8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c13 c40">0️⃣ </span><span class="c5">Why This Module Matters</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">If someone asks in an interview:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">“Explain physical synthesis flow”</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>This module </span><span class="c13">is the answer</span><span class="c1">.</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">If a student understands this:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span>They understand </span><span class="c14 c13">what the tool is actually doing<br></span></li><li class="c3 li-bullet-0"><span class="c1">They stop treating synthesis like a black box<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.l0hp56ghxesq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ Translation (Netlist + Physical Data)</span>` }} />
+          <h2 id="h.l0hp56ghxesq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ Translation (Netlist + Physical Data)</span>` }} />
           <h3 id="h.uajhqdsaev4i" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What is Translation in Physical Synthesis?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Translation is the </span><span class="c13">first step</span><span> where the tool builds an </span><span class="c13">internal physical model</span><span class="c1"> of the design.</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">The tool takes:</span>` }} />
@@ -801,7 +801,7 @@ const Module8Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c8 c24 li-bullet-0"><span class="c1">Estimated wire models<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1"> Without this step, placement is impossible.</span>` }} />
           <hr className={styles.divider} />
-          id="h.c4wx78oyhlx2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Initial Placement Estimation</span>` }} />
+          <h2 id="h.c4wx78oyhlx2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Initial Placement Estimation</span>` }} />
           <h3 id="h.h3h7oh1i9zg3" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 Important Point (Students Miss This)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>This is </span><span class="c13">NOT final placement</span><span class="c1">.</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">It is:</span>` }} />
@@ -812,7 +812,7 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">This placement is good enough to:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Estimate RC<br></span></li><li class="c3 li-bullet-0"><span class="c1">Analyze timing realistically<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.x47aihtbbhh4" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Timing Analysis with Estimated RC</span>` }} />
+          <h2 id="h.x47aihtbbhh4" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Timing Analysis with Estimated RC</span>` }} />
           <h3 id="h.v22ezg3yn98e" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 Why RC Estimation Is Needed</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Logical synthesis assumes:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Ideal wires <br></span></li>` }} />
@@ -825,12 +825,12 @@ const Module8Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Uses early routing models<br></span></li><li class="c3 li-bullet-0"><span>Runs </span><span class="c14 c13">static timing analysis (STA)<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Now timing is </span><span class="c13">close to real silicon</span><span class="c1">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.sw1x9jql9gzk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ Optimization Loop (Heart of PS)</span>` }} />
+          <h2 id="h.sw1x9jql9gzk" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ Optimization Loop (Heart of PS)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>This is where </span><span class="c13">physical synthesis earns its name</span><span class="c1">.</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>The tool enters an </span><span class="c13">iterative loop</span><span class="c1">:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Analyze → Fix → Re-analyze → Repeat</span>` }} />
           <hr className={styles.divider} />
-          id="h.co89sad75iou" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ Re-Placement</span>` }} />
+          <h2 id="h.co89sad75iou" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ Re-Placement</span>` }} />
           <h3 id="h.iwbwoi2udmsm" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 Why Re-Placement is Needed</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">After optimization:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Cell sizes change<br></span></li><li class="c3 li-bullet-0"><span class="c1">Buffers are added<br></span></li><li class="c3 li-bullet-0"><span class="c1">Logic structure changes<br></span></li>` }} />
@@ -839,14 +839,14 @@ const Module8Content = () => {
           <h3 id="h.b5sop7ts926e" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 Tool Actions</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Moves cells<br></span></li><li class="c3 li-bullet-0"><span class="c1">Reduces wire length<br></span></li><li class="c3 li-bullet-0"><span class="c1">Improves congestion<br></span></li><li class="c3 li-bullet-0"><span class="c1">Rebalances density<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.dsn1sqvaoz5u" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">6️⃣ Buffer Insertion</span>` }} />
+          <h2 id="h.dsn1sqvaoz5u" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">6️⃣ Buffer Insertion</span>` }} />
           <h3 id="h.r59n9bf4lwkw" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 Why Buffers Are Inserted</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Long wires cause:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Large RC delay<br></span></li><li class="c3 li-bullet-0"><span class="c1">Slew degradation<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Buffers:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Break long nets<br></span></li><li class="c3 li-bullet-0"><span class="c1">Improve transition<br></span></li><li class="c3 li-bullet-0"><span class="c1">Fix setup/hold<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.ma1ff0ot7pmo" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">7️⃣ Gate Sizing</span>` }} />
+          <h2 id="h.ma1ff0ot7pmo" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">7️⃣ Gate Sizing</span>` }} />
           <h3 id="h.j1x92dxcy2dy" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What is Gate Sizing?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Changing:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Small cell → bigger drive cell<br></span></li>` }} />
@@ -857,13 +857,13 @@ const Module8Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Bigger cell → faster<br></span></li><li class="c3 li-bullet-0"><span class="c1">Bigger cell → more power + area<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Tool decides based on timing criticality.</span>` }} />
           <hr className={styles.divider} />
-          id="h.9kfw8paj96k6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">8️⃣ Logic Restructuring</span>` }} />
+          <h2 id="h.9kfw8paj96k6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">8️⃣ Logic Restructuring</span>` }} />
           <h3 id="h.4xj6vmmlr1xu" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What is Logic Restructuring?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Changing logic structure without changing functionality.</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Examples:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Re-balancing logic levels<br></span></li><li class="c3 li-bullet-0"><span class="c1">Re-factoring expressions<br></span></li><li class="c3 li-bullet-0"><span class="c1">Re-ordering logic cones<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.jnwtkuo5otp8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">9️⃣ Timing Convergence</span>` }} />
+          <h2 id="h.jnwtkuo5otp8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">9️⃣ Timing Convergence</span>` }} />
           <h3 id="h.duv7r25jmugh" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What is Timing Convergence?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Timing convergence means:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Setup violations = 0 (or acceptable)<br></span></li><li class="c3 li-bullet-0"><span class="c1">Hold violations = 0<br></span></li><li class="c3 li-bullet-0"><span class="c1">WNS/TNS within limits<br></span></li>` }} />
@@ -876,7 +876,7 @@ const Module8Content = () => {
             <img loading="lazy" src="/assets/modules/module8/image6.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.b5s6qdiib60d" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 5 Conclusion</span>` }} />
+          <h2 id="h.b5s6qdiib60d" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 5 Conclusion</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Physical synthesis is:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">Placement-aware, timing-driven optimization in a loop</span>` }} />
           <hr className={styles.divider} />
@@ -885,53 +885,53 @@ const Module8Content = () => {
           <h1 id="h.y655nn81wj0i" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c5">OPTIMIZATION TECHNIQUES IN PHYSICAL SYNTHESIS</span>` }} />
           <h3 id="h.dtc74h48ahw3" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c20 c13">(HOW TIMING IS FIXED)</span>` }} />
           <hr className={styles.divider} />
-          id="h.1wje8ejb1vwu" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">0️⃣ Big Picture</span>` }} />
+          <h2 id="h.1wje8ejb1vwu" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">0️⃣ Big Picture</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Timing is NOT fixed using one technique.</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Physical synthesis uses:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">Multiple optimization knobs together</span>` }} />
           <hr className={styles.divider} />
-          id="h.jxt8b7qop2k" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ Gate Sizing</span>` }} />
+          <h2 id="h.jxt8b7qop2k" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ Gate Sizing</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Already discussed, but key points:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span>Used for </span><span class="c14 c13">critical paths<br></span></li><li class="c3 li-bullet-0"><span class="c1">Improves setup timing<br></span></li><li class="c3 li-bullet-0"><span class="c1">Increases power<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Used carefully, not everywhere.</span>` }} />
           <hr className={styles.divider} />
-          id="h.sy9ji8foge0" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Buffer Insertion</span>` }} />
+          <h2 id="h.sy9ji8foge0" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Buffer Insertion</span>` }} />
           <h3 id="h.gkmo6ov9ta7v" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 Types</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Repeater insertion<br></span></li><li class="c3 li-bullet-0"><span class="c1">Load isolation<br></span></li><li class="c3 li-bullet-0"><span class="c1">Slew fixing<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.4xtvbdriu0ad" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Buffer Relocation</span>` }} />
+          <h2 id="h.4xtvbdriu0ad" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Buffer Relocation</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Sometimes:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Buffer exists<br></span></li><li class="c3 li-bullet-0"><span class="c1">But placed badly<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Tool:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Moves buffer closer to load<br></span></li><li class="c3 li-bullet-0"><span class="c1">Reduces wire delay<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.4rl63ubvxtp7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ Path Restructuring</span>` }} />
+          <h2 id="h.4rl63ubvxtp7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ Path Restructuring</span>` }} />
           <h3 id="h.ipl07j5zcnn8" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What It Fixes</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Deep logic levels<br></span></li><li class="c3 li-bullet-0"><span class="c1">Unbalanced paths<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Tool:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Redistributes logic<br></span></li><li class="c3 li-bullet-0"><span class="c1">Improves path slack<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.63nu2k34kup6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ Cell Swapping</span>` }} />
+          <h2 id="h.63nu2k34kup6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ Cell Swapping</span>` }} />
           <h3 id="h.p95zacki58q" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What is Cell Swapping?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Replacing one cell with:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Functionally same<br></span></li><li class="c3 li-bullet-0"><span class="c1">Different physical/timing characteristics<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Example:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">AOI → OAI variant<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.jf4cvkiorbza" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">6️⃣ Delay vs Power Trade-offs</span>` }} />
+          <h2 id="h.jf4cvkiorbza" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">6️⃣ Delay vs Power Trade-offs</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Critical paths:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Use fast, power-hungry cells<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Non-critical paths:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Use slow, low-power cells<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>This is </span><span class="c13">smart optimization</span><span class="c1">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.haz1dc6ofwea" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">7️⃣ Area Recovery</span>` }} />
+          <h2 id="h.haz1dc6ofwea" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">7️⃣ Area Recovery</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">After timing is fixed:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Tool downsizes non-critical cells<br></span></li><li class="c3 li-bullet-0"><span class="c1">Removes unnecessary buffers<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Goal:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Reduce area &amp; power without breaking timing</span>` }} />
           <hr className={styles.divider} />
-          id="h.r7kwhweqpzjc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">8️⃣ Physical Path Optimization</span>` }} />
+          <h2 id="h.r7kwhweqpzjc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">8️⃣ Physical Path Optimization</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Tool considers:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Exact placement<br></span></li><li class="c3 li-bullet-0"><span class="c1">Net topology<br></span></li><li class="c3 li-bullet-0"><span class="c1">Neighbor congestion<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Optimizes </span><span class="c13">physical path</span><span class="c1">, not logical path.</span>` }} />
@@ -940,7 +940,7 @@ const Module8Content = () => {
             <img loading="lazy" src="/assets/modules/module8/image1.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.hzntx0lgn20l" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 6 Conclusion</span>` }} />
+          <h2 id="h.hzntx0lgn20l" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 6 Conclusion</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Optimization is:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">Balancing timing, power, and area using physical reality</span>` }} />
           <hr className={styles.divider} />
@@ -948,36 +948,36 @@ const Module8Content = () => {
           <h1 id="h.812x1wbcyrjb" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c5">TIMING CLOSURE IN PHYSICAL SYNTHESIS</span>` }} />
           <h3 id="h.b2zmvtefsndm" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c20 c13">(INDUSTRY CRITICAL)</span>` }} />
           <hr className={styles.divider} />
-          id="h.d94gqu4cfmrr" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">0️⃣ What is Timing Closure?</span>` }} />
+          <h2 id="h.d94gqu4cfmrr" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">0️⃣ What is Timing Closure?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Timing closure means:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Design meets timing<br></span></li><li class="c3 li-bullet-0"><span class="c1">Across all conditions<br></span></li><li class="c3 li-bullet-0"><span class="c1">With no violations<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.q2o6q38m4q7v" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ Setup Timing Issues</span>` }} />
+          <h2 id="h.q2o6q38m4q7v" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ Setup Timing Issues</span>` }} />
           <h3 id="h.oag2okgai8k0" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 Setup Violation</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Occurs when:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span>Data arrives </span><span class="c14 c13">late<br></span></li><li class="c3 li-bullet-0"><span class="c1">Before clock edge<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Causes:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Long logic<br></span></li><li class="c3 li-bullet-0"><span class="c1">Long wires<br></span></li><li class="c3 li-bullet-0"><span class="c1">Slow cells<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.1g8w2dssv3i9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Hold Timing Issues</span>` }} />
+          <h2 id="h.1g8w2dssv3i9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Hold Timing Issues</span>` }} />
           <h3 id="h.1ga6b5ykei3g" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 Hold Violation</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Occurs when:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span>Data arrives </span><span class="c14 c13">too early<br></span></li><li class="c3 li-bullet-0"><span class="c1">After clock edge<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Causes:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Short paths<br></span></li><li class="c3 li-bullet-0"><span class="c1">Aggressive optimization<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.vhslklez6av5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Why Timing Changes After Placement</span>` }} />
+          <h2 id="h.vhslklez6av5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Why Timing Changes After Placement</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Because:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Wire delays appear<br></span></li><li class="c3 li-bullet-0"><span class="c1">Congestion affects routing<br></span></li><li class="c3 li-bullet-0"><span class="c1">Placement alters distances<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">That’s why logical timing ≠ physical timing.</span>` }} />
           <hr className={styles.divider} />
-          id="h.il2co8vbelxq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ Path-Based Optimization</span>` }} />
+          <h2 id="h.il2co8vbelxq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ Path-Based Optimization</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Instead of fixing individual gates:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span>Tool fixes </span><span class="c14 c13">entire path<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">This avoids:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Over-fixing<br></span></li><li class="c3 li-bullet-0"><span class="c1">Creating new violations<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.wprbgkl5bvu6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ WNS, TNS, FEP</span>` }} />
+          <h2 id="h.wprbgkl5bvu6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ WNS, TNS, FEP</span>` }} />
           <h3 id="h.k2a2xp9jkp5d" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 WNS (Worst Negative Slack)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Worst single timing violation.</span>` }} />
           <h3 id="h.q3u76e85lhay" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 TNS (Total Negative Slack)</span>` }} />
@@ -987,13 +987,13 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Industry goal:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">WNS ≥ 0<br></span></li><li class="c3 li-bullet-0"><span class="c1">TNS = 0<br></span></li><li class="c3 li-bullet-0"><span class="c1">FEP = 0<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.ftjjk5dvguel" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">6️⃣ Timing Corners</span>` }} />
+          <h2 id="h.ftjjk5dvguel" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">6️⃣ Timing Corners</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Timing depends on:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Voltage<br></span></li><li class="c3 li-bullet-0"><span class="c1">Temperature<br></span></li><li class="c3 li-bullet-0"><span class="c1">Process<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Examples:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">SS, FF, TT<br></span></li><li class="c3 li-bullet-0"><span class="c1">High temp, low temp<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.ldz7w29q0sye" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">7️⃣ MCMM (Multi-Corner Multi-Mode – Intro)</span>` }} />
+          <h2 id="h.ldz7w29q0sye" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">7️⃣ MCMM (Multi-Corner Multi-Mode – Intro)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Modern chips:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Multiple modes (functional, test)<br></span></li><li class="c3 li-bullet-0"><span class="c1">Multiple corners<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Physical synthesis must:</span>` }} />
@@ -1003,21 +1003,21 @@ const Module8Content = () => {
             <img loading="lazy" src="/assets/modules/module8/image14.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.3tknm5tp522x" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 7 Conclusion</span>` }} />
+          <h2 id="h.3tknm5tp522x" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 7 Conclusion</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Timing closure is:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">The final exam of physical synthesis</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Only physically-aware optimization can pass it.</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c5">CLOCK NETWORK AWARENESS IN PHYSICAL SYNTHESIS</span>` }} />
           <h3 id="h.5ipa5ewl17lo" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c20 c13">(Clock is KING )</span>` }} />
           <hr className={styles.divider} />
-          id="h.4ihbgzckuomu" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">0️⃣ Why Clock Is Called “King”</span>` }} />
+          <h2 id="h.4ihbgzckuomu" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">0️⃣ Why Clock Is Called “King”</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">In digital design:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Data can be wrong <br></span></li><li class="c3 li-bullet-0"><span>Logic can be perfect <br> If </span><span class="c13">clock is bad</span><span>, the chip </span><span class="c13">fails</span><span class="c1">.<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">That’s why:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">Clock network controls the entire chip behavior</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Physical synthesis must </span><span class="c13">respect the clock</span><span class="c1">, even before CTS.</span>` }} />
           <hr className={styles.divider} />
-          id="h.42f08mjawhhl" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ Clock Latency</span>` }} />
+          <h2 id="h.42f08mjawhhl" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ Clock Latency</span>` }} />
           <h3 id="h.dd0vgowhav7u" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What is Clock Latency?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Clock latency =</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Time taken by clock signal to reach a flip-flop from clock source</span>` }} />
@@ -1034,7 +1034,7 @@ const Module8Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Setup violations increase<br> If clock arrives early:<br></span></li><li class="c3 li-bullet-0"><span class="c1">Hold violations increase<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>So PS must </span><span class="c13">estimate clock arrival</span><span class="c1">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.uzc6njbw6lgz" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Clock Skew</span>` }} />
+          <h2 id="h.uzc6njbw6lgz" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Clock Skew</span>` }} />
           <h3 id="h.qqcf78qumu3a" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What is Clock Skew?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Clock skew =</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Difference in clock arrival time between two flip-flops</span>` }} />
@@ -1047,7 +1047,7 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Physical synthesis tries to:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">Reduce skew impact before CTS</span>` }} />
           <hr className={styles.divider} />
-          id="h.g8epvllcxitc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Clock Uncertainty</span>` }} />
+          <h2 id="h.g8epvllcxitc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Clock Uncertainty</span>` }} />
           <h3 id="h.aib47tm6etdg" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What is Clock Uncertainty?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Clock uncertainty represents:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Jitter<br></span></li><li class="c3 li-bullet-0"><span class="c1">Variation<br></span></li><li class="c3 li-bullet-0"><span class="c1">Modeling inaccuracy<br></span></li>` }} />
@@ -1059,7 +1059,7 @@ const Module8Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Uncertainty can break timing later<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>So PS optimizes with </span><span class="c13">margin</span><span class="c1">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.nvyas23x8lmi" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ Clock Tree Estimation (Pre-CTS)</span>` }} />
+          <h2 id="h.nvyas23x8lmi" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ Clock Tree Estimation (Pre-CTS)</span>` }} />
           <h3 id="h.383jfdsv1608" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 Important Clarification</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Physical synthesis does </span><span class="c13">NOT</span><span class="c1"> build the clock tree.</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">CTS does that later.</span>` }} />
@@ -1070,18 +1070,18 @@ const Module8Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Approx clock depth<br></span></li><li class="c3 li-bullet-0"><span class="c1">Approx buffer count<br></span></li><li class="c3 li-bullet-0"><span class="c1">Approx latency<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>This helps avoid </span><span class="c13">surprises after CTS</span><span class="c1">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.l4jb6dtmuey9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ Why Physical Synthesis Cares About Clock</span>` }} />
+          <h2 id="h.l4jb6dtmuey9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ Why Physical Synthesis Cares About Clock</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Because:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Clock affects every path<br></span></li><li class="c3 li-bullet-0"><span class="c1">Clock defines timing window<br></span></li><li class="c3 li-bullet-0"><span class="c1">Clock failures = chip failure<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">PS tries to:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Prepare design so CTS becomes easy</span>` }} />
           <hr className={styles.divider} />
-          id="h.yw7uxh7sfobh" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">6️⃣ CTS vs Physical Synthesis Responsibilities</span>` }} />
+          <h2 id="h.yw7uxh7sfobh" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">6️⃣ CTS vs Physical Synthesis Responsibilities</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c27"><td class="c6" colspan="1" rowspan="1"><p class="c16"><span class="c13">Physical Synthesis</span></p></td><td class="c19" colspan="1" rowspan="1"><p class="c16"><span class="c13">CTS</span></p></td></tr><tr class="c27"><td class="c6" colspan="1" rowspan="1"><p class="c9"><span class="c1">Estimates clock</span></p></td><td class="c19" colspan="1" rowspan="1"><p class="c9"><span class="c1">Builds real clock tree</span></p></td></tr><tr class="c27"><td class="c6" colspan="1" rowspan="1"><p class="c9"><span class="c1">Prepares design</span></p></td><td class="c19" colspan="1" rowspan="1"><p class="c9"><span class="c1">Balances skew</span></p></td></tr><tr class="c27"><td class="c6" colspan="1" rowspan="1"><p class="c9"><span class="c1">Fixes logic timing</span></p></td><td class="c19" colspan="1" rowspan="1"><p class="c9"><span class="c1">Fixes clock timing</span></p></td></tr><tr class="c27"><td class="c6" colspan="1" rowspan="1"><p class="c9"><span class="c1">Reduces risk</span></p></td><td class="c19" colspan="1" rowspan="1"><p class="c9"><span class="c1">Finalizes clock</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          id="h.zklfeqhv2t1" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">7️⃣ Pre-CTS Optimization</span>` }} />
+          <h2 id="h.zklfeqhv2t1" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">7️⃣ Pre-CTS Optimization</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Before CTS:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Fix long data paths<br></span></li><li class="c3 li-bullet-0"><span class="c1">Reduce clock sensitivity<br></span></li><li class="c3 li-bullet-0"><span class="c1">Balance logic depth<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Goal:</span>` }} />
@@ -1091,7 +1091,7 @@ const Module8Content = () => {
             <img loading="lazy" src="/assets/modules/module8/image5.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.4ghrzld7cw00" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 8 Conclusion</span>` }} />
+          <h2 id="h.4ghrzld7cw00" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 8 Conclusion</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Physical synthesis:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">Respects clock early to avoid late-stage disasters</span>` }} />
           <hr className={styles.divider} />
@@ -1099,7 +1099,7 @@ const Module8Content = () => {
           <h1 id="h.mriz7t96x9mk" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c5">CONGESTION &amp; ROUTABILITY AWARE PHYSICAL SYNTHESIS</span>` }} />
           <h3 id="h.p0nab0mhz413" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c13 c20">(REAL SILICON PROBLEM)</span>` }} />
           <hr className={styles.divider} />
-          id="h.dm7niivrrmmw" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">0️⃣ Why Congestion Is a BIG Problem</span>` }} />
+          <h2 id="h.dm7niivrrmmw" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">0️⃣ Why Congestion Is a BIG Problem</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Logical synthesis:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Doesn’t see wires <br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Physical synthesis:</span>` }} />
@@ -1107,7 +1107,7 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Congestion can:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Break timing<br></span></li><li class="c3 li-bullet-0"><span class="c1">Increase power<br></span></li><li class="c3 li-bullet-0"><span class="c1">Cause routing failure<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.84ugkggztwvn" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ What is Congestion?</span>` }} />
+          <h2 id="h.84ugkggztwvn" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ What is Congestion?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Congestion =</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Too many wires trying to pass through limited routing area</span>` }} />
           <hr className={styles.divider} />
@@ -1115,16 +1115,16 @@ const Module8Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Small road<br></span></li><li class="c3 li-bullet-0"><span class="c1">Too many vehicles<br> ➡️ Traffic jam<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Same thing happens on silicon.</span>` }} />
           <hr className={styles.divider} />
-          id="h.nux8oo4udxt" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Why Congestion Happens</span>` }} />
+          <h2 id="h.nux8oo4udxt" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Why Congestion Happens</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Common reasons:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">High utilization<br></span></li><li class="c3 li-bullet-0"><span class="c1">Large macros close together<br></span></li><li class="c3 li-bullet-0"><span class="c1">Poor placement<br></span></li><li class="c3 li-bullet-0"><span class="c1">Too many connections in one area<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.btc00vjzdtuh" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Congestion Hotspots</span>` }} />
+          <h2 id="h.btc00vjzdtuh" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Congestion Hotspots</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Hotspots usually appear:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Near macros<br></span></li><li class="c3 li-bullet-0"><span class="c1">Near clock roots<br></span></li><li class="c3 li-bullet-0"><span class="c1">In dense logic regions<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">PS identifies these early.</span>` }} />
           <hr className={styles.divider} />
-          id="h.8ur9cl2akd8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ Impact of Congestion</span>` }} />
+          <h2 id="h.8ur9cl2akd8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ Impact of Congestion</span>` }} />
           <h3 id="h.bcdlu83mh4x3" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 On Timing</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Longer routes<br></span></li><li class="c3 li-bullet-0"><span class="c1">Detours<br></span></li><li class="c3 li-bullet-0"><span class="c1">Increased RC delay<br></span></li>` }} />
           <h3 id="h.iwpv5pl3ovnb" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 On Power</span>` }} />
@@ -1137,11 +1137,11 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Physical synthesis:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Avoids placing too many cells in one region<br></span></li><li class="c3 li-bullet-0"><span class="c1">Spreads logic intelligently<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.we05t7b1ymr7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">6️⃣ Wire Spreading</span>` }} />
+          <h2 id="h.we05t7b1ymr7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">6️⃣ Wire Spreading</span>` }} />
           <h3 id="h.ffhnqvg7sk74" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What is Wire Spreading?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Increase spacing between wires<br></span></li><li class="c3 li-bullet-0"><span class="c1">Reduce coupling<br></span></li><li class="c3 li-bullet-0"><span class="c1">Reduce congestion<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.tc1enqpmaonx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">7️⃣ Cell Spreading</span>` }} />
+          <h2 id="h.tc1enqpmaonx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">7️⃣ Cell Spreading</span>` }} />
           <h3 id="h.u2j025p96z7h" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What is Cell Spreading?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Reduce local density<br></span></li><li class="c3 li-bullet-0"><span class="c1">Increase whitespace<br></span></li><li class="c3 li-bullet-0"><span class="c1">Improve routability<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -1149,7 +1149,7 @@ const Module8Content = () => {
             <img loading="lazy" src="/assets/modules/module8/image15.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.5z99q3cky2r3" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 9 Conclusion</span>` }} />
+          <h2 id="h.5z99q3cky2r3" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 9 Conclusion</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Congestion-aware PS:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">Prevents routing and timing failures before they happen</span>` }} />
           <hr className={styles.divider} />
@@ -1158,12 +1158,12 @@ const Module8Content = () => {
           <h1 id="h.nrwaaxmjd8mp" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c2">POWER AWARENESS IN PHYSICAL SYNTHESIS</span>` }} />
           <h3 id="h.l1ic0rxcsluh" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c20 c13">(Advanced but Essential)</span>` }} />
           <hr className={styles.divider} />
-          id="h.lfxe0zcrrl28" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">0️⃣ Why Power Matters</span>` }} />
+          <h2 id="h.lfxe0zcrrl28" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">0️⃣ Why Power Matters</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Modern chips fail because of:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Power<br></span></li><li class="c3 li-bullet-0"><span class="c1">Heat<br></span></li><li class="c3 li-bullet-0"><span class="c1">Battery life<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Not logic correctness.</span>` }} />
           <hr className={styles.divider} />
-          id="h.a6420yfdub4m" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ Dynamic Power</span>` }} />
+          <h2 id="h.a6420yfdub4m" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ Dynamic Power</span>` }} />
           <h3 id="h.n5de7zobqs5s" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What is Dynamic Power?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Power consumed when:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Signals switch 0 ↔ 1<br></span></li>` }} />
@@ -1173,20 +1173,20 @@ const Module8Content = () => {
           <h3 id="h.83ylo4tgfol2" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 PS Impact</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Longer wires → more capacitance<br></span></li><li class="c3 li-bullet-0"><span class="c1">Bigger cells → more power<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.knus74hmjt58" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Leakage Power</span>` }} />
+          <h2 id="h.knus74hmjt58" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Leakage Power</span>` }} />
           <h3 id="h.8qiicraqtxf0" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What is Leakage Power?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Power consumed:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Even when circuit is idle<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Caused by:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Transistor leakage<br></span></li><li class="c3 li-bullet-0"><span class="c1">Advanced nodes<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.h4rky8qznpz1" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Switching Activity</span>` }} />
+          <h2 id="h.h4rky8qznpz1" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Switching Activity</span>` }} />
           <h3 id="h.aryamioe811j" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What is Switching Activity?</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">How often signals toggle.</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">PS may use:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Estimated activity<br></span></li><li class="c3 li-bullet-0"><span class="c1">Default assumptions<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.vl3upuvkpe46" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ Power vs Timing Trade-offs</span>` }} />
+          <h2 id="h.vl3upuvkpe46" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ Power vs Timing Trade-offs</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Critical paths:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Fast, power-hungry cells<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Non-critical paths:</span>` }} />
@@ -1194,12 +1194,12 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Physical synthesis balances:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Timing first, then power recovery</span>` }} />
           <hr className={styles.divider} />
-          id="h.57r16ar81jfb" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ Early Power Estimation</span>` }} />
+          <h2 id="h.57r16ar81jfb" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ Early Power Estimation</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Before P&amp;R:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">PS estimates power roughly<br></span></li><li class="c3 li-bullet-0"><span class="c1">Identifies power hotspots<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">This avoids late surprises.</span>` }} />
           <hr className={styles.divider} />
-          id="h.1z78iwfj8wgq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">6️⃣ Low-Power Optimizations (Intro)</span>` }} />
+          <h2 id="h.1z78iwfj8wgq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">6️⃣ Low-Power Optimizations (Intro)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">At PS stage:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Avoid unnecessary buffers<br></span></li><li class="c3 li-bullet-0"><span class="c1">Prefer low-leakage cells<br></span></li><li class="c3 li-bullet-0"><span class="c1">Reduce switching on non-critical paths<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Advanced techniques (later stages):</span>` }} />
@@ -1209,7 +1209,7 @@ const Module8Content = () => {
             <img loading="lazy" src="/assets/modules/module8/image7.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.qsm7u7pw5hbx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 10 Conclusion</span>` }} />
+          <h2 id="h.qsm7u7pw5hbx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 10 Conclusion</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Power-aware physical synthesis:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">Delivers fast AND efficient silicon</span>` }} />
           <hr className={styles.divider} />
@@ -1217,14 +1217,14 @@ const Module8Content = () => {
           <h1 id="h.6nzj5miokj78" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c5">PHYSICAL SYNTHESIS vs PLACE &amp; ROUTE</span>` }} />
           <h3 id="h.mgu8x6oqyzrb" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c20 c13">(Students confuse this a LOT – so we go very deep)</span>` }} />
           <hr className={styles.divider} />
-          id="h.z9cw9c1801ug" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">0️⃣ Why This Confusion Exists</span>` }} />
+          <h2 id="h.z9cw9c1801ug" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">0️⃣ Why This Confusion Exists</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">From outside, both PS and P&amp;R:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Touch placement<br></span></li><li class="c3 li-bullet-0"><span class="c1">Talk about timing<br></span></li><li class="c3 li-bullet-0"><span class="c1">Mention buffers, sizing, congestion<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">So students think:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">“PS and P&amp;R are same”</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> </span><span class="c14 c13">They are NOT</span>` }} />
           <hr className={styles.divider} />
-          id="h.nunxuv2aqmxa" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ What Physical Synthesis Does (CLEARLY)</span>` }} />
+          <h2 id="h.nunxuv2aqmxa" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ What Physical Synthesis Does (CLEARLY)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Physical Synthesis is:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">Logic optimization with physical awareness</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Key points:</span>` }} />
@@ -1237,7 +1237,7 @@ const Module8Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Gate sizing<br></span></li><li class="c3 li-bullet-0"><span class="c1">Buffer insertion<br></span></li><li class="c3 li-bullet-0"><span class="c1">Logic restructuring<br></span></li><li class="c3 li-bullet-0"><span class="c1">Path optimization<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> </span><span class="c14 c13">PS changes the netlist</span>` }} />
           <hr className={styles.divider} />
-          id="h.jh4ctow533h7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ What Place &amp; Route Does (CLEARLY)</span>` }} />
+          <h2 id="h.jh4ctow533h7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ What Place &amp; Route Does (CLEARLY)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Place &amp; Route is:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">Physical realization of the design</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Key points:</span>` }} />
@@ -1248,20 +1248,20 @@ const Module8Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Exact cell locations<br></span></li><li class="c3 li-bullet-0"><span class="c1">Real routing layers<br></span></li><li class="c3 li-bullet-0"><span class="c1">Exact parasitics<br></span></li><li class="c3 li-bullet-0"><span class="c1">Physical DRC rules<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> </span><span class="c14 c13">P&amp;R changes geometry, not logic (mostly)</span>` }} />
           <hr className={styles.divider} />
-          id="h.8wadtjurv5bw" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Where Physical Synthesis Stops</span>` }} />
+          <h2 id="h.8wadtjurv5bw" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Where Physical Synthesis Stops</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Physical synthesis stops at:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c14 c13">Optimized gate-level netlist<br></span></li><li class="c3 li-bullet-0"><span class="c14 c13">Physical-aware constraints<br></span></li><li class="c3 li-bullet-0"><span class="c14 c13">Timing mostly clean<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">It hands off to P&amp;R:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span>A </span><span class="c33">better</span><span class="c1"> design<br></span></li><li class="c3 li-bullet-0"><span>A </span><span class="c33">physically realistic</span><span class="c1"> design<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.o2v1vo16qidy" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ Why PS Improves P&amp;R Results</span>` }} />
+          <h2 id="h.o2v1vo16qidy" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ Why PS Improves P&amp;R Results</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Without PS:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">P&amp;R struggles<br></span></li><li class="c3 li-bullet-0"><span class="c1">Too many violations<br></span></li><li class="c3 li-bullet-0"><span class="c1">Too many ECO loops<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">With PS:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Shorter critical paths<br></span></li><li class="c3 li-bullet-0"><span class="c1">Better cell distribution<br></span></li><li class="c3 li-bullet-0"><span class="c1">Fewer buffers later<br></span></li><li class="c3 li-bullet-0"><span class="c1">Faster convergence<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> PS is like </span><span class="c14 c13">preparing soil before planting</span>` }} />
           <hr className={styles.divider} />
-          id="h.kc417v3f4tbs" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ Handoff Between PS and P&amp;R</span>` }} />
+          <h2 id="h.kc417v3f4tbs" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ Handoff Between PS and P&amp;R</span>` }} />
           <h3 id="h.7wtery3njkcx" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What PS Gives to P&amp;R</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Optimized netlist<br></span></li><li class="c3 li-bullet-0"><span class="c1">Updated SDC<br></span></li><li class="c3 li-bullet-0"><span class="c1">Physical guidance<br></span></li><li class="c3 li-bullet-0"><span class="c1">Cleaner timing<br></span></li>` }} />
           <h3 id="h.ywanxry73wb1" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What P&amp;R Starts With</span>` }} />
@@ -1271,7 +1271,7 @@ const Module8Content = () => {
             <img loading="lazy" src="/assets/modules/module8/image8.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.58p5dbn9pmke" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 11 Conclusion</span>` }} />
+          <h2 id="h.58p5dbn9pmke" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 11 Conclusion</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">One-line industry truth:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Physical Synthesis makes P&amp;R easy.<br> P&amp;R makes silicon real.</span>` }} />
           <hr className={styles.divider} />
@@ -1280,12 +1280,12 @@ const Module8Content = () => {
           <h1 id="h.2z6kuny2jcxi" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c5">OUTPUTS OF PHYSICAL SYNTHESIS</span>` }} />
           <h3 id="h.obows2rpzwqe" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c20 c13">(What We Deliver)</span>` }} />
           <hr className={styles.divider} />
-          id="h.tpwxz7thhjqm" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">0️⃣ Why Outputs Matter</span>` }} />
+          <h2 id="h.tpwxz7thhjqm" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">0️⃣ Why Outputs Matter</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">In industry:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">No output = no progress<br></span></li><li class="c3 li-bullet-0"><span>Every stage delivers </span><span class="c14 c13">artifacts<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>PS outputs are </span><span class="c13">contract</span><span class="c1"> between PS and P&amp;R teams.</span>` }} />
           <hr className={styles.divider} />
-          id="h.q6naky1fhbcq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ Optimized Gate-Level Netlist</span>` }} />
+          <h2 id="h.q6naky1fhbcq" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ Optimized Gate-Level Netlist</span>` }} />
           <h3 id="h.ya35z0fe3a1" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 What This Is</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Same design functionality<br></span></li><li class="c3 li-bullet-0"><span class="c1">Improved timing<br></span></li><li class="c3 li-bullet-0"><span class="c1">Improved power<br></span></li><li class="c3 li-bullet-0"><span class="c1">Improved routability<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -1293,31 +1293,31 @@ const Module8Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Gate sizes modified<br></span></li><li class="c3 li-bullet-0"><span class="c1">Buffers added/removed<br></span></li><li class="c3 li-bullet-0"><span class="c1">Logic reshaped<br></span></li><li class="c3 li-bullet-0"><span class="c1">Critical paths optimized<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> This is the </span><span class="c14 c13">main deliverable</span>` }} />
           <hr className={styles.divider} />
-          id="h.meztaivnp59" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Updated Constraints (SDC)</span>` }} />
+          <h2 id="h.meztaivnp59" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Updated Constraints (SDC)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">PS updates:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Clock latency assumptions<br></span></li><li class="c3 li-bullet-0"><span class="c1">Uncertainty<br></span></li><li class="c3 li-bullet-0"><span class="c1">Path constraints<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Why?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Reflect physical reality<br></span></li><li class="c3 li-bullet-0"><span class="c1">Avoid optimistic timing<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.l8bwiiga5xva" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Timing Reports</span>` }} />
+          <h2 id="h.l8bwiiga5xva" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Timing Reports</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">PS generates:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Setup timing reports<br></span></li><li class="c3 li-bullet-0"><span class="c1">Hold timing reports<br></span></li><li class="c3 li-bullet-0"><span class="c1">WNS, TNS<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Used by:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">P&amp;R engineers<br></span></li><li class="c3 li-bullet-0"><span class="c1">Project leads<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.8mznth802dp0" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ Power Reports</span>` }} />
+          <h2 id="h.8mznth802dp0" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ Power Reports</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Includes:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Dynamic power estimate<br></span></li><li class="c3 li-bullet-0"><span class="c1">Leakage power estimate<br></span></li><li class="c3 li-bullet-0"><span class="c1">Clock power estimate<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Purpose:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Early power sign-off direction<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.bbizc9fnq9zi" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ Area Reports</span>` }} />
+          <h2 id="h.bbizc9fnq9zi" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ Area Reports</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Shows:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Cell area usage<br></span></li><li class="c3 li-bullet-0"><span class="c1">Buffer overhead<br></span></li><li class="c3 li-bullet-0"><span class="c1">Optimization impact<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Helps:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Control die size<br></span></li><li class="c3 li-bullet-0"><span class="c1">Control cost<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.g1yvoiahi9gg" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">6️⃣ Physical Guidance Files</span>` }} />
+          <h2 id="h.g1yvoiahi9gg" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">6️⃣ Physical Guidance Files</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">These may include:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Placement hints<br></span></li><li class="c3 li-bullet-0"><span class="c1">Optimization regions<br></span></li><li class="c3 li-bullet-0"><span class="c1">Congestion-aware suggestions<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Used internally by tools or passed to P&amp;R.</span>` }} />
@@ -1326,7 +1326,7 @@ const Module8Content = () => {
             <img loading="lazy" src="/assets/modules/module8/image2.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.1epsgw7u05gp" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 12 Conclusion</span>` }} />
+          <h2 id="h.1epsgw7u05gp" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 12 Conclusion</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Physical synthesis outputs:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">A physically optimized design ready for real implementation</span>` }} />
           <hr className={styles.divider} />
@@ -1334,16 +1334,16 @@ const Module8Content = () => {
           <h1 id="h.dfn1omk7j8ln" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c5">INDUSTRIAL PHYSICAL SYNTHESIS FLOW</span>` }} />
           <h3 id="h.85mgl2n2u4lu" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c20 c13">(REAL COMPANY FLOW)</span>` }} />
           <hr className={styles.divider} />
-          id="h.2cmlgxvcq6bt" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">0️⃣ This Is NOT Linear – This Is Iterative</span>` }} />
+          <h2 id="h.2cmlgxvcq6bt" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">0️⃣ This Is NOT Linear – This Is Iterative</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Books show:<br> RTL → LS → PS → P&amp;R </span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Industry reality:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">Loops, feedback, ECOs</span>` }} />
           <hr className={styles.divider} />
-          id="h.ftxkql82ftde" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ End-to-End Industrial Flow</span>` }} />
+          <h2 id="h.ftxkql82ftde" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ End-to-End Industrial Flow</span>` }} />
           <h3 id="h.7ra7yak8h2rs" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 Step-by-Step</span>` }} />
           <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">RTL Design<br></span></li><li class="c3 li-bullet-0"><span class="c1">Logical Synthesis<br></span></li><li class="c3 li-bullet-0"><span class="c1">Initial Floorplan<br></span></li><li class="c3 li-bullet-0"><span class="c1">Physical Synthesis<br></span></li><li class="c3 li-bullet-0"><span class="c1">Place &amp; Route<br></span></li><li class="c3 li-bullet-0"><span class="c1">Feedback<br></span></li><li class="c3 li-bullet-0"><span class="c1">ECO<br></span></li><li class="c3 li-bullet-0"><span class="c1">Repeat until signoff<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.e8bagao6xnc5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Script-Driven Flow</span>` }} />
+          <h2 id="h.e8bagao6xnc5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Script-Driven Flow</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">In companies:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">No GUI clicking<br></span></li><li class="c3 li-bullet-0"><span class="c1">Everything is scripted<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Why?</span>` }} />
@@ -1351,19 +1351,19 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Example:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Overnight PS runs<br></span></li><li class="c3 li-bullet-0"><span class="c1">Multiple corners<br></span></li><li class="c3 li-bullet-0"><span class="c1">Multiple blocks<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.tkt6ehcwyfkm" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Iterations with P&amp;R Team</span>` }} />
+          <h2 id="h.tkt6ehcwyfkm" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Iterations with P&amp;R Team</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Typical feedback:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">“This path still critical”<br></span></li><li class="c3 li-bullet-0"><span class="c1">“Congestion here”<br></span></li><li class="c3 li-bullet-0"><span class="c1">“Power too high”<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">PS engineer:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Updates constraints<br></span></li><li class="c3 li-bullet-0"><span class="c1">Re-optimizes logic<br></span></li><li class="c3 li-bullet-0"><span class="c1">Sends new netlist<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.cnv40qvxzenp" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ ECO Loops (Engineering Change Order)</span>` }} />
+          <h2 id="h.cnv40qvxzenp" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ ECO Loops (Engineering Change Order)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Late-stage changes:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Timing fixes<br></span></li><li class="c3 li-bullet-0"><span class="c1">Functional fixes<br></span></li><li class="c3 li-bullet-0"><span class="c1">Power fixes<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">PS plays key role in:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Fast ECO turnaround<br></span></li><li class="c3 li-bullet-0"><span class="c1">Minimal disturbance<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.68dsrhmqcq5k" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ Signoff Mindset</span>` }} />
+          <h2 id="h.68dsrhmqcq5k" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ Signoff Mindset</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Physical synthesis engineer must think:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Will this survive CTS?<br></span></li><li class="c3 li-bullet-0"><span class="c1">Will this route?<br></span></li><li class="c3 li-bullet-0"><span class="c1">Will this close timing?<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Goal:</span>` }} />
@@ -1373,11 +1373,11 @@ const Module8Content = () => {
             <img loading="lazy" src="/assets/modules/module8/image10.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.rzus4rj6im7k" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 13 Conclusion</span>` }} />
+          <h2 id="h.rzus4rj6im7k" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 13 Conclusion</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Physical synthesis in industry is:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">An optimization bridge between logic and silicon reality</span>` }} />
           <hr className={styles.divider} />
-          id="h.fqgjv35wxslg" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> PHYSICAL SYNTHESIS COMPLETE (ZERO → HERO)</span>` }} />
+          <h2 id="h.fqgjv35wxslg" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> PHYSICAL SYNTHESIS COMPLETE (ZERO → HERO)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">You now fully understand:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">What PS is<br></span></li><li class="c3 li-bullet-0"><span class="c1">Why it exists<br></span></li><li class="c3 li-bullet-0"><span class="c1">How it helps P&amp;R<br></span></li><li class="c3 li-bullet-0"><span class="c1">What it delivers<br></span></li><li class="c3 li-bullet-0"><span class="c1">How industry actually works</span></li>` }} />
           <hr className={styles.divider} />
@@ -1386,7 +1386,7 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">This module answers the student’s hidden question:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">“What do companies actually expect from a Physical Synthesis engineer?”</span>` }} />
           <hr className={styles.divider} />
-          id="h.cju86ftojqpx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ Required Tool Knowledge (What You MUST Know)</span>` }} />
+          <h2 id="h.cju86ftojqpx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ Required Tool Knowledge (What You MUST Know)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">A Physical Synthesis engineer is not judged by theory alone.</span>` }} />
           <h3 id="h.n56s2ckyjh11" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 Core Tools (Industry Reality)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">You should be comfortable with:</span>` }} />
@@ -1395,7 +1395,7 @@ const Module8Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Why a command is used<br></span></li><li class="c3 li-bullet-0"><span class="c1">What happens internally<br></span></li><li class="c3 li-bullet-0"><span class="c1">How output affects next stage<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> Tools are just </span><span class="c13">instruments</span><span class="c1">.<br>  Understanding is what makes you valuable.</span>` }} />
           <hr className={styles.divider} />
-          id="h.ibxh4ns34vzn" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Timing Debugging Mindset (MOST IMPORTANT SKILL)</span>` }} />
+          <h2 id="h.ibxh4ns34vzn" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ Timing Debugging Mindset (MOST IMPORTANT SKILL)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>This is where </span><span class="c13">average engineers fail</span><span> and </span><span class="c13">good engineers shine</span><span class="c1">.</span>` }} />
           <h3 id="h.io8vb2jcz6vd" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7">🔹 You Must Think Like This:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Why is this path critical?<br></span></li><li class="c3 li-bullet-0"><span>Is delay from </span><span class="c13">logic</span><span> or </span><span class="c13">wire</span><span class="c1">?<br></span></li><li class="c3 li-bullet-0"><span class="c1">Can restructuring help?<br></span></li><li class="c3 li-bullet-0"><span class="c1">Will CTS make this worse?<br></span></li>` }} />
@@ -1403,7 +1403,7 @@ const Module8Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Read timing reports calmly<br></span></li><li class="c3 li-bullet-0"><span class="c1">Trace a path end-to-end<br></span></li><li class="c3 li-bullet-0"><span>Decide </span><span class="c14 c13">what NOT to fix<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> Physical synthesis is </span><span class="c13">decision-making</span><span class="c1">, not command execution.</span>` }} />
           <hr className={styles.divider} />
-          id="h.bqzio0eorqaf" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Communication with P&amp;R Team</span>` }} />
+          <h2 id="h.bqzio0eorqaf" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Communication with P&amp;R Team</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">In industry:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Physical synthesis NEVER works alone</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">You constantly talk to:</span>` }} />
@@ -1413,7 +1413,7 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Bad PS engineer:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Blames P&amp;R<br></span></li><li class="c3 li-bullet-0"><span class="c1">Pushes unrealistic netlists<br></span></li><li class="c3 li-bullet-0"><span class="c1">Ignores congestion<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.fkxab7vp0gic" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ Common Mistakes by Freshers</span>` }} />
+          <h2 id="h.fkxab7vp0gic" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">4️⃣ Common Mistakes by Freshers</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Let’s be honest.</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Freshers often:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Over-optimize timing<br></span></li><li class="c3 li-bullet-0"><span class="c1">Ignore power &amp; congestion<br></span></li><li class="c3 li-bullet-0"><span class="c1">Trust tool blindly<br></span></li><li class="c3 li-bullet-0"><span class="c1">Fix reports without understanding<br></span></li>` }} />
@@ -1421,13 +1421,13 @@ const Module8Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Balanced optimization<br></span></li><li class="c3 li-bullet-0"><span class="c1">Silicon thinking<br></span></li><li class="c3 li-bullet-0"><span class="c1">Patience<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> </span><span class="c14 c13">Don’t fight the tool — guide it</span>` }} />
           <hr className={styles.divider} />
-          id="h.q88kqrv3eihe" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ Interview Expectations (REAL)</span>` }} />
+          <h2 id="h.q88kqrv3eihe" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">5️⃣ Interview Expectations (REAL)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Interviewers look for:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Concept clarity (not command memorization)<br></span></li><li class="c3 li-bullet-0"><span class="c1">Debug thinking<br></span></li><li class="c3 li-bullet-0"><span class="c1">Understanding of PS vs P&amp;R<br></span></li><li class="c3 li-bullet-0"><span class="c1">Awareness of real chip issues<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">They may ask:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">“Why PS before P&amp;R?”<br></span></li><li class="c3 li-bullet-0"><span class="c1">“What happens if you skip PS?”<br></span></li><li class="c3 li-bullet-0"><span class="c1">“How does congestion affect timing?”<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.njxv4k86sxyt" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 14 Conclusion</span>` }} />
+          <h2 id="h.njxv4k86sxyt" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 14 Conclusion</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">A Physical Synthesis engineer is:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">Half logic expert + half physical thinker + full system problem solver</span>` }} />
           <hr className={styles.divider} />
@@ -1437,14 +1437,14 @@ const Module8Content = () => {
           <h3 id="h.mlekdndhvlh1" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c20 c13">(Student Confidence Builder)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>This module </span><span class="c13">removes fear and confusion</span><span class="c1">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.1o3l2qe2l634" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Myth 1: “Physical Synthesis replaces P&amp;R”</span>` }} />
+          <h2 id="h.1o3l2qe2l634" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Myth 1: “Physical Synthesis replaces P&amp;R”</span>` }} />
           <h3 id="h.f2iu9kfnhmdb" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7"> FALSE</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Truth:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span>PS </span><span class="c13">supports</span><span class="c1"> P&amp;R<br></span></li><li class="c3 li-bullet-0"><span>PS </span><span class="c13">prepares</span><span class="c1"> design<br></span></li><li class="c3 li-bullet-0"><span>P&amp;R </span><span class="c13">implements</span><span class="c1"> design<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Think:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">PS = planning<br></span></li><li class="c3 li-bullet-0"><span class="c1">P&amp;R = construction<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.gdiscddvu9z0" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Myth 2: “Only timing matters”</span>` }} />
+          <h2 id="h.gdiscddvu9z0" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Myth 2: “Only timing matters”</span>` }} />
           <h3 id="h.jo0v1e55ravd" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7"> WRONG</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">In real chips:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Timing<br></span></li><li class="c3 li-bullet-0"><span class="c1">Power<br></span></li><li class="c3 li-bullet-0"><span class="c1">Area<br></span></li><li class="c3 li-bullet-0"><span class="c1">Congestion<br></span></li><li class="c3 li-bullet-0"><span class="c1">Routability<br></span></li>` }} />
@@ -1452,7 +1452,7 @@ const Module8Content = () => {
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Fixing timing blindly can:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Increase power<br></span></li><li class="c3 li-bullet-0"><span class="c1">Break routing<br></span></li><li class="c3 li-bullet-0"><span class="c1">Create ECO nightmares<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.7xtpqjamp8hp" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Myth 3: “RTL coding doesn’t matter”</span>` }} />
+          <h2 id="h.7xtpqjamp8hp" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Myth 3: “RTL coding doesn’t matter”</span>` }} />
           <h3 id="h.j19lj5g2zscq" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7"> VERY DANGEROUS MYTH</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Bad RTL causes:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Long paths<br></span></li><li class="c3 li-bullet-0"><span class="c1">Bad hierarchy<br></span></li><li class="c3 li-bullet-0"><span class="c1">Congestion<br></span></li><li class="c3 li-bullet-0"><span class="c1">PS struggles<br></span></li>` }} />
@@ -1460,11 +1460,11 @@ const Module8Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Makes PS easier<br></span></li><li class="c3 li-bullet-0"><span class="c1">Makes P&amp;R faster<br></span></li><li class="c3 li-bullet-0"><span class="c1">Saves months of effort<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> Backend starts at </span><span class="c14 c13">RTL quality</span>` }} />
           <hr className={styles.divider} />
-          id="h.fpwql0lu2w4f" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Myth 4: “More optimization is always better”</span>` }} />
+          <h2 id="h.fpwql0lu2w4f" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Myth 4: “More optimization is always better”</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Truth:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Over-optimization = instability<br></span></li><li class="c3 li-bullet-0"><span>PS must know </span><span class="c14 c13">when to stop<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.nyba6otys0c2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 15 Conclusion</span>` }} />
+          <h2 id="h.nyba6otys0c2" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2"> Module 15 Conclusion</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Physical synthesis success comes from:</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c14 c13">Understanding trade-offs, not chasing numbers</span>` }} />
           <hr className={styles.divider} />
@@ -1474,19 +1474,19 @@ const Module8Content = () => {
           <h3 id="h.sb7ug38rgcjc" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c20 c13">(Wrap-Up for Students)</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>This is the </span><span class="c13">confidence checkpoint</span><span class="c1">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.a6nnd31z35hi" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ What the Student Knows Now</span>` }} />
+          <h2 id="h.a6nnd31z35hi" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">1️⃣ What the Student Knows Now</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">After this course, the student understands:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Why physical synthesis exists<br></span></li><li class="c3 li-bullet-0"><span class="c1">Difference between LS, PS, and P&amp;R<br></span></li><li class="c3 li-bullet-0"><span class="c1">How timing is affected by wires<br></span></li><li class="c3 li-bullet-0"><span class="c1">How optimization really works<br></span></li><li class="c3 li-bullet-0"><span class="c1">How industry flows actually run<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>This is </span><span class="c13">not beginner knowledge anymore</span><span class="c1">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.jxi0imz8re9m" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ How Physical Synthesis Helps Silicon Success</span>` }} />
+          <h2 id="h.jxi0imz8re9m" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">2️⃣ How Physical Synthesis Helps Silicon Success</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Without PS:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Poor timing closure<br></span></li><li class="c3 li-bullet-0"><span class="c1">Excess ECOs<br></span></li><li class="c3 li-bullet-0"><span class="c1">High power<br></span></li><li class="c3 li-bullet-0"><span class="c1">Congestion nightmares<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">With PS:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Predictable P&amp;R<br></span></li><li class="c3 li-bullet-0"><span class="c1">Faster convergence<br></span></li><li class="c3 li-bullet-0"><span class="c1">Better silicon quality<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> PS reduces </span><span class="c13">risk</span><span class="c1"> in chip design.</span>` }} />
           <hr className={styles.divider} />
-          id="h.5w9io3oycb2q" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Next Step: Place &amp; Route</span>` }} />
+          <h2 id="h.5w9io3oycb2q" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c2">3️⃣ Next Step: Place &amp; Route</span>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c1">Now the student is READY for:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c3 li-bullet-0"><span class="c1">Placement<br></span></li><li class="c3 li-bullet-0"><span class="c1">CTS<br></span></li><li class="c3 li-bullet-0"><span class="c1">Routing<br></span></li><li class="c3 li-bullet-0"><span class="c1">Signoff timing<br></span></li><li class="c3 li-bullet-0"><span class="c1">Physical verification<br></span></li>` }} />
           <div className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Physical synthesis is the </span><span class="c13">bridge</span><span>.<br> Now you walk into </span><span class="c13">real physical design</span><span class="c1">.</span>` }} />

@@ -59,7 +59,7 @@ const Module7Content = () => {
   return (
     <div className={styles.moduleLayout}>
       <div className={styles.topicsNav}>
-        className={styles.navTitle}>Topics Covered</h2>
+        <h2 className={styles.navTitle}>Topics Covered</h2>
         <div className={styles.navButtonsGrid}>
           {(showAllTopics ? headings : headings.slice(0, 9)).map((heading) => (
             <button key={heading.id} onClick={() => scrollToSection(heading.id)} className={styles.topicNavBtn}>
@@ -82,7 +82,7 @@ const Module7Content = () => {
           <h1 id="h.opfadh86grqx" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c6 c23">INTRODUCTION TO DFT</span>` }} />
           <h3 id="h.vtp5fgashlla" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">(Design For Testability – Beginner Level)</span>` }} />
           <hr className={styles.divider} />
-          id="h.vfxhnf2bdbqa" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">1️⃣ Importance of Testing (WHY testing is needed?)</span>` }} />
+          <h2 id="h.vfxhnf2bdbqa" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">1️⃣ Importance of Testing (WHY testing is needed?)</span>` }} />
           <h3 id="h.ob7yq42ylpyt" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">Why is testing mandatory in VLSI?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c3 li-bullet-0"><span>As </span><span class="c6">technology node reduces</span><span class="c0"> (7nm, 5nm, 3nm):<br></span></li>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c7 li-bullet-0"><span>Transistors become </span><span class="c6 c19">very small<br></span></li><li class="c2 c7 li-bullet-0"><span>Manufacturing becomes </span><span class="c19 c6">more complex<br></span></li>` }} />
@@ -105,7 +105,7 @@ const Module7Content = () => {
             <img loading="lazy" src="/assets/modules/module7/image_9.png" alt="VLSI Chip Testing Importance: Cost, Time, and Quality Parameters" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.ifbgkfxkkb5z" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">2️⃣ What is DFT (Design For Testability)?</span>` }} />
+          <h2 id="h.ifbgkfxkkb5z" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">2️⃣ What is DFT (Design For Testability)?</span>` }} />
           <h3 id="h.9c99t3quogan" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">Definition (Simple Words)</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c19 c6">DFT is the extra logic added to a chip during the design stage to make post-manufacturing testing possible.</span>` }} />
           <hr className={styles.divider} />
@@ -124,7 +124,7 @@ const Module7Content = () => {
             <img loading="lazy" src="/assets/modules/module7/image_6.png" alt="Design For Testability (DFT) Logic Insertion Concept Diagram" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.ryjko05aywpb" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">3️⃣ Difference Between Verification and Testing</span>` }} />
+          <h2 id="h.ryjko05aywpb" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">3️⃣ Difference Between Verification and Testing</span>` }} />
           <h3 id="h.sbo8he6kf4y7" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">Functional Verification</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c3 li-bullet-0"><span>Done </span><span class="c19 c6">before fabrication<br></span></li><li class="c2 c3 li-bullet-0"><span>Uses </span><span class="c19 c6">testbench<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">Checks design logic correctness<br></span></li>` }} />
           <h3 id="h.1fwm81p1okg" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">Testing (DFT)</span>` }} />
@@ -134,7 +134,7 @@ const Module7Content = () => {
             <img loading="lazy" src="/assets/modules/module7/image_3.png" alt="Comparison Diagram: Functional Verification vs Post-Manufacturing Testing" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.gvc3cq6e0nhx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">4️⃣ Faults, Defects, Errors (VERY IMPORTANT)</span>` }} />
+          <h2 id="h.gvc3cq6e0nhx" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">4️⃣ Faults, Defects, Errors (VERY IMPORTANT)</span>` }} />
           <h3 id="h.qii9mhodhcfs" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">Defect</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c3 li-bullet-0"><span class="c0">Physical problem in silicon<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">Example:<br></span></li>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c7 li-bullet-0"><span class="c0">Broken wire<br></span></li><li class="c2 c7 li-bullet-0"><span class="c0">Short circuit<br></span></li>` }} />
@@ -149,7 +149,7 @@ const Module7Content = () => {
             <img loading="lazy" src="/assets/modules/module7/image_14.png" alt="Relationship between Physical Defects, Logical Faults, and Observed Errors" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.1abyp4uoc482" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">5️⃣ Fault Models (Core Concept of DFT)</span>` }} />
+          <h2 id="h.1abyp4uoc482" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">5️⃣ Fault Models (Core Concept of DFT)</span>` }} />
           <h3 id="h.rfgdkwajzn19" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">Why Fault Models?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c3 li-bullet-0"><span class="c0">We cannot see inside silicon<br></span></li><li class="c2 c3 li-bullet-0"><span>So we </span><span class="c19 c6">model defects logically<br></span></li><li class="c2 c3 li-bullet-0"><span>Most common model: </span><span class="c19 c6">Stuck-At Fault<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -167,7 +167,7 @@ const Module7Content = () => {
             <img loading="lazy" src="/assets/modules/module7/image_18.png" alt="Stuck-At Fault Model (SA0 and SA1) Logical Representation" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.pllwv3crlvs8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">6️⃣ Controllability &amp; Observability</span>` }} />
+          <h2 id="h.pllwv3crlvs8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">6️⃣ Controllability &amp; Observability</span>` }} />
           <h3 id="h.ricwkzd0h0oz" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">Controllability</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c0">Ability to force a node to 0 or 1</span>` }} />
           <h3 id="h.g3u4pedw3lp" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">Observability</span>` }} />
@@ -180,7 +180,7 @@ const Module7Content = () => {
             <img loading="lazy" src="/assets/modules/module7/image_16.png" alt="DFT Controllability and Observability Concepts in Digital Circuits" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.y4an0rh68ex6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">7️⃣ Fault Simulation &amp; Fault Coverage</span>` }} />
+          <h2 id="h.y4an0rh68ex6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">7️⃣ Fault Simulation &amp; Fault Coverage</span>` }} />
           <h3 id="h.7t5oivr01gg6" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">Fault Simulation</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c3 li-bullet-0"><span>Insert faults </span><span class="c19 c6">intentionally<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">Run test patterns<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">Check if fault is detected<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -205,7 +205,7 @@ const Module7Content = () => {
             <img loading="lazy" src="/assets/modules/module7/image_8.png" alt="Common Manufacturing Defects in VLSI: Process, Material, and Aging" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.emp8o2m9an5u" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">9️⃣ Major Types of Faults</span>` }} />
+          <h2 id="h.emp8o2m9an5u" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">9️⃣ Major Types of Faults</span>` }} />
           <h3 id="h.uamvgit5a7h4" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">Structural Faults</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c3 li-bullet-0"><span class="c0">Due to manufacturing<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">Shorts, opens<br></span></li>` }} />
           <h3 id="h.3tmhbtoqqavn" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">Transition Faults</span>` }} />
@@ -216,7 +216,7 @@ const Module7Content = () => {
             <img loading="lazy" src="/assets/modules/module7/image_5.png" alt="Structural and Transition Fault Models in Sequential Logic" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.b2wnj8wpc4kp" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">🔟 Scan Design (MOST IMPORTANT DFT TOPIC)</span>` }} />
+          <h2 id="h.b2wnj8wpc4kp" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">🔟 Scan Design (MOST IMPORTANT DFT TOPIC)</span>` }} />
           <h3 id="h.hwn94kujpjyh" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">Why Scan Design?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c3 li-bullet-0"><span class="c0">Flip-flops hide internal states<br></span></li><li class="c2 c3 li-bullet-0"><span>Scan converts flip-flops into </span><span class="c19 c6">shift register<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -234,7 +234,7 @@ const Module7Content = () => {
             <img loading="lazy" src="/assets/modules/module7/image_15.png" alt="Scan Design Architecture: SI, SO, SE, and Clock Signals" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.n89r5pd2fx8n" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">1️⃣1️⃣ Scan Stitching</span>` }} />
+          <h2 id="h.n89r5pd2fx8n" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">1️⃣1️⃣ Scan Stitching</span>` }} />
           <h3 id="h.bcgku1ly110r" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">What is Scan Stitching?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c3 li-bullet-0"><span class="c0">Connecting flip-flops serially<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">Forms scan chains<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -252,7 +252,7 @@ const Module7Content = () => {
             <img loading="lazy" src="/assets/modules/module7/image_12.png" alt="Scan Chain Stitching and Physical Placement Based Reordering" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.vlryh5glbmal" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">1️⃣2️⃣ Scan Chain Parameters</span>` }} />
+          <h2 id="h.vlryh5glbmal" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">1️⃣2️⃣ Scan Chain Parameters</span>` }} />
           <h3 id="h.87z98efhdot7" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">Scan Length</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c3 li-bullet-0"><span class="c0">Number of flops in one chain<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">Trade-off:<br></span></li>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c7 li-bullet-0"><span class="c0">Long chain → less IO, more time<br></span></li><li class="c2 c7 li-bullet-0"><span class="c0">Short chain → more IO, less time<br></span></li>` }} />
@@ -263,7 +263,7 @@ const Module7Content = () => {
           <h3 id="h.ft4i5hhaf4r2" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">Scan DEF File</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c3 li-bullet-0"><span class="c0">Contains scan chain info<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">Required during physical design<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.yj02ujfmz7ni" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">1️⃣3️⃣ Where DFT Fits in ASIC Flow</span>` }} />
+          <h2 id="h.yj02ujfmz7ni" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">1️⃣3️⃣ Where DFT Fits in ASIC Flow</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c16">RTL</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c16"> ↓</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c16">Synthesis</span>` }} />
@@ -286,9 +286,9 @@ const Module7Content = () => {
             <img loading="lazy" src="/assets/modules/module7/image_13.png" alt="DFT Insertion Stage within the Standard ASIC Design Flow" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.p8w4lcv8aos7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6"> FINAL SUMMARY</span>` }} />
+          <h2 id="h.p8w4lcv8aos7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6"> FINAL SUMMARY</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c3 li-bullet-0"><span>DFT ensures </span><span class="c19 c6">testable silicon<br></span></li><li class="c2 c3 li-bullet-0"><span>Scan design is </span><span class="c19 c6">heart of DFT<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">Fault modeling enables detection<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">Controllability + Observability are key<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">Scan stitching &amp; reordering are critical for PD</span></li>` }} />
-          id="h.jqks4z8ffoyz" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">1️⃣ ATPG – Automatic Test Pattern Generation</span>` }} />
+          <h2 id="h.jqks4z8ffoyz" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">1️⃣ ATPG – Automatic Test Pattern Generation</span>` }} />
           <h3 id="h.hsd337kzwaas" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">What is ATPG?</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>ATPG is a software tool that </span><span class="c6">automatically generates test vectors</span><span class="c0"> to detect faults in a design.</span>` }} />
           <hr className={styles.divider} />
@@ -303,7 +303,7 @@ const Module7Content = () => {
             <img loading="lazy" src="/assets/modules/module7/image_7.png" alt="Automatic Test Pattern Generation (ATPG) Tool Operation Diagram" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.z3iwm7o2x3h9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">2️⃣ Types of Scan Design</span>` }} />
+          <h2 id="h.z3iwm7o2x3h9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">2️⃣ Types of Scan Design</span>` }} />
           <h3 id="h.qz6ipuo3c8g4" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">1. Full Scan</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c3 li-bullet-0"><span class="c0">All flip-flops are scan-enabled<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">Highest fault coverage<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">Most common in industry<br></span></li>` }} />
           <h3 id="h.j69o5vffivem" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">2. Partial Scan</span>` }} />
@@ -328,7 +328,7 @@ const Module7Content = () => {
             <img loading="lazy" src="/assets/modules/module7/image_1.png" alt="Scan Operation Cycles: Shift Cycle vs Capture Cycle Timing Diagram" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.bgm6rhzg27kw" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">4️⃣ Scan Clock vs Functional Clock</span>` }} />
+          <h2 id="h.bgm6rhzg27kw" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">4️⃣ Scan Clock vs Functional Clock</span>` }} />
           <h3 id="h.v18f4zw158vu" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">Functional Clock</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c3 li-bullet-0"><span class="c0">Used during normal operation<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">High frequency<br></span></li>` }} />
           <h3 id="h.fj1g15m4oidj" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">Scan Clock</span>` }} />
@@ -337,7 +337,7 @@ const Module7Content = () => {
           <h3 id="h.mis8uyahcg5f" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">Why Separate Scan Clock?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c3 li-bullet-0"><span class="c0">Avoid IR drop<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">Avoid overheating<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">Safe shifting<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.wr59krr6g2s8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">5️⃣ Reset in Scan Design</span>` }} />
+          <h2 id="h.wr59krr6g2s8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">5️⃣ Reset in Scan Design</span>` }} />
           <h3 id="h.499nfku8sg6y" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">Why Reset is Important?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c3 li-bullet-0"><span class="c0">Initialize flip-flops<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">Avoid unknown (X) states<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -349,7 +349,7 @@ const Module7Content = () => {
             <img loading="lazy" src="/assets/modules/module7/image_2.png" alt="Reset Signal Management in Scan-Based Digital Designs" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.e0pnv6r77k1y" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">6️⃣ Multiple Scan Chains</span>` }} />
+          <h2 id="h.e0pnv6r77k1y" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">6️⃣ Multiple Scan Chains</span>` }} />
           <h3 id="h.o9gycee7mhi" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">Why Multiple Scan Chains?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c3 li-bullet-0"><span class="c0">Single chain = very long shift time<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">Multiple chains:<br></span></li>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c7 li-bullet-0"><span class="c0">Reduce test time<br></span></li><li class="c2 c7 li-bullet-0"><span class="c0">Parallel shifting<br></span></li>` }} />
@@ -361,7 +361,7 @@ const Module7Content = () => {
             <img loading="lazy" src="/assets/modules/module7/image_19.png" alt="Architecture of Multiple Parallel Scan Chains for Test Time Reduction" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.vsknk4tjpnrb" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">7️⃣ Scan Compression (High-Level)</span>` }} />
+          <h2 id="h.vsknk4tjpnrb" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">7️⃣ Scan Compression (High-Level)</span>` }} />
           <h3 id="h.5unmq2fxawz5" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">Problem Without Compression</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c3 li-bullet-0"><span class="c0">Too many test vectors<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">Long tester time<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">High memory usage<br></span></li>` }} />
           <hr className={styles.divider} />
@@ -373,7 +373,7 @@ const Module7Content = () => {
             <img loading="lazy" src="/assets/modules/module7/image_4.png" alt="Scan Compression and Decompression Architecture for Efficient Testing" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.tvjrjfrzfooa" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c11">8️⃣ DFT for Memory – MBIST (Intro Level)</span>` }} />
+          <h2 id="h.tvjrjfrzfooa" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c11">8️⃣ DFT for Memory – MBIST (Intro Level)</span>` }} />
           <h3 id="h.srim80326pbh" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">What is MBIST?</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c0">Memory Built-In Self Test</span>` }} />
           <hr className={styles.divider} />
@@ -387,7 +387,7 @@ const Module7Content = () => {
             <img loading="lazy" src="/assets/modules/module7/image_17.png" alt="Memory Built-In Self Test (MBIST) Block Diagram and Controller" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.si3qpkiipmiu" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">9️⃣ Boundary Scan (JTAG) – High Level</span>` }} />
+          <h2 id="h.si3qpkiipmiu" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">9️⃣ Boundary Scan (JTAG) – High Level</span>` }} />
           <h3 id="h.nvb8z9g5wbz9" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">What is Boundary Scan?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c3 li-bullet-0"><span class="c0">Test IO pins<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">Used for:<br></span></li>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c7 li-bullet-0"><span class="c0">Board-level testing<br></span></li><li class="c2 c7 li-bullet-0"><span class="c0">Debugging<br></span></li>` }} />
@@ -399,19 +399,19 @@ const Module7Content = () => {
             <img loading="lazy" src="/assets/modules/module7/image_11.png" alt="Boundary Scan (JTAG) IEEE 1149.1 Architecture and TAP Controller" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.lp1i5jktze1c" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">🔟 DFT Design Rules (DFT Rules)</span>` }} />
+          <h2 id="h.lp1i5jktze1c" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">🔟 DFT Design Rules (DFT Rules)</span>` }} />
           <h3 id="h.qmpld08k9e5p" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">Common DFT Rules</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c3 li-bullet-0"><span class="c0">No gated clocks (or scan-safe gating)<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">Avoid combinational loops<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">Reset must reach all flops<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">Avoid latches (unless intentional)<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">No X-propagation paths<br></span></li>` }} />
           <hr className={styles.divider} />
           <h3 id="h.2r56o9whpmb1" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c9 c6">Why Do Rules Matter?</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c2 c3 li-bullet-0"><span class="c0">ATPG depends on clean logic<br></span></li><li class="c2 c3 li-bullet-0"><span class="c0">Violations reduce fault coverage<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.3ny7xkcsy3dz" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">1️⃣1️⃣ DFT Signals Summary</span>` }} />
+          <h2 id="h.3ny7xkcsy3dz" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">1️⃣1️⃣ DFT Signals Summary</span>` }} />
           <div className={styles.tableContainer}>
             <table className={styles.contentTable} dangerouslySetInnerHTML={{ __html: `<tbody><tr class="c15"><td class="c12" colspan="1" rowspan="1"><p class="c17"><span class="c6">Signal</span></p></td><td class="c21" colspan="1" rowspan="1"><p class="c17"><span class="c6">Purpose</span></p></td></tr><tr class="c15"><td class="c12" colspan="1" rowspan="1"><p class="c14"><span class="c0">Scan In</span></p></td><td class="c21" colspan="1" rowspan="1"><p class="c14"><span class="c0">Shift test data in</span></p></td></tr><tr class="c15"><td class="c12" colspan="1" rowspan="1"><p class="c14"><span class="c0">Scan Out</span></p></td><td class="c21" colspan="1" rowspan="1"><p class="c14"><span class="c0">Shift test data out</span></p></td></tr><tr class="c15"><td class="c12" colspan="1" rowspan="1"><p class="c14"><span class="c0">Scan Enable</span></p></td><td class="c21" colspan="1" rowspan="1"><p class="c14"><span class="c0">Select test/functional</span></p></td></tr><tr class="c15"><td class="c12" colspan="1" rowspan="1"><p class="c14"><span class="c0">Scan Clock</span></p></td><td class="c21" colspan="1" rowspan="1"><p class="c14"><span class="c0">Shift &amp; capture</span></p></td></tr><tr class="c15"><td class="c12" colspan="1" rowspan="1"><p class="c14"><span class="c0">Reset</span></p></td><td class="c21" colspan="1" rowspan="1"><p class="c14"><span class="c0">Initialize flops</span></p></td></tr><tr class="c15"><td class="c12" colspan="1" rowspan="1"><p class="c14"><span class="c0">Test Mode</span></p></td><td class="c21" colspan="1" rowspan="1"><p class="c14"><span class="c0">Enable DFT logic</span></p></td></tr></tbody>` }} />
           </div>
           <hr className={styles.divider} />
-          id="h.1pvsm35cutms" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">1️⃣2️⃣ Common Student Mistakes (VERY USEFUL)</span>` }} />
+          <h2 id="h.1pvsm35cutms" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c11 c6">1️⃣2️⃣ Common Student Mistakes (VERY USEFUL)</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c0"> DFT fixes silicon →  WRONG<br> Scan is only for testing →  PARTIAL<br> Fault = defect →  WRONG</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span> DFT </span><span class="c6">detects</span><span class="c0">, not fixes<br> Scan improves observability<br> Fault is a model, defect is physical</span>` }} />
           <AdUnit slotId="slot_module7content" />

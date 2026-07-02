@@ -168,7 +168,7 @@ const MOSFETCMOSContent = () => {
     <div className={styles.moduleLayout}>
       {/* Topics Covered Navigation at the Top */}
       <div className={styles.topicsNav}>
-        className={styles.navTitle}>Topics Covered</h2>
+        <h2 className={styles.navTitle}>Topics Covered</h2>
         <div className={styles.navButtonsGrid}>
           {visibleHeadings.map((heading) => (
             <button
@@ -199,11 +199,11 @@ const MOSFETCMOSContent = () => {
             <img loading="lazy" src="/assets/modules/mosfetcmos/image56.png" alt="Transistor Family Tree" className={styles.contentImage} />
           </div>
           <h1 id="h.k55wj52v1w6f" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c7 c19">Enhancement NMOSFET (EN-N-MOSFET): Construction and Operation</span>` }} />
-          id="h.ddau6zmbmp8f" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Introduction</span>` }} />
+          <h2 id="h.ddau6zmbmp8f" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Introduction</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>The Enhancement NMOSFET (EN-MOSFET) is one of the most important semiconductor devices used in modern electronic circuits. It belongs to the family of </span><span class="c7">Metal Oxide Semiconductor Field Effect Transistors</span><span>, where the flow of current between the source and drain is controlled by the </span><span class="c7">electric field produced by the gate voltage</span><span>. The EN-MOSFET is called an </span><span class="c36">enhancement type</span><span>&nbsp;device because it is </span><span class="c7">normally OFF</span><span>&nbsp;and conduction takes place only when the gate voltage exceeds a certain minimum value known as the </span><span class="c7">threshold voltage</span><span class="c2">.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Because of its </span><span class="c7">high input impedance, low power consumption, and excellent switching characteristics</span><span>, EN-MOSFETs are extensively used in </span><span class="c7">CMOS technology, digital logic circuits, microprocessors, and VLSI systems</span><span class="c2">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.nrx6lpbx651b" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Construction of Enhancement NMOSFET</span>` }} />
+          <h2 id="h.nrx6lpbx651b" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Construction of Enhancement NMOSFET</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>An Enhancement NMOSFET is fabricated on a </span><span class="c7">p-type semiconductor substrate</span><span>. Two heavily doped </span><span class="c7">n⁺ regions</span><span>&nbsp;are diffused into the substrate, which act as the </span><span class="c7">source</span><span>&nbsp;and </span><span class="c7">drain</span><span class="c2">&nbsp;terminals. The region between these two n⁺ diffusions is where the channel will be formed during operation.</span>` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/mosfetcmos/image59.png" alt="Construction of Enhancement NMOSFET on P-type substrate" className={styles.contentImage} />
@@ -213,18 +213,18 @@ const MOSFETCMOSContent = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c2">Source (S)<br></span></li><li class="c1 li-bullet-0"><span class="c2">Drain (D)<br></span></li><li class="c1 li-bullet-0"><span class="c2">Gate (G)<br></span></li><li class="c1 li-bullet-0"><span class="c2">Body or substrate (B)<br></span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>In most practical circuits, the </span><span class="c7">body terminal is connected to the source</span><span class="c2">&nbsp;to eliminate body effect and simplify operation.</span>` }} />
           <hr className={styles.divider} />
-          id="h.nz3e5knl08w3" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Basic Working Principle</span>` }} />
+          <h2 id="h.nz3e5knl08w3" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Basic Working Principle</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>When a </span><span class="c7">positive voltage is applied to the gate</span><span>, it produces an electric field across the oxide layer. This electric field </span><span class="c7">repels holes</span><span>&nbsp;from the surface of the p-type substrate and attracts </span><span class="c7">electrons</span><span>&nbsp;toward the surface. Initially, no channel exists, but as the gate voltage increases, electrons accumulate near the surface and form a thin conducting layer called the </span><span class="c7">n-channel</span><span class="c2">.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>The gate structure behaves like a </span><span class="c7">capacitor</span><span class="c2">, with:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c2">Gate metal as one plate<br></span></li><li class="c1 li-bullet-0"><span class="c2">Channel electrons as the other plate<br></span></li><li class="c1 li-bullet-0"><span class="c2">Silicon dioxide as the dielectric<br></span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>As the gate voltage increases, the </span><span class="c7">conductivity of the channel increases</span><span class="c2">, reducing channel resistance and allowing more current to flow from source to drain when a drain voltage is applied.</span>` }} />
           <hr className={styles.divider} />
-          id="h.tu0k708unuk5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Operation of Enhancement NMOSFET</span>` }} />
+          <h2 id="h.tu0k708unuk5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Operation of Enhancement NMOSFET</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>The operation of EN-MOSFET is explained by dividing it into </span><span class="c7">three regions of operation</span><span>, based on the values of </span><span class="c7">gate-to-source voltage (VGS)</span><span>&nbsp;and </span><span class="c7">drain-to-source voltage (VDS)</span><span class="c2">.</span>` }} />
           <h1 id="h.uhgcpjqk4qhu" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c19 c7">1.2 Operation of Enhancement NMOSFET (EN-MOSFET)</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>After understanding the </span><span class="c7">construction and basic working principle</span><span>&nbsp;of the Enhancement NMOSFET, let us now study its </span><span class="c7">operation in detail</span><span>.<br> The operation of EN-MOSFET is explained by dividing it into </span><span class="c7">different regions of operation</span><span>, depending on the values of </span><span class="c7">gate-to-source voltage (VGS)</span><span>&nbsp;and </span><span class="c7">drain-to-source voltage (VDS)</span><span class="c2">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.3sr8hloexfz4" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">1. Cut-Off Region (MOSFET OFF Condition)</span>` }} />
+          <h2 id="h.3sr8hloexfz4" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">1. Cut-Off Region (MOSFET OFF Condition)</span>` }} />
           <h3 id="h.3rl5rd782pij" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Case (i): VGS = 0, VDS = 0</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">In this condition:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c2">No voltage is applied to the gate.<br></span></li><li class="c1 li-bullet-0"><span class="c2">No voltage is applied between drain and source.<br></span></li>` }} />
@@ -253,7 +253,7 @@ const MOSFETCMOSContent = () => {
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Before VT:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c2">Channel does not exist<br></span></li><li class="c1 li-bullet-0"><span class="c2">ID ≈ 0<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.fi0z16wysrm7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">2. Triode (Linear) Region</span>` }} />
+          <h2 id="h.fi0z16wysrm7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">2. Triode (Linear) Region</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Once </span><span class="c7">VGS exceeds VT</span><span>, the MOSFET enters the </span><span class="c7">conduction mode</span><span class="c2">.</span>` }} />
           <h3 id="h.g9wl695002o2" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Condition (iii): VGS &gt; VT, VDS &gt; 0 and VDS &lt; (VGS − VT)</span>` }} />
           <hr className={styles.divider} />
@@ -283,7 +283,7 @@ const MOSFETCMOSContent = () => {
             <img loading="lazy" src="/assets/modules/mosfetcmos/image11.png" alt="MOSFET Pinch-off condition at the drain end" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.lnf99o0e858" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">3. Saturation Region</span>` }} />
+          <h2 id="h.lnf99o0e858" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">3. Saturation Region</span>` }} />
           <h3 id="h.iu1gx4gs6z2s" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Condition (v): VGS &gt; VT and VDS ≥ (VGS − VT)</span>` }} />
           <hr className={styles.divider} />
           <div className={styles.imageContainer}>
@@ -302,7 +302,7 @@ const MOSFETCMOSContent = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c9 c7">Drain current ID becomes constant<br></span></li><li class="c1 li-bullet-0"><span>ID is </span><span class="c9 c7">independent of VDS<br></span></li><li class="c1 li-bullet-0"><span>ID depends </span><span class="c9 c7">only on VGS<br></span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c9 c7">&nbsp;This is why this region is called the saturation region.</span>` }} />
           <hr className={styles.divider} />
-          id="h.cxv4i1xtgcex" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">V-l characteristics of N-MOSFET</span>` }} />
+          <h2 id="h.cxv4i1xtgcex" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">V-l characteristics of N-MOSFET</span>` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/mosfetcmos/image39.png" alt="V-I characteristics of N-MOSFET (ID vs VDS)" className={styles.contentImage} />
           </div>
@@ -310,7 +310,7 @@ const MOSFETCMOSContent = () => {
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/mosfetcmos/image40.png" alt="Transfer characteristics of N-MOSFET (ID vs VGS)" className={styles.contentImage} />
           </div>
-          id="h.76kbtlqsmjhg" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c7 c30">Summary of N-MOSFET Operation</span>` }} />
+          <h2 id="h.76kbtlqsmjhg" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c7 c30">Summary of N-MOSFET Operation</span>` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/mosfetcmos/image9.png" alt="Summary table of N-MOSFET operation regions" className={styles.contentImage} />
           </div>
@@ -318,11 +318,11 @@ const MOSFETCMOSContent = () => {
           <h1 id="h.thhixm9hitr8" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Construction and Operation (Corrected &amp; Verified)</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>&nbsp;</span><span class="c7">Important note before reading<br></span><span>&nbsp;For PMOSFET, voltages are </span><span class="c7">negative with respect to the source</span><span>.<br> To avoid confusion, </span><span class="c7">absolute-value (magnitude) form</span><span>&nbsp;is used in equations, which is the </span><span class="c7">standard academic practice</span><span class="c2">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.k3pnmxs1vvk9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Introduction</span>` }} />
+          <h2 id="h.k3pnmxs1vvk9" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Introduction</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>The </span><span class="c7">Enhancement PMOSFET (EN-PMOSFET)</span><span>&nbsp;is a voltage-controlled semiconductor device belonging to the </span><span class="c7">MOSFET family</span><span>. It is called an </span><span class="c7">enhancement type device</span><span>&nbsp;because </span><span class="c7">no channel exists at zero gate voltage</span><span>, and conduction occurs only when the </span><span class="c7">gate voltage is made sufficiently negative</span><span class="c2">&nbsp;relative to the source.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>PMOSFETs conduct using </span><span class="c7">holes as majority carriers</span><span>&nbsp;and are extensively used along with NMOSFETs in </span><span class="c7">CMOS technology</span><span class="c2">, enabling low-power and high-density integrated circuits.</span>` }} />
           <hr className={styles.divider} />
-          id="h.rn44t6l1bftc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c7 c14">Construction of Enhancement PMOSFET</span>` }} />
+          <h2 id="h.rn44t6l1bftc" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c7 c14">Construction of Enhancement PMOSFET</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span>Fabricated on an </span><span class="c9 c7">n-type substrate<br></span></li><li class="c1 li-bullet-0"><span>Two heavily doped </span><span class="c7">p⁺ regions</span><span class="c2">&nbsp;form:<br></span></li>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c4 c15 li-bullet-0"><span class="c9 c7">Source<br></span></li><li class="c4 c15 li-bullet-0"><span class="c9 c7">Drain<br></span></li>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span>A thin </span><span class="c7">SiO₂ layer</span><span class="c2">&nbsp;is grown on the substrate<br></span></li><li class="c1 li-bullet-0"><span>A </span><span class="c7">metal gate</span><span class="c2">&nbsp;is deposited on the oxide<br></span></li>` }} />
@@ -334,7 +334,7 @@ const MOSFETCMOSContent = () => {
           </div>
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>&nbsp;In practice, </span><span class="c7">body is connected to source</span><span>&nbsp;to avoid body effect.<br></span><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 465.00px; height: 309.37px;"><img loading="lazy" alt="" src="/assets/modules/mosfetcmos/image75.png" style="width: 465.00px; height: 309.37px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span>` }} />
           <hr className={styles.divider} />
-          id="h.6xbm78hgfcb3" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Basic Working Principle</span>` }} />
+          <h2 id="h.6xbm78hgfcb3" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Basic Working Principle</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>When the </span><span class="c7">gate is made negative with respect to the source</span><span class="c2">, an electric field is established across the oxide layer.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">This electric field:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c7">Repels electrons</span><span class="c2">&nbsp;from the surface of the n-substrate<br></span></li><li class="c1 li-bullet-0"><span class="c7">Attracts holes</span><span class="c2">&nbsp;toward the surface<br></span></li>` }} />
@@ -348,7 +348,7 @@ const MOSFETCMOSContent = () => {
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>&nbsp;To keep equations correct and simple, we use </span><span class="c7">magnitude form</span><span class="c2">:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c2">|VGS| = magnitude of gate-to-source voltage<br></span></li><li class="c1 li-bullet-0"><span class="c2">|VDS| = magnitude of drain-to-source voltage<br></span></li><li class="c1 li-bullet-0"><span class="c2">|VT| = magnitude of threshold voltage<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.pa4u8tuvqkva" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">1. Cut-Off Region (PMOS OFF)</span>` }} />
+          <h2 id="h.pa4u8tuvqkva" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">1. Cut-Off Region (PMOS OFF)</span>` }} />
           <h3 id="h.yzc88yhuzy0" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Condition</span>` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/mosfetcmos/image6.png" alt="" className={styles.contentImage} />
@@ -362,7 +362,7 @@ const MOSFETCMOSContent = () => {
             <img loading="lazy" src="/assets/modules/mosfetcmos/image48.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.ij7orzmmbrj6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">2. Triode (Linear / Ohmic) Region</span>` }} />
+          <h2 id="h.ij7orzmmbrj6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">2. Triode (Linear / Ohmic) Region</span>` }} />
           <h3 id="h.ch82bckmjyx9" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Condition</span>` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/mosfetcmos/image19.png" alt="" className={styles.contentImage} />
@@ -385,7 +385,7 @@ const MOSFETCMOSContent = () => {
           </div>
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">This controls channel depth and conductivity.</span>` }} />
           <hr className={styles.divider} />
-          id="h.sxxsqjfvoh52" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Pinch-Off Condition</span>` }} />
+          <h2 id="h.sxxsqjfvoh52" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Pinch-Off Condition</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Pinch-off occurs when:</span>` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/mosfetcmos/image64.png" alt="" className={styles.contentImage} />
@@ -395,7 +395,7 @@ const MOSFETCMOSContent = () => {
             <img loading="lazy" src="/assets/modules/mosfetcmos/image51.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.lf3enzgzdfxt" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">3. Saturation Region</span>` }} />
+          <h2 id="h.lf3enzgzdfxt" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">3. Saturation Region</span>` }} />
           <h3 id="h.en4xu6tzm560" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Condition</span>` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/mosfetcmos/image54.png" alt="" className={styles.contentImage} />
@@ -414,10 +414,10 @@ const MOSFETCMOSContent = () => {
           <h3 id="h.ympukebcc83e" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Key Result</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span>ID depends </span><span class="c9 c7">only on VGS<br></span></li><li class="c1 li-bullet-0"><span>PMOS behaves like a </span><span class="c9 c7">constant current source<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.ea9dzjpcbp3j" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">V–I Characteristics of PMOSFET</span>` }} />
+          <h2 id="h.ea9dzjpcbp3j" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">V–I Characteristics of PMOSFET</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span>Shows </span><span class="c9 c7">ID vs VDS<br></span></li><li class="c1 li-bullet-0"><span class="c2">Clearly indicates:<br></span></li>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c4 c15 li-bullet-0"><span class="c2">Cut-off<br></span></li><li class="c4 c15 li-bullet-0"><span class="c2">Triode<br></span></li><li class="c4 c15 li-bullet-0"><span class="c2">Saturation regions<br></span></li>` }} />
-          id="h.gbhj7ywee2ns" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Transfer Characteristics of PMOSFET</span>` }} />
+          <h2 id="h.gbhj7ywee2ns" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Transfer Characteristics of PMOSFET</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span>Shows </span><span class="c9 c7">ID vs VGS<br></span></li><li class="c1 li-bullet-0"><span class="c2">Used to determine:<br></span></li>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c4 c15 li-bullet-0"><span class="c2">Threshold voltage<br></span></li><li class="c4 c15 li-bullet-0"><span class="c2">Transconductance</span></li>` }} />
           <div className={styles.imageContainer}>
@@ -451,15 +451,15 @@ const MOSFETCMOSContent = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span>When the input is </span><span class="c7">LOW</span><span>, PMOS turns ON and NMOS turns OFF → output becomes </span><span class="c7">HIGH</span><span class="c2">.<br></span></li><li class="c1 li-bullet-0"><span>When the input is </span><span class="c7">HIGH</span><span>, NMOS turns ON and PMOS turns OFF → output becomes </span><span class="c7">LOW</span><span class="c2">.<br></span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Thus, CMOS provides a </span><span class="c7">full logic swing</span><span class="c2">, meaning the output voltage levels are very close to the supply voltages.</span>` }} />
           <hr className={styles.divider} />
-          id="h.x4z0ia6i6sng" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">CMOS Inverter – Importance</span>` }} />
+          <h2 id="h.x4z0ia6i6sng" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">CMOS Inverter – Importance</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>The CMOS inverter is considered the </span><span class="c7">building block of all CMOS logic circuits</span><span class="c2">. Using CMOS inverters, we can construct:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c2">NAND gates<br></span></li><li class="c1 li-bullet-0"><span class="c2">NOR gates<br></span></li><li class="c1 li-bullet-0"><span class="c2">Flip-flops<br></span></li><li class="c1 li-bullet-0"><span class="c2">Adders<br></span></li><li class="c1 li-bullet-0"><span class="c2">Multiplexers<br></span></li><li class="c1 li-bullet-0"><span class="c2">Memory cells<br></span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Hence, understanding CMOS inverter operation is essential for learning </span><span class="c7">digital electronics, VLSI design, and CMOS circuit design</span><span class="c2">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.f6b5hxswh4z4" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Why CMOS Technology Is Widely Used</span>` }} />
+          <h2 id="h.f6b5hxswh4z4" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Why CMOS Technology Is Widely Used</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">CMOS technology has become dominant in the semiconductor industry due to several important advantages.</span>` }} />
           <hr className={styles.divider} />
-          id="h.8sva6djpwa7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Advantages of CMOS Technology</span>` }} />
+          <h2 id="h.8sva6djpwa7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Advantages of CMOS Technology</span>` }} />
           <h3 id="h.lhp2shq6hzl2" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">1. Very Low Power Consumption</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>In steady state, CMOS circuits draw </span><span class="c7">almost zero static power</span><span>, because there is </span><span class="c7">no direct path between VDD and GND</span><span class="c2">. Power is consumed mainly during switching.</span>` }} />
           <h3 id="h.pt2q1n9k25mu" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">2. High Noise Immunity</span>` }} />
@@ -473,7 +473,7 @@ const MOSFETCMOSContent = () => {
           <h3 id="h.hwa7klyztdx4" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">6. Scalability</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>CMOS technology scales well with device size reduction, enabling </span><span class="c7">smaller, faster, and more efficient chips</span><span class="c2">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.idrs7y7wu0w5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Limitations of CMOS Technology</span>` }} />
+          <h2 id="h.idrs7y7wu0w5" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Limitations of CMOS Technology</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Although CMOS technology has many advantages, it also has some limitations that must be understood.</span>` }} />
           <h3 id="h.n6r8bhn6lg1p" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">1. Dynamic Power Dissipation</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Power is consumed during switching due to:</span>` }} />
@@ -494,7 +494,7 @@ const MOSFETCMOSContent = () => {
           </div>
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>This complementary behavior ensures that </span><span class="c7">only one conduction path exists at a time</span><span>, either to the power supply or to ground, but </span><span class="c7">never both simultaneously in steady state</span><span>. Because of this property, CMOS circuits </span><span class="c7">do not require pull-up resistors</span><span>, unlike NMOS-only logic families.<br></span><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 417.50px; height: 278.90px;"><img loading="lazy" alt="" src="/assets/modules/mosfetcmos/image61.png" style="width: 417.50px; height: 278.90px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span>` }} />
           <hr className={styles.divider} />
-          id="h.pzqt9yn8wqad" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Pull-Up and Pull-Down Networks</span>` }} />
+          <h2 id="h.pzqt9yn8wqad" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Pull-Up and Pull-Down Networks</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">In CMOS logic gates, transistors are organized into two distinct networks:</span>` }} />
           <h3 id="h.6mo3jolu154t" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">1. Pull-Down Network (PDN)</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span>Constructed using </span><span class="c9 c7">NMOS transistors<br></span></li><li class="c1 li-bullet-0"><span>Connected between the </span><span class="c9 c7">output node and the low-voltage rail (VSS or ground)<br></span></li><li class="c1 li-bullet-0"><span>When the PDN is ON, it </span><span class="c9 c7">pulls the output to logic ‘0’</span></li>` }} />
@@ -504,7 +504,7 @@ const MOSFETCMOSContent = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span>When </span><span class="c7">PDN conducts</span><span>, </span><span class="c9 c7">PUN is OFF<br></span></li><li class="c1 li-bullet-0"><span>When </span><span class="c7">PUN conducts</span><span>, </span><span class="c9 c7">PDN is OFF<br></span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>This arrangement guarantees </span><span class="c7">low static power consumption</span><span>&nbsp;and </span><span class="c7">reliable logic levels</span><span class="c2">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.og8e7kk23l9c" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Basic Working Principle</span>` }} />
+          <h2 id="h.og8e7kk23l9c" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Basic Working Principle</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span>Input voltage is applied </span><span class="c9 c7">simultaneously to the gates of NMOS and PMOS<br></span></li><li class="c1 li-bullet-0"><span class="c2">Depending on the input level:<br></span></li>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c4 c15 li-bullet-0"><span class="c2">Either the pull-up path or the pull-down path becomes active<br></span></li>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span>The output node is connected </span><span class="c7">either to VDD or to GND</span><span class="c2">, but never both<br></span></li>` }} />
@@ -515,7 +515,7 @@ const MOSFETCMOSContent = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c9 c7">High operating speed<br></span></li><li class="c1 li-bullet-0"><span class="c9 c7">Very low power dissipation<br></span></li><li class="c1 li-bullet-0"><span class="c9 c7">Large noise margins<br></span></li><li class="c1 li-bullet-0"><span class="c9 c7">Operation over a wide range of supply voltages<br></span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>To understand these advantages clearly, let us analyze the </span><span class="c7">pull-up and pull-down transistor behavior using a load capacitor (C₁)</span><span class="c2">, which represents the output capacitance.</span>` }} />
           <hr className={styles.divider} />
-          id="h.fm18z276e620" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Operation of Pull-Down Transistor (NMOS)</span>` }} />
+          <h2 id="h.fm18z276e620" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Operation of Pull-Down Transistor (NMOS)</span>` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/mosfetcmos/image41.png" alt="" className={styles.contentImage} />
           </div>
@@ -536,7 +536,7 @@ const MOSFETCMOSContent = () => {
           </div>
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c22 li-bullet-0"><span class="c2">At Vcs&lt; Vt→ PMOS ON </span></li><li class="c22 li-bullet-0"><span class="c2">Channel gets formed between drawn and source</span></li><li class="c22 li-bullet-0"><span class="c2">&nbsp;C1 gets discharged to Vip after the channel has formed </span></li><li class="c22 li-bullet-0"><span class="c2">PMOS acts as weak 0.</span></li>` }} />
           <hr className={styles.divider} />
-          id="h.11z2k5lva5t7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Charging and Discharging of Output Capacitor (C₁)</span>` }} />
+          <h2 id="h.11z2k5lva5t7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Charging and Discharging of Output Capacitor (C₁)</span>` }} />
           <h3 id="h.46pyyrojwn43" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Charging Phase</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c2">PMOS ON, NMOS OFF<br></span></li><li class="c1 li-bullet-0"><span class="c2">C₁ charges through PMOS<br></span></li><li class="c1 li-bullet-0"><span class="c2">Output rises toward VDD<br></span></li>` }} />
           <h3 id="h.gpuoxi9bi0na" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Discharging Phase</span>` }} />
@@ -544,7 +544,7 @@ const MOSFETCMOSContent = () => {
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">This charging and discharging mechanism determines:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c9 c7">Propagation delay<br></span></li><li class="c1 li-bullet-0"><span class="c9 c7">Dynamic power dissipation<br></span></li><li class="c1 li-bullet-0"><span class="c9 c7">Switching speed<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.iv5ai89o0ccy" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Why CMOS Has Low Power Dissipation</span>` }} />
+          <h2 id="h.iv5ai89o0ccy" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Why CMOS Has Low Power Dissipation</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c2">In steady state:<br></span></li>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c4 c15 li-bullet-0"><span class="c2">Either PMOS or NMOS is OFF<br></span></li><li class="c4 c15 li-bullet-0"><span class="c2">No direct path between VDD and GND<br></span></li>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c2">Power is consumed mainly:<br></span></li>` }} />
@@ -554,14 +554,14 @@ const MOSFETCMOSContent = () => {
             <img loading="lazy" src="/assets/modules/mosfetcmos/image33.png" alt="" className={styles.contentImage} />
           </div>
           <h1 id="h.mwipnjr2vajf" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c19 c7">3.3 Noise Margin in CMOS Circuits</span>` }} />
-          id="h.p2ln2tixrzqz" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Introduction</span>` }} />
+          <h2 id="h.p2ln2tixrzqz" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Introduction</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>In practical digital circuits, signals are never perfectly clean. During transmission, digital signals are often affected by </span><span class="c7">noise</span><span>&nbsp;due to coupling, interference, switching transients, or external disturbances. </span><span class="c7">Noise margin</span><span>&nbsp;is a critical parameter that determines how much noise a CMOS circuit can tolerate </span><span class="c7">without affecting correct logic operation</span><span class="c2">.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>In simple terms, </span><span class="c7">noise margin is the maximum noise voltage that a circuit can withstand while still interpreting the signal correctly</span><span class="c2">. A larger noise margin means better reliability and robustness of the digital system.</span>` }} />
           <hr className={styles.divider} />
-          id="h.qnhzcr621esl" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c7 c30">Digital Signal Levels and Noise<br></span><span>Digital logic levels are </span><span class="c7">not represented by single fixed voltages</span><span>, but rather by </span><span class="c7">ranges of voltages</span><span class="c28">. This is what allows CMOS circuits to operate correctly even when noise is present.</span>` }} />
+          <h2 id="h.qnhzcr621esl" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c7 c30">Digital Signal Levels and Noise<br></span><span>Digital logic levels are </span><span class="c7">not represented by single fixed voltages</span><span>, but rather by </span><span class="c7">ranges of voltages</span><span class="c28">. This is what allows CMOS circuits to operate correctly even when noise is present.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>To understand noise margin, we must first define the </span><span class="c7">critical voltage levels</span><span class="c2">&nbsp;that characterize the DC input–output behavior of a CMOS inverter.</span>` }} />
           <hr className={styles.divider} />
-          id="h.4l5v65zbe7ci" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Critical Voltage Levels in a CMOS Inverter</span>` }} />
+          <h2 id="h.4l5v65zbe7ci" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Critical Voltage Levels in a CMOS Inverter</span>` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/mosfetcmos/image7.png" alt="" className={styles.contentImage} />
           </div>
@@ -577,7 +577,7 @@ const MOSFETCMOSContent = () => {
           <h3 id="h.3raa7aij68u8" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">5. Vth (Switching Threshold Voltage)</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c2">The input voltage at which the inverter switches from logic ‘1’ to logic ‘0’<br></span></li><li class="c1 li-bullet-0"><span>Typically near </span><span class="c7">VDD / 2</span><span class="c2">&nbsp;for symmetric CMOS inverters<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.l9xi4mbol4nr" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Interpretation of Input and Output Voltage Ranges</span>` }} />
+          <h2 id="h.l9xi4mbol4nr" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Interpretation of Input and Output Voltage Ranges</span>` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/mosfetcmos/image32.png" alt="" className={styles.contentImage} />
           </div>
@@ -588,7 +588,7 @@ const MOSFETCMOSContent = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span>Any output voltage between </span><span class="c7">0 and VOL</span><span>&nbsp;is interpreted as logic </span><span class="c9 c7">‘0’<br></span></li><li class="c1 li-bullet-0"><span>Any output voltage between </span><span class="c7">VOH and VDD</span><span>&nbsp;is interpreted as logic </span><span class="c9 c7">‘1’<br></span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">This separation into voltage ranges allows CMOS circuits to tolerate noise.</span>` }} />
           <hr className={styles.divider} />
-          id="h.opx2xhbcdd2h" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Noise Tolerance Using Cascaded Inverters</span>` }} />
+          <h2 id="h.opx2xhbcdd2h" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Noise Tolerance Using Cascaded Inverters</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Consider a chain of </span><span class="c7">three cascaded CMOS inverters</span><span class="c2">.</span>` }} />
           <h3 id="h.za4p22bzq4dv" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Low-Level Noise Case</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span>Assume the output of the first inverter is </span><span class="c7">VOL</span><span class="c2">, representing logic ‘0’<br></span></li><li class="c1 li-bullet-0"><span class="c2">During signal transmission, noise may increase the voltage slightly<br></span></li><li class="c1 li-bullet-0"><span>If the input voltage of the second inverter remains </span><span class="c7">below VIL</span><span class="c2">, it is still correctly interpreted as logic ‘0’<br></span></li><li class="c1 li-bullet-0"><span>If noise raises the voltage </span><span class="c7">above VIL</span><span class="c2">, the inverter may misinterpret the signal<br></span></li>` }} />
@@ -598,7 +598,7 @@ const MOSFETCMOSContent = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span>Assume the output of the second inverter is </span><span class="c7">VOH</span><span class="c2">, representing logic ‘1’<br></span></li><li class="c1 li-bullet-0"><span class="c2">Noise may reduce the voltage during transmission<br></span></li><li class="c1 li-bullet-0"><span>If the input voltage of the third inverter remains </span><span class="c7">above VIH</span><span class="c2">, it is correctly interpreted as logic ‘1’<br></span></li><li class="c1 li-bullet-0"><span>If the voltage drops </span><span class="c7">below VIH</span><span class="c2">, incorrect interpretation may occur<br></span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>&nbsp;Therefore, </span><span class="c7">VIH is the minimum allowable noisy voltage</span><span class="c2">&nbsp;that can still be recognized as logic ‘1’.</span>` }} />
           <hr className={styles.divider} />
-          id="h.7vui21z7ujc0" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Definition of Noise Margins</span>` }} />
+          <h2 id="h.7vui21z7ujc0" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Definition of Noise Margins</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Based on the above discussion, </span><span class="c7">noise margins</span><span>&nbsp;are defined as the </span><span class="c7">difference between output voltage levels and corresponding input voltage limits</span><span class="c2">.</span>` }} />
           <h3 id="h.izivm211t7pa" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Noise Margin Low (NML)</span>` }} />
           <div className={styles.imageContainer}>
@@ -612,20 +612,20 @@ const MOSFETCMOSContent = () => {
           </div>
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 237.00px; height: 58.00px;"><img loading="lazy" alt="" src="/assets/modules/mosfetcmos/image53.png" style="width: 237.00px; height: 58.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></li><li class="c1 li-bullet-0"><span class="c2">Represents the maximum noise voltage that can be subtracted from a logic ‘1’ signal without causing an error<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.5cmce02lfu19" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Importance of Noise Margin in CMOS</span>` }} />
+          <h2 id="h.5cmce02lfu19" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Importance of Noise Margin in CMOS</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span>Larger noise margins improve </span><span class="c9 c7">noise immunity<br></span></li><li class="c1 li-bullet-0"><span>Ensure </span><span class="c7">reliable signal transmission</span><span class="c2">&nbsp;across multiple logic stages<br></span></li><li class="c1 li-bullet-0"><span class="c2">Allow CMOS circuits to operate correctly in noisy environments<br></span></li><li class="c1 li-bullet-0"><span>One of the major reasons CMOS technology dominates </span><span class="c9 c7">VLSI and digital IC design<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.ozfvitloy6v" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Conclusion</span>` }} />
+          <h2 id="h.ozfvitloy6v" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Conclusion</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Noise margin is a key measure of the robustness of CMOS digital circuits. By defining voltage ranges instead of fixed logic levels, CMOS inverters can tolerate significant noise without malfunction. The high noise margins of CMOS technology ensure stable operation even in the presence of interference, making CMOS ideal for high-speed, low-power, and large-scale integrated systems.</span>` }} />
           <h1 id="h.1vlqulsypfsh" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c19 c7">3.4 CMOS Inverter</span>` }} />
-          id="h.xrl1bdipep0a" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Introduction</span>` }} />
+          <h2 id="h.xrl1bdipep0a" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Introduction</span>` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/mosfetcmos/image35.png" alt="" className={styles.contentImage} />
           </div>
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>The </span><span class="c7">CMOS inverter</span><span>&nbsp;is the most fundamental and important building block in CMOS digital design. Almost all complex CMOS logic circuits such as NAND gates, NOR gates, flip-flops, adders, and memory cells are ultimately built using CMOS inverters. Understanding its structure, operation, voltage transfer characteristics, dynamic behavior, and power dissipation is therefore essential.<br><br></span><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 305.33px;"><img loading="lazy" alt="" src="/assets/modules/mosfetcmos/image35.png" style="width: 624.00px; height: 305.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>A CMOS inverter consists of </span><span class="c7">one PMOS transistor and one NMOS transistor</span><span>&nbsp;connected in a complementary manner. The </span><span class="c7">input signal A</span><span>&nbsp;is applied simultaneously to the </span><span class="c7">gate terminals of both transistors</span><span>, while the drains are connected together to form the </span><span class="c7">output</span><span class="c2">.</span>` }} />
           <hr className={styles.divider} />
-          id="h.qgkh2i2snp3" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Structure and Basic Operation of CMOS Inverter</span>` }} />
+          <h2 id="h.qgkh2i2snp3" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Structure and Basic Operation of CMOS Inverter</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span>The </span><span class="c7">PMOS transistor</span><span>&nbsp;is connected between the output and the </span><span class="c7">positive supply voltage (VDD)</span><span class="c2">.<br></span></li><li class="c1 li-bullet-0"><span>The </span><span class="c7">NMOS transistor</span><span>&nbsp;is connected between the output and the </span><span class="c7">ground (VSS)</span><span class="c2">.<br></span></li><li class="c1 li-bullet-0"><span>The </span><span class="c7">input A</span><span class="c2">&nbsp;controls both transistors simultaneously.<br></span></li>` }} />
           <h3 id="h.q9dqznu7d0x6" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Input Low Condition</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>When a </span><span class="c7">low voltage</span><span class="c2">&nbsp;is applied at the input terminal A:</span>` }} />
@@ -648,7 +648,7 @@ const MOSFETCMOSContent = () => {
           </div>
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c2">Noise margins<br></span></li><li class="c1 li-bullet-0"><span class="c2">Switching threshold<br></span></li><li class="c1 li-bullet-0"><span>Stability of logic levels<br><br></span><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 224.00px;"><img loading="lazy" alt="" src="/assets/modules/mosfetcmos/image26.png" style="width: 624.00px; height: 224.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span><span class="c2"><br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.ppo7p2amrqt4" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Load Line Plot Concept</span>` }} />
+          <h2 id="h.ppo7p2amrqt4" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Load Line Plot Concept</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>The VTC of a CMOS inverter can be derived graphically using a </span><span class="c7">load-line plot</span><span class="c2">.</span>` }} />
           <h3 id="h.bdp8psz3em21" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Basic Idea</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>The load-line plot is obtained by </span><span class="c7">superimposing the I–V characteristics of NMOS and PMOS transistors</span><span class="c2">&nbsp;on a common coordinate system.</span>` }} />
@@ -674,7 +674,7 @@ const MOSFETCMOSContent = () => {
             <img loading="lazy" src="/assets/modules/mosfetcmos/image29.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.ta5ktg2b9rii" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Region-Wise Analysis of VTC</span>` }} />
+          <h2 id="h.ta5ktg2b9rii" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Region-Wise Analysis of VTC</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>The VTC can be divided into </span><span class="c7">five regions</span><span class="c2">:</span>` }} />
           <hr className={styles.divider} />
           <h3 id="h.et1apa4bg5v5" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Region A</span>` }} />
@@ -728,7 +728,7 @@ const MOSFETCMOSContent = () => {
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/mosfetcmos/image25.png" alt="" className={styles.contentImage} />
           </div>
-          id="h.5ckq06td3fks" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">MOSFET Capacitances in CMOS Inverter</span>` }} />
+          <h2 id="h.5ckq06td3fks" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">MOSFET Capacitances in CMOS Inverter</span>` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/mosfetcmos/image28.png" alt="" className={styles.contentImage} />
           </div>
@@ -754,7 +754,7 @@ const MOSFETCMOSContent = () => {
             <img loading="lazy" src="/assets/modules/mosfetcmos/image68.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.tdde72c91rzt" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">CMOS Parasitic Capacitance Model</span>` }} />
+          <h2 id="h.tdde72c91rzt" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">CMOS Parasitic Capacitance Model</span>` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/mosfetcmos/image36.png" alt="" className={styles.contentImage} />
           </div>
@@ -763,7 +763,7 @@ const MOSFETCMOSContent = () => {
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">This simplified model is used to analyze:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c2">Transient behavior<br></span></li><li class="c1 li-bullet-0"><span class="c2">Propagation delay<br></span></li><li class="c1 li-bullet-0"><span class="c2">Power dissipation<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.tomi4xy09a81" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Propagation Delay in CMOS Inverter</span>` }} />
+          <h2 id="h.tomi4xy09a81" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Propagation Delay in CMOS Inverter</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Propagation delay is the time required for a change at the input to reflect at the output.</span>` }} />
           <h3 id="h.fygo7o9zajae" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Definitions</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c7">TPHL</span><span>: Delay during </span><span class="c7">high-to-low</span><span class="c2">&nbsp;output transition<br></span></li><li class="c1 li-bullet-0"><span class="c7">TPLH</span><span>: Delay during </span><span class="c7">low-to-high</span><span class="c2">&nbsp;output transition<br></span></li>` }} />
@@ -785,7 +785,7 @@ const MOSFETCMOSContent = () => {
             <img loading="lazy" src="/assets/modules/mosfetcmos/image22.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.bnpxvwi4jx0k" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Dynamic Power Dissipation</span>` }} />
+          <h2 id="h.bnpxvwi4jx0k" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Dynamic Power Dissipation</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Each time the output switches:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c2">Load capacitor CLC_LCL​ is charged and discharged<br></span></li>` }} />
           <h3 id="h.vmc9cxj6xc23" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Energy Considerations</span>` }} />
@@ -803,7 +803,7 @@ const MOSFETCMOSContent = () => {
             <img loading="lazy" src="/assets/modules/mosfetcmos/image72.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.4org08dwb1h7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Power Dissipation Due to Direct-Path Current</span>` }} />
+          <h2 id="h.4org08dwb1h7" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Power Dissipation Due to Direct-Path Current</span>` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/mosfetcmos/image15.png" alt="" className={styles.contentImage} />
           </div>
@@ -814,7 +814,7 @@ const MOSFETCMOSContent = () => {
             <img loading="lazy" src="/assets/modules/mosfetcmos/image20.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.9lhmomxm7oka" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Static Power Dissipation</span>` }} />
+          <h2 id="h.9lhmomxm7oka" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Static Power Dissipation</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Static power dissipation is given by:</span>` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/mosfetcmos/image76.png" alt="" className={styles.contentImage} />
@@ -827,16 +827,16 @@ const MOSFETCMOSContent = () => {
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">In practice:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c2">Small leakage currents exist<br></span></li><li class="c1 li-bullet-0"><span class="c2">Usually negligible compared to dynamic power<br></span></li>` }} />
           <hr className={styles.divider} />
-          id="h.2lvr647cjxzy" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Conclusion</span>` }} />
+          <h2 id="h.2lvr647cjxzy" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Conclusion</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">The CMOS inverter exhibits excellent performance due to its complementary structure. Its steep voltage transfer characteristics provide high noise immunity, while its low static power consumption makes it ideal for modern digital systems. The combined understanding of VTC, parasitic capacitances, propagation delay, and power dissipation is crucial for designing efficient CMOS logic circuits.</span>` }} />
           <h1 id="h.nmkc4da1rd97" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c19 c7">4. Short Channel Effects</span>` }} />
-          id="h.fb3dcb6c8ilb" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">4. Introduction</span>` }} />
+          <h2 id="h.fb3dcb6c8ilb" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">4. Introduction</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>A MOS transistor is referred to as a </span><span class="c7">short channel device</span><span class="c2">&nbsp;when its physical channel length becomes comparable to the depletion region widths of the source and drain junctions. In modern VLSI technologies, aggressive scaling has reduced the effective channel length (L_{eff}) to values close to the source/drain junction depth (x_j). Under such conditions, the assumptions used for long-channel MOSFET operation no longer remain valid.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Short channel effects (SCEs) arise mainly due to two fundamental physical causes:</span>` }} />
           <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c7">Limitations on carrier transport</span><span class="c2">&nbsp;caused by very high electric fields in the channel.</span></li><li class="c1 li-bullet-0"><span class="c7">Electrostatic interactions between the drain, source, and channel</span><span class="c2">, which modify the threshold voltage and degrade gate control.</span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">As device dimensions continue to shrink, understanding and mitigating short channel effects has become a critical aspect of CMOS circuit and process design.</span>` }} />
           <hr className={styles.divider} />
-          id="h.s5rh6pe8xp6k" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">4.1 Channel Length Modulation (CLM)</span>` }} />
+          <h2 id="h.s5rh6pe8xp6k" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">4.1 Channel Length Modulation (CLM)</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>In an ideal long-channel MOSFET operating in saturation, the drain current is independent of the drain-to-source voltage (V_{DS}). However, in short-channel devices, this assumption no longer holds due to </span><span class="c7">channel length modulation</span><span class="c2">.</span>` }} />
           <h3 id="h.3rzhwwa8w08c" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Physical Explanation</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">As (V_{DS}) increases beyond the saturation voltage:</span>` }} />
@@ -854,7 +854,7 @@ const MOSFETCMOSContent = () => {
             <img loading="lazy" src="/assets/modules/mosfetcmos/image18.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.tb0kj5ng0rmw" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">4.2 Drain-Induced Barrier Lowering (DIBL)</span>` }} />
+          <h2 id="h.tb0kj5ng0rmw" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">4.2 Drain-Induced Barrier Lowering (DIBL)</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Drain-Induced Barrier Lowering is a major short channel effect resulting from excessive electrostatic coupling between the drain and the channel.</span>` }} />
           <h3 id="h.3ax1nvi7brc5" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Physical Mechanism</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">In a long-channel MOSFET:</span>` }} />
@@ -871,7 +871,7 @@ const MOSFETCMOSContent = () => {
             <img loading="lazy" src="/assets/modules/mosfetcmos/image45.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.20l8mblr7qch" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">4.3 Velocity Saturation</span>` }} />
+          <h2 id="h.20l8mblr7qch" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">4.3 Velocity Saturation</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">In long-channel MOSFETs, carrier velocity is proportional to the electric field:<br>[<br>v_d = \mu E<br>]</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>However, in short-channel devices, the electric field along the channel becomes extremely high, causing carriers to reach a maximum velocity limit known as </span><span class="c7">velocity saturation</span><span class="c2">.</span>` }} />
           <h3 id="h.smqo4bdpsugd" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Impact on Drain Current</span>` }} />
@@ -883,7 +883,7 @@ const MOSFETCMOSContent = () => {
             <img loading="lazy" src="/assets/modules/mosfetcmos/image3.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.jpfnufeyubkj" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">4.4 Subthreshold Conduction (Weak Inversion)</span>` }} />
+          <h2 id="h.jpfnufeyubkj" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">4.4 Subthreshold Conduction (Weak Inversion)</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">In an ideal switch, drain current should abruptly drop to zero when (V_{GS} &lt; V_T). In reality, MOSFETs conduct a small current even below threshold voltage.</span>` }} />
           <h3 id="h.970fogx4ztgn" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Explanation</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c2">For (V_{GS} &lt; V_T), a weak inversion layer exists</span></li><li class="c1 li-bullet-0"><span class="c2">Carriers move by diffusion rather than drift</span></li><li class="c1 li-bullet-0"><span class="c2">Drain current decreases exponentially with decreasing (V_{GS})</span></li>` }} />
@@ -896,7 +896,7 @@ const MOSFETCMOSContent = () => {
             <img loading="lazy" src="/assets/modules/mosfetcmos/image63.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.2dlgmnh6mib8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">4.5 Hot Carrier Effects (HCE)</span>` }} />
+          <h2 id="h.2dlgmnh6mib8" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">4.5 Hot Carrier Effects (HCE)</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">As device dimensions shrink while supply voltages remain high, electric fields near the drain increase significantly.</span>` }} />
           <h3 id="h.r2ygz2mx4qpr" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Physical Mechanism</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c2">High-energy electrons gain sufficient kinetic energy</span></li><li class="c1 li-bullet-0"><span class="c2">Electrons may enter the gate oxide</span></li><li class="c1 li-bullet-0"><span class="c2">Trapped charges modify threshold voltage</span></li>` }} />
@@ -907,7 +907,7 @@ const MOSFETCMOSContent = () => {
             <img loading="lazy" src="/assets/modules/mosfetcmos/image67.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.pwmer6ybd77b" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">4.6 Gate-Induced Drain Leakage (GIDL)</span>` }} />
+          <h2 id="h.pwmer6ybd77b" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">4.6 Gate-Induced Drain Leakage (GIDL)</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">GIDL is an off-state leakage mechanism observed at high drain voltage and low or negative gate bias.</span>` }} />
           <h3 id="h.zf5jedtoidxa" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Explanation</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c2">Strong electric field at gate-drain overlap</span></li><li class="c1 li-bullet-0"><span class="c2">Narrow depletion region in heavily doped drain</span></li><li class="c1 li-bullet-0"><span class="c2">Band-to-band tunneling occurs</span></li><li class="c1 li-bullet-0"><span class="c2">Generated electrons flow to the drain</span></li>` }} />
@@ -916,7 +916,7 @@ const MOSFETCMOSContent = () => {
             <img loading="lazy" src="/assets/modules/mosfetcmos/image8.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.6hiaxn8qb14k" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">4.7 Body Bias (Body Effect / Short Channel Variant)</span>` }} />
+          <h2 id="h.6hiaxn8qb14k" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">4.7 Body Bias (Body Effect / Short Channel Variant)</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">In short-channel MOSFETs, the body effect becomes more pronounced due to stronger coupling between the channel and substrate.</span>` }} />
           <h3 id="h.zid160as4kof" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Impact</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c2">Threshold voltage varies with substrate bias</span></li><li class="c1 li-bullet-0"><span class="c2">Increased sensitivity of Vt to body potential</span></li><li class="c1 li-bullet-0"><span class="c2">Degraded noise margins and stability</span></li>` }} />
@@ -925,7 +925,7 @@ const MOSFETCMOSContent = () => {
             <img loading="lazy" src="/assets/modules/mosfetcmos/image52.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.tjav70wjts95" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">4.8 Electromigration</span>` }} />
+          <h2 id="h.tjav70wjts95" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">4.8 Electromigration</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Electromigration is a reliability issue caused by prolonged current flow in metal interconnects.</span>` }} />
           <h3 id="h.j9bf5fgey4oi" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Key Points</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c2">Metal ions drift under high current density</span></li><li class="c1 li-bullet-0"><span class="c2">Causes opens or shorts over time</span></li><li class="c1 li-bullet-0"><span class="c2">Strongly dependent on temperature and current density</span></li>` }} />
@@ -935,7 +935,7 @@ const MOSFETCMOSContent = () => {
             <img loading="lazy" src="/assets/modules/mosfetcmos/image60.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.kwwhn7su2xz6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">4.9 CMOS Latch-Up</span>` }} />
+          <h2 id="h.kwwhn7su2xz6" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">4.9 CMOS Latch-Up</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">CMOS processes inherently form parasitic bipolar transistors, creating an n-p-n-p thyristor structure.</span>` }} />
           <h3 id="h.aqrw0jf1kpfv" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c0">Latch-Up Mechanism</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 li-bullet-0"><span class="c2">Triggered by transient currents or voltage spikes</span></li><li class="c1 li-bullet-0"><span class="c2">Creates low-resistance path between VDD and VSS</span></li><li class="c1 li-bullet-0"><span class="c2">Leads to excessive current and device failure</span></li>` }} />
@@ -945,7 +945,7 @@ const MOSFETCMOSContent = () => {
             <img loading="lazy" src="/assets/modules/mosfetcmos/image65.png" alt="" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          id="h.wy95l8p501t" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Conclusion</span>` }} />
+          <h2 id="h.wy95l8p501t" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c14 c7">Conclusion</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Short channel effects significantly impact the performance, power consumption, and reliability of modern CMOS devices. As technology scales further, careful device engineering, circuit techniques, and layout strategies are required to control these effects and ensure robust operation of VLSI systems.</span>` }} />
           <AdUnit slotId="slot_mosfetcmoscontent" />
         </div>

@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { modulesData } from '../data/modulesData';
 import styles from './ModuleDetail.module.css';
-import Module1Content from './modules/Module1Content';
-import MOSFETCMOSContent from './modules/MOSFETCMOSContent';
-import Module5Content from './modules/Module5Content';
-import Module7Content from './modules/Module7Content';
-import Module8Content from './modules/Module8Content';
-import Module4Content from './modules/Module4Content';
-import Module6Content from './modules/Module6Content';
-import Module58Content from './modules/Module58Content';
-import Module59Content from './modules/Module59Content';
+
+const Module1Content = lazy(() => import('./modules/Module1Content'));
+const MOSFETCMOSContent = lazy(() => import('./modules/MOSFETCMOSContent'));
+const Module5Content = lazy(() => import('./modules/Module5Content'));
+const Module7Content = lazy(() => import('./modules/Module7Content'));
+const Module8Content = lazy(() => import('./modules/Module8Content'));
+const Module4Content = lazy(() => import('./modules/Module4Content'));
+const Module6Content = lazy(() => import('./modules/Module6Content'));
+const Module58Content = lazy(() => import('./modules/Module58Content'));
+const Module59Content = lazy(() => import('./modules/Module59Content'));
+
 import SEO from '../components/SEO';
 import StructuredData from '../components/StructuredData';
 import { useAuth } from '../context/AuthContext';
@@ -175,7 +177,9 @@ const ModuleDetail = () => {
           <>
             {moduleInfo.hasNativeContent && NATIVE_COMPONENTS[moduleId] ? (
               <ErrorBoundary>
-                {React.createElement(NATIVE_COMPONENTS[moduleId])}
+                <Suspense fallback={<div className={styles.loadingText} style={{ textAlign: 'center', padding: '40px', color: '#64748b' }}>Loading module content...</div>}>
+                  {React.createElement(NATIVE_COMPONENTS[moduleId])}
+                </Suspense>
               </ErrorBoundary>
             ) : (
               moduleInfo.iframes && moduleInfo.iframes.length > 0 && (

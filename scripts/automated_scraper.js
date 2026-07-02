@@ -62,7 +62,7 @@ async function scrapeWorkday(companyName, domain, logoColor, wdHost, tenant, sit
         tools: ["Innovus", "Calibre"],
         date: new Date().toISOString().split('T')[0],
         description: `Active role at ${companyName}. ${job.postedOn}`,
-        apply_url: `https://${wdHost}/en-US/${tenant}/${site}${job.externalPath}`,
+        apply_url: `https://${wdHost}/en-US/${site}${job.externalPath}`,
         match_score: Math.floor(Math.random() * 10) + 85,
         source: 'workday_api',
         is_active: true
@@ -144,7 +144,7 @@ async function scrapeNvidia() {
         tools: ["Innovus"],
         date: new Date().toISOString().split('T')[0],
         description: `NVIDIA Custom Silicon role. ${job.postedOn}`,
-        apply_url: `https://nvidia.wd5.myworkdayjobs.com/en-US/nvidia/NVIDIAExternalCareerSite${job.externalPath}`,
+        apply_url: `https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite${job.externalPath}`,
         match_score: Math.floor(Math.random() * 5) + 90,
         source: 'workday_api',
         is_active: true

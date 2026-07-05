@@ -15,6 +15,15 @@ const Module9Content = lazy(() => import('./modules/Module9Content'));
 const Module59Content = lazy(() => import('./modules/Module59Content'));
 const Module6Content = lazy(() => import('./modules/Module6Content'));
 const Module12Content = lazy(() => import('./modules/Module12Content'));
+const Module13Content = lazy(() => import('./modules/Module13Content'));
+const Module14Content = lazy(() => import('./modules/Module14Content'));
+const Module15Content = lazy(() => import('./modules/Module15Content'));
+const Module16Content = lazy(() => import('./modules/Module16Content'));
+const Module17Content = lazy(() => import('./modules/Module17Content'));
+const Module18Content = lazy(() => import('./modules/Module18Content'));
+const Module25Content = lazy(() => import('./modules/Module25Content'));
+const Module26Content = lazy(() => import('./modules/Module26Content'));
+const Module27Content = lazy(() => import('./modules/Module27Content'));
 
 const PaidModuleDetail = () => {
   const { id } = useParams();
@@ -254,6 +263,42 @@ const PaidModuleDetail = () => {
         ) : moduleId === 12 ? (
           <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
             <Module12Content />
+          </Suspense>
+        ) : moduleId === 13 ? (
+          <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
+            <Module13Content />
+          </Suspense>
+        ) : moduleId === 14 ? (
+          <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
+            <Module14Content />
+          </Suspense>
+        ) : moduleId === 15 ? (
+          <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
+            <Module15Content />
+          </Suspense>
+        ) : moduleId === 16 ? (
+          <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
+            <Module16Content />
+          </Suspense>
+        ) : moduleId === 17 ? (
+          <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
+            <Module17Content />
+          </Suspense>
+        ) : moduleId === 18 ? (
+          <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
+            <Module18Content />
+          </Suspense>
+        ) : moduleId === 25 ? (
+          <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
+            <Module25Content />
+          </Suspense>
+        ) : moduleId === 26 ? (
+          <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
+            <Module26Content />
+          </Suspense>
+        ) : moduleId === 27 ? (
+          <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
+            <Module27Content />
           </Suspense>
         ) : (
         <div className={styles.iframeContainer}>

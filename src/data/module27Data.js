@@ -1,0 +1,57 @@
+export const MODULE27_CHAPTERS = [
+  {
+    "id": "ch_intro",
+    "title": "Introduction",
+    "html": "<pre class=\"commandBox\"><code>STEP BY STEP EXECUTION OF  PHYSICAL SYNTHESIS & PNR FLOW IN FC\n\nproject/\n├─ rtl/                 (RTL files: .v)\n├─ constraints/          (SDC / MCMM TCL)\n├─ tech/\n│   ├─ ndm/              (FC reference libs: *.ndm)\n│   └─ (optional LEF/tech files if needed)\n├─ scripts/\n│   ├─ pg.tcl\n│   ├─ cts_clock_uncertainty.tcl\n│   └─ fc_flow.tcl\n├─ reports/\n└─ outputs/\n\n###############################################################################\n# [BLUE] FC SHELL FLOW (Beginner-Friendly + Same Commands)\n# Purpose: RTL -&gt; Synthesis -&gt; Floorplan -&gt; Place -&gt; CTS -&gt; Route -&gt; Outputs\n# NOTE: Commands are kept exactly as your script; only paths are made local.\n###############################################################################\n</code></pre>"
+  },
+  {
+    "id": "ch_1",
+    "title": "1) CREATE WORK LIB",
+    "html": "<pre class=\"commandBox\"><code>############################\n# [BLUE] 1) CREATE WORK LIB\n# Theory: FC needs a design library (NDR/NDM based) to store the database.\n############################\ncreate_lib -technology ./tech/tech.tf \\\n-ref_libs { \\\n./tech/ndm/stdcell_rvt.ndm \\\n./tech/ndm/stdcell_hvt.ndm \\\n./tech/ndm/stdcell_lvt.ndm \\\n./tech/ndm/io.ndm \\\n} rp_top_fc.ndm\n\n</code></pre>"
+  },
+  {
+    "id": "ch_2",
+    "title": "2) READ RTL + ELABORATE",
+    "html": "<pre class=\"commandBox\"><code>############################\n# [BLUE] 2) READ RTL + ELABORATE\n# Theory: analyze reads RTL, elaborate builds hierarchy, set_top_module sets top.\n############################\nsave_lib\nanalyze -autoread -recursive -top rp_top_top ./rtl\nelaborate rp_top_top\nset_top_module rp_top_top\n\n</code></pre>"
+  },
+  {
+    "id": "ch_3",
+    "title": "3) ROUTING DIRECTION (Optional preference)",
+    "html": "<pre class=\"commandBox\"><code>############################\n# [BLUE] 3) ROUTING DIRECTION (Optional preference)\n############################\nset_attribute [get_layers {M1 M3 M5 M7 M9}] routing_direction horizontal\nset_attribute [get_layers {M2 M4 M6 M8}] routing_direction vertical\nget_attribute [get_layers M*] routing_direction\n\n</code></pre>"
+  },
+  {
+    "id": "ch_4",
+    "title": "4) LOAD MMMC / CONSTRAINTS",
+    "html": "<pre class=\"commandBox\"><code>############################\n# [BLUE] 4) LOAD MMMC / CONSTRAINTS\n# Theory: MMMC contains clocks, IO delays, mode/corner definitions, etc.\n############################\nsource ./constraints/MMMC.tcl\nset_svf rp_fc.svf\n\n</code></pre>"
+  },
+  {
+    "id": "ch_5",
+    "title": "5) SYNTHESIS / LOGIC OPT",
+    "html": "<pre class=\"commandBox\"><code>############################\n# [GREEN] 5) SYNTHESIS / LOGIC OPT\n############################\nall_fanin -to [all_registers -clock_pins] -flat -startpoints_only\ncreate_clock -period 2.5 [get_ports clk]\n\ncheck_timing\n\nset_input_delay  -clock clk 1.5 [get_ports [remove_from_collection [all_inputs] clk]]\nset_output_delay -clock clk 1.5 [get_ports [all_outputs]]\n\ncheck_timing\n\nset_clock_uncertainty -setup 0.5   [get_clock clk]\nset_clock_uncertainty -hold  0.375 [get_clock clk]\n\nfilter_collection [all_fanin  -to   [all_outputs]] \"port_direction == in\"\nfilter_collection [all_fanout -from [all_inputs ]] \"port_direction == out\"\n\ncreate_clock -name vir -period 2.5\nset_input_delay  0.875 -clock vir [get_ports {jtag_en scan_en}]\nset_output_delay 0.875 -clock vir [get_ports {spi_miso jtag_tdo dmux3 dmux_0_2_out_en}]\n\ncompile_fusion -to logic_opt\nreport_timing\ncompile\nreport_timing\n\nsave_block -as synthesis\n\n</code></pre>"
+  },
+  {
+    "id": "ch_6",
+    "title": "6) FLOOR PLANNING",
+    "html": "<pre class=\"commandBox\"><code>###############################################################################\n# [ORANGE] 6) FLOOR PLANNING\n# Theory: Define die/core, place pins, create boundary cells, create PG nets.\n###############################################################################\nstart_gui\n\ninitialize_floorplan -control_type die -core_utilization 0.65 -core_offset {1.4 0.9}\n\ncreate_pin_guide -boundary {{257.5956 703.6150} {487.3050 683.1300}} -name inputs  [get_ports [all_inputs]]\nplace_pins -ports [get_ports [all_inputs]]\n\ncreate_pin_guide -boundary {{679.7650 671.3350} {700.8700 495.6350}} -name outputs [get_ports [all_outputs]]\nplace_pins -ports [get_ports [all_outputs]]\n\ncheck_pin_placement -shorts true -ports [get_ports *]\n\n## Macro placement + keepout (your comment preserved)\nget_lib_cells *BOUNDARY*\nset_boundary_cell_rules -left_boundary_cell  tcbn28hpcplusbwp40p140hvt/BOUNDARY_LEFTBWP40P140 \\\n-right_boundary_cell tcbn28hpcplusbwp40p140hvt/BOUNDARY_RIGHTBWP40P140\ncompile_boundary_cells\ncheck_boundary_cells\n\ncreate_net -power  v08\ncreate_net -ground vss\ncreate_port -port_type power  -direction in v08\ncreate_port -port_type ground -direction in vss\n\nconnect_pg_net -net v08 [get_ports v08]\nconnect_pg_net -net vss [get_ports vss]\nconnect_pg_net -net v08 [get_pins -physical_context */VDD]\nconnect_pg_net -net vss [get_pins -physical_context */VSS]\n\nsave_block -as before_pg_script\nsource ./scripts/pg.tcl\ncheck_pg_missing_vias\ncheck_pg_drc\ncheck_pg_connectivity\nsave_block -as after_pg_script\n\nget_lib_cells *TAP*\ncreate_tap_cells -lib_cell tcbn28hpcplusbwp40p140hvt/TAPCELLBWP40P140 -pattern stagger -distance 30 -skip_fixed_cells -no_1x\nadd_spare_cells -cell_name spare -lib_cell [get_lib_cells */BUFDF8D*] -num_instances 3\n\nsave_block -as floorplan\nwrite_def floorplan.def\n\n</code></pre>"
+  },
+  {
+    "id": "ch_7",
+    "title": "7) PLACEMENT",
+    "html": "<pre class=\"commandBox\"><code>###############################################################################\n# [PURPLE] 7) PLACEMENT\n# Theory: Place cells, buffer insertion, legalization, reporting.\n###############################################################################\nset_scenario_status -setup true -hold false [get_scenarios *setup*]\nset_lib_cell_purpose -include none [get_lib_cells */D24* */D20* */D18* */CK*]\nreport_app_options *missing*scan*def*\nset_app_options -name place.coarse.continue_on_missing_scandef -value true\n\nreport_app_options *opt*instance*prefix*\nset_app_options -name opt.common.user_instance_name_prefix -value PNR_PLACE_OPT\n\nget_lib_cells *BUFDF8*\nadd_buffer -lib_cell tcbn28hpcplusbwp40p140hvt/BUFDF8BWP40P140HVT [remove_from_collection [all_inputs] [get_clocks]]\nadd_buffer -lib_cell tcbn28hpcplusbwp40p140hvt/BUFDF8BWP40P140HVT [remove_from_collection [all_inputs] {scan_mode jtag_tck jtag_tms jtag_tdi}]\nadd_buffer -lib_cell tcbn28hpcplusbwp40p140hvt/BUFDF8BWP40P140HVT [all_outputs]\n\nset_dont_touch *eco*\nmagnet_placement [get_cells *eco*] -mark_fixed\nset_placement_status legalize_only [get_cells *eco*]\nlegalize_placement\n\nreport_app_options *place*filler*size*\nset_app_options -name place.rules.min_vt_filler_size -value 2\nreport_app_options *significant*digits*\nset_app_options -name shell.common.report_default_significant_digits -value 5\n\nsave_block -as before_place_opt\ncompile_fusion -from initial_place -to final_opto\n\nconnect_pg_net -net v08 [get_pins -physical_context */VDD]\nconnect_pg_net -net vss [get_pins -physical_context */VSS]\n\nreport_timing\nreport_qor\nreport_constraints\nreport_constraints -all_violators\nreport_congestion\nanalyze_design_violations\n\nsave_block -as after_place_opt\n\n</code></pre>"
+  },
+  {
+    "id": "ch_8",
+    "title": "8) CTS",
+    "html": "<pre class=\"commandBox\"><code>###############################################################################\n# [RED] 8) CTS\n# Theory: Build clock tree, fix skew/latency, improve setup/hold.\n###############################################################################\nset_scenario_status -setup true -hold true [get_scenarios *]\n\nset_ref_libs -add ./tech/ndm/stdcell_hvt.ndm\n\nset_lib_cell_purpose -include cts [get_lib_cells {*/CKBD4*LVT* */CKBD6*LVT* */CKBD8*LVT* */CKBD12*LVT* */CKBD16*LVT* */CKND4*LVT* */CKND6*LVT* */CKND8*LVT* */CKND12*LVT* */CKND16*LVT*}]\n\ncreate_routing_rule -multiplier_width 2 -multiplier_spacing 2 cts_2w2s\ncreate_routing_rule -multiplier_width 1 -multiplier_spacing 2 cts_1w2s\n\nset_clock_routing_rules -rules cts_2w2s -net_type root     -min_routing_layer M4 -max_routing_layer M7\nset_clock_routing_rules -rules cts_2w2s -net_type internal -min_routing_layer M4 -max_routing_layer M7\nset_clock_routing_rules -rules cts_1w2s -net_type sink     -min_routing_layer M4 -max_routing_layer M7\n\nsource ./scripts/cts_clock_uncertainty_script.tcl\n\nreport_app_options *instance*prefix*\nset_app_options -name cts.common.user_instance_name_prefix -value PNR_CTS\n\nclock_opt -from build_clock -to route_clock\nset_lib_cell_purpose -include hold [get_lib_cells */*DEL*]\nclock_opt -from final_opto -to final_opto\n\nconnect_pg_net -net v08 [get_pins -physical_context */VDD]\nconnect_pg_net -net vss [get_pins -physical_context */VSS]\n\nreport_timing\nreport_timing -delay_type min\nreport_clock_qor\nreport_qor\nreport_constraints\nreport_constraints -all_violators\nanalyze_design_violations\nreport_utilization\nreport_utilization -of_objects [get_voltage_areas]\ncheck_clock_trees\nreport_clock_timing -type interclock_skew\nreport_global_timing\n\n</code></pre>"
+  },
+  {
+    "id": "ch_9",
+    "title": "9) ROUTING",
+    "html": "<pre class=\"commandBox\"><code>###############################################################################\n# [TEAL] 9) ROUTING\n# Theory: Global + detail routing, SI/crosstalk driven timing closure.\n###############################################################################\nreport_app_options *si*analysis*\nset_app_options -name time.si_enable_analysis -value true\n\nreport_app_options *global*timing*\nset_app_options -name route.global.timing_driven -value true\nreport_app_options *detail*timing*\nset_app_options -name route.detail.timing_driven -value true\n\nreport_app_options *crosstalk*\nset_app_options -name route.global.crosstalk_driven -value true\nset_app_options -name route.track.crosstalk_driven  -value true\nreport_app_options *route*enable*ccd*\nset_app_options -name route_opt.flow.enable_ccd -value true\n\nroute_auto\nroute_opt\n\nconnect_pg_net -net v08 [get_pins -physical_context */VDD]\nconnect_pg_net -net vss [get_pins -physical_context */VSS]\n\ncheck_routes\ncheck_lvs -max_errors 0\n\nreport_qor\nreport_qor -summary\nreport_constraints\n\n</code></pre>"
+  },
+  {
+    "id": "ch_10",
+    "title": "10) FINAL FILLERS + OUTPUTS (kept commented like your script)",
+    "html": "<pre class=\"commandBox\"><code>###############################################################################\n# [GRAY] 10) FINAL FILLERS + OUTPUTS (kept commented like your script)\n###############################################################################\nset_placement_spacing_label -side both -lib_cells [get_lib_cells */*BWP*] -name ALL_STD_CELLS\nset_placement_spacing_rule {1 1} -labels {ALL_STD_CELLS ALL_STD_CELLS}\n\nlegalize_placement\n\ncreate_stdcell_fillers -lib_cells [get_lib_cells */DCAP*]\nremove_stdcell_fillers -with_violation\ncreate_stdcell_fillers -lib_cells [get_lib_cells */FILL*]\n\n#write_def rp_def.def\n#write_gds rp_gds.gds\n#write_parasitics -output rp_spef.spef\n#write_verilog -hierarchy all rp_pnr.v\n#write_sdc -output rp_sdc.sdc\n\n</code></pre>"
+  }
+];

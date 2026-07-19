@@ -33,13 +33,13 @@ export const plansConfig = {
     gateway: 'razorpay',
     plans: [
       {
-        id: 'PLAN_1M_INR',
+        id: 'PLAN_6M_USD',
         duration: '6 Months',
-        price: 499,
-        originalPrice: 2994,
+        price: 40,
+        originalPrice: 80,
         savings: '🎉 LIMITED OFFER',
         badge: '🔥 SPECIAL LAUNCH OFFER',
-        subBadge: '⏰ OFFER ENDS TONIGHT 11:59 PM',
+        subBadge: '⏰ OFFER ENDS 20 JULY 11:59 PM',
         validityText: 'Valid for 180 Days',
         theme: 'gold',
         features: [

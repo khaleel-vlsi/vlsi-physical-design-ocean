@@ -48,6 +48,26 @@ export const plansConfig = {
           'All Features Included',
           'Future Updates'
         ]
+      },
+      {
+        id: 'PLAN_12M_USD',
+        duration: '12 Months',
+        price: 60,
+        originalPrice: 120,
+        savings: '🎉 LIMITED OFFER',
+        badge: '🔥 SPECIAL LAUNCH OFFER',
+        subBadge: '⏰ OFFER ENDS 20 JULY 11:59 PM',
+        validityText: 'Valid for 365 Days',
+        theme: 'diamond',
+        features: [
+          'Complete Premium Access',
+          'All Recorded Classes',
+          'ICC2 Tool Execution',
+          'Interview Preparation',
+          'Job Finder',
+          'Study Materials',
+          'Future Updates'
+        ]
       }
     ]
   }

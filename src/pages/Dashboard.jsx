@@ -126,8 +126,7 @@ const Dashboard = () => {
             if (!error && data) {
               setCurrentProfile(data);
               
-              const isFutureTs = (ts) => ts && new Date(ts).getTime() > Date.now();
-              const courseValid = data.course_active && isFutureTs(data.course_expiry);
+              const courseValid = !!data.course_active;
 
               if (courseValid) break;
             }

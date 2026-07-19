@@ -1,4 +1,4 @@
-/* Privacy Page - Oceanic Design */
+/* Privacy Page - Modern Developer Documentation Layout */
 
 .policyContainer {
   max-width: 1200px;
@@ -6,195 +6,237 @@
   padding-bottom: 80px;
 }
 
-/* 1. Header Section */
 .heroSection {
+  text-align: center;
   padding: 80px 24px 40px;
+  position: relative;
 }
 
 .title {
+  font-family: var(--font-headline);
   font-size: 48px;
   font-weight: 700;
-  color: #ffffff;
+  color: #b9c3ff;
   margin-bottom: 16px;
+  letter-spacing: -0.01em;
 }
 
 .subtitle {
-  font-size: 15px;
+  font-family: var(--font-body);
+  font-size: 16px;
   color: #9aa0a6;
-  max-width: 700px;
+  max-width: 600px;
+  margin: 0 auto;
   line-height: 1.6;
 }
 
-/* 2. Main Grid Layout */
-.policyGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
+.divider {
+  width: 60px;
+  height: 4px;
+  background: #59dad1;
+  margin: 24px auto 0;
+  border-radius: 2px;
+}
+
+/* Main Layout */
+.policyLayout {
+  display: flex;
+  gap: 40px;
   padding: 0 24px 80px;
+  align-items: flex-start;
 }
 
-@media (max-width: 900px) {
-  .policyGrid {
-    grid-template-columns: 1fr;
-  }
+.sidebar {
+  width: 280px;
+  position: sticky;
+  top: 100px;
+  flex-shrink: 0;
 }
 
-/* Card Styles */
-.policyCard {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 24px;
-  padding: 48px;
-  position: relative;
-  backdrop-filter: blur(20px);
+.sidebarCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 24px;
+  backdrop-filter: blur(10px);
+  text-align: left;
+}
+
+.sidebarCard h3 {
+  font-family: var(--font-headline);
+  font-size: 16px;
+  color: #b9c3ff;
+  margin-top: 0;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 8px;
+}
+
+.navMenu {
   display: flex;
   flex-direction: column;
-  min-height: 480px;
+  gap: 8px;
+  max-height: 50vh;
+  overflow-y: auto;
+  padding-right: 4px;
 }
 
-.cardIcon {
-  width: 64px;
-  height: 64px;
+/* Custom scrollbar for menu */
+.navMenu::-webkit-scrollbar {
+  width: 4px;
+}
+.navMenu::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+.navMenu a {
+  font-family: var(--font-label);
+  font-size: 12px;
+  color: #9aa0a6;
+  text-decoration: none;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.navMenu a:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #59dad1;
+  padding-left: 12px;
+}
+
+.sidebarHr {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 12px 0;
+}
+
+/* Content Area */
+.contentArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.docCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  margin-bottom: 32px;
+  padding: 32px;
+  transition: all 0.25s ease;
+  scroll-margin-top: 110px; /* Offset for sticky nav scrolling */
+  text-align: left;
 }
 
-.privacyIcon {
-  background: rgba(89, 218, 209, 0.1);
-  color: #59dad1;
+.docCard:hover {
+  border-color: rgba(89, 218, 209, 0.15);
+  background: rgba(255, 255, 255, 0.03);
 }
 
-.refundIcon {
-  background: rgba(255, 127, 80, 0.1);
-  color: #ff7f50;
-}
-
-.cardLabel {
-  font-family: var(--font-label);
-  font-size: 14px;
-  font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 24px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.cardText {
-  font-size: 14px;
-  line-height: 1.8;
-  color: #bdc1c6;
-  margin-bottom: 32px;
-}
-
-/* Privacy Specific List */
-.checklist {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.checkItem {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-family: var(--font-label);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  color: #ffffff;
+.docCard h3 {
+  font-family: var(--font-headline);
+  font-size: 20px;
+  color: #ffd700 !important;
+  margin-top: 0;
   margin-bottom: 16px;
-  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  padding-bottom: 8px;
 }
 
-.checkCircle {
-  color: #59dad1;
-  font-size: 14px;
+.docCard p {
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  color: #bdc1c6;
+  line-height: 1.7;
+  margin: 0 0 12px;
 }
 
-/* Refund Specific Styles */
-.warningBox {
-  background: rgba(255, 107, 53, 0.05);
-  border: 1px solid rgba(255, 107, 53, 0.2);
-  border-radius: 12px;
-  padding: 16px;
-  margin-top: 24px;
+.docCard p:last-child {
+  margin-bottom: 0;
 }
 
-.warningBox p {
-  color: #ff6b35;
-  font-size: 13px;
-  line-height: 1.5;
+.docCard ul {
+  list-style: disc;
+  padding-left: 20px;
   margin: 0;
 }
 
-.fullWidthCard {
-  grid-column: 1 / -1;
-  text-align: left !important;
+.docCard li {
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  color: #bdc1c6;
+  line-height: 1.7;
+  margin-bottom: 8px;
 }
 
-.termsGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  margin-top: 32px;
+.docCard li:last-child {
+  margin-bottom: 0;
+}
+
+.docCard strong {
+  color: #ffffff;
+}
+
+/* Accent Card Overrides */
+.blueBorderCard {
+  border-color: rgba(89, 218, 209, 0.3) !important;
+}
+.blueBorderCard h3 {
+  color: #59dad1 !important;
+}
+
+.orangeBorderCard {
+  border-color: rgba(255, 127, 80, 0.3) !important;
+}
+.orangeBorderCard h3 {
+  color: #ff7f50 !important;
+}
+
+/* Alert Warning block inside T&C */
+.redWarningBox {
+  background: rgba(239, 68, 68, 0.06) !important;
+  border: 1px solid rgba(239, 68, 68, 0.2) !important;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.redWarningBox strong {
+  color: #f87171 !important;
+  font-size: 13.5px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.redWarningBox ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.redWarningBox li {
+  color: #f87171 !important;
+  font-size: 13.5px;
+  margin-bottom: 6px;
 }
 
 @media (max-width: 900px) {
-  .termsGrid {
-    grid-template-columns: 1fr;
-    gap: 24px;
+  .policyLayout {
+    flex-direction: column;
+    gap: 32px;
   }
-}
-
-.termsItem h4 {
-  color: #59dad1;
-  font-size: 16px;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.termsItem p {
-  color: #9aa0a6;
-  font-size: 13px;
-  line-height: 1.6;
-}
-
-.termsIcon { color: #59dad1; }
-
-.readMore {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #59dad1;
-  font-weight: 600;
-  font-size: 14px;
-  text-decoration: none;
-  margin-top: auto;
-}
-
-.readMore:hover {
-  text-decoration: underline;
-}
-
-/* 3. Bottom Banner */
-.bottomBanner {
-  margin: 20px 24px 60px;
-  position: relative;
-  border-radius: 24px;
-  overflow: hidden;
-  height: 300px;
-}
-
-.bannerImg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.8;
+  .sidebar {
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+  .navMenu {
+    max-height: 200px;
+  }
 }

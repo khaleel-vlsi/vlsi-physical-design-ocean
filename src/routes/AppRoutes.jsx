@@ -21,6 +21,16 @@ const ForgotPassword = lazy(() => import('../pages/ForgotPassword'));
 const ResetPassword = lazy(() => import('../pages/ResetPassword'));
 const NotFound = lazy(() => import('../pages/NotFound'));
 
+// Public pages added in learning feature migration
+const PlatformFlow = lazy(() => import('../pages/PlatformFlow'));
+const StudyMaterials = lazy(() => import('../pages/StudyMaterials'));
+const PnrExecution = lazy(() => import('../pages/PnrExecution'));
+const PnrWorkshop = lazy(() => import('../pages/PnrWorkshop'));
+const UserGuides = lazy(() => import('../pages/UserGuides'));
+const TestVideo = lazy(() => import('../pages/TestVideo'));
+const TestVideoModulesList = lazy(() => import('../pages/TestVideoModulesList'));
+const TestVideoPlaylist = lazy(() => import('../pages/TestVideoPlaylist'));
+
 const PaidModulesList = lazy(() => import('../pages/PaidModulesList'));
 const PaidModuleDetail = lazy(() => import('../pages/PaidModuleDetail'));
 const ResumeBuilder = lazy(() => import('../pages/resume-builder/ResumeBuilder'));
@@ -126,6 +136,11 @@ const AppRoutes = () => {
         <Route path="/interview" element={<LazyWrapper><Interview /></LazyWrapper>} />
         <Route path="/modules" element={<LazyWrapper><ModulesList /></LazyWrapper>} />
         <Route path="/modules/:id" element={<LazyWrapper><ModuleDetail /></LazyWrapper>} />
+        <Route path="/platform-flow" element={<LazyWrapper><PlatformFlow /></LazyWrapper>} />
+        <Route path="/study-materials" element={<LazyWrapper><StudyMaterials /></LazyWrapper>} />
+        <Route path="/pnr-execution" element={<LazyWrapper><PnrExecution /></LazyWrapper>} />
+        <Route path="/pnr-workshop" element={<LazyWrapper><PnrWorkshop /></LazyWrapper>} />
+        <Route path="/user-guides" element={<LazyWrapper><UserGuides /></LazyWrapper>} />
         <Route path="/resume/share/:token" element={<LazyWrapper><PublicResume /></LazyWrapper>} />
         
         {/* Legacy static redirects (fallback to wildcard for others) */}
@@ -149,6 +164,9 @@ const AppRoutes = () => {
         <Route path="/paid-modules/module/:id" element={<LazyWrapper><PaidModuleDetail /></LazyWrapper>} />
         <Route path="/resume" element={<LazyWrapper><ResumeBuilder /></LazyWrapper>} />
         <Route path="/resume/edit/:resumeId" element={<LazyWrapper><ResumeEditor /></LazyWrapper>} />
+        <Route path="/test-video" element={<LazyWrapper><TestVideo /></LazyWrapper>} />
+        <Route path="/test-videos" element={<LazyWrapper><TestVideoModulesList /></LazyWrapper>} />
+        <Route path="/test-video-playlist/:id" element={<LazyWrapper><TestVideoPlaylist /></LazyWrapper>} />
       </Route>
 
       {/* Wildcard fallback routing to handle legacy and unmatched paths */}

@@ -178,3 +178,145 @@
   .authContainer { padding: var(--margin-mobile); }
   .authCard { padding: 36px 24px; }
 }
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modalContent {
+  background: var(--surface);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+}
+
+.modalContent h3 {
+  font-family: var(--font-headline);
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: var(--on-surface);
+}
+
+.modalContent p {
+  color: var(--on-surface-variant);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.modalActions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.btnPrimary {
+  background: var(--cta);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px var(--cta-glow);
+  transition: transform 0.2s;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+}
+
+.btnSecondary {
+  background: transparent;
+  color: var(--on-surface);
+  border: 1px solid var(--outline);
+  padding: 12px 24px;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btnSecondary:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* Regional styling additions */
+.countrySelector {
+  position: relative;
+}
+
+.countryDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #191c1d;
+  border: 1px solid var(--secondary-container);
+  border-radius: var(--radius-lg);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+  margin-top: 4px;
+  padding: 8px 0;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.countryItem {
+  padding: 10px 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.countryItem:hover {
+  background: rgba(89, 218, 209, 0.15);
+}
+
+.phoneGroup {
+  display: flex;
+  gap: 12px;
+}
+
+.phoneGroup select {
+  width: 110px;
+  padding: 13px 16px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--secondary-container);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--on-surface);
+  box-sizing: border-box;
+  outline: none;
+  cursor: pointer;
+}
+
+.phoneGroup select option {
+  background: #191c1d;
+  color: var(--on-surface);
+}
+
+.phoneGroup select:focus {
+  border-color: var(--secondary);
+}
+
+.phoneGroup input {
+  flex: 1;
+}

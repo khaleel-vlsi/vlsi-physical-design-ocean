@@ -115,6 +115,10 @@ const About = () => {
             <p>Your VLSI Physical Design Ocean Course Completion Certificate unlocks automatically **3 months (90 days)** after course purchase.</p>
           </div>
         </div>
+
+        <p style={{ marginTop: '24px', fontSize: '14.5px', color: '#bdc1c6', borderLeft: '3px solid #ffd700', paddingLeft: '16px', lineHeight: '1.6', textAlign: 'left' }}>
+          <span style={{ color: '#ffd700', fontWeight: 'bold' }}>Important Note:</span> All video recorded classes will be available starting from <strong>31st July 2026</strong>. Quiz tests, resume builder, and certification are future additions and not part of the present subscription plans.
+        </p>
       </section>
 
       {/* 4. The Mind Behind the Currents */}

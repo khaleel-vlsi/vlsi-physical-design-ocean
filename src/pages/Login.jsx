@@ -70,7 +70,7 @@ const Login = () => {
         <div className={styles.authLinks}>
           <Link to="/forgot-password">Forgot password?</Link>
           <span style={{ margin: '0 8px', color: 'var(--outline)' }}>•</span>
-          <Link to="/register">Create an account</Link>
+          <Link to={searchParams.get('region') ? `/register?region=${searchParams.get('region')}` : "/register"}>Create an account</Link>
         </div>
       </div>
     </div>

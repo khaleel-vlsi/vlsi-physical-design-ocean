@@ -83,7 +83,16 @@ serve(async (req) => {
     console.log("entered payment order", order)
 
     const plan = String(order?.notes?.plan || "");
-    const userId = String(order?.notes?.user_id || "");    const ALL_PLANS = ["PLAN_499", "PLAN_2M_INR", "PLAN_3M_INR", "PLAN_6M_INR", "PLAN_12M_INR", "PLAN_6M_USD", "PLAN_12M_USD", "PLAN_1999"];
+    const userId = String(order?.notes?.user_id || "");
+
+    // All valid plan IDs - PLAN_1M_INR is the ₹499 promo plan
+    const ALL_PLANS = [
+      "PLAN_1M_INR", "PLAN_499",
+      "PLAN_2M_INR", "PLAN_3M_INR",
+      "PLAN_6M_INR", "PLAN_12M_INR",
+      "PLAN_6M_USD", "PLAN_12M_USD",
+      "PLAN_1999"
+    ];
 
     if (!userId || !ALL_PLANS.includes(plan)) {
       return new Response(JSON.stringify({ error: "Missing user_id/plan in order notes", plan, userId }), {
@@ -93,15 +102,17 @@ serve(async (req) => {
     }
 
     const now = Date.now();
-    
-    // Map plan IDs to days of access to grant
-    let daysToGrant = 30; // default to 30 days
-    let planFriendlyName = "Iron Plan";
-    if (plan === "PLAN_499") {
-      const promoEndTime = new Date("2026-07-21T00:00:00+05:30").getTime();
-      const isPromoActive = Date.now() < promoEndTime;
-      daysToGrant = isPromoActive ? 180 : 30; // 6 months if paid during promo, 30 days afterwards
-      planFriendlyName = isPromoActive ? "Legacy Gold Plan" : "Iron Plan";
+    const promoEndTime = new Date("2026-07-20T23:59:59+05:30").getTime();
+    const isPromoActive = now < promoEndTime;
+
+    // Map plan IDs to days of access
+    let daysToGrant = 180; // default 180 days for promo
+    let planFriendlyName = "Special Launch Offer";
+
+    if (plan === "PLAN_1M_INR" || plan === "PLAN_499") {
+      // ₹499 plan: 6 months during promo (until July 20 11:59 PM), 30 days after
+      daysToGrant = isPromoActive ? 180 : 30;
+      planFriendlyName = isPromoActive ? "Special Launch Offer (6 Months)" : "Iron Plan (30 Days)";
     } else if (plan === "PLAN_2M_INR") {
       daysToGrant = 60;
       planFriendlyName = "Copper Plan";

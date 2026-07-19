@@ -273,3 +273,50 @@
   .missionSection { grid-template-columns: 1fr; }
   .approachGrid { grid-template-columns: 1fr; }
 }
+
+.pricingDisclaimer {
+  display: flex;
+  gap: 16px;
+  background: rgba(234, 179, 8, 0.05) !important;
+  border: 1px solid rgba(234, 179, 8, 0.2) !important;
+  border-radius: 12px;
+  padding: 16px;
+  max-width: 900px;
+  margin: 32px auto 0;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.disclaimerIcon {
+  font-size: 24px;
+  align-self: flex-start;
+}
+
+.disclaimerContent {
+  font-family: var(--font-label);
+}
+
+.disclaimerContent strong {
+  color: #facc15 !important;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.disclaimerContent ul {
+  list-style: disc !important;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.disclaimerContent li {
+  font-size: 12px !important;
+  color: #bdc1c6 !important;
+  line-height: 1.6 !important;
+  margin-bottom: 6px !important;
+}
+
+.disclaimerContent li:last-child {
+  margin-bottom: 0 !important;
+}

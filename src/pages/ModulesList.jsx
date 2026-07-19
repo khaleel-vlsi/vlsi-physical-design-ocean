@@ -68,9 +68,8 @@ const modulesData = [
 ];
 
 const ModulesList = () => {
-  const { profile } = useAuth() || {};
-  const isFuture = (ts) => ts && new Date(ts).getTime() > Date.now();
-  const courseValid = profile && profile.course_active && isFuture(profile.course_expiry);
+  const { hasPremiumAccess } = useAuth() || {};
+  const courseValid = hasPremiumAccess;
 
   return (
     <div className={styles.modulesPage}>

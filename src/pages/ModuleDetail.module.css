@@ -178,7 +178,30 @@
   font-size: 18px;
   margin-bottom: 32px;
   color: #94a3b8;
-  line-height: 1.7;
+}
+
+.flowStepBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  padding: 8px 16px;
+  border-radius: 9999px;
+  color: #a5b4fc;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.flowStepBadge:hover {
+  background: rgba(99, 102, 241, 0.16);
+  border-color: rgba(99, 102, 241, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.2);
+  color: #fff;
 }
 
 /* Lock info box */
@@ -460,4 +483,47 @@
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
   margin: clamp(32px, 6vw, 64px) 0;
   width: 100%;
+}
+
+/* Top navigation links at page head */
+.topNavLinks {
+  max-width: var(--container-max);
+  margin: 0 auto 24px auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  text-align: left;
+}
+
+.leftLinks {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.backLink, .flowLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 10px 20px;
+  border-radius: 9999px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.backLink:hover, .flowLink:hover {
+  color: #59dad1;
+  background: rgba(89, 218, 209, 0.15);
+  border-color: rgba(89, 218, 209, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(89, 218, 209, 0.25);
 }

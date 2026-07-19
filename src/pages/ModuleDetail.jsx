@@ -58,23 +58,47 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+const getFlowStepInfo = (moduleId) => {
+  if (moduleId >= 9 && moduleId <= 18) {
+    return { id: 2, title: "Study Material" };
+  }
+  if (moduleId >= 19 && moduleId <= 22) {
+    return { id: 7, title: "Interview Questions" };
+  }
+  if (moduleId === 23) {
+    return { id: 9, title: "Certification" };
+  }
+  if (moduleId === 24) {
+    return { id: 10, title: "Resume Builder" };
+  }
+  if (moduleId >= 25 && moduleId <= 27) {
+    return { id: 3, title: "PNR Execution" };
+  }
+  if (moduleId >= 28 && moduleId <= 57) {
+    return { id: 6, title: "User Guides" };
+  }
+  if (moduleId === 58) {
+    return { id: 5, title: "TCL Scripts" };
+  }
+  if (moduleId === 59) {
+    return { id: 11, title: "Job Finder" };
+  }
+  return null;
+};
+
 const ModuleDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { profile } = useAuth() || {};
+  const { hasPremiumAccess } = useAuth() || {};
   const moduleId = parseInt(id);
+  const stepInfo = getFlowStepInfo(moduleId);
   const moduleInfo = modulesData[String(moduleId)];
 
   React.useEffect(() => {
-    if (profile) {
-      const isFuture = (ts) => ts && new Date(ts).getTime() > Date.now();
-      const courseValid = profile.course_active && isFuture(profile.course_expiry);
-      if (courseValid && moduleId >= 9 && moduleId <= 59) {
-        navigate(`/paid-modules/module/${moduleId}`, { replace: true });
-      }
+    if (hasPremiumAccess && moduleId >= 9 && moduleId <= 59) {
+      navigate(`/paid-modules/module/${moduleId}`, { replace: true });
     }
-  }, [profile, moduleId, navigate]);
-
+  }, [hasPremiumAccess, moduleId, navigate]);
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, [id]);
@@ -138,6 +162,12 @@ const ModuleDetail = () => {
         }
       />
       <header className={styles.moduleHeader}>
+        <div className={styles.topNavLinks}>
+          <div className={styles.leftLinks}>
+            <Link to="/modules" className={styles.backLink}>← Back to Modules</Link>
+            <Link to="/platform-flow" className={styles.flowLink}>📊 Flow Graph</Link>
+          </div>
+        </div>
         <h1>Module {moduleInfo.id}</h1>
         <p>{moduleInfo.title}</p>
       </header>
@@ -156,6 +186,11 @@ const ModuleDetail = () => {
 
         {moduleInfo.isLocked ? (
           <div className={styles.lockedModule}>
+            {stepInfo && (
+              <Link to="/platform-flow" className={styles.flowStepBadge} title="View this step in the Ocean Physical Design Journey">
+                📍 Part of Flow Graph Step {stepInfo.id}: {stepInfo.title}
+              </Link>
+            )}
             <h2>🔒 Content Locked</h2>
             <p className={styles.lockMessage}>
               This document is currently locked and not available for public access.

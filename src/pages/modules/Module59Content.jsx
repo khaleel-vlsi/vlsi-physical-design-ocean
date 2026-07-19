@@ -6,8 +6,8 @@ import { supabase } from '../../services/supabase';
 import styles from './Module59Content.module.css';
 
 const Module59Content = () => {
-  const { profile } = useAuth();
-  const isPremium = profile?.course_active || profile?.role === 'admin';
+  const { profile, hasPremiumAccess } = useAuth();
+  const isPremium = hasPremiumAccess || profile?.role === 'admin';
 
   // Tabs: 'jobs' | 'admin' | 'notifications'
   const [activeTab, setActiveTab] = useState('jobs');

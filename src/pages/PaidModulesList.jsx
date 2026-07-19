@@ -31,13 +31,12 @@ const PaidModulesList = () => {
           return;
         }
         
-        const isFuture = (ts) => ts && new Date(ts).getTime() > Date.now();
-        const courseValid = data.course_active && isFuture(data.course_expiry);
+        const courseValid = !!data.course_active;
         
         if (!courseValid) {
-          navigate('/dashboard');
+           navigate('/dashboard');
         } else {
-          setIsLoading(false);
+           setIsLoading(false);
         }
       } catch (err) {
         navigate('/dashboard');

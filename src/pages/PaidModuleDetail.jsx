@@ -25,6 +25,34 @@ const Module25Content = lazy(() => import('./modules/Module25Content'));
 const Module26Content = lazy(() => import('./modules/Module26Content'));
 const Module27Content = lazy(() => import('./modules/Module27Content'));
 
+const getFlowStepInfo = (moduleId) => {
+  if (moduleId >= 9 && moduleId <= 18) {
+    return { id: 2, title: "Study Material" };
+  }
+  if (moduleId >= 19 && moduleId <= 22) {
+    return { id: 7, title: "Interview Questions" };
+  }
+  if (moduleId === 23) {
+    return { id: 9, title: "Certification" };
+  }
+  if (moduleId === 24) {
+    return { id: 10, title: "Resume Builder" };
+  }
+  if (moduleId >= 25 && moduleId <= 27) {
+    return { id: 3, title: "PNR Execution" };
+  }
+  if (moduleId >= 28 && moduleId <= 57) {
+    return { id: 6, title: "User Guides" };
+  }
+  if (moduleId === 58) {
+    return { id: 5, title: "TCL Scripts" };
+  }
+  if (moduleId === 59) {
+    return { id: 11, title: "Job Finder" };
+  }
+  return null;
+};
+
 const PaidModuleDetail = () => {
   const { id } = useParams();
   const { user } = useAuth();
@@ -33,12 +61,16 @@ const PaidModuleDetail = () => {
   const [viewWidth, setViewWidth] = useState('standard'); // 'standard' or 'full'
   const [isTopicsExpanded, setIsTopicsExpanded] = useState(false);
   const [showAllTopics, setShowAllTopics] = useState(false);
+  const [hasAccess, setHasAccess] = useState(false);
 
   useEffect(() => {
     if (user === undefined) return;
 
+
+
     if (!user) {
-      navigate('/login');
+      setHasAccess(false);
+      setIsLoading(false);
       return;
     }
 
@@ -51,26 +83,23 @@ const PaidModuleDetail = () => {
           .single();
           
         if (error || !data) {
-          navigate('/dashboard');
+          setHasAccess(false);
+          setIsLoading(false);
           return;
         }
+
+        const courseValid = !!data.course_active;
         
-        const isFuture = (ts) => ts && new Date(ts).getTime() > Date.now();
-        const courseValid = data.course_active && isFuture(data.course_expiry);
-        
-        const moduleIdNum = parseInt(id);
-        if (!courseValid && moduleIdNum !== 59) {
-          navigate('/dashboard');
-        } else {
-          setIsLoading(false);
-        }
+        setHasAccess(courseValid);
+        setIsLoading(false);
       } catch (err) {
-        navigate('/dashboard');
+        setHasAccess(false);
+        setIsLoading(false);
       }
     };
 
     checkFreshAccess();
-  }, [user, navigate, id]);
+  }, [user, id]);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -123,6 +152,7 @@ const PaidModuleDetail = () => {
   }
 
   const moduleId = parseInt(id);
+  const stepInfo = getFlowStepInfo(moduleId);
   const currentIndex = (paidModulesData || []).findIndex(m => m.id === moduleId);
   const moduleInfo = currentIndex !== -1 ? paidModulesData[currentIndex] : null;
   
@@ -145,8 +175,13 @@ const PaidModuleDetail = () => {
 
   return (
     <div className={styles.detailPage}>
-      <Link to="/paid-modules" className={styles.backLink}>← Back to Paid Modules</Link>
-      <Link to="/dashboard" className={styles.dashboardLink}>Go to Dashboard</Link>
+      <div className={styles.topLinksRow}>
+        <div className={styles.leftLinks}>
+          <Link to="/paid-modules" className={styles.backLink}>← Back to Paid Modules</Link>
+          <Link to="/platform-flow" className={styles.flowLink}>📊 Flow Graph</Link>
+        </div>
+        <Link to="/dashboard" className={styles.dashboardLink}>Go to Dashboard →</Link>
+      </div>
       
       <header className={styles.header}>
         <div className={styles.badgeWrapper}>
@@ -224,7 +259,45 @@ const PaidModuleDetail = () => {
         </div>
       )}
 
-      {moduleInfo.isResumeBuilder ? (
+      {!hasAccess ? (
+        <div className={styles.iframeContainer}>
+          <div className={styles.lockedState}>
+            <span className={styles.lockIcon}>🔒</span>
+            {stepInfo && (
+              <Link to="/platform-flow" className={styles.flowStepBadge} title="View this step in the Ocean Physical Design Journey">
+                📍 Part of Flow Graph Step {stepInfo.id}: {stepInfo.title}
+              </Link>
+            )}
+            <h2>Premium Content Locked</h2>
+            <p className={styles.lockText}>
+              This is a premium module. You must be logged in and have an active course subscription to access this content.
+            </p>
+            <div style={{ marginTop: '25px', marginBottom: '15px' }}>
+              <Link to="/login" className={styles.navBtn} style={{ padding: '14px 40px', fontSize: '1.1rem', background: 'linear-gradient(to right, #3B82F6, #22D3EE)', color: '#000', fontWeight: 'bold' }}>
+                Login / Enroll Now to Unlock
+              </Link>
+            </div>
+            {/* Topics preview to attract users */}
+            {moduleInfo.topics && moduleInfo.topics.length > 0 && (
+              <div className={styles.topicsSection} style={{ marginTop: '40px', textAlign: 'left', maxWidth: '800px', margin: '40px auto 0' }}>
+                <h3 style={{ borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '10px', marginBottom: '20px' }}>What you'll unlock in this module:</h3>
+                <div className={styles.topicsGrid}>
+                  {moduleInfo.topics.slice(0, 8).map((topic, idx) => (
+                    <div key={idx} className={styles.topicItem}>
+                      <span className={styles.topicBullet}>•</span>{topic}
+                    </div>
+                  ))}
+                  {moduleInfo.topics.length > 8 && (
+                    <div className={styles.topicItem} style={{ color: '#3B82F6', fontWeight: 'bold' }}>
+                      <span className={styles.topicBullet}>•</span>+ {moduleInfo.topics.length - 8} more advanced topics
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      ) : moduleInfo.isResumeBuilder ? (
         <Suspense fallback={<div className={styles.loadingText}>Loading Resume Builder...</div>}>
           <ResumeBuilder />
         </Suspense>
@@ -305,6 +378,11 @@ const PaidModuleDetail = () => {
           {moduleInfo.isLockedTemporarily ? (
           <div className={styles.lockedState}>
             <span className={styles.lockIcon}>🔒</span>
+            {stepInfo && (
+              <Link to="/platform-flow" className={styles.flowStepBadge} title="View this step in the Ocean Physical Design Journey">
+                📍 Part of Flow Graph Step {stepInfo.id}: {stepInfo.title}
+              </Link>
+            )}
             <h2>Content Locked</h2>
             <p className={styles.lockText}>
               {moduleInfo.lockMessage || "This content will unlock automatically 1 month after your course purchase."}

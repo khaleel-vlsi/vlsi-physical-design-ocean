@@ -1,10 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from './Home.module.css';
 import SEO from '../components/SEO';
 import LearningRoadmap from '../components/LearningRoadmap';
 import StructuredData from '../components/StructuredData';
 import { useAuth } from '../context/AuthContext';
+import { plansConfig, getRegionKey } from '../data/plansConfig';
 
 const freeModules = [
   'Electronics Fundamentals',
@@ -19,11 +20,63 @@ const freeModules = [
 
 const Home = () => {
   const { user, profile } = useAuth();
+  const navigate = useNavigate();
+
+  // Guest Region State (defaults based on local Timezone auto-detect)
+  const [guestRegion, setGuestRegion] = useState(() => {
+    try {
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      if (tz && (tz.includes('Kolkata') || tz.includes('Calcutta') || tz.includes('Delhi') || tz.includes('Bombay') || tz.includes('Asia/Kolkata'))) {
+        return 'India';
+      }
+    } catch (e) {
+      console.warn(e);
+    }
+    return 'International';
+  });
+
+  const profileRegion = profile && profile.country ? getRegionKey(profile.country) : null;
+  const initialRegion = profileRegion || guestRegion;
+  const [displayRegion, setDisplayRegion] = useState(initialRegion);
+
+  useEffect(() => {
+    if (profileRegion) {
+      setDisplayRegion(profileRegion);
+    } else {
+      setDisplayRegion(guestRegion);
+    }
+  }, [profileRegion, guestRegion]);
+
+  const activeConfig = plansConfig[displayRegion] || plansConfig['India'];
+  const isIndianUser = (profile && profile.country === 'India') || (!profile && guestRegion === 'India');
+
+  // Splash Modal Logic
+  const [showSplashModal, setShowSplashModal] = useState(false);
+
+  useEffect(() => {
+    const hasSeenSplash = sessionStorage.getItem('hasSeenSplash');
+    if (!hasSeenSplash) {
+      // Small delay so it feels natural
+      const timer = setTimeout(() => {
+        setShowSplashModal(true);
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  const closeSplash = () => {
+    sessionStorage.setItem('hasSeenSplash', 'true');
+    setShowSplashModal(false);
+  };
+
+  const goToFlow = () => {
+    sessionStorage.setItem('hasSeenSplash', 'true');
+    navigate('/platform-flow');
+  };
 
   const isRegistered = !!user;
   const isLoggedIn = !!user;
-  const isFutureTs = (ts) => ts && new Date(ts).getTime() > Date.now();
-  const isPaid = !!(profile?.course_active && isFutureTs(profile?.course_expiry));
+  const isPaid = !!(profile?.course_active);
 
   const step1Status = isLoggedIn ? 'completed' : 'active';
   const step2Status = isLoggedIn ? 'completed' : 'active';
@@ -32,7 +85,20 @@ const Home = () => {
   const step5Status = isPaid ? 'active' : 'locked';
 
   return (
-    <div className={styles.homeContainer}>
+    <>
+      {showSplashModal && (
+        <div className={styles.modalOverlay}>
+          <div className={styles.modalContent}>
+            <h3>Welcome to VLSI Physical Design Ocean! 🌊</h3>
+            <p>Before you dive in, we highly recommend viewing our Interactive Flow Graph. It maps out your entire learning journey from basic electronics to advanced chip tapeout!</p>
+            <div className={styles.modalActions}>
+              <button onClick={goToFlow} className={styles.btnPrimary}>See the Flow Graph</button>
+              <button onClick={closeSplash} className={styles.btnSecondary}>Explore Site First</button>
+            </div>
+          </div>
+        </div>
+      )}
+      <div className={styles.homeContainer}>
       <SEO 
         title="Home" 
         description="Master VLSI Physical Design from scratch. Structured learning modules for ASIC design, RTL coding, synthesis, and physical verification."
@@ -83,15 +149,12 @@ const Home = () => {
         </p>
         <div className={styles.heroCtaRow}>
           <button 
-            onClick={() => {
-              const element = document.getElementById('onboarding-tracker');
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-              }
-            }} 
-            className={styles.heroPrimaryBtn}
+            onClick={() => navigate('/platform-flow')} 
+            className={styles.magneticGraphBtn}
           >
-            Start Your Journey
+            <span className={styles.pulseRing}></span>
+            <span className={styles.btnIcon}>🗺️</span>
+            Explore Interactive Flow Graph
           </button>
           <button 
             onClick={() => {
@@ -119,7 +182,10 @@ const Home = () => {
             The <strong>VLSI Physical Design Ocean</strong> platform is created specifically for engineering graduates and freshers who want to enter the VLSI domain, as well as professionals with up to 3+ years of experience. Our goal is to provide a complete, structural learning path covering everything from the absolute basics to advanced industrial tool execution with step-by-step guides.
             <br/><br/>
             The name "Ocean" signifies the extreme depth of knowledge provided here. You will find real-time problems and solutions, the critical role of Linux and TCL scripting, and an extensive repository of interview questions and answers. We offer everything required to succeed as a Physical Design Engineer, including industrial tool user guides and sample scripts used in real-world tapeouts. With a mix of free foundation modules and highly affordable premium content, this is your one-stop platform for all VLSI queries.
+            <br/><br/>
+            <span style={{ color: '#ffd700', fontWeight: 'bold' }}>Important Note:</span> All video recorded classes will be available starting from <strong>31st July 2026</strong>. Quiz tests, resume builder, and certification are future additions and not part of the present subscription plans.
           </p>
+
           <div className={styles.infoColumns}>
             <div>
               <h3>Who This Platform Is For</h3>
@@ -153,14 +219,162 @@ const Home = () => {
             module focuses on a specific stage of the ASIC design flow with
             clear explanations and read-only study materials.
           </p>
-          <div className={styles.courseImageWrapper}>
-            <img src="/course_placeholder.png" alt="VLSI Physical Design Course Modules Overview" className={styles.courseImage} loading="lazy" />
+          <div className={styles.courseVisualWrapper}>
+            <img 
+              loading="lazy" 
+              src="/chip.png" 
+              alt="VLSI Physical Design Ocean Course Structure" 
+              className={styles.courseChipImg} 
+            />
             <p className={styles.courseImageSub}>59 Modules · Electronics → Physical Sign-off</p>
           </div>
         </div>
       </section>
 
-      {/* ── Interactive Onboarding Progress Tracker ──────────────────── */}
+      {/* ── Subscription Plans (Moved Higher Up) ────────────────────── */}
+      <section id="pricing-section" className={styles.pricingSection}>
+        <div className={styles.pricingHeader}>
+          <span className={styles.pricingBadge}>YOUR DREAM IS OUR MISSION ❤</span>
+          <h1>CHOOSE YOUR SUBSCRIPTION PLAN</h1>
+          <p className={styles.pricingSubtext}>SAME PREMIUM CONTENT. DIFFERENT VALIDITY. MAXIMUM VALUE.</p>
+        </div>
+
+        {/* Region Switcher (Only visible to guest/logged-in Indian users for price comparison) */}
+        {isIndianUser && (
+          <div className={styles.regionToggleRow}>
+            <span>Compare Pricing:</span>
+            <button 
+              type="button"
+              className={`${styles.regionTab} ${displayRegion === 'India' ? styles.activeTab : ''}`}
+              onClick={() => setDisplayRegion('India')}
+            >
+              🇮🇳 India Price
+            </button>
+            <button 
+              type="button"
+              className={`${styles.regionTab} ${displayRegion === 'International' ? styles.activeTab : ''}`}
+              onClick={() => setDisplayRegion('International')}
+            >
+              🌐 International Price
+            </button>
+          </div>
+        )}
+
+        <div className={styles.regionTitleRow}>
+          <h2>{activeConfig.flag} {activeConfig.title}</h2>
+        </div>
+
+        {/* Render India vertical layout */}
+        {displayRegion === 'India' ? (
+          <div className={styles.pricingContainer}>
+            {activeConfig.plans.map((p) => (
+              <div key={p.id} className={`${styles.planCard} ${styles[p.theme]}`}>
+                {p.badge && <div className={styles.planBadge}>{p.badge}</div>}
+                <span className={styles.planDuration}>{p.duration}</span>
+                
+                <div className={styles.planPriceRow}>
+                  {p.originalPrice && (
+                    <span className={styles.originalPrice}>
+                      {activeConfig.currencySymbol}{p.originalPrice}
+                    </span>
+                  )}
+                  <strong className={styles.planPrice}>
+                    {activeConfig.currencySymbol}{p.price}
+                  </strong>
+                </div>
+
+                {p.savings && <div className={styles.savingsPill}>{p.savings}</div>}
+                {p.comparisonText && <div className={styles.comparisonText}>{p.comparisonText}</div>}
+                {p.subBadge && <div className={styles.subBadge}>{p.subBadge}</div>}
+
+                <div className={styles.planFeaturesList}>
+                  <ul>
+                    {p.features.map((f, i) => (
+                      <li key={i}>
+                        <span className={styles.checkIcon}>✔</span> {f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className={styles.planFooter}>
+                  <div className={styles.validityLabel}>
+                    <span>📅 {p.validityText}</span>
+                  </div>
+                  <Link 
+                    to={profile ? "/dashboard" : `/login?region=${displayRegion}`}
+                    className={`${styles.subscribeBtn} ${styles[p.theme + 'Btn']}`}
+                  >
+                    SUBSCRIBE NOW →
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          /* Render International horizontal layout */
+          <div className={styles.intlPricingContainer}>
+            {activeConfig.plans.map((p) => (
+              <div key={p.id} className={`${styles.intlPlanCard} ${styles[p.theme]}`}>
+                {p.badge && <div className={styles.intlPlanBadge}>{p.badge}</div>}
+                
+                <div className={styles.intlCardGrid}>
+                  {/* Left column: Icon & Price */}
+                  <div className={styles.intlPriceCol}>
+                    <div className={styles.intlGlobeIcon}>
+                      {p.theme === 'intl-popular' ? '🌐' : '🌍'}
+                    </div>
+                    <span className={styles.intlDuration}>{p.duration}</span>
+                    <div className={styles.intlPriceRow}>
+                      {p.originalPrice && (
+                        <span className={styles.intlOriginalPrice}>
+                          {activeConfig.currencySymbol}{p.originalPrice}
+                        </span>
+                      )}
+                      <strong className={styles.intlPlanPrice}>
+                        {activeConfig.currencySymbol}{p.price}
+                      </strong>
+                    </div>
+                    {p.savings && <div className={styles.intlSavingsPill}>{p.savings}</div>}
+                  </div>
+
+                  {/* Middle column: Features */}
+                  <div className={styles.intlFeaturesCol}>
+                    <ul>
+                      {p.features.map((f, i) => (
+                        <li key={i}>
+                          <span className={styles.intlCheckIcon}>✔</span> {f}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Right column: Validity & Button */}
+                  <div className={styles.intlValidityCol}>
+                    <div className={styles.intlValidityBox}>
+                      <span className={styles.intlCalendarIcon}>📅</span>
+                      <div className={styles.intlValidityText}>
+                        <span className={styles.intlValLabel}>Valid for</span>
+                        <strong className={styles.intlValDays}>
+                          {p.validityText.replace('Valid for ', '')}
+                        </strong>
+                      </div>
+                    </div>
+                    <Link 
+                      to={profile ? "/dashboard" : `/login?region=${displayRegion}`}
+                      className={`${styles.intlSubscribeBtn} ${styles[p.theme + 'Btn']}`}
+                    >
+                      SUBSCRIBE NOW →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </section>
+
+      {/* ── Interactive Onboarding Progress Tracker (Right Below Plans) ─── */}
       <section id="onboarding-tracker" className={styles.onboardingSection}>
         <h2 className={styles.onboardingTitle}>🗺️ Advanced VLSI Physical Design Ocean Course Steps</h2>
         <p className={styles.onboardingDesc}>
@@ -308,81 +522,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── Paid & Placement Row ───────────────────────────────────────── */}
-      <section id="pricing-section" className={styles.paidAndPlacementRow}>
-        
-        {/* Advanced Course Card */}
-        <div className={styles.paidSectionCard}>
-          <h2>Advanced VLSI Physical Design Ocean Course</h2>
-          <p className={styles.paidSub}>
-            Modules 9–59 · Industry Level · 6 Months Access
-          </p>
-
-          <div className={styles.priceBox}>
-            <div>
-              <span className={styles.label}>India</span>
-              <strong>₹449</strong>
-            </div>
-            <div>
-              <span className={styles.label}>International</span>
-              <strong>$20</strong>
-            </div>
-          </div>
-
-          <div className={styles.paidFeatures}>
-            <ul>
-              <li><span className={styles.check}>✔</span> Advanced STA, CTS, PnR</li>
-              <li><span className={styles.check}>✔</span> Industry Scripts &amp; Flows</li>
-              <li><span className={styles.check}>✔</span> Tool Tutorials (icc2, innovus)</li>
-              <li><span className={styles.check}>✔</span> Interview Q&amp;A</li>
-              <li><span className={styles.check}>✔</span> Certification Included</li>
-            </ul>
-          </div>
-
-          <p className={styles.comingSoonText}>Available Soon</p>
-          <Link to="/login" className={styles.btnRegister}>
-            REGISTER &amp; GET PAID ACCESS
-          </Link>
-        </div>
-
-        {/* Placement Support Card */}
-        <div className={styles.placementCard}>
-          <div className={styles.placementIcon}>🚀</div>
-          <h2>Placement Support Program</h2>
-          <p className={styles.subtitle}>Mentorship Until You Get Placed</p>
-
-          <ul className={styles.placementFeatures}>
-            <li><span className={styles.check}>✔</span> 3 Personalized Mock Interviews</li>
-            <li><span className={styles.check}>✔</span> 1-on-1 Career Guidance</li>
-            <li><span className={styles.check}>✔</span> Recorded Sessions for Improvement</li>
-            <li><span className={styles.check}>✔</span> Daily Technical Hour (5 Days/Week)</li>
-            <li><span className={styles.check}>✔</span> Real Interview Q&amp;A Solutions</li>
-          </ul>
-
-          <div className={styles.pricingBox}>
-            <div className={styles.priceCard}>
-              <span className={styles.label}>First 500</span>
-              <h3>₹1,499</h3>
-            </div>
-            <div className={styles.priceCard}>
-              <span className={styles.label}>Regular</span>
-              <h3>₹2,999</h3>
-            </div>
-            <div className={styles.priceCard}>
-              <span className={styles.label}>Intl.</span>
-              <h3>$80</h3>
-            </div>
-          </div>
-
-          <p className={styles.comingSoonText}>Available Soon</p>
-          <a href="https://chat.whatsapp.com/JhqVGJIRr6ZLwpzFsNBL5J" target="_blank" rel="noreferrer" className={styles.placementBtn}>
-            JOIN PLACEMENT SUPPORT PROGRAM
-          </a>
-        </div>
-
-      </section>
-
     </div>
+    </>
   );
 };
 

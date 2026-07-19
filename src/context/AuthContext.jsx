@@ -25,7 +25,7 @@ export const AuthProvider = ({ children }) => {
       console.log('[Auth] 5. Fetching profile data from database...');
       const { data, error } = await supabase
         .from('profiles')
-        .select('email, full_name, course_active, course_expiry, placement_active, placement_expiry, mock_remaining')
+        .select('email, full_name, course_active, course_expiry, placement_active, placement_expiry, mock_remaining, country, country_code, phone_number, active_plan')
         .eq('id', currentUser.id)
         .single();
 
@@ -38,6 +38,9 @@ export const AuthProvider = ({ children }) => {
           course_active: false,
           placement_active: false,
           mock_remaining: 0,
+          country: currentUser.user_metadata?.country || 'India',
+          country_code: currentUser.user_metadata?.country_code || '+91',
+          phone_number: currentUser.user_metadata?.phone_number || '',
         });
       } else {
         setProfile(data);
@@ -51,6 +54,9 @@ export const AuthProvider = ({ children }) => {
         course_active: false,
         placement_active: false,
         mock_remaining: 0,
+        country: currentUser.user_metadata?.country || 'India',
+        country_code: currentUser.user_metadata?.country_code || '+91',
+        phone_number: currentUser.user_metadata?.phone_number || '',
       });
     } finally {
       setLoading(false);
@@ -339,11 +345,10 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const hasPremiumAccess = !!profile?.course_active; // true if paid course active
   const value = {
     user,
     profile,
-    hasPremiumAccess,
+    hasPremiumAccess: !!(profile?.course_active),
     login,
     logout,
     loading,

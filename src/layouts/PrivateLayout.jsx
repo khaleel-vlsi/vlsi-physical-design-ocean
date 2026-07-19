@@ -20,6 +20,8 @@ const PrivateLayout = () => {
         </div>
         <div className={styles.topActions}>
           <Link className={styles.btn} to="/">🏠 Portal Home</Link>
+          <Link className={styles.btn} to="/paid-modules">📚 Paid Modules</Link>
+          <Link className={styles.btn} to="/platform-flow">📊 Flow Graph</Link>
           <button className={`${styles.btn} ${styles.btnDanger}`} onClick={handleLogout}>🚪 Logout</button>
         </div>
       </header>

@@ -50,40 +50,49 @@ serve(async (req) => {
     
     const payload = JSON.parse(rawBody);
 
-    // We use payment.captured event
     console.log("entered payment response",payload);
     const event = payload?.event || "";
-    if (!["payment.captured", "payment.authorized"].includes(event)) {
+    if (!["payment.captured", "payment.authorized", "order.paid"].includes(event)) {
       return new Response(JSON.stringify({ ok: true, ignored: event }), {
         headers: { ...corsHeaders(origin), "Content-Type": "application/json" },
       });
     }
 
-    const payment = payload?.payload?.payment?.entity;
-    const orderId = payment?.order_id;
-    if (!orderId) {
-      return new Response(JSON.stringify({ error: "No order_id in payment" }), {
-        status: 400,
-        headers: { ...corsHeaders(origin), "Content-Type": "application/json" },
-      });
-    }
+    let orderId = "";
+    let plan = "";
+    let userId = "";
 
-    // Fetch the order to get notes.plan + notes.user_id
-    const authBasic = btoa(`${RZP_KEY_ID}:${RZP_KEY_SECRET}`);
-    const ordRes = await fetch(`https://api.razorpay.com/v1/orders/${orderId}`, {
-      headers: { "Authorization": `Basic ${authBasic}` },
-    });
-    const order = await ordRes.json();
-    if (!ordRes.ok) {
-      return new Response(JSON.stringify({ error: "Failed to fetch order", details: order }), {
-        status: 500,
-        headers: { ...corsHeaders(origin), "Content-Type": "application/json" },
-      });
-    }
-    console.log("entered payment order", order)
+    if (event === "order.paid") {
+      const orderEntity = payload?.payload?.order?.entity;
+      orderId = orderEntity?.id || "";
+      plan = String(orderEntity?.notes?.plan || "");
+      userId = String(orderEntity?.notes?.user_id || "");
+    } else {
+      const payment = payload?.payload?.payment?.entity;
+      orderId = payment?.order_id || "";
+      if (!orderId) {
+        return new Response(JSON.stringify({ error: "No order_id in payment" }), {
+          status: 400,
+          headers: { ...corsHeaders(origin), "Content-Type": "application/json" },
+        });
+      }
 
-    const plan = String(order?.notes?.plan || "");
-    const userId = String(order?.notes?.user_id || "");
+      // Fetch the order to get notes.plan + notes.user_id
+      const authBasic = btoa(`${RZP_KEY_ID}:${RZP_KEY_SECRET}`);
+      const ordRes = await fetch(`https://api.razorpay.com/v1/orders/${orderId}`, {
+        headers: { "Authorization": `Basic ${authBasic}` },
+      });
+      const order = await ordRes.json();
+      if (!ordRes.ok) {
+        return new Response(JSON.stringify({ error: "Failed to fetch order", details: order }), {
+          status: 500,
+          headers: { ...corsHeaders(origin), "Content-Type": "application/json" },
+        });
+      }
+      console.log("entered payment order", order);
+      plan = String(order?.notes?.plan || "");
+      userId = String(order?.notes?.user_id || "");
+    }
 
     // All valid plan IDs - PLAN_1M_INR is the ₹499 promo plan
     const ALL_PLANS = [

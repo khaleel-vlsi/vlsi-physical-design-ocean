@@ -1,0 +1,502 @@
+import{p as e,r as t,u as n}from"./index-BV0rcvqV.js";var r=e(n(),1),i=[{id:`ch_0_antenna_effect_in_vlsi`,title:`Antenna Effect in VLSI`,html:`<p class="c9">The most sensitive component of a MOS transistor is the gate oxide. During the construction of an ASIC, special care must be taken to safeguard it from damage both throughout the fabrication process and during the functioning of the ASIC. Some unwanted impacts can arise throughout an actual manufacturing process. The antenna effect in VLSI, also known as plasma-induced gate-oxide damage or plasma-induced damage, is one of them.</p>
+<p class="c9">In VLSI, the antenna effect refers to the charge collecting effect, not to an actual antenna device. A large quantity of charge is often induced during plasma etching and other fabrication procedures. The antenna effect in VLSI is a phenomenon that can harm the gate oxide of MOS transistors during the fabrication process, particularly when using plasma etching. In this section, we will look into the antenna effect and the factors that contribute to it.</p>
+<p class="c9">The antenna effect in VLSI is also known as plasma-generated gate oxide damage. It is a phenomenon that can result in yield and reliability issues when MOS integrated circuits are manufactured.</p>
+<hr>
+<p class="c0"></p>`},{id:`ch_6_reason_behind_the_antenna_effect_in_vlsi`,title:`Reason Behind the Antenna Effect in VLSI`,html:`<p class="c9">If a conducting material or wire is linked to the device's gate, the wire acts as an antenna, inducing a considerable amount of charge. The diodes formed by drain and source diffusion layers can conduct a significant amount of current. Finally, the antenna effect can cause:</p>
+<ul class="c1 lst-kix_t4scammlom75-0 start"><li class="c4 li-bullet-0">Gate oxide failure<br /></li><li class="c4 li-bullet-0">Deterioration of I–V characteristics<br /></li><li class="c4 li-bullet-0">Change in threshold voltage<br /></li><li class="c4 li-bullet-0">Lower device life expectancy<br /></li><li class="c4 li-bullet-0">Increased gate leakage<br /></li></ul>
+<p class="c9">Because of these risks, antenna guidelines have been established to prevent such issues.</p>
+<h3 class="c12" id="h.b1234ooogu8f">Common Preventive Solutions</h3>
+<ol class="c1 lst-kix_jxkbdlw03npy-0 start" start="1"><li class="c4 li-bullet-0">Wire Splitting<br /> One solution is to split the long wire into two sections and connect the wire and gate through a buffer layer.<br /></li><li class="c4 li-bullet-0">Diode Insertion<br /> Another option is to attach a diode to the wire and establish a discharge path during the etching process.<br /></li></ol>
+<p class="c9">Although the term “Antenna Effect” suggests electromagnetic radiation or transmitter-receiver systems, this is not the case. A more appropriate name is Plasma Induced Gate Oxide Damage, which accurately describes the phenomenon. This damage is induced by gate oxide exposure to plasma during the fabrication of VLSI devices.</p>
+<hr>
+<p class="c0"></p>`},{id:`ch_15_occurrence_of_antenna_effect`,title:`Occurrence of Antenna Effect`,html:`<p class="c7"><img alt="" src="/assets/modules/module17/image17.png" title="" class="native-img"></p>
+<p class="c9">Although the antenna effect in VLSI occurs during the chip fabrication process—particularly during plasma etching—the avoidance mechanism should be established from the physical design stage itself.</p>
+<p class="c9">During the physical signoff step, the fabrication laboratory provides the antenna rule file, which must be examined and cleaned according to the antenna rule.</p>
+<h3 class="c12" id="h.h9bie3v82qs3">Fabrication Flow and Antenna Effect</h3>
+<p class="c9">The fabrication flow consists of two major stages:</p>
+<h3 class="c12" id="h.2qfsa3cooko8">1. FEOL (Front End of Line)</h3>
+<ul class="c1 lst-kix_os8c72r5lmyx-0 start"><li class="c4 li-bullet-0">Involves fabrication of all MOS transistors.<br /></li><li class="c4 li-bullet-0">No metal interconnect fabrication occurs at this stage.<br /></li></ul>
+<h3 class="c12" id="h.8ygpx2nx3ox5">2. BEOL (Back End of Line)</h3>
+<ul class="c1 lst-kix_wofnr3wzlw4b-0 start"><li class="c4 li-bullet-0">Begins after FEOL is completed.<br /></li><li class="c4 li-bullet-0">Involves fabrication of metal interconnects.<br /></li><li class="c4 li-bullet-0">Antenna effect primarily occurs in this stage.<br /></li></ul>
+<h3 class="c12" id="h.n7umo3cajvf4">Role of Plasma Etching</h3>
+<p class="c9">Plasma etching is used to produce metal interconnects in IC manufacturing. It is a dry and anisotropic etching process. During metal etching:</p>
+<ul class="c1 lst-kix_gocf17f1mxnr-0 start"><li class="c4 li-bullet-0">Plasma consists of high-energy ions and radicals.<br /></li><li class="c4 li-bullet-0">These ions are collected by metal interconnects.<br /></li><li class="c4 li-bullet-0">If a long metal wire is connected to a transistor gate, it accumulates excessive charge.<br /></li><li class="c4 li-bullet-0">This charge may damage the thin gate oxide.<br /></li></ul>
+<hr>
+<p class="c0"></p>`},{id:`ch_30_consequence_of_antenna_effect_and_its_so`,title:`Consequence of Antenna Effect and Its Solution`,html:`<h3 class="c12" id="h.qi1nw7zeayqv">Antenna Violation</h3>
+<p class="c9">An Antenna Violation occurs when the antenna ratio exceeds the limit specified in the Process Design Kit (PDK).</p>
+<p class="c9">Antenna Ratio = (Metal Area Connected to Gate) / (Gate Oxide Area)</p>
+<p class="c9">The amount of charge collected is directly proportional to the area/size of the conductor (metal area connected to the gate). Larger metal area → higher charge → higher risk of damage.</p>
+<hr>
+<p class="c0"></p>`},{id:`ch_37_antenna_violation_solutions`,title:`Antenna Violation Solutions`,html:`<h3 class="c12" id="h.shso2q1onmkm">1. Metal Jumpers</h3>
+<ul class="c1 lst-kix_qwcrlc83tc3t-0 start"><li class="c4 li-bullet-0">Break long signal lines and use jumpers to route them to higher metal layers.<br /></li><li class="c4 li-bullet-0">When a jumper is inserted, the long wire connected to the gate is broken into smaller segments.<br /></li><li class="c4 li-bullet-0">This reduces the effective antenna area and minimizes charge accumulation.<br /></li><li class="c4 li-bullet-0">If an antenna violation occurs on a lower metal layer, higher metal layers should be used as jumpers because lower layers have already been fabricated.<br /></li></ul>
+<h3 class="c12" id="h.2hjhxq10tz3p">2. Diode Insertion</h3>
+<ul class="c1 lst-kix_vx4tx4xi0e2a-0 start"><li class="c4 li-bullet-0">A reverse-biased diode is connected near the gate input of the violated net.<br /></li><li class="c4 li-bullet-0">This provides a discharge path to the substrate during plasma etching.<br /></li><li class="c4 li-bullet-0">Protects the transistor’s gate from excessive charge buildup.<br /></li><li class="c4 li-bullet-0">However, adding a diode increases:<br /></li></ul>
+<ul class="c1 lst-kix_vx4tx4xi0e2a-1 start"><li class="c9 c17 li-bullet-0">Area<br /></li><li class="c9 c17 li-bullet-0">Capacitance<br /></li><li class="c9 c17 li-bullet-0">Signal delay</li></ul>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>`},{id:`ch_54_routing_in_physical_design`,title:`Routing in Physical Design`,html:`<p class="c9">Routing is the stage that follows Clock Tree Synthesis (CTS), where the physical interconnections between all design elements are created by determining the precise paths for each net.</p>
+<p class="c9">This includes the interconnection of:</p>
+<ul class="c1 lst-kix_rno0x49dfi6q-0 start"><li class="c4 li-bullet-0">Standard cells,<br /></li><li class="c4 li-bullet-0">Macro pins,<br /></li><li class="c4 li-bullet-0">Block boundary pins, and<br /></li><li class="c4 li-bullet-0">Chip boundary pads (I/O pads).<br /></li></ul>
+<p class="c9">After CTS, the tool has complete information about the exact locations of standard cells, pins, I/O ports, pads, and clock tree structure (from CTS DEF). The logical connectivity is already defined in the netlist, and the design rules are available in the technology file.</p>
+<p class="c9">During routing, metal layers and vias are used to create electrical connections in the layout so that all connections defined in the netlist are physically realized.</p>
+<p class="c9">In simple terms, routing can be defined as:<br /> Allocating a set of metal wires in the available routing space to connect all nets in the netlist while obeying design rules for metals and vias.</p>
+<hr>
+<p class="c0"></p>`},{id:`ch_63_goals_of_routing`,title:`Goals of Routing`,html:`<p class="c9">The primary objectives of routing are:</p>
+<ol class="c1 lst-kix_2i88abhlxgdq-0 start" start="1"><li class="c4 li-bullet-0">Achieve complete connectivity of the design.<br /></li><li class="c4 li-bullet-0">Minimize the total number of vias used.<br /></li><li class="c4 li-bullet-0">Optimize total wire length.<br /></li><li class="c4 li-bullet-0">Meet all timing constraints.<br /></li><li class="c4 li-bullet-0">Ensure zero LVS (Layout vs Schematic) errors, meaning all logical connections are correctly implemented in layout.<br /></li><li class="c4 li-bullet-0">Ensure zero DRC (Design Rule Check) violations.<br /></li><li class="c4 li-bullet-0">Complete routing within the defined design area without overflow.<br /></li></ol>
+<hr>
+<p class="c0"></p>`},{id:`ch_68_inputs_to_routing`,title:`Inputs to Routing`,html:`<p class="c9">The routing tool requires the following inputs:</p>
+<ol class="c1 lst-kix_saitaas66jv9-0 start" start="1"><li class="c4 li-bullet-0">Netlist (.v / .def / database)<br /></li><li class="c4 li-bullet-0">All cells and ports must be legally placed, along with the clock tree structure and CTS DEF file.<br /></li><li class="c4 li-bullet-0">Non-Default Rules (NDRs) for special routing requirements.<br /></li><li class="c4 li-bullet-0">Routing blockages defined during floorplanning/placement.<br /></li><li class="c4 li-bullet-0">Technology data, including:<br /></li></ol>
+<ul class="c1 lst-kix_saitaas66jv9-1 start"><li class="c9 c17 li-bullet-0">Metal layers (LEF, technology file),<br /></li><li class="c9 c17 li-bullet-0">DRC rules,<br /></li><li class="c9 c17 li-bullet-0">Via creation rules,<br /></li><li class="c9 c17 li-bullet-0">Grid rules (metal pitch, routing grid), etc.<br /></li></ul>
+<hr>
+<p class="c0"></p>`},{id:`ch_74_routing_constraints`,title:`Routing Constraints`,html:`<p class="c9">During routing, the following constraints can be applied to guide and control the router:</p>
+<ol class="c1 lst-kix_31x9kgo5hsoh-0 start" start="1"><li class="c4 li-bullet-0">Limit the number of routing layers used in the design.<br /></li><li class="c4 li-bullet-0">Restrict routing to specific regions of the chip.<br /></li><li class="c4 li-bullet-0">Set maximum allowed wire length for certain nets.<br /></li><li class="c4 li-bullet-0">Block routing in specific regions using routing blockages.<br /></li><li class="c4 li-bullet-0">Define minimum width and minimum spacing rules strictly for critical nets.<br /></li><li class="c4 li-bullet-0">Assign preferred routing directions (horizontal/vertical) to specific metal layers.<br /></li><li class="c4 li-bullet-0">Control routing density to avoid congestion.<br /></li><li class="c4 li-bullet-0">Constrain pin connections to specific layers or regions if needed.</li></ol>
+<p class="c0"></p>
+<hr>
+<p class="c7">Routing Flow<br /><br /><img alt="" src="/assets/modules/module17/image9.png" title="" class="native-img"></p>
+<p class="c9">The routing stage follows placement and Clock Tree Synthesis (CTS). The objective of routing is to physically implement all net connections defined in the netlist while satisfying timing, congestion, and design rule constraints.</p>
+<p class="c9">The different tasks performed in the routing stage are as follows:</p>
+<hr>
+<p class="c0"></p>`},{id:`ch_84_1_trial_global_routing`,title:`1. Trial / Global Routing`,html:`<p class="c9">Global routing identifies routable paths for nets between their driving and receiving pins using the shortest possible routes.<br /><br /><img alt="" src="/assets/modules/module17/image14.png" title="" class="native-img"></p>
+<p class="c9">Key characteristics:</p>
+<ul class="c1 lst-kix_q4nb9pfbpddy-0 start"><li class="c4 li-bullet-0">Does not strictly consider detailed DRC rules, but provides an overall view of routing feasibility.<br /></li><li class="c4 li-bullet-0">Gives an early estimate of congestion and identifies problematic regions.<br /></li><li class="c4 li-bullet-0">Assigns approximate layers to nets.<br /></li><li class="c4 li-bullet-0">Divides the routing region into rectangular tiles called Global Routing Cells (GRCs).<br /></li><li class="c4 li-bullet-0">Assigns net segments within GRCs instead of exact metal shapes.<br /></li><li class="c4 li-bullet-0">Avoids congested areas and unnecessary long detours.<br /></li><li class="c4 li-bullet-0">Avoids routing over placement and routing blockages.<br /></li><li class="c4 li-bullet-0">Avoids routing for pre-routed nets such as Power Rings, Stripes, and Rails.<br /></li><li class="c4 li-bullet-0">Uses Steiner Tree and Maze Routing algorithms for path estimation.<br /></li></ul>
+<h3 class="c12" id="h.niruwv4sla2r">Additional Important Points (Added):</h3>
+<ul class="c1 lst-kix_dtgfdgpe3g18-0 start"><li class="c4 li-bullet-0">Global routing produces demand vs supply reports (overflow maps).<br /></li><li class="c4 li-bullet-0">Helps guide placement optimization before detailed routing.<br /></li><li class="c4 li-bullet-0">Provides wirelength and via count estimates.<br /></li><li class="c4 li-bullet-0">Used for early parasitic estimation and timing analysis.<br /></li><li class="c4 li-bullet-0">Helps decide whether further floorplan or placement changes are required.<br /></li></ul>
+<hr>
+<p class="c0"></p>`},{id:`ch_92_2_track_assignment`,title:`2. Track Assignment`,html:`<p class="c9">Track Assignment takes the global routed layout and assigns each net to specific routing tracks and layers.<br /><br /><img alt="" src="/assets/modules/module17/image16.png" title="" class="native-img"></p>
+<p class="c9">Key characteristics:</p>
+<ul class="c1 lst-kix_ez6jtmrb1aa6-0 start"><li class="c4 li-bullet-0">Converts global routes into actual track-based routes.<br /></li><li class="c4 li-bullet-0">Does not strictly follow physical DRC rules, but is timing-aware.<br /></li><li class="c4 li-bullet-0">Helps in via minimization by intelligently assigning layers.<br /></li><li class="c4 li-bullet-0">Resolves overlaps between global routes by rerouting or adjusting tracks.<br /></li></ul>
+<h3 class="c12" id="h.x4ifokjkm91f">Additional Important Points (Added):</h3>
+<ul class="c1 lst-kix_s45y4g8u10tj-0 start"><li class="c4 li-bullet-0">Assigns preferred directions to layers (e.g., M1-horizontal, M2-vertical).<br /></li><li class="c4 li-bullet-0">Balances routing density across tracks.<br /></li><li class="c4 li-bullet-0">Creates a clearer picture for detailed routing.<br /></li><li class="c4 li-bullet-0">Helps reduce congestion hotspots before final routing.<br /></li></ul>
+<hr>
+<p class="c0"></p>`},{id:`ch_100_3_detailed_nano_routing`,title:`3. Detailed / Nano Routing`,html:`<p class="c9">Detailed routing is the final and most precise routing stage.<br /><img alt="" src="/assets/modules/module17/image13.png" title="" class="native-img"></p>
+<p class="c9">Key characteristics:</p>
+<ul class="c1 lst-kix_wqzm2ku7jw4c-0 start"><li class="c4 li-bullet-0">Uses track-routed segments as a guide and performs full DRC-aware routing.<br /></li><li class="c4 li-bullet-0">Fully timing-driven and congestion-aware.<br /></li><li class="c4 li-bullet-0">Finalizes exact metal shapes and via placements.<br /></li><li class="c4 li-bullet-0">Routing is completed after analyzing congestion issues from global routing.<br /></li><li class="c4 li-bullet-0">If congestion is high, the following may be done before detailed routing:<br /></li></ul>
+<ul class="c1 lst-kix_wqzm2ku7jw4c-1 start"><li class="c9 c17 li-bullet-0">Add density screens,<br /></li><li class="c9 c17 li-bullet-0">Modify floorplan,<br /></li><li class="c9 c17 li-bullet-0">Adjust macro placement,<br /></li><li class="c9 c17 li-bullet-0">Apply additional routing blockages.<br /></li></ul>
+<ul class="c1 lst-kix_wqzm2ku7jw4c-0"><li class="c4 li-bullet-0">Filler cells are inserted before detailed routing.<br /></li></ul>
+<h3 class="c12" id="h.mv4o8wfku3wy">Additional Important Points (Added):</h3>
+<ul class="c1 lst-kix_v96apdmzai17-0 start"><li class="c4 li-bullet-0">Fixes all DRC violations (spacing, width, enclosure, antenna, etc.).<br /></li><li class="c4 li-bullet-0">Fixes signal integrity (SI) issues such as crosstalk where applicable.<br /></li><li class="c4 li-bullet-0">Performs final parasitic extraction (RC extraction).<br /></li><li class="c4 li-bullet-0">Final timing analysis is done after detailed routing.<br /></li><li class="c4 li-bullet-0">Ensures LVS-clean routing (no missing or extra connections).<br /></li></ul>
+<hr>
+<p class="c0"></p>`},{id:`ch_112_4_grid_based_routing`,title:`4. Grid-Based Routing`,html:`<p class="c9">Routing is performed on predefined routing grids.<br /><img alt="" src="/assets/modules/module17/image15.png" title="" class="native-img"></p>
+<p class="c9">Key characteristics:</p>
+<ul class="c1 lst-kix_nz2vm55jdaih-0 start"><li class="c4 li-bullet-0">Metal traces (routes) are built along and centered on routing tracks on grid points.<br /></li><li class="c4 li-bullet-0">Different types of grids used in physical design:<br /></li></ul>
+<ol class="c1 lst-kix_nz2vm55jdaih-1 start" start="1"><li class="c9 c17 li-bullet-0">Manufacturing Grid – Smallest resolution allowed by the fabrication process.<br /></li><li class="c9 c17 li-bullet-0">Routing Grid (Pitch Grid) – Defines allowed routing track positions.<br /></li><li class="c9 c17 li-bullet-0">Placement Grid – Defines legal cell placement positions.<br /></li></ol>
+<ul class="c1 lst-kix_nz2vm55jdaih-0"><li class="c4 li-bullet-0">The routing grid dimension must be a multiple of the manufacturing grid to ensure manufacturability.<br /></li></ul>
+<h3 class="c12" id="h.1849t1o16hat">Additional Important Points (Added):</h3>
+<ul class="c1 lst-kix_483gfk8n00nk-0 start"><li class="c4 li-bullet-0">Routing grid alignment avoids misalignment between layers.<br /></li><li class="c4 li-bullet-0">Ensures consistent spacing and pitch across the chip.<br /></li><li class="c4 li-bullet-0">Helps maintain uniform routing density.<br /></li><li class="c4 li-bullet-0">Supports layer preference (preferred vs non-preferred directions).<br /></li><li class="c4 li-bullet-0">Helps reduce jogs and unnecessary vias.<br /></li></ul>
+<hr>
+<p class="c0"></p>`},{id:`ch_122_overall_routing_flow_summary_added_for_c`,title:`Overall Routing Flow Summary (Added for Completeness)`,html:`<ol class="c1 lst-kix_ieye2p22mxnn-0 start" start="1"><li class="c4 li-bullet-0">Global Routing → Estimate paths, identify congestion.<br /></li><li class="c4 li-bullet-0">Track Assignment → Assign tracks and layers, reduce vias.<br /></li><li class="c4 li-bullet-0">Detailed Routing → Final DRC-clean routing.<br /></li><li class="c4 li-bullet-0">Post-Routing Optimization → Fix timing, SI, and EM issues.<br /></li><li class="c4 li-bullet-0">Final Signoff → LVS, DRC, STA, SI, and EM checks.<br /></li></ol>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>`},{id:`ch_141_post_routing_optimization`,title:`Post Routing Optimization`,html:`<p class="c9">After detailed routing, further optimization is required to improve signal quality, timing, reliability, and manufacturability. This stage is called Post Routing Optimization.</p>`},{id:`ch_143_1_signal_integrity_si_optimization`,title:`1. Signal Integrity (SI) Optimization`,html:`<p class="c9">Signal Integrity optimization is performed to reduce noise, crosstalk, and glitch effects on critical signals.</p>
+<h3 class="c12" id="h.gz6aaypau0cq">Your points (kept):</h3>
+<ul class="c1 lst-kix_lxxww5mxtt4d-0 start"><li class="c4 li-bullet-0">SI Optimization using NDRs (Non-Default Rules)<br /></li><li class="c4 li-bullet-0">Shielding for sensitive nets<br /></li></ul>
+<h3 class="c12" id="h.f91rqzk0ksmq">Additional important points (added):</h3>
+<ul class="c1 lst-kix_w72b3qhw0ha0-0 start"><li class="c4 li-bullet-0">Reduction of crosstalk between aggressor and victim nets<br /></li><li class="c4 li-bullet-0">Slew control using buffer insertion or resizing<br /></li><li class="c4 li-bullet-0">Reduction of overshoot/undershoot on critical signals<br /></li><li class="c4 li-bullet-0">Optimization of coupling capacitance<br /></li><li class="c4 li-bullet-0">Avoid long parallel routing for critical nets<br /></li><li class="c4 li-bullet-0">Use of preferred routing layers for sensitive signals<br /></li><li class="c4 li-bullet-0">Re-routing of critical nets if required<br /></li></ul>
+<h3 class="c12" id="h.wtt4axz3hnq9">Types of Shielding for Sensitive Nets</h3>
+<h4 class="c14" id="h.h6onpq9mepxa">i. Same Layer Shielding</h4>
+<ul class="c1 lst-kix_e8hn57p8n65h-0 start"><li class="c4 li-bullet-0">Shield wire placed on the same metal layer as the signal net<br /></li><li class="c4 li-bullet-0">Reduces lateral coupling noise<br /></li><li class="c4 li-bullet-0">Requires more routing space<br /></li><li class="c4 li-bullet-0">Easier to implement but less effective than coaxial shielding<br /></li></ul>
+<h4 class="c14" id="h.lutt0mvmg5u0">ii. Adjacent Layer / Coaxial Shielding</h4>
+<ul class="c1 lst-kix_r7e9o2emclv2-0 start"><li class="c4 li-bullet-0">Shield placed on adjacent metal layers (above/below)<br /></li><li class="c4 li-bullet-0">Provides better isolation than same-layer shielding<br /></li><li class="c4 li-bullet-0">More effective for high-frequency and clock nets<br /></li><li class="c4 li-bullet-0">Slightly increases routing complexity and metal usage<br /></li></ul>
+<p class="c9 c35"><img alt="" src="/assets/modules/module17/image19.png" title="" class="native-img"></p>
+<p class="c9 c22"></p>
+<hr>
+<p class="c0"></p>`},{id:`ch_159_filler_cell_insertion`,title:`Filler Cell Insertion`,html:`<p class="c9">Filler cells are used to fill empty spaces between standard cells to ensure proper well and implant continuity.</p>
+<h3 class="c12" id="h.vzbx46er161p">Your points (kept):</h3>
+<ul class="c1 lst-kix_pwapo2vq4r5t-0 start"><li class="c4 li-bullet-0">Filler cells can be inserted before or after detailed routing.<br /></li><li class="c4 li-bullet-0">If fillers contain metal routing other than pre-routing, they should be inserted before routing.<br /></li><li class="c4 li-bullet-0">Width of the smallest filler cell equals the Placement Grid Width.<br /></li><li class="c4 li-bullet-0">Once fillers are inserted, placement is fixed and cells cannot be moved further.<br /></li></ul>
+<h3 class="c12" id="h.umhcj36kkigr">Additional important points (added):</h3>
+<ul class="c1 lst-kix_6vu77u7l3sd1-0 start"><li class="c4 li-bullet-0">Prevents DRC violations related to well and implant layers<br /></li><li class="c4 li-bullet-0">Ensures uniform power distribution<br /></li><li class="c4 li-bullet-0">Avoids manufacturing defects at row boundaries<br /></li><li class="c4 li-bullet-0">Helps maintain regular cell row structure<br /></li><li class="c4 li-bullet-0">Required before final signoff checks<br /></li></ul>
+<p class="c9 c35"><img alt="" src="/assets/modules/module17/image18.png" title="" class="native-img"></p>
+<p class="c9">Metal Fill</p>
+<p class="c9">Metal fill is used to satisfy metal density rules during fabrication.</p>
+<h3 class="c12" id="h.wchqcxgw34os">Your points (kept):</h3>
+<ul class="c1 lst-kix_qkg3j1suxptb-0 start"><li class="c4 li-bullet-0">Used to fill empty metal tracks with metal shapes<br /></li><li class="c4 li-bullet-0">Two types of metal fill:<br /></li></ul>
+<ul class="c1 lst-kix_qkg3j1suxptb-1 start"><li class="c9 c17 li-bullet-0">Floating Metal Fill<br /></li><li class="c9 c17 li-bullet-0">Grounded Metal Fill<br /></li></ul>
+<h3 class="c12" id="h.2vchscnvtic">Additional important points (added):</h3>
+<ul class="c1 lst-kix_perzctn2wa5y-0 start"><li class="c4 li-bullet-0">Prevents over-etching and metal erosion<br /></li><li class="c4 li-bullet-0">Improves planarity during CMP (Chemical Mechanical Polishing)<br /></li><li class="c4 li-bullet-0">Helps maintain uniform mechanical stress across the chip<br /></li><li class="c4 li-bullet-0">Can impact parasitic capacitance if not controlled<br /></li><li class="c4 li-bullet-0">Must follow spacing rules from neighboring nets<br /></li></ul>
+<h3 class="c12" id="h.k1f6ut74z5qf">Types of Metal Fill</h3>
+<h4 class="c14" id="h.l9gh27sdqmsn">i. Floating Metal Fill</h4>
+<ul class="c1 lst-kix_5n3m1o4jv47t-0 start"><li class="c4 li-bullet-0">Not connected to VDD or GND<br /></li><li class="c4 li-bullet-0">Does not fully shield aggressor nets<br /></li><li class="c4 li-bullet-0">Easier to implement<br /></li><li class="c4 li-bullet-0">Can increase signal integrity (SI) issues<br /></li></ul>
+<h4 class="c14" id="h.7qkgv27wa3ds">ii. Grounded Metal Fill</h4>
+<ul class="c1 lst-kix_zdev83d6x2ra-0 start"><li class="c4 li-bullet-0">Connected to ground (VSS)<br /></li><li class="c4 li-bullet-0">Provides better shielding against noise<br /></li><li class="c4 li-bullet-0">Reduces crosstalk and coupling effects<br /></li><li class="c4 li-bullet-0">More complex to implement<br /></li><li class="c4 li-bullet-0">Slightly increases routing and via usage<br /></li></ul>
+<p class="c9 c22"></p>
+<hr>
+<p class="c0"></p>`},{id:`ch_183_spare_cells_tie_up_tie_down_cells_`,title:`Spare Cells (Tie-up / Tie-down Cells)`,html:`<p class="c9">Tie cells are special cells used for electrical stability and reliability.</p>
+<h3 class="c12" id="h.i8azbf94m0rs">Your points (kept):</h3>
+<ul class="c1 lst-kix_mcue79jfdhvp-0 start"><li class="c4 li-bullet-0">Tie cells connect the gate of cells to VDD/VSS<br /></li><li class="c4 li-bullet-0">Reduce ESD issues<br /></li><li class="c4 li-bullet-0">Help avoid power bounce and ground bounce<br /></li><li class="c4 li-bullet-0">Tie cells are MOS devices in diode-connected configuration<br /></li></ul>
+<h3 class="c12" id="h.xpmte8sdfxzn">Additional important points (added):</h3>
+<ul class="c1 lst-kix_kzyva726xgv7-0 start"><li class="c4 li-bullet-0">Used for unused input pins of standard cells<br /></li><li class="c4 li-bullet-0">Prevent floating nodes<br /></li><li class="c4 li-bullet-0">Improve noise immunity<br /></li><li class="c4 li-bullet-0">Reduce leakage risk on unconnected gates<br /></li><li class="c4 li-bullet-0">Often placed automatically by PnR tools<br /></li></ul>
+<p class="c9 c28"><img alt="" src="/assets/modules/module17/image7.png" title="" class="native-img"></p>
+<hr>
+<p class="c0"></p>`},{id:`ch_192_outputs_of_routing`,title:`Outputs of Routing`,html:`<p class="c9">After detailed routing and post-routing optimization, the following outputs are generated:</p>
+<h3 class="c12" id="h.zcoxt4xldn2r">Your points (kept):</h3>
+<ol class="c1 lst-kix_fz0lfyopnat5-0 start" start="1"><li class="c4 li-bullet-0">Routing database file or DEF file with no opens or shorts<br /></li><li class="c4 li-bullet-0">Final Timing Report<br /></li><li class="c4 li-bullet-0">Congestion Report<br /></li><li class="c4 li-bullet-0">Skew &amp; Insertion Delay Report<br /></li><li class="c4 li-bullet-0">Geometric layout of all nets</li></ol>
+<p class="c9 c35 c46"></p>
+<p class="c9 c35"><img alt="" src="/assets/modules/module17/image4.png" title="" class="native-img"><br /></p>
+<h3 class="c12" id="h.it37w2mpjuwl">Additional important outputs (added):</h3>
+<ol class="c1 lst-kix_sx7k38deywmt-0 start" start="6"><li class="c4 li-bullet-0">Parasitic extraction file (SPEF/RC file)<br /></li><li class="c4 li-bullet-0">DRC clean report<br /></li><li class="c4 li-bullet-0">LVS clean report<br /></li><li class="c4 li-bullet-0">Power analysis report<br /></li><li class="c4 li-bullet-0">EM (Electromigration) report<br /></li><li class="c4 li-bullet-0">SI (Signal Integrity) analysis report<br /></li></ol>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>`},{id:`ch_207_decap_cells_decoupling_capacitor_cells_`,title:`Decap Cells (Decoupling Capacitor Cells)`,html:`<p class="c9">Decap filler cells are small capacitors placed between VDD and GND across the layout. When the logic circuit draws a high amount of current (during switching activity), these capacitors supply extra charge to the circuit locally. When the circuit is not drawing current, the decap cells get recharged back to their maximum capacitance.</p>
+<p class="c9">Mathematically, the voltage drop on the power network can be expressed as:</p>
+<p class="c7">V=IR+LdidtV = IR + L \\frac{di}{dt}V=IR+Ldtdi​<br /><br /><img alt="" src="/assets/modules/module17/image8.png" title="" class="native-img"></p>
+<p class="c9">Where,</p>
+<ul class="c1 lst-kix_ai9szlb8n9yc-0 start"><li class="c4 li-bullet-0">IR drop = Voltage drop due to resistance of metal layers<br /></li><li class="c4 li-bullet-0">L(di/dt) drop = Voltage drop due to inductance when current changes rapidly<br /></li></ul>
+<p class="c9">If the voltage drop is greater than the Noise Margin (NM) of an inverter, it may cause incorrect logic behavior.</p>
+<p class="c9">For example, assume:</p>
+<ul class="c1 lst-kix_ts7n3drjnygw-0 start"><li class="c4 li-bullet-0">Supply voltage = 1V<br /></li><li class="c4 li-bullet-0">Noise Margin (NM) = 0.4V<br /></li></ul>
+<p class="c9">Then, the minimum valid logic ‘1’ level = 1 – 0.4 = 0.6V</p>
+<p class="c9">Now, if the voltage drop is 0.5V, the effective voltage becomes:<br /> 1 – 0.5 = 0.5V, which is below 0.6V, and the inverter may interpret this as logic ‘0’, causing functional failure.</p>
+<p class="c9">This is where decap cells come into the picture. These cells store charge and act as local charge reservoirs. They are placed close to power-hungry cells. Whenever these cells switch and demand sudden current, the decap cells discharge and supply the required current locally, helping to keep the supply voltage stable and reducing IR drop and Ldi/dt effects.</p>
+<hr>
+<p class="c0"></p>`},{id:`ch_221_role_of_decap_cells_in_modern_technology`,title:`Role of Decap Cells in Modern Technology Nodes`,html:`<p class="c9">With increasing clock frequency and decreasing supply voltage as technology scales, maintaining power integrity has become more critical. Typically, decap cells are used to keep the power supply within ±10% of the nominal voltage.</p>
+<p class="c9">Key roles of decap cells:</p>
+<ul class="c1 lst-kix_bp6om9mqy1bn-0 start"><li class="c4 li-bullet-0">Store local charge and provide instantaneous current during switching<br /></li><li class="c4 li-bullet-0">Reduce IR drop and L(di/dt) noise<br /></li><li class="c4 li-bullet-0">Stabilize power supply near high switching activity regions<br /></li><li class="c4 li-bullet-0">Reduce ground bounce and power bounce<br /></li><li class="c4 li-bullet-0">Improve signal integrity and functional reliability<br /></li></ul>
+<p class="c9">Decap cells are usually implemented using NMOS transistors in a CMOS process, behaving like capacitors between VDD and GND.</p>
+<hr>
+<p class="c0"></p>`},{id:`ch_228_technology_scaling_challenges_90nm_and_b`,title:`Technology Scaling Challenges (90nm and below)`,html:`<p class="c9">At 90nm and below:</p>
+<ul class="c1 lst-kix_eeh3p11tqq4r-0 start"><li class="c4 li-bullet-0">Gate oxide thickness reduces (~2.0nm at 90nm node)<br /></li><li class="c4 li-bullet-0">This introduces two major issues:<br /></li></ul>
+<ol class="c1 lst-kix_eeh3p11tqq4r-1 start" start="1"><li class="c9 c17 li-bullet-0">Higher risk of ESD-induced oxide breakdown<br /></li><li class="c9 c17 li-bullet-0">Increased gate tunneling leakage<br /></li></ol>
+<p class="c9">As technology scales further:</p>
+<ul class="c1 lst-kix_74sxfgu6hlnp-0 start"><li class="c4 li-bullet-0">ESD vulnerability increases<br /></li><li class="c4 li-bullet-0">Static power consumption increases due to leakage<br /></li><li class="c4 li-bullet-0">More careful placement and sizing of decap cells is required<br /></li></ul>
+<hr>
+<p class="c0"></p>`},{id:`ch_236_disadvantages_of_decap_cells_your_points`,title:`Disadvantages of Decap Cells (Your Points – Retained)`,html:`<ol class="c1 lst-kix_6ghrj5qvcxf8-0 start" start="1"><li class="c4 li-bullet-0">High Leakage Power<br /> Decap cells are very leaky and contribute to static power consumption.<br /></li><li class="c4 li-bullet-0">Interaction with Package RLC Network<br /></li></ol>
+<ul class="c1 lst-kix_6ghrj5qvcxf8-1 start"><li class="c9 c17 li-bullet-0">The chip (die) behaves like a small capacitor with small resistance (R) and inductance (L).<br /></li><li class="c9 c17 li-bullet-0">The package has much larger R, L, and C values.<br /></li><li class="c9 c17 li-bullet-0">Excessive decap insertion may create resonance between on-chip capacitance and package RLC network.<br /></li><li class="c9 c17 li-bullet-0">This can cause VDD and GND oscillations, leading to functional failures.<br /></li><li class="c9 c17 li-bullet-0">Many designs fail due to improper decap planning and resonance effects.<br /></li></ul>
+<hr>
+<p class="c0"></p>`},{id:`ch_242_additional_important_points`,title:`Additional Important Points`,html:`<h3 class="c12" id="h.6b1pcpggty0v">Where to Place Decap Cells</h3>
+<p class="c9">Decap cells are typically placed:</p>
+<ul class="c1 lst-kix_n9w1f1wx89l5-0 start"><li class="c4 li-bullet-0">Near high switching activity blocks (e.g., clock buffers, large drivers)<br /></li><li class="c4 li-bullet-0">Around macros and large IP blocks<br /></li><li class="c4 li-bullet-0">Near power pads and core rings<br /></li><li class="c4 li-bullet-0">In congested regions with high IR drop<br /></li></ul>
+<h3 class="c12" id="h.mqtkd11zaa1a">Types of Decap Cells</h3>
+<ol class="c1 lst-kix_wbpzuur03ft1-0 start" start="1"><li class="c4 li-bullet-0">Local Decaps – Placed near standard cells<br /></li><li class="c4 li-bullet-0">Macro Decaps – Placed near large IPs<br /></li><li class="c4 li-bullet-0">Grid Decaps – Distributed across the core area<br /></li></ol>
+<h3 class="c12" id="h.yrgi8jijnpfr">Decap Insertion Strategies</h3>
+<ul class="c1 lst-kix_cr0cutfh12id-0 start"><li class="c4 li-bullet-0">Pre-CTS Decap insertion – To improve power integrity before clock tree synthesis<br /></li><li class="c4 li-bullet-0">Post-CTS Decap insertion – To fix residual IR drop issues<br /></li><li class="c4 li-bullet-0">Targeted Decap insertion – Only in high IR drop regions based on analysis<br /></li></ul>
+<h3 class="c12" id="h.edgx1elybloa">Impact on Timing and Power</h3>
+<ul class="c1 lst-kix_vhzwdu16s8lj-0 start"><li class="c4 li-bullet-0">Helps improve timing by reducing voltage drop<br /></li><li class="c4 li-bullet-0">Improves hold/setup stability<br /></li><li class="c4 li-bullet-0">Increases area and leakage power slightly<br /></li><li class="c4 li-bullet-0">Needs careful trade-off between power integrity and area/power overhead<br /></li></ul>
+<h3 class="c12" id="h.9u856pxx17fp">Tool-Based Decap Insertion (Industry Practice)</h3>
+<p class="c9">Most PnR tools support automated decap insertion using commands such as:</p>
+<ul class="c1 lst-kix_3kjul3v5lpf6-0 start"><li class="c4 li-bullet-0">create_decaps<br /></li><li class="c4 li-bullet-0">add_decaps<br /></li><li class="c4 li-bullet-0">insert_decap_cells<br /></li></ul>
+<p class="c9">These tools insert decap cells based on:</p>
+<ul class="c1 lst-kix_qq9t98ksw9zq-0 start"><li class="c4 li-bullet-0">IR drop analysis<br /></li><li class="c4 li-bullet-0">Power grid density<br /></li><li class="c4 li-bullet-0">Switching activity<br /></li></ul>
+<p class="c0"></p>
+<hr>
+<p class="c0"></p>`},{id:`ch_260_filler_cells`,title:`Filler Cells`,html:`<p class="c9">After completion of placement and routing, there are usually empty gaps left in the layout where no standard cells are placed. It is not practical to place standard cells continuously without any gaps because doing so can lead to severe routing congestion and may also result in poor timing quality of results (QoR).</p>
+<p class="c9">For example, if the design utilization is around 70%, then approximately 30% of the core area remains unfilled. If we perform a base-layer DRC check at this stage (using a tool that checks implant and well layers), we may observe violations such as:</p>
+<ul class="c1 lst-kix_o8q2lsmw6hl8-0 start"><li class="c4 li-bullet-0">“NWell minimum spacing not met”<br /></li><li class="c4 li-bullet-0">“Well continuity violation”<br /></li><li class="c4 li-bullet-0">“Implant spacing violation”<br /></li></ul>
+<p class="c9">This is where filler cells become necessary.</p>
+<p class="c9">For a DRC-clean layout, NWell continuity must be maintained across each standard cell row. It is mandatory that there should be no well or moat spacing violations, i.e., spacing should not be less than the minimum allowed by the technology rules.</p>
+<p class="c9">Although one could try to space cells apart to avoid minimum spacing violations, this is very difficult to manage in a row-based standard cell layout. Moreover, in a tap-less standard cell library, filler cells are even more critical because they ensure proper well tie-offs. Even if spacing between cells is greater than the minimum allowed well spacing, there can still be continuity errors in power connections unless each isolated well region has its own tie cell.</p>
+<p class="c9">Filler cells are physical-only cells with no logical functionality. Their main purpose is to:</p>
+<ul class="c1 lst-kix_fgne5209029-0 start"><li class="c4 li-bullet-0">Continue the base layers such as NWell and PWell,<br /></li><li class="c4 li-bullet-0">Maintain continuous implant regions,<br /></li><li class="c4 li-bullet-0">Provide VDD and VSS pins aligned with standard cell rails, and<br /></li><li class="c4 li-bullet-0">Ensure uniform power/ground connectivity across the row.<br /></li></ul>
+<p class="c9">In every standard cell library, there is at least one filler cell with the smallest tile width, which matches the placement grid. Using this smallest filler, any gap left after placement can be filled precisely, provided that the placement followed the correct placement grid.</p>
+<hr>
+<p class="c0"></p>`},{id:`ch_272_def_design_exchange_format_`,title:`DEF (Design Exchange Format)`,html:`<p class="c9">DEF (Design Exchange Format) file is used to represent the physical layout of an Integrated Circuit (IC) in ASCII (human-readable) format.</p>
+<p class="c9">A DEF file is strongly associated with the Library Exchange Format (LEF) file. Both files together are required for correct interpretation and display of the physical design in any EDA tool.</p>
+<p class="c9">The DEF format was developed by Cadence Design Systems. Whenever we need to transfer a physical design database from one EDA tool to another for further implementation, verification, or analysis, we use a DEF file.</p>
+<p class="c9">For example:</p>
+<ul class="c1 lst-kix_50yymug36d51-0 start"><li class="c4 li-bullet-0">IR drop analysis on PnR database<br /></li><li class="c4 li-bullet-0">Static Timing Analysis (STA) on post-placement or post-routing database<br /></li><li class="c4 li-bullet-0">Migration from Innovus to ICC2 or vice versa<br /></li></ul>
+<p class="c9">In such cases, the design is exported in the form of a DEF file.</p>
+<hr>
+<p class="c0"></p>`},{id:`ch_281_what_information_does_def_contain_`,title:`What Information Does DEF Contain?`,html:`<p class="c9">A DEF file contains design-specific information and represents the state of the design at any point during the physical design flow (after floorplanning, placement, CTS, or routing).</p>
+<p class="c9">DEF conveys both:</p>
+<h3 class="c12" id="h.skuflrvuzfqs">1. Logical Design Data</h3>
+<p class="c9">This includes:</p>
+<ul class="c1 lst-kix_qxacxcjxn2tb-0 start"><li class="c4 li-bullet-0">Internal connectivity (netlist information)<br /></li><li class="c4 li-bullet-0">Group information (e.g., groups, bounds, regions)<br /></li><li class="c4 li-bullet-0">Physical constraints applied to the design<br /></li></ul>
+<h3 class="c12" id="h.i6osoektvtgg">2. Physical Design Data</h3>
+<p class="c9">This includes:</p>
+<ul class="c1 lst-kix_enf6818919ng-0 start"><li class="c4 li-bullet-0">Placement location of standard cells and macros<br /></li><li class="c4 li-bullet-0">Orientation of components<br /></li><li class="c4 li-bullet-0">Routing geometry (metal shapes, vias, special nets, etc.)<br /></li><li class="c4 li-bullet-0">Blockages, regions, and floorplan details<br /></li></ul>
+<hr>
+<p class="c0"></p>`},{id:`ch_293_def_file_sections_standard_order_`,title:`DEF File Sections (Standard Order)`,html:`<p class="c9">A standard DEF file contains the following main sections, and the order of statements is important:</p>
+<p class="c7">[VERSION statement]</p>
+<p class="c7">[DIVIDERCHAR statement]</p>
+<p class="c7">[BUSBITCHARS statement]</p>
+<p class="c7">[DESIGN statement]</p>
+<p class="c7">[TECHNOLOGY statement]</p>
+<p class="c7">[UNITS statement]</p>
+<p class="c7">[DIEAREA statement]</p>
+<p class="c7">[ROW statement]</p>
+<p class="c7">[TRACKS statement]</p>
+<p class="c7">[CELLGRID statement]</p>
+<p class="c7">[VIAS statement]</p>
+<p class="c7">[NONDEFAULTRULES statement]</p>
+<p class="c7">[COMPONENTS statement]</p>
+<p class="c7">[PINS section]</p>
+<p class="c7">[BLOCKAGE section]</p>
+<p class="c7">[FILLS section]</p>
+<p class="c7">[SPECIALNETS section]</p>
+<p class="c7">[NETS section]</p>
+<p class="c7">[SCANCHAINS section]</p>
+<p class="c7">[GROUPS section]</p>
+<p class="c7">[BEGINEXT section]</p>
+<p class="c7">END DESIGN statement</p>
+<hr>
+Header Information in DEF
+<br />
+<img alt="" src="/assets/modules/module17/image2.png" title="" class="native-img">
+
+<p class="c9">In the header part of the DEF file, the following information is specified:</p>
+<ul class="c1 lst-kix_kzuwj15g2ra-0 start"><li class="c4 li-bullet-0">DEF version<br /></li><li class="c4 li-bullet-0">Design name<br /></li><li class="c4 li-bullet-0">Technology name<br /></li><li class="c4 li-bullet-0">Units (microns or database units)<br /></li><li class="c4 li-bullet-0">Die area (DIEAREA)<br /></li></ul>
+<p class="c9">This information defines the global context of the physical design.</p>
+<hr>
+<p class="c0"></p>`},{id:`ch_327_row_statement_in_def`,title:`ROW Statement in DEF`,html:`<p class="c9">The ROW section defines the placement rows for standard cells.<br /><img alt="" src="/assets/modules/module17/image6.png" title="" class="native-img"></p>
+<h3 class="c12" id="h.3coywla618su">Syntax:</h3>
+<p class="c7">ROW rowName siteName origX origY siteOrient </p>
+<p class="c7">  DO numX BY numY </p>
+<p class="c7">  STEP stepX stepY </p>
+<p class="c7">  + PROPERTY {propName propVal} ;</p>
+<p class="c0"></p>
+<h3 class="c12" id="h.ti4ag0rj932f">Explanation of Fields</h3>
+<h4 class="c14" id="h.ou9cqs5zg43m">rowName</h4>
+<ul class="c1 lst-kix_yay8im8zlv99-0 start"><li class="c4 li-bullet-0">Specifies the name of the placement row.<br /></li></ul>
+<h4 class="c14" id="h.cpfjklxq2wjc">siteName</h4>
+<ul class="c1 lst-kix_fd6pq42rwfeg-0 start"><li class="c4 li-bullet-0">Specifies the LEF site to be used for this row (e.g., CORE, CORE_TAP, etc.).<br /></li></ul>
+<h4 class="c14" id="h.pm7dm4aw4ids">origX, origY</h4>
+<ul class="c1 lst-kix_sikssyqgujs5-0 start"><li class="c4 li-bullet-0">Specifies the location of the first site in the row in the layout.<br /></li></ul>
+<h4 class="c14" id="h.3usw05aoid39">siteOrientation</h4>
+<ul class="c1 lst-kix_ahg8rh5szsbj-0 start"><li class="c4 li-bullet-0">Specifies the orientation of all sites in that row (e.g., N, S, E, W, FN, FS, etc.).<br /></li></ul>
+<h4 class="c14" id="h.fz70z4qu8gof">DO numX BY numY</h4>
+<ul class="c1 lst-kix_bl89jobdsmi3-0 start"><li class="c4 li-bullet-0">Specifies the repeating set of sites that create the row.<br /></li><li class="c4 li-bullet-0">One of the values (numX or numY) must be 1.<br /></li><li class="c4 li-bullet-0">If numY = 1, the row will be horizontal.<br /></li><li class="c4 li-bullet-0">If numX = 1, the row will be vertical.<br /></li></ul>
+<h4 class="c14" id="h.kp3723u1qtot">STEP stepX stepY</h4>
+<ul class="c1 lst-kix_qocrdwrv9bbt-0 start"><li class="c4 li-bullet-0">Specifies the spacing between sites:<br /></li></ul>
+<ul class="c1 lst-kix_qocrdwrv9bbt-1 start"><li class="c9 c17 li-bullet-0">stepX → spacing in horizontal direction<br /></li><li class="c9 c17 li-bullet-0">stepY → spacing in vertical direction<br /></li></ul>
+<hr>
+<p class="c0"></p>
+<h3 class="c12" id="h.ljgjodey89w7">Example of ROW Statement (Illustrative)</h3>
+<p class="c7">ROW ROW1 CORE 0 0 N DO 100 BY 1 STEP 0.8 0.0 ;</p>
+<p class="c0"></p>
+<p class="c9">This means:</p>
+<ul class="c1 lst-kix_n6wtzeycbfiz-0 start"><li class="c4 li-bullet-0">Row name = ROW1<br /></li><li class="c4 li-bullet-0">Site = CORE<br /></li><li class="c4 li-bullet-0">Starts at (0,0)<br /></li><li class="c4 li-bullet-0">Orientation = North (N)<br /></li><li class="c4 li-bullet-0">100 sites in X direction, 1 in Y direction<br /></li><li class="c4 li-bullet-0">Site pitch = 0.8 microns horizontally<br /></li></ul>
+<hr>
+<p class="c0"></p>`},{id:`ch_358_tracks_statement`,title:`TRACKS Statement`,html:`<p class="c9">Tracks define the routing grid used by the router.</p>
+<h3 class="c12" id="h.bfb4wgi1c3gp">Syntax:</h3>
+<p class="c7">TRACKS {X | Y} start DO numTracks STEP space LAYER layerName ;</p>
+<p class="c0"></p>
+<h3 class="c12" id="h.r7dze9qlge3d">Explanation:</h3>
+<ul class="c1 lst-kix_hcl5xklla6du-0 start"><li class="c4 li-bullet-0">X or Y → Specifies horizontal or vertical tracks<br /></li><li class="c4 li-bullet-0">start → Starting coordinate of first track<br /></li><li class="c4 li-bullet-0">DO numTracks → Number of tracks<br /></li><li class="c4 li-bullet-0">STEP space → Spacing between tracks<br /></li><li class="c4 li-bullet-0">LAYER layerName → Metal layer associated with the tracks<br /></li></ul>
+<hr>
+<p class="c0"></p>
+<h3 class="c12" id="h.xt7puwfcykar">Example:</h3>
+<p class="c7">TRACKS X 0.4 DO 200 STEP 0.8 LAYER M2 ;</p>
+<p class="c0"></p>
+<p class="c9">This means:</p>
+<ul class="c1 lst-kix_sksi8pj9g1qc-0 start"><li class="c4 li-bullet-0">Horizontal tracks start at 0.4 microns<br /></li><li class="c4 li-bullet-0">200 tracks in X-direction<br /></li><li class="c4 li-bullet-0">Track pitch = 0.8 microns<br /></li><li class="c4 li-bullet-0">Assigned to Metal layer M2<br /></li></ul>
+<hr>
+<p class="c0"></p>`},{id:`ch_374_additional_important_def_sections_added_`,title:`Additional Important DEF Sections (Added for Completeness)`,html:`<h3 class="c12" id="h.1rtbz31jn8fu">COMPONENTS Section</h3>
+<ul class="c1 lst-kix_k9kxww7fo2cp-0 start"><li class="c4 li-bullet-0">Lists all placed standard cells and macros with their coordinates and orientation.<br /></li></ul>
+<h3 class="c12" id="h.9ei22c9di46j">PINS Section</h3>
+<ul class="c1 lst-kix_mwib1j81jkh9-0 start"><li class="c4 li-bullet-0">Defines the locations of input/output pins.<br /></li></ul>
+<h3 class="c12" id="h.sd1nnxtuktlg">SPECIALNETS Section</h3>
+<ul class="c1 lst-kix_kbdmcrqneisv-0 start"><li class="c4 li-bullet-0">Defines power and ground routing (VDD, VSS, VSSIO, etc.).<br /></li></ul>
+<h3 class="c12" id="h.f4sskeymnr8u">NETS Section</h3>
+<ul class="c1 lst-kix_fn6onbmty6ds-0 start"><li class="c4 li-bullet-0">Contains detailed routing information for signal nets (metal segments and vias).<br /></li></ul>
+<h3 class="c12" id="h.vx2epa4h7nx3">BLOCKAGE Section</h3>
+<ul class="c1 lst-kix_ypsl6z8gvrmu-0 start"><li class="c4 li-bullet-0">Specifies placement and routing blockages.<br /></li></ul>
+<h3 class="c12" id="h.n542joovz90g">VIAS Section</h3>
+<ul class="c1 lst-kix_waccays9yj14-0 start"><li class="c4 li-bullet-0">Defines custom vias used in the design.<br /></li></ul>
+<h3 class="c12" id="h.xzv6ac9d0yn4">NONDEFAULTRULES Section (NDRs)</h3>
+<ul class="c1 lst-kix_9lu4g37oj8n3-0 start"><li class="c4 li-bullet-0">Defines special routing rules for critical nets (e.g., clock nets).<br /></li></ul>
+<hr>
+<p class="c0"></p>`},{id:`ch_391_why_def_is_important_in_physical_design`,title:`Why DEF is Important in Physical Design`,html:`<p class="c9">DEF is widely used because it is:</p>
+<ul class="c1 lst-kix_a2jskffc5t5j-0 start"><li class="c4 li-bullet-0">Tool-independent<br /></li><li class="c4 li-bullet-0">Human-readable<br /></li><li class="c4 li-bullet-0">Standardized<br /></li><li class="c4 li-bullet-0">Compatible with multiple EDA tools<br /></li><li class="c4 li-bullet-0">Suitable for design handoff between teams<br /></li></ul>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>`},{id:`ch_405_gds_gdsii_graphic_data_system_ii_`,title:`GDS (GDSII – Graphic Data System II)`,html:`<p class="c9">GDSII is a standard file format used to represent the physical layout of an Integrated Circuit (IC), similar to formats such as JPEG, DOCX, or XLSX for images/documents.</p>
+<p class="c9">It is primarily used for:</p>
+<ul class="c1 lst-kix_6o6i3p6kysyy-0 start"><li class="c4 li-bullet-0">IP handoff (IP owner → Physical Design team), and<br /></li><li class="c4 li-bullet-0">Manufacturing handoff (Physical Design team → Foundry for fabrication),<br /></li><li class="c4 li-bullet-0">Physical verification using EDA tools such as Mentor Calibre, Synopsys ICV, etc.<br /></li></ul>
+<hr>
+<p class="c0"></p>`},{id:`ch_411_what_does_gds_contain_`,title:`What does GDS contain?`,html:`<p class="c9">In simple terms, GDSII encompasses the entire design architecture — whether it is:</p>
+<ul class="c1 lst-kix_5m80uqg8jd3t-0 start"><li class="c4 li-bullet-0">an individual IP,<br /></li><li class="c4 li-bullet-0">a memory block, or<br /></li><li class="c4 li-bullet-0">a full chip design —<br /></li></ul>
+<p class="c9">embedded in the form of geometrical shapes corresponding to physical layers such as:</p>
+<ul class="c1 lst-kix_1wxcfp1hrbq1-0 start"><li class="c4 li-bullet-0">P-substrate<br /></li><li class="c4 li-bullet-0">Diffusion<br /></li><li class="c4 li-bullet-0">Poly<br /></li><li class="c4 li-bullet-0">Contacts<br /></li><li class="c4 li-bullet-0">Metal layers and vias (layer-wise and planar geometry)<br /></li></ul>
+<p class="c9">These shapes together represent the actual fabricated silicon structure.</p>
+<hr>
+<p class="c0"></p>`},{id:`ch_419_file_format_characteristics`,title:`File Format Characteristics`,html:`<ul class="c1 lst-kix_5om4wadpczl8-0 start"><li class="c4 li-bullet-0">GDSII is a binary file format, not human readable.<br /></li><li class="c4 li-bullet-0">It can only be read and interpreted by specialized EDA tools such as:<br /></li></ul>
+<ul class="c1 lst-kix_5om4wadpczl8-1 start"><li class="c9 c17 li-bullet-0">Mentor Calibre<br /></li><li class="c9 c17 li-bullet-0">Synopsys IC Validator (ICV)<br /></li><li class="c9 c17 li-bullet-0">Cadence Virtuoso / Innovus viewers<br /></li><li class="c9 c17 li-bullet-0">Other layout viewers<br /></li></ul>
+<p class="c9">You cannot open or understand a GDS file directly in a text editor.</p>
+<hr>
+<p class="c0"></p>`},{id:`ch_425_relation_to_mos_structure_and_layout`,title:`Relation to MOS Structure and Layout`,html:`<p class="c9">If we consider the cross-sectional view of a MOS transistor and its corresponding layout:</p>
+<ul class="c1 lst-kix_hj0ehdoa1bz3-0 start"><li class="c4 li-bullet-0">Transistor fabrication involves multiple sequential growth and patterning steps.<br /></li><li class="c4 li-bullet-0">Each step corresponds to a different physical layer (substrate, diffusion, poly, contacts, metals, vias).<br /></li><li class="c4 li-bullet-0">These layers are represented in GDS as planar geometrical shapes, stacked “one above the other”.<br /></li></ul>
+<p class="c9">Thus, GDS captures this entire layer-by-layer physical construction of the chip.</p>
+<hr>
+<p class="c0"></p>`},{id:`ch_431_hierarchy_in_gds`,title:`Hierarchy in GDS`,html:`<p class="c9">A GDSII file contains all layers from P-substrate up to the top metal layer.</p>
+<ul class="c1 lst-kix_g6y3eo27pupk-0 start"><li class="c4 li-bullet-0">All design elements are contained under a single top-level cell (Top Cell).<br /></li><li class="c4 li-bullet-0">Other design blocks (IP, macros, standard cells, etc.) are referenced hierarchically within this top cell.<br /></li><li class="c4 li-bullet-0">The same cell may be instantiated multiple times under the top cell.<br /></li></ul>
+<p class="c9">This hierarchical structure helps in efficient storage and reuse of repeated blocks.</p>
+<hr>
+<p class="c0"></p>`},{id:`ch_437_netlist`,title:`Netlist`,html:`<p class="c9">A design can be represented in multiple formats, and Gate-Level Netlist (GLN) is one of them.</p>
+<h3 class="c12" id="h.cdb4vvqbsv3e">Flow from RTL to Netlist</h3>
+<p class="c9">Once the design specification is ready:</p>
+<ol class="c1 lst-kix_errm2cqbxwhg-0 start" start="1"><li class="c4 li-bullet-0">The functionality is written in HDL (Verilog/VHDL).<br /></li><li class="c4 li-bullet-0">The RTL code is verified functionally.<br /></li><li class="c4 li-bullet-0">The code undergoes Linting to check synthesizability and coding style.<br /></li><li class="c4 li-bullet-0">The verified RTL is then passed to the Synthesis team.<br /></li></ol>
+<hr>
+<p class="c0"></p>`},{id:`ch_444_what_is_synthesis_`,title:`What is Synthesis?`,html:`<p class="c9">Synthesis is the process of converting RTL code into a technology-specific Gate-Level Netlist through:</p>
+<ul class="c1 lst-kix_pnzhfvqjkmon-0 start"><li class="c4 li-bullet-0">Translation<br /></li><li class="c4 li-bullet-0">Mapping<br /></li><li class="c4 li-bullet-0">Optimization<br /></li></ul>
+<hr>
+<p class="c0"></p>`},{id:`ch_449_what_is_a_gate_level_netlist_`,title:`What is a Gate-Level Netlist?`,html:`<p class="c9">A Gate-Level Netlist is a textual description of a digital circuit using standard cells (gates, flops, etc.).</p>
+<ul class="c1 lst-kix_acyjahdm8xdl-0 start"><li class="c4 li-bullet-0">It represents the same functionality as the RTL code.<br /></li><li class="c4 li-bullet-0">It can be expressed as interconnections of logic gates or even transistors.<br /></li><li class="c4 li-bullet-0">It serves as the input to Physical Design (PnR) tools.<br /></li></ul>
+<hr>
+<p class="c0"></p>`},{id:`ch_454_pre_layout_vs_post_layout_netlist`,title:`Pre-layout vs Post-layout Netlist`,html:`<p class="c9">The netlist from the synthesis tool is fed into PnR tools to generate the physical layout of the chip.</p>
+<p class="c9">During placement and routing:</p>
+<ul class="c1 lst-kix_1q3801rg45h-0 start"><li class="c4 li-bullet-0">The netlist may be modified (buffer insertion, gate sizing, clock tree insertion, etc.),<br /></li><li class="c4 li-bullet-0">But it remains functionally equivalent to the original RTL.<br /></li></ul>
+<p class="c9">The netlist after layout is called Post-Layout Netlist.</p>
+<h3 class="c12" id="h.rx7acf17t42a">Key Difference:</h3>
+<ul class="c1 lst-kix_3nrcdyytn822-0 start"><li class="c4 li-bullet-0">Pre-layout netlist: No clock tree buffers.<br /></li><li class="c4 li-bullet-0">Post-layout netlist: Includes Clock Tree Buffers, Inverters, and additional cells inserted during CTS.<br /></li></ul>
+<hr>
+<p class="c0"></p>`},{id:`ch_463_understanding_your_sample_gate_level_net`,title:`Understanding Your Sample Gate-Level Netlist`,html:`<p class="c9">You have provided a sample gate-level netlist of a 16-bit counter module:</p>
+<p class="c7">module counter (clk, reset, enable, dat_out);</p>
+<p class="c0"></p>
+<h3 class="c12" id="h.1k9ua4mo0lw">Observations from your netlist:</h3>
+<ol class="c1 lst-kix_bq0seokyg9cn-0 start" start="1"><li class="c4 li-bullet-0">It contains sequential elements such as:<br /></li></ol>
+<ul class="c1 lst-kix_bq0seokyg9cn-1 start"><li class="c9 c17 li-bullet-0">EDFFX2AD<br /></li><li class="c9 c17 li-bullet-0">DFFQXLAD<br /> These represent flip-flops used to store dat_out.<br /></li></ul>
+<ol class="c1 lst-kix_bq0seokyg9cn-0" start="2"><li class="c4 li-bullet-0">It contains combinational logic gates such as:<br /></li></ol>
+<ul class="c1 lst-kix_bq0seokyg9cn-1 start"><li class="c9 c17 li-bullet-0">NAND, NOR, XOR, XNOR, INV, AND, AOI, OAI, etc.<br /> These implement the counter logic.<br /></li></ul>
+<ol class="c1 lst-kix_bq0seokyg9cn-0" start="3"><li class="c4 li-bullet-0">Internal wires such as:<br /></li></ol>
+<ul class="c1 lst-kix_bq0seokyg9cn-1 start"><li class="c9 c17 li-bullet-0">N69, N70, n42, n43, ...<br /> represent intermediate signals created during synthesis.<br /></li></ul>
+<ol class="c1 lst-kix_bq0seokyg9cn-0" start="4"><li class="c4 li-bullet-0">The logic uses both:<br /></li></ol>
+<ul class="c1 lst-kix_bq0seokyg9cn-1 start"><li class="c9 c17 li-bullet-0">Enable (enable)<br /></li><li class="c9 c17 li-bullet-0">Reset (reset)<br /> which controls counter behavior.<br /></li></ul>
+<p class="c9">This netlist is a Gate-Level Structural Description, not behavioral RTL.</p>
+<hr>
+<p class="c0"></p>`},{id:`ch_479_relation_between_gds_and_netlist`,title:`Relation Between GDS and Netlist`,html:`<table class="c36"><tbody><tr class="c25"><td class="c23" colspan="1" rowspan="1"><p class="c26">Aspect</p></td><td class="c30" colspan="1" rowspan="1"><p class="c26">Netlist</p></td><td class="c37" colspan="1" rowspan="1"><p class="c26">GDS</p></td></tr><tr class="c25"><td class="c23" colspan="1" rowspan="1"><p class="c7">Level</p></td><td class="c30" colspan="1" rowspan="1"><p class="c7">Logical representation</p></td><td class="c37" colspan="1" rowspan="1"><p class="c7">Physical representation</p></td></tr><tr class="c25"><td class="c23" colspan="1" rowspan="1"><p class="c7">Readability</p></td><td class="c30" colspan="1" rowspan="1"><p class="c7">Human-readable</p></td><td class="c37" colspan="1" rowspan="1"><p class="c7">Binary, tool-readable</p></td></tr><tr class="c25"><td class="c23" colspan="1" rowspan="1"><p class="c7">Contains</p></td><td class="c30" colspan="1" rowspan="1"><p class="c7">Cells, gates, connections</p></td><td class="c37" colspan="1" rowspan="1"><p class="c7">Geometric shapes of layers</p></td></tr><tr class="c25"><td class="c23" colspan="1" rowspan="1"><p class="c7">Used by</p></td><td class="c30" colspan="1" rowspan="1"><p class="c7">PnR tools</p></td><td class="c37" colspan="1" rowspan="1"><p class="c7">Foundry &amp; verification tools</p></td></tr><tr class="c25"><td class="c23" colspan="1" rowspan="1"><p class="c7">Stage</p></td><td class="c30" colspan="1" rowspan="1"><p class="c7">Before/after PnR</p></td><td class="c37" colspan="1" rowspan="1"><p class="c7">Final fabrication-ready output</p></td></tr></tbody></table>
+<hr>
+<p class="c0"></p>`},{id:`ch_483_understanding_the_sample_gln_gate_level_`,title:`Understanding the Sample GLN (Gate-Level Netlist)`,html:`<h3 class="c12" id="h.1pzqm5vq2yln">Module Declaration (Design Interface)</h3>
+<p class="c7">module counter (clk, reset, enable, dat_out);</p>
+<p class="c0"></p>
+<p class="c9">This defines the top module name (counter) and its interface ports.</p>
+<p class="c7">output [15:0] dat_out;</p>
+<p class="c7">input clk, reset, enable;</p>
+<p class="c0"></p>
+<ul class="c1 lst-kix_r0oxlituan59-0 start"><li class="c4 li-bullet-0">dat_out[15:0] → 16-bit output bus<br /></li><li class="c4 li-bullet-0">clk → clock input<br /></li><li class="c4 li-bullet-0">reset → synchronous/asynchronous reset (depends on library cell)<br /></li><li class="c4 li-bullet-0">enable → control signal to enable counting<br /></li></ul>
+<hr>
+<p class="c0"></p>`},{id:`ch_494_internal_nets_wires_`,title:`Internal Nets (Wires)`,html:`<p class="c7">wire N69, N70, N71, N72, N73, N74, N75, N76, N77, N78, N79, N80, </p>
+<p class="c7">     N81, N82, N83, N84, N86, N88, N90, N92, N94, N96, </p>
+<p class="c7">     n42, n43, n44, n45, n46, n47, n48, n49, n50, n51, n52, </p>
+<p class="c7">     n53, n54, n55, n56, n57, n58, n59, n60, n61, n62, n63, </p>
+<p class="c7">     n64, n65, n66, n67;</p>
+<p class="c0"></p>
+<p class="c9">These are internal nets generated by the synthesis tool:</p>
+<ul class="c1 lst-kix_l8smaxcuk6jo-0 start"><li class="c4 li-bullet-0">Nxx → usually represent primary or optimized internal signals<br /></li><li class="c4 li-bullet-0">nxx → temporary or intermediate signals created during logic optimization<br /></li></ul>
+<p class="c9">👉 Important:<br /> These names are tool-generated and have no functional meaning like RTL names.</p>
+<hr>
+<p class="c0"></p>`},{id:`ch_506_sequential_elements_flip_flops_`,title:`Sequential Elements (Flip-Flops)`,html:`<p class="c9">Example of first three flip-flops:</p>
+<p class="c7">EDFFX2AD\\dat_out_sig_reg[0] (.D(N69), .E(N96), .CK(clk), .Q(dat_out[0]) );</p>
+<p class="c7">EDFFX2AD\\dat_out_sig_reg[1] (.D(N70), .E(N94), .CK(clk), .Q(dat_out[1]));</p>
+<p class="c7">EDFFX2AD\\dat_out_sig_reg[2] (.D(N71), .E(N92), .CK(clk), .Q(dat_out[2]));</p>
+<p class="c0"></p>
+<h3 class="c12" id="h.j63nmol07shw">What this means:</h3>
+<ul class="c1 lst-kix_d002rh49xsfc-0 start"><li class="c4 li-bullet-0">EDFFX2AD → Library cell name (Edge-triggered D Flip-Flop)<br /></li><li class="c4 li-bullet-0">dat_out_sig_reg[i] → Instance name corresponding to each bit of dat_out<br /></li><li class="c4 li-bullet-0">Ports:<br /></li></ul>
+<ul class="c1 lst-kix_d002rh49xsfc-1 start"><li class="c9 c17 li-bullet-0">.D(N69) → Data input comes from internal logic<br /></li><li class="c9 c17 li-bullet-0">.E(N96) → Enable signal<br /></li><li class="c9 c17 li-bullet-0">.CK(clk) → Clock input<br /></li><li class="c9 c17 li-bullet-0">.Q(dat_out[0]) → Output to port<br /></li></ul>
+<p class="c9">👉 This confirms that:</p>
+<ul class="c1 lst-kix_vo2h1en3adez-0 start"><li class="c4 li-bullet-0">dat_out is implemented using flip-flops<br /></li><li class="c4 li-bullet-0">The design is sequential (state-based), not purely combinational.<br /></li></ul>
+<hr>
+<p class="c0"></p>`},{id:`ch_519_combinational_logic_driving_flip_flop_d_`,title:`Combinational Logic Driving Flip-Flop D Inputs`,html:`<p class="c9">Example logic for bit 0:</p>
+<p class="c7">NOR2X1AD U99 (.A(dat_out[0]), .B(n43), .Y(N69));</p>
+<p class="c0"></p>
+<ul class="c1 lst-kix_u8elfio5y7l2-0 start"><li class="c4 li-bullet-0">NOR2X1AD → 2-input NOR gate from the library<br /></li><li class="c4 li-bullet-0">Inputs:<br /></li></ul>
+<ul class="c1 lst-kix_u8elfio5y7l2-1 start"><li class="c9 c17 li-bullet-0">dat_out[0] (current state feedback)<br /></li><li class="c9 c17 li-bullet-0">n43 (derived from reset)<br /></li></ul>
+<ul class="c1 lst-kix_u8elfio5y7l2-0"><li class="c4 li-bullet-0">Output: N69 → Goes to .D of dat_out_sig_reg[0]<br /></li></ul>
+<p class="c9">This is part of the next-state logic of the counter.</p>
+<hr>
+<p class="c0"></p>`},{id:`ch_529_reset_logic`,title:`Reset Logic`,html:`<p class="c7">INVX1AD U100 (.A(reset), .Y(n43));</p>
+<p class="c0"></p>
+<ul class="c1 lst-kix_7hjz1jmao743-0 start"><li class="c4 li-bullet-0">INVX1AD → Inverter<br /></li><li class="c4 li-bullet-0">Converts reset → n43 (active-low version of reset)<br /></li></ul>
+<p class="c9">This n43 is used in multiple logic gates to control counter behavior.</p>
+<hr>
+<p class="c0"></p>`},{id:`ch_536_what_this_netlist_represents_summary_`,title:`What This Netlist Represents (Summary)`,html:`<p class="c9">Your sample GLN is:</p>
+<p class="c9">✔ A Gate-Level Structural Netlist<br /> ✔ Generated after logic synthesis<br /> ✔ Contains:</p>
+<ul class="c1 lst-kix_xfrxmp5ekq4v-0 start"><li class="c4 li-bullet-0">Standard cells (Flip-flops + logic gates)<br /></li><li class="c4 li-bullet-0">No behavioral constructs (always, if, for, etc.)<br /></li><li class="c4 li-bullet-0">No high-level RTL logic<br /> ✔ Suitable for Physical Design (PnR) input<br /></li></ul>
+<hr>
+<p class="c0"></p>`},{id:`ch_542_key_observations_from_this_netlist`,title:`Key Observations from This Netlist`,html:`<ol class="c1 lst-kix_bvwzqfh0xfs-0 start" start="1"><li class="c4 li-bullet-0">It is NOT RTL → It is a structural description.<br /></li><li class="c4 li-bullet-0">Clocked design → Uses flip-flops.<br /></li><li class="c4 li-bullet-0">Counter behavior → Feedback from dat_out to generate next state.<br /></li><li class="c4 li-bullet-0">Tool-optimized logic → Internal nets are renamed (N69, n43, etc.).<br /></li><li class="c4 li-bullet-0">Ready for Placement &amp; Routing → This is exactly what PnR tools expect.<br /></li></ol>
+<p class="c0"></p>`},{id:`ch_545_spef_standard_parasitic_exchange_format_`,title:`SPEF (Standard Parasitic Exchange Format) — Complete View`,html:`<p class="c9">SPEF allows the representation of parasitic information of a design (R, L, and C) in an ASCII (American Standard Code for Information Interchange) format. A user can read and check the values in a SPEF file. Users would never create this file manually — it is automatically generated by extraction tools. It is mainly used to pass parasitic information from one tool to another.</p>
+<p class="c9">Interconnect parasitics depend on the process. SPEF supports the specification of all the cases like best-case, typical, and worst-case values. These triplets (best, typical, worst) are allowed for R, C, and L values, ports, slew, and loads. The units of the parasitics R, C, and inductance L are specified at the beginning of the SPEF file.</p>
+<p class="c9">SPEF can be generated by:</p>
+<ul class="c1 lst-kix_sy7rhkc7br66-0 start"><li class="c4 li-bullet-0">Place-and-Route tool (post-route extraction), or<br /></li><li class="c4 li-bullet-0">Dedicated parasitic extraction tool (Calibre xRC, StarRC, Quantus, etc.)<br /></li></ul>
+<p class="c9">This SPEF is then used by:</p>
+<ul class="c1 lst-kix_t5h99spo2csf-0 start"><li class="c4 li-bullet-0">Static Timing Analysis (STA) tools<br /></li><li class="c4 li-bullet-0">In-circuit simulation<br /></li><li class="c4 li-bullet-0">Signal Integrity (crosstalk) analysis<br /><br /><img alt="" src="/assets/modules/module17/image10.png" title="" class="native-img"><br /></li></ul>
+<hr>
+<p class="c0"></p>`},{id:`ch_554_parasitic_models_supported_by_spef1_dist`,title:`Parasitic Models Supported by SPEF1. Distributed Net Model (D_NET) — Most Accurate`,html:`<p class="c9">In this model, each segment of a routed net has its own R and C values.</p>
+<p class="c9">When used:</p>
+<ul class="c1 lst-kix_n0ddbfz6dckl-0 start"><li class="c4 li-bullet-0">Sign-off timing<br /></li><li class="c4 li-bullet-0">SI analysis<br /></li><li class="c4 li-bullet-0">Accurate delay modeling<br /></li></ul>
+<p class="c9">Pros:<br /> ✔ Highest accuracy<br /> ✔ Best for critical nets</p>
+<p class="c9">Cons:<br /> ✖ Larger file size<br /> ✖ More simulation time</p>
+<hr>
+<p class="c0"></p>
+<h3 class="c12" id="h.achtqtdm8g1w">2. Reduced Net Model (R_NET) — Balanced Model<br /><img alt="" src="/assets/modules/module17/image11.png" title="" class="native-img"></h3>
+<p class="c9">On the load pins, a single reduced R and C is used, and on the driver pin, a Pi-model (C–R–C) is used.</p>
+<p class="c9">Driver → (C — R — C) → Loads</p>
+<p class="c9">When used:</p>
+<ul class="c1 lst-kix_tyfch61yjbxd-0 start"><li class="c4 li-bullet-0">Faster STA with reasonable accuracy<br /></li><li class="c4 li-bullet-0">Early sign-off checks<br /></li></ul>
+<p class="c9">Pros:<br /> ✔ Good accuracy<br /> ✔ Smaller than DSPF</p>
+<p class="c9">Cons:<br /> ✖ Less accurate than D_NET</p>
+<hr>
+<p class="c0"></p>
+<h3 class="c12" id="h.mn4bfhvdjf0k">3. Lumped Capacitance Model — Least Accurate<br /><br /><img alt="" src="/assets/modules/module17/image10.png" title="" class="native-img"></h3>
+<p class="c9">Only one total capacitance is specified for the entire net.</p>
+<p class="c9">When used:</p>
+<ul class="c1 lst-kix_ff1yoj54pe0z-0 start"><li class="c4 li-bullet-0">Very early design stages<br /></li><li class="c4 li-bullet-0">Rough timing estimation<br /></li></ul>
+<p class="c9">Pros:<br /> ✔ Smallest file<br /> ✔ Fastest analysis</p>
+<p class="c9">Cons:<br /> ✖ Poor accuracy<br /> ✖ Not used for sign-off</p>
+<hr>
+<p class="c0"></p>`},{id:`ch_579_parasitic_formats_important_comparison_`,title:`Parasitic Formats (Important Comparison)`,html:`<table class="c36"><tbody><tr class="c25"><td class="c29" colspan="1" rowspan="1"><p class="c26">Format</p></td><td class="c21" colspan="1" rowspan="1"><p class="c26">Full Form</p></td><td class="c18" colspan="1" rowspan="1"><p class="c26">Accuracy</p></td><td class="c43" colspan="1" rowspan="1"><p class="c26">File Size</p></td><td class="c34" colspan="1" rowspan="1"><p class="c26">Usage</p></td></tr><tr class="c44"><td class="c29" colspan="1" rowspan="1"><p class="c7">DSPF</p></td><td class="c21" colspan="1" rowspan="1"><p class="c7">Detailed Standard Parasitic Format</p></td><td class="c18" colspan="1" rowspan="1"><p class="c7">Very High</p></td><td class="c43" colspan="1" rowspan="1"><p class="c7">Very Large</p></td><td class="c34" colspan="1" rowspan="1"><p class="c7">Golden sign-off</p></td></tr><tr class="c44"><td class="c29" colspan="1" rowspan="1"><p class="c7">RSPF</p></td><td class="c21" colspan="1" rowspan="1"><p class="c7">Reduced Standard Parasitic Format</p></td><td class="c18" colspan="1" rowspan="1"><p class="c7">Medium</p></td><td class="c43" colspan="1" rowspan="1"><p class="c7">Smaller than DSPF</p></td><td class="c34" colspan="1" rowspan="1"><p class="c7">STA-friendly</p></td></tr><tr class="c44"><td class="c29" colspan="1" rowspan="1"><p class="c7">SPEF</p></td><td class="c21" colspan="1" rowspan="1"><p class="c7">Standard Parasitic Extraction Format</p></td><td class="c18" colspan="1" rowspan="1"><p class="c7">Compact &amp; Flexible</p></td><td class="c43" colspan="1" rowspan="1"><p class="c7">Smallest</p></td><td class="c34" colspan="1" rowspan="1"><p class="c7">Industry standard</p></td></tr></tbody></table>
+<p class="c9">👉 Key Point:<br /> SPEF is preferred in industry because it is compact, hierarchical, and complete.</p>
+<hr>
+<p class="c0"></p>`},{id:`ch_584_structure_of_a_typical_spef_file_additio`,title:`Structure of a Typical SPEF File (Additional Point)`,html:`<p class="c9">A SPEF file generally contains:</p>
+<p class="c7">*SPEF "1.0"</p>
+<p class="c7">*DESIGN counter</p>
+<p class="c7">*UNITS</p>
+<p class="c7">R 1 OHM</p>
+<p class="c7">C 1 PF</p>
+<p class="c7">L 1 H</p>
+<p class="c7">*PORTS</p>
+<p class="c7">...</p>
+<p class="c7">*D_NET net1</p>
+<p class="c7">...</p>
+<p class="c7">*R_NET net2</p>
+<p class="c7">...</p>
+<p class="c0"></p>
+<hr>
+<p class="c0"></p>`},{id:`ch_601_why_spef_is_critical_in_physical_design_`,title:`Why SPEF is Critical in Physical Design (Extra Points)`,html:`<ol class="c1 lst-kix_52i5my42ipzv-0 start" start="1"><li class="c4 li-bullet-0">More realistic timing than ideal netlist<br /></li><li class="c4 li-bullet-0">Helps in:<br /></li></ol>
+<ul class="c1 lst-kix_52i5my42ipzv-1 start"><li class="c9 c17 li-bullet-0">Setup analysis<br /></li><li class="c9 c17 li-bullet-0">Hold analysis<br /></li><li class="c9 c17 li-bullet-0">Crosstalk (glitch) analysis<br /></li></ul>
+<ol class="c1 lst-kix_52i5my42ipzv-0" start="3"><li class="c4 li-bullet-0">Used in:<br /></li></ol>
+<ul class="c1 lst-kix_52i5my42ipzv-1 start"><li class="c9 c17 li-bullet-0">Post-Route STA<br /></li><li class="c9 c17 li-bullet-0">Power analysis<br /></li></ul>
+<ol class="c1 lst-kix_52i5my42ipzv-0" start="4"><li class="c4 li-bullet-0">Enables:<br /></li></ol>
+<ul class="c1 lst-kix_52i5my42ipzv-1 start"><li class="c9 c17 li-bullet-0">RC delay calculation<br /></li><li class="c9 c17 li-bullet-0">Interconnect delay modeling<br /></li></ul>
+<hr>
+<p class="c0"></p>`},{id:`ch_610_spef_vs_sdf_common_interview_question_`,title:`SPEF vs SDF (Common Interview Question)`,html:`<table class="c36"><tbody><tr class="c25"><td class="c32" colspan="1" rowspan="1"><p class="c26">SPEF</p></td><td class="c31" colspan="1" rowspan="1"><p class="c26">SDF</p></td></tr><tr class="c25"><td class="c32" colspan="1" rowspan="1"><p class="c7">Contains R, C, L parasitics</p></td><td class="c31" colspan="1" rowspan="1"><p class="c7">Contains timing delays only</p></td></tr><tr class="c25"><td class="c32" colspan="1" rowspan="1"><p class="c7">Used before/with STA</p></td><td class="c31" colspan="1" rowspan="1"><p class="c7">Used after timing calculation</p></td></tr><tr class="c25"><td class="c32" colspan="1" rowspan="1"><p class="c7">More physical</p></td><td class="c31" colspan="1" rowspan="1"><p class="c7">More logical</p></td></tr><tr class="c25"><td class="c32" colspan="1" rowspan="1"><p class="c7">Used by extraction &amp; STA</p></td><td class="c31" colspan="1" rowspan="1"><p class="c7">Used for back-annotation</p></td></tr></tbody></table>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>
+<p class="c0"></p>`},{id:`ch_617_route_script`,title:`Route SCRIPT`,html:`<p class="c7"><img alt="" src="/assets/modules/module17/image1.png" title="" class="native-img"></p>
+<p class="c0"></p>
+<p class="c7"><img alt="" src="/assets/modules/module17/image3.png" title="" class="native-img"></p>
+<p class="c0"></p>`}],a={moduleLayout:`_moduleLayout_j85ry_4`,header:`_header_j85ry_20`,title:`_title_j85ry_22`,subtitle:`_subtitle_j85ry_33`,topicsNav:`_topicsNav_j85ry_41`,navSectionsWrapper:`_navSectionsWrapper_j85ry_54`,slideDown:`_slideDown_j85ry_1`,navSection:`_navSection_j85ry_54`,navTitle:`_navTitle_j85ry_64`,navButtonsGrid:`_navButtonsGrid_j85ry_74`,topicNavBtn:`_topicNavBtn_j85ry_76`,toggleWrapper:`_toggleWrapper_j85ry_101`,toggleBtn:`_toggleBtn_j85ry_103`,toggleIcon:`_toggleIcon_j85ry_129`,toggleCount:`_toggleCount_j85ry_131`,mainContent:`_mainContent_j85ry_140`,contentCard:`_contentCard_j85ry_142`,chapterTitle:`_chapterTitle_j85ry_156`,chapterBody:`_chapterBody_j85ry_167`},o=t(),s=6,c=()=>{let[e,t]=(0,r.useState)(!1),[n,c]=(0,r.useState)(!1),[l,u]=(0,r.useState)(!1),d=e=>{let t=document.getElementById(e);if(t){let e=document.body.getBoundingClientRect().top,n=t.getBoundingClientRect().top-e-100;window.scrollTo({top:n,behavior:`smooth`})}},f=e=>e.preventDefault(),p=i.slice(0,19),m=i.slice(19,38),h=i.slice(38),g=(e,t,n,r)=>(0,o.jsxs)(`div`,{className:a.navSection,children:[(0,o.jsx)(`h2`,{className:a.navTitle,children:r}),(0,o.jsx)(`div`,{className:a.navButtonsGrid,children:(t?e:e.slice(0,s)).map(e=>(0,o.jsx)(`button`,{onClick:()=>d(e.id),className:a.topicNavBtn,title:e.title,children:e.title},e.id))}),e.length>s&&(0,o.jsx)(`div`,{className:a.toggleWrapper,children:(0,o.jsx)(`button`,{className:a.toggleBtn,onClick:()=>n(!t),children:t?(0,o.jsxs)(o.Fragment,{children:[(0,o.jsx)(`span`,{className:a.toggleIcon,children:`▲`}),` See Less`]}):(0,o.jsxs)(o.Fragment,{children:[(0,o.jsx)(`span`,{className:a.toggleIcon,children:`▼`}),` See More `,(0,o.jsxs)(`span`,{className:a.toggleCount,children:[`+`,e.length-s]})]})})})]});return(0,o.jsxs)(`div`,{className:a.moduleLayout,onCopy:f,onContextMenu:f,onSelectStart:f,onDragStart:f,children:[(0,o.jsxs)(`div`,{className:a.header,children:[(0,o.jsx)(`h1`,{className:a.title,children:`Module 17 - Routing & Signoff Formats`}),(0,o.jsx)(`p`,{className:a.subtitle,children:`Master routing principles, antenna effect prevention, signal integrity optimization, DEF/GDS formats, and signoff standards including Gate-Level Netlists and SPEF.`})]}),(0,o.jsx)(`section`,{className:a.topicsNav,children:(0,o.jsxs)(`div`,{className:a.navSectionsWrapper,children:[g(p,e,t,`Routing & Antenna Effect`),g(m,n,c,`Decaps, Fillers & DEF/GDS`),g(h,l,u,`Netlist & SPEF`)]})}),(0,o.jsx)(`main`,{className:a.mainContent,children:i.map(e=>(0,o.jsxs)(`article`,{id:e.id,className:a.contentCard,children:[(0,o.jsx)(`h2`,{className:a.chapterTitle,children:e.title}),(0,o.jsx)(`div`,{className:a.chapterBody,dangerouslySetInnerHTML:{__html:e.html}})]},e.id))})]})};export{c as default};

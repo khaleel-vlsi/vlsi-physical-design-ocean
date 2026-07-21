@@ -103,6 +103,16 @@ const SecureVideoPlayer = ({ videoId }) => {
   }, []);
 
   const onPlayerReady = (event) => {
+    // Force YouTube's iframe to fill the container (overrides YT's inline pixel dimensions)
+    const iframe = event.target.getIframe();
+    if (iframe) {
+      iframe.style.position = 'absolute';
+      iframe.style.top = '0';
+      iframe.style.left = '0';
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
+      iframe.style.border = 'none';
+    }
     setIsReady(true);
     setDuration(event.target.getDuration());
     setVolume(event.target.getVolume());

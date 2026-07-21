@@ -1119,21 +1119,30 @@
 /* Dynamic Subscription Pricing Cards styling (Vertical) */
 .pricingContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
   margin-top: 32px;
   width: 100%;
 }
 
 @media (max-width: 1200px) {
   .pricingContainer {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .pricingContainer {
     grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
   }
 }
 
 @media (max-width: 768px) {
   .pricingContainer {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 }
 

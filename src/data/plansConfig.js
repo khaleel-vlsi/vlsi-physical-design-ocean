@@ -13,7 +13,7 @@ export const plansConfig = {
         originalPrice: 998,
         savings: '🎉 50% OFF',
         validityText: 'Valid for 30 Days',
-        theme: 'silver',
+        theme: 'iron',
         features: [
           'Full Premium Access',
           'All Recorded Classes',
@@ -43,7 +43,7 @@ export const plansConfig = {
         originalPrice: 1998,
         savings: '🎉 50% OFF',
         validityText: 'Valid for 90 Days',
-        theme: 'gold',
+        theme: 'silver',
         features: [
           'Full Premium Access',
           'All Recorded Classes',

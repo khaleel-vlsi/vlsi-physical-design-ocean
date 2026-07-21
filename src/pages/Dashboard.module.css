@@ -69,6 +69,22 @@
   align-items: stretch;
 }
 
+.fivePlans {
+  grid-template-columns: repeat(5, 1fr) !important;
+}
+
+@media (max-width: 1024px) {
+  .plansGrid.fivePlans {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .plansGrid.fivePlans {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 /* Cancel any width:100% or display:block from planCard theme overrides */
 .plansGrid > * {
   min-width: 0 !important;

@@ -239,7 +239,7 @@ const Dashboard = () => {
               <h2>🚀 Choose Your Plan</h2>
               <p className={styles.muted}>Select a subscription to unlock all paid modules instantly after payment.</p>
             </div>
-            <div className={styles.plansGrid}>
+            <div className={`${styles.plansGrid} ${activeConfig.plans.length === 5 ? styles.fivePlans : ''}`}>
               {activeConfig.plans.map((p) => (
                 <div
                   key={p.id}

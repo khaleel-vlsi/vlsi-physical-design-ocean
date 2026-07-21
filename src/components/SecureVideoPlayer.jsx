@@ -1,6 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './SecureVideoPlayer.module.css';
 
+// Preload YouTube IFrame API script once at module level
+if (typeof window !== 'undefined' && !window.YT && !document.querySelector('script[src*="youtube.com/iframe_api"]')) {
+  const tag = document.createElement('script');
+  tag.src = 'https://www.youtube.com/iframe_api';
+  const firstScriptTag = document.getElementsByTagName('script')[0];
+  if (firstScriptTag && firstScriptTag.parentNode) {
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  }
+}
+
 const formatTime = (seconds) => {
   if (isNaN(seconds) || seconds < 0) return '0:00';
   const m = Math.floor(seconds / 60);
@@ -46,25 +56,15 @@ const SecureVideoPlayer = ({ videoId }) => {
   }, []);
 
   const playerDivRef = useRef(null);
-  const initialVideoId = useRef(videoId);
-  const lastLoadedVideoId = useRef(videoId);
 
   useEffect(() => {
-    // Load YouTube IFrame API script
-    if (!window.YT) {
-      const tag = document.createElement('script');
-      tag.src = 'https://www.youtube.com/iframe_api';
-      const firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    }
-
     // Initialize player once API is ready
     const initPlayer = () => {
       if (!playerDivRef.current) return;
       playerRef.current = new window.YT.Player(playerDivRef.current, {
         width: '100%',
         height: '100%',
-        videoId: initialVideoId.current,
+        videoId: videoId,
         playerVars: {
           controls: 0,        // Hide native controls
           disablekb: 1,       // Disable keyboard controls
@@ -85,7 +85,12 @@ const SecureVideoPlayer = ({ videoId }) => {
     if (window.YT && window.YT.Player) {
       initPlayer();
     } else {
-      window.onYouTubeIframeAPIReady = initPlayer;
+      // API still loading — wait for it
+      const prevCallback = window.onYouTubeIframeAPIReady;
+      window.onYouTubeIframeAPIReady = () => {
+        if (prevCallback) prevCallback();
+        initPlayer();
+      };
     }
 
     return () => {
@@ -96,17 +101,6 @@ const SecureVideoPlayer = ({ videoId }) => {
       }
     };
   }, []);
-
-  // Handle subsequent video changes — skip if same video already loaded
-  useEffect(() => {
-    if (isReady && playerRef.current && playerRef.current.loadVideoById) {
-      if (lastLoadedVideoId.current === videoId) return; // Already loaded, skip
-      lastLoadedVideoId.current = videoId;
-      setIsPlaying(false);
-      setCurrentTime(0);
-      playerRef.current.loadVideoById(videoId);
-    }
-  }, [videoId, isReady]);
 
   const onPlayerReady = (event) => {
     setIsReady(true);
@@ -279,13 +273,12 @@ const SecureVideoPlayer = ({ videoId }) => {
         </div>
       )}
 
-      {/* The actual YouTube iframe wrapper inside scale wrapper */}
+      {/* The actual YouTube player placeholder inside scale wrapper */}
       <div className={styles.videoWrapper} style={{ transform: `scale(${zoomLevel})`, transformOrigin: 'center center' }}>
-        <iframe 
+        <div 
           ref={playerDivRef} 
           className={styles.youtubeIframe}
-          title="Secure Video Player"
-        ></iframe>
+        ></div>
       </div>
 
       {/* Invisible shield to capture clicks and prevent right click */}

@@ -278,10 +278,11 @@ const SecureVideoPlayer = ({ videoId }) => {
 
       {/* The actual YouTube iframe wrapper inside scale wrapper */}
       <div className={styles.videoWrapper} style={{ transform: `scale(${zoomLevel})`, transformOrigin: 'center center' }}>
-        <div 
+        <iframe 
           ref={playerDivRef} 
           className={styles.youtubeIframe}
-        ></div>
+          title="Secure Video Player"
+        ></iframe>
       </div>
 
       {/* Invisible shield to capture clicks and prevent right click */}

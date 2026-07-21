@@ -58,8 +58,7 @@ const TestVideoPlaylist = () => {
         <div className={styles.playerSection}>
           {activeSession ? (
             <>
-              {/* Force re-render of SecureVideoPlayer only when activeSession changes */}
-              <SecureVideoPlayer key={activeSession.id} videoId={activeSession.youtubeId} />
+              <SecureVideoPlayer videoId={activeSession.youtubeId} />
               
               <div className={styles.currentVideoInfo}>
                 <h2 className={styles.currentVideoTitle}>{activeSession.title}</h2>

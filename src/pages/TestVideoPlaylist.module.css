@@ -201,3 +201,16 @@
     max-height: 500px;
   }
 }
+
+@media (max-width: 768px) {
+  .playlistContainer {
+    padding: 1rem 0.5rem;
+  }
+  .moduleTitle {
+    font-size: 1.5rem;
+  }
+  .currentVideoInfo {
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+}

@@ -41,6 +41,9 @@ const SecureVideoPlayer = ({ videoId }) => {
     };
   }, []);
 
+  const playerDivRef = useRef(null);
+  const initialVideoId = useRef(videoId);
+
   useEffect(() => {
     // Load YouTube IFrame API script
     if (!window.YT) {
@@ -52,8 +55,9 @@ const SecureVideoPlayer = ({ videoId }) => {
 
     // Initialize player once API is ready
     const initPlayer = () => {
-      playerRef.current = new window.YT.Player(`youtube-player-${videoId}`, {
-        videoId: videoId,
+      if (!playerDivRef.current) return;
+      playerRef.current = new window.YT.Player(playerDivRef.current, {
+        videoId: initialVideoId.current,
         playerVars: {
           controls: 0,        // Hide native controls
           disablekb: 1,       // Disable keyboard controls
@@ -83,7 +87,16 @@ const SecureVideoPlayer = ({ videoId }) => {
         playerRef.current.destroy();
       }
     };
-  }, [videoId]);
+  }, []);
+
+  // Handle subsequent video changes dynamically without destroying the player
+  useEffect(() => {
+    if (isReady && playerRef.current && playerRef.current.loadVideoById) {
+      setIsPlaying(false);
+      setCurrentTime(0);
+      playerRef.current.loadVideoById(videoId);
+    }
+  }, [videoId, isReady]);
 
   const onPlayerReady = (event) => {
     setIsReady(true);
@@ -225,7 +238,7 @@ const SecureVideoPlayer = ({ videoId }) => {
       {/* The actual YouTube iframe wrapper */}
       {/* We use an empty div that the YT API will replace with an iframe */}
       <div 
-        id={`youtube-player-${videoId}`} 
+        ref={playerDivRef} 
         className={styles.youtubeIframe}
       ></div>
 

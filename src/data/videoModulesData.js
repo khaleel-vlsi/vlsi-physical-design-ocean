@@ -22,6 +22,8 @@ export const VIDEO_MODULES = {
         id: 'v2_1', 
         title: 'CMOS class -1', 
         youtubeId: 'hD_r5EMpAsM', 
+        youtubeId_te: 'crej61ArzcQ', // Demo Telugu video ID
+        youtubeId_hi: 'uul-4n9wtRk', // Demo Hindi video ID
         duration: 'Unknown',
         description: 'In this first part, we explore the fundamental physics of the MOSFET, including energy bands, channel formation, and threshold voltage.'
       },

@@ -387,9 +387,11 @@ const PaidModuleDetail = () => {
             <p className={styles.lockText}>
               {moduleInfo.lockMessage || "This content will unlock automatically 1 month after your course purchase."}
             </p>
-            <div className={styles.timerBadge}>
-              <span>⏳ Unlocking in: {moduleInfo.unlockDays || 30} Days (Scheduled)</span>
-            </div>
+            {!moduleInfo.isFutureAddition && (
+              <div className={styles.timerBadge}>
+                <span>⏳ Unlocking in: {moduleInfo.unlockDays || 30} Days (Scheduled)</span>
+              </div>
+            )}
             {/* Topics preview to attract users */}
             {moduleInfo.topics && moduleInfo.topics.length > 0 && (
               <div className={styles.topicsSection}>

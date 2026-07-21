@@ -137,19 +137,11 @@ serve(async (req) => {
     }
 
     const courseExpiry = new Date(now + daysToGrant * 24 * 60 * 60 * 1000).toISOString();
-    const placementExpiry = new Date(now + 365 * 24 * 60 * 60 * 1000).toISOString(); // 1 year
-
     const updates: Record<string, any> = {
       course_active: true,
       course_expiry: courseExpiry,
       active_plan: planFriendlyName
     };
-
-    if (plan === "PLAN_1999" || plan === "PLAN_12M_INR" || plan === "PLAN_12M_USD") {
-      updates.placement_active = true;
-      updates.placement_expiry = placementExpiry;
-      updates.mock_remaining = 3;
-    }
     // Update profiles by user id using service role
     const updRes = await fetch(`${SUPABASE_URL}/rest/v1/profiles?id=eq.${userId}`, {
       method: "PATCH",

@@ -168,6 +168,25 @@ const Dashboard = () => {
               <div className={`${styles.statusBig} ${styles.ok}`}>Logged in ✅</div>
             </div>
 
+            <div style={{
+              background: 'rgba(239, 68, 68, 0.1)',
+              border: '1px solid rgba(239, 68, 68, 0.25)',
+              borderRadius: '8px',
+              padding: '10px 12px',
+              marginTop: '12px',
+              fontSize: '11.5px',
+              color: '#fca5a5',
+              lineHeight: '1.4',
+              display: 'flex',
+              alignItems: 'flex-start',
+              gap: '6px'
+            }}>
+              <span>⚠️</span>
+              <div>
+                If you have completed your payment successfully but modules do not open even after refreshing 3 to 4 times, please contact support at <b>+91 8309746357</b>. <b>(Do not call; only send a WhatsApp message with a screenshot of your Student Dashboard, your registered Name & Email, and a clear explanation of the problem. It will be resolved within 24 hours.)</b>
+              </div>
+            </div>
+
             <div className={styles.hr} />
 
             <div className={styles.muted}>
@@ -186,7 +205,7 @@ const Dashboard = () => {
               <div className={styles.statBox}>
                 <span className={styles.statBoxLabel}>Plan</span>
                 <span className={styles.statBoxValue} style={{ color: courseValid ? '#facc15' : undefined }}>
-                  {displayProfile.active_plan || (courseValid ? 'Premium' : 'None')}
+                  {courseValid ? (displayProfile.active_plan || 'Premium') : 'None'}
                 </span>
               </div>
               <div className={styles.statBox}>

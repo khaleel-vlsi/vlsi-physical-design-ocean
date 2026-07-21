@@ -353,13 +353,14 @@ export const paidModulesData = [
     ],
     iframeLink: null,
     isLockedTemporarily: true,
-    lockMessage: "This content will unlock automatically 3 months (90 days) after your course purchase.",
+    lockMessage: "⚠️ Future addition - will add based on our development plan.",
+    isFutureAddition: true,
     unlockDays: 90
   },
   {
     id: 24,
     title: "Resume Templates for Freshers & Experienced",
-    description: "Industry-standard resume formats (Under development – will be updated soon)",
+    description: "Industry-standard resume formats (Future addition - will add based on our development plan)",
     topics: [
       "Resume Structure for Freshers (Physical Design)",
       "Resume Structure for Experienced Engineers",
@@ -375,7 +376,8 @@ export const paidModulesData = [
     iframeLink: null,
     isResumeBuilder: false,
     isLockedTemporarily: true,
-    lockMessage: "⚠️ Under development – will be updated soon. This content will unlock automatically 30 days after your course purchase.",
+    lockMessage: "⚠️ Future addition - will add based on our development plan.",
+    isFutureAddition: true,
     unlockDays: 30
   },
   {

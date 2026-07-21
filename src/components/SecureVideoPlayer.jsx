@@ -47,6 +47,7 @@ const SecureVideoPlayer = ({ videoId }) => {
 
   const playerDivRef = useRef(null);
   const initialVideoId = useRef(videoId);
+  const lastLoadedVideoId = useRef(videoId);
 
   useEffect(() => {
     // Load YouTube IFrame API script
@@ -96,9 +97,11 @@ const SecureVideoPlayer = ({ videoId }) => {
     };
   }, []);
 
-  // Handle subsequent video changes dynamically without destroying the player
+  // Handle subsequent video changes — skip if same video already loaded
   useEffect(() => {
     if (isReady && playerRef.current && playerRef.current.loadVideoById) {
+      if (lastLoadedVideoId.current === videoId) return; // Already loaded, skip
+      lastLoadedVideoId.current = videoId;
       setIsPlaying(false);
       setCurrentTime(0);
       playerRef.current.loadVideoById(videoId);

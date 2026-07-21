@@ -82,6 +82,12 @@
   color: #4ade80; /* Match portal theme */
 }
 
+.controlButton.disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .controlButton svg {
   width: 24px;
   height: 24px;
@@ -188,4 +194,105 @@
 
 @keyframes spin {
   to { transform: rotate(360deg); }
+}
+
+.videoWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.zoomToast {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  color: #4ade80;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 40;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  pointer-events: none;
+  animation: fadeInOut 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-5px); }
+  15% { opacity: 1; transform: translateY(0); }
+  85% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-5px); }
+}
+
+/* Time display responsive classes */
+.mobileTime {
+  display: none;
+}
+
+.desktopTime {
+  display: block;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 600px) {
+  .controlsBar {
+    height: 48px;
+    padding: 0 10px;
+    gap: 8px;
+  }
+  
+  .controlButton {
+    width: 34px;
+    height: 34px;
+  }
+  
+  .controlButton svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .volumeButton {
+    display: none !important;
+  }
+  
+  .desktopTime {
+    display: none !important;
+  }
+  
+  .mobileTime {
+    display: inline-block !important;
+    font-size: 11px;
+  }
+  
+  .progressContainer {
+    height: 16px;
+  }
+  
+  .progressBarTrack {
+    height: 4px;
+  }
+  
+  .progressBarThumb {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .bigPlayButton {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .bigPlayButton svg {
+    width: 30px;
+    height: 30px;
+    margin-left: 3px;
+  }
 }

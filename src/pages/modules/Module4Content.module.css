@@ -103,7 +103,7 @@
   backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 24px;
-  padding: 2.5rem;
+  padding: 4rem;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
@@ -112,41 +112,41 @@
 }
 
 .h1 {
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: #f8fafc;
   line-height: 1.1;
   background: linear-gradient(to bottom right, #fff, #94a3b8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-align: center;
 }
 
 .h2 {
-  font-size: 1.3rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
   color: #4ade80;
   border-left: 4px solid #4ade80;
-  padding-left: 15px;
+  padding-left: 20px;
 }
 
 .h3 {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
   color: #8bede6;
 }
 
 .paragraph {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #e2e8f0;
-  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #f1f5f9;
+  margin-bottom: 1.8rem;
   text-align: justify;
+  hyphens: auto;
 }
 
 .commandBox {

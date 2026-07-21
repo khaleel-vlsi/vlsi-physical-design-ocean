@@ -20,6 +20,10 @@ const SecureVideoPlayer = ({ videoId }) => {
   const [isMuted, setIsMuted] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
   
+  const [zoomLevel, setZoomLevel] = useState(1.0);
+  const [showZoomToast, setShowZoomToast] = useState(false);
+  const toastTimeoutRef = useRef(null);
+  
   const progressInterval = useRef(null);
 
   useEffect(() => {
@@ -57,6 +61,8 @@ const SecureVideoPlayer = ({ videoId }) => {
     const initPlayer = () => {
       if (!playerDivRef.current) return;
       playerRef.current = new window.YT.Player(playerDivRef.current, {
+        width: '100%',
+        height: '100%',
         videoId: initialVideoId.current,
         playerVars: {
           controls: 0,        // Hide native controls
@@ -83,6 +89,7 @@ const SecureVideoPlayer = ({ videoId }) => {
 
     return () => {
       if (progressInterval.current) clearInterval(progressInterval.current);
+      if (toastTimeoutRef.current) clearTimeout(toastTimeoutRef.current);
       if (playerRef.current && playerRef.current.destroy) {
         playerRef.current.destroy();
       }
@@ -224,6 +231,34 @@ const SecureVideoPlayer = ({ videoId }) => {
     <svg viewBox="0 0 24 24"><path d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z"/></svg>
   );
 
+  const ZoomInIcon = () => (
+    <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zm.5-7H9v2H7v1h2v2h1v-2h2V9h-2V7z"/></svg>
+  );
+
+  const ZoomOutIcon = () => (
+    <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM7 9h5v1H7V9z"/></svg>
+  );
+
+  const handleZoomIn = (e) => {
+    if (e) e.stopPropagation();
+    if (zoomLevel >= 1.5) return;
+    const nextZoom = parseFloat((zoomLevel + 0.1).toFixed(1));
+    setZoomLevel(nextZoom);
+    setShowZoomToast(true);
+    if (toastTimeoutRef.current) clearTimeout(toastTimeoutRef.current);
+    toastTimeoutRef.current = setTimeout(() => setShowZoomToast(false), 1500);
+  };
+
+  const handleZoomOut = (e) => {
+    if (e) e.stopPropagation();
+    if (zoomLevel <= 1.0) return;
+    const nextZoom = parseFloat((zoomLevel - 0.1).toFixed(1));
+    setZoomLevel(nextZoom);
+    setShowZoomToast(true);
+    if (toastTimeoutRef.current) clearTimeout(toastTimeoutRef.current);
+    toastTimeoutRef.current = setTimeout(() => setShowZoomToast(false), 1500);
+  };
+
   const progressPercent = duration > 0 ? (currentTime / duration) * 100 : 0;
 
   return (
@@ -235,12 +270,19 @@ const SecureVideoPlayer = ({ videoId }) => {
         </div>
       )}
 
-      {/* The actual YouTube iframe wrapper */}
-      {/* We use an empty div that the YT API will replace with an iframe */}
-      <div 
-        ref={playerDivRef} 
-        className={styles.youtubeIframe}
-      ></div>
+      {showZoomToast && (
+        <div className={styles.zoomToast}>
+          {zoomLevel === 1.0 ? 'Zoom: Fit (100%)' : `Zoom: ${Math.round(zoomLevel * 100)}%`}
+        </div>
+      )}
+
+      {/* The actual YouTube iframe wrapper inside scale wrapper */}
+      <div className={styles.videoWrapper} style={{ transform: `scale(${zoomLevel})`, transformOrigin: 'center center' }}>
+        <div 
+          ref={playerDivRef} 
+          className={styles.youtubeIframe}
+        ></div>
+      </div>
 
       {/* Invisible shield to capture clicks and prevent right click */}
       <div 
@@ -261,7 +303,13 @@ const SecureVideoPlayer = ({ videoId }) => {
           {isPlaying ? <PauseIcon /> : <PlayIcon />}
         </button>
 
-        <div className={styles.timeDisplay}>
+        {/* Combined Time for Mobile */}
+        <div className={`${styles.timeDisplay} ${styles.mobileTime}`}>
+          {formatTime(currentTime)} / {formatTime(duration)}
+        </div>
+
+        {/* Start Time for Desktop */}
+        <div className={`${styles.timeDisplay} ${styles.desktopTime}`}>
           {formatTime(currentTime)}
         </div>
 
@@ -278,12 +326,31 @@ const SecureVideoPlayer = ({ videoId }) => {
           ></div>
         </div>
 
-        <div className={styles.timeDisplay}>
+        {/* End Time for Desktop */}
+        <div className={`${styles.timeDisplay} ${styles.desktopTime}`}>
           {formatTime(duration)}
         </div>
 
-        <button className={styles.controlButton} onClick={toggleMute}>
+        <button className={`${styles.controlButton} ${styles.volumeButton}`} onClick={toggleMute}>
           {isMuted ? <VolumeOffIcon /> : <VolumeOnIcon />}
+        </button>
+
+        <button 
+          className={`${styles.controlButton} ${zoomLevel <= 1.0 ? styles.disabled : ''}`} 
+          onClick={handleZoomOut} 
+          disabled={zoomLevel <= 1.0}
+          title="Zoom Out"
+        >
+          <ZoomOutIcon />
+        </button>
+
+        <button 
+          className={`${styles.controlButton} ${zoomLevel >= 1.5 ? styles.disabled : ''}`} 
+          onClick={handleZoomIn} 
+          disabled={zoomLevel >= 1.5}
+          title="Zoom In"
+        >
+          <ZoomInIcon />
         </button>
 
         <button className={styles.controlButton} onClick={toggleFullscreen}>

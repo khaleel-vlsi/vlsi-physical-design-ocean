@@ -6,6 +6,9 @@
   color: #f8fafc;
   font-family: 'Inter', sans-serif;
   padding: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .header {
@@ -82,7 +85,7 @@
 }
 
 .playlistSection {
-  width: 400px;
+  width: 320px;
   background: rgba(30, 41, 59, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 16px;
@@ -194,6 +197,7 @@
 @media (max-width: 1024px) {
   .mainLayout {
     flex-direction: column;
+    gap: 1.5rem;
   }
   
   .playlistSection {
@@ -204,13 +208,25 @@
 
 @media (max-width: 768px) {
   .playlistContainer {
-    padding: 1rem 0.5rem;
+    padding: 0;
+  }
+  .header {
+    padding: 1rem 1rem 0 1rem;
+    margin-bottom: 1rem;
+  }
+  .playerSection {
+    width: 100%;
+  }
+  .currentVideoInfo {
+    margin: 1rem 1rem 0 1rem;
+    padding: 1rem;
+  }
+  .playlistSection {
+    width: calc(100% - 2rem);
+    margin: 1rem;
+    max-height: 400px;
   }
   .moduleTitle {
     font-size: 1.5rem;
-  }
-  .currentVideoInfo {
-    margin-top: 1rem;
-    padding: 1rem;
   }
 }

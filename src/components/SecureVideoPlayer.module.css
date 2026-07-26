@@ -340,6 +340,75 @@
   100% { opacity: 0; transform: translateY(-5px); }
 }
 
+/* Speed Selector Styles */
+.speedContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.speedButton {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #4ade80;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.speedButton:hover {
+  background: rgba(74, 222, 128, 0.2);
+  border-color: #4ade80;
+  color: #ffffff;
+}
+
+.speedMenu {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 60;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  min-width: 100px;
+}
+
+.speedOption {
+  background: transparent;
+  border: none;
+  color: #cbd5e1;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.speedOption:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.speedOption.activeSpeed {
+  background: rgba(74, 222, 128, 0.2);
+  color: #4ade80;
+  font-weight: 700;
+}
+
 /* Time display responsive classes */
 .mobileTime {
   display: none;
@@ -402,5 +471,10 @@
     width: 30px;
     height: 30px;
     margin-left: 3px;
+  }
+
+  .speedButton {
+    font-size: 0.75rem;
+    padding: 3px 6px;
   }
 }

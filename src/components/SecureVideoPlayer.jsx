@@ -331,6 +331,20 @@ const SecureVideoPlayer = ({ videoId, title }) => {
     toastTimeoutRef.current = setTimeout(() => setShowZoomToast(false), 1500);
   };
 
+  const [playbackRate, setPlaybackRate] = useState(1.0);
+  const [showSpeedMenu, setShowSpeedMenu] = useState(false);
+
+  const speedOptions = [0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0];
+
+  const handleSpeedChange = (rate, e) => {
+    if (e) e.stopPropagation();
+    setPlaybackRate(rate);
+    setShowSpeedMenu(false);
+    if (playerRef.current && typeof playerRef.current.setPlaybackRate === 'function') {
+      playerRef.current.setPlaybackRate(rate);
+    }
+  };
+
   const progressPercent = duration > 0 ? (currentTime / duration) * 100 : 0;
 
   return (
@@ -374,7 +388,10 @@ const SecureVideoPlayer = ({ videoId, title }) => {
       {/* Invisible shield to capture clicks and prevent right click */}
       <div 
         className={styles.clickShield} 
-        onClick={togglePlay}
+        onClick={() => {
+          if (showSpeedMenu) setShowSpeedMenu(false);
+          else togglePlay();
+        }}
       ></div>
 
       {/* Big Play Button Overlay (shown when paused) */}
@@ -429,6 +446,34 @@ const SecureVideoPlayer = ({ videoId, title }) => {
         <button className={`${styles.controlButton} ${styles.volumeButton}`} onClick={toggleMute}>
           {isMuted ? <VolumeOffIcon /> : <VolumeOnIcon />}
         </button>
+
+        {/* Playback Speed Selector */}
+        <div className={styles.speedContainer}>
+          <button 
+            className={styles.speedButton} 
+            onClick={(e) => {
+              e.stopPropagation();
+              setShowSpeedMenu(!showSpeedMenu);
+            }}
+            title="Playback Speed"
+          >
+            {playbackRate === 1.0 ? '1x' : `${playbackRate}x`}
+          </button>
+          
+          {showSpeedMenu && (
+            <div className={styles.speedMenu}>
+              {speedOptions.map((rate) => (
+                <button
+                  key={rate}
+                  className={`${styles.speedOption} ${playbackRate === rate ? styles.activeSpeed : ''}`}
+                  onClick={(e) => handleSpeedChange(rate, e)}
+                >
+                  {rate === 1.0 ? '1x (Normal)' : `${rate}x`}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
 
         <button 
           className={`${styles.controlButton} ${zoomLevel <= 1.0 ? styles.disabled : ''}`} 

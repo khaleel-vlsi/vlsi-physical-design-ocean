@@ -11,8 +11,14 @@ export const modulesData = {
       "Analog vs Digital Signals",
       "Introduction to Semiconductor Devices",
       "PN Junction Diode Basics",
-      "Logic Voltage Levels",
-      ],
+      "Logic Voltage Levels"
+    ],
+    "iframes": [
+      {
+        "heading": "Module 1 – Study Material (Read Only)",
+        "url": "https://docs.google.com/document/d/1D-38RuKU8oXLWb1SjRB1xLfxDOKqUklOhQAmi2BR-QA/preview"
+      }
+    ],
     "isLocked": false,
     "hasNativeContent": true,
     "keywords": ["basic electronics", "voltage current resistance", "ohms law", "pn junction diode", "semiconductor basics", "vlsi fundamentals for beginners"]

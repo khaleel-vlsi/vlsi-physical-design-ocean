@@ -94,6 +94,15 @@ const ModuleDetail = () => {
   const stepInfo = getFlowStepInfo(moduleId);
   const moduleInfo = modulesData[String(moduleId)];
 
+  const [readingMode, setReadingMode] = React.useState(() => {
+    return localStorage.getItem('preferred_reading_mode') || 'website';
+  });
+
+  const handleReadingModeChange = (mode) => {
+    setReadingMode(mode);
+    localStorage.setItem('preferred_reading_mode', mode);
+  };
+
   React.useEffect(() => {
     if (hasPremiumAccess && moduleId >= 9 && moduleId <= 59) {
       navigate(`/paid-modules/module/${moduleId}`, { replace: true });
@@ -103,6 +112,47 @@ const ModuleDetail = () => {
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, [id]);
 
+  React.useEffect(() => {
+    const handleContextMenu = (e) => e.preventDefault();
+    const handleCopyCut = (e) => e.preventDefault();
+    const handleSelectStart = (e) => e.preventDefault();
+    const handleSelectionChange = () => {
+      if (window.getSelection && window.getSelection().rangeCount > 0) {
+        window.getSelection().removeAllRanges();
+      }
+    };
+    const handleDragStart = (e) => e.preventDefault();
+    const handleKeyDown = (e) => {
+      const isCmdOrCtrl = e.ctrlKey || e.metaKey;
+      const key = e.key.toLowerCase();
+      if (
+        (isCmdOrCtrl && ['c', 'a', 'x', 'p', 's', 'u'].includes(key)) ||
+        (isCmdOrCtrl && e.shiftKey && key === 'i') ||
+        e.keyCode === 123
+      ) {
+        e.preventDefault();
+      }
+    };
+
+    window.addEventListener('contextmenu', handleContextMenu);
+    window.addEventListener('copy', handleCopyCut);
+    window.addEventListener('cut', handleCopyCut);
+    window.addEventListener('selectstart', handleSelectStart);
+    document.addEventListener('selectionchange', handleSelectionChange);
+    window.addEventListener('dragstart', handleDragStart);
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('contextmenu', handleContextMenu);
+      window.removeEventListener('copy', handleCopyCut);
+      window.removeEventListener('cut', handleCopyCut);
+      window.removeEventListener('selectstart', handleSelectStart);
+      document.removeEventListener('selectionchange', handleSelectionChange);
+      window.removeEventListener('dragstart', handleDragStart);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
   if (!moduleInfo) {
     return (
       <div className={styles.moduleContent}>
@@ -111,6 +161,10 @@ const ModuleDetail = () => {
       </div>
     );
   }
+
+  const hasNative = moduleInfo.hasNativeContent && NATIVE_COMPONENTS[moduleId];
+  const hasIframes = moduleInfo.iframes && moduleInfo.iframes.length > 0;
+  const showToggle = hasNative && hasIframes;
 
   return (
     <>
@@ -173,7 +227,29 @@ const ModuleDetail = () => {
       </header>
 
       <div className={styles.moduleContent}>
-        {(!(moduleInfo.hasNativeContent && NATIVE_COMPONENTS[moduleId]) || moduleInfo.isLocked) && (
+        {showToggle && !moduleInfo.isLocked && (
+          <div className={styles.readingModeToggleBar}>
+            <span className={styles.toggleLabel}>Select Reading View:</span>
+            <div className={styles.toggleButtonGroup}>
+              <button 
+                className={`${styles.toggleBtn} ${readingMode === 'website' ? styles.toggleActive : ''}`}
+                onClick={() => handleReadingModeChange('website')}
+                title="Read as interactive website page"
+              >
+                <span className={styles.toggleIcon}>🌐</span> Website Reading View
+              </button>
+              <button 
+                className={`${styles.toggleBtn} ${readingMode === 'document' ? styles.toggleActive : ''}`}
+                onClick={() => handleReadingModeChange('document')}
+                title="View original Google Doc / PDF document"
+              >
+                <span className={styles.toggleIcon}>📄 Original Document View</span>
+              </button>
+            </div>
+          </div>
+        )}
+
+        {(!(hasNative && readingMode === 'website') || moduleInfo.isLocked) && (
           <div className={styles.contentSection}>
             <h2>{(moduleInfo.id >= 28 && moduleInfo.id !== 58) ? "📚 Reference Materials & User Guides" : "Topics Covered"}</h2>
             <ul className={styles.topicsList}>
@@ -210,7 +286,7 @@ const ModuleDetail = () => {
           </div>
         ) : (
           <>
-            {moduleInfo.hasNativeContent && NATIVE_COMPONENTS[moduleId] ? (
+            {hasNative && (readingMode === 'website' || !hasIframes) ? (
               <ErrorBoundary>
                 <Suspense fallback={<div className={styles.loadingText} style={{ textAlign: 'center', padding: '40px', color: '#64748b' }}>Loading module content...</div>}>
                   {React.createElement(NATIVE_COMPONENTS[moduleId])}
@@ -223,13 +299,83 @@ const ModuleDetail = () => {
                     <div key={idx} className={styles.contentSection} style={{ marginTop: '30px' }}>
                       <h2>{item.heading.split('–')[0]} – Study Material (Read Only)</h2>
                       <div className={styles.iframeWrapper}>
-                        <iframe
-                          src={item.url}
-                          width="100%"
-                          height="950"
-                          className={styles.moduleIframe}
-                          title={`Module ${moduleInfo.id} content ${idx + 1}`}
-                        />
+                        <div className={styles.docControlBar}>
+                          <span className={styles.docControlTitle}>🔒 Protected Document Viewer</span>
+                          <div className={styles.docControlGroup}>
+                            <button 
+                              className={styles.docControlBtn}
+                              onClick={() => {
+                                const wrapper = document.getElementById(`iframe-wrapper-free-${moduleId}-${idx}`);
+                                if (wrapper) wrapper.scrollTop -= 600;
+                              }}
+                              title="Scroll Up"
+                            >
+                              ⬆ Scroll Up
+                            </button>
+                            <button 
+                              className={styles.docControlBtn}
+                              onClick={() => {
+                                const wrapper = document.getElementById(`iframe-wrapper-free-${moduleId}-${idx}`);
+                                if (wrapper) wrapper.scrollTop += 600;
+                              }}
+                              title="Scroll Down"
+                            >
+                              ⬇ Scroll Down
+                            </button>
+                            <button 
+                              className={styles.docControlBtn}
+                              onClick={() => {
+                                const wrapper = document.getElementById(`iframe-wrapper-free-${moduleId}-${idx}`);
+                                if (wrapper) wrapper.scrollTop = 0;
+                              }}
+                              title="Top of Document"
+                            >
+                              ⏫ Top
+                            </button>
+                            <button 
+                              className={styles.docControlBtn}
+                              onClick={() => {
+                                const wrapper = document.getElementById(`iframe-wrapper-free-${moduleId}-${idx}`);
+                                if (wrapper) wrapper.scrollTop = wrapper.scrollHeight;
+                              }}
+                              title="Bottom of Document"
+                            >
+                              ⏬ Bottom
+                            </button>
+                          </div>
+                        </div>
+                        <div id={`iframe-wrapper-free-${moduleId}-${idx}`} className={styles.iframeInnerWrapper}>
+                          <div 
+                            className={styles.iframeShield}
+                            onContextMenu={(e) => e.preventDefault()}
+                            onSelectStart={(e) => e.preventDefault()}
+                            onMouseDown={(e) => e.preventDefault()}
+                            onWheel={(e) => {
+                              const wrapper = document.getElementById(`iframe-wrapper-free-${moduleId}-${idx}`);
+                              if (wrapper) wrapper.scrollTop += e.deltaY;
+                            }}
+                            onTouchMove={(e) => {
+                              const wrapper = document.getElementById(`iframe-wrapper-free-${moduleId}-${idx}`);
+                              if (wrapper && e.touches && e.touches[0]) {
+                                if (wrapper.lastTouchY !== undefined) {
+                                  const deltaY = wrapper.lastTouchY - e.touches[0].clientY;
+                                  wrapper.scrollTop += deltaY;
+                                }
+                                wrapper.lastTouchY = e.touches[0].clientY;
+                              }
+                            }}
+                            onTouchEnd={() => {
+                              const wrapper = document.getElementById(`iframe-wrapper-free-${moduleId}-${idx}`);
+                              if (wrapper) wrapper.lastTouchY = undefined;
+                            }}
+                          />
+                          <iframe
+                            src={item.url}
+                            width="100%"
+                            className={styles.moduleIframe}
+                            title={`Module ${moduleInfo.id} content ${idx + 1}`}
+                          />
+                        </div>
                       </div>
                     </div>
                   ))}

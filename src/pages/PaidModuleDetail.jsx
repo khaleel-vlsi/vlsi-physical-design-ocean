@@ -53,6 +53,27 @@ const getFlowStepInfo = (moduleId) => {
   return null;
 };
 
+const NATIVE_PAID_COMPONENTS = {
+  6: Module6Content,
+  9: Module9Content,
+  12: Module12Content,
+  13: Module13Content,
+  14: Module14Content,
+  15: Module15Content,
+  16: Module16Content,
+  17: Module17Content,
+  18: Module18Content,
+  19: Module19Content,
+  20: Module20Content,
+  21: Module21Content,
+  25: Module25Content,
+  26: Module26Content,
+  27: Module27Content,
+  55: Module55Content,
+  58: Module58Content,
+  59: Module59Content,
+};
+
 const PaidModuleDetail = () => {
   const { id } = useParams();
   const { user } = useAuth();
@@ -62,6 +83,15 @@ const PaidModuleDetail = () => {
   const [isTopicsExpanded, setIsTopicsExpanded] = useState(false);
   const [showAllTopics, setShowAllTopics] = useState(false);
   const [hasAccess, setHasAccess] = useState(false);
+
+  const [readingMode, setReadingMode] = useState(() => {
+    return localStorage.getItem('preferred_reading_mode') || 'website';
+  });
+
+  const handleReadingModeChange = (mode) => {
+    setReadingMode(mode);
+    localStorage.setItem('preferred_reading_mode', mode);
+  };
 
   useEffect(() => {
     if (user === undefined) return;
@@ -113,10 +143,21 @@ const PaidModuleDetail = () => {
       e.preventDefault();
     };
 
-    // Disable copy event
-    const handleCopy = (e) => {
+    // Disable copy and cut events
+    const handleCopyCut = (e) => {
       e.preventDefault();
-      alert("Copying is disabled for premium study materials.");
+    };
+
+    // Disable selectstart
+    const handleSelectStart = (e) => {
+      e.preventDefault();
+    };
+
+    // Clear any text selections automatically
+    const handleSelectionChange = () => {
+      if (window.getSelection && window.getSelection().rangeCount > 0) {
+        window.getSelection().removeAllRanges();
+      }
     };
 
     // Disable drag start
@@ -124,24 +165,33 @@ const PaidModuleDetail = () => {
       e.preventDefault();
     };
 
-    // Disable keyboard shortcuts (Ctrl/Cmd + C, P, S)
+    // Disable keyboard shortcuts (Ctrl/Cmd + C, A, X, P, S, U, F12)
     const handleKeyDown = (e) => {
       const isCmdOrCtrl = e.ctrlKey || e.metaKey;
       const key = e.key.toLowerCase();
-      if (isCmdOrCtrl && (key === 'c' || key === 'p' || key === 's')) {
+      if (
+        (isCmdOrCtrl && ['c', 'a', 'x', 'p', 's', 'u'].includes(key)) ||
+        (isCmdOrCtrl && e.shiftKey && key === 'i') ||
+        e.keyCode === 123
+      ) {
         e.preventDefault();
-        alert("Copying, printing, and saving are disabled for premium study materials.");
       }
     };
 
     window.addEventListener('contextmenu', handleContextMenu);
-    window.addEventListener('copy', handleCopy);
+    window.addEventListener('copy', handleCopyCut);
+    window.addEventListener('cut', handleCopyCut);
+    window.addEventListener('selectstart', handleSelectStart);
+    document.addEventListener('selectionchange', handleSelectionChange);
     window.addEventListener('dragstart', handleDragStart);
     window.addEventListener('keydown', handleKeyDown);
 
     return () => {
       window.removeEventListener('contextmenu', handleContextMenu);
-      window.removeEventListener('copy', handleCopy);
+      window.removeEventListener('copy', handleCopyCut);
+      window.removeEventListener('cut', handleCopyCut);
+      window.removeEventListener('selectstart', handleSelectStart);
+      document.removeEventListener('selectionchange', handleSelectionChange);
       window.removeEventListener('dragstart', handleDragStart);
       window.removeEventListener('keydown', handleKeyDown);
     };
@@ -301,80 +351,36 @@ const PaidModuleDetail = () => {
         <Suspense fallback={<div className={styles.loadingText}>Loading Resume Builder...</div>}>
           <ResumeBuilder />
         </Suspense>
-      ) : moduleId === 55 ? (
-          <Suspense fallback={<div className={styles.loadingText}>Loading Script Hub...</div>}>
-            <Module55Content />
-          </Suspense>
-        ) : moduleId === 58 ? (
-          <Suspense fallback={<div className={styles.loadingText}>Loading Script Hub...</div>}>
-            <Module58Content />
-          </Suspense>
-        ) : moduleId === 19 ? (
-          <Suspense fallback={<div className={styles.loadingText}>Loading Interview Q&A...</div>}>
-            <Module19Content />
-          </Suspense>
-        ) : moduleId === 20 ? (
-          <Suspense fallback={<div className={styles.loadingText}>Loading Interview Q&A...</div>}>
-            <Module20Content />
-          </Suspense>
-        ) : moduleId === 21 ? (
-          <Suspense fallback={<div className={styles.loadingText}>Loading Interview Q&A...</div>}>
-            <Module21Content />
-          </Suspense>
-        ) : moduleId === 9 ? (
-          <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
-            <Module9Content />
-          </Suspense>
-        ) : moduleId === 59 ? (
-          <Suspense fallback={<div className={styles.loadingText}>Loading Jobs Hub...</div>}>
-            <Module59Content />
-          </Suspense>
-        ) : moduleId === 6 ? (
-          <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
-            <Module6Content />
-          </Suspense>
-        ) : moduleId === 12 ? (
-          <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
-            <Module12Content />
-          </Suspense>
-        ) : moduleId === 13 ? (
-          <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
-            <Module13Content />
-          </Suspense>
-        ) : moduleId === 14 ? (
-          <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
-            <Module14Content />
-          </Suspense>
-        ) : moduleId === 15 ? (
-          <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
-            <Module15Content />
-          </Suspense>
-        ) : moduleId === 16 ? (
-          <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
-            <Module16Content />
-          </Suspense>
-        ) : moduleId === 17 ? (
-          <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
-            <Module17Content />
-          </Suspense>
-        ) : moduleId === 18 ? (
-          <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
-            <Module18Content />
-          </Suspense>
-        ) : moduleId === 25 ? (
-          <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
-            <Module25Content />
-          </Suspense>
-        ) : moduleId === 26 ? (
-          <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
-            <Module26Content />
-          </Suspense>
-        ) : moduleId === 27 ? (
-          <Suspense fallback={<div className={styles.loadingText}>Loading Study Material...</div>}>
-            <Module27Content />
-          </Suspense>
-        ) : (
-        <div className={styles.iframeContainer}>
+      ) : (
+        <>
+          {NATIVE_PAID_COMPONENTS[moduleId] && moduleInfo.iframeLink && !moduleInfo.isLockedTemporarily && (
+            <div className={styles.readingModeToggleBar}>
+              <span className={styles.toggleLabel}>Select Preferred View:</span>
+              <div className={styles.toggleButtonGroup}>
+                <button 
+                  className={`${styles.toggleBtn} ${readingMode === 'website' ? styles.toggleActive : ''}`}
+                  onClick={() => handleReadingModeChange('website')}
+                  title="Read as interactive website page"
+                >
+                  <span className={styles.toggleIcon}>🌐</span> Website Reading View
+                </button>
+                <button 
+                  className={`${styles.toggleBtn} ${readingMode === 'document' ? styles.toggleActive : ''}`}
+                  onClick={() => handleReadingModeChange('document')}
+                  title="View original Google Doc / PDF document"
+                >
+                  <span className={styles.toggleIcon}>📄 Original Document View</span>
+                </button>
+              </div>
+            </div>
+          )}
+
+          {NATIVE_PAID_COMPONENTS[moduleId] && (readingMode === 'website' || !moduleInfo.iframeLink) ? (
+            <Suspense fallback={<div className={styles.loadingText}>Loading Content...</div>}>
+              {React.createElement(NATIVE_PAID_COMPONENTS[moduleId])}
+            </Suspense>
+          ) : (
+            <div className={styles.iframeContainer}>
           {moduleInfo.isLockedTemporarily ? (
           <div className={styles.lockedState}>
             <span className={styles.lockIcon}>🔒</span>
@@ -408,7 +414,77 @@ const PaidModuleDetail = () => {
           </div>
         ) : moduleInfo.iframeLink ? (
           <div className={`${styles.iframeWrapper} ${viewWidth === 'standard' ? styles.widthStandard : styles.widthFull}`}>
-            <iframe 
+            <div className={styles.docControlBar}>
+              <span className={styles.docControlTitle}>🔒 Protected Document Viewer</span>
+              <div className={styles.docControlGroup}>
+                <button 
+                  className={styles.docControlBtn}
+                  onClick={() => {
+                    const wrapper = document.getElementById(`iframe-wrapper-${moduleId}`);
+                    if (wrapper) wrapper.scrollTop -= 600;
+                  }}
+                  title="Scroll Up"
+                >
+                  ⬆ Scroll Up
+                </button>
+                <button 
+                  className={styles.docControlBtn}
+                  onClick={() => {
+                    const wrapper = document.getElementById(`iframe-wrapper-${moduleId}`);
+                    if (wrapper) wrapper.scrollTop += 600;
+                  }}
+                  title="Scroll Down"
+                >
+                  ⬇ Scroll Down
+                </button>
+                <button 
+                  className={styles.docControlBtn}
+                  onClick={() => {
+                    const wrapper = document.getElementById(`iframe-wrapper-${moduleId}`);
+                    if (wrapper) wrapper.scrollTop = 0;
+                  }}
+                  title="Top of Document"
+                >
+                  ⏫ Top
+                </button>
+                <button 
+                  className={styles.docControlBtn}
+                  onClick={() => {
+                    const wrapper = document.getElementById(`iframe-wrapper-${moduleId}`);
+                    if (wrapper) wrapper.scrollTop = wrapper.scrollHeight;
+                  }}
+                  title="Bottom of Document"
+                >
+                  ⏬ Bottom
+                </button>
+              </div>
+            </div>
+            <div id={`iframe-wrapper-${moduleId}`} className={styles.iframeInnerWrapper}>
+              <div 
+                className={styles.iframeShield}
+                onContextMenu={(e) => e.preventDefault()}
+                onSelectStart={(e) => e.preventDefault()}
+                onMouseDown={(e) => e.preventDefault()}
+                onWheel={(e) => {
+                  const wrapper = document.getElementById(`iframe-wrapper-${moduleId}`);
+                  if (wrapper) wrapper.scrollTop += e.deltaY;
+                }}
+                onTouchMove={(e) => {
+                  const wrapper = document.getElementById(`iframe-wrapper-${moduleId}`);
+                  if (wrapper && e.touches && e.touches[0]) {
+                    if (wrapper.lastTouchY !== undefined) {
+                      const deltaY = wrapper.lastTouchY - e.touches[0].clientY;
+                      wrapper.scrollTop += deltaY;
+                    }
+                    wrapper.lastTouchY = e.touches[0].clientY;
+                  }
+                }}
+                onTouchEnd={() => {
+                  const wrapper = document.getElementById(`iframe-wrapper-${moduleId}`);
+                  if (wrapper) wrapper.lastTouchY = undefined;
+                }}
+              />
+              <iframe 
               src={moduleInfo.iframeLink} 
               className={styles.iframe} 
               style={isGoogleDrive ? { marginTop: '-56px', height: 'calc(100% + 56px)' } : {}}
@@ -486,6 +562,7 @@ const PaidModuleDetail = () => {
               }}
             />
           </div>
+        </div>
         ) : (
           <div className={styles.emptyState}>
             <span className={styles.docIcon}>📄</span>
@@ -494,6 +571,8 @@ const PaidModuleDetail = () => {
           </div>
         )}
       </div>
+      )}
+      </>
       )}
 
       <div className={styles.navRow}>

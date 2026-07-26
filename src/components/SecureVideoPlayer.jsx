@@ -18,12 +18,13 @@ const formatTime = (seconds) => {
   return `${m}:${s.toString().padStart(2, '0')}`;
 };
 
-const SecureVideoPlayer = ({ videoId }) => {
+const SecureVideoPlayer = ({ videoId, title }) => {
   const containerRef = useRef(null);
   const playerRef = useRef(null);
   
   const [isReady, setIsReady] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(100);
@@ -58,6 +59,17 @@ const SecureVideoPlayer = ({ videoId }) => {
   const playerDivRef = useRef(null);
 
   useEffect(() => {
+    // Reset states when videoId changes
+    setHasStarted(false);
+    setIsPlaying(false);
+    setCurrentTime(0);
+
+    // If player instance already exists, re-use it instantly with cueVideoById
+    if (playerRef.current && typeof playerRef.current.cueVideoById === 'function') {
+      playerRef.current.cueVideoById(videoId);
+      return;
+    }
+
     // Initialize player once API is ready
     const initPlayer = () => {
       if (!playerDivRef.current) return;
@@ -69,11 +81,14 @@ const SecureVideoPlayer = ({ videoId }) => {
           controls: 0,        // Hide native controls
           disablekb: 1,       // Disable keyboard controls
           fs: 0,              // Hide fullscreen button
-          modestbranding: 1,  // Hide YouTube logo (as much as possible)
+          modestbranding: 1,  // Hide YouTube logo
           rel: 0,             // Don't show related videos from other channels
           playsinline: 1,
           iv_load_policy: 3,  // Hide video annotations
-          showinfo: 0         // Deprecated but useful to include
+          cc_load_policy: 0,  // Disable closed captions by default
+          cc_lang_pref: 'none', // Force no default caption track
+          autohide: 1,
+          showinfo: 0
         },
         events: {
           onReady: onPlayerReady,
@@ -98,9 +113,27 @@ const SecureVideoPlayer = ({ videoId }) => {
       if (toastTimeoutRef.current) clearTimeout(toastTimeoutRef.current);
       if (playerRef.current && playerRef.current.destroy) {
         playerRef.current.destroy();
+        playerRef.current = null;
       }
     };
-  }, []);
+  }, [videoId]);
+
+  const disableCaptions = (target) => {
+    try {
+      if (target) {
+        if (typeof target.unloadModule === 'function') {
+          target.unloadModule('captions');
+          target.unloadModule('cc');
+        }
+        if (typeof target.setOption === 'function') {
+          target.setOption('captions', 'track', {});
+          target.setOption('cc', 'track', {});
+        }
+      }
+    } catch (e) {
+      // Ignore if unavailable
+    }
+  };
 
   const onPlayerReady = (event) => {
     // Force YouTube's iframe to fill the container (overrides YT's inline pixel dimensions)
@@ -113,6 +146,7 @@ const SecureVideoPlayer = ({ videoId }) => {
       iframe.style.height = '100%';
       iframe.style.border = 'none';
     }
+    disableCaptions(event.target);
     setIsReady(true);
     setDuration(event.target.getDuration());
     setVolume(event.target.getVolume());
@@ -120,9 +154,11 @@ const SecureVideoPlayer = ({ videoId }) => {
   };
 
   const onPlayerStateChange = (event) => {
+    disableCaptions(event.target);
     // YT.PlayerState.PLAYING = 1
     if (event.data === 1) {
       setIsPlaying(true);
+      setHasStarted(true);
       startProgressTracking();
     } else {
       setIsPlaying(false);
@@ -156,6 +192,7 @@ const SecureVideoPlayer = ({ videoId }) => {
     if (isPlaying) {
       playerRef.current.pauseVideo();
     } else {
+      setHasStarted(true);
       playerRef.current.playVideo();
     }
   };
@@ -199,6 +236,22 @@ const SecureVideoPlayer = ({ videoId }) => {
     }
   };
 
+  const seekBackward = (e) => {
+    if (e) e.stopPropagation();
+    if (!playerRef.current || !isReady) return;
+    const newTime = Math.max(0, currentTime - 10);
+    playerRef.current.seekTo(newTime, true);
+    setCurrentTime(newTime);
+  };
+
+  const seekForward = (e) => {
+    if (e) e.stopPropagation();
+    if (!playerRef.current || !isReady) return;
+    const newTime = Math.min(duration, currentTime + 10);
+    playerRef.current.seekTo(newTime, true);
+    setCurrentTime(newTime);
+  };
+
   const handleProgressClick = (e) => {
     if (e) e.stopPropagation();
     if (!playerRef.current || !isReady || duration === 0) return;
@@ -220,6 +273,18 @@ const SecureVideoPlayer = ({ videoId }) => {
   
   const PauseIcon = () => (
     <svg viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+  );
+
+  const Rewind10Icon = () => (
+    <svg viewBox="0 0 24 24">
+      <path d="M12.5 8c-2.65 0-5.05.99-6.9 2.6L2 7v9h9l-3.62-3.62c1.39-1.16 3.16-1.88 5.12-1.88 3.54 0 6.55 2.31 7.6 5.5l2.37-.78C21.08 11.03 17.15 8 12.5 8z"/>
+    </svg>
+  );
+
+  const Forward10Icon = () => (
+    <svg viewBox="0 0 24 24">
+      <path d="M11.5 8c2.65 0 5.05.99 6.9 2.6L22 7v9h-9l3.62-3.62c-1.39-1.16-3.16-1.88-5.12-1.88-3.54 0-6.55 2.31-7.6 5.5l-2.37-.78C2.92 11.03 6.85 8 11.5 8z"/>
+    </svg>
   );
 
   const VolumeOnIcon = () => (
@@ -271,6 +336,21 @@ const SecureVideoPlayer = ({ videoId }) => {
   return (
     <div className={styles.playerContainer} ref={containerRef}>
       
+      {/* Top Header Overlay to mask YouTube raw title bar */}
+      <div className={styles.topHeaderMask}>
+        <span className={styles.topHeaderTitle}>{title || 'VLSI Physical Design Ocean'}</span>
+      </div>
+
+      {!hasStarted && (
+        <div className={styles.initialPosterCover} onClick={togglePlay}>
+          <div className={styles.posterTitle}>{title || 'VLSI Physical Design Ocean'}</div>
+          <div className={styles.bigPlayButton}>
+            <PlayIcon />
+          </div>
+          <span className={styles.posterSubtext}>Click to start video</span>
+        </div>
+      )}
+
       {!isReady && (
         <div className={styles.loadingOverlay}>
           <div className={styles.spinner}></div>
@@ -306,8 +386,16 @@ const SecureVideoPlayer = ({ videoId }) => {
 
       {/* Custom Controls Bar */}
       <div className={`${styles.controlsBar} ${!isPlaying ? styles.showControls : ''}`}>
-        <button className={styles.controlButton} onClick={togglePlay}>
+        <button className={styles.controlButton} onClick={togglePlay} title={isPlaying ? "Pause" : "Play"}>
           {isPlaying ? <PauseIcon /> : <PlayIcon />}
+        </button>
+
+        <button className={styles.controlButton} onClick={seekBackward} title="Rewind 10 seconds">
+          <Rewind10Icon />
+        </button>
+
+        <button className={styles.controlButton} onClick={seekForward} title="Forward 10 seconds">
+          <Forward10Icon />
         </button>
 
         {/* Combined Time for Mobile */}

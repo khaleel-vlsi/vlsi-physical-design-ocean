@@ -106,8 +106,46 @@
 /* ── Base Reset ─────────────────────────────────────────────────────────── */
 *,
 *::before,
-*::after {
+*::after,
+html,
+body,
+div,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+ul,
+ol,
+table,
+tr,
+td,
+th,
+pre,
+code,
+section,
+article,
+header,
+footer,
+main {
   box-sizing: border-box;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  -webkit-touch-callout: none !important;
+}
+
+input,
+textarea {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
 }
 
 html {

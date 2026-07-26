@@ -101,14 +101,30 @@ export const VIDEO_MODULES = {
     thumbnail: '/images/modules/mod5.jpg',
     title: 'RTL Coding using Verilog',
     description: 'RTL Coding using Verilog.',
-    sessions: []
+    isLocked: false,
+    sessions: [
+      { id: 'v5_1', title: 'RTL Class -1', youtubeId: 'CNjSt7_Tk-s', duration: 'Unknown' },
+      { id: 'v5_2', title: 'RTL Class - 2', youtubeId: 'I_yXEkF6-kc', duration: 'Unknown' },
+      { id: 'v5_3', title: 'RTL Class -3', youtubeId: 'DEXJvq3EQc8', duration: 'Unknown' },
+      { id: 'v5_4', title: 'RTL Class -4', youtubeId: 'WyM8nKakL34', duration: 'Unknown' },
+      { id: 'v5_5', title: 'RTL Class -5', youtubeId: 'YztaUJcV4Mc', duration: 'Unknown' },
+      { id: 'v5_6', title: 'RTL Class - 6', youtubeId: 'IYW59BL2IPM', duration: 'Unknown' }
+    ]
   },
   6: {
     id: 6,
     thumbnail: '/images/modules/mod6.jpg',
     title: 'Logical Synthesis',
     description: 'Logical Synthesis concepts.',
-    sessions: []
+    isLocked: false,
+    sessions: [
+      { id: 'v6_1', title: 'Logical Synthesis class -1', youtubeId: '_FUwUUN9ITM', duration: 'Unknown' },
+      { id: 'v6_2', title: 'Logical Synthesis class -2', youtubeId: 'wTVg4aYHDxk', duration: 'Unknown' },
+      { id: 'v6_3', title: 'Logical Synthesis class -3', youtubeId: '4jtHwL1D0DI', duration: 'Unknown' },
+      { id: 'v6_4', title: 'Logical Synthesis class -4', youtubeId: 'cVotR-E4ueA', duration: 'Unknown' },
+      { id: 'v6_5', title: 'Logical Synthesis class -5', youtubeId: '7qWcrr1BSQc', duration: 'Unknown' },
+      { id: 'v6_6', title: 'Logical Synthesis class -6', youtubeId: 'OI_bCxpSzko', duration: 'Unknown' }
+    ]
   },
   7: {
     id: 7,
@@ -150,48 +166,93 @@ export const VIDEO_MODULES = {
     thumbnail: '/images/modules/mod10.jpg',
     title: 'Static Timing Analysis - 2',
     description: 'Advanced STA.',
-    isLocked: true,
-    sessions: []
+    isLocked: false,
+    sessions: [
+      { id: 'v10_1', title: 'STA Class -13', youtubeId: 'ZEeXaS95GVA', duration: 'Unknown' },
+      { id: 'v10_2', title: 'STA Class -14', youtubeId: 'xiO02UbNft8', duration: 'Unknown' },
+      { id: 'v10_3', title: 'STA Class -15', youtubeId: 'XuXUfKns5Nk', duration: 'Unknown' },
+      { id: 'v10_4', title: 'STA Class -16', youtubeId: 'vMRx1FcnUqM', duration: 'Unknown' },
+      { id: 'v10_5', title: 'STA Class -17', youtubeId: 'GzrNjZh_V-U', duration: 'Unknown' },
+      { id: 'v10_6', title: 'STA Class -18', youtubeId: 'vyQcHKB6lps', duration: 'Unknown' },
+      { id: 'v10_7', title: 'STA Class -19', youtubeId: 'TjekCGWCwL4', duration: 'Unknown' },
+      { id: 'v10_8', title: 'STA Class -20', youtubeId: 'IlpMvtrEbGA', duration: 'Unknown' },
+      { id: 'v10_9', title: 'STA Class -21', youtubeId: 'CDSyEmguYCY', duration: 'Unknown' },
+      { id: 'v10_10', title: 'STA Class -22', youtubeId: '0-DE8eTzYdE', duration: 'Unknown' },
+      { id: 'v10_11', title: 'STA Class -23', youtubeId: 'smEdy0SxATE', duration: 'Unknown' }
+    ]
   },
   11: {
     id: 11,
     thumbnail: '/images/modules/mod11.jpg',
     title: 'Static Timing Analysis - 3',
     description: 'Advanced STA part 3.',
-    isLocked: true,
-    sessions: []
+    isLocked: false,
+    sessions: [
+      { id: 'v11_1', title: 'STA Problems class  -1', youtubeId: 'xZmNCdHwqXc', duration: 'Unknown' },
+      { id: 'v11_2', title: 'STA Problems class  -2', youtubeId: 'Re2ACXjt8L8', duration: 'Unknown' },
+      { id: 'v11_3', title: 'STA Problems class  -3', youtubeId: 'eJNECLpg26c', duration: 'Unknown' },
+      { id: 'v11_4', title: 'STA Problems class  -4', youtubeId: 'fdNVx1w7BhU', duration: 'Unknown' }
+    ]
   },
   12: {
     id: 12,
     thumbnail: '/images/modules/mod12.jpg',
     title: 'PNR Inputs & Sanity Checks',
     description: 'Inputs and sanity checks for PNR.',
-    isLocked: true,
-    sessions: []
+    isLocked: false,
+    sessions: [
+      { id: 'v12_1', title: 'Loading PNR inputs Class -1', youtubeId: 'x3Vg7Z48t-g', duration: 'Unknown' },
+      { id: 'v12_2', title: 'Loading PNR Inputs Class -2', youtubeId: 'D5Z4E55vcDg', duration: 'Unknown' }
+    ]
   },
   13: {
     id: 13,
     thumbnail: '/images/modules/mod13.jpg',
     title: 'FloorPlan & PowerPlan',
     description: 'Floorplanning and Powerplanning.',
-    isLocked: true,
-    sessions: []
+    isLocked: false,
+    sessions: [
+      { id: 'v13_1', title: 'Floor Plan Class -1', youtubeId: '9nuuMaDrvog', duration: 'Unknown' },
+      { id: 'v13_2', title: 'Floor Plan Class -2', youtubeId: 'WxR2llmhnGI', duration: 'Unknown' },
+      { id: 'v13_3', title: 'Floor Plan Class -3', youtubeId: 'a8vbbkBINsY', duration: 'Unknown' },
+      { id: 'v13_4', title: 'Floor Plan Class -4', youtubeId: '7ddUNkwo3NM', duration: 'Unknown' },
+      { id: 'v13_5', title: 'FloorPlan Class - 5', youtubeId: 'ujOZzi1OSdU', duration: 'Unknown' },
+      { id: 'v13_6', title: 'FloorPlan Class - 6', youtubeId: 'AUIW1Rr0p2g', duration: 'Unknown' },
+      { id: 'v13_7', title: 'FloorPlan Class - 7', youtubeId: 'mTum1Pc1tyE', duration: 'Unknown' },
+      { id: 'v13_8', title: 'Floor Plan Class -8', youtubeId: 'LfB_OikVZ_8', duration: 'Unknown' },
+      { id: 'v13_9', title: 'Floor Plan Class -9', youtubeId: 'BAFb-X5j6og', duration: 'Unknown' },
+      { id: 'v13_10', title: 'Floor Plan Class -10', youtubeId: 'rM1PAQryOnA', duration: 'Unknown' }
+    ]
   },
   14: {
     id: 14,
     thumbnail: '/images/modules/mod14.jpg',
     title: 'Placement',
-    description: 'Placement techniques.',
-    isLocked: true,
-    sessions: []
+    description: 'Placement techniques and optimization.',
+    isLocked: false,
+    sessions: [
+      { id: 'v14_1', title: 'Placement Class -1', youtubeId: 'm9GV_3Iy0u0', duration: 'Unknown' },
+      { id: 'v14_2', title: 'Placement Class -2', youtubeId: 'H6qMGe19Y9o', duration: 'Unknown' },
+      { id: 'v14_3', title: 'Placement Class -3', youtubeId: 'KIgQOVc2Y_A', duration: 'Unknown' },
+      { id: 'v14_4', title: 'Placement Class -4', youtubeId: 'm8kNRSHZGDg', duration: 'Unknown' },
+      { id: 'v14_5', title: 'Placement Class -5', youtubeId: 'lGCostD0haI', duration: 'Unknown' }
+    ]
   },
   15: {
     id: 15,
     thumbnail: '/images/modules/mod15.jpg',
     title: 'Clock Tree Synthesis - 1',
-    description: 'CTS basics.',
-    isLocked: true,
-    sessions: []
+    description: 'CTS basics and clock tree implementation.',
+    isLocked: false,
+    sessions: [
+      { id: 'v15_1', title: 'CTS Class -1', youtubeId: 'HUecPhoOK14', duration: 'Unknown' },
+      { id: 'v15_2', title: 'CTS Class -2', youtubeId: 'S3STmZtbiNw', duration: 'Unknown' },
+      { id: 'v15_3', title: 'CTS Class -3', youtubeId: 'z0YIrah2WeU', duration: 'Unknown' },
+      { id: 'v15_4', title: 'CTS Class -4', youtubeId: 'qUhlVCmuYoI', duration: 'Unknown' },
+      { id: 'v15_5', title: 'CTS Class -5', youtubeId: 'GBz-wlM-goY', duration: 'Unknown' },
+      { id: 'v15_6', title: 'CTS Class -6', youtubeId: 'w2RP969kTqk', duration: 'Unknown' },
+      { id: 'v15_7', title: 'CTS Class -7', youtubeId: '35Rr6sN7I3A', duration: 'Unknown' }
+    ]
   },
   16: {
     id: 16,

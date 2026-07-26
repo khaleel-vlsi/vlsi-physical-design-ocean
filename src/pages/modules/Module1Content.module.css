@@ -13,6 +13,15 @@
   margin: 0 auto;
 }
 
+.moduleLayout,
+.moduleLayout * {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  -webkit-touch-callout: none !important;
+}
+
 .topicsNav {
   display: flex;
   flex-direction: column;

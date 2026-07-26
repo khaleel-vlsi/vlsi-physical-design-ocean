@@ -58,7 +58,7 @@ const TestVideoPlaylist = () => {
         <div className={styles.playerSection}>
           {activeSession ? (
             <>
-              <SecureVideoPlayer key={activeSession.id} videoId={activeSession.youtubeId} />
+              <SecureVideoPlayer key={id} videoId={activeSession.youtubeId} title={activeSession.title} />
               
               <div className={styles.currentVideoInfo}>
                 <h2 className={styles.currentVideoTitle}>{activeSession.title}</h2>

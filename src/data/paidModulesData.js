@@ -25,7 +25,7 @@ export const paidModulesData = [
       "Introduction to Timing Reports"
     ],
     iframeLink: "https://docs.google.com/document/d/1xTcYp9W6-CvLwJVySzj_GMOhnYGhRvBoNuu9qD3FATM/preview",
-    isLockedTemporarily: true,
+    isLockedTemporarily: false,
     lockMessage: "This content will unlock automatically 30 days after your course purchase.",
     unlockDays: 30
   },

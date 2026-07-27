@@ -289,7 +289,17 @@ const ModuleDetail = () => {
             {hasNative && (readingMode === 'website' || !hasIframes) ? (
               <ErrorBoundary>
                 <Suspense fallback={<div className={styles.loadingText} style={{ textAlign: 'center', padding: '40px', color: '#64748b' }}>Loading module content...</div>}>
-                  {React.createElement(NATIVE_COMPONENTS[moduleId])}
+                  <div 
+                    onCopy={(e) => { e.preventDefault(); e.stopPropagation(); if (e.clipboardData) e.clipboardData.setData('text/plain', ''); if (window.getSelection) window.getSelection().removeAllRanges(); }}
+                    onCut={(e) => { e.preventDefault(); e.stopPropagation(); if (e.clipboardData) e.clipboardData.setData('text/plain', ''); if (window.getSelection) window.getSelection().removeAllRanges(); }}
+                    onSelectStart={(e) => { e.preventDefault(); e.stopPropagation(); if (window.getSelection) window.getSelection().removeAllRanges(); }}
+                    onContextMenu={(e) => { e.preventDefault(); e.stopPropagation(); }}
+                    onMouseDown={(e) => { if (window.getSelection) window.getSelection().removeAllRanges(); }}
+                    onMouseMove={(e) => { if (window.getSelection && window.getSelection().toString().length > 0) window.getSelection().removeAllRanges(); }}
+                    style={{ userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none', msUserSelect: 'none' }}
+                  >
+                    {React.createElement(NATIVE_COMPONENTS[moduleId])}
+                  </div>
                 </Suspense>
               </ErrorBoundary>
             ) : (
@@ -299,83 +309,43 @@ const ModuleDetail = () => {
                     <div key={idx} className={styles.contentSection} style={{ marginTop: '30px' }}>
                       <h2>{item.heading.split('–')[0]} – Study Material (Read Only)</h2>
                       <div className={styles.iframeWrapper}>
-                        <div className={styles.docControlBar}>
-                          <span className={styles.docControlTitle}>🔒 Protected Document Viewer</span>
-                          <div className={styles.docControlGroup}>
-                            <button 
-                              className={styles.docControlBtn}
-                              onClick={() => {
-                                const wrapper = document.getElementById(`iframe-wrapper-free-${moduleId}-${idx}`);
-                                if (wrapper) wrapper.scrollTop -= 600;
-                              }}
-                              title="Scroll Up"
-                            >
-                              ⬆ Scroll Up
-                            </button>
-                            <button 
-                              className={styles.docControlBtn}
-                              onClick={() => {
-                                const wrapper = document.getElementById(`iframe-wrapper-free-${moduleId}-${idx}`);
-                                if (wrapper) wrapper.scrollTop += 600;
-                              }}
-                              title="Scroll Down"
-                            >
-                              ⬇ Scroll Down
-                            </button>
-                            <button 
-                              className={styles.docControlBtn}
-                              onClick={() => {
-                                const wrapper = document.getElementById(`iframe-wrapper-free-${moduleId}-${idx}`);
-                                if (wrapper) wrapper.scrollTop = 0;
-                              }}
-                              title="Top of Document"
-                            >
-                              ⏫ Top
-                            </button>
-                            <button 
-                              className={styles.docControlBtn}
-                              onClick={() => {
-                                const wrapper = document.getElementById(`iframe-wrapper-free-${moduleId}-${idx}`);
-                                if (wrapper) wrapper.scrollTop = wrapper.scrollHeight;
-                              }}
-                              title="Bottom of Document"
-                            >
-                              ⏬ Bottom
-                            </button>
-                          </div>
-                        </div>
-                        <div id={`iframe-wrapper-free-${moduleId}-${idx}`} className={styles.iframeInnerWrapper}>
-                          <div 
-                            className={styles.iframeShield}
-                            onContextMenu={(e) => e.preventDefault()}
-                            onSelectStart={(e) => e.preventDefault()}
-                            onMouseDown={(e) => e.preventDefault()}
-                            onWheel={(e) => {
-                              const wrapper = document.getElementById(`iframe-wrapper-free-${moduleId}-${idx}`);
-                              if (wrapper) wrapper.scrollTop += e.deltaY;
-                            }}
-                            onTouchMove={(e) => {
-                              const wrapper = document.getElementById(`iframe-wrapper-free-${moduleId}-${idx}`);
-                              if (wrapper && e.touches && e.touches[0]) {
-                                if (wrapper.lastTouchY !== undefined) {
-                                  const deltaY = wrapper.lastTouchY - e.touches[0].clientY;
-                                  wrapper.scrollTop += deltaY;
-                                }
-                                wrapper.lastTouchY = e.touches[0].clientY;
+                        <div 
+                          className={styles.popoutBlocker}
+                          onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
+                          onMouseDown={(e) => { e.preventDefault(); e.stopPropagation(); }}
+                          onContextMenu={(e) => { e.preventDefault(); e.stopPropagation(); }}
+                          title="Pop-out disabled for security"
+                        />
+                        <div 
+                          className={styles.iframeShield}
+                          onContextMenu={(e) => e.preventDefault()}
+                          onSelectStart={(e) => e.preventDefault()}
+                          onWheel={(e) => {
+                            const wrapper = e.currentTarget.parentElement;
+                            if (wrapper) wrapper.scrollTop += e.deltaY;
+                          }}
+                          onTouchMove={(e) => {
+                            const wrapper = e.currentTarget.parentElement;
+                            if (wrapper && e.touches && e.touches[0]) {
+                              if (wrapper.lastTouchY !== undefined) {
+                                const deltaY = wrapper.lastTouchY - e.touches[0].clientY;
+                                wrapper.scrollTop += deltaY;
                               }
-                            }}
-                            onTouchEnd={() => {
-                              const wrapper = document.getElementById(`iframe-wrapper-free-${moduleId}-${idx}`);
-                              if (wrapper) wrapper.lastTouchY = undefined;
-                            }}
-                          />
-                          <iframe
-                            src={item.url}
-                            width="100%"
-                            className={styles.moduleIframe}
-                            title={`Module ${moduleInfo.id} content ${idx + 1}`}
-                          />
-                        </div>
+                              wrapper.lastTouchY = e.touches[0].clientY;
+                            }
+                          }}
+                          onTouchEnd={(e) => {
+                            const wrapper = e.currentTarget.parentElement;
+                            if (wrapper) wrapper.lastTouchY = undefined;
+                          }}
+                        />
+                        <iframe
+                          src={item.url}
+                          width="100%"
+                          className={styles.moduleIframe}
+                          title={`Module ${moduleInfo.id} content ${idx + 1}`}
+                          allowFullScreen
+                        />
                       </div>
                     </div>
                   ))}

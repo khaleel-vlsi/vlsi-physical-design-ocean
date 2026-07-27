@@ -210,6 +210,8 @@ const PaidModuleDetail = () => {
   const nextModule = currentIndex < (paidModulesData || []).length - 1 ? paidModulesData[currentIndex + 1] : null;
 
   const isGoogleDrive = moduleInfo && moduleInfo.iframeLink && moduleInfo.iframeLink.includes('drive.google.com');
+  const isPdfDoc = moduleInfo && moduleInfo.iframeLink && (moduleInfo.iframeLink.includes('drive.google.com') || moduleInfo.iframeLink.toLowerCase().includes('.pdf'));
+  const isGoogleDoc = moduleInfo && moduleInfo.iframeLink && moduleInfo.iframeLink.includes('docs.google.com');
   const isGoogleLink = moduleInfo && moduleInfo.iframeLink && (moduleInfo.iframeLink.includes('drive.google.com') || moduleInfo.iframeLink.includes('docs.google.com'));
 
   if (!moduleInfo) {
@@ -377,7 +379,17 @@ const PaidModuleDetail = () => {
 
           {NATIVE_PAID_COMPONENTS[moduleId] && (readingMode === 'website' || !moduleInfo.iframeLink) ? (
             <Suspense fallback={<div className={styles.loadingText}>Loading Content...</div>}>
-              {React.createElement(NATIVE_PAID_COMPONENTS[moduleId])}
+              <div 
+                onCopy={(e) => { e.preventDefault(); e.stopPropagation(); if (e.clipboardData) e.clipboardData.setData('text/plain', ''); if (window.getSelection) window.getSelection().removeAllRanges(); }}
+                onCut={(e) => { e.preventDefault(); e.stopPropagation(); if (e.clipboardData) e.clipboardData.setData('text/plain', ''); if (window.getSelection) window.getSelection().removeAllRanges(); }}
+                onSelectStart={(e) => { e.preventDefault(); e.stopPropagation(); if (window.getSelection) window.getSelection().removeAllRanges(); }}
+                onContextMenu={(e) => { e.preventDefault(); e.stopPropagation(); }}
+                onMouseDown={(e) => { if (window.getSelection) window.getSelection().removeAllRanges(); }}
+                onMouseMove={(e) => { if (window.getSelection && window.getSelection().toString().length > 0) window.getSelection().removeAllRanges(); }}
+                style={{ userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none', msUserSelect: 'none' }}
+              >
+                {React.createElement(NATIVE_PAID_COMPONENTS[moduleId])}
+              </div>
             </Suspense>
           ) : (
             <div className={styles.iframeContainer}>
@@ -414,155 +426,43 @@ const PaidModuleDetail = () => {
           </div>
         ) : moduleInfo.iframeLink ? (
           <div className={`${styles.iframeWrapper} ${viewWidth === 'standard' ? styles.widthStandard : styles.widthFull}`}>
-            <div className={styles.docControlBar}>
-              <span className={styles.docControlTitle}>🔒 Protected Document Viewer</span>
-              <div className={styles.docControlGroup}>
-                <button 
-                  className={styles.docControlBtn}
-                  onClick={() => {
-                    const wrapper = document.getElementById(`iframe-wrapper-${moduleId}`);
-                    if (wrapper) wrapper.scrollTop -= 600;
-                  }}
-                  title="Scroll Up"
-                >
-                  ⬆ Scroll Up
-                </button>
-                <button 
-                  className={styles.docControlBtn}
-                  onClick={() => {
-                    const wrapper = document.getElementById(`iframe-wrapper-${moduleId}`);
-                    if (wrapper) wrapper.scrollTop += 600;
-                  }}
-                  title="Scroll Down"
-                >
-                  ⬇ Scroll Down
-                </button>
-                <button 
-                  className={styles.docControlBtn}
-                  onClick={() => {
-                    const wrapper = document.getElementById(`iframe-wrapper-${moduleId}`);
-                    if (wrapper) wrapper.scrollTop = 0;
-                  }}
-                  title="Top of Document"
-                >
-                  ⏫ Top
-                </button>
-                <button 
-                  className={styles.docControlBtn}
-                  onClick={() => {
-                    const wrapper = document.getElementById(`iframe-wrapper-${moduleId}`);
-                    if (wrapper) wrapper.scrollTop = wrapper.scrollHeight;
-                  }}
-                  title="Bottom of Document"
-                >
-                  ⏬ Bottom
-                </button>
-              </div>
-            </div>
-            <div id={`iframe-wrapper-${moduleId}`} className={styles.iframeInnerWrapper}>
-              <div 
-                className={styles.iframeShield}
-                onContextMenu={(e) => e.preventDefault()}
-                onSelectStart={(e) => e.preventDefault()}
-                onMouseDown={(e) => e.preventDefault()}
-                onWheel={(e) => {
-                  const wrapper = document.getElementById(`iframe-wrapper-${moduleId}`);
-                  if (wrapper) wrapper.scrollTop += e.deltaY;
-                }}
-                onTouchMove={(e) => {
-                  const wrapper = document.getElementById(`iframe-wrapper-${moduleId}`);
-                  if (wrapper && e.touches && e.touches[0]) {
-                    if (wrapper.lastTouchY !== undefined) {
-                      const deltaY = wrapper.lastTouchY - e.touches[0].clientY;
-                      wrapper.scrollTop += deltaY;
-                    }
-                    wrapper.lastTouchY = e.touches[0].clientY;
+            <div 
+              className={styles.popoutBlocker}
+              onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
+              onMouseDown={(e) => { e.preventDefault(); e.stopPropagation(); }}
+              onContextMenu={(e) => { e.preventDefault(); e.stopPropagation(); }}
+              title="Pop-out disabled for security"
+            />
+            <div 
+              className={styles.iframeShield}
+              onContextMenu={(e) => e.preventDefault()}
+              onSelectStart={(e) => e.preventDefault()}
+              onWheel={(e) => {
+                const wrapper = e.currentTarget.parentElement;
+                if (wrapper) wrapper.scrollTop += e.deltaY;
+              }}
+              onTouchMove={(e) => {
+                const wrapper = e.currentTarget.parentElement;
+                if (wrapper && e.touches && e.touches[0]) {
+                  if (wrapper.lastTouchY !== undefined) {
+                    const deltaY = wrapper.lastTouchY - e.touches[0].clientY;
+                    wrapper.scrollTop += deltaY;
                   }
-                }}
-                onTouchEnd={() => {
-                  const wrapper = document.getElementById(`iframe-wrapper-${moduleId}`);
-                  if (wrapper) wrapper.lastTouchY = undefined;
-                }}
-              />
-              <iframe 
-              src={moduleInfo.iframeLink} 
-              className={styles.iframe} 
-              style={isGoogleDrive ? { marginTop: '-56px', height: 'calc(100% + 56px)' } : {}}
-              sandbox={isGoogleLink ? "allow-scripts allow-same-origin allow-forms" : undefined}
-              title={`Premium Module ${moduleInfo.id} Content`}
-              allowFullScreen
-              onLoad={(e) => {
-                try {
-                  const doc = e.target.contentDocument || e.target.contentWindow.document;
-                  if (doc) {
-                    const style = doc.createElement('style');
-                    style.textContent = `
-                      .top-nav, 
-                      .announcement-bar, 
-                      header, 
-                      .module-navigation, 
-                      .site-footer,
-                      .locked-module { 
-                        display: none !important; 
-                      }
-                      .backLink {
-                        display: inline-flex;
-                        align-items: center;
-                        gap: 8px;
-                        background: rgba(255, 255, 255, 0.03);
-                        border: 1px solid rgba(255, 255, 255, 0.06);
-                        padding: 10px 20px;
-                        border-radius: 9999px;
-                        color: #94a3b8;
-                        text-decoration: none;
-                        font-weight: 600;
-                        font-size: 0.85rem;
-                        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                        backdrop-filter: blur(10px);
-                        position: relative;
-                        z-index: 10;
-                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-                      }
-                      
-                      .dashboardLink {
-                        display: inline-flex;
-                        align-items: center;
-                        gap: 8px;
-                        background: rgba(255, 255, 255, 0.04);
-                        border: 1px solid rgba(255, 255, 255, 0.08);
-                        padding: 10px 20px;
-                        border-radius: 9999px;
-                        color: #60a5fa;
-                        text-decoration: none;
-                        font-weight: 600;
-                        font-size: 0.85rem;
-                        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                        backdrop-filter: blur(10px);
-                        position: relative;
-                        z-index: 10;
-                        box-shadow: 0 4px 12px rgba(96, 165, 250, 0.2);
-                      }
-                      
-                      .dashboardLink:hover {
-                        color: #fff;
-                        background: rgba(96, 165, 250, 0.2);
-                        border-color: rgba(96, 165, 250, 0.4);
-                      }
-                      body {
-                        background-color: #0f172a !important;
-                        color: #fff !important;
-                        padding: 20px !important;
-                      }
-                    `;
-                    doc.head.appendChild(style);
-                  }
-                } catch (err) {
-                  // Ignore cross-origin error when loading external Google URLs
+                  wrapper.lastTouchY = e.touches[0].clientY;
                 }
               }}
+              onTouchEnd={(e) => {
+                const wrapper = e.currentTarget.parentElement;
+                if (wrapper) wrapper.lastTouchY = undefined;
+              }}
+            />
+            <iframe 
+              src={moduleInfo.iframeLink} 
+              className={styles.iframe} 
+              title={`Premium Module ${moduleInfo.id} Content`}
+              allowFullScreen
             />
           </div>
-        </div>
         ) : (
           <div className={styles.emptyState}>
             <span className={styles.docIcon}>📄</span>

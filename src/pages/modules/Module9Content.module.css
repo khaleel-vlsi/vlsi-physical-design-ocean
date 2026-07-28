@@ -11,12 +11,6 @@
   padding: 1.5rem 0;
   max-width: 1200px;
   margin: 0 auto;
-
-  /* Prevent text selection and drag copy for copy protection */
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
 }
 
 .header {

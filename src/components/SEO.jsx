@@ -13,9 +13,16 @@ import StructuredData from './StructuredData';
  *   - structuredData: React element (e.g., <StructuredData .../>)
  */
 const SEO = ({ title, description, url, isArticle, keywords, structuredData, noindex }) => {
-  const defaultTitle = 'VLSI Physical Design Ocean – Professional Guide';
-  const defaultDescription = 'VLSI Physical Design Ocean – A structured learning platform for ASIC & VLSI design from basics to advanced physical design.';
+  const defaultTitle = 'VLSI Physical Design Ocean – PnR, STA, Synthesis & ASIC Video Modules';
+  const defaultDescription = 'Master VLSI Physical Design (PnR, STA, Synthesis, CTS, Floorplanning) with 59+ comprehensive modules, complete PnR execution video playlists, industrial tool guides, and interview prep.';
   const domain = 'https://vlsiphysicaldesignocean.com';
+
+  const defaultKeywords = [
+    "vlsi physical design", "pnr video modules", "place and route tutorial", "pnr workshop",
+    "asic design flow", "static timing analysis", "sta tutorial", "logic synthesis",
+    "innovus tutorial", "icc2 tutorial", "primetime tutorial", "cts clock tree synthesis",
+    "floorplanning in vlsi", "routing in vlsi", "drc lvs physical verification", "vlsi video courses"
+  ];
 
   const seoTitle = title ? `${title} | VLSI Physical Design Ocean` : defaultTitle;
   const seoDescription = description || defaultDescription;
@@ -23,7 +30,8 @@ const SEO = ({ title, description, url, isArticle, keywords, structuredData, noi
   // Normalize URL: remove trailing slash if present (except for root)
   const normalizedPath = url && url !== '/' ? url.replace(/\/$/, '') : (url === '/' ? '' : url);
   const canonicalUrl = normalizedPath ? `${domain}${normalizedPath}` : domain;
-  const metaKeywords = keywords ? keywords.join(', ') : '';
+  const combinedKeywords = keywords ? [...keywords, ...defaultKeywords] : defaultKeywords;
+  const metaKeywords = combinedKeywords.join(', ');
 
   return (
     <>

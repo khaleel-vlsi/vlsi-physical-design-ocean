@@ -141,11 +141,9 @@ const Home = () => {
 
       {/* ── Hero ─────────────────────────────────────────────────────── */}
       <header className={styles.heroHeader}>
-        <h1>VLSI Physical Design Ocean – Professional Guide</h1>
+        <h1>VLSI Physical Design Ocean – Complete PnR Video Modules & ASIC Guide</h1>
         <p>
-          Complete learning roadmap from basics to physical design. Master the
-          precision of integrated circuit layout through immersive, high-tech
-          educational modules.
+          Complete learning roadmap from basics to advanced Physical Design. All video recorded classes and practical playlists are fully available for PnR (Place & Route), STA, Synthesis, CTS, and Signoff workflows.
         </p>
         <div className={styles.heroCtaRow}>
           <button 
@@ -155,6 +153,14 @@ const Home = () => {
             <span className={styles.pulseRing}></span>
             <span className={styles.btnIcon}>🗺️</span>
             Explore Interactive Flow Graph
+          </button>
+          <button 
+            onClick={() => navigate('/test-videos')} 
+            className={styles.heroSecondaryBtn}
+            style={{ borderColor: '#e11d48', background: 'rgba(225, 29, 72, 0.15)', color: '#fda4af' }}
+            title="Access Recorded Classes (Exclusive for Enrolled Paid Subscribers)"
+          >
+            🎬 PnR Video Modules (Paid Access)
           </button>
           <button 
             onClick={() => {
@@ -183,7 +189,7 @@ const Home = () => {
             <br/><br/>
             The name "Ocean" signifies the extreme depth of knowledge provided here. You will find real-time problems and solutions, the critical role of Linux and TCL scripting, and an extensive repository of interview questions and answers. We offer everything required to succeed as a Physical Design Engineer, including industrial tool user guides and sample scripts used in real-world tapeouts. With a mix of free foundation modules and highly affordable premium content, this is your one-stop platform for all VLSI queries.
             <br/><br/>
-            <span style={{ color: '#ffd700', fontWeight: 'bold' }}>Important Note:</span> All video recorded classes will be available starting from <strong>31st July 2026</strong>. Quiz tests, resume builder, and certification are future additions and not part of the present subscription plans.
+            <span style={{ color: '#00f2fe', fontWeight: 'bold' }}>🔒 Exclusive for Paid Subscribers:</span> All video recorded classes and playlists are available for PnR (Place and Route), STA, Synthesis, CTS, Floorplanning, and ASIC physical verification in the Recorded Classes portal.
           </p>
 
           <div className={styles.infoColumns}>

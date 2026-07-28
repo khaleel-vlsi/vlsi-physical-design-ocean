@@ -52,12 +52,12 @@ const About = () => {
             At VLSI Physical Design Ocean, we aim to provide an end-to-end structural learning path for anyone looking to enter or grow in the VLSI domain. From fresh engineering graduates to Physical Design Engineers with 3+ years of experience, we offer deep knowledge to solve all your questions in one platform.
           </p>
           <ul className={styles.missionList}>
-            <li><span className={styles.checkIcon}>✔</span> 58 comprehensive modules covering silicon mastery</li>
-            <li><span className={styles.checkIcon}>✔</span> Step-by-step industrial tool execution guides</li>
-            <li><span className={styles.checkIcon}>✔</span> Real-time problems and solutions</li>
-            <li><span className={styles.checkIcon}>✔</span> The critical role of Linux and TCL scripting</li>
-            <li><span className={styles.checkIcon}>✔</span> Secure Premium Document Viewer with Page & Full Width controls</li>
-            <li><span className={styles.checkIcon}>✔</span> Progressive module unlocking for structured learning pacing</li>
+            <li><span className={styles.checkIcon}>✔</span> 59 comprehensive modules covering silicon mastery & complete PnR video playlists</li>
+            <li><span className={styles.checkIcon}>✔</span> All video recorded classes available for PnR (Place & Route), STA, & Synthesis</li>
+            <li><span className={styles.checkIcon}>✔</span> Step-by-step industrial tool execution guides (Innovus, ICC2, PrimeTime, Tempus)</li>
+            <li><span className={styles.checkIcon}>✔</span> Real-time industry problems and practical physical design solutions</li>
+            <li><span className={styles.checkIcon}>✔</span> The critical role of Linux and TCL scripting for tapeout automation</li>
+            <li><span className={styles.checkIcon}>✔</span> Fast dynamic document viewer with multi-page scrolling and responsive layout</li>
           </ul>
         </div>
         <div className={styles.missionImageWrap}>

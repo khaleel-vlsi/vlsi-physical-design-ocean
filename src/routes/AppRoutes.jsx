@@ -166,6 +166,7 @@ const AppRoutes = () => {
         <Route path="/resume/edit/:resumeId" element={<LazyWrapper><ResumeEditor /></LazyWrapper>} />
         <Route path="/test-video" element={<LazyWrapper><TestVideo /></LazyWrapper>} />
         <Route path="/test-videos" element={<LazyWrapper><TestVideoModulesList /></LazyWrapper>} />
+        <Route path="/test-video-playlist" element={<Navigate to="/test-videos" replace />} />
         <Route path="/test-video-playlist/:id" element={<LazyWrapper><TestVideoPlaylist /></LazyWrapper>} />
       </Route>
 

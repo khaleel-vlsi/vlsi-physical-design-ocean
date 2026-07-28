@@ -88,6 +88,12 @@ const PaidModuleDetail = () => {
     return localStorage.getItem('preferred_reading_mode') || 'website';
   });
 
+  const [isIframeLoading, setIsIframeLoading] = useState(true);
+
+  useEffect(() => {
+    setIsIframeLoading(true);
+  }, [id, readingMode]);
+
   const handleReadingModeChange = (mode) => {
     setReadingMode(mode);
     localStorage.setItem('preferred_reading_mode', mode);
@@ -379,15 +385,7 @@ const PaidModuleDetail = () => {
 
           {NATIVE_PAID_COMPONENTS[moduleId] && (readingMode === 'website' || !moduleInfo.iframeLink) ? (
             <Suspense fallback={<div className={styles.loadingText}>Loading Content...</div>}>
-              <div 
-                onCopy={(e) => { e.preventDefault(); e.stopPropagation(); if (e.clipboardData) e.clipboardData.setData('text/plain', ''); if (window.getSelection) window.getSelection().removeAllRanges(); }}
-                onCut={(e) => { e.preventDefault(); e.stopPropagation(); if (e.clipboardData) e.clipboardData.setData('text/plain', ''); if (window.getSelection) window.getSelection().removeAllRanges(); }}
-                onSelectStart={(e) => { e.preventDefault(); e.stopPropagation(); if (window.getSelection) window.getSelection().removeAllRanges(); }}
-                onContextMenu={(e) => { e.preventDefault(); e.stopPropagation(); }}
-                onMouseDown={(e) => { if (window.getSelection) window.getSelection().removeAllRanges(); }}
-                onMouseMove={(e) => { if (window.getSelection && window.getSelection().toString().length > 0) window.getSelection().removeAllRanges(); }}
-                style={{ userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none', msUserSelect: 'none' }}
-              >
+              <div>
                 {React.createElement(NATIVE_PAID_COMPONENTS[moduleId])}
               </div>
             </Suspense>
@@ -433,33 +431,18 @@ const PaidModuleDetail = () => {
               onContextMenu={(e) => { e.preventDefault(); e.stopPropagation(); }}
               title="Pop-out disabled for security"
             />
-            <div 
-              className={styles.iframeShield}
-              onContextMenu={(e) => e.preventDefault()}
-              onSelectStart={(e) => e.preventDefault()}
-              onWheel={(e) => {
-                const wrapper = e.currentTarget.parentElement;
-                if (wrapper) wrapper.scrollTop += e.deltaY;
-              }}
-              onTouchMove={(e) => {
-                const wrapper = e.currentTarget.parentElement;
-                if (wrapper && e.touches && e.touches[0]) {
-                  if (wrapper.lastTouchY !== undefined) {
-                    const deltaY = wrapper.lastTouchY - e.touches[0].clientY;
-                    wrapper.scrollTop += deltaY;
-                  }
-                  wrapper.lastTouchY = e.touches[0].clientY;
-                }
-              }}
-              onTouchEnd={(e) => {
-                const wrapper = e.currentTarget.parentElement;
-                if (wrapper) wrapper.lastTouchY = undefined;
-              }}
-            />
+            {isIframeLoading && (
+              <div className={styles.iframeSkeletonLoader}>
+                <div className={styles.spinner}></div>
+                <span>Loading Document Viewer...</span>
+              </div>
+            )}
             <iframe 
               src={moduleInfo.iframeLink} 
               className={styles.iframe} 
               title={`Premium Module ${moduleInfo.id} Content`}
+              loading="lazy"
+              onLoad={() => setIsIframeLoading(false)}
               allowFullScreen
             />
           </div>

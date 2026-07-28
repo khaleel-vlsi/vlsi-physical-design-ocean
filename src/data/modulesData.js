@@ -273,7 +273,12 @@ export const modulesData = {
       "Fanout & Transition Violations Fix",
       "Timing Debug Methodology"
     ],
-    "iframes": [],
+    "iframes": [
+      {
+        "heading": "Static Timing Analysis - 2",
+        "url": "https://drive.google.com/file/d/1JHFPur99l3N3R8Z24dw3PZg2_A0PeDwW/preview"
+      }
+    ],
     "isLocked": true
   },
   "11": {
@@ -296,7 +301,12 @@ export const modulesData = {
       "Signoff Timing Analysis Flow",
       "Industry Debug Case Studies"
     ],
-    "iframes": [],
+    "iframes": [
+      {
+        "heading": "Static Timing Analysis - 3",
+        "url": "https://drive.google.com/file/d/1KcQFeCaRy8crBtvH06bV15d3Y6TFsboB/preview"
+      }
+    ],
     "isLocked": true
   },
   "12": {

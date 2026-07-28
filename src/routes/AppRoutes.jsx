@@ -33,6 +33,7 @@ const TestVideoPlaylist = lazy(() => import('../pages/TestVideoPlaylist'));
 
 const PaidModulesList = lazy(() => import('../pages/PaidModulesList'));
 const PaidModuleDetail = lazy(() => import('../pages/PaidModuleDetail'));
+const CloudPnrLab = lazy(() => import('../pages/CloudPnrLab'));
 const ResumeBuilder = lazy(() => import('../pages/resume-builder/ResumeBuilder'));
 const ResumeEditor = lazy(() => import('../pages/resume-builder/ResumeEditor'));
 const PublicResume = lazy(() => import('../pages/resume-builder/PublicResume'));
@@ -168,6 +169,7 @@ const AppRoutes = () => {
         <Route path="/test-videos" element={<LazyWrapper><TestVideoModulesList /></LazyWrapper>} />
         <Route path="/test-video-playlist" element={<Navigate to="/test-videos" replace />} />
         <Route path="/test-video-playlist/:id" element={<LazyWrapper><TestVideoPlaylist /></LazyWrapper>} />
+        <Route path="/cloud-lab" element={<LazyWrapper><CloudPnrLab /></LazyWrapper>} />
       </Route>
 
       {/* Wildcard fallback routing to handle legacy and unmatched paths */}

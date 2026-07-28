@@ -12,6 +12,8 @@ const Module19Content = lazy(() => import('./modules/Module19Content'));
 const Module20Content = lazy(() => import('./modules/Module20Content'));
 const Module21Content = lazy(() => import('./modules/Module21Content'));
 const Module9Content = lazy(() => import('./modules/Module9Content'));
+const Module10Content = lazy(() => import('./modules/Module10Content'));
+const Module11Content = lazy(() => import('./modules/Module11Content'));
 const Module59Content = lazy(() => import('./modules/Module59Content'));
 const Module6Content = lazy(() => import('./modules/Module6Content'));
 const Module12Content = lazy(() => import('./modules/Module12Content'));
@@ -89,14 +91,42 @@ const PaidModuleDetail = () => {
   });
 
   const [isIframeLoading, setIsIframeLoading] = useState(true);
+  const [iframeKey, setIframeKey] = useState(0);
+  const [useAltEngine, setUseAltEngine] = useState(false);
 
   useEffect(() => {
     setIsIframeLoading(true);
-  }, [id, readingMode]);
+  }, [id, readingMode, iframeKey, useAltEngine]);
 
   const handleReadingModeChange = (mode) => {
     setReadingMode(mode);
     localStorage.setItem('preferred_reading_mode', mode);
+  };
+
+  const handleReloadIframe = () => {
+    setIsIframeLoading(true);
+    setIframeKey((prev) => prev + 1);
+  };
+
+  const toggleEngine = () => {
+    setIsIframeLoading(true);
+    setUseAltEngine((prev) => !prev);
+    setIframeKey((prev) => prev + 1);
+  };
+
+  const getIframeSrc = (link) => {
+    if (!link) return '';
+    if (link.includes('drive.google.com/file/d/')) {
+      const match = link.match(/\/file\/d\/([^\/]+)/);
+      if (match && match[1]) {
+        const fileId = match[1];
+        if (useAltEngine || iframeKey % 2 === 1) {
+          return `https://docs.google.com/viewer?srcid=${fileId}&pid=explorer&efh=false&a=v&chrome=false&embedded=true`;
+        }
+        return `https://drive.google.com/file/d/${fileId}/preview`;
+      }
+    }
+    return link;
   };
 
   useEffect(() => {
@@ -310,6 +340,13 @@ const PaidModuleDetail = () => {
             >
               ↔️ Full Width
             </button>
+            <button 
+              className={styles.toolbarBtn}
+              onClick={handleReloadIframe}
+              title="Reload document if Google Drive preview fails"
+            >
+              🔄 Reload Document
+            </button>
           </div>
           <div className={styles.toolbarRight}>
             <span className={styles.protectionInfo}>🔒 Protected Mode</span>
@@ -438,7 +475,8 @@ const PaidModuleDetail = () => {
               </div>
             )}
             <iframe 
-              src={moduleInfo.iframeLink} 
+              key={`iframe-${moduleInfo.id}-${iframeKey}`}
+              src={getIframeSrc(moduleInfo.iframeLink)} 
               className={styles.iframe} 
               title={`Premium Module ${moduleInfo.id} Content`}
               loading="lazy"

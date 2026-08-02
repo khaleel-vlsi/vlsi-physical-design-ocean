@@ -12,10 +12,11 @@ import StructuredData from './StructuredData';
  *   - keywords: array of keyword strings
  *   - structuredData: React element (e.g., <StructuredData .../>)
  */
-const SEO = ({ title, description, url, isArticle, keywords, structuredData, noindex }) => {
+const SEO = ({ title, description, url, isArticle, keywords, structuredData, noindex, image }) => {
   const defaultTitle = 'VLSI Physical Design Ocean – PnR, STA, Synthesis & ASIC Video Modules';
   const defaultDescription = 'Master VLSI Physical Design (PnR, STA, Synthesis, CTS, Floorplanning) with 59+ comprehensive modules, complete PnR execution video playlists, industrial tool guides, and interview prep.';
   const domain = 'https://vlsiphysicaldesignocean.com';
+  const defaultImage = `${domain}/favicon.svg`;
 
   const defaultKeywords = [
     "vlsi physical design", "pnr video modules", "place and route tutorial", "pnr workshop",
@@ -26,6 +27,7 @@ const SEO = ({ title, description, url, isArticle, keywords, structuredData, noi
 
   const seoTitle = title ? `${title} | VLSI Physical Design Ocean` : defaultTitle;
   const seoDescription = description || defaultDescription;
+  const seoImage = image ? (image.startsWith('http') ? image : `${domain}${image}`) : defaultImage;
   
   // Normalize URL: remove trailing slash if present (except for root)
   const normalizedPath = url && url !== '/' ? url.replace(/\/$/, '') : (url === '/' ? '' : url);
@@ -40,19 +42,23 @@ const SEO = ({ title, description, url, isArticle, keywords, structuredData, noi
         <meta name="description" content={seoDescription} />
         {metaKeywords && <meta name="keywords" content={metaKeywords} />}
         <link rel="canonical" href={canonicalUrl} />
+        <meta name="theme-color" content="#090d16" />
         {noindex && <meta name="robots" content="noindex, nofollow" />}
 
         {/* Open Graph */}
+        <meta property="og:site_name" content="VLSI Physical Design Ocean" />
         <meta property="og:type" content={isArticle ? 'article' : 'website'} />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={seoDescription} />
+        <meta property="og:image" content={seoImage} />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={canonicalUrl} />
         <meta property="twitter:title" content={seoTitle} />
         <meta property="twitter:description" content={seoDescription} />
+        <meta property="twitter:image" content={seoImage} />
       </Helmet>
       {structuredData}
     </>

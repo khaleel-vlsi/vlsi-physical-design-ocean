@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { VIDEO_MODULES } from '../data/videoModulesData';
 import { useAuth } from '../context/AuthContext';
 
+import SEO from '../components/SEO';
+import StructuredData from '../components/StructuredData';
+
 import styles from './TestVideoModulesList.module.css';
 
 const TestVideoModulesList = () => {
@@ -14,6 +17,24 @@ const TestVideoModulesList = () => {
 
   return (
     <div className={styles.modulesContainer}>
+      <SEO 
+        title="Recorded Video Classes & VLSI Lectures"
+        description="Access comprehensive recorded video lectures for VLSI Physical Design including Logical Synthesis, STA, CTS, PnR Execution, and ASIC signoff."
+        url="/test-video-modules"
+        keywords={["vlsi video courses", "pnr video modules", "sta video lectures", "logic synthesis videos", "cts video course"]}
+        structuredData={
+          <StructuredData 
+            breadcrumb={{
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://vlsiphysicaldesignocean.com" },
+                { "@type": "ListItem", "position": 2, "name": "Recorded Classes", "item": "https://vlsiphysicaldesignocean.com/test-video-modules" }
+              ]
+            }}
+          />
+        }
+      />
       <header className={styles.headerSection}>
         <h1 className={styles.pageTitle}>Recorded Classes</h1>
         <p className={styles.pageSubtitle}>

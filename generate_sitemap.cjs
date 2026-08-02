@@ -24,11 +24,31 @@ const extractIds = (filePath) => {
   }
 };
 
+const videoModulesDataPath = path.join(__dirname, 'src', 'data', 'videoModulesData.js');
+
+const extractVideoIds = (filePath) => {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const ids = [];
+    const regex = /^\s*(\d+):\s*\{/gm;
+    let match;
+    while ((match = regex.exec(content)) !== null) {
+      ids.push(match[1]);
+    }
+    return [...new Set(ids)];
+  } catch (err) {
+    console.error('Error reading video modules', filePath, err);
+    return [];
+  }
+};
+
 const domain = 'https://vlsiphysicaldesignocean.com';
 
 const generateSitemap = () => {
   const allModuleIds = extractIds(modulesDataPath);
-  // Only include public modules (IDs 1 to 8) in sitemap as requested by user
+  const videoIds = extractVideoIds(videoModulesDataPath);
+
+  // Only include public modules (IDs 1 to 8) in sitemap
   const moduleIds = allModuleIds.filter(id => {
     const num = parseInt(id, 10);
     return num >= 1 && num <= 8;
@@ -41,7 +61,13 @@ const generateSitemap = () => {
     { path: '/contact', priority: '0.8', freq: 'weekly' },
     { path: '/privacy', priority: '0.5', freq: 'monthly' },
     { path: '/modules', priority: '0.9', freq: 'daily' },
-    { path: '/interview', priority: '0.9', freq: 'weekly' }
+    { path: '/interview', priority: '0.9', freq: 'weekly' },
+    { path: '/test-video-modules', priority: '1.0', freq: 'daily' },
+    { path: '/study-materials', priority: '0.9', freq: 'weekly' },
+    { path: '/platform-flow', priority: '0.9', freq: 'weekly' },
+    { path: '/pnr-execution', priority: '0.8', freq: 'weekly' },
+    { path: '/pnr-workshop', priority: '0.8', freq: 'weekly' },
+    { path: '/user-guides', priority: '0.8', freq: 'weekly' }
   ];
 
   const fs = require('fs');
@@ -101,6 +127,12 @@ ${images.map(img => `    <image:image>
     </image:image>`).join('\n')}
   </url>`;
 }).join('\n')}
+${videoIds.map(id => `  <url>
+    <loc>${domain}/test-video-modules/${id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>`).join('\n')}
 </urlset>
 `;
 

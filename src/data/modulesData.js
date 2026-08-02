@@ -16,7 +16,7 @@ export const modulesData = {
     "iframes": [
       {
         "heading": "Module 1 – Study Material (Read Only)",
-        "url": "https://docs.google.com/document/d/1D-38RuKU8oXLWb1SjRB1xLfxDOKqUklOhQAmi2BR-QA/preview"
+        "url": "https://drive.google.com/file/d/1xNilK7h7X483QVhoARhCpMVFPCerlXv3/preview"
       }
     ],
     "isLocked": false,
@@ -42,7 +42,7 @@ export const modulesData = {
     "iframes": [
       {
         "heading": "Module 2 – Study Material (Read Only)",
-        "url": "https://docs.google.com/document/d/1QkNG2zxXULEUbQTaCw-Ifji7R2-QqihU9yIGxzsRWvM/preview"
+        "url": "https://drive.google.com/file/d/1-u8vMM6WdCWZwbojhdZfprbBPVaWhVIm/preview"
       }
     ],
     "isLocked": false,
@@ -68,7 +68,7 @@ export const modulesData = {
     "iframes": [
       {
         "heading": "NOTE: Need to add few images we are working on it once completed will update this document",
-        "url": "https://docs.google.com/document/d/1SKoEZQ2KCS7kN_bu_OBZJc9Z9kleBh10aqgP3-J80oY/preview"
+        "url": "https://drive.google.com/file/d/1P46Fccw9QRL2KnH_diSu9VjZiQE-kv4p/preview"
       },
       {
         "heading": "Module 3 – Study Material (Read Only)",
@@ -96,12 +96,12 @@ export const modulesData = {
     ],
     "iframes": [
       {
-        "heading": "Module 4 – Study Material (Read Only)",
-        "url": "https://docs.google.com/document/d/1mQS5uibRT2whumXL390F8-IdH3gShrJh-76MJfy7kog/preview"
+        "heading": "Module 4 – Study Material Part 1 (Read Only)",
+        "url": "https://drive.google.com/file/d/1x91FVi30La5CKbNp41q1tgzTYAIC1rtd/preview"
       },
       {
-        "heading": "Module 4 – Study Material (Read Only)",
-        "url": "https://docs.google.com/document/d/1asOc8j_GptL5Wfwfom2MAUbR8Yb67_fujDP5V75HCfI/preview"
+        "heading": "Module 4 – Study Material Part 2 (Read Only)",
+        "url": "https://drive.google.com/file/d/1jJBGxgq8dSDwHpp-R8lmWmlrZxOVvPlU/preview"
       }
     ],
     "isLocked": false,
@@ -127,7 +127,7 @@ export const modulesData = {
     "iframes": [
       {
         "heading": "Module 5 – Study Material (Read Only)",
-        "url": "https://docs.google.com/document/d/1HL-1-dG3JccXsZictNpt675943ETzF18Rujlx3AQ8iQ/preview"
+        "url": "https://drive.google.com/file/d/14eQVWM-IuSCYSnfPiPw8a1YpkK78fUfC/preview"
       }
     ],
     "isLocked": false,
@@ -156,12 +156,12 @@ export const modulesData = {
         "url": "https://docs.google.com/document/d/1Edq30Uebmd0nt1zotJd9PHAqYnymt7cIa7-jhh7JMtU/preview"
       },
       {
-        "heading": "Module 6 – Study Material (Read Only)",
-        "url": "https://docs.google.com/document/d/1w-wAT5EEIyI17qf7vmw210Qy_NznyFCCOcrGkzZi4wg/preview"
+        "heading": "Module 6 – Study Material Part 2 (Read Only)",
+        "url": "https://drive.google.com/file/d/1loeCYzQPZJ2diKSAHqIXoKXVb1vk8sj8/preview"
       },
       {
-        "heading": "Module 6 – Study Material (Read Only)",
-        "url": "https://docs.google.com/document/d/1qqLwJYePpj9xibZBENWoK4Vhh_M1PvTSGVgZlXNNk6c/preview"
+        "heading": "Module 6 – Study Material Part 3 (Read Only)",
+        "url": "https://drive.google.com/file/d/12W5mr1cZaISHAQQdCoy5E7dM8WzdxxQ6/preview"
       }
     ],
     "isLocked": false,

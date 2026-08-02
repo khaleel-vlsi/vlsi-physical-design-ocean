@@ -5,6 +5,9 @@ import SecureVideoPlayer from '../components/SecureVideoPlayer';
 import { useAuth } from '../context/AuthContext';
 import styles from './TestVideoPlaylist.module.css';
 
+import SEO from '../components/SEO';
+import StructuredData from '../components/StructuredData';
+
 const TestVideoPlaylist = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -33,6 +36,7 @@ const TestVideoPlaylist = () => {
   if (!moduleData) {
     return (
       <div className={styles.playlistContainer} style={{ justifyContent: 'center', alignItems: 'center' }}>
+        <SEO title="Video Module Not Found" url={`/test-video-modules/${id}`} />
         <h2>Video Module Not Found</h2>
         <button onClick={() => navigate('/test-videos')} className={styles.backButton}>
           Return to Video Library
@@ -43,6 +47,28 @@ const TestVideoPlaylist = () => {
 
   return (
     <div className={styles.playlistContainer}>
+      <SEO 
+        title={`Module ${id}: ${moduleData.title} Video Lectures`}
+        description={`Watch ${moduleData.sessions ? moduleData.sessions.length : 0} comprehensive video lectures on ${moduleData.title} in our VLSI Physical Design Master Series.`}
+        url={`/test-video-modules/${id}`}
+        image={moduleData.thumbnail}
+        keywords={[moduleData.title, "vlsi video lectures", "pnr video modules", "sta video course"]}
+        structuredData={
+          <StructuredData 
+            course={{
+              "@context": "https://schema.org",
+              "@type": "Course",
+              "name": `Module ${id}: ${moduleData.title}`,
+              "description": moduleData.description,
+              "provider": {
+                "@type": "Organization",
+                "name": "VLSI Physical Design Ocean",
+                "sameAs": "https://vlsiphysicaldesignocean.com"
+              }
+            }}
+          />
+        }
+      />
       <header className={styles.header}>
         <button onClick={() => navigate('/test-videos')} className={styles.backButton}>
           <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">

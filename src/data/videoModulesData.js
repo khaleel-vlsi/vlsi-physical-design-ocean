@@ -123,7 +123,10 @@ export const VIDEO_MODULES = {
       { id: 'v6_3', title: 'Logical Synthesis class -3', youtubeId: '4jtHwL1D0DI', duration: 'Unknown' },
       { id: 'v6_4', title: 'Logical Synthesis class -4', youtubeId: 'cVotR-E4ueA', duration: 'Unknown' },
       { id: 'v6_5', title: 'Logical Synthesis class -5', youtubeId: '7qWcrr1BSQc', duration: 'Unknown' },
-      { id: 'v6_6', title: 'Logical Synthesis class -6', youtubeId: 'OI_bCxpSzko', duration: 'Unknown' }
+      { id: 'v6_6', title: 'Logical Synthesis class -6', youtubeId: 'OI_bCxpSzko', duration: 'Unknown' },
+      { id: 'v6_7', title: 'Logical Synthesis class -7', youtubeId: '-vtV5xoL1t4', duration: 'Unknown' },
+      { id: 'v6_8', title: 'Logical Synthesis class -8', youtubeId: 'PIc0UxtBpDY', duration: 'Unknown' },
+      { id: 'v6_9', title: 'Logical Synthesis class -9', youtubeId: '-vtV5xoL1t4', duration: 'Unknown' }
     ]
   },
   7: {
@@ -151,14 +154,13 @@ export const VIDEO_MODULES = {
       { id: 'v9_2', title: 'STA Class -2', youtubeId: '2rzT5-BLmdk', duration: 'Unknown' },
       { id: 'v9_3', title: 'STA Class -3', youtubeId: 'kXnC2mpozzY', duration: 'Unknown' },
       { id: 'v9_4', title: 'STA Class -4', youtubeId: 'vAFS-_X0m7w', duration: 'Unknown' },
-      { id: 'v9_5', title: 'STA Class -5', youtubeId: '4g6LaA8CFKI', duration: 'Unknown' },
-      { id: 'v9_6', title: 'STA Class -6', youtubeId: 'BSlcM12v__g', duration: 'Unknown' },
-      { id: 'v9_7', title: 'STA Class -7', youtubeId: 'jUV8a8gaOI0', duration: 'Unknown' },
-      { id: 'v9_8', title: 'STA Class -8', youtubeId: 'mkCfFaT6NU0', duration: 'Unknown' },
-      { id: 'v9_9', title: 'STA Class -9', youtubeId: '4j7NVFlvOvs', duration: 'Unknown' },
-      { id: 'v9_10', title: 'STA Class -10', youtubeId: '0UF6u7lTzHw', duration: 'Unknown' },
-      { id: 'v9_11', title: 'STA Class -11', youtubeId: 'zZJT3GCKYvA', duration: 'Unknown' },
-      { id: 'v9_12', title: 'STA Class -12', youtubeId: 'S5DSd7TVolQ', duration: 'Unknown' }
+      { id: 'v9_5', title: 'STA Class -5', youtubeId: 'BSlcM12v__g', duration: 'Unknown' },
+      { id: 'v9_6', title: 'STA Class -6', youtubeId: 'jUV8a8gaOI0', duration: 'Unknown' },
+      { id: 'v9_7', title: 'STA Class -7', youtubeId: 'mkCfFaT6NU0', duration: 'Unknown' },
+      { id: 'v9_8', title: 'STA Class -8', youtubeId: '4j7NVFlvOvs', duration: 'Unknown' },
+      { id: 'v9_9', title: 'STA Class -9', youtubeId: '0UF6u7lTzHw', duration: 'Unknown' },
+      { id: 'v9_10', title: 'STA Class -10', youtubeId: 'zZJT3GCKYvA', duration: 'Unknown' },
+      { id: 'v9_11', title: 'STA Class -11', youtubeId: 'S5DSd7TVolQ', duration: 'Unknown' }
     ]
   },
   10: {
@@ -168,17 +170,17 @@ export const VIDEO_MODULES = {
     description: 'Advanced STA.',
     isLocked: false,
     sessions: [
-      { id: 'v10_1', title: 'STA Class -13', youtubeId: 'ZEeXaS95GVA', duration: 'Unknown' },
-      { id: 'v10_2', title: 'STA Class -14', youtubeId: 'xiO02UbNft8', duration: 'Unknown' },
-      { id: 'v10_3', title: 'STA Class -15', youtubeId: 'XuXUfKns5Nk', duration: 'Unknown' },
-      { id: 'v10_4', title: 'STA Class -16', youtubeId: 'vMRx1FcnUqM', duration: 'Unknown' },
-      { id: 'v10_5', title: 'STA Class -17', youtubeId: 'GzrNjZh_V-U', duration: 'Unknown' },
-      { id: 'v10_6', title: 'STA Class -18', youtubeId: 'vyQcHKB6lps', duration: 'Unknown' },
-      { id: 'v10_7', title: 'STA Class -19', youtubeId: 'TjekCGWCwL4', duration: 'Unknown' },
-      { id: 'v10_8', title: 'STA Class -20', youtubeId: 'IlpMvtrEbGA', duration: 'Unknown' },
-      { id: 'v10_9', title: 'STA Class -21', youtubeId: 'CDSyEmguYCY', duration: 'Unknown' },
-      { id: 'v10_10', title: 'STA Class -22', youtubeId: '0-DE8eTzYdE', duration: 'Unknown' },
-      { id: 'v10_11', title: 'STA Class -23', youtubeId: 'smEdy0SxATE', duration: 'Unknown' }
+      { id: 'v10_1', title: 'STA Class -12', youtubeId: 'ZEeXaS95GVA', duration: 'Unknown' },
+      { id: 'v10_2', title: 'STA Class -13', youtubeId: 'xiO02UbNft8', duration: 'Unknown' },
+      { id: 'v10_3', title: 'STA Class -14', youtubeId: 'XuXUfKns5Nk', duration: 'Unknown' },
+      { id: 'v10_4', title: 'STA Class -15', youtubeId: 'vMRx1FcnUqM', duration: 'Unknown' },
+      { id: 'v10_5', title: 'STA Class -16', youtubeId: 'GzrNjZh_V-U', duration: 'Unknown' },
+      { id: 'v10_6', title: 'STA Class -17', youtubeId: 'vyQcHKB6lps', duration: 'Unknown' },
+      { id: 'v10_7', title: 'STA Class -18', youtubeId: 'TjekCGWCwL4', duration: 'Unknown' },
+      { id: 'v10_8', title: 'STA Class -19', youtubeId: 'IlpMvtrEbGA', duration: 'Unknown' },
+      { id: 'v10_9', title: 'STA Class -20', youtubeId: 'CDSyEmguYCY', duration: 'Unknown' },
+      { id: 'v10_10', title: 'STA Class -21', youtubeId: '0-DE8eTzYdE', duration: 'Unknown' },
+      { id: 'v10_11', title: 'STA Class -22', youtubeId: 'smEdy0SxATE', duration: 'Unknown' }
     ]
   },
   11: {
@@ -259,8 +261,12 @@ export const VIDEO_MODULES = {
     thumbnail: '/images/modules/mod16.jpg',
     title: 'Clock Tree Synthesis - 2',
     description: 'Advanced CTS.',
-    isLocked: true,
-    sessions: []
+    isLocked: false,
+    sessions: [
+      { id: 'v16_1', title: 'CTS Class -8', youtubeId: 'F1IMF4Rn41Y', duration: 'Unknown' },
+      { id: 'v16_2', title: 'CTS Class -9', youtubeId: 'VP7qr8Q92Ow', duration: 'Unknown' },
+      { id: 'v16_3', title: 'CTS Class -10', youtubeId: '2zjP5NyjIf8', duration: 'Unknown' }
+    ]
   },
   17: {
     id: 17,

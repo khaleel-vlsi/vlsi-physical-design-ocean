@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { VIDEO_MODULES } from '../data/videoModulesData';
 import SecureVideoPlayer from '../components/SecureVideoPlayer';
+import ModuleQuickNav from '../components/ModuleQuickNav';
 import { useAuth } from '../context/AuthContext';
 import styles from './TestVideoPlaylist.module.css';
 
@@ -69,13 +70,9 @@ const TestVideoPlaylist = () => {
           />
         }
       />
+      <ModuleQuickNav moduleId={id} activeTab="video" />
+
       <header className={styles.header}>
-        <button onClick={() => navigate('/test-videos')} className={styles.backButton}>
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
-          </svg>
-          Back to Video Library
-        </button>
         <h1 className={styles.moduleTitle}>Module {id}: {moduleData.title}</h1>
       </header>
 

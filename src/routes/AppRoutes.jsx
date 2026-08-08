@@ -31,6 +31,11 @@ const TestVideo = lazy(() => import('../pages/TestVideo'));
 const TestVideoModulesList = lazy(() => import('../pages/TestVideoModulesList'));
 const TestVideoPlaylist = lazy(() => import('../pages/TestVideoPlaylist'));
 
+const QuizList = lazy(() => import('../pages/QuizList'));
+const QuizEngine = lazy(() => import('../pages/QuizEngine'));
+const TestQuizModulesList = lazy(() => import('../pages/TestQuizModulesList'));
+const TestQuizPlaylist = lazy(() => import('../pages/TestQuizPlaylist'));
+
 const PaidModulesList = lazy(() => import('../pages/PaidModulesList'));
 const PaidModuleDetail = lazy(() => import('../pages/PaidModuleDetail'));
 const CloudPnrLab = lazy(() => import('../pages/CloudPnrLab'));
@@ -117,7 +122,11 @@ const FallbackRedirect = () => {
   }
 
   // 5. Trailing slash normalization for standard public routes
-  const basicPaths = ['/about', '/contact', '/privacy', '/modules', '/interview', '/login', '/register', '/dashboard', '/paid-modules'];
+  const basicPaths = [
+    '/about', '/contact', '/privacy', '/modules', '/interview', '/login', '/register', 
+    '/dashboard', '/paid-modules', '/test-videos', '/test-video-modules', 
+    '/test-quiz-modules', '/test-quizzes', '/quiz-practice'
+  ];
   if (path.endsWith('/') && basicPaths.includes(normalizedPath)) {
     return <Navigate to={normalizedPath} replace />;
   }
@@ -142,6 +151,12 @@ const AppRoutes = () => {
         <Route path="/pnr-execution" element={<LazyWrapper><PnrExecution /></LazyWrapper>} />
         <Route path="/pnr-workshop" element={<LazyWrapper><PnrWorkshop /></LazyWrapper>} />
         <Route path="/user-guides" element={<LazyWrapper><UserGuides /></LazyWrapper>} />
+        <Route path="/quiz-practice" element={<LazyWrapper><QuizList /></LazyWrapper>} />
+        <Route path="/test-quiz-modules" element={<LazyWrapper><TestQuizModulesList /></LazyWrapper>} />
+        <Route path="/test-quizzes" element={<Navigate to="/test-quiz-modules" replace />} />
+        <Route path="/test-quiz-playlist/:id" element={<LazyWrapper><TestQuizPlaylist /></LazyWrapper>} />
+        <Route path="/quiz/:moduleId/:difficulty" element={<LazyWrapper><QuizEngine /></LazyWrapper>} />
+        <Route path="/quiz/:moduleId" element={<LazyWrapper><QuizEngine /></LazyWrapper>} />
         <Route path="/resume/share/:token" element={<LazyWrapper><PublicResume /></LazyWrapper>} />
         
         {/* Legacy static redirects (fallback to wildcard for others) */}
@@ -169,6 +184,12 @@ const AppRoutes = () => {
         <Route path="/test-videos" element={<LazyWrapper><TestVideoModulesList /></LazyWrapper>} />
         <Route path="/test-video-playlist" element={<Navigate to="/test-videos" replace />} />
         <Route path="/test-video-playlist/:id" element={<LazyWrapper><TestVideoPlaylist /></LazyWrapper>} />
+        <Route path="/test-quiz-modules" element={<LazyWrapper><TestQuizModulesList /></LazyWrapper>} />
+        <Route path="/test-quizzes" element={<Navigate to="/test-quiz-modules" replace />} />
+        <Route path="/test-quiz-playlist/:id" element={<LazyWrapper><TestQuizPlaylist /></LazyWrapper>} />
+        <Route path="/quiz-practice" element={<LazyWrapper><QuizList /></LazyWrapper>} />
+        <Route path="/quiz/:moduleId/:difficulty" element={<LazyWrapper><QuizEngine /></LazyWrapper>} />
+        <Route path="/quiz/:moduleId" element={<LazyWrapper><QuizEngine /></LazyWrapper>} />
         <Route path="/cloud-lab" element={<LazyWrapper><CloudPnrLab /></LazyWrapper>} />
       </Route>
 

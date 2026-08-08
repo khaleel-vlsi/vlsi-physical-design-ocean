@@ -2,6 +2,7 @@ import React, { useEffect, useState, lazy, Suspense } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { paidModulesData } from '../data/paidModulesData';
+import ModuleQuickNav from '../components/ModuleQuickNav';
 import styles from './PaidModuleDetail.module.css';
 import { supabase } from '../services/supabase';
 
@@ -263,6 +264,7 @@ const PaidModuleDetail = () => {
 
   return (
     <div className={styles.detailPage}>
+      <ModuleQuickNav moduleId={id} activeTab="material" />
       <div className={styles.topLinksRow}>
         <div className={styles.leftLinks}>
           <Link to="/paid-modules" className={styles.backLink}>← Back to Paid Modules</Link>

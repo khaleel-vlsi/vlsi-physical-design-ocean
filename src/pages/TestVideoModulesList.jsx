@@ -112,6 +112,33 @@ const TestVideoModulesList = () => {
                       ⏳ Under Development (Will add 31st July 2026)
                     </span>
                   )}
+                  
+                  <div style={{ marginTop: '14px' }}>
+                    <button 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        navigate(`/test-quiz-playlist/${mod.id}`);
+                      }}
+                      style={{
+                        width: '100%',
+                        padding: '8px 16px',
+                        borderRadius: '9999px',
+                        background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.25) 0%, rgba(5, 150, 105, 0.35) 100%)',
+                        border: '1px solid #10b981',
+                        color: '#34d399',
+                        fontWeight: '700',
+                        fontSize: '0.85rem',
+                        cursor: 'pointer',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '6px',
+                        transition: 'all 0.2s ease'
+                      }}
+                    >
+                      📝 Take Quiz Test for Module {mod.id}
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

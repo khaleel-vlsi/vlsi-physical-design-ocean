@@ -63,6 +63,7 @@ const generateSitemap = () => {
     { path: '/modules', priority: '0.9', freq: 'daily' },
     { path: '/interview', priority: '0.9', freq: 'weekly' },
     { path: '/test-video-modules', priority: '1.0', freq: 'daily' },
+    { path: '/test-quiz-modules', priority: '1.0', freq: 'daily' },
     { path: '/study-materials', priority: '0.9', freq: 'weekly' },
     { path: '/platform-flow', priority: '0.9', freq: 'weekly' },
     { path: '/pnr-execution', priority: '0.8', freq: 'weekly' },

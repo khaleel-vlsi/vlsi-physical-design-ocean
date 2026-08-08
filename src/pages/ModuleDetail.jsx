@@ -15,6 +15,7 @@ const Module59Content = lazy(() => import('./modules/Module59Content'));
 
 import SEO from '../components/SEO';
 import StructuredData from '../components/StructuredData';
+import ModuleQuickNav from '../components/ModuleQuickNav';
 import { useAuth } from '../context/AuthContext';
 
 const NATIVE_COMPONENTS = {
@@ -221,6 +222,8 @@ const ModuleDetail = () => {
           />
         }
       />
+      <ModuleQuickNav moduleId={moduleInfo.id} activeTab="material" />
+
       <header className={styles.moduleHeader}>
         <div className={styles.topNavLinks}>
           <div className={styles.leftLinks}>

@@ -22,6 +22,39 @@
   gap: 8px;
 }
 
+.brandLogoLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 12px;
+  text-decoration: none !important;
+  padding: 4px 8px !important;
+  border-radius: 12px;
+}
+
+.brandLogoImg {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #59dad1;
+  box-shadow: 0 0 12px rgba(89, 218, 209, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.brandLogoLink:hover .brandLogoImg {
+  transform: scale(1.08);
+}
+
+.brandTitle {
+  font-weight: 800 !important;
+  font-size: 15px !important;
+  letter-spacing: 0.05em;
+  background: linear-gradient(135deg, #00f2fe, #4facfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .navLeft a {
   color: var(--on-surface-variant);
   font-family: var(--font-headline);
@@ -45,6 +78,9 @@
   font-weight: 500;
   letter-spacing: 0.05em;
   color: var(--on-surface-variant);
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 @media (max-width: 768px) {

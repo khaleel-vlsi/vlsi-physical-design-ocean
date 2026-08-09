@@ -8,6 +8,10 @@ const Navbar = () => {
   return (
     <nav className={styles.topNav}>
       <div className={styles.navLeft}>
+        <Link to="/" className={styles.brandLogoLink}>
+          <img src="/logo.png" alt="VLSI Physical Design Ocean Logo" className={styles.brandLogoImg} />
+          <span className={styles.brandTitle}>VLSI OCEAN</span>
+        </Link>
         <Link to="/" className={styles.navLink}>Home</Link>
         <Link to="/modules" className={styles.navLink}>Modules</Link>
         <Link to="/platform-flow" className={styles.navLink}>Flow Graph</Link>

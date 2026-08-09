@@ -147,44 +147,142 @@ const Home = () => {
         <p>
           Complete learning roadmap from basics to advanced Physical Design. All video recorded classes and practical playlists are fully available for PnR (Place & Route), STA, Synthesis, CTS, and Signoff workflows.
         </p>
-        <div className={styles.heroCtaRow}>
-          <button 
-            onClick={() => navigate('/platform-flow')} 
-            className={styles.magneticGraphBtn}
-          >
-            <span className={styles.pulseRing}></span>
-            <span className={styles.btnIcon}>🗺️</span>
-            Explore Interactive Flow Graph
-          </button>
-          <button 
-            onClick={() => navigate('/test-videos')} 
-            className={styles.heroSecondaryBtn}
-            style={{ borderColor: '#e11d48', background: 'rgba(225, 29, 72, 0.15)', color: '#fda4af' }}
-            title="Access Recorded Classes (Exclusive for Enrolled Paid Subscribers)"
-          >
-            🎬 PnR Video Modules (Paid Access)
-          </button>
-          <button 
-            onClick={() => {
-              const element = document.getElementById('free-modules');
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-              }
-            }} 
-            className={styles.heroSecondaryBtn}
-          >
-            Explore Free Modules
-          </button>
+
+        <div className={styles.coverBannerWrapper}>
+          <img src="/cover.jpg" alt="VLSI Physical Design Ocean Cover Banner" className={styles.coverBannerImg} />
+        </div>
+        {/* ── 3 Interactive Video & Learning Options Grid ──────────────────── */}
+        <div className={styles.threeOptionsGrid}>
+          {/* Card 1: Video Modules */}
+          <div className={styles.optionCard}>
+            <div className={styles.optionCardBody}>
+              <div className={styles.optionCardHeader}>
+                <div className={styles.optionCardIcon}>
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                  </svg>
+                </div>
+                <h3 className={styles.optionCardTitle}>PnR Video Recorded Modules</h3>
+              </div>
+              <p className={styles.optionCardText}>
+                Access full recorded video playlists covering Synthesis, Floorplanning, CTS, STA (PrimeTime), and DRC/LVS tool workflows.
+              </p>
+            </div>
+            <button 
+              onClick={() => navigate('/test-videos')} 
+              className={styles.optionCardBtn}
+            >
+              <span>Watch Video Modules</span>
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </div>
+
+          {/* Card 2: Interactive Quiz Engine */}
+          <div className={styles.optionCard}>
+            <div className={styles.optionCardBody}>
+              <div className={styles.optionCardHeader}>
+                <div className={styles.optionCardIcon}>
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M9 11l3 3L22 4"></path>
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                  </svg>
+                </div>
+                <h3 className={styles.optionCardTitle}>Module Quiz & MCQ Engine</h3>
+              </div>
+              <p className={styles.optionCardText}>
+                Test your knowledge with module-wise practice tests, STA timing formulas, and core VLSI physical design MCQs.
+              </p>
+            </div>
+            <button 
+              onClick={() => navigate('/test-quizzes')} 
+              className={styles.optionCardBtn}
+            >
+              <span>Start Practice Quizzes</span>
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </div>
+
+          {/* Card 3: Interactive Flow Graph */}
+          <div className={styles.optionCard}>
+            <div className={styles.optionCardBody}>
+              <div className={styles.optionCardHeader}>
+                <div className={styles.optionCardIcon}>
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 17 22 12"></polyline>
+                  </svg>
+                </div>
+                <h3 className={styles.optionCardTitle}>Interactive Flow Graph Roadmap</h3>
+              </div>
+              <p className={styles.optionCardText}>
+                Explore the visual interactive ASIC physical design roadmap step-by-step from Netlist synthesis to GDSII tapeout.
+              </p>
+            </div>
+            <button 
+              onClick={() => navigate('/platform-flow')} 
+              className={styles.optionCardBtn}
+            >
+              <span>Explore Flow Graph</span>
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </div>
         </div>
       </header>
+
+      {/* ── Vision & Mission Section ─────────────────────────────────── */}
+      <section className={styles.visionMissionSection}>
+        <div className={styles.sectionHeader}>
+          <span className={styles.sectionBadge}>OUR PURPOSE & AMBITION</span>
+          <h2 className={styles.sectionTitle}>Vision & Mission</h2>
+          <p className={styles.sectionSubtitle}>
+            Empowering the next generation of semiconductor engineers with world-class education at an accessible price.
+          </p>
+        </div>
+
+        <div className={styles.visionMissionGrid}>
+          {/* Vision Card */}
+          <div className={styles.vmCard}>
+            <div className={styles.vmCardGlow}></div>
+            <div className={styles.vmIconWrapper}>
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="6"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+              </svg>
+            </div>
+            <h3 className={styles.vmTitle}>Our Vision</h3>
+            <p className={styles.vmTagline}>Democratizing High-Quality VLSI Physical Design Content</p>
+            <p className={styles.vmDesc}>
+              To provide top-tier, industry-relevant Physical Design & ASIC learning content at a <strong>very affordable price</strong>. We believe cost should never stand in the way of talent—empowering students and engineers to master physical design without spending lakhs of rupees on expensive coaching institutes.
+            </p>
+          </div>
+
+          {/* Mission Card */}
+          <div className={styles.vmCard}>
+            <div className={styles.vmCardGlowMission}></div>
+            <div className={styles.vmIconWrapperMission}>
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <h3 className={styles.vmTitle}>Our Mission</h3>
+            <p className={styles.vmTaglineMission}>Building the #1 All-in-One Physical Design Platform in the World</p>
+            <p className={styles.vmDesc}>
+              To make <strong>VLSI Physical Design Ocean the #1 all-in-one physical design platform globally</strong>—combining video classes, real EDA tool flows, module quizzes, interactive roadmaps, and career placement referrals into one unified ecosystem.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* ── Info Cards Row: About + Course Structure ─────────────────── */}
       <section className={styles.infoRow}>
         {/* About This Website */}
         <div className={styles.infoCard}>
           <div className={styles.infoCardHeader}>
-            <span className={styles.infoIcon}>ℹ️</span>
-            <h2>About This Website</h2>
+            <span className={styles.sectionBadge}>ABOUT US</span>
+            <h2 className={styles.infoCardTitle}>About This Website</h2>
           </div>
           <p className={styles.infoDesc}>
             The <strong>VLSI Physical Design Ocean</strong> platform is created specifically for engineering graduates and freshers who want to enter the VLSI domain, as well as professionals with up to 3+ years of experience. Our goal is to provide a complete, structural learning path covering everything from the absolute basics to advanced industrial tool execution with step-by-step guides.
@@ -200,7 +298,7 @@ const Home = () => {
               <ul>
                 <li>Engineering graduates and freshers entering VLSI</li>
                 <li>Physical Design Engineers (0 to 3+ years experience)</li>
-                <li>Students seeking real-time problem & solution guides</li>
+                <li>Students seeking real-time problem &amp; solution guides</li>
                 <li>Professionals needing industrial script samples</li>
               </ul>
             </div>
@@ -209,7 +307,7 @@ const Home = () => {
               <ul>
                 <li>Basic to advanced ASIC Physical Design flow</li>
                 <li>Step-by-step industrial tool execution</li>
-                <li>Linux & TCL scripting for automation</li>
+                <li>Linux &amp; TCL scripting for automation</li>
                 <li>Core interview questions and answers</li>
               </ul>
             </div>
@@ -219,8 +317,8 @@ const Home = () => {
         {/* Course Structure */}
         <div className={styles.infoCard}>
           <div className={styles.infoCardHeader}>
-            <span className={styles.infoIcon}>🎓</span>
-            <h2>Course Structure</h2>
+            <span className={styles.sectionBadge}>CURRICULUM</span>
+            <h2 className={styles.infoCardTitle}>Course Structure</h2>
           </div>
           <p className={styles.infoDesc}>
             The learning content is divided into well-structured modules. Each
@@ -242,9 +340,9 @@ const Home = () => {
       {/* ── Subscription Plans (Moved Higher Up) ────────────────────── */}
       <section id="pricing-section" className={styles.pricingSection}>
         <div className={styles.pricingHeader}>
-          <span className={styles.pricingBadge}>YOUR DREAM IS OUR MISSION ❤</span>
-          <h1>CHOOSE YOUR SUBSCRIPTION PLAN</h1>
-          <p className={styles.pricingSubtext}>SAME PREMIUM CONTENT. DIFFERENT VALIDITY. MAXIMUM VALUE.</p>
+          <span className={styles.sectionBadge}>YOUR DREAM IS OUR MISSION ❤</span>
+          <h2 className={styles.sectionTitle}>CHOOSE YOUR SUBSCRIPTION PLAN</h2>
+          <p className={styles.sectionSubtitle}>SAME PREMIUM CONTENT. DIFFERENT VALIDITY. MAXIMUM VALUE.</p>
         </div>
 
         {/* Region Switcher (Only visible to guest/logged-in Indian users for price comparison) */}
@@ -384,10 +482,13 @@ const Home = () => {
 
       {/* ── Interactive Onboarding Progress Tracker (Right Below Plans) ─── */}
       <section id="onboarding-tracker" className={styles.onboardingSection}>
-        <h2 className={styles.onboardingTitle}>🗺️ Advanced VLSI Physical Design Ocean Course Steps</h2>
-        <p className={styles.onboardingDesc}>
-          Track your progress dynamically. Set up your account, enter the portal, and unlock the complete 59-module curriculum.
-        </p>
+        <div className={styles.sectionHeader}>
+          <span className={styles.sectionBadge}>STUDENT ROADMAP</span>
+          <h2 className={styles.sectionTitle}>Advanced VLSI Physical Design Ocean Course Steps</h2>
+          <p className={styles.sectionSubtitle}>
+            Track your progress dynamically. Set up your account, enter the portal, and unlock the complete 59-module curriculum.
+          </p>
+        </div>
 
         <div className={styles.onboardingGrid}>
           {/* Step 1: Create Account */}
@@ -500,14 +601,13 @@ const Home = () => {
 
       {/* ── Free Modules Section ──────────────────────────────────────── */}
       <section id="free-modules" className={styles.freeSection}>
-        <h2 className={styles.freeSectionTitle}>
-          Free VLSI Physical Design Ocean Foundation Modules
-        </h2>
-        <p className={styles.freeSub}>
-          A structured set of free learning modules designed to build strong
-          fundamentals in ASIC &amp; VLSI design. These modules are ideal for
-          freshers, students, and professionals transitioning into the VLSI domain.
-        </p>
+        <div className={styles.sectionHeader}>
+          <span className={styles.sectionBadge}>FREE FOUNDATION</span>
+          <h2 className={styles.sectionTitle}>Free VLSI Physical Design Ocean Foundation Modules</h2>
+          <p className={styles.sectionSubtitle}>
+            A structured set of free learning modules designed to build strong fundamentals in ASIC &amp; VLSI design. Ideal for freshers, students, and professionals transitioning into VLSI.
+          </p>
+        </div>
 
         <div className={styles.freeLayout}>
           {/* Module grid */}
@@ -526,9 +626,6 @@ const Home = () => {
             <Link to="/modules" className={styles.primaryBtn}>
               VIEW FREE MODULES (1–8)
             </Link>
-            <p className={styles.freeNote}>
-              No registration required to begin access.
-            </p>
           </div>
         </div>
       </section>

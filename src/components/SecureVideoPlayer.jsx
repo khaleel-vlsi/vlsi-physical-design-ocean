@@ -136,21 +136,25 @@ const SecureVideoPlayer = ({ videoId, title }) => {
   };
 
   const onPlayerReady = (event) => {
-    // Force YouTube's iframe to fill the container (overrides YT's inline pixel dimensions)
-    const iframe = event.target.getIframe();
-    if (iframe) {
-      iframe.style.position = 'absolute';
-      iframe.style.top = '0';
-      iframe.style.left = '0';
-      iframe.style.width = '100%';
-      iframe.style.height = '100%';
-      iframe.style.border = 'none';
+    try {
+      const player = event.target;
+      const iframe = typeof player.getIframe === 'function' ? player.getIframe() : null;
+      if (iframe) {
+        iframe.style.position = 'absolute';
+        iframe.style.top = '0';
+        iframe.style.left = '0';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.border = 'none';
+      }
+      disableCaptions(player);
+      setIsReady(true);
+      if (typeof player.getDuration === 'function') setDuration(player.getDuration());
+      if (typeof player.getVolume === 'function') setVolume(player.getVolume());
+      if (typeof player.isMuted === 'function') setIsMuted(player.isMuted());
+    } catch (err) {
+      console.warn("onPlayerReady error:", err);
     }
-    disableCaptions(event.target);
-    setIsReady(true);
-    setDuration(event.target.getDuration());
-    setVolume(event.target.getVolume());
-    setIsMuted(event.target.isMuted());
   };
 
   const onPlayerStateChange = (event) => {
@@ -165,7 +169,7 @@ const SecureVideoPlayer = ({ videoId, title }) => {
       stopProgressTracking();
     }
     
-    if (playerRef.current) {
+    if (playerRef.current && typeof playerRef.current.getDuration === 'function') {
       setDuration(playerRef.current.getDuration());
     }
   };
@@ -173,7 +177,7 @@ const SecureVideoPlayer = ({ videoId, title }) => {
   const startProgressTracking = () => {
     if (progressInterval.current) clearInterval(progressInterval.current);
     progressInterval.current = setInterval(() => {
-      if (playerRef.current && playerRef.current.getCurrentTime) {
+      if (playerRef.current && typeof playerRef.current.getCurrentTime === 'function') {
         setCurrentTime(playerRef.current.getCurrentTime());
       }
     }, 500);
@@ -189,11 +193,19 @@ const SecureVideoPlayer = ({ videoId, title }) => {
     if (e) e.stopPropagation();
     if (!playerRef.current || !isReady) return;
     
-    if (isPlaying) {
-      playerRef.current.pauseVideo();
-    } else {
-      setHasStarted(true);
-      playerRef.current.playVideo();
+    try {
+      if (isPlaying) {
+        if (typeof playerRef.current.pauseVideo === 'function') {
+          playerRef.current.pauseVideo();
+        }
+      } else {
+        setHasStarted(true);
+        if (typeof playerRef.current.playVideo === 'function') {
+          playerRef.current.playVideo();
+        }
+      }
+    } catch (err) {
+      console.warn("Toggle play error:", err);
     }
   };
 
@@ -201,12 +213,20 @@ const SecureVideoPlayer = ({ videoId, title }) => {
     if (e) e.stopPropagation();
     if (!playerRef.current || !isReady) return;
     
-    if (isMuted) {
-      playerRef.current.unMute();
-      setIsMuted(false);
-    } else {
-      playerRef.current.mute();
-      setIsMuted(true);
+    try {
+      if (isMuted) {
+        if (typeof playerRef.current.unMute === 'function') {
+          playerRef.current.unMute();
+        }
+        setIsMuted(false);
+      } else {
+        if (typeof playerRef.current.mute === 'function') {
+          playerRef.current.mute();
+        }
+        setIsMuted(true);
+      }
+    } catch (err) {
+      console.warn("Toggle mute error:", err);
     }
   };
 
@@ -238,7 +258,7 @@ const SecureVideoPlayer = ({ videoId, title }) => {
 
   const seekBackward = (e) => {
     if (e) e.stopPropagation();
-    if (!playerRef.current || !isReady) return;
+    if (!playerRef.current || !isReady || typeof playerRef.current.seekTo !== 'function') return;
     const newTime = Math.max(0, currentTime - 10);
     playerRef.current.seekTo(newTime, true);
     setCurrentTime(newTime);
@@ -246,7 +266,7 @@ const SecureVideoPlayer = ({ videoId, title }) => {
 
   const seekForward = (e) => {
     if (e) e.stopPropagation();
-    if (!playerRef.current || !isReady) return;
+    if (!playerRef.current || !isReady || typeof playerRef.current.seekTo !== 'function') return;
     const newTime = Math.min(duration, currentTime + 10);
     playerRef.current.seekTo(newTime, true);
     setCurrentTime(newTime);
@@ -254,7 +274,7 @@ const SecureVideoPlayer = ({ videoId, title }) => {
 
   const handleProgressClick = (e) => {
     if (e) e.stopPropagation();
-    if (!playerRef.current || !isReady || duration === 0) return;
+    if (!playerRef.current || !isReady || duration === 0 || typeof playerRef.current.seekTo !== 'function') return;
     
     const track = e.currentTarget;
     const rect = track.getBoundingClientRect();

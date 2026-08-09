@@ -171,6 +171,11 @@ const AppRoutes = () => {
         <Route path="/register.html" element={<Navigate to="/register" replace />} />
         <Route path="/payment.html" element={<Navigate to="/dashboard" replace />} />
         
+        <Route path="/test-video" element={<LazyWrapper><TestVideo /></LazyWrapper>} />
+        <Route path="/test-videos" element={<LazyWrapper><TestVideoModulesList /></LazyWrapper>} />
+        <Route path="/test-video-playlist" element={<Navigate to="/test-videos" replace />} />
+        <Route path="/test-video-playlist/:id" element={<LazyWrapper><TestVideoPlaylist /></LazyWrapper>} />
+
         <Route path="/login" element={<LazyWrapper><Login /></LazyWrapper>} />
         <Route path="/register" element={<LazyWrapper><Register /></LazyWrapper>} />
         <Route path="/forgot-password" element={<LazyWrapper><ForgotPassword /></LazyWrapper>} />
@@ -183,16 +188,6 @@ const AppRoutes = () => {
         <Route path="/paid-modules/module/:id" element={<LazyWrapper><PaidModuleDetail /></LazyWrapper>} />
         <Route path="/resume" element={<LazyWrapper><ResumeBuilder /></LazyWrapper>} />
         <Route path="/resume/edit/:resumeId" element={<LazyWrapper><ResumeEditor /></LazyWrapper>} />
-        <Route path="/test-video" element={<LazyWrapper><TestVideo /></LazyWrapper>} />
-        <Route path="/test-videos" element={<LazyWrapper><TestVideoModulesList /></LazyWrapper>} />
-        <Route path="/test-video-playlist" element={<Navigate to="/test-videos" replace />} />
-        <Route path="/test-video-playlist/:id" element={<LazyWrapper><TestVideoPlaylist /></LazyWrapper>} />
-        <Route path="/test-quiz-modules" element={<LazyWrapper><TestQuizModulesList /></LazyWrapper>} />
-        <Route path="/test-quizzes" element={<Navigate to="/test-quiz-modules" replace />} />
-        <Route path="/test-quiz-playlist/:id" element={<LazyWrapper><TestQuizPlaylist /></LazyWrapper>} />
-        <Route path="/quiz-practice" element={<LazyWrapper><QuizList /></LazyWrapper>} />
-        <Route path="/quiz/:moduleId/:difficulty" element={<LazyWrapper><QuizEngine /></LazyWrapper>} />
-        <Route path="/quiz/:moduleId" element={<LazyWrapper><QuizEngine /></LazyWrapper>} />
         <Route path="/cloud-lab" element={<LazyWrapper><CloudPnrLab /></LazyWrapper>} />
       </Route>
 

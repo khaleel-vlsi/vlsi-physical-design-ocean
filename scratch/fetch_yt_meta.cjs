@@ -3,12 +3,8 @@ const https = require('https');
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 const videoIds = [
-  '_FUwUUN9ITM',
-  'wTVg4aYHDxk',
-  '4jtHwL1D0DI',
-  'cVotR-E4ueA',
-  '7qWcrr1BSQc',
-  'OI_bCxpSzko'
+  'bC_v_gewGOQ',
+  'ZIDpqjES4BQ'
 ];
 
 async function fetchMeta(id) {

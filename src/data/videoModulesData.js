@@ -126,22 +126,31 @@ export const VIDEO_MODULES = {
       { id: 'v6_6', title: 'Logical Synthesis class -6', youtubeId: 'OI_bCxpSzko', duration: 'Unknown' },
       { id: 'v6_7', title: 'Logical Synthesis class -7', youtubeId: '-vtV5xoL1t4', duration: 'Unknown' },
       { id: 'v6_8', title: 'Logical Synthesis class -8', youtubeId: 'PIc0UxtBpDY', duration: 'Unknown' },
-      { id: 'v6_9', title: 'Logical Synthesis class -9', youtubeId: '-vtV5xoL1t4', duration: 'Unknown' }
+      { id: 'v6_9', title: 'Logical Synthesis class -9', youtubeId: 'NOTu4FI8ijc', duration: 'Unknown' },
+      { id: 'v6_10', title: 'Logical Synthesis class -10', youtubeId: '2teVQoqETTU', duration: 'Unknown' }
     ]
   },
   7: {
     id: 7,
     thumbnail: '/images/modules/mod7.jpg',
-    title: 'Design For Testability',
-    description: 'DFT concepts.',
-    sessions: []
+    title: 'Design For Testability (DFT)',
+    description: 'DFT concepts and scan insertion theory.',
+    isLocked: false,
+    sessions: [
+      { id: 'v7_1', title: 'DFT Class -1', youtubeId: 'kEjbIJSE8X4', duration: 'Unknown' },
+      { id: 'v7_2', title: 'DFT Class -2', youtubeId: 'My_3EaNE1Ak', duration: 'Unknown' },
+      { id: 'v7_3', title: 'DFT Class -3', youtubeId: 'BWYLDim4W7A', duration: 'Unknown' }
+    ]
   },
   8: {
     id: 8,
     thumbnail: '/images/modules/mod8.jpg',
     title: 'Physical Synthesis',
-    description: 'Physical Synthesis fundamentals.',
-    sessions: []
+    description: 'Physical Synthesis fundamentals and placement optimization.',
+    isLocked: false,
+    sessions: [
+      { id: 'v8_1', title: 'Physical Synthesis class -1', youtubeId: 'rf7HEWPMLeA', duration: 'Unknown' }
+    ]
   },
   9: {
     id: 9,
@@ -265,23 +274,30 @@ export const VIDEO_MODULES = {
     sessions: [
       { id: 'v16_1', title: 'CTS Class -8', youtubeId: 'F1IMF4Rn41Y', duration: 'Unknown' },
       { id: 'v16_2', title: 'CTS Class -9', youtubeId: 'VP7qr8Q92Ow', duration: 'Unknown' },
-      { id: 'v16_3', title: 'CTS Class -10', youtubeId: '2zjP5NyjIf8', duration: 'Unknown' }
+      { id: 'v16_3', title: 'CTS Class -10', youtubeId: '2zjP5NyjIf8', duration: 'Unknown' },
+      { id: 'v16_4', title: 'CTS Class -11', youtubeId: 'bC_v_gewGOQ', duration: 'Unknown' },
+      { id: 'v16_5', title: 'CTS Class -12', youtubeId: 'ZIDpqjES4BQ', duration: 'Unknown' }
     ]
   },
   17: {
     id: 17,
     thumbnail: '/images/modules/mod17.jpg',
     title: 'Routing',
-    description: 'Routing stages.',
-    isLocked: true,
-    sessions: []
+    description: 'Global routing, detailed routing, and DRC timing optimization.',
+    isLocked: false,
+    sessions: [
+      { id: 'v17_1', title: 'Routing Class -1', youtubeId: 'Tq1adeJ1BT0', duration: 'Unknown' },
+      { id: 'v17_2', title: 'Routing Class -2', youtubeId: 'i9fvSrHQ3Aw', duration: 'Unknown' }
+    ]
   },
   18: {
     id: 18,
     thumbnail: '/images/modules/mod18.jpg',
     title: 'Physical Verification & Signoff',
-    description: 'DRC, LVS, and Signoff.',
-    isLocked: true,
-    sessions: []
+    description: 'DRC, LVS, ERC, and final tapeout signoff.',
+    isLocked: false,
+    sessions: [
+      { id: 'v18_1', title: 'Physical Verification Class -1', youtubeId: 'fvA1fVwq_60', duration: 'Unknown' }
+    ]
   }
 };

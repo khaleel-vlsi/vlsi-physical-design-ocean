@@ -31,6 +31,8 @@ const TestVideo = lazy(() => import('../pages/TestVideo'));
 const TestVideoModulesList = lazy(() => import('../pages/TestVideoModulesList'));
 const TestVideoPlaylist = lazy(() => import('../pages/TestVideoPlaylist'));
 
+const StudentReviews = lazy(() => import('../pages/StudentReviews'));
+
 const QuizList = lazy(() => import('../pages/QuizList'));
 const QuizEngine = lazy(() => import('../pages/QuizEngine'));
 const TestQuizModulesList = lazy(() => import('../pages/TestQuizModulesList'));
@@ -147,6 +149,7 @@ const AppRoutes = () => {
         <Route path="/modules" element={<LazyWrapper><ModulesList /></LazyWrapper>} />
         <Route path="/modules/:id" element={<LazyWrapper><ModuleDetail /></LazyWrapper>} />
         <Route path="/platform-flow" element={<LazyWrapper><PlatformFlow /></LazyWrapper>} />
+        <Route path="/reviews" element={<LazyWrapper><StudentReviews /></LazyWrapper>} />
         <Route path="/study-materials" element={<LazyWrapper><StudyMaterials /></LazyWrapper>} />
         <Route path="/pnr-execution" element={<LazyWrapper><PnrExecution /></LazyWrapper>} />
         <Route path="/pnr-workshop" element={<LazyWrapper><PnrWorkshop /></LazyWrapper>} />

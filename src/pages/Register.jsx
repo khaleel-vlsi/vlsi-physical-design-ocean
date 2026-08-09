@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link, useSearchParams } from 'react-router-dom';
 import { supabase } from '../services/supabase';
+import { syncUnsubscribedLead } from '../services/leadService';
 import styles from './Auth.module.css';
 
 const countriesList = [
@@ -131,6 +132,19 @@ const Register = () => {
       if (error) {
         setError(error.message);
       } else {
+        // Automatically sync new unsubscribed lead to HR Google Sheet
+        try {
+          await syncUnsubscribedLead({
+            fullName,
+            email,
+            country,
+            countryCode,
+            phoneNumber: cleanPhone
+          });
+        } catch (leadErr) {
+          console.warn('HR Lead sync error:', leadErr);
+        }
+
         alert("Registration successful! Please login.");
         navigate('/login');
       }

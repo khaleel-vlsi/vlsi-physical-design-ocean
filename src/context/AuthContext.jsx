@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState, useCallback } from 'react';
 import { supabase } from '../services/supabase';
+import { startTwoHourLeadScheduler } from '../services/leadService';
 
 const AuthContext = createContext();
 
@@ -79,6 +80,9 @@ export const AuthProvider = ({ children }) => {
     }
 
     let isMounted = true;
+
+    // Start 2-Hour Automated Lead Sync Scheduler for HR Google Sheet
+    startTwoHourLeadScheduler(supabase);
 
     // Wraps a promise with a timeout so a silently-hung network call
     // (e.g. CORS failure, Supabase unreachable) doesn't freeze the app.

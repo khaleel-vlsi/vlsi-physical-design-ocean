@@ -11,6 +11,7 @@ const Navbar = () => {
         <Link to="/" className={styles.navLink}>Home</Link>
         <Link to="/modules" className={styles.navLink}>Modules</Link>
         <Link to="/platform-flow" className={styles.navLink}>Flow Graph</Link>
+        <Link to="/reviews" className={styles.navLink}>⭐ Reviews</Link>
         <Link to="/about" className={styles.navLink}>About</Link>
         <Link to="/contact" className={styles.navLink}>Contact</Link>
       </div>

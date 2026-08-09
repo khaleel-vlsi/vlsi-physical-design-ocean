@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import styles from './Home.module.css';
 import SEO from '../components/SEO';
 import LearningRoadmap from '../components/LearningRoadmap';
+import StudentReviewsSection from '../components/StudentReviewsSection';
+import GoogleReviewsWidget from '../components/GoogleReviewsWidget';
 import StructuredData from '../components/StructuredData';
 import { useAuth } from '../context/AuthContext';
 import { plansConfig, getRegionKey } from '../data/plansConfig';
@@ -493,6 +495,9 @@ const Home = () => {
 
       <LearningRoadmap />
 
+      {/* ── Student Ratings & Reviews Section ───────────────────────────── */}
+      <StudentReviewsSection limit={6} />
+
       {/* ── Free Modules Section ──────────────────────────────────────── */}
       <section id="free-modules" className={styles.freeSection}>
         <h2 className={styles.freeSectionTitle}>
@@ -528,6 +533,10 @@ const Home = () => {
         </div>
       </section>
 
+      {/* ── Official Google Reviews Section ──────────────────────────────── */}
+      <section style={{ padding: '2rem 0' }}>
+        <GoogleReviewsWidget limit={4} />
+      </section>
     </div>
     </>
   );

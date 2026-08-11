@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/jpeg" href="/logo.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VLSI Physical Design Ocean – Complete PnR (Place &amp; Route), STA, Synthesis &amp; ASIC Video Modules. Master floorplanning, CTS, routing, and signoff with 59+ modules and video playlists.">
+    <title>59+ VLSI Physical Design Modules | ASIC PnR, STA &amp; Synthesis Curriculum | VLSI Physical Design Ocean</title><title>VLSI Physical Design Course | PnR, STA, Synthesis &amp; ASIC Video Modules | VLSI Physical Design Ocean</title><title>VLSI Physical Design Ocean – PnR, STA, Synthesis &amp; ASIC Video Modules</title>
+    <!-- YouTube Preconnect for faster video player initialization -->
+    <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://www.youtube-nocookie.com">
+    <link rel="preconnect" href="https://i.ytimg.com">
+    <link rel="dns-prefetch" href="https://www.youtube.com">
+    <link rel="dns-prefetch" href="https://i.ytimg.com">
+    <!-- Google Fonts: Montserrat + Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Space+Grotesk:wght@500&amp;display=swap" rel="stylesheet">
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafgraph/spa-github-pages
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+    <!-- polyfill.io removed: domain was compromised. MathJax v3 includes its own polyfills. -->
+    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        }
+      };
+    </script>
+    
+    <!-- Google AdSense Verification Tag (does NOT show ads, only verifies ownership) -->
+    <meta name="google-adsense-account" content="ca-pub-3681618856902363">
+    <!-- Google AdSense script is now loaded dynamically only on free modules -->
+    <script type="module" crossorigin="" src="/assets/index-Br_1hhRp.js"></script>
+    <link rel="modulepreload" crossorigin="" href="/assets/preload-helper-zJ_50EbN.js">
+    <link rel="stylesheet" crossorigin="" href="/assets/index-DFGk1QDQ.css">
+  <link rel="modulepreload" as="script" crossorigin="" href="/assets/Home-DZqdP8VD.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/GoogleReviewsWidget-BOLJtPc9.js"><link rel="stylesheet" crossorigin="" href="/assets/GoogleReviewsWidget-jcYh8avF.css"><link rel="modulepreload" as="script" crossorigin="" href="/assets/SEO-Bzy8S4Vg.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/Home.module-DrNASeF8.js"><link rel="stylesheet" crossorigin="" href="/assets/Home-tyRMmQCu.css"><link rel="stylesheet" crossorigin="" href="/assets/Home-D7CX6NMT.css"><style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><style id="MJX-CHTML-styles">
+mjx-container[jax="CHTML"] {
+  line-height: 0;
+}
+
+mjx-container [space="1"] {
+  margin-left: .111em;
+}
+
+mjx-container [space="2"] {
+  margin-left: .167em;
+}
+
+mjx-container [space="3"] {
+  margin-left: .222em;
+}
+
+mjx-container [space="4"] {
+  margin-left: .278em;
+}
+
+mjx-container [space="5"] {
+  margin-left: .333em;
+}
+
+mjx-container [rspace="1"] {
+  margin-right: .111em;
+}
+
+mjx-container [rspace="2"] {
+  margin-right: .167em;
+}
+
+mjx-container [rspace="3"] {
+  margin-right: .222em;
+}
+
+mjx-container [rspace="4"] {
+  margin-right: .278em;
+}
+
+mjx-container [rspace="5"] {
+  margin-right: .333em;
+}
+
+mjx-container [size="s"] {
+  font-size: 70.7%;
+}
+
+mjx-container [size="ss"] {
+  font-size: 50%;
+}
+
+mjx-container [size="Tn"] {
+  font-size: 60%;
+}
+
+mjx-container [size="sm"] {
+  font-size: 85%;
+}
+
+mjx-container [size="lg"] {
+  font-size: 120%;
+}
+
+mjx-container [size="Lg"] {
+  font-size: 144%;
+}
+
+mjx-container [size="LG"] {
+  font-size: 173%;
+}
+
+mjx-container [size="hg"] {
+  font-size: 207%;
+}
+
+mjx-container [size="HG"] {
+  font-size: 249%;
+}
+
+mjx-container [width="full"] {
+  width: 100%;
+}
+
+mjx-box {
+  display: inline-block;
+}
+
+mjx-block {
+  display: block;
+}
+
+mjx-itable {
+  display: inline-table;
+}
+
+mjx-row {
+  display: table-row;
+}
+
+mjx-row > * {
+  display: table-cell;
+}
+
+mjx-mtext {
+  display: inline-block;
+}
+
+mjx-mstyle {
+  display: inline-block;
+}
+
+mjx-merror {
+  display: inline-block;
+  color: red;
+  background-color: yellow;
+}
+
+mjx-mphantom {
+  visibility: hidden;
+}
+
+_::-webkit-full-page-media, _:future, :root mjx-container {
+  will-change: opacity;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-c::before {
+  display: block;
+  width: 0;
+}
+
+.MJX-TEX {
+  font-family: MJXZERO, MJXTEX;
+}
+
+.TEX-B {
+  font-family: MJXZERO, MJXTEX-B;
+}
+
+.TEX-I {
+  font-family: MJXZERO, MJXTEX-I;
+}
+
+.TEX-MI {
+  font-family: MJXZERO, MJXTEX-MI;
+}
+
+.TEX-BI {
+  font-family: MJXZERO, MJXTEX-BI;
+}
+
+.TEX-S1 {
+  font-family: MJXZERO, MJXTEX-S1;
+}
+
+.TEX-S2 {
+  font-family: MJXZERO, MJXTEX-S2;
+}
+
+.TEX-S3 {
+  font-family: MJXZERO, MJXTEX-S3;
+}
+
+.TEX-S4 {
+  font-family: MJXZERO, MJXTEX-S4;
+}
+
+.TEX-A {
+  font-family: MJXZERO, MJXTEX-A;
+}
+
+.TEX-C {
+  font-family: MJXZERO, MJXTEX-C;
+}
+
+.TEX-CB {
+  font-family: MJXZERO, MJXTEX-CB;
+}
+
+.TEX-FR {
+  font-family: MJXZERO, MJXTEX-FR;
+}
+
+.TEX-FRB {
+  font-family: MJXZERO, MJXTEX-FRB;
+}
+
+.TEX-SS {
+  font-family: MJXZERO, MJXTEX-SS;
+}
+
+.TEX-SSB {
+  font-family: MJXZERO, MJXTEX-SSB;
+}
+
+.TEX-SSI {
+  font-family: MJXZERO, MJXTEX-SSI;
+}
+
+.TEX-SC {
+  font-family: MJXZERO, MJXTEX-SC;
+}
+
+.TEX-T {
+  font-family: MJXZERO, MJXTEX-T;
+}
+
+.TEX-V {
+  font-family: MJXZERO, MJXTEX-V;
+}
+
+.TEX-VB {
+  font-family: MJXZERO, MJXTEX-VB;
+}
+
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
+  font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important;
+}
+
+@font-face /* 0 */ {
+  font-family: MJXZERO;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
+}
+
+@font-face /* 1 */ {
+  font-family: MJXTEX;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
+}
+
+@font-face /* 2 */ {
+  font-family: MJXTEX-B;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
+}
+
+@font-face /* 3 */ {
+  font-family: MJXTEX-I;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+}
+
+@font-face /* 4 */ {
+  font-family: MJXTEX-MI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
+}
+
+@font-face /* 5 */ {
+  font-family: MJXTEX-BI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
+}
+
+@font-face /* 6 */ {
+  font-family: MJXTEX-S1;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
+}
+
+@font-face /* 7 */ {
+  font-family: MJXTEX-S2;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
+}
+
+@font-face /* 8 */ {
+  font-family: MJXTEX-S3;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
+}
+
+@font-face /* 9 */ {
+  font-family: MJXTEX-S4;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
+}
+
+@font-face /* 10 */ {
+  font-family: MJXTEX-A;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
+}
+
+@font-face /* 11 */ {
+  font-family: MJXTEX-C;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
+}
+
+@font-face /* 12 */ {
+  font-family: MJXTEX-CB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
+}
+
+@font-face /* 13 */ {
+  font-family: MJXTEX-FR;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
+}
+
+@font-face /* 14 */ {
+  font-family: MJXTEX-FRB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
+}
+
+@font-face /* 15 */ {
+  font-family: MJXTEX-SS;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
+}
+
+@font-face /* 16 */ {
+  font-family: MJXTEX-SSB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
+}
+
+@font-face /* 17 */ {
+  font-family: MJXTEX-SSI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
+}
+
+@font-face /* 18 */ {
+  font-family: MJXTEX-SC;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
+}
+
+@font-face /* 19 */ {
+  font-family: MJXTEX-T;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
+}
+
+@font-face /* 20 */ {
+  font-family: MJXTEX-V;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
+}
+
+@font-face /* 21 */ {
+  font-family: MJXTEX-VB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
+}
+</style><meta name="description" content="Master VLSI Physical Design with structured learning in PnR, STA, Synthesis, CTS, Signoff, ICC2, Innovus, interview preparation and practical ASIC workflows."><meta name="keywords" content="vlsi physical design, asic design flow, vlsi physical design topics for beginners, physical design engineer roadmap, linux scripting for vlsi, tcl scripting for physical design, physical design interview questions and answers, rtl to gdsii flow, floorplanning in vlsi, placement and routing, pnr, clock tree synthesis, cts, static timing analysis, sta, physical verification drc lvs, signal integrity and crosstalk, ir drop analysis, electromigration, synopsys icc2 tutorial, cadence innovus tutorial, vlsi training for freshers, physical design engineer jobs, vlsi career path, cmos basics, logic synthesis, power planning in vlsi, vlsi physical design ocean, vlsi physical design, pnr video modules, place and route tutorial, pnr workshop, asic design flow, static timing analysis, sta tutorial, logic synthesis, innovus tutorial, icc2 tutorial, primetime tutorial, cts clock tree synthesis, floorplanning in vlsi, routing in vlsi, drc lvs physical verification, vlsi video courses"><meta name="theme-color" content="#090d16"><meta property="og:site_name" content="VLSI Physical Design Ocean"><meta property="og:type" content="website"><meta property="og:url" content="https://vlsiphysicaldesignocean.com"><meta property="og:title" content="VLSI Physical Design Course | PnR, STA, Synthesis &amp; ASIC Video Modules | VLSI Physical Design Ocean"><meta property="og:description" content="Master VLSI Physical Design with structured learning in PnR, STA, Synthesis, CTS, Signoff, ICC2, Innovus, interview preparation and practical ASIC workflows."><meta property="og:image" content="https://vlsiphysicaldesignocean.com/favicon.svg"><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://vlsiphysicaldesignocean.com"><meta property="twitter:title" content="VLSI Physical Design Course | PnR, STA, Synthesis &amp; ASIC Video Modules | VLSI Physical Design Ocean"><meta property="twitter:description" content="Master VLSI Physical Design with structured learning in PnR, STA, Synthesis, CTS, Signoff, ICC2, Innovus, interview preparation and practical ASIC workflows."><meta property="twitter:image" content="https://vlsiphysicaldesignocean.com/favicon.svg"><link rel="canonical" href="https://vlsiphysicaldesignocean.com"><style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><link rel="modulepreload" as="script" crossorigin="" href="/assets/ModulesList-CK_PklaH.js"><link rel="stylesheet" crossorigin="" href="/assets/ModulesList-pX2VAgkG.css"><meta name="description" content="Explore 59+ structured VLSI Physical Design learning modules covering silicon fundamentals, RTL synthesis, floorplanning, power planning, placement, CTS, detailed routing, STA, and signoff."><meta name="keywords" content="vlsi physical design, pnr video modules, place and route tutorial, pnr workshop, asic design flow, static timing analysis, sta tutorial, logic synthesis, innovus tutorial, icc2 tutorial, primetime tutorial, cts clock tree synthesis, floorplanning in vlsi, routing in vlsi, drc lvs physical verification, vlsi video courses"><meta name="theme-color" content="#090d16"><meta property="og:site_name" content="VLSI Physical Design Ocean"><meta property="og:type" content="website"><meta property="og:url" content="https://vlsiphysicaldesignocean.com/modules"><meta property="og:title" content="59+ VLSI Physical Design Modules | ASIC PnR, STA &amp; Synthesis Curriculum | VLSI Physical Design Ocean"><meta property="og:description" content="Explore 59+ structured VLSI Physical Design learning modules covering silicon fundamentals, RTL synthesis, floorplanning, power planning, placement, CTS, detailed routing, STA, and signoff."><meta property="og:image" content="https://vlsiphysicaldesignocean.com/favicon.svg"><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://vlsiphysicaldesignocean.com/modules"><meta property="twitter:title" content="59+ VLSI Physical Design Modules | ASIC PnR, STA &amp; Synthesis Curriculum | VLSI Physical Design Ocean"><meta property="twitter:description" content="Explore 59+ structured VLSI Physical Design learning modules covering silicon fundamentals, RTL synthesis, floorplanning, power planning, placement, CTS, detailed routing, STA, and signoff."><meta property="twitter:image" content="https://vlsiphysicaldesignocean.com/favicon.svg"><link rel="canonical" href="https://vlsiphysicaldesignocean.com/modules"></head>
+  <body>
+    <div id="root"><nav class="_topNav_hfcsr_3"><div class="_navLeft_hfcsr_19"><a class="_brandLogoLink_hfcsr_25" href="/" data-discover="true"><img alt="VLSI Physical Design Ocean Logo" class="_brandLogoImg_hfcsr_35" src="/logo.png"><span class="_brandTitle_hfcsr_49">VLSI OCEAN</span></a><a href="/" data-discover="true">Home</a><a href="/modules" data-discover="true">Modules</a><a href="/platform-flow" data-discover="true">Flow Graph</a><a href="/reviews" data-discover="true">⭐ Reviews</a><a href="/about" data-discover="true">About</a><a href="/contact" data-discover="true">Contact</a></div><div class="_navRight_hfcsr_75"><span>Guest</span><a href="/dashboard" data-discover="true">Student Dashboard</a></div></nav><div class="announcement-bar"><marquee behavior="scroll" direction="left">📢 Have suggestions, questions, or interview doubts? Share your queries — answers will be updated module-wise. Contact: vlsiphysicaldesignocean@gmail.com</marquee></div><main><div class="_modulesPage_1xamg_3"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://vlsiphysicaldesignocean.com"},{"@type":"ListItem","position":2,"name":"Modules","item":"https://vlsiphysicaldesignocean.com/modules"}]}</script><header class="_moduleHeader_1xamg_11"><h1>59+ VLSI Physical Design Curriculum Modules</h1><p>Explore our complete 59-module ASIC physical design curriculum. From basic semiconductor physics and Verilog RTL coding to advanced Place &amp; Route (PnR), Clock Tree Synthesis (CTS), Static Timing Analysis (STA), physical verification, and industrial EDA tool user guides.</p><div class="_statsRow_1xamg_37"><div class="_statPill_1xamg_43"><span class="_statIcon_1xamg_59">📚</span>59 Modules</div><div class="_statPill_1xamg_43"><span class="_statIcon_1xamg_59">⏱️</span>120+ Hours</div></div></header><div class="_modulesGrid_1xamg_64"><a class="_moduleLink_1xamg_73" href="/modules/1" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 1 </div><h3>Introduction to Electronics</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/2" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 2 </div><h3>MOSFET &amp; CMOS Theory</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/3" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 3 </div><h3>Digital Electronics</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/4" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 4 </div><h3>Linux &amp; Basic Tcl Script</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/5" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 5 </div><h3>RTL Coding using Verilog</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/6" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 6 </div><h3>Logical Synthesis</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/7" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 7 </div><h3>Design For Testability</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/8" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 8 </div><h3>Physical Synthesis</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/9" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 9 🔒</div><h3>Static Timing Analysis - 1</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/10" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 10 🔒</div><h3>Static Timing Analysis - 2</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/11" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 11 🔒</div><h3>Static Timing Analysis - 3</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/12" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 12 🔒</div><h3>PNR Inputs &amp; Sanity Checks</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/13" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 13 🔒</div><h3>FloorPlan &amp; PowerPlan</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/14" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 14 🔒</div><h3>Placement</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/15" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 15 🔒</div><h3>Clock Tree Synthesis - 1</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/16" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 16 🔒</div><h3>Clock Tree Synthesis - 2</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/17" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 17 🔒</div><h3>Routing</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/18" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 18 🔒</div><h3>Physical Verification &amp; Signoff</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/19" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 19 🔒</div><h3>Core Interview Questions</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/20" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 20 🔒</div><h3>Interview Questions (RTL, Synth, DFT, STA)</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/21" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 21 🔒</div><h3>Physical Design (PNR) Interview Questions</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/22" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 22 🔒</div><h3>Physical Verification &amp; Signoff Interview Questions</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/23" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 23 🔒</div><h3>Certification</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/24" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 24 🔒</div><h3>Resume Templates for Freshers &amp; Experienced</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/25" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 25 🔒</div><h3>Complete PNR Execution In ICC2</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/26" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 26 🔒</div><h3>Complete PNR Execution In Innovus</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/27" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 27 🔒</div><h3>Complete PNR Execution In FC</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/28" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 28 🔒</div><h3>Timing Analysis User Guide</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/29" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 29 🔒</div><h3>Tempus User Guide</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/30" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 30 🔒</div><h3>Syn2PNR Flow Guide</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/31" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 31 🔒</div><h3>ICC Student Guide</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/32" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 32 🔒</div><h3>Star RC User Guide</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/33" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 33 🔒</div><h3>Voltus IC Power Integrity Solution User Guide</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/34" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 34 🔒</div><h3>All VLSI Questions and Answers</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/35" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 35 🔒</div><h3>Viva Questions on Synthesis</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/36" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 36 🔒</div><h3>PrimeTime Student Guide (2018 Version)</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/37" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 37 🔒</div><h3>PrimeTime Crosstalk Analysis Guide</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/38" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 38 🔒</div><h3>PrimeTime Tool User Guide</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/39" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 39 🔒</div><h3>PNR Notes &amp; Best Practices</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/40" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 40 🔒</div><h3>PNR Debug &amp; Fixes Guide</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/41" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 41 🔒</div><h3>Block Implementation Lab Guide</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/42" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 42 🔒</div><h3>Khaleel PNR Lab Practice Guide</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/43" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 43 🔒</div><h3>Complete Physical Design Flow Documentation</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/44" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 44 🔒</div><h3>Innovus TCR Reference Guide</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/45" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 45 🔒</div><h3>ICC2 Tool User Guide</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/46" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 46 🔒</div><h3>Genus Synthesis Tool User Guide</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/47" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 47 🔒</div><h3>Fusion Compiler User Guide</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/48" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 48 🔒</div><h3>Formality User Guide</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/49" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 49 🔒</div><h3>Digital Logic &amp; Design Interview Preparation</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/50" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 50 🔒</div><h3>Design Compiler (DC) Tool User Guide</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/51" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 51 🔒</div><h3>DB Get Useful Commands Reference</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/52" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 52 🔒</div><h3>ICC2 Flow Implementation Guide</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/53" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 53 🔒</div><h3>Complete Synthesis Flow Documentation</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/54" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 54 🔒</div><h3>Block-Level Implementation Workshop Guide</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/55" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 55 🔒</div><h3>Basic GVIM Commands for Faster Workflow</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/56" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 56 🔒</div><h3>Application Options &amp; Attributes Reference</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/57" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 57 🔒</div><h3>Innovus User Guide (Full Version)</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/58" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 58 🔒</div><h3>Industrial TCL Scripts</h3><div class="_cardAccent_1xamg_124"></div></div></a><a class="_moduleLink_1xamg_73" href="/modules/59" data-discover="true"><div class="_moduleCard_1xamg_79"><div class="_moduleBadge_1xamg_98">Module 59 🔒</div><h3>Direct ATS Global Jobs (Automation)</h3><div class="_cardAccent_1xamg_124"></div></div></a></div><div class="_bottomSection_1xamg_134"><div class="_labCard_1xamg_143"><div class="_labCardInner_1xamg_163"><span class="_labTag_1xamg_169">ADVANCED LAB</span><h2>Hands-on PNR Execution</h2><p>Master industry-standard tools like Innovus and IC Compiler II in our immersive virtual lab environment.</p></div></div><div class="_certCard_1xamg_195"><div class="_certIcon_1xamg_205">🛡️</div><h2>Industry Certified</h2><p>Our curriculum is designed in collaboration with leading semiconductor firms to ensure you're ready for the most demanding physical design roles.</p><button class="_certButton_1xamg_232">View Certification Path</button></div></div></div></main><footer class="_siteFooter_1l290_3"><div class="_footerContainer_1l290_10"><div class="_footerBrand_1l290_26"><div class="_brandName_1l290_30">VLSI Physical Design Ocean</div><p class="_brandDesc_1l290_38">Architecting the future of silicon education through immersive learning and technical precision.</p><div class="_copyright_1l290_45">© 2026 VLSI Physical Design Ocean. All rights reserved. Precision in every micron.</div></div><div class="_footerLinks_1l290_51"><div class="_linkGroup_1l290_62"><h4>Resources</h4><ul class="_linkList_1l290_72"><li><a href="/modules" data-discover="true">Course Library</a></li><li><a href="/modules/57" data-discover="true">Documentation</a></li><li><a href="/contact" data-discover="true">Help Center</a></li><li><a href="/contact" data-discover="true">Community Forum</a></li></ul></div><div class="_linkGroup_1l290_62"><h4>Legal</h4><ul class="_linkList_1l290_72"><li><a class="" href="/privacy" data-discover="true">Privacy Policy</a></li><li><a href="/privacy" data-discover="true">Terms of Service</a></li><li><a href="/privacy" data-discover="true">Cookie Settings</a></li><li><a href="/privacy" data-discover="true">Student Agreement</a></li></ul></div></div></div></footer><div class="_chatWrapper_kqo9f_1"><button class="_chatToggle_kqo9f_9">?</button></div></div>
+
+  
+
+</body></html>

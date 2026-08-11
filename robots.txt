@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /dashboard
+Disallow: /paid-modules/
+Disallow: /resume/
+Disallow: /cloud-lab/
 
 Sitemap: https://vlsiphysicaldesignocean.com/sitemap.xml

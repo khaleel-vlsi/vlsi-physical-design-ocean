@@ -6,6 +6,7 @@ import SubscriptionModal from '../components/SubscriptionModal';
 
 import SEO from '../components/SEO';
 import StructuredData from '../components/StructuredData';
+import AdUnit from '../components/AdUnit';
 
 import styles from './TestVideoModulesList.module.css';
 
@@ -21,8 +22,8 @@ const TestVideoModulesList = () => {
   return (
     <div className={styles.modulesContainer}>
       <SEO 
-        title="Recorded Video Classes & VLSI Lectures"
-        description="Access comprehensive recorded video lectures for VLSI Physical Design including Logical Synthesis, STA, CTS, PnR Execution, and ASIC signoff."
+        title="Free VLSI Physical Design Video Lectures & PnR Playlists"
+        description="Watch free VLSI Physical Design video lectures and session previews. Learn PnR execution, STA, synthesis, and CTS with 1 free sample video per module for Modules 1–7."
         url="/test-video-modules"
         keywords={["vlsi video courses", "pnr video modules", "sta video lectures", "logic synthesis videos", "cts video course"]}
         structuredData={
@@ -39,9 +40,9 @@ const TestVideoModulesList = () => {
         }
       />
       <header className={styles.headerSection}>
-        <h1 className={styles.pageTitle}>Recorded Classes</h1>
+        <h1 className={styles.pageTitle}>Recorded Video Playlists & Lectures</h1>
         <p className={styles.pageSubtitle}>
-          Select a module to view its recorded video sessions. <span style={{ color: '#00f2fe', fontWeight: 'bold' }}>Free Preview Available for Modules 1–7 (1 Video Per Module)</span>
+          Explore structured video playlists for VLSI Physical Design. Guest and free users can watch <span style={{ color: '#00f2fe', fontWeight: 'bold' }}>1 Free Sample Video for Modules 1–7</span> with zero registration popups. Full video playlists for Modules 8+ are available to active subscribers.
         </p>
       </header>
 
@@ -154,6 +155,8 @@ const TestVideoModulesList = () => {
           );
         })}
       </div>
+
+      <AdUnit slotId="slot_test_videos_bottom" />
 
       <SubscriptionModal 
         isOpen={modalOpen}

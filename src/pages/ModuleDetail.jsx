@@ -16,6 +16,7 @@ const Module59Content = lazy(() => import('./modules/Module59Content'));
 import SEO from '../components/SEO';
 import StructuredData from '../components/StructuredData';
 import ModuleQuickNav from '../components/ModuleQuickNav';
+import AdUnit from '../components/AdUnit';
 import { useAuth } from '../context/AuthContext';
 
 const NATIVE_COMPONENTS = {
@@ -192,7 +193,7 @@ const ModuleDetail = () => {
               "provider": {
                 "@type": "Organization",
                 "name": "VLSI Physical Design Ocean",
-                "sameAs": "https://vlsiphysicaldesignocean.com"
+                "url": "https://vlsiphysicaldesignocean.com/"
               }
             }}
             breadcrumb={{
@@ -340,6 +341,8 @@ const ModuleDetail = () => {
             )}
           </>
         )}
+
+        <AdUnit slotId="slot_moduledetail_bottom" />
 
         <div className={styles.moduleNavigation}>
           {moduleId > 1 && (

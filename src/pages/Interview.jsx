@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './StudyMaterials.module.css'; // Reusing the premium grid styling
 import SEO from '../components/SEO';
 import StructuredData from '../components/StructuredData';
+import AdUnit from '../components/AdUnit';
 import { useAuth } from '../context/AuthContext';
 
 const Icon = ({ path }) => (
@@ -27,9 +28,105 @@ const interviewModules = [
   { id: 49, title: 'Digital Logic & Design Interview Preparation', desc: 'Digital electronics and logic design fundamentals.', icon: InterviewIcon }
 ];
 
+const sampleFaqs = [
+  {
+    id: 'faq-1',
+    question: 'What is the primary objective of Floorplanning in VLSI Physical Design?',
+    answer: 'Floorplanning is the initial phase of physical implementation where die size, core boundary, I/O pad placement, macro placement, and power grid network (PGN) architecture are defined. The goal is to minimize total die area, prevent routing congestion, reduce total wire length, and optimize timing paths before standard cell placement. Proper macro placement with adequate halo spacing prevents macro blockage and thermal hotspots.',
+    linkText: 'Explore Floorplanning & PnR Flow in Platform Flow Graph →',
+    linkUrl: '/platform-flow'
+  },
+  {
+    id: 'faq-2',
+    question: 'What is the difference between Global Placement and Detailed Placement?',
+    answer: 'Global Placement positions standard cells across the die area to minimize overall wirelength and path delays without strictly enforcing non-overlapping cell grid boundaries. Detailed Placement follows Global Placement and legalizes cell positions by placing them strictly into standard cell rows, eliminating cell overlaps while minimizing total displacement and wirelength penalty.',
+    linkText: 'Learn more about Placement in Module 6 (Logical Synthesis & Netlists) →',
+    linkUrl: '/modules/6'
+  },
+  {
+    id: 'faq-3',
+    question: 'Why is Clock Tree Synthesis (CTS) necessary, and what is the difference between clock latency and clock skew?',
+    answer: 'CTS builds a balanced buffer tree network from the clock source (PLL) to all sequential flip-flop clock pins to ensure synchronous timing across the chip. Clock Latency is the total insertion delay from clock source to a specific flip-flop pin. Clock Skew is the maximum difference in clock arrival times between two communicating flip-flops. Minimizing clock skew prevents setup and hold timing violations.',
+    linkText: 'Review Digital Logic & Flip-Flop Concepts in Module 3 →',
+    linkUrl: '/modules/3'
+  },
+  {
+    id: 'faq-4',
+    question: 'How do you resolve a Setup timing violation versus a Hold timing violation?',
+    answer: 'Setup timing violations occur when data arrives too late at the capture flip-flop before the active clock edge. Setup issues are fixed by swapping to high-speed low-VT (LVT) cells, upsizing buffers, reducing routing wirelength, or restructuring logic. Hold timing violations occur when data changes too quickly before the hold window closes. Hold violations are independent of clock period and are fixed by inserting delay buffers or delay cells along the data path.',
+    linkText: 'Study CMOS Switching & Timing in Module 2 →',
+    linkUrl: '/modules/2'
+  },
+  {
+    id: 'faq-5',
+    question: 'What are the key stages of Routing in ASIC physical design?',
+    answer: 'Routing connects standard cell pins and macro terminals using metal layers according to the netlist. It consists of Global Routing (which assigns nets to 3D global routing grids/tracks to estimate congestion) and Detailed Routing (which places actual metal tracks and vias while adhering to foundry Design Rule Manual DRM rules).',
+    linkText: 'Understand ASIC Physical Design Stages in Platform Flow →',
+    linkUrl: '/platform-flow'
+  },
+  {
+    id: 'faq-6',
+    question: 'What is the difference between Design Rule Checking (DRC) and Layout Versus Schematic (LVS)?',
+    answer: 'DRC verifies that physical layout metal widths, spacing, enclosure, and via dimensions comply with foundry manufacturing rules to prevent open circuits or short circuits. LVS compares the extracted physical layout netlist against the original schematic/gate-level netlist to confirm structural and electrical equivalence.',
+    linkText: 'Review Electronics Fundamentals in Module 1 →',
+    linkUrl: '/modules/1'
+  },
+  {
+    id: 'faq-7',
+    question: 'What happens during Logic Synthesis when converting Verilog RTL to a Gate-Level Netlist?',
+    answer: 'Logic Synthesis reads high-level Verilog/VHDL RTL, parses language constructs into generic boolean logic (GTECH), applies timing constraints (SDC), and maps the design onto target technology standard cells from target technology libraries. It optimizes for area, power, and delay while generating a gate-level netlist and SDC constraints for PnR.',
+    linkText: 'Master Logic Synthesis in Module 6 →',
+    linkUrl: '/modules/6'
+  },
+  {
+    id: 'faq-8',
+    question: 'Why is TCL scripting essential for physical design engineers working with Innovus and ICC2?',
+    answer: 'Tool Command Language (TCL) is the standard scripting language across electronic design automation (EDA) tools like Synopsys ICC2, Cadence Innovus, PrimeTime, and Design Compiler. Physical design engineers use TCL to automate design imports, customize placement and routing commands, extract custom timing reports, query netlist attributes via dbGet or get_attribute, and execute unattended batch flows.',
+    linkText: 'Learn Linux & Basic TCL Scripting in Module 4 →',
+    linkUrl: '/modules/4'
+  },
+  {
+    id: 'faq-9',
+    question: 'What is Scan Insertion and why is it performed during front-end/physical design?',
+    answer: 'Scan Insertion converts standard sequential flip-flops into scan flip-flops connected into serial shift chains. This allows Automatic Test Pattern Generation (ATPG) tools to shift test vectors into internal registers during post-silicon manufacturing test, detecting stuck-at faults and transition faults before chip packaging.',
+    linkText: 'Study Design For Testability (DFT) in Module 7 →',
+    linkUrl: '/modules/7'
+  },
+  {
+    id: 'faq-10',
+    question: 'What is the Short-Channel Effect (SCE) in sub-micron MOSFETs and how does it impact physical design?',
+    answer: 'As MOSFET channel length shrinks in sub-nanometer nodes, the drain voltage exerts greater control over the channel, causing threshold voltage roll-off, Drain-Induced Barrier Lowering (DIBL), subthreshold leakage power increase, and mobility degradation. Physical design mitigates SCE through multi-VT cell selection, FinFET/GAA architecture library adoption, and careful power domain management.',
+    linkText: 'Explore MOSFET & CMOS Theory in Module 2 →',
+    linkUrl: '/modules/2'
+  }
+];
+
 const Interview = () => {
   const { hasPremiumAccess } = useAuth() || {};
   const courseValid = hasPremiumAccess;
+
+  // Track expanded accordion indices (first item open by default)
+  const [openItems, setOpenItems] = React.useState({ 0: true });
+
+  const toggleItem = (index) => {
+    setOpenItems((prev) => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": sampleFaqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
 
   return (
     <div className={styles.container}>
@@ -58,6 +155,7 @@ const Interview = () => {
                 }
               ]
             }}
+            faq={faqSchema}
           />
         }
       />
@@ -102,6 +200,50 @@ const Interview = () => {
           );
         })}
       </div>
+
+      {/* Free Sample Interview Questions Accordion Section */}
+      <section className={styles.faqSection}>
+        <div className={styles.faqHeader}>
+          <h2 className={styles.faqTitle}>Free VLSI Physical Design Interview Questions</h2>
+          <p className={styles.faqSubtitle}>
+            Test your knowledge with these sample core ASIC physical design, STA, CTS, and physical verification interview questions. The full library of 500+ company-specific interview questions is available in the course modules above.
+          </p>
+        </div>
+
+        <div className={styles.faqList}>
+          {sampleFaqs.map((faq, index) => {
+            const isOpen = !!openItems[index];
+            return (
+              <div key={faq.id} className={styles.faqItem}>
+                <button
+                  type="button"
+                  className={styles.faqQuestionBtn}
+                  onClick={() => toggleItem(index)}
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-ans-${faq.id}`}
+                >
+                  <h3 className={styles.faqQuestionText}>{faq.question}</h3>
+                  <span className={`${styles.faqChevron} ${isOpen ? styles.faqChevronOpen : ''}`}>
+                    ▼
+                  </span>
+                </button>
+                {isOpen && (
+                  <div id={`faq-ans-${faq.id}`} className={styles.faqAnswer}>
+                    <p>{faq.answer}</p>
+                    {faq.linkUrl && (
+                      <Link to={faq.linkUrl} className={styles.faqLink}>
+                        {faq.linkText}
+                      </Link>
+                    )}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <AdUnit slotId="slot_interview_bottom" />
     </div>
   );
 };

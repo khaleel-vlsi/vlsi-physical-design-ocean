@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './StudyMaterials.module.css';
 import SEO from '../components/SEO';
 import StructuredData from '../components/StructuredData';
+import AdUnit from '../components/AdUnit';
 import { useAuth } from '../context/AuthContext';
 
 const Icon = ({ path }) => (
@@ -112,6 +113,8 @@ const StudyMaterials = () => {
           );
         })}
       </div>
+
+      <AdUnit slotId="slot_studymaterials_bottom" />
     </div>
   );
 };

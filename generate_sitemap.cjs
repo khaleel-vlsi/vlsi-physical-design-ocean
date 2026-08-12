@@ -62,7 +62,7 @@ const generateSitemap = () => {
     { path: '/privacy', priority: '0.5', freq: 'monthly' },
     { path: '/modules', priority: '0.9', freq: 'daily' },
     { path: '/interview', priority: '0.9', freq: 'weekly' },
-    { path: '/test-video-modules', priority: '1.0', freq: 'daily' },
+    { path: '/test-videos', priority: '1.0', freq: 'daily' },
     { path: '/test-quiz-modules', priority: '1.0', freq: 'daily' },
     { path: '/study-materials', priority: '0.9', freq: 'weekly' },
     { path: '/platform-flow', priority: '0.9', freq: 'weekly' },
@@ -129,7 +129,13 @@ ${images.map(img => `    <image:image>
   </url>`;
 }).join('\n')}
 ${videoIds.map(id => `  <url>
-    <loc>${domain}/test-video-modules/${id}</loc>
+    <loc>${domain}/test-video-playlist/${id}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>`).join('\n')}
+${videoIds.map(id => `  <url>
+    <loc>${domain}/test-quiz-playlist/${id}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>

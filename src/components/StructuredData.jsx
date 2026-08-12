@@ -5,7 +5,7 @@ import React from 'react';
  * It includes Organization, Course, and FAQ schema as needed.
  * Props determine which schemas are emitted.
  */
-const StructuredData = ({ organization, course, faq, breadcrumb }) => {
+const StructuredData = ({ organization, website, course, faq, breadcrumb }) => {
   const scripts = [];
   if (organization) {
     scripts.push(
@@ -13,6 +13,15 @@ const StructuredData = ({ organization, course, faq, breadcrumb }) => {
         key="org"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }}
+      />
+    );
+  }
+  if (website) {
+    scripts.push(
+      <script
+        key="website"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }}
       />
     );
   }

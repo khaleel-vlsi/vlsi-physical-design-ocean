@@ -102,8 +102,8 @@ const Home = () => {
       )}
       <div className={styles.homeContainer}>
       <SEO 
-        title="Home" 
-        description="Master VLSI Physical Design from scratch. Structured learning modules for ASIC design, RTL coding, synthesis, and physical verification."
+        title="VLSI Physical Design Course | PnR, STA, Synthesis & ASIC Video Modules" 
+        description="Master VLSI Physical Design with structured learning in PnR, STA, Synthesis, CTS, Signoff, ICC2, Innovus, interview preparation and practical ASIC workflows."
         url="/"
         keywords={[
           "vlsi physical design", "asic design flow", "vlsi physical design topics for beginners",
@@ -125,6 +125,12 @@ const Home = () => {
               "logo": "https://vlsiphysicaldesignocean.com/favicon.svg",
               "description": "A structured learning platform for ASIC & VLSI design from basics to advanced physical design."
             }}
+            website={{
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "VLSI Physical Design Ocean",
+              "url": "https://vlsiphysicaldesignocean.com"
+            }}
             breadcrumb={{
               "@context": "https://schema.org",
               "@type": "BreadcrumbList",
@@ -143,9 +149,9 @@ const Home = () => {
 
       {/* ── Hero ─────────────────────────────────────────────────────── */}
       <header className={styles.heroHeader}>
-        <h1>VLSI Physical Design Ocean – Complete PnR Video Modules & ASIC Guide</h1>
+        <h1>Master VLSI Physical Design</h1>
         <p>
-          Complete learning roadmap from basics to advanced Physical Design. All video recorded classes and practical playlists are fully available for PnR (Place & Route), STA, Synthesis, CTS, and Signoff workflows.
+          VLSI Physical Design Ocean is a structured educational platform built for engineering students, freshers, and physical design engineers. Master the complete ASIC RTL-to-GDSII physical design flow through 59+ comprehensive learning modules, recorded video lectures, topic-wise practice quizzes, and industrial EDA tool workflows (ICC2, Innovus, PrimeTime, Tempus). Access free preview resources for Modules 1–7 or unlock full premium learning for advanced PnR execution, CTS, STA signoff, TCL automation, and physical design interview preparation.
         </p>
 
         <div className={styles.coverBannerWrapper}>

@@ -95,9 +95,7 @@ const Module1Content = () => {
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>A </span><span class="c6">material</span><span class="c2"> is anything that exists physically in this world. If you observe carefully:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Objects around us are materials</span></li><li class="c0 li-bullet-0"><span class="c2">The human body is also made of material</span></li><li class="c0 li-bullet-0"><span class="c2">Solid, liquid, and gaseous substances are all materials</span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Every object we see is made using some material. These materials are not continuous; they are made up of </span><span class="c6">molecules</span><span class="c2">.</span>` }} />
-          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `The` }} />
-          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `physical state` }} />
-          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `of a material—solid, liquid, or gas—depends on how its molecules are arranged and how strongly they are bonded.` }} />
+          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>The physical state of a material—solid, liquid, or gas—depends on how its molecules are arranged and how strongly they are bonded.</span>` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/module1/image_8.png" alt="Molecular arrangement in solid, liquid, and gaseous materials" className={styles.contentImage} />
           </div>

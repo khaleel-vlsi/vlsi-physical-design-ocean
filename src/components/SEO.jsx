@@ -25,7 +25,9 @@ const SEO = ({ title, description, url, isArticle, keywords, structuredData, noi
     "floorplanning in vlsi", "routing in vlsi", "drc lvs physical verification", "vlsi video courses"
   ];
 
-  const seoTitle = title ? `${title} | VLSI Physical Design Ocean` : defaultTitle;
+  const seoTitle = title 
+    ? (title.includes('VLSI Physical Design Ocean') ? title : `${title} | VLSI Physical Design Ocean`) 
+    : defaultTitle;
   const seoDescription = description || defaultDescription;
   const seoImage = image ? (image.startsWith('http') ? image : `${domain}${image}`) : defaultImage;
   

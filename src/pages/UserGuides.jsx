@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './StudyMaterials.module.css'; // Reusing the premium grid styling
 import SEO from '../components/SEO';
 import StructuredData from '../components/StructuredData';
+import AdUnit from '../components/AdUnit';
 import { useAuth } from '../context/AuthContext';
 
 const Icon = ({ path }) => (
@@ -105,6 +106,8 @@ const UserGuides = () => {
           );
         })}
       </div>
+
+      <AdUnit slotId="slot_userguides_bottom" />
     </div>
   );
 };

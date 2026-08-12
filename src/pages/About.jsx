@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './About.module.css';
 import SEO from '../components/SEO';
 import StructuredData from '../components/StructuredData.jsx';
+import AdUnit from '../components/AdUnit.jsx';
 
 const About = () => {
   return (
@@ -136,6 +137,8 @@ const About = () => {
           Explore Modules
         </Link>
       </section>
+
+      <AdUnit slotId="slot_about_bottom" />
 
     </div>
   );

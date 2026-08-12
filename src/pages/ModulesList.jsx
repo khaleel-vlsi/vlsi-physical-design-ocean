@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './ModulesList.module.css';
 import SEO from '../components/SEO';
 import StructuredData from '../components/StructuredData';
+import AdUnit from '../components/AdUnit';
 import { useAuth } from '../context/AuthContext';
 
 const modulesData = [
@@ -74,8 +75,8 @@ const ModulesList = () => {
   return (
     <div className={styles.modulesPage}>
       <SEO 
-        title="Learning Modules" 
-        description="Explore 59 comprehensive modules covering the entire VLSI Physical Design flow, from Electronics Fundamentals to Physical Verification & Signoff."
+        title="59+ VLSI Physical Design Modules | ASIC PnR, STA & Synthesis Curriculum" 
+        description="Explore 59+ structured VLSI Physical Design learning modules covering silicon fundamentals, RTL synthesis, floorplanning, power planning, placement, CTS, detailed routing, STA, and signoff."
         url="/modules"
         structuredData = {
           <StructuredData 
@@ -101,8 +102,8 @@ const ModulesList = () => {
         }
       />
       <header className={styles.moduleHeader}>
-        <h1>VLSI Physical Design Ocean Modules</h1>
-        <p>Master the intricacies of chip design with our comprehensive, structured learning path. From silicon fundamentals to final sign-off.</p>
+        <h1>59+ VLSI Physical Design Curriculum Modules</h1>
+        <p>Explore our complete 59-module ASIC physical design curriculum. From basic semiconductor physics and Verilog RTL coding to advanced Place & Route (PnR), Clock Tree Synthesis (CTS), Static Timing Analysis (STA), physical verification, and industrial EDA tool user guides.</p>
         <div className={styles.statsRow}>
           <div className={styles.statPill}>
             <span className={styles.statIcon}>📚</span>
@@ -149,6 +150,8 @@ const ModulesList = () => {
           <button className={styles.certButton}>View Certification Path</button>
         </div>
       </div>
+
+      <AdUnit slotId="slot_modules_list_bottom" />
     </div>
   );
 };

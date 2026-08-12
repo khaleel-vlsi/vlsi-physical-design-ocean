@@ -3,14 +3,15 @@ import styles from './Contact.module.css';
 import { supabase } from '../services/supabase';
 import SEO from '../components/SEO';
 import StructuredData from '../components/StructuredData';
+import AdUnit from '../components/AdUnit';
 
 const Contact = () => {
   const [status, setStatus] = useState(''); // '', 'sending', 'success', 'error'
   
   // TO CUSTOMIZE: Replace these with your EmailJS keys from emailjs.com
-  const EMAILJS_SERVICE_ID = "service_vlsiocean"; 
-  const EMAILJS_TEMPLATE_ID = "template_vlsiocean";
-  const EMAILJS_PUBLIC_KEY = "your_public_key_here";
+  const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_vlsiocean"; 
+  const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_vlsiocean";
+  const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "your_public_key_here";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -173,16 +174,16 @@ const Contact = () => {
           
           <form onSubmit={handleSubmit}>
             <div className={styles.formGroup}>
-              <label>Full Name</label>
-              <input type="text" name="name" placeholder="John Doe" className={styles.formInput} required />
+              <label htmlFor="contact-name">Full Name</label>
+              <input id="contact-name" type="text" name="name" placeholder="John Doe" className={styles.formInput} required />
             </div>
             <div className={styles.formGroup}>
-              <label>Email Address</label>
-              <input type="email" name="email" placeholder="john@example.com" className={styles.formInput} required />
+              <label htmlFor="contact-email">Email Address</label>
+              <input id="contact-email" type="email" name="email" placeholder="john@example.com" className={styles.formInput} required />
             </div>
             <div className={styles.formGroup}>
-              <label>Message</label>
-              <textarea name="message" placeholder="Your query or feedback..." className={styles.formTextarea} required></textarea>
+              <label htmlFor="contact-message">Message</label>
+              <textarea id="contact-message" name="message" placeholder="Your query or feedback..." className={styles.formTextarea} required></textarea>
             </div>
             
             {status === 'success' && (
@@ -214,6 +215,8 @@ const Contact = () => {
           <p>Precision in every micron. Our physical design experts bridge the gap between architectural logic and physical reality.</p>
         </div>
       </section>
+
+      <AdUnit slotId="slot_contact_bottom" />
 
     </div>
   );

@@ -248,3 +248,128 @@
   .mainTitle { font-size: 36px; }
   .container { padding: 40px 20px; }
 }
+
+/* FAQ Accordion Section */
+.faqSection {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 70px;
+  background: rgba(11, 18, 32, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 45px 35px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.faqHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faqTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  background: linear-gradient(to right, #22D3EE, #3B82F6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.faqSubtitle {
+  color: #94a3b8;
+  font-size: 1rem;
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faqItem {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.faqItem:hover {
+  border-color: rgba(34, 211, 238, 0.3);
+}
+
+.faqQuestionBtn {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  color: #f8fafc;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s ease;
+}
+
+.faqQuestionBtn:hover {
+  background: rgba(34, 211, 238, 0.03);
+}
+
+.faqQuestionBtn:focus-visible {
+  outline: 2px solid #22D3EE;
+  outline-offset: -2px;
+}
+
+.faqQuestionText {
+  flex-grow: 1;
+  padding-right: 16px;
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  color: #f1f5f9;
+}
+
+.faqChevron {
+  color: #22D3EE;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.faqChevronOpen {
+  transform: rotate(180deg);
+}
+
+.faqAnswer {
+  padding: 0 24px 22px 24px;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.faqAnswer p {
+  margin: 14px 0 0 0;
+}
+
+.faqLink {
+  display: inline-block;
+  margin-top: 10px;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.faqLink:hover {
+  color: #a855f7;
+  text-decoration: underline;
+}

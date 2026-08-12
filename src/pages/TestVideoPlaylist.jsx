@@ -9,6 +9,7 @@ import styles from './TestVideoPlaylist.module.css';
 
 import SEO from '../components/SEO';
 import StructuredData from '../components/StructuredData';
+import AdUnit from '../components/AdUnit';
 
 const TestVideoPlaylist = () => {
   const { id } = useParams();
@@ -168,6 +169,8 @@ const TestVideoPlaylist = () => {
           </div>
         </div>
       </div>
+
+      <AdUnit slotId="slot_test_videoplaylist_outside" />
 
       <SubscriptionModal 
         isOpen={modalOpen}

@@ -3,8 +3,30 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { supabase } from '../services/supabase';
 import { plansConfig, getRegionKey } from '../data/plansConfig';
+import IndependenceBanner from '../components/IndependenceBanner';
 import styles from './Dashboard.module.css';
-import homeStyles from './Home.module.css';
+
+const loadRazorpaySDK = () => {
+  return new Promise((resolve) => {
+    if (typeof window.Razorpay === 'function') {
+      resolve(true);
+      return;
+    }
+    const existing = document.getElementById('razorpay-script');
+    if (existing) {
+      existing.addEventListener('load', () => resolve(true), { once: true });
+      existing.addEventListener('error', () => resolve(false), { once: true });
+      setTimeout(() => resolve(typeof window.Razorpay === 'function'), 1500);
+      return;
+    }
+    const script = document.createElement('script');
+    script.id = 'razorpay-script';
+    script.src = 'https://checkout.razorpay.com/v1/checkout.js';
+    script.onload = () => resolve(true);
+    script.onerror = () => resolve(false);
+    document.body.appendChild(script);
+  });
+};
 
 const Dashboard = () => {
   const { user, profile } = useAuth();
@@ -19,25 +41,20 @@ const Dashboard = () => {
   const [hasAcceptedTerms, setHasAcceptedTerms] = React.useState(false);
 
   const handleSubscribeClick = (planId) => {
+    if (!planId) return;
     setPendingPlanId(planId);
     setHasAcceptedTerms(false);
     setShowTermsModal(true);
   };
 
   const handleConfirmPayment = () => {
-    if (!hasAcceptedTerms) return;
+    if (!hasAcceptedTerms || !pendingPlanId) return;
     setShowTermsModal(false);
     startCheckout(pendingPlanId);
   };
 
   useEffect(() => {
-    // Add Razorpay script to body if not present
-    if (!document.getElementById('razorpay-script')) {
-      const script = document.createElement('script');
-      script.id = 'razorpay-script';
-      script.src = 'https://checkout.razorpay.com/v1/checkout.js';
-      document.body.appendChild(script);
-    }
+    loadRazorpaySDK();
   }, []);
 
   useEffect(() => {
@@ -52,19 +69,22 @@ const Dashboard = () => {
     setIsCheckingOut(true);
     console.log("startCheckout clicked for plan:", plan);
 
-
     try {
-      // 1) Refresh session to get a fresh HS256-compatible token
-      //    (fixes "Unsupported JWT algorithm ES256" on the edge function)
-      //    Wrapped in try-catch so it never crashes the checkout flow
+      // 1. Ensure Razorpay SDK is loaded
+      const isSdkReady = await loadRazorpaySDK();
+      if (!isSdkReady || typeof window.Razorpay !== 'function') {
+        alert("Payment gateway SDK failed to load. Please check your internet connection and try again.");
+        setIsCheckingOut(false);
+        return;
+      }
+
+      // 2. Refresh session token
       try {
         await supabase.auth.refreshSession();
       } catch (refreshErr) {
         console.log("refreshSession error (non-fatal):", refreshErr);
-        // continue — we will still try getSession below
       }
 
-      // 2) Get the fresh session after refresh
       const { data, error } = await supabase.auth.getSession();
       if (error) throw new Error("Session error: " + error.message);
 
@@ -73,18 +93,16 @@ const Dashboard = () => {
 
       const ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlnY3ZjeW95bm15cnBsd3JwaXNkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE0NDg4NzUsImV4cCI6MjA4NzAyNDg3NX0.pfeo4p42y53fCaA49oe1yXXFU22BvTEotzlZAFhYzqU";
       const fnUrl = "https://ygcvcyoynmyrplwrpisd.supabase.co/functions/v1/create-razorpay-order";
+      const verifyFnUrl = "https://ygcvcyoynmyrplwrpisd.supabase.co/functions/v1/verify-razorpay-payment";
       
-      // Map frontend plan ID to legacy backend plan ID for 1-month subscription
       const backendPlanId = plan === 'PLAN_1M_INR' ? 'PLAN_499' : plan;
 
       const res = await fetch(fnUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          // Use anon key as Bearer — it's HS256, so the gateway accepts it ✅
           "Authorization": "Bearer " + ANON_KEY,
           "apikey": ANON_KEY,
-          // Pass user's ES256 token separately — function will verify it via getUser()
           "x-user-token": session.access_token,
         },
         body: JSON.stringify({ plan: backendPlanId })
@@ -95,6 +113,7 @@ const Dashboard = () => {
       if (!res.ok) {
         console.error("Order create failed:", dataJson);
         alert("Order create failed: " + (dataJson?.error || dataJson?.message || res.status));
+        setIsCheckingOut(false);
         return;
       }
 
@@ -106,42 +125,74 @@ const Dashboard = () => {
         description: backendPlanId === "PLAN_499" ? "Paid Modules Access (1 Month)" : "Modules + Placement",
         order_id: dataJson.order_id,
         prefill: { email: dataJson.user_email || "" },
-        handler: async function () {
-          alert("Payment successful ✅\nUpdating your dashboard...");
+        handler: async function (response) {
+          alert("Payment successful ✅\nVerifying your payment & extending validity...");
           setIsPolling(true);
           
+          try {
+            const verifyRes = await fetch(verifyFnUrl, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer " + ANON_KEY,
+                "apikey": ANON_KEY,
+                "x-user-token": session.access_token,
+              },
+              body: JSON.stringify({
+                razorpay_payment_id: response?.razorpay_payment_id,
+                razorpay_order_id: response?.razorpay_order_id || dataJson.order_id,
+                razorpay_signature: response?.razorpay_signature
+              })
+            });
+
+            const verifyData = await verifyRes.json().catch(() => ({}));
+            if (verifyRes.ok && verifyData.profile) {
+              setCurrentProfile(verifyData.profile);
+              setIsPolling(false);
+              alert("🎉 Subscription activated / extended successfully!\nYour premium access is active until " + new Date(verifyData.profile.course_expiry).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }));
+              return;
+            }
+          } catch (vErr) {
+            console.error("Verification Edge Function call error:", vErr);
+          }
+
+          // Fallback Polling if Verification Edge Function is delayed
           let attempts = 0;
           const maxAttempts = 10;
-          const delay = (ms) => new Promise(res => setTimeout(res, ms));
+          const delay = (ms) => new Promise(r => setTimeout(r, ms));
 
           while (attempts < maxAttempts) {
-            await delay(3000);
+            await delay(2000);
             attempts++;
-            const { data, error } = await supabase
+            const { data: updatedProf } = await supabase
               .from('profiles')
               .select('*')
-              .eq('id', user?.id)
+              .eq('id', user.id)
               .single();
 
-            if (!error && data) {
-              setCurrentProfile(data);
-              
-              const courseValid = !!data.course_active;
-
-              if (courseValid) break;
+            if (updatedProf && updatedProf.course_active) {
+              setCurrentProfile(updatedProf);
+              setIsPolling(false);
+              alert("🎉 Subscription activated / extended successfully!\nYour premium access is active until " + new Date(updatedProf.course_expiry).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }));
+              return;
             }
           }
           setIsPolling(false);
+          window.location.reload();
+        },
+        modal: {
+          ondismiss: function () {
+            setIsCheckingOut(false);
+          }
         }
       };
 
       const rzp = new window.Razorpay(options);
       rzp.open();
 
-    } catch (e) {
-      console.log(e);
-      alert("Checkout error: " + (e?.message || e));
-    } finally {
+    } catch (err) {
+      console.error("Checkout error:", err);
+      alert("Unable to start payment checkout: " + (err.message || err));
       setIsCheckingOut(false);
     }
   };
@@ -150,11 +201,37 @@ const Dashboard = () => {
 
   const displayProfile = currentProfile || profile;
   const courseValid = !!displayProfile.course_active;
-  const placementValid = !!displayProfile.placement_active;
-  const isCourseExpired = displayProfile.course_expiry && new Date(displayProfile.course_expiry).getTime() < Date.now();
   const fmtDate = (ts) => ts ? new Date(ts).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) : 'Lifetime Access';
+
+  // Helper to calculate expected new expiry date for active subscribers
+  const getExpectedNewExpiry = (planId) => {
+    const daysMap = {
+      'PLAN_1M_INR': 30,
+      'PLAN_2M_INR': 60,
+      'PLAN_3M_INR': 90,
+      'PLAN_6M_INR': 180,
+      'PLAN_12M_INR': 365
+    };
+    const daysToAdd = daysMap[planId] || 30;
+    
+    let baseTime = Date.now();
+    if (courseValid && displayProfile.course_expiry) {
+      const currentExpiryMs = new Date(displayProfile.course_expiry).getTime();
+      if (currentExpiryMs > Date.now()) {
+        baseTime = currentExpiryMs;
+      }
+    }
+    const newExpiryMs = baseTime + daysToAdd * 24 * 60 * 60 * 1000;
+    return {
+      daysAdded: daysToAdd,
+      formattedNewDate: new Date(newExpiryMs).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }),
+      formattedCurrentDate: courseValid && displayProfile.course_expiry ? fmtDate(displayProfile.course_expiry) : 'Today'
+    };
+  };
+
   return (
     <>
+      <IndependenceBanner />
       <div className={styles.dashWrapper}>
         <div className={styles.topRow}>
           <div className={`${styles.card} ${styles.profileCard}`}>
@@ -251,98 +328,165 @@ const Dashboard = () => {
           </div>
         </div>
 
-        {/* ── Row 2: Subscription Plans — full width, 3-per-row on desktop ── */}
-        {!courseValid && (
-          <div className={styles.plansSection}>
-            <div className={styles.plansSectionHeader}>
-              <h2>🚀 Choose Your Plan</h2>
-              <p className={styles.muted}>Select a subscription to unlock all paid modules instantly after payment.</p>
-            </div>
-            <div className={`${styles.plansGrid} ${activeConfig.plans.length === 5 ? styles.fivePlans : ''}`}>
-              {activeConfig.plans.map((p) => (
+        {/* ── Subscription / Plan Extension Section ── */}
+        <div className={styles.plansSection}>
+          <div className={styles.plansSectionHeader}>
+            {courseValid ? (
+              <div style={{
+                background: 'linear-gradient(135deg, rgba(255, 153, 51, 0.2) 0%, rgba(19, 136, 8, 0.2) 100%)',
+                border: '1px solid rgba(255, 215, 0, 0.4)',
+                borderRadius: '12px',
+                padding: '16px 20px',
+                marginBottom: '16px'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                  <span style={{ fontSize: '1.4rem' }}>🇮🇳</span>
+                  <h2 style={{ color: '#ffd700', margin: 0, fontSize: '1.2rem', fontWeight: '800' }}>
+                    INDEPENDENCE DAY UPGRADE / EXTENSION OFFER (25% OFF)
+                  </h2>
+                  <span style={{ background: '#ffd700', color: '#0f172a', fontWeight: '900', padding: '2px 8px', borderRadius: '12px', fontSize: '0.75rem' }}>
+                    25% OFF LIVE
+                  </span>
+                </div>
+                <p style={{ color: '#ffffff', margin: '8px 0 0', fontSize: '0.88rem', lineHeight: '1.5' }}>
+                  🎉 <strong>Active Subscriber Special:</strong> Extend or upgrade your subscription now! Your remaining subscription days will <strong>NOT</strong> be lost — the selected plan duration will be added to your current valid expiry date (<strong>{fmtDate(displayProfile.course_expiry)}</strong>).
+                </p>
+              </div>
+            ) : (
+              <>
+                <h2>🚀 Choose Your Plan (25% OFF INDEPENDENCE DAY OFFER)</h2>
+                <p className={styles.muted}>Select a subscription to unlock all paid modules instantly after payment.</p>
+              </>
+            )}
+          </div>
+
+          <div className={styles.dbPlansContainer}>
+            {activeConfig.plans.map((p) => {
+              const preview = getExpectedNewExpiry(p.id);
+              return (
                 <div
                   key={p.id}
-                  className={`${homeStyles.planCard} ${homeStyles[p.theme]}`}
-                  style={{ display: 'flex', flexDirection: 'column' }}
+                  className={styles.dbPlanCard}
+                  style={{
+                    flex: '1 1 220px',
+                    minWidth: '220px',
+                    maxWidth: '320px',
+                    background: 'rgba(15, 23, 42, 0.85)',
+                    border: courseValid ? '1px solid rgba(250, 204, 21, 0.5)' : '1px solid rgba(255, 255, 255, 0.15)'
+                  }}
                 >
                   {p.badge && (
-                    <div className={homeStyles.badgeWrapper}>
-                      <span className={homeStyles.badgeText}>{p.badge}</span>
-                    </div>
+                    <div className={styles.dbPlanBadge}>{p.badge}</div>
                   )}
-                  <h3 className={homeStyles.planDuration}>{p.duration}</h3>
-                  <div className={homeStyles.priceRow}>
+                  <h3 className={styles.dbPlanDuration}>{p.duration}</h3>
+                  <div className={styles.dbPlanPriceRow}>
                     {p.originalPrice && (
-                      <span className={homeStyles.originalPrice}>
+                      <span className={styles.dbOriginalPrice}>
                         {activeConfig.currencySymbol}{p.originalPrice}
                       </span>
                     )}
-                    <strong className={homeStyles.planPrice}>
+                    <strong className={styles.dbPlanPrice}>
                       {activeConfig.currencySymbol}{p.price}
                     </strong>
                   </div>
-                  {p.savings && <div className={homeStyles.savingsPill}>{p.savings}</div>}
-                  {p.subBadge && <div className={homeStyles.subBadge}>{p.subBadge}</div>}
-                  <div className={homeStyles.planFeaturesList}>
+                  {p.savings && <div className={styles.dbSavingsPill}>{p.savings}</div>}
+                  
+                  {courseValid && (
+                    <div style={{
+                      background: 'rgba(250, 204, 21, 0.12)',
+                      border: '1px solid rgba(250, 204, 21, 0.35)',
+                      borderRadius: '6px',
+                      padding: '8px 6px',
+                      margin: '10px 0',
+                      fontSize: '0.78rem',
+                      color: '#fef08a',
+                      textAlign: 'center'
+                    }}>
+                      <div style={{ fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                        🗓️ <strong>NEW EXPIRY PREVIEW:</strong>
+                      </div>
+                      <div style={{ fontSize: '0.9rem', fontWeight: '800', color: '#ffffff', marginTop: '2px' }}>
+                        {preview.formattedNewDate}
+                      </div>
+                      <div style={{ fontSize: '0.72rem', color: '#ffd700', marginTop: '2px' }}>
+                        (+{preview.daysAdded} Days Added)
+                      </div>
+                    </div>
+                  )}
+
+                  <div className={styles.dbPlanFeaturesList}>
                     <ul>
                       {p.features.map((f, i) => (
                         <li key={i}>
-                          <span className={homeStyles.checkIcon}>✔</span> {f}
+                          <span className={styles.dbCheckIcon}>✔</span> {f}
                         </li>
                       ))}
                     </ul>
                   </div>
-                  <div className={homeStyles.planFooter}>
-                    <div className={homeStyles.validityLabel}>
+
+                  <div className={styles.dbPlanFooter}>
+                    <div className={styles.dbValidityLabel}>
                       <span>📅 {p.validityText}</span>
                     </div>
                     <button
                       type="button"
-                      onClick={() => handleSubscribeClick(p.id)}
-                      className={`${homeStyles.subscribeBtn} ${homeStyles[p.theme + 'Btn']}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        handleSubscribeClick(p.id);
+                      }}
+                      className={styles.dbSubscribeBtn}
+                      style={{
+                        background: courseValid ? 'linear-gradient(135deg, #eab308 0%, #ca8a04 100%)' : '#10b981',
+                        color: '#0f172a',
+                        fontWeight: '900',
+                        fontSize: '0.82rem',
+                        padding: '12px',
+                        cursor: 'pointer'
+                      }}
                       disabled={isCheckingOut}
                     >
-                      {isCheckingOut ? '⏳...' : 'SUBSCRIBE NOW'}
+                      {isCheckingOut ? '⏳ processing...' : (courseValid ? '⚡ EXTEND / UPGRADE PLAN' : '🛒 SUBSCRIBE NOW')}
                     </button>
                   </div>
                 </div>
-              ))}
-            </div>
+              );
+            })}
           </div>
-        )}
+        </div>
 
-        {/* ── Row 3: Platform Rules — full width, 3-column grid ── */}
+        {/* ── Platform Rules — full width ── */}
         <div className={`${styles.card} ${styles.rulesCard}`}>
           <div className={styles.rulesGrid}>
             <div>
               <h2>📜 Platform Rules &amp; Exclusions</h2>
-              <ul className={styles.miniList}>
-                <li><b>Video Classes:</b> All video recorded classes will be available starting from <strong>31st July 2026</strong>.</li>
-                <li><b>Future Additions:</b> Quiz tests, resume builder, and certification are future additions and not part of the present subscription plans.</li>
-                <li><b>Paid Modules:</b> Access validity is based on your chosen subscription plan duration.</li>
+              <ul className={styles.rulesList}>
+                <li>Access is provided for learning purposes only.</li>
+                <li>Content sharing or recording is strictly prohibited.</li>
+                <li>Multiple simultaneous logins may trigger security locks.</li>
               </ul>
             </div>
             <div>
-              <h2>⚡ Automation</h2>
-              <div className={styles.muted}>
-                Payment → Razorpay order → Payment success → Razorpay webhook → Supabase updates → Dashboard unlocks automatically.
-                <p className={styles.noteText}>Wait 15-30 seconds after payment for status refresh.</p>
-              </div>
+              <h2>🤝 Support Policy</h2>
+              <ul className={styles.rulesList}>
+                <li>Module-wise doubt support is available via email.</li>
+                <li>Response time: within 24–48 working hours.</li>
+                <li>Live doubt sessions are scheduled periodically.</li>
+              </ul>
             </div>
             <div>
-              <h2>🔧 If Still Locked</h2>
-              <ul className={styles.miniList}>
-                <li>Refresh the page once</li>
-                <li>Logout and login again</li>
-                <li>Contact support if webhook fails</li>
+              <h2>⚡ Terms &amp; Refund Policy</h2>
+              <ul className={styles.rulesList}>
+                <li>All subscriptions are non-refundable once activated.</li>
+                <li>No partial refunds for unused subscription periods.</li>
+                <li>Plan details and features are subject to update.</li>
               </ul>
             </div>
           </div>
         </div>
-
       </div>
 
-      {/* ── Terms & Conditions Modal ── */}
+      {/* Terms & Conditions Modal */}
       {showTermsModal && (
         <div className={styles.modalOverlay}>
           <div className={styles.termsModalContent}>
@@ -357,16 +501,41 @@ const Dashboard = () => {
             </div>
 
             <p className={styles.termsSubTitle}>
-              Please read all the points carefully before purchasing the subscription.
+              Please read all the points carefully before purchasing or extending your subscription.
             </p>
+
+            {courseValid && pendingPlanId && (
+              <div style={{
+                background: 'rgba(16, 185, 129, 0.15)',
+                border: '1px solid rgba(16, 185, 129, 0.4)',
+                borderRadius: '8px',
+                padding: '12px',
+                marginBottom: '16px',
+                color: '#a7f3d0',
+                fontSize: '0.85rem'
+              }}>
+                <div style={{ fontWeight: 'bold', fontSize: '0.95rem', color: '#ffffff' }}>
+                  ✨ PLAN EXTENSION CONFIRMATION
+                </div>
+                <div style={{ marginTop: '4px' }}>
+                  Current Expiry: <strong>{fmtDate(displayProfile.course_expiry)}</strong>
+                </div>
+                <div>
+                  New Expiry After Purchase: <strong style={{ color: '#ffd700', fontSize: '1rem' }}>{getExpectedNewExpiry(pendingPlanId).formattedNewDate}</strong> (+{getExpectedNewExpiry(pendingPlanId).daysAdded} Days)
+                </div>
+                <div style={{ fontSize: '0.78rem', color: '#e2e8f0', marginTop: '4px' }}>
+                  Your remaining subscription days are preserved and added to the new plan duration.
+                </div>
+              </div>
+            )}
 
             <div className={styles.termsScrollBody}>
               <div className={styles.termsPoint}>
-                <h4>1️⃣ COURSE ACCESS</h4>
+                <h4>1️⃣ COURSE ACCESS & EXTENSION</h4>
                 <ul>
                   <li>This is a subscription-based platform.</li>
-                  <li>Access is available only for the duration of the selected plan.</li>
-                  <li>Lifetime access is <strong>NOT</strong> provided.</li>
+                  <li>Access is available for the duration of the selected plan.</li>
+                  <li>For active subscribers, new plan duration is added to your current valid expiry date.</li>
                 </ul>
               </div>
 
@@ -387,114 +556,23 @@ const Dashboard = () => {
               </div>
 
               <div className={styles.termsPoint}>
-                <h4>4️⃣ COURSE CONTENT</h4>
-                <p>Your subscription currently includes the features available on the platform at the time of purchase.</p>
-                <p>The following features are planned for future release and are <strong>NOT</strong> included in the current subscription unless officially launched:</p>
-                <ul>
-                  <li>Quiz Tests</li>
-                  <li>Certification</li>
-                  <li>Resume Builder</li>
-                  <li>Additional future modules</li>
-                </ul>
-                <p>These features will be added gradually.</p>
-              </div>
-
-              <div className={styles.termsPoint}>
-                <h4>5️⃣ FUTURE UPDATES</h4>
-                <ul>
-                  <li>New videos, notes, and study materials may be added periodically.</li>
-                  <li>The update schedule depends on development progress.</li>
-                </ul>
-              </div>
-
-              <div className={styles.termsPoint}>
-                <h4>6️⃣ PAYMENTS</h4>
-                <ul>
-                  <li>All payments are processed only through the official website.</li>
-                  <li>Never make payments to personal accounts unless officially announced.</li>
-                </ul>
-              </div>
-
-              <div className={styles.termsPoint}>
-                <h4>7️⃣ REFUND POLICY</h4>
+                <h4>4️⃣ REFUND POLICY</h4>
                 <ul>
                   <li>All payments are non-refundable.</li>
-                  <li>Refunds will not be provided after subscription activation.</li>
+                  <li>Refunds will not be provided after subscription activation or extension.</li>
                 </ul>
               </div>
 
               <div className={styles.termsPoint}>
-                <h4>8️⃣ ACCOUNT SHARING</h4>
-                <p>Sharing any of the following is strictly prohibited:</p>
-                <ul>
-                  <li>Login credentials</li>
-                  <li>Recorded videos</li>
-                  <li>Study materials &amp; PDFs</li>
-                  <li>TCL Scripts</li>
-                  <li>Website content / downloaded resources</li>
-                  <li>Any premium content</li>
-                </ul>
+                <h4>5️⃣ ACCOUNT SHARING & COPYRIGHT</h4>
+                <p>Sharing credentials or materials is strictly prohibited.</p>
                 <div className={styles.redWarningBox}>
                   <strong>Violation will result in:</strong>
                   <ul>
                     <li>❌ Immediate account termination</li>
                     <li>❌ Permanent subscription cancellation</li>
-                    <li>❌ Access blocked without refund</li>
                   </ul>
                 </div>
-              </div>
-
-              <div className={styles.termsPoint}>
-                <h4>9️⃣ COPYRIGHT</h4>
-                <ul>
-                  <li>All videos, notes, scripts, PDFs, website content, and learning materials are the intellectual property of VLSI Physical Design Ocean.</li>
-                  <li>Unauthorized copying, recording, redistribution, or commercial use is prohibited.</li>
-                </ul>
-              </div>
-
-              <div className={styles.termsPoint}>
-                <h4>🔟 PLACEMENT</h4>
-                <p>We do <strong>NOT</strong> guarantee:</p>
-                <ul>
-                  <li>Placement</li>
-                  <li>Job offers</li>
-                  <li>Referrals</li>
-                  <li>Interviews</li>
-                </ul>
-                <p>Our responsibility is to provide quality industrial-level learning.</p>
-              </div>
-
-              <div className={styles.termsPoint}>
-                <h4>1️⃣1️⃣ STUDENT RESPONSIBILITY</h4>
-                <p>Success depends on your:</p>
-                <ul>
-                  <li>Practice</li>
-                  <li>Dedication</li>
-                  <li>Assignments</li>
-                  <li>Continuous learning</li>
-                </ul>
-              </div>
-
-              <div className={styles.termsPoint}>
-                <h4>1️⃣2️⃣ SUPPORT</h4>
-                <ul>
-                  <li>Technical and course support will be provided according to our support policy.</li>
-                </ul>
-              </div>
-
-              <div className={styles.termsPoint}>
-                <h4>1️⃣3️⃣ ACCEPTANCE</h4>
-                <p>By clicking "I Agree &amp; Continue", I confirm that:</p>
-                <ul>
-                  <li>✅ I have read every point.</li>
-                  <li>✅ I understand this is NOT lifetime access.</li>
-                  <li>✅ I understand tools are NOT provided.</li>
-                  <li>✅ I understand all videos are in English.</li>
-                  <li>✅ I understand future features are not guaranteed immediately.</li>
-                  <li>✅ I understand the refund policy.</li>
-                  <li>✅ I agree not to share any premium content.</li>
-                  <li>✅ I understand my account may be permanently blocked without refund if I violate these terms.</li>
-                </ul>
               </div>
             </div>
 
@@ -530,6 +608,5 @@ const Dashboard = () => {
     </>
   );
 };
-
 
 export default Dashboard;

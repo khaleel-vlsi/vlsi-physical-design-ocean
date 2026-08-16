@@ -297,7 +297,11 @@ export const VIDEO_MODULES = {
     description: 'DRC, LVS, ERC, and final tapeout signoff.',
     isLocked: false,
     sessions: [
-      { id: 'v18_1', title: 'Physical Verification Class -1', youtubeId: 'fvA1fVwq_60', duration: 'Unknown' }
+      { id: 'v18_1', title: 'Physical Verification Class -1', youtubeId: 'fvA1fVwq_60', duration: 'Unknown' },
+      { id: 'v18_2', title: 'Physical Verification Class -2', youtubeId: 'h-WvkoYDOiA', duration: 'Unknown' },
+      { id: 'v18_3', title: 'Physical Verification Class -3', youtubeId: 'K7UppLC3N_Y', duration: 'Unknown' },
+      { id: 'v18_4', title: 'Physical Verification Class -4', youtubeId: 'oMVWunR7iqA', duration: 'Unknown' },
+      { id: 'v18_5', title: 'Physical Verification Class -5', youtubeId: 'JluBHvABwZc', duration: 'Unknown' }
     ]
   }
 };

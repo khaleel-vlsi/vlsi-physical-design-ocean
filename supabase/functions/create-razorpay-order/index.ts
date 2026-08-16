@@ -10,7 +10,8 @@ function corsHeaders(origin = "*") {
     "Access-Control-Allow-Methods": "POST, OPTIONS",
   };
 }
-const PLAN_DETAILS: Record<string, { price: number; currency: string; name: string }> = {
+
+const BASE_PLAN_DETAILS: Record<string, { price: number; currency: string; name: string }> = {
   'PLAN_499': { price: 499, currency: 'INR', name: 'Iron Plan (1 Month)' },
   'PLAN_2M_INR': { price: 799, currency: 'INR', name: 'Copper Plan (2 Months)' },
   'PLAN_3M_INR': { price: 999, currency: 'INR', name: 'Silver Plan (3 Months)' },
@@ -20,6 +21,19 @@ const PLAN_DETAILS: Record<string, { price: number; currency: string; name: stri
   'PLAN_12M_USD': { price: 60, currency: 'USD', name: 'Diamond Plan (12 Months - USD)' },
   'PLAN_1999': { price: 1999, currency: 'INR', name: 'Legacy Diamond Plan (12 Months)' }
 };
+
+// Authoritative 25% OFF Independence Day Offer Prices (14 Aug 12 PM - 16 Aug 8 PM IST)
+const INDEPENDENCE_OFFER_PRICES: Record<string, number> = {
+  'PLAN_499': 374,
+  'PLAN_1M_INR': 374,
+  'PLAN_2M_INR': 599,
+  'PLAN_3M_INR': 749,
+  'PLAN_6M_INR': 1124,
+  'PLAN_12M_INR': 1349,
+};
+
+const OFFER_START_MS = new Date("2026-08-14T10:06:00+05:30").getTime();
+const OFFER_END_MS = new Date("2026-08-16T20:00:00+05:30").getTime();
 
 serve(async (req) => {
   const origin = req.headers.get("origin") ?? "*";
@@ -64,7 +78,7 @@ serve(async (req) => {
 
     // Map PLAN_1M_INR to legacy PLAN_499
     const targetPlan = plan === "PLAN_1M_INR" ? "PLAN_499" : plan;
-    const planConfig = PLAN_DETAILS[targetPlan];
+    const planConfig = BASE_PLAN_DETAILS[targetPlan];
 
     if (!planConfig) {
       return new Response(JSON.stringify({ error: `Invalid plan: ${plan}` }), {
@@ -73,7 +87,16 @@ serve(async (req) => {
       });
     }
 
-    const amountInPaise = planConfig.price * 100;
+    // 🔒 SERVER-SIDE AUTHORITATIVE TIME & PRICE CALCULATION
+    const now = Date.now();
+    const isOfferActive = now >= OFFER_START_MS && now < OFFER_END_MS;
+
+    let finalPrice = planConfig.price;
+    if (isOfferActive && INDEPENDENCE_OFFER_PRICES[targetPlan] !== undefined) {
+      finalPrice = INDEPENDENCE_OFFER_PRICES[targetPlan];
+    }
+
+    const amountInPaise = finalPrice * 100;
 
     // 3. Create Razorpay order
     const authBasic = btoa(`${RZP_KEY_ID}:${RZP_KEY_SECRET}`);
@@ -89,7 +112,9 @@ serve(async (req) => {
         receipt: `receipt_${Date.now()}`,
         notes: {
           plan: targetPlan,
-          user_id: user.id
+          user_id: user.id,
+          offer_applied: isOfferActive ? "INDEPENDENCE_DAY_25_OFF" : "NONE",
+          charged_price: finalPrice
         }
       })
     });
@@ -110,7 +135,8 @@ serve(async (req) => {
         currency: orderData.currency,
         order_id: orderData.id,
         user_email: user.email,
-        plan: targetPlan
+        plan: targetPlan,
+        charged_price: finalPrice
       }),
       {
         headers: { ...corsHeaders(origin), "Content-Type": "application/json" },

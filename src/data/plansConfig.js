@@ -1,4 +1,6 @@
-export const plansConfig = {
+import { isIndependenceOfferActive, INDIA_OFFER_PRICES } from '../utils/independenceOffer.js';
+
+export const basePlansConfig = {
   India: {
     title: "INDIA SUBSCRIPTION PLANS",
     flag: "🇮🇳",
@@ -9,7 +11,7 @@ export const plansConfig = {
       {
         id: 'PLAN_1M_INR',
         duration: '1 Month',
-        price: 499,
+        basePrice: 499,
         originalPrice: 998,
         savings: '🎉 50% OFF',
         validityText: 'Valid for 30 Days',
@@ -24,7 +26,7 @@ export const plansConfig = {
       {
         id: 'PLAN_2M_INR',
         duration: '2 Months',
-        price: 799,
+        basePrice: 799,
         originalPrice: 1598,
         savings: '🎉 50% OFF',
         validityText: 'Valid for 60 Days',
@@ -39,7 +41,7 @@ export const plansConfig = {
       {
         id: 'PLAN_3M_INR',
         duration: '3 Months',
-        price: 999,
+        basePrice: 999,
         originalPrice: 1998,
         savings: '🎉 50% OFF',
         validityText: 'Valid for 90 Days',
@@ -54,7 +56,7 @@ export const plansConfig = {
       {
         id: 'PLAN_6M_INR',
         duration: '6 Months',
-        price: 1499,
+        basePrice: 1499,
         originalPrice: 2998,
         savings: '🎉 50% OFF',
         validityText: 'Valid for 180 Days',
@@ -69,7 +71,7 @@ export const plansConfig = {
       {
         id: 'PLAN_12M_INR',
         duration: '12 Months',
-        price: 1799,
+        basePrice: 1799,
         originalPrice: 3598,
         savings: '🎉 50% OFF',
         badge: '👑 BEST VALUE PLAN',
@@ -97,11 +99,11 @@ export const plansConfig = {
       {
         id: 'PLAN_6M_USD',
         duration: '6 Months',
-        price: 40,
+        basePrice: 40,
         originalPrice: 80,
         savings: '🎉 LIMITED OFFER',
         badge: '🔥 SPECIAL LAUNCH OFFER',
-        subBadge: '⏰ OFFER ENDS 20 JULY 11:59 PM',
+        subBadge: '⏰ SPECIAL PROMO',
         validityText: 'Valid for 180 Days',
         theme: 'gold',
         features: [
@@ -114,11 +116,11 @@ export const plansConfig = {
       {
         id: 'PLAN_12M_USD',
         duration: '12 Months',
-        price: 60,
+        basePrice: 60,
         originalPrice: 120,
         savings: '🎉 LIMITED OFFER',
         badge: '🔥 SPECIAL LAUNCH OFFER',
-        subBadge: '⏰ OFFER ENDS 20 JULY 11:59 PM',
+        subBadge: '⏰ SPECIAL PROMO',
         validityText: 'Valid for 365 Days',
         theme: 'diamond',
         features: [
@@ -134,6 +136,62 @@ export const plansConfig = {
     ]
   }
 };
+
+/**
+ * Returns dynamic plansConfig based on current offer state.
+ * During 14-16 Aug 2026 Independence Offer (56h campaign):
+ * - 1M  -> ₹374 (Struck-through original: ₹499)
+ * - 2M  -> ₹599 (Struck-through original: ₹799)
+ * - 3M  -> ₹749 (Struck-through original: ₹999)
+ * - 6M  -> ₹1124 (Struck-through original: ₹1499)
+ * - 12M -> ₹1349 (Struck-through original: ₹1799)
+ */
+export const getDynamicPlansConfig = (customNow) => {
+  const isOfferActive = isIndependenceOfferActive(customNow);
+
+  const indiaPlans = basePlansConfig.India.plans.map((p) => {
+    if (isOfferActive && INDIA_OFFER_PRICES[p.id]) {
+      const offerData = INDIA_OFFER_PRICES[p.id];
+      return {
+        ...p,
+        price: offerData.price,
+        originalPrice: offerData.originalPrice,
+        savings: offerData.savings,
+        badge: p.badge ? `🇮🇳 ${p.badge}` : '🇮🇳 INDEPENDENCE DAY 25% OFF',
+        subBadge: '⏰ 56H OFFER ENDS 16 AUG 8:00 PM IST',
+      };
+    }
+    return {
+      ...p,
+      price: p.basePrice,
+    };
+  });
+
+  const intlPlans = basePlansConfig.International.plans.map((p) => ({
+    ...p,
+    price: p.basePrice,
+  }));
+
+  return {
+    India: {
+      ...basePlansConfig.India,
+      title: isOfferActive ? "🇮🇳 INDEPENDENCE DAY OFFER — 25% OFF PLANS" : basePlansConfig.India.title,
+      plans: indiaPlans,
+    },
+    International: {
+      ...basePlansConfig.International,
+      plans: intlPlans,
+    }
+  };
+};
+
+// Export proxy getter object for existing imports using plansConfig['India']
+export const plansConfig = new Proxy({}, {
+  get(target, prop) {
+    const config = getDynamicPlansConfig();
+    return config[prop];
+  }
+});
 
 export const getRegionKey = (country) => {
   return country === 'India' ? 'India' : 'International';

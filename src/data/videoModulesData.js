@@ -287,7 +287,11 @@ export const VIDEO_MODULES = {
     isLocked: false,
     sessions: [
       { id: 'v17_1', title: 'Routing Class -1', youtubeId: 'Tq1adeJ1BT0', duration: 'Unknown' },
-      { id: 'v17_2', title: 'Routing Class -2', youtubeId: 'i9fvSrHQ3Aw', duration: 'Unknown' }
+      { id: 'v17_2', title: 'Routing Class -2', youtubeId: 'i9fvSrHQ3Aw', duration: 'Unknown' },
+      { id: 'v17_3', title: 'Routing Class -3', youtubeId: '_OHjvOULWfM', duration: 'Unknown' },
+      { id: 'v17_4', title: 'Routing Class -4', youtubeId: 'pvDw-CbmXrk', duration: 'Unknown' },
+      { id: 'v17_5', title: 'Routing Class -5', youtubeId: 'DV4v2yZ2f6Q', duration: 'Unknown' },
+      { id: 'v17_6', title: 'Routing Class -6', youtubeId: 'gAKQO6_UkEs', duration: 'Unknown' }
     ]
   },
   18: {
@@ -301,7 +305,8 @@ export const VIDEO_MODULES = {
       { id: 'v18_2', title: 'Physical Verification Class -2', youtubeId: 'h-WvkoYDOiA', duration: 'Unknown' },
       { id: 'v18_3', title: 'Physical Verification Class -3', youtubeId: 'K7UppLC3N_Y', duration: 'Unknown' },
       { id: 'v18_4', title: 'Physical Verification Class -4', youtubeId: 'oMVWunR7iqA', duration: 'Unknown' },
-      { id: 'v18_5', title: 'Physical Verification Class -5', youtubeId: 'JluBHvABwZc', duration: 'Unknown' }
+      { id: 'v18_5', title: 'Physical Verification Class -5', youtubeId: 'JluBHvABwZc', duration: 'Unknown' },
+      { id: 'v18_6', title: 'Signoff class -6', youtubeId: 'vUjSZFh3Jlo', duration: 'Unknown' }
     ]
   }
 };

@@ -45,6 +45,14 @@ const ResumeBuilder = lazy(() => import('../pages/resume-builder/ResumeBuilder')
 const ResumeEditor = lazy(() => import('../pages/resume-builder/ResumeEditor'));
 const PublicResume = lazy(() => import('../pages/resume-builder/PublicResume'));
 const Dashboard = lazy(() => import('../pages/Dashboard'));
+
+// Certification System Pages
+const CertificationIntake = lazy(() => import('../pages/CertificationIntake'));
+const CertificationEngine = lazy(() => import('../pages/CertificationEngine'));
+const CertificationResult = lazy(() => import('../pages/CertificationResult'));
+const CertificateVerify = lazy(() => import('../pages/CertificateVerify'));
+const TestCertDirect = lazy(() => import('../pages/TestCertDirect'));
+
 const PrivateRoute = ({ children }) => {
   const { user, loading } = useAuth();
   if (loading) return <div>Loading...</div>;
@@ -175,6 +183,10 @@ const AppRoutes = () => {
         <Route path="/test-videos" element={<LazyWrapper><TestVideoModulesList /></LazyWrapper>} />
         <Route path="/test-video-playlist" element={<Navigate to="/test-videos" replace />} />
         <Route path="/test-video-playlist/:id" element={<LazyWrapper><TestVideoPlaylist /></LazyWrapper>} />
+        
+        {/* Public Certificate Verification & Direct Test Route */}
+        <Route path="/certificate/verify/:certificateId" element={<LazyWrapper><CertificateVerify /></LazyWrapper>} />
+        <Route path="/test-cert-direct" element={<LazyWrapper><TestCertDirect /></LazyWrapper>} />
 
         <Route path="/login" element={<LazyWrapper><Login /></LazyWrapper>} />
         <Route path="/register" element={<LazyWrapper><Register /></LazyWrapper>} />
@@ -189,6 +201,11 @@ const AppRoutes = () => {
         <Route path="/resume" element={<LazyWrapper><ResumeBuilder /></LazyWrapper>} />
         <Route path="/resume/edit/:resumeId" element={<LazyWrapper><ResumeEditor /></LazyWrapper>} />
         <Route path="/cloud-lab" element={<LazyWrapper><CloudPnrLab /></LazyWrapper>} />
+        
+        {/* Protected Certification Exam Routes */}
+        <Route path="/certification" element={<LazyWrapper><CertificationIntake /></LazyWrapper>} />
+        <Route path="/certification/exam/:sessionId" element={<LazyWrapper><CertificationEngine /></LazyWrapper>} />
+        <Route path="/certification/result/:sessionId" element={<LazyWrapper><CertificationResult /></LazyWrapper>} />
       </Route>
 
       {/* Wildcard fallback routing to handle legacy and unmatched paths */}

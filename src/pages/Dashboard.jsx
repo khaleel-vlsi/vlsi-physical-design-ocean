@@ -329,7 +329,7 @@ const Dashboard = () => {
         </div>
 
         {/* ── Subscription / Plan Extension Section ── */}
-        <div className={styles.plansSection}>
+        <div id="plans-pricing-section" className={styles.plansSection}>
           <div className={styles.plansSectionHeader}>
             {courseValid ? (
               <div style={{

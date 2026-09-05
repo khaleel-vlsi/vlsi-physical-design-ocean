@@ -168,7 +168,7 @@ function getEmailHtml(title, greeting, paragraphs, buttonText, buttonUrl) {
           </div>
 
           <p class="text" style="font-weight: bold; text-align: center; color: #59dad1; margin-top: 30px;">
-            Get Full 6-Month Premium Access for just ₹449 (India) / $20 (International)!
+            Get Premium Access starting from just ₹499 (India) / $40 (International)!
           </p>
 
           <div class="cta-container">

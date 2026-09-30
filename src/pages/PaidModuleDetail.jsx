@@ -131,7 +131,7 @@ const PaidModuleDetail = () => {
       const match = link.match(/\/document\/d\/([^\/]+)/);
       if (match && match[1]) {
         const docId = match[1];
-        return `https://docs.google.com/viewer?srcid=${docId}&pid=explorer&efh=false&a=v&chrome=false&embedded=true`;
+        return `https://docs.google.com/document/d/${docId}/pub?embedded=true`;
       }
     }
     return link;

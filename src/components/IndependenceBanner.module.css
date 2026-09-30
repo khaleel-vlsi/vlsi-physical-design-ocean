@@ -1,0 +1,134 @@
+.bannerWrapper {
+  background: linear-gradient(90deg, #ff9933 0%, #000080 50%, #138808 100%);
+  color: #ffffff;
+  padding: 10px 18px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 99;
+  border-bottom: 2px solid rgba(255, 215, 0, 0.4);
+}
+
+.bannerContent {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.leftPill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.flag {
+  font-size: 1.25rem;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+}
+
+.title {
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  font-size: 0.95rem;
+}
+
+.discountBadge {
+  background: #ffd700;
+  color: #0f172a;
+  font-weight: 900;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+}
+
+.timerPill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15, 23, 42, 0.75);
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 215, 0, 0.35);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.4);
+}
+
+.timerIcon {
+  font-size: 1rem;
+}
+
+.timerLabel {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.countdownText {
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  color: #ffd700;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+.pricingSummary {
+  font-size: 0.84rem;
+  color: #f3f4f6;
+  font-weight: 600;
+}
+
+.priceHighlight {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.98rem;
+}
+
+/* Mobile Responsive Rules */
+@media (max-width: 768px) {
+  .bannerWrapper {
+    padding: 8px 12px;
+  }
+  
+  .bannerContent {
+    justify-content: center;
+    text-align: center;
+    gap: 6px;
+  }
+  
+  .title {
+    font-size: 0.84rem;
+  }
+
+  .countdownText {
+    font-size: 0.9rem;
+  }
+
+  .pricingSummary {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .timerLabel {
+    display: none;
+  }
+
+  .leftPill {
+    gap: 6px;
+  }
+
+  .discountBadge {
+    padding: 2px 7px;
+    font-size: 0.72rem;
+  }
+}

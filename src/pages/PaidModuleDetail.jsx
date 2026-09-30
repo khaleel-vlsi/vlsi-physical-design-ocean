@@ -127,6 +127,13 @@ const PaidModuleDetail = () => {
         return `https://drive.google.com/file/d/${fileId}/preview`;
       }
     }
+    if (link.includes('docs.google.com/document/d/')) {
+      const match = link.match(/\/document\/d\/([^\/]+)/);
+      if (match && match[1]) {
+        const docId = match[1];
+        return `https://docs.google.com/viewer?srcid=${docId}&pid=explorer&efh=false&a=v&chrome=false&embedded=true`;
+      }
+    }
     return link;
   };
 

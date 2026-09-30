@@ -1,0 +1,817 @@
+/* CloudPnrLab.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap');
+
+.labContainer {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #0b0f19, #020617);
+  color: #f8fafc;
+  font-family: 'Inter', sans-serif;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.labHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 16px;
+  padding: 20px 24px;
+  backdrop-filter: blur(12px);
+}
+
+.labBadge {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.labHeader h1 {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 6px 0 4px 0;
+  background: linear-gradient(135deg, #f8fafc, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.labHeader p {
+  color: #94a3b8;
+  font-size: 14px;
+  margin: 0;
+}
+
+.headerStatusGroup {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.statusPill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.statusDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px currentColor;
+}
+
+.downloadBtn {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.downloadBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.5);
+}
+
+/* Control Pipeline Toolbar */
+.pipelineBar {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 14px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.pipelineTitle {
+  font-weight: 700;
+  font-size: 14px;
+  color: #60a5fa;
+  white-space: nowrap;
+}
+
+.stepButtonsRow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.stepBtn {
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  color: #e2e8f0;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.stepBtn:hover:not(:disabled) {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: #3b82f6;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.stepBtnActive {
+  background: linear-gradient(135deg, #2563eb, #7c3aed) !important;
+  border-color: #60a5fa !important;
+  color: #fff !important;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+}
+
+.stepBtnCompleted {
+  border-color: rgba(16, 185, 129, 0.5) !important;
+  background: rgba(16, 185, 129, 0.15) !important;
+  color: #a7f3d0 !important;
+}
+
+.doneTag {
+  font-size: 10px;
+  background: #10b981;
+  color: #020617;
+  font-weight: 800;
+  padding: 1px 5px;
+  border-radius: 4px;
+  margin-left: 4px;
+}
+
+.lockTag {
+  font-size: 10px;
+  margin-left: 4px;
+}
+
+.abortBtn {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Modal Overlay & Dialog */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modalContent {
+  background: #0f172a;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modalIcon {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.modalContent h3 {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+  color: #f8fafc;
+}
+
+.modalContent p {
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.modalActions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.modalPrimaryBtn {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.modalForceBtn {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.modalSecondaryBtn {
+  background: rgba(51, 65, 85, 0.8);
+  color: #cbd5e1;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Targets Config Panel */
+.targetsPanel {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 14px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.targetsHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.targetsHeader h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.targetIcon {
+  font-size: 16px;
+}
+
+.targetsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.targetItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.targetItem label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.targetInput,
+.targetSelect {
+  background: #020617;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: #f1f5f9;
+  font-size: 13px;
+  font-family: 'Fira Code', monospace;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.targetInput:focus,
+.targetSelect:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+/* Workspace Grid */
+.workspaceGrid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+  min-height: 600px;
+}
+
+@media (max-width: 900px) {
+  .workspaceGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sidebar {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+  color: #f1f5f9;
+}
+
+.projectPill {
+  background: rgba(30, 41, 59, 0.9);
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #38bdf8;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fileTree {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebarHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.uploadBtn {
+  background: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.uploadBtn:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+.fileItem {
+  padding: 8px 10px;
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #cbd5e1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Fira Code', monospace;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.fileItem:hover {
+  background: rgba(59, 130, 246, 0.15);
+  color: #fff;
+}
+
+.fileItemActive {
+  background: rgba(59, 130, 246, 0.25) !important;
+  border-color: #38bdf8 !important;
+  color: #38bdf8 !important;
+  font-weight: 700;
+}
+
+.fileSize {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.metricsBox {
+  margin-top: auto;
+  background: rgba(2, 6, 23, 0.8);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.metricsBox h4 {
+  margin: 0 0 10px 0;
+  font-size: 13px;
+  color: #38bdf8;
+}
+
+.metricRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 4px 0;
+  color: #94a3b8;
+}
+
+/* Main Workspace Tabs */
+.mainWorkArea {
+  display: flex;
+  flex-direction: column;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.tabHeader {
+  display: flex;
+  background: rgba(2, 6, 23, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tabBtn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  padding: 14px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.tabBtn:hover {
+  color: #f1f5f9;
+}
+
+.tabBtnActive {
+  color: #38bdf8;
+  border-bottom-color: #38bdf8;
+  background: rgba(30, 41, 59, 0.5);
+}
+
+.tabContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 480px;
+}
+
+.scriptEditor {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  background: #090d16;
+  color: #38bdf8;
+  font-family: 'Fira Code', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 20px;
+  border: none;
+  outline: none;
+  resize: vertical;
+}
+
+/* Terminal Styling */
+.terminalWindow {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 480px;
+  background: #020617;
+  font-family: 'Fira Code', monospace;
+}
+
+.terminalHeader {
+  background: #0f172a;
+  padding: 8px 16px;
+  font-size: 12px;
+  color: #64748b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.clearBtn {
+  background: transparent;
+  border: 1px solid #334155;
+  color: #94a3b8;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.clearBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.guiBtn {
+  background: linear-gradient(135deg, #0284c7, #38bdf8);
+  border: none;
+  color: #030712;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 2px 10px;
+  font-size: 11px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+  transition: all 0.2s ease;
+}
+
+.guiBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.7);
+}
+
+.terminalBody {
+  padding: 16px;
+  flex: 1;
+  overflow-y: auto;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #4ade80;
+}
+
+.terminalPlaceholder {
+  color: #64748b;
+  font-style: italic;
+}
+
+.logLine {
+  margin-bottom: 4px;
+  word-break: break-all;
+}
+
+.reportViewer {
+  padding: 20px;
+  background: #090d16;
+  height: 100%;
+  min-height: 480px;
+  overflow-y: auto;
+}
+
+.reportViewer h3 {
+  margin-top: 0;
+  color: #38bdf8;
+}
+
+.reportPre {
+  background: #020617;
+  padding: 16px;
+  border-radius: 8px;
+  color: #f1f5f9;
+  font-family: 'Fira Code', monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow-x: auto;
+}
+
+/* Layout Visualizer */
+.layoutVisualizerContainer {
+  padding: 20px;
+  background: #090d16;
+  height: 100%;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.layoutToolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.layoutTitle {
+  font-weight: 700;
+  font-size: 14px;
+  color: #38bdf8;
+}
+
+.layerToggles {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.layerTag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.layoutCanvasBox {
+  background: #020617;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 420px;
+}
+
+.layoutSvg {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.15));
+}
+
+/* CLI Shell Form */
+.cliForm {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #020617;
+  padding: 10px 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cliPrompt {
+  color: #10b981;
+  font-family: 'Fira Code', monospace;
+  font-weight: 700;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.cliInputField {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #38bdf8;
+  font-family: 'Fira Code', monospace;
+  font-size: 13px;
+  outline: none;
+}
+
+.cliSubmitBtn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Critical Path Inspector */
+.pathInspectorContainer {
+  padding: 20px;
+  background: #090d16;
+  height: 100%;
+  min-height: 480px;
+  overflow-y: auto;
+}
+
+.pathHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pathHeader h3 {
+  margin: 0;
+  color: #38bdf8;
+  font-size: 16px;
+}
+
+.slackBadgePositive {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: 'Fira Code', monospace;
+}
+
+.pathSub {
+  color: #94a3b8;
+  font-size: 13px;
+  margin: 8px 0 16px 0;
+}
+
+.timingTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Fira Code', monospace;
+  font-size: 12px;
+  text-align: left;
+}
+
+.timingTable th {
+  background: #020617;
+  color: #64748b;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timingTable td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.evenRow {
+  background: rgba(15, 23, 42, 0.4);
+}
+
+.oddRow {
+  background: rgba(2, 6, 23, 0.6);
+}
+
+.pinCell code {
+  color: #f1f5f9;
+}
+
+.cellTypeTag {
+  background: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+/* View Mode Selector */
+.viewModeSelector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.viewModeBtn {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  color: #94a3b8;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.viewModeBtnActive {
+  background: #2563eb !important;
+  color: #fff !important;
+  border-color: #60a5fa !important;
+}

@@ -1,0 +1,88 @@
+.moduleLayout {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  color: #e2e8f0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+  padding: 32px 24px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.8));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contentCard {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.contentCard:hover {
+  border-color: rgba(168, 85, 247, 0.3);
+}
+
+.chapterTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #c084fc;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.chapterBody {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+}
+
+.chapterBody p {
+  margin-bottom: 16px;
+}
+
+.chapterBody ul, .chapterBody ol {
+  margin-bottom: 16px;
+  padding-left: 24px;
+}
+
+.chapterBody li {
+  margin-bottom: 8px;
+}
+
+.codeBlock {
+  background: #090d16;
+  border-radius: 8px;
+  padding: 16px;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.95rem;
+  color: #f472b6;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin: 16px 0;
+  overflow-x: auto;
+}

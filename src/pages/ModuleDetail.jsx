@@ -88,6 +88,24 @@ const getFlowStepInfo = (moduleId) => {
   return null;
 };
 
+const getIframeSrc = (link) => {
+  if (!link) return '';
+  if (link.includes('drive.google.com/file/d/')) {
+    const match = link.match(/\/file\/d\/([^\/]+)/);
+    if (match && match[1]) {
+      return `https://drive.google.com/file/d/${match[1]}/preview`;
+    }
+  }
+  if (link.includes('docs.google.com/document/d/')) {
+    const match = link.match(/\/document\/d\/([^\/]+)/);
+    if (match && match[1]) {
+      const docId = match[1];
+      return `https://docs.google.com/viewer?srcid=${docId}&pid=explorer&efh=false&a=v&chrome=false&embedded=true`;
+    }
+  }
+  return link;
+};
+
 const ModuleDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -325,7 +343,7 @@ const ModuleDetail = () => {
                           </div>
                         )}
                         <iframe
-                          src={item.url}
+                          src={getIframeSrc(item.url)}
                           width="100%"
                           className={styles.moduleIframe}
                           title={`Module ${moduleInfo.id} content ${idx + 1}`}

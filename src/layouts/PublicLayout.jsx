@@ -2,12 +2,12 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import IndependenceBanner from '../components/IndependenceBanner';
+import DiwaliBanner from '../components/DiwaliBanner';
 
 const PublicLayout = () => {
   return (
     <>
-      <IndependenceBanner />
+      <DiwaliBanner />
       <Navbar />
       <div className="announcement-bar">
         <marquee behavior="scroll" direction="left">

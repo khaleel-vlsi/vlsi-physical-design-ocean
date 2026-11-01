@@ -1,4 +1,4 @@
-import { isIndependenceOfferActive, INDIA_OFFER_PRICES } from '../utils/independenceOffer.js';
+import { isDiwaliOfferActive, INDIA_DIWALI_PRICES } from '../utils/diwaliOffer.js';
 
 export const basePlansConfig = {
   India: {
@@ -139,26 +139,27 @@ export const basePlansConfig = {
 
 /**
  * Returns dynamic plansConfig based on current offer state.
- * During 14-16 Aug 2026 Independence Offer (56h campaign):
- * - 1M  -> ₹374 (Struck-through original: ₹499)
- * - 2M  -> ₹599 (Struck-through original: ₹799)
- * - 3M  -> ₹749 (Struck-through original: ₹999)
- * - 6M  -> ₹1124 (Struck-through original: ₹1499)
- * - 12M -> ₹1349 (Struck-through original: ₹1799)
+ * Diwali Offer (1 Nov 11:00 AM IST -> 7 Nov 12:30 PM IST), INDIA plans only:
+ * - 1M  -> ₹324  (Struck-through original: ₹499)
+ * - 2M  -> ₹519  (Struck-through original: ₹799)
+ * - 3M  -> ₹649  (Struck-through original: ₹999)
+ * - 6M  -> ₹974  (Struck-through original: ₹1499)
+ * - 12M -> ₹1169 (Struck-through original: ₹1799)
+ * International (USD) plans are NOT discounted.
  */
 export const getDynamicPlansConfig = (customNow) => {
-  const isOfferActive = isIndependenceOfferActive(customNow);
+  const isOfferActive = isDiwaliOfferActive(customNow);
 
   const indiaPlans = basePlansConfig.India.plans.map((p) => {
-    if (isOfferActive && INDIA_OFFER_PRICES[p.id]) {
-      const offerData = INDIA_OFFER_PRICES[p.id];
+    if (isOfferActive && INDIA_DIWALI_PRICES[p.id]) {
+      const offerData = INDIA_DIWALI_PRICES[p.id];
       return {
         ...p,
         price: offerData.price,
         originalPrice: offerData.originalPrice,
         savings: offerData.savings,
-        badge: p.badge ? `🇮🇳 ${p.badge}` : '🇮🇳 INDEPENDENCE DAY 25% OFF',
-        subBadge: '⏰ 56H OFFER ENDS 16 AUG 8:00 PM IST',
+        badge: p.badge ? `🪔 ${p.badge}` : '🪔 DIWALI 35% OFF',
+        subBadge: '⏰ OFFER ENDS 7 NOV 12:30 PM IST',
       };
     }
     return {
@@ -175,7 +176,7 @@ export const getDynamicPlansConfig = (customNow) => {
   return {
     India: {
       ...basePlansConfig.India,
-      title: isOfferActive ? "🇮🇳 INDEPENDENCE DAY OFFER — 25% OFF PLANS" : basePlansConfig.India.title,
+      title: isOfferActive ? "🪔 DIWALI OFFER — 35% OFF PLANS" : basePlansConfig.India.title,
       plans: indiaPlans,
     },
     International: {

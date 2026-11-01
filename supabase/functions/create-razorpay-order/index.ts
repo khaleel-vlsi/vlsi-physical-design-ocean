@@ -22,18 +22,20 @@ const BASE_PLAN_DETAILS: Record<string, { price: number; currency: string; name:
   'PLAN_1999': { price: 1999, currency: 'INR', name: 'Legacy Diamond Plan (12 Months)' }
 };
 
-// Authoritative 25% OFF Independence Day Offer Prices (14 Aug 12 PM - 16 Aug 8 PM IST)
-const INDEPENDENCE_OFFER_PRICES: Record<string, number> = {
-  'PLAN_499': 374,
-  'PLAN_1M_INR': 374,
-  'PLAN_2M_INR': 599,
-  'PLAN_3M_INR': 749,
-  'PLAN_6M_INR': 1124,
-  'PLAN_12M_INR': 1349,
+// Authoritative 35% OFF Diwali Offer Prices — INDIA (INR) PLANS ONLY
+// Window: 1 Nov 2026 11:00 AM IST -> 7 Nov 2026 12:30 PM IST
+// Applies to new subscriptions AND extensions/upgrades by active subscribers.
+const DIWALI_OFFER_PRICES: Record<string, number> = {
+  'PLAN_499': 324,
+  'PLAN_1M_INR': 324,
+  'PLAN_2M_INR': 519,
+  'PLAN_3M_INR': 649,
+  'PLAN_6M_INR': 974,
+  'PLAN_12M_INR': 1169,
 };
 
-const OFFER_START_MS = new Date("2026-08-14T10:06:00+05:30").getTime();
-const OFFER_END_MS = new Date("2026-08-16T20:00:00+05:30").getTime();
+const OFFER_START_MS = new Date("2026-11-01T11:00:00+05:30").getTime();
+const OFFER_END_MS = new Date("2026-11-07T12:30:00+05:30").getTime();
 
 serve(async (req) => {
   const origin = req.headers.get("origin") ?? "*";
@@ -92,8 +94,9 @@ serve(async (req) => {
     const isOfferActive = now >= OFFER_START_MS && now < OFFER_END_MS;
 
     let finalPrice = planConfig.price;
-    if (isOfferActive && INDEPENDENCE_OFFER_PRICES[targetPlan] !== undefined) {
-      finalPrice = INDEPENDENCE_OFFER_PRICES[targetPlan];
+    const offerApplied = isOfferActive && planConfig.currency === 'INR' && DIWALI_OFFER_PRICES[targetPlan] !== undefined;
+    if (offerApplied) {
+      finalPrice = DIWALI_OFFER_PRICES[targetPlan];
     }
 
     const amountInPaise = finalPrice * 100;
@@ -113,7 +116,7 @@ serve(async (req) => {
         notes: {
           plan: targetPlan,
           user_id: user.id,
-          offer_applied: isOfferActive ? "INDEPENDENCE_DAY_25_OFF" : "NONE",
+          offer_applied: offerApplied ? "DIWALI_35_OFF" : "NONE",
           charged_price: finalPrice
         }
       })

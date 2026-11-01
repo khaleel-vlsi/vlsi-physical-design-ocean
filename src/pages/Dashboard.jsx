@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { supabase } from '../services/supabase';
 import { plansConfig, getRegionKey } from '../data/plansConfig';
-import IndependenceBanner from '../components/IndependenceBanner';
+import DiwaliBanner from '../components/DiwaliBanner';
+import { isDiwaliOfferActive } from '../utils/diwaliOffer.js';
 import styles from './Dashboard.module.css';
 
 const loadRazorpaySDK = () => {
@@ -202,6 +203,7 @@ const Dashboard = () => {
   const displayProfile = currentProfile || profile;
   const courseValid = !!displayProfile.course_active;
   const fmtDate = (ts) => ts ? new Date(ts).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) : 'Lifetime Access';
+  const diwaliLive = regionKey === 'India' && isDiwaliOfferActive();
 
   // Helper to calculate expected new expiry date for active subscribers
   const getExpectedNewExpiry = (planId) => {
@@ -231,7 +233,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <IndependenceBanner />
+      <DiwaliBanner hidden={regionKey !== 'India'} />
       <div className={styles.dashWrapper}>
         <div className={styles.topRow}>
           <div className={`${styles.card} ${styles.profileCard}`}>
@@ -333,20 +335,24 @@ const Dashboard = () => {
           <div className={styles.plansSectionHeader}>
             {courseValid ? (
               <div style={{
-                background: 'linear-gradient(135deg, rgba(255, 153, 51, 0.2) 0%, rgba(19, 136, 8, 0.2) 100%)',
+                background: diwaliLive
+                  ? 'linear-gradient(135deg, rgba(255, 159, 28, 0.22) 0%, rgba(106, 27, 77, 0.35) 100%)'
+                  : 'rgba(250, 204, 21, 0.08)',
                 border: '1px solid rgba(255, 215, 0, 0.4)',
                 borderRadius: '12px',
                 padding: '16px 20px',
                 marginBottom: '16px'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
-                  <span style={{ fontSize: '1.4rem' }}>🇮🇳</span>
+                  <span style={{ fontSize: '1.4rem' }}>{diwaliLive ? '🪔' : '⚡'}</span>
                   <h2 style={{ color: '#ffd700', margin: 0, fontSize: '1.2rem', fontWeight: '800' }}>
-                    INDEPENDENCE DAY UPGRADE / EXTENSION OFFER (25% OFF)
+                    {diwaliLive ? 'DIWALI EXTENSION / UPGRADE OFFER (35% OFF)' : 'EXTEND / UPGRADE YOUR PLAN'}
                   </h2>
-                  <span style={{ background: '#ffd700', color: '#0f172a', fontWeight: '900', padding: '2px 8px', borderRadius: '12px', fontSize: '0.75rem' }}>
-                    25% OFF LIVE
-                  </span>
+                  {diwaliLive && (
+                    <span style={{ background: '#ffd700', color: '#3b0a45', fontWeight: '900', padding: '2px 8px', borderRadius: '12px', fontSize: '0.75rem' }}>
+                      35% OFF LIVE · ENDS 7 NOV 12:30 PM IST
+                    </span>
+                  )}
                 </div>
                 <p style={{ color: '#ffffff', margin: '8px 0 0', fontSize: '0.88rem', lineHeight: '1.5' }}>
                   🎉 <strong>Active Subscriber Special:</strong> Extend or upgrade your subscription now! Your remaining subscription days will <strong>NOT</strong> be lost — the selected plan duration will be added to your current valid expiry date (<strong>{fmtDate(displayProfile.course_expiry)}</strong>).
@@ -354,7 +360,7 @@ const Dashboard = () => {
               </div>
             ) : (
               <>
-                <h2>🚀 Choose Your Plan (25% OFF INDEPENDENCE DAY OFFER)</h2>
+                <h2>{diwaliLive ? '🪔 Choose Your Plan (35% OFF DIWALI OFFER)' : '🚀 Choose Your Plan'}</h2>
                 <p className={styles.muted}>Select a subscription to unlock all paid modules instantly after payment.</p>
               </>
             )}

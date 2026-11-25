@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import AdUnit from '../../components/AdUnit';
 import styles from './Module1Content.module.css';
+import AdSlot from '../../components/AdSlot';
+import { useAuth } from '../../context/AuthContext';
+
+
 
 const Module1Content = () => {
+  const { loading, profile } = useAuth();
+  const isPaidOrLoading = Boolean(loading || profile?.course_active);
+
+
   const [showAllTopics, setShowAllTopics] = useState(false);
 
   useEffect(() => {
@@ -59,6 +67,10 @@ const Module1Content = () => {
   };
 
   return (
+    <>
+      <AdSlot slot="top728" isPaidUser={isPaidOrLoading} />
+      <AdSlot slot="mid320" isPaidUser={isPaidOrLoading} />
+      <AdSlot slot="nativeBottom" isPaidUser={isPaidOrLoading} />
     <div className={styles.moduleLayout}>
       <div className={styles.topicsNav}>
         <h2 className={styles.navTitle}>Topics Covered</h2>
@@ -584,8 +596,12 @@ const Module1Content = () => {
           <AdUnit slotId="slot_module1content" />
         </div>
       </div>
+
     </div>
   );
 };
 
 export default Module1Content;
+
+
+

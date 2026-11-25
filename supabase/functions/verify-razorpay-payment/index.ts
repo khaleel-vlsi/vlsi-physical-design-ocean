@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.224.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.8";
+import { grantPlanOnce, isKnownPlan } from "../_shared/grantPlan.ts";
 
 function corsHeaders(origin = "*") {
   return {
@@ -118,76 +119,27 @@ serve(async (req) => {
       });
     }
 
-    // 5. Fetch user profile from Supabase DB to calculate extension
-    const profRes = await fetch(`${SUPABASE_URL}/rest/v1/profiles?id=eq.${user.id}&select=*`, {
-      headers: {
-        "apikey": SERVICE_ROLE,
-        "authorization": `Bearer ${SERVICE_ROLE}`,
-      },
-    });
-    const profiles = await profRes.json().catch(() => []);
-    const existingProfile = Array.isArray(profiles) && profiles.length > 0 ? profiles[0] : null;
-
-    const now = Date.now();
-    let daysToGrant = 30;
-    let planFriendlyName = "Iron Plan";
-
-    if (plan === "PLAN_1M_INR" || plan === "PLAN_499") {
-      daysToGrant = 30;
-      planFriendlyName = "Iron Plan (30 Days)";
-    } else if (plan === "PLAN_2M_INR") {
-      daysToGrant = 60;
-      planFriendlyName = "Copper Plan (60 Days)";
-    } else if (plan === "PLAN_3M_INR") {
-      daysToGrant = 90;
-      planFriendlyName = "Silver Plan (90 Days)";
-    } else if (plan === "PLAN_6M_INR" || plan === "PLAN_6M_USD") {
-      daysToGrant = 180;
-      planFriendlyName = "Gold Plan (180 Days)";
-    } else if (plan === "PLAN_12M_INR" || plan === "PLAN_12M_USD" || plan === "PLAN_1999") {
-      daysToGrant = 365;
-      planFriendlyName = "Diamond Plan (365 Days)";
-    }
-
-    // BASE DATE SELECTION:
-    let baseTime = now;
-    if (existingProfile && existingProfile.course_active && existingProfile.course_expiry) {
-      const currentExpiryMs = new Date(existingProfile.course_expiry).getTime();
-      if (currentExpiryMs > now) {
-        baseTime = currentExpiryMs;
-      }
-    }
-
-    const courseExpiry = new Date(baseTime + daysToGrant * 24 * 60 * 60 * 1000).toISOString();
-    const updates: Record<string, any> = {
-      course_active: true,
-      course_expiry: courseExpiry,
-      active_plan: planFriendlyName
-    };
-
-    // Update profiles by user id using service role
-    const updRes = await fetch(`${SUPABASE_URL}/rest/v1/profiles?id=eq.${user.id}`, {
-      method: "PATCH",
-      headers: {
-        "apikey": SERVICE_ROLE,
-        "authorization": `Bearer ${SERVICE_ROLE}`,
-        "Content-Type": "application/json",
-        "Prefer": "return=representation",
-      },
-      body: JSON.stringify(updates),
-    });
-
-    const upd = await updRes.json();
-    if (!updRes.ok) {
-      return new Response(JSON.stringify({ error: "Supabase profile update failed", details: upd }), {
-        status: 500,
+    if (!isKnownPlan(plan)) {
+      return new Response(JSON.stringify({ error: `Unknown plan on order: ${plan}` }), {
+        status: 400,
         headers: { ...corsHeaders(origin), "Content-Type": "application/json" },
       });
     }
 
-    const updatedProfile = Array.isArray(upd) && upd.length > 0 ? upd[0] : updates;
+    // 5. Credit the order EXACTLY ONCE (the webhook may also process this same order).
+    //    If it was already credited, the current profile is returned unchanged.
+    const result = await grantPlanOnce({
+      supabaseUrl: SUPABASE_URL,
+      serviceRole: SERVICE_ROLE,
+      orderId: razorpay_order_id,
+      paymentId: razorpay_payment_id || null,
+      userId: user.id,
+      plan,
+      amountPaid: order.amount_paid ? order.amount_paid / 100 : null,
+      source: "verify",
+    });
 
-    return new Response(JSON.stringify({ ok: true, profile: updatedProfile }), {
+    return new Response(JSON.stringify({ ok: true, credited: result.credited, profile: result.profile, expiry: result.profile.course_expiry }), {
       headers: { ...corsHeaders(origin), "Content-Type": "application/json" },
     });
 

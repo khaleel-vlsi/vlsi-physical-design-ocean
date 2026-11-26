@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import AdUnit from '../../components/AdUnit';
 import styles from './Module1Content.module.css';
-import AdSlot from '../../components/AdSlot.jsx';
 import { useAuth } from '../../context/AuthContext';
 
 
@@ -28,7 +27,7 @@ const Module1Content = () => {
   }, []);
 
   const headings = [
-    { id: 'h.oc99zvliaipw', text: 'Basic Electronics: From Materials to Energy Bands (Lecture-Style Explanation)' },
+    { id: 'h.oc99zvliaipw', text: 'Basic Electronics: From Materials to Energy BandsÂ (Lecture-Style Explanation)' },
     { id: 'h.dsvizsryqqz5', text: 'Introduction' },
     { id: 'h.uny91arut36e', text: 'What Is a Material?' },
     { id: 'h.370zdzsqbowq', text: 'Molecules and Atoms' },
@@ -48,7 +47,7 @@ const Module1Content = () => {
     { id: 'h.u5oq42jy9n2n', text: 'PN Junction Formation and Diffusion' },
     { id: 'h.wa335bpi9pnj', text: 'Diffusion Current' },
     { id: 'h.ytcgfjk1lo10', text: 'Diffusion Current Density Equations' },
-    { id: 'h.p5msogipqje', text: 'P-Type Semiconductor – Boron Doping in Germanium' },
+    { id: 'h.p5msogipqje', text: 'P-Type Semiconductor â€“ Boron Doping in Germanium' },
     { id: 'h.5kl6qc5ya3ft', text: 'Example: Boron Doping in Germanium' },
     { id: 'h.4p26l188dzaf', text: 'P-Type Extrinsic Semiconductor' },
     { id: 'h.7m7p8qb1idfd', text: 'Why Silicon is Preferred Over Germanium?' },
@@ -68,9 +67,6 @@ const Module1Content = () => {
 
   return (
     <>
-      <AdSlot slot="top728" isPaidUser={isPaidOrLoading} />
-      <AdSlot slot="mid320" isPaidUser={isPaidOrLoading} />
-      <AdSlot slot="nativeBottom" isPaidUser={isPaidOrLoading} />
     <div className={styles.moduleLayout}>
       <div className={styles.topicsNav}>
         <h2 className={styles.navTitle}>Topics Covered</h2>
@@ -98,7 +94,7 @@ const Module1Content = () => {
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Today, we are going to discuss </span><span class="c6">Basic Electronics</span><span>. When we hear the word </span><span class="c27">electronics</span><span>, many students immediately think about circuits, wires, and devices. But before reaching that stage, we must clearly understand </span><span class="c6">materials</span><span class="c2"> and their internal structure.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>In Basic Electronics, we mainly classify materials into </span><span class="c6">three types</span><span class="c2">:</span>` }} />
           <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Conductors</span></li><li class="c0 li-bullet-0"><span class="c2">Semiconductors</span></li><li class="c0 li-bullet-0"><span class="c2">Insulators</span></li>` }} />
-          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">To understand why materials behave differently, we must go deep—from materials to molecules, from molecules to atoms, and finally into the internal structure of the atom.</span>` }} />
+          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">To understand why materials behave differently, we must go deepâ€”from materials to molecules, from molecules to atoms, and finally into the internal structure of the atom.</span>` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/module1/image_32.png" alt="Classification of materials into Conductors, Semiconductors, and Insulators" className={styles.contentImage} />
           </div>
@@ -107,7 +103,7 @@ const Module1Content = () => {
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>A </span><span class="c6">material</span><span class="c2"> is anything that exists physically in this world. If you observe carefully:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Objects around us are materials</span></li><li class="c0 li-bullet-0"><span class="c2">The human body is also made of material</span></li><li class="c0 li-bullet-0"><span class="c2">Solid, liquid, and gaseous substances are all materials</span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Every object we see is made using some material. These materials are not continuous; they are made up of </span><span class="c6">molecules</span><span class="c2">.</span>` }} />
-          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>The physical state of a material—solid, liquid, or gas—depends on how its molecules are arranged and how strongly they are bonded.</span>` }} />
+          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>The physical state of a materialâ€”solid, liquid, or gasâ€”depends on how its molecules are arranged and how strongly they are bonded.</span>` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/module1/image_8.png" alt="Molecular arrangement in solid, liquid, and gaseous materials" className={styles.contentImage} />
           </div>
@@ -124,7 +120,7 @@ const Module1Content = () => {
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">An atom is not a solid particle; it has its own internal structure. Every atom consists of two main parts:</span>` }} />
           <h3 id="h.9910wtc4wxuy" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">1. Nucleus</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>The </span><span class="c6">nucleus</span><span class="c2"> is the central core of the atom. Inside the nucleus, we have:</span>` }} />
-          <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c6">Protons</span><span class="c2"> → positively charged particles</span></li><li class="c0 li-bullet-0"><span class="c6">Neutrons</span><span class="c2"> → particles with no charge</span></li>` }} />
+          <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c6">Protons</span><span class="c2"> â†’ positively charged particles</span></li><li class="c0 li-bullet-0"><span class="c6">Neutrons</span><span class="c2"> â†’ particles with no charge</span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">The nucleus contains almost all the mass of the atom.</span>` }} />
           <h3 id="h.ivqws2azpldt" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">2. Electrons</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Outside the nucleus, </span><span class="c6">electrons</span><span class="c2"> revolve around it in circular paths or energy levels.</span>` }} />
@@ -186,12 +182,12 @@ const Module1Content = () => {
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">For a valence electron to become a free electron:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span>We must apply an external energy of about </span><span class="c3">1 eV</span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">So:</span>` }} />
-          <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Without external energy → it behaves like an insulator</span></li><li class="c0 li-bullet-0"><span class="c2">With external energy → it behaves like a conductor</span></li>` }} />
+          <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Without external energy â†’ it behaves like an insulator</span></li><li class="c0 li-bullet-0"><span class="c2">With external energy â†’ it behaves like a conductor</span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>That is why this material is called a </span><span class="c6">semiconductor</span><span class="c2">.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Examples: Silicon, Germanium</span>` }} />
           <hr className={styles.divider} />
           <h3 id="h.5ca5oi51n5h3" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6"> Insulators</span>` }} />
-          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>In </span><span class="c6">insulators</span><span>, the energy gap between the valence band and conduction band is very large—approximately </span><span class="c6">6 eV</span><span class="c2">.</span>` }} />
+          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>In </span><span class="c6">insulators</span><span>, the energy gap between the valence band and conduction band is very largeâ€”approximately </span><span class="c6">6 eV</span><span class="c2">.</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">A very high external energy is required</span></li><li class="c0 li-bullet-0"><span class="c2">Normally, we do not apply such high energy</span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">As a result:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Electrons remain tightly bound</span></li><li class="c0 li-bullet-0"><span class="c2">No electric current flows</span></li>` }} />
@@ -239,9 +235,9 @@ const Module1Content = () => {
           <h3 id="h.dhoq7xyhfl53" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">Unit</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Watt (W)<br> One watt is the power consumed when one volt causes one ampere of current to flow.<br></span></li>` }} />
           <h3 id="h.x7ttoyak2o58" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">Alternate Forms</span>` }} />
-          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Using Ohm’s Law (introduced later), power can also be written as:</span>` }} />
+          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Using Ohmâ€™s Law (introduced later), power can also be written as:</span>` }} />
           <div className={styles.imageContainer}>
-            <img loading="lazy" src="/assets/modules/module1/image_18.png" alt="Alternate power formulas P = I²R and P = V²/R" className={styles.contentImage} />
+            <img loading="lazy" src="/assets/modules/module1/image_18.png" alt="Alternate power formulas P = IÂ²R and P = VÂ²/R" className={styles.contentImage} />
           </div>
           <h3 id="h.i1ke75vs1ipf" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">Important Points</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Electrical devices are rated in terms of power (e.g., 60 W bulb).<br></span></li><li class="c0 li-bullet-0"><span class="c2">Higher power means greater energy consumption per unit time.<br></span></li>` }} />
@@ -250,23 +246,23 @@ const Module1Content = () => {
           <h2 id="h.r25oystbt9ex" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">4. Relationship Between Current, Voltage, and Power</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Voltage provides the force that pushes charges.<br></span></li><li class="c0 li-bullet-0"><span class="c2">Current represents the flow of charges.<br></span></li><li class="c0 li-bullet-0"><span class="c2">Power indicates how fast electrical energy is being used.<br></span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">These three quantities are interdependent, and understanding their relationship is essential for circuit analysis.</span>` }} />
-          <h3 id="h.1mxxktb76xhh" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6"> Ohm’s Law</span>` }} />
-          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `Ohm’s Law is one of the most fundamental principles in electronics. It states that the voltage across a resistor is directly proportional to the current flowing through it, provided the temperature remains constant.` }} />
+          <h3 id="h.1mxxktb76xhh" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6"> Ohmâ€™s Law</span>` }} />
+          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `Ohmâ€™s Law is one of the most fundamental principles in electronics. It states that the voltage across a resistor is directly proportional to the current flowing through it, provided the temperature remains constant.` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/module1/image_11.png" alt="Ohm's Law relationship V = IR" className={styles.contentImage} />
           </div>
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Here, </span><span class="c27">V</span><span> is the voltage across the resistor, </span><span class="c27">I</span><span> is the current through it, and </span><span class="c27">R</span><span class="c2"> is the resistance. This relationship forms the basis for analyzing almost all electrical circuits.</span>` }} />
           <hr className={styles.divider} />
-          <h3 id="h.nlds8hx1uyir" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">1.2 Kirchhoff’s Laws</span>` }} />
-          <h4 id="h.k72fit3gyptd" className={styles.h4} dangerouslySetInnerHTML={{ __html: `<span class="c3">Kirchhoff’s Current Law (KCL)</span>` }} />
-          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Kirchhoff’s Current Law states that the algebraic sum of currents at a junction is zero. In simple terms, the total current entering a node must equal the total current leaving that node.</span>` }} />
+          <h3 id="h.nlds8hx1uyir" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">1.2 Kirchhoffâ€™s Laws</span>` }} />
+          <h4 id="h.k72fit3gyptd" className={styles.h4} dangerouslySetInnerHTML={{ __html: `<span class="c3">Kirchhoffâ€™s Current Law (KCL)</span>` }} />
+          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Kirchhoffâ€™s Current Law states that the algebraic sum of currents at a junction is zero. In simple terms, the total current entering a node must equal the total current leaving that node.</span>` }} />
           <p className={styles.mathFormula} dangerouslySetInnerHTML={{ __html: `$$ \\sum I_{in} = \\sum I_{out} $$` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/module1/image_31.png" alt="Kirchhoff's Current Law (KCL) illustration showing sum of currents at a node" className={styles.contentImage} />
           </div>
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">This law is based on the conservation of charge and is widely used in nodal analysis.</span>` }} />
-          <h4 id="h.vhqz6zxfj0pp" className={styles.h4} dangerouslySetInnerHTML={{ __html: `<span class="c3">Kirchhoff’s Voltage Law (KVL)</span>` }} />
-          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `Kirchhoff’s Voltage Law states that the algebraic sum of all voltages around any closed loop in a circuit is zero.` }} />
+          <h4 id="h.vhqz6zxfj0pp" className={styles.h4} dangerouslySetInnerHTML={{ __html: `<span class="c3">Kirchhoffâ€™s Voltage Law (KVL)</span>` }} />
+          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `Kirchhoffâ€™s Voltage Law states that the algebraic sum of all voltages around any closed loop in a circuit is zero.` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/module1/image_10.png" alt="Kirchhoff's Voltage Law (KVL) illustration showing sum of voltages in a closed loop" className={styles.contentImage} />
           </div>
@@ -322,17 +318,17 @@ const Module1Content = () => {
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">RC circuits are fundamental in timing, filtering, and signal shaping applications.</span>` }} />
           <hr className={styles.divider} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Fermi Energy</span>` }} />
-          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">The value of the Fermi level at absolute zero temperature (–273.15 °C or 0 K) is known as the Fermi Energy. It represents the maximum kinetic energy that an electron can possess at 0 K. For a given solid, the Fermi energy is a fixed value and is a fundamental property of the material.</span>` }} />
+          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">The value of the Fermi level at absolute zero temperature (â€“273.15 Â°C or 0 K) is known as the Fermi Energy. It represents the maximum kinetic energy that an electron can possess at 0 K. For a given solid, the Fermi energy is a fixed value and is a fundamental property of the material.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">The highest energy level occupied by electrons at absolute zero temperature is called the Fermi Level. At 0 K, all energy states below the Fermi level are completely filled, and all states above it are completely empty.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">In semiconductors and insulators at absolute zero, the Fermi level lies between the valence band and the conduction band. In intrinsic semiconductors, it is approximately at the mid-gap.</span>` }} />
-          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">The existence of the Fermi level is a direct consequence of Pauli’s Exclusion Principle, which states that no two electrons can occupy the same quantum energy state simultaneously. As a result, electrons fill available energy states starting from the lowest energy upward, leading to a well-defined highest occupied energy level at 0 K.</span>` }} />
+          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">The existence of the Fermi level is a direct consequence of Pauliâ€™s Exclusion Principle, which states that no two electrons can occupy the same quantum energy state simultaneously. As a result, electrons fill available energy states starting from the lowest energy upward, leading to a well-defined highest occupied energy level at 0 K.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Fermi Function</span>` }} />
-          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">The Fermi function f(E) gives the probability of finding an electron in an energy state E at a given temperature. It is derived from Fermi–Dirac statistics and is expressed as:</span>` }} />
-          <p className={styles.mathFormula} dangerouslySetInnerHTML={{ __html: `<span class="c2">f(E) = 1 / $$ 1 + exp((E − EF) / kT) $$</span>` }} />
+          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">The Fermi function f(E) gives the probability of finding an electron in an energy state E at a given temperature. It is derived from Fermiâ€“Dirac statistics and is expressed as:</span>` }} />
+          <p className={styles.mathFormula} dangerouslySetInnerHTML={{ __html: `<span class="c2">f(E) = 1 / $$ 1 + exp((E âˆ’ EF) / kT) $$</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">where:<br> E = Energy level<br> EF = Fermi level<br> k = Boltzmann constant<br> T = Absolute temperature (in Kelvin)</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">At T = 0 K:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">For E &lt; EF, f(E) = 1 (state completely occupied)<br></span></li><li class="c0 li-bullet-0"><span class="c2">For E &gt; EF, f(E) = 0 (state completely empty)<br></span></li>` }} />
-          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">At temperatures above 0 K, the transition around the Fermi level becomes gradual rather than abrupt, and the probability of occupation follows the Fermi–Dirac distribution curve.</span>` }} />
+          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">At temperatures above 0 K, the transition around the Fermi level becomes gradual rather than abrupt, and the probability of occupation follows the Fermiâ€“Dirac distribution curve.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Dependency of Fermi Level on Temperature and Doping Concentration</span>` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/module1/image_23.png" alt="Fermi level shift diagram based on temperature and doping concentration" className={styles.contentImage} />
@@ -341,16 +337,16 @@ const Module1Content = () => {
           <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Effect of Temperature on Intrinsic Semiconductor<br></span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">In an intrinsic semiconductor (pure semiconductor with no intentional doping), the Fermi level lies approximately at the middle of the bandgap at 0 K.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">As temperature increases:</span>` }} />
-          <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Electron–hole pairs are generated equally.<br></span></li><li class="c0 li-bullet-0"><span class="c2">Since electron concentration (n) equals hole concentration (p), the Fermi level remains close to the intrinsic Fermi level (Ei).<br></span></li>` }} />
+          <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Electronâ€“hole pairs are generated equally.<br></span></li><li class="c0 li-bullet-0"><span class="c2">Since electron concentration (n) equals hole concentration (p), the Fermi level remains close to the intrinsic Fermi level (Ei).<br></span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Hence, for an intrinsic semiconductor, the Fermi level does not significantly shift with temperature; it stays near mid-gap (slight shifts may occur due to effective mass differences, but conceptually it remains centered).</span>` }} />
           <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Doping is Not Applicable for Intrinsic Semiconductor<br></span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">By definition, an intrinsic semiconductor has no intentional impurities.<br> Therefore, doping concentration does not apply to intrinsic material. Once doping is introduced, it becomes an extrinsic semiconductor.</span>` }} />
-          <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Effect of Pentavalent (Donor) Doping – n-Type Semiconductor<br></span></li>` }} />
+          <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Effect of Pentavalent (Donor) Doping â€“ n-Type Semiconductor<br></span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">When pentavalent atoms (e.g., P, As) are added:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Extra electrons are introduced.<br></span></li><li class="c0 li-bullet-0"><span class="c2">Electron concentration increases significantly.<br></span></li><li class="c0 li-bullet-0"><span class="c2">The Fermi level shifts upward, toward the conduction band.<br></span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">As donor concentration increases further:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">EF moves closer to the conduction band edge (EC).<br></span></li><li class="c0 li-bullet-0"><span class="c2">In heavily doped (degenerate) n-type semiconductors, EF may even enter the conduction band.<br></span></li>` }} />
-          <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Effect of Trivalent (Acceptor) Doping – p-Type Semiconductor<br></span></li>` }} />
+          <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Effect of Trivalent (Acceptor) Doping â€“ p-Type Semiconductor<br></span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">When trivalent atoms (e.g., B, Al) are added:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Additional holes (empty states) are created.<br></span></li><li class="c0 li-bullet-0"><span class="c2">Hole concentration increases.<br></span></li><li class="c0 li-bullet-0"><span class="c2">The Fermi level shifts downward, toward the valence band.<br></span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">As acceptor concentration increases:</span>` }} />
@@ -411,11 +407,11 @@ const Module1Content = () => {
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">In a P-type semiconductor, diffusion occurs due to the motion of holes. Since holes are the majority carriers, they move from the P-region (high hole concentration) toward the N-region (low hole concentration). Hence, the diffusion current direction is from P to N.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">In an N-type semiconductor, diffusion occurs due to the motion of electrons. Electrons move from the N-region (high electron concentration) toward the P-region (low electron concentration). Hence, the diffusion current direction is from N to P.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Because of diffusion, charge separation takes place near the junction. This creates an electric field directed from the N-region toward the P-region. This internally generated electric field opposes further diffusion and leads to the formation of the depletion region in a PN junction.</span>` }} />
-          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Diffusion current density of electrons is given by Fick’s law as:</span>` }} />
+          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Diffusion current density of electrons is given by Fickâ€™s law as:</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Jn(diff) = q Dn (dn/dx)</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">where:<br> Jn(diff) = Electron diffusion current density<br> q = Charge of an electron<br> Dn = Electron diffusion coefficient<br> dn/dx = Gradient of electron concentration</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Similarly, the hole diffusion current density is:</span>` }} />
-          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Jp(diff) = − q Dp (dp/dx)</span>` }} />
+          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Jp(diff) = âˆ’ q Dp (dp/dx)</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">where Dp is the hole diffusion coefficient and dp/dx is the hole concentration gradient.</span>` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/module1/image_21.png" alt="Hole diffusion current density vs distance" className={styles.contentImage} />
@@ -432,33 +428,33 @@ const Module1Content = () => {
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Drift current arises due to the potential gradient (electric field) present in the semiconductor.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">In a PN junction under reverse bias, drift current is mainly due to minority charge carriers (electrons in P-region and holes in N-region).</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">The current density associated with the drift of electrons due to an applied electric field is given by:</span>` }} />
-          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Jn(drift) = q n μn E</span>` }} />
-          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">where:<br> Jn(drift) = Electron drift current density<br> q = Electronic charge<br> n = Electron concentration<br> μn = Electron mobility<br> E = Applied electric field</span>` }} />
+          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Jn(drift) = q n Î¼n E</span>` }} />
+          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">where:<br> Jn(drift) = Electron drift current density<br> q = Electronic charge<br> n = Electron concentration<br> Î¼n = Electron mobility<br> E = Applied electric field</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Similarly, for holes:</span>` }} />
-          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Jp(drift) = q p μp E</span>` }} />
-          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">where μp is the hole mobility and p is the hole concentration.</span>` }} />
-          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">From a device physics standpoint, drift current is directly proportional to the electric field and carrier mobility, and it forms the basis of Ohm’s law in semiconductors.</span>` }} />
+          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Jp(drift) = q p Î¼p E</span>` }} />
+          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">where Î¼p is the hole mobility and p is the hole concentration.</span>` }} />
+          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">From a device physics standpoint, drift current is directly proportional to the electric field and carrier mobility, and it forms the basis of Ohmâ€™s law in semiconductors.</span>` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/module1/image_24.png" alt="Drift current density formula for electrons and holes" className={styles.contentImage} />
           </div>
           <h1 id="h.j8wuifwpf58z" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">Why Silicon is Preferred Over Germanium</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Silicon (Si) is widely used in semiconductor device fabrication instead of Germanium (Ge) due to the following reasons:</span>` }} />
           <h3 id="h.10hikhrv7551" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">1. Energy Band Gap</span>` }} />
-          <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span>Bandgap of </span><span class="c6">Silicon (Si) ≈ 1.12 eV</span><span class="c2"> (at 300K)<br></span></li><li class="c0 li-bullet-0"><span>Bandgap of </span><span class="c6">Germanium (Ge) ≈ 0.66 eV</span><span class="c2"> (at 300K)<br></span></li>` }} />
+          <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span>Bandgap of </span><span class="c6">Silicon (Si) â‰ˆ 1.12 eV</span><span class="c2"> (at 300K)<br></span></li><li class="c0 li-bullet-0"><span>Bandgap of </span><span class="c6">Germanium (Ge) â‰ˆ 0.66 eV</span><span class="c2"> (at 300K)<br></span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">A larger bandgap in silicon results in:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Lower intrinsic carrier concentration<br></span></li><li class="c0 li-bullet-0"><span class="c2">Better high-temperature operation<br></span></li><li class="c0 li-bullet-0"><span class="c2">Reduced leakage current<br></span></li>` }} />
           <hr className={styles.divider} />
           <h3 id="h.3yfgyvvn812z" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">2. Lower Thermal Carrier Generation</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span>Due to its larger bandgap, silicon has </span><span class="c3">lower thermal generation of electron-hole pairs<br></span></li><li class="c0 li-bullet-0"><span>This improves </span><span class="c3">device stability and reliability<br></span></li>` }} />
           <hr className={styles.divider} />
-          <h3 id="h.7lv20e7y4ncz" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">3. Formation of Native Oxide (SiO₂)</span>` }} />
-          <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span>Silicon forms a high-quality native oxide layer (</span><span class="c6">SiO₂</span><span class="c2">)<br></span></li><li class="c0 li-bullet-0"><span class="c2">SiO₂ is:<br></span></li>` }} />
+          <h3 id="h.7lv20e7y4ncz" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">3. Formation of Native Oxide (SiOâ‚‚)</span>` }} />
+          <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span>Silicon forms a high-quality native oxide layer (</span><span class="c6">SiOâ‚‚</span><span class="c2">)<br></span></li><li class="c0 li-bullet-0"><span class="c2">SiOâ‚‚ is:<br></span></li>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 c23 li-bullet-0"><span class="c2">An excellent insulator<br></span></li><li class="c1 c23 li-bullet-0"><span class="c2">Chemically stable<br></span></li><li class="c1 c23 li-bullet-0"><span class="c2">Thermally stable<br></span></li>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span>This property makes </span><span class="c3">MOS technology possible<br></span></li><li class="c0 li-bullet-0"><span class="c2">One of the biggest reasons CMOS technology is based on silicon<br></span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Germanium does </span><span class="c6">not</span><span class="c2"> form a stable native oxide suitable for device fabrication.</span>` }} />
           <hr className={styles.divider} />
           <h3 id="h.k9wspnbh9fps" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">4. Abundance in Nature</span>` }} />
-          <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span>Silicon is the </span><span class="c3">second most abundant element in Earth’s crust<br></span></li><li class="c0 li-bullet-0"><span class="c2">Germanium is comparatively rare and expensive<br></span></li>` }} />
+          <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span>Silicon is the </span><span class="c3">second most abundant element in Earthâ€™s crust<br></span></li><li class="c0 li-bullet-0"><span class="c2">Germanium is comparatively rare and expensive<br></span></li>` }} />
           <hr className={styles.divider} />
           <h3 id="h.i264652vyfiw" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">5. Lower Noise</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span>Silicon devices exhibit </span><span class="c3">lower leakage and lower noise<br></span></li><li class="c0 li-bullet-0"><span class="c2">More suitable for analog and mixed-signal applications<br></span></li>` }} />
@@ -472,7 +468,7 @@ const Module1Content = () => {
           <h3 id="h.638p6djqviok" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">Definition</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Diffusion current is the current in a semiconductor caused by the movement of charge carriers (electrons and holes) due to </span><span class="c6">concentration gradient</span><span class="c2">, without any external electric field.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">It occurs because charge carriers move from:</span>` }} />
-          <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c3">High concentration region → Low concentration region<br></span></li>` }} />
+          <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c3">High concentration region â†’ Low concentration region<br></span></li>` }} />
           <hr className={styles.divider} />
           <h1 id="h.u5oq42jy9n2n" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c4">PN Junction Formation and Diffusion</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Consider:</span>` }} />
@@ -482,7 +478,7 @@ const Module1Content = () => {
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span>Majority carriers: </span><span class="c3">Holes<br></span></li><li class="c0 li-bullet-0"><span class="c2">Minority carriers: Electrons<br></span></li>` }} />
           <hr className={styles.divider} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">When N-type and P-type materials are brought together:</span>` }} />
-          <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span>Electrons diffuse from </span><span class="c3">N → P<br></span></li><li class="c0 li-bullet-0"><span>Holes diffuse from </span><span class="c3">P → N</span></li>` }} />
+          <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span>Electrons diffuse from </span><span class="c3">N â†’ P<br></span></li><li class="c0 li-bullet-0"><span>Holes diffuse from </span><span class="c3">P â†’ N</span></li>` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/module1/image_14.png" alt="PN junction formation showing carrier diffusion and depletion region" className={styles.contentImage} />
           </div>
@@ -503,7 +499,7 @@ const Module1Content = () => {
             <img loading="lazy" src="/assets/modules/module1/image_15.png" alt="Mathematical equations for electron and hole diffusion current densities" className={styles.contentImage} />
           </div>
           <hr className={styles.divider} />
-          <h1 id="h.p5msogipqje" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">P-Type Semiconductor – Boron Doping in Germanium</span>` }} />
+          <h1 id="h.p5msogipqje" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">P-Type Semiconductor â€“ Boron Doping in Germanium</span>` }} />
           <h2 id="h.5kl6qc5ya3ft" className={styles.h2} dangerouslySetInnerHTML={{ __html: `<span class="c6 c10">Example: Boron Doping in Germanium</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Let us consider that a </span><span class="c6">Boron (B)</span><span> atom is added to a </span><span class="c6">Germanium (Ge)</span><span class="c2"> crystal lattice.</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Boron is a </span><span class="c6">trivalent impurity</span><span class="c2"> (it has 3 valence electrons). When it replaces a Germanium atom in the lattice:</span>` }} />
@@ -531,7 +527,7 @@ const Module1Content = () => {
           <hr className={styles.divider} />
           <h1 id="h.7m7p8qb1idfd" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c4">Why Silicon is Preferred Over Germanium?</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span>Among semiconductor materials like </span><span class="c6">Germanium (Ge)</span><span> and </span><span class="c6">Silicon (Si)</span><span class="c2">, Silicon is widely preferred for the manufacture of electronic components for the following reasons:</span>` }} />
-          <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Silicon has a larger bandgap (≈ 1.1 eV) compared to Germanium (≈ 0.7 eV).<br></span></li><li class="c0 li-bullet-0"><span class="c2">Lower leakage current.<br></span></li><li class="c0 li-bullet-0"><span class="c2">Better thermal stability.<br></span></li><li class="c0 li-bullet-0"><span>Easy formation of high-quality </span><span class="c6">SiO₂ layer</span><span class="c2"> (important for MOS devices).<br></span></li><li class="c0 li-bullet-0"><span class="c2">Abundant availability in nature.<br></span></li><li class="c0 li-bullet-0"><span class="c2">Lower noise in electronic circuits.<br></span></li>` }} />
+          <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Silicon has a larger bandgap (â‰ˆ 1.1 eV) compared to Germanium (â‰ˆ 0.7 eV).<br></span></li><li class="c0 li-bullet-0"><span class="c2">Lower leakage current.<br></span></li><li class="c0 li-bullet-0"><span class="c2">Better thermal stability.<br></span></li><li class="c0 li-bullet-0"><span>Easy formation of high-quality </span><span class="c6">SiOâ‚‚ layer</span><span class="c2"> (important for MOS devices).<br></span></li><li class="c0 li-bullet-0"><span class="c2">Abundant availability in nature.<br></span></li><li class="c0 li-bullet-0"><span class="c2">Lower noise in electronic circuits.<br></span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Because of these advantages, Silicon is extensively used in the fabrication of:</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c2">Diodes<br></span></li><li class="c0 li-bullet-0"><span class="c2">Transistors<br></span></li><li class="c0 li-bullet-0"><span class="c2">BJTs<br></span></li><li class="c0 li-bullet-0"><span class="c2">MOSFETs<br></span></li><li class="c0 li-bullet-0"><span class="c2">Integrated Circuits (ICs)</span></li>` }} />
           <h1 id="h.4mejzvdqvu05" className={styles.h1} dangerouslySetInnerHTML={{ __html: `<span class="c10 c6">Extrinsic Semiconductors</span>` }} />
@@ -577,13 +573,13 @@ const Module1Content = () => {
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c3">Intrinsic Semiconductors</span>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">An intrinsic semiconductor is the pure form of a semiconductor material without any intentional doping. In this type of material, the electrical properties are solely determined by the semiconductor itself, such as Silicon (Si) or Germanium (Ge).</span>` }} />
           <h3 id="h.ynuijq8fqpia" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">Key Properties of Intrinsic Semiconductors</span>` }} />
-          <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c6">Electron–Hole Pair (EHP) Generation<br></span><span class="c2"> Charge carriers (electrons and holes) are generated due to thermal excitation. When thermal energy is supplied, some valence electrons gain enough energy to move to the conduction band, leaving behind holes in the valence band.<br></span></li><li class="c0 li-bullet-0"><span class="c6">Equal Number of Electrons and Holes<br></span><span class="c2"> In an intrinsic semiconductor:</span></li>` }} />
+          <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c6">Electronâ€“Hole Pair (EHP) Generation<br></span><span class="c2"> Charge carriers (electrons and holes) are generated due to thermal excitation. When thermal energy is supplied, some valence electrons gain enough energy to move to the conduction band, leaving behind holes in the valence band.<br></span></li><li class="c0 li-bullet-0"><span class="c6">Equal Number of Electrons and Holes<br></span><span class="c2"> In an intrinsic semiconductor:</span></li>` }} />
           <div className={styles.imageContainer}>
             <img loading="lazy" src="/assets/modules/module1/image_5.png" alt="Intrinsic semiconductor lattice showing equal number of electrons and holes" className={styles.contentImage} />
           </div>
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<br>Since no impurity atoms are added, the number of free electrons is equal to the number of holes.` }} />
-          <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c6">Low Conductivity at Room Temperature<br></span><span class="c2"> The conduction in intrinsic semiconductors is relatively small at room temperature because the number of thermally generated carriers is limited.<br></span></li><li class="c0 li-bullet-0"><span class="c6">Insulating Behavior at 0°C (Approximately Absolute Zero)<br></span><span class="c2"> At very low temperatures, particularly near absolute zero, there is no thermal energy available to excite electrons. Hence, no free charge carriers are present, and the material behaves like an insulator.<br></span></li><li class="c0 li-bullet-0"><span class="c6">Continuous Generation and Recombination<br></span><span class="c2"> Electron–hole pair generation and recombination is a continuous process due to thermal agitation.<br></span></li>` }} />
-          <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 c23 li-bullet-0"><span class="c2">Generation: Thermal energy creates electron–hole pairs.<br></span></li><li class="c1 c23 li-bullet-0"><span class="c2">Recombination: Free electrons recombine with holes, releasing energy.<br></span></li>` }} />
+          <ol className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c6">Low Conductivity at Room Temperature<br></span><span class="c2"> The conduction in intrinsic semiconductors is relatively small at room temperature because the number of thermally generated carriers is limited.<br></span></li><li class="c0 li-bullet-0"><span class="c6">Insulating Behavior at 0Â°C (Approximately Absolute Zero)<br></span><span class="c2"> At very low temperatures, particularly near absolute zero, there is no thermal energy available to excite electrons. Hence, no free charge carriers are present, and the material behaves like an insulator.<br></span></li><li class="c0 li-bullet-0"><span class="c6">Continuous Generation and Recombination<br></span><span class="c2"> Electronâ€“hole pair generation and recombination is a continuous process due to thermal agitation.<br></span></li>` }} />
+          <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c1 c23 li-bullet-0"><span class="c2">Generation: Thermal energy creates electronâ€“hole pairs.<br></span></li><li class="c1 c23 li-bullet-0"><span class="c2">Recombination: Free electrons recombine with holes, releasing energy.<br></span></li>` }} />
           <h3 id="h.3vz73jfc63ea" className={styles.h3} dangerouslySetInnerHTML={{ __html: `<span class="c7 c6">Important Definitions</span>` }} />
           <ul className={styles.list} dangerouslySetInnerHTML={{ __html: `<li class="c0 li-bullet-0"><span class="c6">Intrinsic Carrier Concentration (nin_ini)<br></span><span class="c2"> The intrinsic carrier concentration refers to the concentration of charge carriers (electrons or holes) in a pure semiconductor material.<br></span></li>` }} />
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">Since:</span>` }} />
@@ -592,7 +588,7 @@ const Module1Content = () => {
           </div>
           <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">The intrinsic carrier concentration represents both intrinsic electron and intrinsic hole concentrations.</span>` }} />
           <hr className={styles.divider} />
-          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">In summary, intrinsic semiconductors are electrically neutral materials in which conduction occurs purely due to thermally generated electron–hole pairs, without the influence of impurity atoms.</span>` }} />
+          <p className={styles.paragraph} dangerouslySetInnerHTML={{ __html: `<span class="c2">In summary, intrinsic semiconductors are electrically neutral materials in which conduction occurs purely due to thermally generated electronâ€“hole pairs, without the influence of impurity atoms.</span>` }} />
           <AdUnit slotId="slot_module1content" />
         </div>
       </div>

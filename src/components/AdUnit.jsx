@@ -69,7 +69,7 @@ const AdUnit = ({ slotId, style, format = "auto", responsive = "true" }) => {
         className="adsbygoogle"
         style={{ display: 'block' }}
         data-ad-client="ca-pub-3681618856902363"
-        data-ad-slot={slotId || "4018464181"}
+        data-ad-slot={/^\d+$/.test(String(slotId || '')) ? slotId : "4018464181"}
         data-ad-format={format}
         data-full-width-responsive={responsive}
         ref={adRef}

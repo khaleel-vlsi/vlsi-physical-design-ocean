@@ -3,26 +3,32 @@ import { useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { isApprovedFreeAdRoute } from '../config/adRoutesConfig';
 
+const isLocalhost = () =>
+  typeof window !== 'undefined' &&
+  ['localhost', '127.0.0.1'].includes(window.location.hostname);
+
 const AdUnit = ({ slotId, style, format = "auto", responsive = "true" }) => {
   const adRef = useRef(null);
   const initialized = useRef(false);
   const location = useLocation();
-  const { user, profile, hasPremiumAccess, loading } = useAuth() || {};
+  const { profile, hasPremiumAccess, loading } = useAuth() || {};
 
   const pathname = location?.pathname || (typeof window !== 'undefined' ? window.location.pathname : '');
   const isApproved = isApprovedFreeAdRoute(pathname);
 
   // 🔒 STRICT MULTI-LAYER ACCESS CONTROL GATEKEEPING:
-  // 1. If Route is NOT in APPROVED_FREE_ROUTES (e.g. "/", "/dashboard", "/paid-modules/*", "/login"): DO NOT RENDER
+  // 1. If Route is excluded (e.g. "/", "/dashboard", "/paid-modules/*", "/login"): DO NOT RENDER
   // 2. If Auth state is loading: DO NOT RENDER (prevents flash of ads while resolving session)
   // 3. If User is Admin (profile?.role === 'admin'): DO NOT RENDER (0 ads for admin)
-  // 4. If User is Paid Subscriber (hasPremiumAccess || profile?.course_active): DO NOT RENDER (0 ads for paid subscribers)
-  if (!isApproved || loading || hasPremiumAccess || profile?.role === 'admin' || profile?.course_active) {
-    return null;
-  }
+  // 4. If User is Paid Subscriber (hasPremiumAccess || profile?.course_active): DO NOT RENDER
+  const canShowAd =
+    isApproved && !loading && !hasPremiumAccess && profile?.role !== 'admin' && !profile?.course_active;
+  const showPlaceholder = canShowAd && isLocalhost();
 
-  // 3. ONLY FOR Genuinely Free / Non-Paid Users on Approved Public Content Pages:
+  // ONLY FOR guests / free users on public content pages (hooks must run unconditionally)
   useEffect(() => {
+    if (!canShowAd || showPlaceholder) return;
+
     let script = document.getElementById('adsbygoogle-script');
     if (!script) {
       script = document.createElement('script');
@@ -36,18 +42,23 @@ const AdUnit = ({ slotId, style, format = "auto", responsive = "true" }) => {
     if (adRef.current && !initialized.current) {
       initialized.current = true;
       try {
-        if (window.adsbygoogle) {
-          (window.adsbygoogle = window.adsbygoogle || []).push({});
-        } else {
-          script.addEventListener('load', () => {
-            (window.adsbygoogle = window.adsbygoogle || []).push({});
-          });
-        }
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
       } catch (err) {
         console.error('AdSense initialization error:', err);
       }
     }
-  }, []);
+  }, [canShowAd, showPlaceholder]);
+
+  if (!canShowAd) return null;
+
+  // Development-only placeholder (AdSense never serves real ads on localhost)
+  if (showPlaceholder) {
+    return (
+      <div style={{ margin: '32px 0', textAlign: 'center', background: '#f0f0f0', border: '2px dashed #999', padding: '20px', color: '#333', ...style }}>
+        <strong>📦 Ad placeholder (dev)</strong> – slot {slotId || 'default'}
+      </div>
+    );
+  }
 
   return (
     <div style={{ margin: '32px 0', textAlign: 'center', overflow: 'hidden', minHeight: '90px', ...style }}>

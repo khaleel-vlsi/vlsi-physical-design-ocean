@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import AdUnit from '../../components/AdUnit';
 import styles from './Module1Content.module.css';
-import AdSlot from '../../components/AdSlot';
+import AdSlot from '../../components/AdSlot.jsx';
 import { useAuth } from '../../context/AuthContext';
 
 
@@ -596,8 +596,10 @@ const Module1Content = () => {
           <AdUnit slotId="slot_module1content" />
         </div>
       </div>
+      </div>
 
-    </div>
+
+    </>
   );
 };
 

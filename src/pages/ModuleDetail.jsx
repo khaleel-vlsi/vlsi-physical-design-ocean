@@ -100,7 +100,10 @@ const getIframeSrc = (link) => {
     const match = link.match(/\/document\/d\/([^\/]+)/);
     if (match && match[1]) {
       const docId = match[1];
-      return `https://docs.google.com/document/d/${docId}/pub?embedded=true`;
+      // Uploaded .docx files (33-char Drive IDs) can't use Docs endpoints — use Drive preview.
+      // Native Google Docs use /preview (works with "Anyone with link"; /pub needs Publish-to-web).
+      if (docId.length < 40) return `https://drive.google.com/file/d/${docId}/preview`;
+      return `https://docs.google.com/document/d/${docId}/preview?rm=minimal`;
     }
   }
   return link;

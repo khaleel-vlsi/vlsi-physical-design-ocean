@@ -121,17 +121,23 @@ const PaidModuleDetail = () => {
       const match = link.match(/\/file\/d\/([^\/]+)/);
       if (match && match[1]) {
         const fileId = match[1];
-        if (useAltEngine || iframeKey % 2 === 1) {
+        if (useAltEngine) {
           return `https://docs.google.com/viewer?srcid=${fileId}&pid=explorer&efh=false&a=v&chrome=false&embedded=true`;
         }
-        return `https://drive.google.com/file/d/${fileId}/preview`;
+        // Cache-buster forces a fresh Drive session on reload (fixes "No preview available" after refresh)
+        return `https://drive.google.com/file/d/${fileId}/preview${iframeKey ? `?r=${iframeKey}` : ''}`;
       }
     }
     if (link.includes('docs.google.com/document/d/')) {
       const match = link.match(/\/document\/d\/([^\/]+)/);
       if (match && match[1]) {
         const docId = match[1];
-        return `https://docs.google.com/document/d/${docId}/pub?embedded=true`;
+        // Uploaded .docx (33-char Drive ID) → Drive preview; native Google Doc → /preview.
+        // (/pub?embedded only works when the doc is "Published to web", otherwise it's blocked.)
+        if (docId.length < 40) {
+          return `https://drive.google.com/file/d/${docId}/preview${iframeKey ? `?r=${iframeKey}` : ''}`;
+        }
+        return `https://docs.google.com/document/d/${docId}/preview?rm=minimal${iframeKey ? `&r=${iframeKey}` : ''}`;
       }
     }
     return link;
